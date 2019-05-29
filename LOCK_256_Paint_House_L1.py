@@ -1,4 +1,5 @@
 """ LinkedIn
+dynamic programming
 
 """
 if len(costs) == 0:
