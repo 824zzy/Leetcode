@@ -9,7 +9,7 @@ class Solution:
         nc = len(grid[0])
         
         def dfs(grid, r, c):
-            if r < 0 or c < 0 or r >= nr or c >= nc or grid[r][c] == '0':
+            if r < 0 or c < 0 or r >= nr or c >= nc or grid[r][c]=='0':
                 return
             grid[r][c] = '0'
             dfs(grid, r-1, c)
