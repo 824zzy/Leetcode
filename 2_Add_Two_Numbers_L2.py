@@ -24,8 +24,7 @@ class Solution:
             s = (v1 + v2 + carry) % 10
             
             carry = (v1 + v2 + carry) // 10
-            # print(s)
-            # print(carry)
+            
             n.next = ListNode(s)
             n = n.next
         return root.next

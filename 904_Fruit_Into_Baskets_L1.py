@@ -19,7 +19,7 @@ class Solution:
         if len(last_two)>2:
             cnt = i - last_two.popitem(last=False)[1]
         ans = max(cnt, ans)
-    return ans
+        return ans
                 
 
 
