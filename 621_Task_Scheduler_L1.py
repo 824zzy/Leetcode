@@ -13,7 +13,6 @@ class Solution:
         heap = []
         
         for k, i in counter.items():
-            if i > 0:
                 heapq.heappush(heap, -i)
         
         while heap:
@@ -26,7 +25,6 @@ class Solution:
             count += cycle if len(heap) > 0 else worktime
         
         return count
-
 
 """ A tricky math solution
 """

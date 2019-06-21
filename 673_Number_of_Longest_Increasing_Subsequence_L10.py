@@ -1,3 +1,53 @@
+"""
+"""
+class Solution:
+    def findNumberOfLIS(self, nums: 'List[int]') -> 'int':
+        n, MAX = len(nums), float("inf")
+        ends = [[MAX, []] for _ in range(n)]
+        for v in nums:
+            i = bisect.bisect_left(ends, [v, []])
+            cnt = sum(c for x, c in ends[i-1][1] if x < v) if i else 1
+            ends[i][0] = v
+            ends[i][1].append((v, cnt))
+        return sum(c for v, c in next((cnts for mv, cnts in reversed(ends) if mv != MAX), []))
+
+
+
+
+
+"""
+"""
+class Solution(object):
+    def findNumberOfLIS(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return 0
+        dp=[1]*len(nums)
+        times=[1]*len(nums)
+        res,max_len=1,1
+        for i in xrange(1,len(nums)):
+            for j in xrange(i):
+                if nums[i]>nums[j]:
+                    if 1+dp[j]>dp[i]:
+                        dp[i]=1+dp[j]
+                        times[i]=times[j]
+                    elif 1+dp[j]==dp[i]:
+                        times[i]+=times[j]
+            if dp[i]>max_len:
+                max_len=dp[i]
+                res=times[i]
+            elif dp[i]==max_len:
+                res+=times[i]                
+        return res
+
+
+
+
+"""
+"""
 class Solution:
     def findNumberOfLIS(self, nums: List[int]) -> int:
         if not nums:
@@ -28,5 +78,3 @@ class Solution:
             if dp1[i] == m:
                 ans.append(dp2[i])
         return sum(ans or [0])
-
-            
