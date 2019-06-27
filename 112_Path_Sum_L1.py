@@ -1,4 +1,4 @@
-""" common but new routine
+""" Basic recursion
 """
 class Solution:
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
