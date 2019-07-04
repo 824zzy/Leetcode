@@ -1,4 +1,3 @@
-
 """ basic solution via set
 """
 class Solution:
@@ -16,5 +15,5 @@ class Solution:
         n = len(nums)
         t_sum = int(n * (n+1) / 2)
         n_sum = sum(nums)
-        # print(t_sum, n_sum)
+        
         return t_sum-n_sum
