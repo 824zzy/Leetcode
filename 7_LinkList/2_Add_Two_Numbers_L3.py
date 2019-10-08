@@ -1,9 +1,4 @@
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
+# while
 class Solution:
     def addTwoNumbers(self, l1, l2):
         """
@@ -22,9 +17,7 @@ class Solution:
                 v2 = l2.val
                 l2 = l2.next
             s = (v1 + v2 + carry) % 10
-            
             carry = (v1 + v2 + carry) // 10
-            
             n.next = ListNode(s)
             n = n.next
         return root.next
