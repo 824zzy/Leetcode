@@ -1,11 +1,5 @@
 """ Basic usage of Link list and while loop
 """
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         result = curr = ListNode(0)

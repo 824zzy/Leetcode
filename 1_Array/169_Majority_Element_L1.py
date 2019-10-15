@@ -1,4 +1,5 @@
-""" basic Counter class usage
+""" basic Counter class usage: O(N)
+Essentially it is Hashmap
 """
 from collections import Counter
 class Solution:
@@ -11,17 +12,8 @@ class Solution:
 
 
 
-""" basic hashmap usage 
+""" Sorting O(NlogN)
 """
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        num_dic = {}
-        for i in nums:
-            if i not in num_dic:
-                num_dic[i] = 1
-            else:
-                num_dic[i] += 1
-        for k, v in num_dic.items():
-            if v > len(nums) / 2:
-                return k
-                
+        return sorted(nums)[len(nums)//2]

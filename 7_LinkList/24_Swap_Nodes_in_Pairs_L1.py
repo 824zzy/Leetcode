@@ -1,3 +1,6 @@
+""" Iteration routine
+To understand it, let the 1->2->NULL as basic example.
+"""
 class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
         if not head or not head.next:
