@@ -1,4 +1,4 @@
-# Set
+# Set or Hash Table all OK.
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
         DNA, ans = set(), []
