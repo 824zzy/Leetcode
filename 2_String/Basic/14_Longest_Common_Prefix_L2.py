@@ -1,5 +1,4 @@
-""" *zip trick
-when you want to use element of elment.
+""" *zip trick: unzip
 """
 class Solution(object):
     def longestCommonPrefix(self, strs):
