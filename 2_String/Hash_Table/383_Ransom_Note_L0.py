@@ -1,5 +1,3 @@
-""" Basic usagea of Counters
-"""
 from collections import Counter
 
 class Solution:

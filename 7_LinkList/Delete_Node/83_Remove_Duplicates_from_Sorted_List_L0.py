@@ -1,21 +1,21 @@
-""" easy set solution
+""" Delete op like P203
 """
-class Solution:
-    def deleteDuplicates(self, head: ListNode) -> ListNode:
-        curr = head
-        ele = []
+class Solution(object):
+    def deleteDuplicates(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        ans = pre = ListNode(float('inf'))
+        pre.next = curr = head
         while curr:
-            ele.append(curr.val)
-            curr = curr.next
-            
-        ele = sorted(list(set(ele)))
-        res = curr = ListNode(0)
-        while ele:
-            node = ListNode(ele.pop(0))
-            curr.next = node
-            curr = node
-        
-        return res.next
+            if curr.val == pre.val:
+                pre.next = curr.next
+                curr = curr.next
+            else:
+                curr = curr.next
+                pre = pre.next
+        return ans.next
 
 """ basic solution with list
 """

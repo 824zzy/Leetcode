@@ -7,4 +7,4 @@ class Solution:
             root.right.next = root.next.left
         self.connect(root.left)
         self.connect(root.right)
-        return root
+        return root  

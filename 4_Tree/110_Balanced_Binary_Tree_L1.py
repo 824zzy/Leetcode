@@ -3,7 +3,7 @@ class Solution:
         self.ans = True
         if not root:
             return True
-        
+
         def dfs(node: TreeNode, d: int):
             if not node:
                 return d-1
@@ -14,3 +14,6 @@ class Solution:
             if abs(l-r)>1:
                 self.ans = False
             return max(l, r)
+        
+        dfs(root, 0)
+        return self.ans
