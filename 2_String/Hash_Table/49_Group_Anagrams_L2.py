@@ -1,5 +1,12 @@
-""" Advanced usage of hash map
-"""
+from collections import defaultdict
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        anag = defaultdict(list)
+        for w in strs:
+            anag[''.join(sorted(w))].append(w)
+        return [v for v in anag.values()]
+
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         ans = []
