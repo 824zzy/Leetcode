@@ -4,5 +4,4 @@ class Solution:
         for raw in triangle[::-1]:
             for i in range(len(raw)):
                 dp[i] = raw[i] + min(dp[i], dp[i+1])
-
         return dp[0]

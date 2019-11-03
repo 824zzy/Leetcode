@@ -1,9 +1,8 @@
 class Solution:
     def longestUnivaluePath(self, root: TreeNode) -> int:
         def dfs(node: TreeNode, prev: int) -> int:
-            if not root:
+            if not node:
                 return 0
-            
             left = dfs(node.left, node.val)
             right = dfs(node.right, node.right)
             self.ans = max(self.ans, left+right)
