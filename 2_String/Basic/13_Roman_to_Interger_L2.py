@@ -21,7 +21,6 @@ class Solution(object):
         s = s.replace('IV', 'IIII').replace('IX', 'VIIII')
         s = s.replace('XL', 'XXXX').replace('XC', 'LXXXX')
         s = s.replace('CD', 'CCCC').replace('CM', 'DCCCC')
-        # print(s)
         res = 0
         for char in s:
             res += num_dic[char]

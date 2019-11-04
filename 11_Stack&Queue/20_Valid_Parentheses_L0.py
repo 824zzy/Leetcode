@@ -1,6 +1,4 @@
-
-""" basic usage of stack: my straightforward method.
-"""
+# Facebook
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
@@ -20,4 +18,3 @@ class Solution:
             return True
         else:
             return False
-        

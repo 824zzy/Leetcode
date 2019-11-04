@@ -5,7 +5,7 @@
 3. `str.split(c)`: split string by `c`
 4. `'-'.join([1,2,3])`: `1-2-3`
 5. `sorted(list, key=functools.cmp_to_key(lambda x, y: int(y+x)-int(x+y)))`: custom compare function to a list.
-6. `ord`: ASCII to Char; `chr`: Char to ASCII.
+6. `ord(str)`: ASCII to Char; `chr(int)`: Char to ASCII.
 7. `str.replace(a, b)`: replace a to b in str.
 
 ## Collections
@@ -22,3 +22,8 @@
 5. 161
 6. 358
 7. 271
+8. 246
+9. 247
+10. 248
+11. 157
+12. 158

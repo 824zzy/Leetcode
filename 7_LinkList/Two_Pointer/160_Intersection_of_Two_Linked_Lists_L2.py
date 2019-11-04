@@ -1,3 +1,5 @@
+""" Amazon, Microsoft, Bloomberg, Oracle, Yahho, ByteDance
+"""
 # Trick of two pointer
 class Solution(object):
     def getIntersectionNode(self, headA, headB):
