@@ -1,6 +1,18 @@
 """ binary search solution
 facebook
 """
+# first reaction solution
+class Solution:
+    def findPeakElement(self, nums: List[int]) -> int:
+        ans = 0
+        for i in range(1, len(nums)):
+            if nums[i]>nums[ans]:
+                ans+=1
+            else:
+                break
+        return ans
+
+# smarter binary search
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         left = 0

@@ -1,6 +1,11 @@
+# Google
+from collections import Counter
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        Cs, Ct = Counter(s), Counter(t)
+        for k, v in (Ct-Cs).items():
+            return k
 
-""" straightforward method using Counter
-"""
 from collections import Counter
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:

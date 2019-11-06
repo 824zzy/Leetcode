@@ -1,3 +1,3 @@
 # Note
 
-1. Useful `Counter`(Hash map): 169
+1. Useful `Counter`(Hash map)
