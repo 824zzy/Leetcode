@@ -1,5 +1,35 @@
 # Notes
 
-1. Fast and Slow pointer
-2. Iterative
-3. Recursive: as naive as basic example.
+## Reverse
+
+### Iteratively
+
+``` py
+class Solution(object):
+    def reverseList(self, head):
+        prev, curr = None, head
+        while curr:
+            prev, prev.next, curr = curr, prev, curr.next
+        return prev
+        # Another form
+        prev, curr = None, head
+        while curr:
+            temp = curr
+            curr = curr.next
+            temp.next = prev
+            prev = temp
+        return prev
+```
+
+### Recursively
+
+``` py
+class Solution(object):
+    def reverseList(self, head):
+        if not head or not head.next:
+            return head
+        N = self.reverseList(head.next)
+        head.next.next = head.next
+        head.next = None
+        return N
+```

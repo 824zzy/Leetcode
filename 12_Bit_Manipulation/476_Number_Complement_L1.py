@@ -1,5 +1,4 @@
 """ Clouder
-1. binary conversion: bin&int(num, origin)
 """
 class Solution:
     def findComplement(self, num: int) -> int:

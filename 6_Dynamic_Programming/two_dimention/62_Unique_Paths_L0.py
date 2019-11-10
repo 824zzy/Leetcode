@@ -1,4 +1,4 @@
-""" Naive two-dimentional DP
+""" Amazon
 """
 class Solution:
     def uniquePath(self, m:int, n:int) -> int:

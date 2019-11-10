@@ -1,3 +1,4 @@
+# Amazon
 class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> List[List[int]]:
         paths = []
@@ -16,4 +17,3 @@ class Solution:
         
         self.findPath(node.left, sum-node.val, path, curr[:])
         self.findPath(node.right, sum-node.val, path, curr[:])
-            
