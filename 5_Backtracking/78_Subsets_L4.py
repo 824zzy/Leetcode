@@ -1,3 +1,4 @@
+# Amazon
 """ straight-forward solution
 """
 class Solution:

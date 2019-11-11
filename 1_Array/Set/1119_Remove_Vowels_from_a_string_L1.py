@@ -4,7 +4,7 @@ Given a string `s`, remove the vowels 'a', 'e', 'i', 'o', 'u' from it, and retur
 hint: hash set is a little bit faster.
 """
 
-
+# Amazon
 class Solution:
     def removeVowels(self, S: str) -> None:
         s = set()
@@ -20,6 +20,3 @@ class Solution:
                 result.append(c)
         
         return result
-
-            
-    

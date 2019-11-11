@@ -1,5 +1,4 @@
-""" Basic usage of Link list and while loop
-"""
+# Amazon
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         result = curr = ListNode(0)

@@ -1,5 +1,5 @@
+# Microsoft
 from collections import Counter
-
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         r_c, m_c = Counter(ransomNote), Counter(magazine)
