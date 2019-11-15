@@ -2,7 +2,8 @@
 
 ## Operations
 
-`If Else` in `For`: `[a if cond1 else cond2 for a in A]`
+1. `If Else` in `For`: `[a if cond1 else cond2 for a in A]`
+2. Jump steps in a list: `list[::step]`
 
 ## Modules
 

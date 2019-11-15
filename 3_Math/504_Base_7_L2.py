@@ -2,12 +2,10 @@ class Solution:
     def convertToBase7(self, num: int) -> str:
         if num == 0:
             return '0'
-
         f = False
         if num < 0:
             f = True
-            num = -num
-        
+            num = -num 
         ans = ''        
         while num:
             ans += str(num)

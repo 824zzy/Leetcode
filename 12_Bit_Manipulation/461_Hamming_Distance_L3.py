@@ -26,6 +26,6 @@ class Solution(object):
         ans = 0
         while x or y:
             ans = ans + (x%2 ^ y%2)
-            x = x / 2
-            y = y / 2
+            x = x / 2 # x >> 1
+            y = y / 2 # y >> 1
         return ans

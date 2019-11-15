@@ -1,10 +1,7 @@
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
         self.ans = True
-        if not root:
-            return True
-
-        def dfs(node: TreeNode, d: int):
+        def dfs(node, d):
             if not node:
                 return d-1
             if not node.left and not node.right:
@@ -14,6 +11,5 @@ class Solution:
             if abs(l-r)>1:
                 self.ans = False
             return max(l, r)
-        
         dfs(root, 0)
         return self.ans

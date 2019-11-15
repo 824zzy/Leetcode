@@ -1,5 +1,3 @@
-""" DO NOT USE a**2! a*a faster than a**2
-"""
 # O(k) with set
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
@@ -10,7 +8,6 @@ class Solution:
         for n in nums:
             if c-n in nums:
                 return True
-
         return False
         
 
@@ -21,11 +18,9 @@ class Solution:
     def judgeSquareSum(self, c: int) -> bool:
         if c == 0:
             return True
-
         m = int(sqrt(c))
         for a in range(1, m+1):
             b = round(sqrt(c-a*a))
             if a*a+b*b == c:
                 return True
-    
         return False

@@ -9,6 +9,7 @@ class Solution:
             else:
                 curr.next = l2
                 l2 = l2.next
+            # Don't forget it
             curr = curr.next
         if l1:
             curr.next = l1

@@ -1,13 +1,15 @@
-""" tricky to hundle the node without right child
-"""
 class Solution:
-    def tree2str(self, node: TreeNode) -> str:
-        if not node:
-            return ""
-        if not node.left and not node.right:
-            return str(node.val)
-        
-        if not node.right:
-            return str(node.val)+"("+self.tree2str(node.left)+")"
-            
-        return str(node.val)+"("+self.tree2str(node.left)+")("+self.tree2str(node.right)+")"
+    def tree2str(self, t: TreeNode) -> str:
+        def dfs(node):
+            if not node:
+                return ""
+            if not node.left and not node.right:
+                return str(node.val)
+            if not node.right:
+                return str(node.val)+'('+dfs(node.left)+')'
+            l = dfs(node.left)
+            r = dfs(node.right)
+            s = str(node.val)+'('+l+')('+r+')'
+            return s
+        ans = dfs(t)
+        return ans
