@@ -1,12 +1,10 @@
 # Google
+"""
+1. dp[0] = nums[0], dp[1] = max(nums[0], nums[1])
+2. dp[i] = max(nums[i]+dp[i-2], dp[i-1])
+"""
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        """
-        [2]: 0
-        [2, 4]: max(nums[0], nums[1])
-        [2, 4, 3]: max(num[0]+nums[2], nums[1])
-        [5, 3, 4, 5]: dp[5, 5, 9, 10]
-        """
         if len(nums) == 0:
             return 0
         elif len(nums) == 1:

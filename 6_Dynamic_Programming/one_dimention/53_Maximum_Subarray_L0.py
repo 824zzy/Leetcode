@@ -1,3 +1,7 @@
+"""
+1. dp[0] = nums[0]
+2. dp[i] = max(nums[i]+dp[i-1], nums[i])
+"""
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         if not nums:
