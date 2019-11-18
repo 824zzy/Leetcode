@@ -13,8 +13,7 @@ class Solution:
             ans = []
             for i in range(l, r):
                 if input[i] in ops:
-                    ans += [ops[input[i]](le, ri) for le in helper(l, i) for ri in helper(i+1, r) ]
-            
+                    ans += [ops[input[i]](le, ri) for le in helper(l, i) for ri in helper(i+1, r) ]            
             return ans if len(ans)!=0 else [int(input[l:r])]
         
         return help(0, len(input))
