@@ -1,5 +1,4 @@
 """ usage of itertools and back-tracking
-
 """
 # list(permutations(nums))
 from itertools import permutations
@@ -10,18 +9,19 @@ class Solution:
             rv[i] = list(rv[i])
         return rv
 
-# Backtracking routine
+# Backtracking
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        self.res = []
-        def dfs(nums: List[int], tmp: List[int]) -> None:
-            if len(nums) == len(tmp):
-                self.res.append(tmp[:])
+        self.ans = []
+        def dfs(nums, perm):
+            if not nums:
+                self.ans.append(perm)
                 return
+            for i in range(len(nums)):
+                t = perm[:]
+                t.append(nums[i])
+                # print(nums[0:i]+nums[i+1:], nums[i], t)
+                dfs(nums[0:i]+nums[i+1:], t)
             
-            for i, x in enumerate(nums):
-                if x not in tmp:
-                    dfs(nums, tmp+[x])
-        
         dfs(nums, [])
-        return self.res
+        return self.ans
