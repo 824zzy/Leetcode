@@ -4,6 +4,7 @@
 
 1. `If Else` in `For`: `[a if cond1 else cond2 for a in A]`
 2. Jump steps in a list: `list[::step]`
+3. Insert item to list with specific index: `stk.insert(0, n)`
 
 ## Modules
 
