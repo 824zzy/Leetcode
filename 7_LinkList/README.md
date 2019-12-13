@@ -1,5 +1,9 @@
 # Notes
 
+## Hints
+
+1. Transform linklist to stack/queue can be shortcut.
+
 ## Reverse
 
 ### Iteratively
