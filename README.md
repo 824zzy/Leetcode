@@ -81,10 +81,53 @@ One question per day to ensure a sharp mind.
    1. C++: `for(const auto& p: m){key=p.first; value=p.second;}`
    2. Python: `for k, v in a.items(): pass`
 
-### Priority queue/ Heap
+### Priority Queue/ Heap
 
 1. Create:
-   1. C++(Max heap): `priority_queue<int> q;`. For minHeap is `priority_queue<int> `
+   1. C++(Max heap): `priority_queue<int> q;`. For minHeap is `priority_queue<int, vector<int>, great<int>> q;`
+   2. Python: `q = []`
+2. Create from array:
+   1. C++: `vector<int> a{2,1,3,4}; priority_queue<int> q(begin(a), end(a));`
+   2. Python: `q = [1,2,3,4,5], heapq.heapify(q)`
+3. Insert:
+   1. C++: `q.push(x)`
+   2. Python: `heapq.heappush(q, x)`
+4. Peek:
+   1. C++: `int x = q.top();`
+   2. Python: `x = q[0]`
+5. Pop:
+   1. C++: `q.pop()`
+   2. Python: `x = heapq.heappop(q)`
+
+### Type Conversion
+
+1. Array to Set
+   1. C++: `vector<int> a{1,2,3,4}, set<int> b(begin(a), end(a))`
+   2. Python: `a = [1,2,3,4], b = set(a)`
+2. Set to Array:
+   1. C++: `set<int> a{1,2,3}; vector<int> b(begin(a), end(a));`
+   2. Python: `a = set([1,2,3]), b = list(a)`
+3. Integer to String:
+   1. C++: `int x = 12345; string s = std::to_string(x);`
+   2. Python: `x = 12345, s = str(x)`
+4. String to Integer:
+   1. C++: `string s{"12345"}; int x = std::stoi(s);`
+   2. Python: `s = "12345", x= int(s)`
+5. Char to ASCII:
+   1. C++: `char c = '9'; int x = c - '9'`
+   2. Python: `c = '9', x = ord(c)-ord('0'), x = int(c)`
+
+### String Operation
+
+1. Init:
+   1. C++: `string s='111'`/`string s{"111"}`
+   2. Python: `s='111'`
+2. Interception:
+   1. C++: `string s='12345'; s.substr(3)//'345'; s.substr(3, 2); //'34'`
+   2. Python: `s='12345', s[3:]#'345', s[3:5]#'34'`
+3. Modification:
+   1. C++: `s[1]=2;//121`
+   2. Python: `s = s[0:1]+'2'+s[2:]`
 
 ## Reference
 

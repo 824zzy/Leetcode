@@ -1,3 +1,15 @@
 {
-    "python.pythonPath": "/Users/zzy824/anaconda2/envs/NLP/bin/python"
+    "python.pythonPath": "/Users/zzy824/anaconda2/envs/NLP/bin/python",
+    "files.associations": {
+        "__hash_table": "cpp",
+        "unordered_map": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "queue": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "vector": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -3,9 +3,7 @@ haystack.index(needle) available as well.
 """
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        if len(haystack)<len(needle):
-            return -1
-        if len(haystack)==0:
+        if not haystack and not needle:
             return 0
         
         for i in range(len(haystack)):

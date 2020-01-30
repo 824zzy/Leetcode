@@ -8,7 +8,7 @@
 6. `ord(str)`: ASCII to Char; `chr(int)`: Char to ASCII
 7. `str.replace(a, b)`: replace a to b in str
 8. `str.lower()/upper()`
-9. `str.isalpha()/isnumeric()`
+9. `str.isalpha()/isnumeric()`: Judge a character is a letter or number.
 10. `string.punctuation`: All punctuations in English
 11. `str.islower()/isupper()`: Check string is all capital or not
 

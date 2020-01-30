@@ -8,5 +8,5 @@ class Solution:
         for i in range(m-1, -1, -1):
             for j in range(n-1, -1, -1):
                 # make sure knight won't dead by max(1, x)
-                dp[i][j] = max(1, min(dp[i+1][j], dp[i][j+1])-dp[i][j])
+                dp[i][j] = max(1, min(dp[i+1][j]-d[i][j], dp[i][j+1])-d[i][j])
         return dp[0][0]
