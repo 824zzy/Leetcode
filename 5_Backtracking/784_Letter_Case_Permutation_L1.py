@@ -11,3 +11,22 @@ class Solution:
         
         backtrack('', 0)
         return ans
+    
+# Bad Solution using template
+class Solution(object):
+    def letterCasePermutation(self, S):
+        ans = []
+        l = len(S)
+        
+        def dfs(S, sub):
+            if not S and len(sub)==l:
+                ans.append(sub)
+            for i, c in enumerate(S):
+                if c.isalpha():
+                    dfs(S[i+1:], sub+c.lower())
+                    dfs(S[i+1:], sub+c.upper())
+                else:
+                    dfs(S[i+1:], sub+c)
+        
+        dfs(S, '')
+        return ans
