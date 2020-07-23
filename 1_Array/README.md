@@ -12,7 +12,8 @@
 ### Counter
 
 1. `Counter.most_common(num)`: return a list contains tuple.
-2. `del Counter[key]`: delete an item. or `Counter[key]=0`
+2. `del Counter[key]`: delete an item. or `Counter[key]=0`.
+3. `cntA&cntB`: find intersection of two Counter.
 
 ### OrderedDict
 
