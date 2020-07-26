@@ -13,3 +13,19 @@ class Solution:
                 dfs(nums, target-nums[i], comb+[nums[i]], i+1)
         dfs(sorted(candidates), target, [], 0)
         return ans
+    
+class Solution(object):
+    def combinationSum2(self, candidates, target):
+        ans = []
+        candidates = sorted(candidates)
+        
+        def dfs(remain, target, path):
+            if target==0:
+                if path not in ans:
+                    ans.append(path)
+            for i, c in enumerate(remain):
+                if target-c>=0:
+                    dfs(remain[i+1:], target-c, path+[c])
+
+        dfs(candidates, target, [])
+        return ans
