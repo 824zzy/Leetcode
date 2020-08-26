@@ -12,7 +12,7 @@ class Solution:
         def dfs(grid, r, c):
             if `condition`:
                 return
-            grid[r][c] = '0'
+            logic over here # grid[r][c] = '0'
             dfs(grid, r-1, c)
             dfs(grid, r+1, c)
             dfs(grid, r, c-1)
