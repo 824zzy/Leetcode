@@ -27,5 +27,3 @@ class Solution:
                 curr = curr.left
             
             curr = stack.pop().right
-            
-                
