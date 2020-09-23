@@ -15,6 +15,6 @@ class DSU:
 dsu = DSU(`length`)
 for i in range(n):
     `Condition`
-    dsu.merge(`x`, `y`)
-return len(set([dsu.find(i) for i in range(len(dsu.p))]))
+    dsu.union(`x`, `y`)
+return len(set([dsu.find(i) for i in range(len(dsu.p))])) # number of connected component
 ```
