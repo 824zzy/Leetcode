@@ -4,14 +4,13 @@
 2. `zip(l1, l2)`: zip two list and `zip(*strs)`: **unzip** str of strs
 3. `str.split(c)`: split string by `c`
 4. `'-'.join([1,2,3])`: `1-2-3`
-5. `sorted(list, key=functools.cmp_to_key(lambda x, y: int(y+x)-int(x+y)))`: custom compare function to a list
-6. `ord(str)`: ASCII to Char; `chr(int)`: Char to ASCII
-7. `str.replace(a, b)`: replace a to b in str
-8. `str.lower()/upper()`
-9. `str.isalpha()/isnumeric()`: Judge a character is a letter or number.
-10. `string.punctuation`: All punctuations in English
-11. `str.islower()/isupper()`: Check string is all capital or not
-12. `str.swapcase()`: swap lower/upper->upper/lower.
+5. `ord(str)`: ASCII to Char; `chr(int)`: Char to ASCII
+6. `str.replace(a, b)`: replace a to b in str
+7. `str.lower()/upper()`
+8. `str.isalpha()/isnumeric()`: Judge a character is a letter or number.
+9. `string.punctuation`: All punctuations in English
+10. `str.islower()/isupper()`: Check string is all capital or not
+11. `str.swapcase()`: swap lower/upper->upper/lower.
 
 ## Collections
 
