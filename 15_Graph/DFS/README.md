@@ -30,6 +30,8 @@ class Solution:
 
 ### Type2
 
+Note: visit array can be replaced by a set
+
 ``` py
 from collections import defaultdict
 class Solution:
