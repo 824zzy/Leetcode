@@ -9,7 +9,7 @@ for n in nums:
     prefix += n # sum type
     ans += cnt[prefix-k] # sum type
 
-    prefix = (prefix + a) % K # division type
+    prefix = (prefix + n) % K # division type
     ans += cnt[prefix] # division type
 
     cnt[prefix] += 1
