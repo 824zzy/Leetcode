@@ -22,3 +22,24 @@ class Solution:
         lc = matrix[r]
         c = search(lc, 0, len(lc)-1)
         return c=="find" or matrix[r][c]==target
+
+
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        if not matrix or not matrix[0]:
+            return 0
+        
+        def search(l, i, j):
+            while i<=j:
+                m = (i+j)//2
+                if l[m]==target:
+                    return True
+                if l[m]<target:
+                    i = m+1
+                elif l[m]>target:
+                    j = m-1
+            return False
+        
+        new_m = [n for m in matrix for n in m]
+        ans = search(new_m, 0, len(new_m)-1)
+        return ans
