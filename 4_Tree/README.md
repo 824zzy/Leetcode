@@ -1,6 +1,6 @@
 # Note
 
-## Bottom up
+## BottomUp / DFS
 
 """py
 def dfs(node, args):
@@ -12,4 +12,13 @@ def dfs(node, args):
     return node
 """
 
-## Regular
+## BFS
+
+``` py
+queue = [root]
+while queue:
+    curr = queue.pop(0)
+    `logic`
+    queue.append(curr.left)
+    queue.append(curr.right)
+```
