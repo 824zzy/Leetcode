@@ -8,7 +8,7 @@ The tree has a height of log(n).
 Query: O(log(n))
 Update: O(log(n))
 
-![fenwick tree]('../img/fenwick_tree.png')
+![fenwick tree]('img/fenwick_tree.png')
 
 ## Template
 
