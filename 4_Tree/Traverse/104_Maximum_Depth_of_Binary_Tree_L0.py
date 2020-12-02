@@ -22,11 +22,8 @@ class Solution:
 """
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
-        def dfs(node):
+        def dfs(node, d):
             if not node:
-                return 0
-            left = dfs(node.left)
-            right = dfs(node.right)
-            return 1+max(left, right)
-        ans = dfs(root)
-        return ans
+                return d
+            return max(dfs(node.left, d+1), dfs(node.right, d+1))
+        return dfs(root, 0)
