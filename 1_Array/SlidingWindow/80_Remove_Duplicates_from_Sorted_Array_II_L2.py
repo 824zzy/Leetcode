@@ -1,4 +1,3 @@
-# TODO: confuse
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         j = 2
