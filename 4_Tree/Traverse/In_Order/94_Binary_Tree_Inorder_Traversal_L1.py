@@ -1,3 +1,4 @@
+# Iterative solution
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         curr = root
@@ -11,20 +12,15 @@ class Solution:
             curr = curr.right            
         return ans
 
-# BTW Recursive
+# Recursive solution
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         self.ans = []
+        
         def dfs(node):
-            if not node:
-                return
-            l = dfs(node.left)
-            if l:
-                self.ans.append(l.val)
+            if not node: return
+            dfs(node.left)
             self.ans.append(node.val)
-            r = dfs(node.right)
-            if r:
-                self.ans.append(r.val)
-            
+            dfs(node.right)
+        
         dfs(root)
-        return self.ans
