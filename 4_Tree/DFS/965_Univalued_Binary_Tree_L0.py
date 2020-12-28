@@ -26,3 +26,15 @@ class Solution:
             
         dfs(root)
         return len(set(self.val))==1
+
+class Solution:
+    def isUnivalTree(self, root: TreeNode) -> bool:
+        self.v = root.val
+        self.ans = True
+        def dfs(node):
+            if not node: return
+            if node.val!=self.v: self.ans = False
+            dfs(node.left)
+            dfs(node.right)
+        dfs(root)
+        return self.ans

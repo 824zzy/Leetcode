@@ -1,3 +1,17 @@
+class Solution:
+    def combinationSum(self, candidates: List[int], t: int) -> List[List[int]]:
+        candidates.sort()
+        self.ans = []
+        def dfs(cand, s, path):
+            if s>t: return
+            if s==t: self.ans.append(path)
+            for i, c in enumerate(cand):
+                if s+c>t: break
+                dfs(cand[i:], s+c, path+[c])
+        dfs(candidates, 0, [])
+        return self.ans
+    
+    
 from copy import copy
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:

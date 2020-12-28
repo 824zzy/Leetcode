@@ -8,4 +8,4 @@ class Solution:
                 ans[last_i] = i-last_i
                 stk.pop()
             stk.append((T[i], i))
-        return ans
+    return ans
