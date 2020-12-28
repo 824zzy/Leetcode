@@ -13,15 +13,11 @@ class Solution:
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         self.ans = []
-        def dfs(nums, perm):
-            if not nums:
-                self.ans.append(perm)
+        def dfs(nums, cur):
+            if not nums: 
+                self.ans.append(cur)
                 return
-            for i in range(len(nums)):
-                t = perm[:]
-                t.append(nums[i])
-                # print(nums[0:i]+nums[i+1:], nums[i], t)
-                dfs(nums[0:i]+nums[i+1:], t)
-            
+            for i, n in enumerate(nums):
+                dfs(nums[:i]+nums[i+1:], cur+[n])
         dfs(nums, [])
         return self.ans
