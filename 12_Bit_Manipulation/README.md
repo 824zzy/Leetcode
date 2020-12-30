@@ -2,14 +2,26 @@
 
 ## Operations
 
+### Theory/Principle
+
+1. gett lowest set bit: `x & -x`
+2. three ways to flip a bit on/off:
+   1. `x+(2**n)`: flip n-th bit on in `x`
+   2. `x-(2**n)`: flip n-th bit off in `x`
+   3. `x^(2**n)`: flip n-th bit on/off in `x`
+   4. `x^(1<<n)`: flip n-th bit on in `x`
+
+### Coding
+
 1. XOR operation: `a ^ 0 = 0`  `a ^ a = 0`
 2. bin(number): `0b***`
 3. Decimal conversion: `int(num, decimal)`, e.g. `int('10', 2)==2`
 4. Pre fill zero to num: `rjust(num)`; Post fill zero to num: `ljust(num)`
-5. gett lowest set bit: `x & -x`
-6. 32 bit mask in hexadecimal: `0xffffffff`
+5. 32 bit mask in hexadecimal: `0xffffffff`
 
-## Two sum
+## Examples
+
+### Two sum
 
 ``` py
 class Solution:
