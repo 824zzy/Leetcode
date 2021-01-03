@@ -2,6 +2,8 @@
 
 ## Monotonic Stack Template
 
+Store index in the monotonic stack can always save space.
+
 ``` py
 s = []
 for i in range(len(A)):
@@ -9,6 +11,6 @@ for i in range(len(A)):
         `logic`
         s.pop()
     if `condition`:
-        s.append(A[i])
+        s.append(A[i]) / s.append(i)
 return ans
 ```
