@@ -1,5 +1,7 @@
 # Disjoint Set Union Template
 
+TODO: check whether most of them are graph problem and merge them into graph category.
+
 ``` py
 class DSU:
     def __init__(self, n):
