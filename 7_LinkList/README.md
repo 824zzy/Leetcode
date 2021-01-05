@@ -3,6 +3,7 @@
 ## Hints
 
 1. Transform linklist to stack/queue can be shortcut.
+2. For some problems, it is helpful to create a dummy node and return the `dummy.next`.
 
 ## Reverse
 
