@@ -5,6 +5,18 @@
 1. Transform linklist to stack/queue can be shortcut.
 2. For some problems, it is helpful to create a dummy node and return the `dummy.next`.
 
+## Template
+
+``` py
+def linklist_template(self, head: ListNode) -> ListNode:
+    prev = ans = ListNode('inf')
+    prev.next = head
+    curr = head
+    while `condition`: # mostly `curr` or `curr and curr.next`
+        'logic to delete, insert, etc.'
+    return ans.next
+```
+
 ## Reverse
 
 ### Iteratively
