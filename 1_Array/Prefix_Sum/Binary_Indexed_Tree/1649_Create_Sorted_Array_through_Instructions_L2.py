@@ -1,25 +1,5 @@
 class Solution:
     def createSortedArray(self, A: List[int]) -> int:
-#         def search_idx(nums, target):
-#             left=0
-#             right=len(nums)-1
-#             while left<=right:
-#                 mid=(left+right)//2
-#                 if (nums[mid]>=target):
-#                     right=mid-1
-#                 else:
-#                     left=mid+1
-#             l = sum([1 for i in range(left) if nums[i]<target])
-#             r = sum([1 for i in range(left, len(nums)) if nums[i]>target])
-#             self.arr.insert(left, target)
-#             return min(l, r)
-                
-        
-#         ans = 0
-#         self.arr = []
-#         for i in instructions:
-#             ans += search_idx(self.arr, i)
-#         return ans
         m = max(A)
         c = [0] * (m + 1)
         
