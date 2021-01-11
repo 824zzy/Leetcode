@@ -16,7 +16,7 @@ Update: O(log(n))
 
 ``` py
 l = max(A) or len(A) # depends
-s = [0] * len(l+1)
+s = [0] * len(l+1) # create BIT
 
 def update(i, delta):
     # Note that in some questions delta is always 1!!!!!!!!!!!!!!!!!!
