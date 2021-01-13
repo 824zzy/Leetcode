@@ -1,7 +1,7 @@
 # while
 class Solution:
     def addTwoNumbers(self, l1, l2):
-        n = root = ListNode(0)
+        curr = ans = ListNode(0)
         carry = 0
         while l1 or l2 or carry:
             v1 = v2 = 0
@@ -13,6 +13,6 @@ class Solution:
                 l2 = l2.next
             s = (v1 + v2 + carry) % 10
             carry = (v1 + v2 + carry) // 10
-            n.next = ListNode(s)
-            n = n.next
-        return root.next
+            curr.next = ListNode(s)
+            curr = curr.next
+        return ans.next
