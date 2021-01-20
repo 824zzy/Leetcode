@@ -17,16 +17,3 @@ class Solution:
         while l>=0 and r<len(s) and s[l]==s[r]:
             l, r = l-1, r+1
         return l+1, r
-        
-# sliding window
-class Solution:
-    def longestPalindrome(self, s: str) -> str:
-        if len(s) == 0:
-            return ""
-        window = len(s)
-        while 1:
-            for i in range(len(s)+1-window):
-                subs = s[i:window+i]
-                if subs == subs[::-1]:
-                    return subs
-            window -= 1

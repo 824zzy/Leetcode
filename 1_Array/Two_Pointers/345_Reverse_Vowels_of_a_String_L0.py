@@ -1,12 +1,10 @@
 class Solution:
     def reverseVowels(self, s: str) -> str:
-        l, r = 0, len(s)-1
-        s = list(s)
-        
+        l, r, s = 0, len(s)-1, list(s)
         while l<r:
-            while s[l] not in 'AEIOUaeiou' and l<r:
+            while l<r and s[l] not in "aeiouAEIOU":
                 l += 1
-            while s[r] not in 'AEIOUaeiou' and l<r:
+            while l<r and s[r] not in "aeiouAEIOU":
                 r -= 1
             s[l], s[r] = s[r], s[l]
             l += 1
