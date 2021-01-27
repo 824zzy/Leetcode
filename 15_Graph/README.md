@@ -44,6 +44,16 @@ class Solution:
         return `ans`
 ```
 
+``` py
+# TODO: test new template from: https://leetcode.com/problems/path-with-minimum-effort/
+def dfs(LIMIT, x, y):
+    seen.add((x, y))
+    for dx, dy in neibs:
+        if 0<=dx+x<nr and 0<=dy+y<nc and (dx+x, dy+y) not in seen:
+            if abs(A[x][y]-A[dx+x][dy+y])<=LIMIT:
+                dfs(LIMIT, dx+x, dy+y)
+```
+
 ### Type2
 
 Note: visit array can be replaced by a set
