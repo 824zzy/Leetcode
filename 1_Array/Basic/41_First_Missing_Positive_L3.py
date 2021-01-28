@@ -13,6 +13,7 @@ class Solution:
         
         return len(A)+1
 
+
 # Time Complexity: O(N), Space Complexity: O(N)
 class Solution:
     def firstMissingPositive(self, A: List[int]) -> int:
