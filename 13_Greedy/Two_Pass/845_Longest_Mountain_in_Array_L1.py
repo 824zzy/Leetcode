@@ -1,4 +1,4 @@
-    class Solution:
+class Solution:
     def longestMountain(self, A: List[int]) -> int:
         up, down = [0]*len(A), [0]*len(A)
         for i in range(1, len(A)):
