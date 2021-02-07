@@ -1,22 +1,20 @@
-""" Variant of level order traverse
+""" variants of level order traverse
 """
-# Recursive version
-from collections import defaultdict
+# recursive version
 class Solution:
     def rightSideView(self, root: TreeNode) -> List[int]:
-        self.d = defaultdict(list)
+        tree = collections.defaultdict(list)
         
-        def dfs(node: TreeNode, l: int) -> None:
-            if not node:
-                return
-            self.d[l].append(node.val)
-            dfs(node.left, l+1)
-            dfs(node.right, l+1)
-            
-        dfs(root, 1)
-        return [l[-1] for l in self.d.values()]
+        def dfs(node, d):
+            if not node: return
+            tree[d].append(node)
+            dfs(node.left, d+1)
+            dfs(node.right, d+1)
+        
+        dfs(root, 0)
+        return [v[-1].val for k, v in tree.items()]
 
-# Iterative version
+# iterative version
 class Solution:
     def rightSideView(self, root: TreeNode) -> List[int]:
         if not root:

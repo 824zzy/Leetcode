@@ -10,7 +10,7 @@ class Solution:
         return self.ans
     
     
-    class Solution:
+class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
         ans, stk = [], []
         node = root

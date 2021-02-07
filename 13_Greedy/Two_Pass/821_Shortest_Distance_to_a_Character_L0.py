@@ -1,3 +1,4 @@
+# two pass to calculate shortest distance.
 class Solution:
     def shortestToChar(self, S: str, C: str) -> List[int]:
         ans = [float('inf')] * len(S)
@@ -14,22 +15,18 @@ class Solution:
     
     
 class Solution:
-    def shortestToChar(self, S: str, C: str) -> List[int]:
+    def shortestToChar(self, S: str, c: str) -> List[int]:
         ans = [float('inf')] * len(S)
         cnt = float('inf')
         for i, s in enumerate(S):
-            if s==C:
-                cnt = 0
-                ans[i] = 0
-            else:
-                cnt += 1
-                ans[i] = min(ans[i], cnt)
-        ans, cnt = ans[::-1], float('inf')
+            cnt += 1
+            if s==c: cnt = 0
+            ans[i] = cnt
+            
+        cnt = float('inf')
+        ans = ans[::-1]
         for i, s in enumerate(S[::-1]):
-            if s==C:
-                cnt = 0
-                ans[i] = 0
-            else:
-                cnt += 1
-                ans[i] = min(ans[i], cnt)
+            cnt += 1
+            if s==c: cnt = 0
+            ans[i] = min(ans[i], cnt)
         return ans[::-1]
