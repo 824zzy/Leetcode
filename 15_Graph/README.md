@@ -4,7 +4,7 @@
 
 ```py
 class Solution:
-    def slidingPuzzle(self, A: List[List[int]]) -> int:
+    def graghBFS(self, A: List[List[int]]) -> int:
         state = "from A"
         seen = set()
         queue = [state]
@@ -23,13 +23,10 @@ class Solution:
 ``` py
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        if not grid:
-            return 0
-        nr = len(grid)
-        nc = len(grid[0])
+        if not grid: return 0
+        nr, nc = len(grid), len(grid[0])
         def dfs(grid, r, c):
-            if `condition`:
-                return
+            if `condition`: return
             logic over here # grid[r][c] = '0'
             dfs(grid, r-1, c)
             dfs(grid, r+1, c)
