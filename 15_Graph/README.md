@@ -5,9 +5,8 @@
 ```py
 class Solution:
     def graghBFS(self, A: List[List[int]]) -> int:
-        state = "from A"
         seen = set()
-        queue = [state]
+        queue = ["state from A"]
         while queue:
             for _ in range(len(queue)):
                 state = queue.pop(0)
