@@ -11,8 +11,6 @@ class Solution:
         while L < R:
             area = min(height[L], height[R])*(R-L)
             res = max(res, area)
-            if height[L] < height[R]:
-                L += 1
-            else:
-                R -= 1
+            if height[L] < height[R]: L += 1
+            else: R -= 1
         return res

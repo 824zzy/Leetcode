@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/zzy824/anaconda2/envs/NLP/bin/python",
+    "python.pythonPath": "/Users/zzy824/opt/anaconda3/envs/py36/bin/python",
     "files.associations": {
         "__hash_table": "cpp",
         "unordered_map": "cpp",
@@ -12,5 +12,6 @@
         "vector": "cpp",
         "ios": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.linting.enabled": false
 }
