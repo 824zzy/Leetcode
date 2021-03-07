@@ -18,8 +18,6 @@ class Trie:
             tmp = tmp[c]
         return '#' in tmp
         
-        
-
     def startsWith(self, prefix: str) -> bool:
         tmp = self.trie
         for c in prefix:
