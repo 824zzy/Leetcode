@@ -1,9 +1,7 @@
 class Trie:
-
     def __init__(self):
         self.trie = {}
         
-
     def insert(self, word: str) -> None:
         tmp = self.trie
         for c in word:
