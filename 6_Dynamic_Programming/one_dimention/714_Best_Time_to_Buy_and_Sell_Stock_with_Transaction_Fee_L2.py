@@ -1,8 +1,9 @@
-"""Description
-Author: your name
-Date: 2021-03-19 22:31:54
-LastEditTime: 2021-03-19 22:31:54
-LastEditors: Please set LastEditors
-Description: In User Settings Edit
-FilePath: /Leetcode/6_Dynamic_Programming/one_dimention/714_Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee_L2.py
-"""
+class Solution:
+    def maxProfit(self, A: List[int], f: int) -> int:
+        dp_s = [0] * len(A)
+        dp_h = [0] * len(A)
+        dp_h[0] = -A[0]
+        for i in range(1, len(A)):
+            dp_s[i] = max(dp_s[i-1], dp_h[i-1]+A[i]-f)
+            dp_h[i] = max(dp_h[i-1], dp_s[i-1]-A[i])
+        return dp_s[-1]
