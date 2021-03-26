@@ -1,5 +1,7 @@
 # Graph DFS template
 
+## Type 1
+
 ``` py
 # TODO: refine template with direction list
 class Solution:
@@ -32,7 +34,7 @@ def dfs(LIMIT, x, y):
                 dfs(LIMIT, dx+x, dy+y)
 ```
 
-### Type2
+## Type2
 
 Note: visit array can be replaced by a set
 
