@@ -1,25 +1,26 @@
 # Trivial recursive solution
 class Solution:
-    def __init__(self):
+    def preorder(self, root: 'Node') -> List[int]:
         self.ans = []
         
-    def preorder(self, root: 'Node') -> List[int]:
-        if not root:
-            return
-        self.ans.append(root.val)
-        for c in root.children:
-            self.preorder(c)
+        def dfs(node):
+            if not node: return
+            self.ans.append(node.val)
+            for c in node.children:
+                dfs(c)
+        
+        dfs(root)
         return self.ans
 
 # Smarter iterative solution
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
+        if not root: return []
+        Q = [root]
         ans = []
-        stk = [root]
-        while stk:
-            curr = stk.pop(0)
-            if curr!=None:
-                ans.append(curr.val)
-                for n in reversed(curr.children):
-                    stk.insert(0, n)
+        while Q:
+            for _ in range(len(Q)):
+                cur = Q.pop(0)
+                ans.append(cur.val)
+                Q = cur.children + Q
         return ans
