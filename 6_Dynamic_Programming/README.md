@@ -7,6 +7,12 @@
 3. Confirm boundary conditions
 4. Find state-transition equation
 
+## Category
+
+1. One Dimension
+2. Two Dimension
+   1. Longest Common Subsequence: 583, 1143
+
 ## Reference
 
 - <https://zhuanlan.zhihu.com/p/84882320>

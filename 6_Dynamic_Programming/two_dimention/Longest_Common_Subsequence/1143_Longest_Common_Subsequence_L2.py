@@ -8,13 +8,3 @@ class Solution:
                 else:
                     dp[m][n] = max(dp[m-1][n], dp[m-1][n-1], dp[m][n-1])
         return dp[-1][-1]
-"""
-"bsbininm"
-"jmjkbkjkv"
-
-"abcde"
-"ace"
-
-"abc"
-"def"
-"""
