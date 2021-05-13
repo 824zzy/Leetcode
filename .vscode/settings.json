@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/zzy824/opt/anaconda3/envs/py36/bin/python",
+    "python.pythonPath": "/Users/zzy824/opt/anaconda3/bin/python",
     "files.associations": {
         "__hash_table": "cpp",
         "unordered_map": "cpp",
