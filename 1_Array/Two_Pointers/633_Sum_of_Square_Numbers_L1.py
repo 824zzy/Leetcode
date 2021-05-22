@@ -1,4 +1,4 @@
-# two pointer
+# two pointer template: variance of 167
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
         l, r = 0, round(sqrt(c))

@@ -25,6 +25,6 @@ class Solution:
 class Solution:
     def validPalindrome(self, s: str) -> bool:
         for i in range(len(s)//2):
-            if s[i] != s[-i-1]
+            if s[i] != s[-i-1]:
                 r = len(s) - i
             return s[i+1:r] == s[i+1:r][::-1] or s[i:r-1] == s[i:r-1][::-1]
