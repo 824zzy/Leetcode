@@ -4,6 +4,13 @@ A greedy algorithm is any algorithm that follows the problem-solving heuristic o
 
 ## Assign Problem
 
+- Sorting arrays or strings is a common operation to facilitate later size comparison
+- **Two pass technique** are frequently used.
+
+## Interval Problem
+
+It is necessary to determine whether to sort by the beginning of the interval or by the end of the interval according to the actual situation.
+
 ## Reference
 
 - [wiki: Greedy algorithm](https://en.wikipedia.org/wiki/Greedy_algorithm)

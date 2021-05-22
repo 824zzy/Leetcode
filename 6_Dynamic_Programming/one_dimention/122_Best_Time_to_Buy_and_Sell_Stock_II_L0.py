@@ -1,13 +1,4 @@
-# Facebook
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        max_p = 0
-        for i in range(len(prices)-1):
-            if prices[i] < prices[i+1]:
-                p = prices[i+1] - prices[i]
-                max_p += p
-        return max_p
-
+# DP solution
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if not prices:
@@ -20,3 +11,13 @@ class Solution:
             else:
                 dp[i] = dp[i-1]
         return dp[-1]
+
+# Greedy solution
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        max_p = 0
+        for i in range(len(prices)-1):
+            if prices[i] < prices[i+1]:
+                p = prices[i+1] - prices[i]
+                max_p += p
+        return max_p

@@ -1,4 +1,4 @@
-# Amazon
+# Greedy and data preprocessing for right most character
 class Solution:
     def partitionLabels(self, S: str) -> List[int]:
         l, r, ans = 0, 0, []
