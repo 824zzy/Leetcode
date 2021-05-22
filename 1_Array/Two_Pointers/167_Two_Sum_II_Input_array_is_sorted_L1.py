@@ -1,14 +1,7 @@
-# Hash table the same as Two Sum II
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        d = {}
-        for i in range(len(nums)):
-            if target-nums[i] not in d:
-                d[nums[i]] = i
-            else:
-                return [d[target-nums[i]]+1, i+1]
-
-# Two Pointer
+""" Two Pointer template
+Left pointer move right when sum is smaller then target
+Right pointer move left when sum is larger then target
+"""
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         i, j = 0, len(nums)-1

@@ -5,11 +5,10 @@ Either caculate frequency or character replacement
 class Solution:
     def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
         def convert(word):
-            freq = []
-            f = defaultdict(int)
+            freq, f = [], {}
             for c in word:
-                f[c] += 1
-                freq.append(len(f))
+                if c not in f: f[c] = len(f)
+                freq.append(f[c])
             return freq
         
         p = convert(pattern)
