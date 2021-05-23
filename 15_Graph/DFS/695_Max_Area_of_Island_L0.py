@@ -10,7 +10,6 @@ class Solution:
                     cnt += dfs(dx+x, dy+y)
             return cnt
             
-            
         M, N = len(grid), len(grid[0])
         neibs = [(0, -1), (0, 1), (-1, 0), (1, 0)]
         ans = 0
