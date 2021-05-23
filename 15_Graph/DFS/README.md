@@ -3,35 +3,21 @@
 ## Type 1
 
 ``` py
-# TODO: refine template with direction list
-class Solution:
-    def numIslands(self, grid: List[List[str]]) -> int:
-        if not grid: return 0
-        nr, nc = len(grid), len(grid[0])
-        def dfs(grid, r, c):
-            if `condition`: return
-            logic over here # grid[r][c] = '0'
-            dfs(grid, r-1, c)
-            dfs(grid, r+1, c)
-            dfs(grid, r, c-1)
-            dfs(grid, r, c+1)
-        `init_varable`
-        for r in range(nr):
-            for c in range(nc):
-                if `condition`:
-                    `do sth`
-                    dfs(grid, r, c)
-        return `ans`
-```
-
-``` py
 # TODO: test new template from: https://leetcode.com/problems/path-with-minimum-effort/
-def dfs(LIMIT, x, y):
-    seen.add((x, y))
+def dfs(x, y):
     for dx, dy in neibs:
-        if 0<=dx+x<nr and 0<=dy+y<nc and (dx+x, dy+y) not in seen:
-            if abs(A[x][y]-A[dx+x][dy+y])<=LIMIT:
-                dfs(LIMIT, dx+x, dy+y)
+        if 0<=dx+x<nr and 0<=dy+y<nc and CONDITION:
+            if CONDITION:
+                dfs(dx+x, dy+y)
+M, N = len(grid), len(grid[0])
+neibs = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+ans = 0
+for i in range(M):
+    for j in range(N):
+        if CONDITION:
+            ans = LOGIC
+return ans
+
 ```
 
 ## Type2
