@@ -1,4 +1,4 @@
-""" Counter.most_common(K) return
+""" L0: Counter.most_common(K) return
 [[word_1, frequency_1], [word_2, frequency_2], ..., [word_k, frequency_k]]
 """    
 

@@ -1,4 +1,4 @@
-""" Google
+""" L0
 Basic usage of most_common()
 """
 from collections import Counter
@@ -8,6 +8,5 @@ class Solution:
         c = Counter(s).most_common()
         
         ans = ''
-        for k, v in c:
-            ans += k * v
+        for k, v in c: ans += k * v
         return ans
