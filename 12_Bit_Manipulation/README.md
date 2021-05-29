@@ -4,8 +4,10 @@
 
 ### Theory/Principle
 
-1. get lowest set bit: `x & -x`
-2. three ways to flip a bit on/off:
+1. Get lowest bit in x: `x & 1`
+2. Get lowest "1" bit in x: `x & -x`
+3. Remove lowest "1" bit in x: `x & (x-1)`
+4. Three ways to flip a bit on/off:
    1. `x+(2**n)`: flip n-th bit on in `x`
    2. `x-(2**n)`: flip n-th bit off in `x`
    3. `x^(2**n)`: flip n-th bit on/off in `x`
