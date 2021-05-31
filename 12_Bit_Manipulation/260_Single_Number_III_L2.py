@@ -1,3 +1,6 @@
+""" L2:
+Diff is the XOR result of two different numbers/
+"""
 from collections import Counter
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
@@ -8,6 +11,7 @@ class Solution(object):
     def singleNumber(self, nums):
         diff = 0
         for num in nums: diff ^= num
+        # Get lowest "1" bit in diff
         diff &= -diff
         a = b = 0
         for num in nums:
