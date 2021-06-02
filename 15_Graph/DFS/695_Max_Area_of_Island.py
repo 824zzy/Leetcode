@@ -1,4 +1,4 @@
-""" L0: Graph DFS template
+""" L1: Graph DFS template
 """
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
