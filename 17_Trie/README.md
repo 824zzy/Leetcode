@@ -1,6 +1,6 @@
 # Trie Template
 
-## Prefix/Suffix Trie
+## Ultimate template for Prefix/Suffix Trie
 
 ``` py
 class Trie:
@@ -20,7 +20,7 @@ class Trie:
             if c not in node:
                 node[c] = {}
             node = node[c]
-        node['#'] = '#'
+        node['#'] = word
 
     def search(self, word: str) -> bool:
         """
@@ -41,4 +41,15 @@ class Trie:
             if c not in node: return False
             node = node[c]
         return True
+    
+    def containsWith(self, word: str) -> bool:
+        """
+        Returns if there is any word in the trie that contrains by the given prefix.
+        """
+        node = self.trie
+            for c in word:
+                if c not in node: return False
+                node = node[c]
+                if '#' in node: return node['#']
+    
 ```
