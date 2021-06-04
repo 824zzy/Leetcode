@@ -3,7 +3,6 @@
 ## Type 1
 
 ``` py
-# TODO: test new template from: https://leetcode.com/problems/path-with-minimum-effort/
 def dfs(x, y):
     for dx, dy in neibs:
         if 0<=dx+x<nr and 0<=dy+y<nc and CONDITION:
@@ -17,7 +16,6 @@ for i in range(M):
         if CONDITION:
             ans = LOGIC
 return ans
-
 ```
 
 ## Type2
