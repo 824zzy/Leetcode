@@ -1,3 +1,6 @@
+""" L0: DP
+dp[i] = cost[i]+min(dp[i-1], dp[i-2])
+"""
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
         dp = [0 for i in range(len(cost)+1)]
