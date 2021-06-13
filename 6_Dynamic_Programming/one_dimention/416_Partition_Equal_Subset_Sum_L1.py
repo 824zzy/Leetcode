@@ -16,7 +16,7 @@ class Solution:
         if sum(nums)%2 != 0:
             return False
         seen = []
-        seen.(nums[0])
+        seen.append(nums[0])
         for n in nums[1:]:
             for s in seen:
                 seen.append(n+s)

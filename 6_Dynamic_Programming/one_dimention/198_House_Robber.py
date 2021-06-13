@@ -1,5 +1,4 @@
-# Google
-"""
+""" L0: DP
 1. dp[0] = nums[0], dp[1] = max(nums[0], nums[1])
 2. dp[i] = max(nums[i]+dp[i-2], dp[i-1])
 """
