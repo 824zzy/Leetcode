@@ -17,8 +17,7 @@ class Trie:
         """
         node = self.trie
         for c in word:
-            if c not in node:
-                node[c] = {}
+            if c not in node: node[c] = {}
             node = node[c]
         node['#'] = word
 
