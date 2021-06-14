@@ -34,6 +34,7 @@ class Trie:
     def startsWith(self, prefix: str) -> bool:
         """
         Returns if there is any word in the trie that starts with the given prefix.
+        Eg: ABCD vs AB
         """
         node = self.trie
         for c in prefix:
@@ -43,7 +44,8 @@ class Trie:
     
     def containsWith(self, word: str) -> bool:
         """
-        Returns if there is any word in the trie that contrains by the given prefix.
+        Returns if there is any word in the trie that contains by the given prefix.
+        Eg: ABCD vs ABCDE
         """
         node = self.trie
             for c in word:
