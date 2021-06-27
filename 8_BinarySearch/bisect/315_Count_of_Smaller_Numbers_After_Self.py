@@ -1,3 +1,7 @@
+""" L2
+bisect.insort to build binary search tree
+bisect.bisect_left to find position to insert(how many nodes smaller than itself)
+"""
 class Solution(object):
     def countSmaller(self, nums):
         seen, ans = [], []

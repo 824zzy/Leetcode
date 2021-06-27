@@ -1,4 +1,4 @@
-"""
+""" L2
 First pass: left to right, the right one will have one more candy than the left one if taller.
 Second pass: right to left, the left one will be at least one more candy than the right one if taller.
 """

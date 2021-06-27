@@ -2,15 +2,19 @@
 
 ## Type 1
 
+Problem: 1905
+
 ``` py
+M, N = len(grid), len(grid[0])
+neibs = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+ans = 0
+
 def dfs(x, y):
     for dx, dy in neibs:
         if 0<=dx+x<nr and 0<=dy+y<nc and CONDITION:
             if CONDITION:
                 dfs(dx+x, dy+y)
-M, N = len(grid), len(grid[0])
-neibs = [(0, -1), (0, 1), (-1, 0), (1, 0)]
-ans = 0
+
 for i in range(M):
     for j in range(N):
         if CONDITION:

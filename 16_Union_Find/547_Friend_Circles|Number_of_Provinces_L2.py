@@ -13,8 +13,7 @@ class DSU:
         
 class Solution:
     def findCircleNum(self, M: List[List[int]]) -> int:
-        if not M:
-            return 0
+        if not M: return 0
         
         n = len(M)
         dsu = DSU(n)
