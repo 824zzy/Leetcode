@@ -1,3 +1,6 @@
+""" L0
+pop stack if last stack element equals to current
+"""
 class Solution:
     def removeDuplicates(self, S: str) -> str:
         stk = []
