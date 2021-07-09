@@ -13,6 +13,7 @@
 2. Two Dimension
    1. Longest Common Subsequence: 583, 1143
    2. Two pass for 4 directions: 542
+3. LCS(Longest Common Subsequence)
 
 ## Reference
 
