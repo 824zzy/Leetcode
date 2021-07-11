@@ -1,11 +1,10 @@
 class Solution:
     def numDecodings(self, s: str) -> int:
-        if not s:
-            return 0
+        if not s: return 0
         
         dp = [0] * (len(s)+1)
         dp[0] = 1
-        dp[1] = 0 if s[0] = '0' else 1
+        dp[1] = 0 if s[0] == '0' else 1
         
         for i in range(2, len(s)+1):
             if 0 < int(s[i:i-1]) <= 9:
