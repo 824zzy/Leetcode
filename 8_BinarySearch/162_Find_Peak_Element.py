@@ -1,5 +1,4 @@
-""" binary search solution
-facebook
+""" L1
 """
 # first reaction solution
 class Solution:
@@ -12,7 +11,7 @@ class Solution:
                 break
         return ans
 
-# smarter binary search
+# binary search
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         left = 0
