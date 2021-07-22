@@ -1,6 +1,6 @@
 """ L0
 Note that string deepcopy is necessary.
-TODO: add probability solution
+TODO: add probability solution: https://www.cnblogs.com/grandyang/p/5783392.html
 """
 class Solution:
     def __init__(self, nums: List[int]):
