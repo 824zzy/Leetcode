@@ -1,4 +1,4 @@
-# Amazon: sort str as dict's key
+# L1: from Amazon, sort str as dict's key
 from collections import defaultdict
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
