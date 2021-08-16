@@ -1,6 +1,8 @@
 # Sliding Window Template
 
 ``` sh
+TODO: "https://leetcode.com/problems/frequency-of-the-most-frequent-element/discuss/1175090/JavaC%2B%2BPython-Sliding-Window
+
 i = 0
 ans = [0 or len(A)+1]
 `init s` # sliding window
@@ -12,5 +14,3 @@ for j in range(len(A)):
         i += 1
 return ans or return ans % (len(A)+1)
 ```
-
-TODO: https://leetcode.com/problems/frequency-of-the-most-frequent-element/discuss/1175090/JavaC%2B%2BPython-Sliding-Window
