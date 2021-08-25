@@ -1,3 +1,7 @@
+""" L2:
+find subarry which has at most S 1's and at most S-1 1's.
+tricky line: ans += j-i+1
+"""
 class Solution:
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         def atMost(S):

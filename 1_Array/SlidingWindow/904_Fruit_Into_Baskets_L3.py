@@ -16,6 +16,6 @@ class Solution:
             last_two[fruit] = i
             cnt += 1
             if len(last_two) > 2:
-                cnt = i - last_two.eaapopitem(last=False)[1]
+                cnt = i - last_two.popitem(last=False)[1]
             ans = max(ans, cnt)
         return ans
