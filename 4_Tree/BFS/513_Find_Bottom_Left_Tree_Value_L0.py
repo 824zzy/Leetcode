@@ -3,11 +3,9 @@ class Solution:
         queue = [root]
         ans = 0
         while queue:
-            `possible logic`
             for i in range(len(queue)):
                 cur = queue.pop(0)
-                `possible logic`
+                if i==0: ans = cur.val
                 if cur.left: queue.append(cur.left)
                 if cur.right: queue.append(cur.right)
-                `possible logic`
         return ans
