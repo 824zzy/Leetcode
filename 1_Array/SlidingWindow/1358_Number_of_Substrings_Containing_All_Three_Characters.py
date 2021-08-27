@@ -1,4 +1,4 @@
-""" L2:
+""" L1:
 tricky line to count all the legit substrings: ans += i
 """
 class Solution:
