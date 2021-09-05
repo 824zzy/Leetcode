@@ -1,4 +1,5 @@
 """ L1
+Define seen set out of for loop since 
 """
 class Solution:
     def arrayNesting(self, nums: List[int]) -> int:
