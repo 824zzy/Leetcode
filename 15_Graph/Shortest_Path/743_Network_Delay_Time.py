@@ -1,18 +1,6 @@
-# Graph Template
-
-## Breadth First Search(BFS)
-
-[Go to BFS template](./BFS/README.md)
-
-## Depth First Search(DFS)
-
-[Go to DFS template](./DFS/README.md)
-
-## Shortest Path(Dijstra Algorithm)
-
-TODO: refine template
-
-``` py
+""" Dijkstra template
+pq for tracking minimum delay
+"""
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         e = collections.defaultdict(dict)
@@ -29,4 +17,3 @@ class Solution:
                         heapq.heappush(pq, (delay2, j))
         if len(seen)!=n: return -1
         else: return max(seen.values())
-```
