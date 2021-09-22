@@ -1,5 +1,6 @@
 """ L3:
 use "seen" to get farthest reachable node in new graph.
+seen[i] means that we can arrive at node i and have seen[i] moves left.
 """
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, n: int) -> int:
