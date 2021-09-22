@@ -1,4 +1,5 @@
-""" L3: https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/discuss/156739/C%2B%2BJavaPython-Dijkstra-%2B-Priority-Queue
+""" L3:
+use "seen" to get farthest reachable node in new graph.
 """
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, n: int) -> int:
