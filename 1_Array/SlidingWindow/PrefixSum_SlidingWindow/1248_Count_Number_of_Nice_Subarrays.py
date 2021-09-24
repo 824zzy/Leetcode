@@ -1,4 +1,5 @@
 """ L1
+Exactly K times = at most K times - at most K - 1 times
 """
 class Solution:
     def numberOfSubarrays(self, A: List[int], k: int) -> int:
