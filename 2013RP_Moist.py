@@ -1,10 +1,9 @@
 def Moist(S):
-    ordered_S = sorted(S)
+    prev = S[0]
     ans = 0
-    for i in range(len(S)):
-        if S[i]>ordered_S[i]:
-            print(S[i], ordered_S[i])
-            ans += 1
+    for i in range(1, len(S)):
+        if S[i]<prev: ans += 1
+        else: prev = S[i]
     return ans
         
 
