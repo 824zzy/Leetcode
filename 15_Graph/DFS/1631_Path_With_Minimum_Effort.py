@@ -1,6 +1,8 @@
-# A comprehensive problem for binary search and dfs
-# TODO: test and add union find solution
-# Similar problem: 778. Swim in Rising Water
+""" L2: https://leetcode.com/problems/path-with-minimum-effort/discuss/1035940/Python-dfs-with-binary-search-explained
+A comprehensive problem for binary search and dfs
+Similar problem: 778. Swim in Rising Water
+"""
+
 
 class Solution:
     def minimumEffortPath(self, A: List[List[int]]) -> int:

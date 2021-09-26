@@ -1,3 +1,6 @@
+""" L1
+simulate insert sort and cound number of insert
+"""
 def Moist(S):
     prev = S[0]
     ans = 0
