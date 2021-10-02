@@ -129,6 +129,11 @@ One question per day to ensure a sharp mind.
    1. C++: `s[1]=2;//121`
    2. Python: `s = s[0:1]+'2'+s[2:]`
 
+## Mindmap
+
+TODO: create a MindeNode map for all the types of problem
+
 ## Reference
 
 1. [用什么语言刷题？C++/Java/Python横向大比较](https://www.youtube.com/watch?v=ZyCQBrcr6jk&list=PLLuMmzMTgVK7XfFadhkPuF_ztvhxbriDr&index=7)
+2. [Leetcode 101: A Leetcode Grinding Guide(C++ Version)](https://github.com/changgyhub/leetcode_101)

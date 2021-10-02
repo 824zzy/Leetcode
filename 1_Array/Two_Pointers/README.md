@@ -1,4 +1,11 @@
-# Template
+# Two pointer
+
+## Explanation
+
+Two pointer is usually used in array, there are two pointer `i` and `j` point to the begin and end of the array.
+We need to use a `while` loop to move the two pointers and add logic based on problem requirement.
+
+## Template
 
 ``` py
 def twopointer(self, A: List[int]) -> int:

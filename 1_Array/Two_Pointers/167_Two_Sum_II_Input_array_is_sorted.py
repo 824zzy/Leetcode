@@ -1,4 +1,4 @@
-""" Two Pointer template
+""" L0: two pointer template
 Left pointer move right when sum is smaller then target
 Right pointer move left when sum is larger then target
 """
