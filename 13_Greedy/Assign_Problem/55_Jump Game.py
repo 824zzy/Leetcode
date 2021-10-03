@@ -1,3 +1,7 @@
+"""
+Greedily find the maximum reachable index.
+Return false immediately if cannot reach current num.
+"""
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         maxJump = 0
