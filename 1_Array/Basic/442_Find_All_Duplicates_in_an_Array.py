@@ -1,4 +1,7 @@
-# Flip trick as extra information
+""" L1
+Flip trick as extra information to save space
+"""
+
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
         l = len(nums)
