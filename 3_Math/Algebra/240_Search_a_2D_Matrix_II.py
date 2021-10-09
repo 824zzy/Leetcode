@@ -1,4 +1,6 @@
-# start from bottom left corner and search the target.
+""" L1
+start from bottom left corner and search the target
+"""
 class Solution:
     def searchMatrix(self, A: List[List[int]], t: int) -> bool:
         x, y = len(A)-1, 0
@@ -12,8 +14,8 @@ class Solution:
 class Solution:
     def searchMatrix(self, A: List[List[int]], t: int) -> bool:
         for r in A:
-                if t>r[-1]: continue
-                if t<r[0]: return False
-                for n in r:
-                    if n==t: return True
-            return False
+            if t>r[-1]: continue
+            if t<r[0]: return False
+            for n in r:
+                if n==t: return True
+        return False

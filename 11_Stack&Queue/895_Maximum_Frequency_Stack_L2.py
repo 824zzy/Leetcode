@@ -1,3 +1,6 @@
+""" L2
+build a stack using defaultdict(list) to save frequency as key and val list as values. 
+"""
 from collections import defaultdict
 class FreqStack:
     def __init__(self):
