@@ -1,5 +1,5 @@
-""" L1: shift and Get lowest bit in x
-x & 1
+""" L1: https://leetcode.com/problems/reverse-bits/
+shift and Get lowest bit in x: x & 1
 """
 class Solution:
     def reverseBits(self, n: int) -> int:
