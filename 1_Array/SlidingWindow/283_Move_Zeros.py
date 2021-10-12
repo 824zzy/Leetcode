@@ -1,4 +1,5 @@
-""" best solution using exchange.
+""" L1: https://leetcode.com/problems/move-zeroes/
+sliding window for exchanges.
 """
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:

@@ -1,4 +1,4 @@
-""" L0: two pointer template
+""" L0: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 Left pointer move right when sum is smaller then target
 Right pointer move left when sum is larger then target
 """

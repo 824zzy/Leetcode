@@ -1,5 +1,5 @@
 """ L0: https://leetcode.com/problems/diameter-of-binary-tree/
-return max(l, r) + 1
+each node should return max(l, r) + 1
 """
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
