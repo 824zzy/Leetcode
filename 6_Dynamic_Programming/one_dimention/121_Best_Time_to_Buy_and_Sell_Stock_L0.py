@@ -1,4 +1,16 @@
-# Facebook
+""" L0: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+minimize buy and maximize profit&loss
+"""
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        ans = 0
+        buy, pnl = float('inf'), 0
+        for p in prices:
+            buy = min(buy, p)
+            pnl = max(pnl, p-buy)
+        return pnl
+    
+# dp
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if not prices:

@@ -1,4 +1,7 @@
-# Iteration
+""" L0: https://leetcode.com/problems/fibonacci-number/
+classical textbook problem
+"""
+# bottom up solution
 class Solution:
     def fib(self, n: int) -> int:
         if n<2: return n
@@ -8,7 +11,7 @@ class Solution:
             dp[i] = dp[i-1]+dp[i-2]
         return dp[-1]
     
-# Recursive 
+# top down solution
 class Solution:
     def fib(self, n: int) -> int:
         if n==1: return 1
