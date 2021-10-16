@@ -10,7 +10,7 @@ class Solution:
             pnl = max(pnl, p-buy)
         return pnl
     
-# dp
+# dp solution
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if not prices:
