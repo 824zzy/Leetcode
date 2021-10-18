@@ -1,5 +1,7 @@
 # Prefix Sum template
 
+## Subarray type
+
 ```py
 cnt = Counter()
 cnt[0] = 1
