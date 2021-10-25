@@ -1,3 +1,5 @@
+""" L1: https://leetcode.com/problems/jump-game-ii/
+"""
 class Solution:
     def jump(self, A: List[int]) -> int:
         dp = [float('inf')] * len(A)
