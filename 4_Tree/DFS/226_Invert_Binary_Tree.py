@@ -5,9 +5,6 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         def dfs(node):
             if not node: return None
-            l = dfs(node.left)
-            r = dfs(node.right)
-            node.left, node.right = r, l
+            node.left, node.right = dfs(node.right), dfs(node.left)
             return node
-        
         return dfs(root)
