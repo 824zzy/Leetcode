@@ -1,21 +1,20 @@
-""" L1: template
-TODO: use this problem to summary a template
+""" L1: https://leetcode.com/problems/course-schedule/
+count courses while topological sort
 """
 class Solution:
-    def findOrder(self, n: int, A: List[List[int]]) -> List[int]:
+    def canFinish(self, n: int, P: List[List[int]]) -> bool:
         e = defaultdict(list)
-        inD = [0] * n # in-degree
-        for i, j in A:
+        inD = [0] * n
+        for i, j in P:
             e[j].append(i)
             inD[i] += 1
-
+        
         Q = [i for i, d in enumerate(inD) if d==0]
-    
-        ans = []
+        cnt = 0
         while Q:
             i = Q.pop(0)
-            ans.append(i)
+            cnt += 1
             for j in e[i]:
                 inD[j] -= 1
                 if not inD[j]: Q.append(j)
-        return ans if len(ans)==n else []
+        return cnt==n

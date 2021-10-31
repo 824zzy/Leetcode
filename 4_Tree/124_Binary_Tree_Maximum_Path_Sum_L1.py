@@ -1,33 +1,16 @@
-""" Take care of max(l, r, 0), the case of all negative child should return 0
+""" L1: https://leetcode.com/problems/binary-tree-maximum-path-sum/
+at each node find the maximum path sum
 """
-# time consuming saving space
 class Solution:
-    def maxPathSum(self, root: TreeNode) -> int:
-        def dfs(node: TreeNode):
-            if not node:
-                return float('-inf')
-            
-            l, r = dfs(node.left), dfs(node.right)
-            self.ans = max(self.ans, node.val, node.val+l+r, node.val+l, node.val+r)
-            
-            return max(l, r, 0)+node.val    
+    def maxPathSum(self, root: Optional[TreeNode]) -> int:
+        self.ans = -inf
         
-        self.ans = float('-inf')
-        dfs(root)
+        def dfs(node):
+            if not node: return -inf
+            l = dfs(node.left)
+            r = dfs(node.right)
+            self.ans = max(self.ans, node.val, node.val+l, node.val+r, node.val+l+r)
+            return max([node.val, node.val+l, node.val+r])
+        
+        ans = dfs(root)
         return self.ans
-
-# space consuming saving time
-class Solution:
-    def maxPathSum(self, root: TreeNode) -> int:
-        def dfs(node: TreeNode):
-            if not node:
-                return 0
-            
-            l, r = dfs(node.left), dfs(node.right)
-            self.ans.append(max(node.val, node.val+l+r, node.val+l, node.val+r))
-            
-            return max(l, r, 0)+node.val    
-        
-        self.ans = []
-        dfs(root)
-        return max(self.ans)
