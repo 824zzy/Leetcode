@@ -1,3 +1,10 @@
+""" L1: https://leetcode.com/problems/corporate-flight-bookings/
+Set the change of seats for each day.
+If booking = [i, j, k],
+it needs k more seat on ith day,
+and we don't need these seats on j+1th day.
+We accumulate these changes then we have the result that we want.
+"""
 class Solution:
     def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:
         cnt = [0] * (n+1)
