@@ -1,4 +1,5 @@
-""" L2: Backtracking + DP
+""" L2: https://leetcode.com/problems/partition-to-k-equal-sum-subsets/submissions/
+Backtracking + DP
 plagiarize from lee: https://leetcode.com/problems/partition-to-k-equal-sum-subsets/discuss/108741/Solution-with-Reference
 use T as dp array.
 """
