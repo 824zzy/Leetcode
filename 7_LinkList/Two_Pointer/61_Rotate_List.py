@@ -1,5 +1,5 @@
 """ L1: https://leetcode.com/problems/rotate-list/
-fast slow pointers. TODO: 3 variables
+fast slow pointers.
 """
 class Solution:
     def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:

@@ -1,4 +1,4 @@
-""" L3: https://leetcode.com/problems/binary-tree-cameras/
+""" L2: https://leetcode.com/problems/binary-tree-cameras/
 tri-color encoding
 0 - not covered 
 1 - covered w/o camera
