@@ -1,5 +1,5 @@
 """ L2: https://leetcode.com/problems/unique-binary-search-trees
-catelan number formula: fn(n) = fn(0)*fn(n-1) + fn(1)*fn(n-2) + ... + fn(n-1)*fn(0)
+catalan number formula: fn(n) = fn(0)*fn(n-1) + fn(1)*fn(n-2) + ... + fn(n-1)*fn(0)
 """
 # top down
 class Solution:
