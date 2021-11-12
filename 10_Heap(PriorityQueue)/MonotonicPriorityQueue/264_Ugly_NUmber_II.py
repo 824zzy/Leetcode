@@ -1,4 +1,6 @@
-import heapq
+""" L1: https://leetcode.com/problems/ugly-number-ii/
+maintain priority queue to iteratively find next ugly number
+"""
 class Solution:
     def nthUglyNumber(self, n: int) -> int:
         N, m, S = [1], 1, set()

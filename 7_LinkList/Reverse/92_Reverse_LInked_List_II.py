@@ -1,18 +1,13 @@
-""" L1
-tmp = cur.next
-cur.next = tmp.next
-tmp.next = pre.next
-pre.next = tmp
+""" L1: https://leetcode.com/problems/reverse-linked-list-ii/
 """
 class Solution:
-    def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
-        dummy = pre = ListNode(0)
-        pre.next = head
-        for _ in range(m-1): pre = pre.next
-        cur = pre.next
-        for _ in range(n-m):
-            tmp = cur.next
-            cur.next = tmp.next
-            tmp.next = pre.next
-            pre.next = tmp
-        return dummy.next
+    def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+        dummy = ListNode(next=head)
+        prev = None
+        for _ in range(left-1): head, prev = head.next, head
+            
+        temp_prev, temp_head = prev, head
+        for _ in range(left, right+1): head.next, head, prev = prev, head.next, head
+
+        temp_prev.next, temp_head.next = prev, head
+        return dummy.next 
