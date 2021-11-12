@@ -1,5 +1,7 @@
 # Prefix Sum template
 
+calculate prefix array: `P = list(itertools.accumulate(A))`
+
 ## Subarray type
 
 ```py
