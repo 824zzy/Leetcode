@@ -3,15 +3,16 @@
 ## BottomUp / DFS
 
 Recursive version
-"""py
+
+``` py
 def dfs(node, args):
     if not node:
         return 0/None
-    node.left = dfs(node.left)
-    node.right = dfs(node.right)
+    l = dfs(node.left)
+    r = dfs(node.right)
     # do sth
-    return node
-"""
+    return # sth
+```
 
 Iterative version
 

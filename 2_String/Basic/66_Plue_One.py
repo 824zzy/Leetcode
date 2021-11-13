@@ -1,8 +1,6 @@
-""" ''.join(list) for calculation
+""" L0: https://leetcode.com/problems/plus-one/submissions/
 """
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        num = int(''.join([str(s) for s in digits]))
-        num += 1
-        return [int(i) for i in str(num)]
-        
+        n = int(''.join(map(str, digits)))+1
+        return [int(x) for x in str(n)]

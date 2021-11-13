@@ -1,5 +1,5 @@
 """ L2: LIS problem
-// dp[i] denotes length of the longest subsequence from begining & ending at ith element
+dp[i] denotes length of the longest subsequence from begining & ending at ith element
 """
 class Solution:
     def lengthOfLIS(self, A: List[int]) -> int:
