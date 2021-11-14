@@ -1,4 +1,6 @@
-""" L2: 
+""" L2: https://leetcode.com/problems/decode-ways/
+TODO: add top down solution
+https://leetcode.com/problems/decode-ways/discuss/519919/Python3-top-down-and-bottom-up-dp
 dp['0'] = current number of ways we could decode, ending on any number;
 dp['1'] = current number of ways we could decode, ending on an open 1;
 dp['2'] = current number of ways we could decode, ending on an open 2;
