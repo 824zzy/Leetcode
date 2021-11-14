@@ -1,4 +1,6 @@
-""" L1: https://leetcode.com/problems/jump-game-ii/
+""" L0: https://leetcode.com/problems/jump-game-ii/
+update maximum reach dp by: dp[i+j] = min(dp[i+j], dp[i]+1)
+this method is not optimized than greedy.
 """
 class Solution:
     def jump(self, A: List[int]) -> int:

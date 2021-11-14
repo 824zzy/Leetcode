@@ -15,6 +15,20 @@
    2. Two pass for 4 directions: 542
 3. LCS(Longest Common Subsequence)
 
+## Kadane's algorithm
+
+``` py
+def max_subarray(numbers):
+    """Find the largest sum of any contiguous subarray."""
+    best_sum = 0  # or: float('-inf')
+    current_sum = 0
+    for x in numbers:
+        current_sum = max(0, current_sum + x)
+        best_sum = max(best_sum, current_sum)
+    return best_sum
+```
+
 ## Reference
 
-- <https://zhuanlan.zhihu.com/p/84882320>
+- [leetcode|动态规划专项练习](https://zhuanlan.zhihu.com/p/84882320)
+- [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm)

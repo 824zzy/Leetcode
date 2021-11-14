@@ -1,4 +1,5 @@
-""" Google
+""" https://leetcode.com/problems/contains-duplicate/
+check duplicate by set
 """
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:

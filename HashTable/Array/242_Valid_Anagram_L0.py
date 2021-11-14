@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/valid-anagram/
+""" https://leetcode.com/problems/valid-anagram/
 count or sorted characters 
 """
 class Solution:
