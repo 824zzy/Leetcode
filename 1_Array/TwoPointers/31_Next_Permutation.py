@@ -1,4 +1,5 @@
-""" https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order
+""" L2: https://leetcode.com/problems/next-permutation/
+https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order
 
 The following algorithm generates the next permutation lexicographically after a given permutation. It changes the given permutation in-place.
 

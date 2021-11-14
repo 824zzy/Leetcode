@@ -3,6 +3,21 @@ find all subset by dfs(P^n, N[i+1:])
 """
 class Solution:
     def subsetXORSum(self, A: List[int]) -> int:
+        def dfs(i):
+            ans.append(self.stk)
+            if i==len(A): return 
+            for j in range(i, len(A)):
+                self.stk ^= A[j]
+                dfs(j+1)
+                self.stk ^= A[j]
+        
+        ans = []
+        self.stk = 0
+        dfs(0)
+        return sum(ans)
+    
+class Solution:
+    def subsetXORSum(self, A: List[int]) -> int:
         self.ans = 0
         
         def dfs(P, N):

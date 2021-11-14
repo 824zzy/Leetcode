@@ -1,14 +1,27 @@
 """ L0: https://leetcode.com/problems/permutations/
 find all permutations by dfs(P+[n], N[:i]+N[i+1:])
 """
-# Backtracking
+# backtracking
+class Solution:
+    def permute(self, A: List[int]) -> List[List[int]]:
+        ans = []
+        stk = []
+        def dfs(N):
+            if not N: return ans.append(stk.copy())
+            for i, n in enumerate(N):
+                stk.append(n)
+                dfs(N[:i]+N[i+1:])
+                stk.pop()
+    
+        dfs(A)
+        return ans
+    
+# dfs with states
 class Solution:
     def permute(self, A: List[int]) -> List[List[int]]:
         self.ans = []
         def dfs(P, N):
-            if len(P)==len(A):
-                self.ans.append(P)
-                return
+            if len(P)==len(A): return self.ans.append(P)
             for i, n in enumerate(N):
                 dfs(P+[n], N[:i]+N[i+1:])
     

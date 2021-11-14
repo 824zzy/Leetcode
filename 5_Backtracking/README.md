@@ -1,14 +1,15 @@
 # Template for back-tracking
 
 ``` py
-self.ans = []
-def dfs(`args`):
-    if `condition`:
-        self.ans.append(`ans`)
-        return
-    for i in range(`arg`):
-        if `condition`:
-            dfs(`args`)
-dfs([], target)
-return self.ans
+ans = []
+stk = []
+def dfs(i):
+    if `logic`: return ans.append(stk.copy())
+    for j in range(`arg`):
+        stk.append(A[j])
+        dfs(j)
+        stk.pop()
+
+dfs(0)
+return ans
 ```
