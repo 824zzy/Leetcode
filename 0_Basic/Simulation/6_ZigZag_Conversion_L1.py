@@ -1,4 +1,4 @@
- class Solution:
+class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows==1 or numRows>=len(s):
             return s
