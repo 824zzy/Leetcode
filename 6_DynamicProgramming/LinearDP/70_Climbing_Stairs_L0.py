@@ -1,6 +1,5 @@
-""" L0: https://leetcode.com/problems/climbing-stairs/
-1. dp[0] = 1, dp[1] = 2
-2. dp[i] = dp[i-1] + dp[i-2]; (i>=2)
+""" https://leetcode.com/problems/climbing-stairs/
+dp[i-1] + dp[i-2]
 """
 class Solution:
     def climbStairs(self, n: int) -> int:
