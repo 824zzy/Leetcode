@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/445658/Python3-multiple-implementations-(96.33)
+""" https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/445658/Python3-multiple-implementations-(96.33)
 """
 class Solution:
     def letterCombinations(self, D: str) -> List[str]:

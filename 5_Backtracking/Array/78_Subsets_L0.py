@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/subsets/
+""" https://leetcode.com/problems/subsets/
 find all subsets by dfs(P+[n], N[i+1:])
 """
 class Solution:
