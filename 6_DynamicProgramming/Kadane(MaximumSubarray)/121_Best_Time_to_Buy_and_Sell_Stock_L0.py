@@ -2,13 +2,12 @@
 minimize buy and maximize profit&loss
 """
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        ans = 0
-        buy, pnl = float('inf'), 0
-        for p in prices:
-            buy = min(buy, p)
-            pnl = max(pnl, p-buy)
-        return pnl
+    def maxProfit(self, A: List[int]) -> int:
+        ans = cur = 0
+        for i in range(1, len(A)):
+            cur = max(0, cur+A[i]-A[i-1])
+            ans = max(ans, cur)
+        return ans
     
 # dp solution
 class Solution:

@@ -1,5 +1,6 @@
 """ https://leetcode.com/problems/largest-divisible-subset/
 Sort A in ascending order. Find dp[i] contains the largest subset containing A[i].
+enhanced time sequential
 """
 # bottom up
 class Solution:

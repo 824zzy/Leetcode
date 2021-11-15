@@ -1,5 +1,6 @@
-""" L2: LIS problem
+""" https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/
 dp[i] denotes length of the longest subsequence from begining & ending at ith element
+enhanced time sequential
 """
 class Solution:
     def lengthOfLIS(self, A: List[int]) -> int:
