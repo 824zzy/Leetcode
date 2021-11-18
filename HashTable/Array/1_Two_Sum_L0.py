@@ -1,4 +1,4 @@
-""" L0
+""" https://leetcode.com/problems/two-sum/
 subtrahend as key and minuend's index as value
 """
 class Solution:

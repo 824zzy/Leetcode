@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/first-bad-version/
+""" https://leetcode.com/problems/first-bad-version/
 variance of template
 """
 class Solution:

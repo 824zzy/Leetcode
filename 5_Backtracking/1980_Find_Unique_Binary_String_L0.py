@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/find-unique-binary-string/
+""" https://leetcode.com/problems/find-unique-binary-string/
 Find unique binary string by backtracking
 """
 class Solution:
@@ -8,7 +8,6 @@ class Solution:
         self.ans = ''
         
         def dfs(i):
-            print(i, stk)
             state = ''.join(stk)
             if i==L:
                 if state not in A: 

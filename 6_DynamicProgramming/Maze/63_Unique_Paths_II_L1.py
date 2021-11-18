@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/unique-paths-ii/
+""" https://leetcode.com/problems/unique-paths-ii/
 """
 # top-down solution from end point
 class Solution:
@@ -12,21 +12,6 @@ class Solution:
             return dfs(i-1, j)+dsf(i, j-1)
         
         return dfs(m-1, n-1)
-    
-# top-down solution from start point
-class Solution:
-    def uniquePathsWithObstacles(self, A: List[List[int]]) -> int:
-        M, N = len(A), len(A[0])
-        if A[0][0]==1 or A[M-1][N-1]==1: return 0
-        @cache
-        def dfs(x, y):
-            if [x, y]==[M-1, N-1]: return 1
-            ans = 0
-            for dx, dy in [(0, 1), (1, 0)]:
-                if 0<=x+dx<M and 0<=y+dy<N and A[x+dx][y+dy]==0:
-                    ans += dfs(x+dx, y+dy)
-            return ans
-        return dfs(0, 0)
     
 # bottom up solution
 class Solution:

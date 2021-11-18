@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/sum-of-all-subset-xor-totals/
+""" https://leetcode.com/problems/sum-of-all-subset-xor-totals/
 find all subset by dfs(P^n, N[i+1:])
 """
 # backtracking
