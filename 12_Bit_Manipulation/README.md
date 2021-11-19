@@ -4,7 +4,7 @@
 
 ### Theory/Principle
 
-1. Get lowest bit in x: `x & 1`
+1. Get lowest bit in x: `x & 1`: 191, 461
 2. Get lowest "1" bit in x: `x & -x`
 3. Remove lowest "1" bit in x: `x & (x-1)`
 4. Three ways to flip a bit on/off:
@@ -13,6 +13,8 @@
    3. `x^(2**n)`: flip n-th bit on/off in `x`
    4. `x^(1<<n)`: flip n-th bit on in `x`
 5. Gray code: `(i>>1)^i`
+6. `'{0:032b}'.format`: a short way to format the integer to a 32 bit binary
+7. `str.zfill(32)`: fill a string with 0 to 32 bit
 
 ### Coding
 
