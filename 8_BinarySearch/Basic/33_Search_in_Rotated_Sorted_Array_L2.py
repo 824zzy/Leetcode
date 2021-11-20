@@ -15,3 +15,13 @@ class Solution:
                 if A[m] < t <= A[r]: l = m + 1
                 else: r = m - 1
         return -1
+
+# from stefan
+class Solution:
+    def search(self, A: List[int], t: int) -> int:
+        l, r = 0, len(A)-1
+        while l<r:
+            m = (l+r)//2
+            if (A[0]>t)^(A[0]>A[m])^(t>A[m]): l = m + 1
+            else: r = m
+        return l if A[l]==t else -1
