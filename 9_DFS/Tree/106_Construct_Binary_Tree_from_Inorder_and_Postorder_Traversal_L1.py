@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
+""" https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 """
 class Solution:
     def buildTree(self, I: List[int], P: List[int]) -> Optional[TreeNode]:
