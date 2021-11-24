@@ -1,3 +1,7 @@
+""" https://leetcode.com/problems/interval-list-intersections/
+Define two pointers to scan through A and B respectively. If the intervals overlap, put the overlapped part in ans. 
+Otherwise, increment the pointer for the interval that ends ahead.
+"""
 class Solution:
     def intervalIntersection(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
         l, r = 0, 0
