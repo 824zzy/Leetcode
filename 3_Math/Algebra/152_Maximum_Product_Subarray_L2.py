@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/maximum-product-subarray/
+We use prefix product which replace 0 with 1 to find maximum product.
+"""
 class Solution:
     def maxProduct(self, A: List[int]) -> int:
         B = A[::-1]

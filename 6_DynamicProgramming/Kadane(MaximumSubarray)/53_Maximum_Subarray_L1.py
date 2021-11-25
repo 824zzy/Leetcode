@@ -1,6 +1,5 @@
-""" L0: https://leetcode.com/problems/maximum-subarray/
+""" https://leetcode.com/problems/maximum-subarray/
 https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
-
 
 Or use bottom up dp template:
 1. dp[0] = nums[0]

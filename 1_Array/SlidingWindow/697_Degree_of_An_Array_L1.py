@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/degree-of-an-array/
+hash table + sliding window
+"""
 from collections import Counter
 class Solution:
     def findShortestSubArray(self, nums: List[int]) -> int:

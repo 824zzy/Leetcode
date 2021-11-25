@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+""" https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 minimize buy and maximize profit&loss
 """
 class Solution:
