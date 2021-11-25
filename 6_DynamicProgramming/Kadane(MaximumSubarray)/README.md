@@ -1,6 +1,8 @@
 # Kadane's Algorithm
 
-A simple idea of Kadane’s algorithm is to **look for all positive contiguous segments of the array** and **keep track of the maximum sum contiguous subarray** among all positive segments. 
+A simple idea of Kadane’s algorithm is to **look for all positive contiguous segments of the array** and **keep track of the maximum sum contiguous subarray** among all positive segments.
+
+For a variance of Kadane's algorithm, it is always necessary to consider to two variable to record subarray.
 
 ## template
 
