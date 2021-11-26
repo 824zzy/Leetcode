@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/search-insert-position/
+""" https://leetcode.com/problems/search-insert-position/
 note that the answer can be len(A)
 """
 class Solution:
