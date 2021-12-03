@@ -1,10 +1,6 @@
-""" Premium member problem
+""" https://leetcode.com/problems/remove-vowels-from-a-string/
 Given a string `s`, remove the vowels 'a', 'e', 'i', 'o', 'u' from it, and return the new string
-
-hint: hash set is a little bit faster.
 """
-
-# Amazon
 class Solution:
     def removeVowels(self, S: str) -> None:
         s = set()
