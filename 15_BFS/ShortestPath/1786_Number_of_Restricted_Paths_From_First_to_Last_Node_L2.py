@@ -1,5 +1,7 @@
-""" L2
-dijkstra algorithm+top down dp
+""" https://leetcode.com/problems/number-of-restricted-paths-from-first-to-last-node/
+dijkstra algorithm + top down dp
+dijkstra algorithm to find lowest weight from current node to node n.
+top down dp to calculate the number of restricted path
 """
 class Solution:
     def countRestrictedPaths(self, n: int, edges: List[List[int]]) -> int:
