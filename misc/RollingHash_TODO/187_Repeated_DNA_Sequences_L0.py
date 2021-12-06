@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/repeated-dna-sequences/submissions/
+TODO: add rolling hash solution https://leetcode.com/problems/repeated-dna-sequences/discuss/712431/Python3-8-line-rolling-hash
+"""
 # Set or Hash Table all OK.
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:

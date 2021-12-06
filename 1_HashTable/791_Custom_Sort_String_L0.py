@@ -1,5 +1,5 @@
-""" L1
-Simply use counter to simulate string formation
+""" https://leetcode.com/problems/custom-sort-string/
+Use counter and set to formulate string by in order and not in order
 """
 class Solution:
     def customSortString(self, order: str, S: str) -> str:
