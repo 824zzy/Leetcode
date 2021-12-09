@@ -1,11 +1,13 @@
+""" https://leetcode.com/problems/jump-game-iii/
+"""
 class Solution:
-    def canReach(self, arr: List[int], start: int) -> bool:
-        self.seen = set()
-        def dfs(arr, idx):
-            if idx>=len(arr) or idx<0 or idx in self.seen:
-                return False
-            if arr[idx]==0:
-                return True
-            self.seen.add(idx)
-            return dfs(arr, idx+arr[idx]) or dfs(arr, idx-arr[idx])
-        return dfs(arr, start)
+    def canReach(self, A: List[int], s: int) -> bool:
+        seen = set()
+        
+        def dfs(i):
+            if not 0<=i<len(A) or i in seen: return False
+            if A[i]==0: return True
+            seen.add(i)
+            return dfs(i+A[i]) or dfs(i-A[i])
+        
+        return dfs(s)
