@@ -15,7 +15,7 @@ Update: O(log(n))
 ## Template
 
 ``` py
-l = max(A) or len(A) # depends
+l = max(A) or len(A) # it depends
 s = [0] * len(l+1) # create BIT
 
 def update(i, delta):
@@ -40,3 +40,4 @@ return ans
 ## Reference
 
 1. [花花酱 Fenwick Tree / Binary Indexed Tree - 刷题找工作 SP3](https://www.youtube.com/watch?v=WbafSgetDDk)
+2. [Fenwick Tree (Binary Index Tree) - Quick Tutorial and Source Code Explanation](https://www.youtube.com/watch?v=uSFzHCZ4E-8)
