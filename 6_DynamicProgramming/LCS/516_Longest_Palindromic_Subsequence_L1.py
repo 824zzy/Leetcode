@@ -1,4 +1,5 @@
-""" L1: https://leetcode.com/problems/longest-palindromic-subsequence/
+""" https://leetcode.com/problems/longest-palindromic-subsequence/
+the same as 1143, a variance of LCS
 """
 # top down dp solution
 class Solution:

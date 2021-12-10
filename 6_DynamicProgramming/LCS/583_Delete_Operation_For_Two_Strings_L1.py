@@ -1,4 +1,7 @@
-# longest common sub sequence
+""" https://leetcode.com/problems/delete-operation-for-two-strings/
+use longest common subsequence to find least delete operations
+"""
+
 class Solution:
     def minDistance(self, A: str, B: str) -> int:
         dp = [[0 for _ in range(len(B)+1)] for _ in range(len(A)+1)]

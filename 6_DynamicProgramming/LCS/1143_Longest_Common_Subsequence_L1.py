@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/longest-common-subsequence/
+""" https://leetcode.com/problems/longest-common-subsequence/
 classical 2d dp problem
 """
 # top down
