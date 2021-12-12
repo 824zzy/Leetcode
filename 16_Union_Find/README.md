@@ -7,7 +7,7 @@ class DSU:
     def __init__(self, n):
         self.p = [i for i in range(n)]
 
-    def find(self, x1):
+    def find(self, x):
         if self.p[x]!=x: self.p[x] = self.find(self.p[x])
         return self.p[x]
 
