@@ -4,6 +4,7 @@
 
 Fenwick tree is proposed to solve the prefix sum problem.
 The idea is to **store partial sum** in each node and get total sum by traversing the tree from leaf to root.
+The `get(i)` function mainly sums up the nodes by **flipping the last set bit**.
 
 The tree has a height of log(n).
 
@@ -16,19 +17,19 @@ Update: O(log(n))
 
 ``` py
 l = max(A) or len(A) # it depends
-s = [0] * len(l+1) # create BIT
+BIT = [0] * len(l+1) # create BIT
 
 def update(i, delta):
     # Note that in some questions delta is always 1!!!!!!!!!!!!!!!!!!
     while i<l:
-        s[i] += delta
+        BIT[i] += delta
         i += i & -i
 
 def get(i):
-    ans = 0
+    sm = 0
     while i>0:
-        ans += c[i]
-        i -= i & -i
+        sm += BIT[i]
+        i -= i & -i # flip the last set bit
 
 ans = 0
 for i, a in enumerate(A):
