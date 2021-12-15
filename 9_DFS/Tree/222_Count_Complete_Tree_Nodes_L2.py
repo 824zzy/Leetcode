@@ -1,4 +1,4 @@
-""" L2: https://leetcode.com/problems/count-complete-tree-nodes/
+""" https://leetcode.com/problems/count-complete-tree-nodes/
 Idea: https://leetcode.com/problems/count-complete-tree-nodes/discuss/702258/Python3-two-O(logN-*-logN)-approaches
 1. compute its height h;
 2. compute the height of its right child
