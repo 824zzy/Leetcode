@@ -1,6 +1,8 @@
-# Note
+# Binary Search
 
-## Template
+## Basic Problem
+
+Template:
 
 ``` py
 def binary_search(self, A: List[int], t: int) -> int:
@@ -12,9 +14,17 @@ def binary_search(self, A: List[int], t: int) -> int:
       return l
 ```
 
-## Tips
+## Bisect Problem
 
-1. Reverse a list sometime useful.
+1. Longest Increasing Subsequence: 300, 334
+
+## Sentinel Problem
+
+## Bisec Module
+
+1. insort: `insort(list, num)`, `insort_left(list, num)` and `insort_right(list, num)`: Insert num in a list. If list has repeat value, insort_left and insort_right will insert num in different position.
+
+2. bisect: `bisect(list, num)`, `bisect_left(list, num)` and `bisect_right(list, num)`: find the location where the value will be inserted and return without inserting.
 
 ## Reference
 

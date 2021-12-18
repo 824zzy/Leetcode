@@ -7,9 +7,8 @@
 
 ``` py
 stk = []
-ans = A
 for i in range(len(A)):
-    while stk and A[stk[-1]]>=A[i]:
+    while stk and A[stk[-1]]?A[i]:
         `logic`
         stk.pop()
     `logic`
