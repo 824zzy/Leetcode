@@ -18,3 +18,11 @@ class Solution:
                 elif x-prefix in reversed_prefix and i+reversed_prefix[x-prefix]<len(nums):
                     ans = min(ans, i+reversed_prefix[x-prefix]+1)
         return ans if ans!=float('inf') else -1
+    
+    
+        ans = 0
+        for i in range(1, len(s)):
+            if s[i-1] >= s[i]: 
+                ans += 1 + s[i-1] - s[i]
+                s[i] = 1 + s[i-1]
+        return ans 

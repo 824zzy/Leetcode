@@ -3,9 +3,9 @@ use bisect to maintain a increasing list.
 O(NlogN)
 """
 class Solution:
-    def lengthOfLIS(self, nums: List[int]) -> int:
+    def lengthOfLIS(self, A: List[int]) -> int:
         vals = []
-        for x in nums: 
+        for x in A: 
             k = bisect_left(vals, x)
             if k == len(vals): vals.append(x)
             else: vals[k] = x
