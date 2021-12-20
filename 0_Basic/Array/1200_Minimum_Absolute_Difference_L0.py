@@ -1,11 +1,22 @@
+""" https://leetcode.com/problems/minimum-absolute-difference/
+keep track of minimal difference of each pair
+"""
 class Solution:
-    def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
-        arr.sort()
-        dis = float('inf')
+    def minimumAbsDifference(self, A: List[int]) -> List[List[int]]:
+        A.sort()
+        diff = inf
         ans = []
-        for i in range(len(arr)-1):
-            dis = min(abs(arr[i]-arr[i+1]), dis)
-        for i in range(len(arr)-1):
-            if abs(arr[i]-arr[i+1])==dis:
-                ans.append([arr[i], arr[i+1]])
+        for i in range(1, len(A)):
+            if A[i]-A[i-1]<=diff:
+                if A[i]-A[i-1]<diff:
+                    ans, diff = [], A[i]-A[i-1]
+                ans.append([A[i-1], A[i]])
         return ans
+    
+class Solution:
+    def minimumAbsDifference(self, A: List[int]) -> List[List[int]]:
+        A.sort()
+        mp = defaultdict(list)
+        for i in range(len(A)-1):
+            mp[A[i+1]-A[i]].append([A[i], A[i+1]])
+        return mp[min(mp)]
