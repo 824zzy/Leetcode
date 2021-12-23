@@ -1,5 +1,5 @@
-""" L1: template
-TODO: use this problem to summary a template
+""" https://leetcode.com/problems/course-schedule-ii/
+use topological sort template
 """
 class Solution:
     def findOrder(self, n: int, A: List[List[int]]) -> List[int]:

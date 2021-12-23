@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/course-schedule/
+""" https://leetcode.com/problems/course-schedule/
 count courses while topological sort
 """
 class Solution:
