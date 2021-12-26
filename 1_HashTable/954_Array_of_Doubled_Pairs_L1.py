@@ -1,4 +1,4 @@
-""" L1
+""" https://leetcode.com/problems/array-of-doubled-pairs/
 Use counter to find doubled pairs increasingly based on absolute value.
 """
 class Solution:
