@@ -1,11 +1,13 @@
 """ https://leetcode.com/problems/add-binary/
-use `zip_longest`
+sum up every bits
 """
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
         ans, carry = [], 0
-        for x, y in zip_longest(reversed(a), reversed(b), fillvalue="0"):
-            carry += (x=='1')+(y=='1')
+        a, b = list(a), list(b)
+        while a or b or carry:
+            if a: carry += int(a.pop())
+            if b: carry += int(b.pop())
             carry, d = divmod(carry, 2)
             ans.append(d)
         if carry: ans.append(carry)

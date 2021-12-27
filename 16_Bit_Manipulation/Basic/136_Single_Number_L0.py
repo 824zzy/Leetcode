@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/single-number/
+""" https://leetcode.com/problems/single-number/
 find the number appears only once.
 a ^ 0 = a
 a ^ a = 0

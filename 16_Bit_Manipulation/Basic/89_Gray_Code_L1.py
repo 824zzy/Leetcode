@@ -1,5 +1,5 @@
-""" L1
-Gray code formula: i>>1)^i
+""" https://leetcode.com/problems/gray-code/
+Gray code formula: (i>>1)^i
 """
 class Solution:
     def grayCode(self, n: int) -> List[int]:
