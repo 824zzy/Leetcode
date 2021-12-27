@@ -1,6 +1,7 @@
 # Prefix Sum template
 
-calculate prefix array: `P = list(itertools.accumulate(A))`
+- `itertools.accumulate(A)`: prefix sum of A
+- `itertools.accumulate(A, mul)`: prefix profuct of A
 
 ## Subarray type
 
