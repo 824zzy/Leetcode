@@ -1,4 +1,4 @@
-"""L2:
+""" https://leetcode.com/problems/frequency-of-the-most-frequent-element/
 # valid condition: max*size <= k+sum, which is k + sum >= (j - i + 1) * A[j]
 """
 class Solution:

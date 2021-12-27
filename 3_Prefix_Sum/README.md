@@ -3,6 +3,8 @@
 - `itertools.accumulate(A)`: prefix sum of A
 - `itertools.accumulate(A, mul)`: prefix profuct of A
 
+## Basic type
+
 ## Subarray type
 
 ```py

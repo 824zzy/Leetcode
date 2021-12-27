@@ -1,4 +1,4 @@
-""" L2:
+""" https://leetcode.com/problems/binary-subarrays-with-sum/
 find subarry which has at most S 1's and at most S-1 1's.
 tricky line: ans += j-i+1
 """

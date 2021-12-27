@@ -1,4 +1,6 @@
-# sliding window
+""" https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/
+brute force find all substring
+"""
 class Solution:
     def hasAllCodes(self, s: str, k: int) -> bool:
         S = set()
