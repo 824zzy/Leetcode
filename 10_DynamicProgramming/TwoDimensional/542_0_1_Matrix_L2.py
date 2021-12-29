@@ -1,4 +1,4 @@
-"""L2: 
+""" https://leetcode.com/problems/01-matrix/
 Two pass DP for 4 directions search.
 dp[i][j] = min(dp[i][j], dp[i][j +/- 1]+1) &
 dp[i][j] = min(dp[i][j], dp[i +/- 1][j]+1)
