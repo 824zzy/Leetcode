@@ -11,7 +11,7 @@
    1. `x+(2**n)`: flip n-th bit on in `x`
    2. `x-(2**n)`: flip n-th bit off in `x`
    3. `x^(2**n)`: flip n-th bit on/off in `x`
-   4. `x^(1<<n)`: flip n-th bit on in `x`
+   4. `x^(1<<n)`: flip n-th bit on/off in `x`
 5. Gray code of a integer `i`: `(i>>1)^i`
 6. `'{0:032b}'.format`: a short way to format the integer to a 32 bit binary
 7. `str.zfill(32)`: fill a string with 0 to 32 bit
