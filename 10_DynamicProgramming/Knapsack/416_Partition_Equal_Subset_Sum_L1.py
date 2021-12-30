@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/partition-equal-subset-sum/
-choose
+choose or not to choose
 """
 class Solution:
     def canPartition(self, A: List[int]) -> bool:

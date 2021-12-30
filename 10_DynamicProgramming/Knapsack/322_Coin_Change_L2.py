@@ -1,4 +1,20 @@
-# Amazon:
+""" https://leetcode.com/problems/coin-change/
+time-dependent/complete knap sack.
+"""
+# top down
+class Solution:
+    def coinChange(self, A: List[int], n: int) -> int:
+        
+        @lru_cache(None)
+        def dfs(n):
+            if n==0: return 0
+            elif n<0: return inf
+            return min(1+dfs(n-c) for c in A)
+        
+        ans = dfs(n)
+        return -1 if ans==inf else ans
+    
+    
 """
 1. dp[0] = 0, we don't need any coins for 0
 2. dp[i] = min(dp[i], 1+dp[i-coin])

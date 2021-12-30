@@ -1,5 +1,5 @@
-""" L1: 
-
+""" https://leetcode.com/problems/maximum-product-of-word-lengths/
+utilize bit mask for quicker check of overlapping.
 """
 class Solution:
     def maxProduct(self, words: List[str]) -> int:
