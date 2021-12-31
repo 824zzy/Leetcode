@@ -1,4 +1,4 @@
-"""
+""" https://leetcode.com/problems/palindromic-substrings/
 2d dp records if substring[i, j] is palindrome.
 1. If s[i]==s[j] and i,j distance smaller than 2, the substring s[i:j] is palindrome.
 2. If s[i]==s[j] and the substring s[i+1:j-1] is palindrome, the substring s[i:j] is palindrome.
