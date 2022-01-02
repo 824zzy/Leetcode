@@ -5,7 +5,7 @@
 # 2. union by rank, merge low rank set to high rank set: merge cluter x and cluster y
 class DSU:
     def __init__(self, n):
-        self.p = [i for i in range(n)]
+        self.p = list(range(n))
 
     def find(self, x):
         if self.p[x]!=x: self.p[x] = self.find(self.p[x])

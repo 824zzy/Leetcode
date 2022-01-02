@@ -3,10 +3,10 @@
 ## Template
 
 ``` py
-def topological_sort(self, n: int, P: List[List[int]]) -> bool:
+def topological_sort(self, n: int, A: List[List[int]]) -> bool:
     e = defaultdict(list)
     inD = [0] * n
-    for i, j in P:
+    for i, j in A:
         e[j].append(i)
         inD[i] += 1
     
