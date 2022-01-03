@@ -1,16 +1,20 @@
-""" https://codeforces.com/problemset/problem/71/A
-negative's remainder will round down: -20%60 = 40
-"""
-def solution(A, k):
-    t = A[k-1]
-    ans = 0
-    for i in range(len(A)):
-        if A[i]>=t and A[i]>0: ans += 1
-    return ans
-    
-    
-n, k = input().split()
-n, k = int(n), int(k)
-A = list(map(int, input().split()))
-ans = solution(A, k)
-print(ans)
+def solution(A):
+    t = min(A[0], A[1])
+    for i in range(2, len(A)):
+        x = A[i]//3
+        A[i] -= 3*x
+        A[i-1] += x
+        A[i-2] += 2*x
+    print("dada", A)
+    return min(A)
+
+N = int(input())
+
+ans = []
+for i in range(N):
+    _ = int(input())
+    A = list(map(int, input().split()))
+    ans.append(solution(A))
+
+for i in range(len(ans)): 
+    print(ans[i])

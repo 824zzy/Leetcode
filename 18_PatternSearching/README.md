@@ -4,14 +4,14 @@
 
 ``` py
 def getLPS(s):
-            m, j = len(s), 0
-            lps = [0] * m
-            for i in range(1, m):
-                while s[i] != s[j] and j > 0: j = lps[j-1]
-                if s[i] == s[j]:
-                    j += 1
-                    lps[i] = j
-            return lps
+    m, j = len(s), 0
+    lps = [0] * m
+    for i in range(1, m):
+        while s[i] != s[j] and j > 0: j = lps[j-1]
+        if s[i] == s[j]:
+            j += 1
+            lps[i] = j
+    return lps
         
 def kmp(s, p):
     lps = getLPS(p)
