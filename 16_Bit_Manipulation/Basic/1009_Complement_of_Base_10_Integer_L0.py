@@ -6,5 +6,3 @@ class Solution:
         k = 0
         while 2**k<=num: k += 1
         return num^(2**k-1)
-    
-    

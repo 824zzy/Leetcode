@@ -14,7 +14,7 @@ class Solution:
         for i in range(M):
             for j in range(N):
                 ans = max(ans, dfs(i, j))
-        return ans**2
+        return ans**2   
     
     
 class Solution:
