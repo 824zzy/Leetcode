@@ -4,7 +4,7 @@ iteratively return next ugly number given an ungly number x
 # top down
 class Solution:
     def nthUglyNumber(self, n: int) -> int:
-        @lru_cache(None)
+        @cache
         def fn(k):
             """Return the smallest ugly number larger than k (not necessarily ugly)."""
             if k == 0: return 1

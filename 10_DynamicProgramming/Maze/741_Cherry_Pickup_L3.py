@@ -9,7 +9,7 @@ class Solution:
     def cherryPickup(self, grid: List[List[int]]) -> int:
         n = len(grid)
         
-        @lru_cache(None)
+        @cache
         def fn(t, i, ii): 
             """Return maximum cherries collected at kth step when two robots are at ith and iith row"""
             j, jj = t - i, t - ii #columns

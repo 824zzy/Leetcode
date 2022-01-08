@@ -6,7 +6,7 @@ Note that j**2 is slower than j*j.
 """
 class Solution:
     def numSquares(self, n: int) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(x):
             if x==0: return 0
             ans = inf

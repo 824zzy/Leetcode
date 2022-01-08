@@ -4,7 +4,7 @@ buy low & sell high: find minimum buy price and maximum profit&loss
 # top down solution
 class Solution:
     def maxProfit(self, A: List[int]) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i, canBuy):
             if i==len(A) or not canBuy: return 0
             ans = dfs(i+1, canBuy) # skip

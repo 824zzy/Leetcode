@@ -20,7 +20,7 @@ class Solution:
                     s2 = e[i][j]+s1
                     heapq.heappush(pq, (s2, j))
         
-        @lru_cache(None)
+        @cache
         def dp(node):
             if node==n: return 1
             ans=0

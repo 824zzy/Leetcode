@@ -5,7 +5,7 @@ class Solution:
     def calculateMinimumHP(self, A: List[List[int]]) -> int:
         M, N = len(A), len(A[0])
         
-        @lru_cache(None)
+        @cache
         def dfs(i, j):
             if i==M or j==N: return inf
             if i==M-1 and j==N-1: return max(1, 1-A[i][j])

@@ -3,7 +3,7 @@
 # Top down dp
 class Solution:
     def maxProfit(self, A: List[int]) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i, canBuy):
             if i==len(A): return 0
             ans = dfs(i+1, canBuy)

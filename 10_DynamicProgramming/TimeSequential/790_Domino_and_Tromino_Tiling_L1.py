@@ -3,7 +3,7 @@ Find the transitional equation: fn(n) = 2*fn(n-1)+fn(n-3)
 """
 class Solution:
     def numTilings(self, N: int) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(n):
             if n==1: return 1
             elif n==2: return 2

@@ -4,7 +4,7 @@ the same as 1143, a variance of LCS
 # top down dp solution
 class Solution:
     def longestPalindromeSubseq(self, s: str) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(l, r):
             if l==r: return 1
             elif l>r: return 0

@@ -7,7 +7,7 @@ class Solution:
         M = defaultdict(int)
         for x in A: M[x] += x
         
-        @lru_cache(None)
+        @cache
         def dfs(i): 
             if i<0: return 0 
             if A[i]-1 not in M: return M[A[i]] + dfs(i-1)

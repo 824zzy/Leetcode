@@ -5,7 +5,7 @@ time-dependent/complete knap sack.
 class Solution:
     def coinChange(self, A: List[int], n: int) -> int:
         
-        @lru_cache(None)
+        @cache
         def dfs(n):
             if n==0: return 0
             elif n<0: return inf

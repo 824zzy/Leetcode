@@ -6,7 +6,7 @@ class Solution:
     def change(self, n: int, A: List[int]) -> int:
         A.sort(reverse=True)
         
-        @lru_cache(None)
+        @cache
         def dfs(i, n):
             if n==0: return 1
             return sum(dfs(j, n-A[j]) for j in range(i, len(A)) if n-A[j]>=0)

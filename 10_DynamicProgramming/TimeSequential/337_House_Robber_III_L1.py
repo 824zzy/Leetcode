@@ -4,7 +4,7 @@ use canRob to control the dp
 """
 class Solution:
     def rob(self, root: Optional[TreeNode]) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(node):
             if not node: return 0
             ans = node.val
@@ -17,7 +17,7 @@ class Solution:
     
 class Solution:
     def rob(self, root: Optional[TreeNode]) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(node, canRob):
             if not node: return 0
             if canRob: return max(node.val+dfs(node.left, False)+dfs(node.right, False), 

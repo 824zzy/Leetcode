@@ -4,7 +4,7 @@ max(dp[i-1], A[i-1]+dp[i-2])
 # top down
 class Solution:
     def rob(self, A: List[int]) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i):
             if i<0: return 0
             return max(dfs(i-2)+A[i], dfs(i-1))

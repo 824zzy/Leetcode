@@ -4,7 +4,7 @@
 class Solution:
     def wordBreak(self, s: str, W: List[str]) -> bool:
         W = set(W)
-        @lru_cache(None)
+        @cache
         def dfs(i):
             if i==len(s): return True
             for j in range(i+1, len(s)+1):

@@ -6,7 +6,7 @@ class Solution:
     def maxSatisfaction(self, A: List[int]) -> int:
         A.sort()
         
-        @lru_cache(None)
+        @cache
         def dfs(i, dis):
             if i==len(A): return 0
             # choose

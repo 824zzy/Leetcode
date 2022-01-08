@@ -14,7 +14,7 @@ class Solution:
 # top down dp
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i, j):
             if not (0<=i<m and 0<=j<n): return 0
             if i==m-1 and j==n-1: return 1

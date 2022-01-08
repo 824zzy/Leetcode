@@ -4,7 +4,7 @@ classical 2d dp problem
 # top down
 class Solution:
     def longestCommonSubsequence(self, A: str, B: str) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i, j):
             if i==len(A) or j==len(B): return 0
             if A[i]==B[j]: return 1+dfs(i+1, j+1)

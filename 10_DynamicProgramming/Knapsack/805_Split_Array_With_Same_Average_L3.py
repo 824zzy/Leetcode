@@ -13,7 +13,7 @@ Recursive funciton find try to find a subset of n elements from A with sum = tar
 """
 class Solution:
     def splitArraySameAverage(self, A):
-        @lru_cache(None)
+        @cache
         def find(target, k, i):
             if k == 0: return target == 0
             if target < 0 or k + i > n: return False

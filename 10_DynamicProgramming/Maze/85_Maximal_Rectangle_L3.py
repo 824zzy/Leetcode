@@ -5,27 +5,27 @@ class Solution:
         if not A: return 0
         m, n = len(A), len(A[0])
         
-        @lru_cache(None)
+        @cache
         def height(i, j):
             if i < 0 or A[i][j] == "0": return 0
             return 1 + height(i-1, j)
         
-        @lru_cache(None)
+        @cache
         def left(i, j): 
             if j == -1 or A[i][j] == "0": return j+1
             return left(i, j-1)
         
-        @lru_cache(None)
+        @cache
         def lo(i, j): 
             if i < 0 or A[i][j] == "0": return 0
             return max(lo(i-1, j), left(i, j))
         
-        @lru_cache(None)
+        @cache
         def right(i, j):
             if j == n or A[i][j] == "0": return j
             return right(i, j+1)
         
-        @lru_cache(None)
+        @cache
         def hi(i, j):
             if i < 0 or A[i][j] == "0": return n
             return min(hi(i-1, j), right(i, j))

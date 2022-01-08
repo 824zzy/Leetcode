@@ -7,7 +7,7 @@ class Solution:
         if s&1: return False
         t = s//2
         
-        @lru_cache(None)
+        @cache
         def dfs(i, ss):
             if i==len(A): return False
             if ss==t: return True

@@ -3,7 +3,7 @@ https://leetcode.com/discuss/general-discussion/1125779/Dynamic-programming-on-s
 """
 class Solution:
     def countArrangement(self, N):
-        @lru_cache(None)
+        @cache
         def dfs(bm, pl):
             if pl == 0: return 1
                 

@@ -18,7 +18,7 @@ class Solution:
 class Solution:
     def largestDivisibleSubset(self, A: List[int]) -> List[int]:
         A.sort(reverse=True)
-        @lru_cache(None)
+        @cache
         def dfs(prev, i):
             if i<0: return []
             if not prev or A[i]%prev==0: n = [A[i]]+dfs(A[i], i-1)

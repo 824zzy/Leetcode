@@ -3,12 +3,12 @@ two pass: A[1:], A[:-1]
 """
 class Solution:
     def rob(self, A: List[int]) -> int:
-        @lru_cache(None)
+        @cache
         def dfs1(i):
             if i<1: return 0
             return max(dfs1(i-1), A[i]+dfs1(i-2))
         
-        @lru_cache(None)
+        @cache
         def dfs2(i):
             if i<0: return 0
             return max(dfs2(i-1), A[i]+dfs2(i-2))

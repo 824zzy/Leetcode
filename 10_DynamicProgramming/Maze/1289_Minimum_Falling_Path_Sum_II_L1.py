@@ -14,7 +14,7 @@ class Solution:
     def minFallingPathSum(self, A: List[List[int]]) -> int:
         M, N = len(A), len(A[0])
         
-        @lru_cache(None)
+        @cache
         def dfs(i, j):
             if i<0: return 0
             return min([dfs(i-1, jj)+A[i][jj] for jj in range(N) if j!=jj])

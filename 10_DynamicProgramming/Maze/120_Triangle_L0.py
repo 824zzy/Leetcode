@@ -3,7 +3,7 @@
 # top down
 class Solution:
     def minimumTotal(self, A: List[List[int]]) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i, j):
             if i==len(A) or j==len(A[i]): return 0
             return A[i][j]+min(dfs(i+1, j), dfs(i+1, j+1))

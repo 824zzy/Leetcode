@@ -1,3 +1,5 @@
+""" https://codeforces.com/problemset/problem/1623/C
+"""
 def solution(A):
     def check(m):
         _A = A.copy()
@@ -28,9 +30,3 @@ for i in range(N):
 
 for i in range(len(ans)): 
     print(ans[i])
-
-"""
-1
-3
-1 2 10
-"""

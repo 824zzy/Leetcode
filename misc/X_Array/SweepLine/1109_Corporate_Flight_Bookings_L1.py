@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/corporate-flight-bookings/
+""" https://leetcode.com/problems/corporate-flight-bookings/
 Set the change of seats for each day.
 If booking = [i, j, k],
 it needs k more seat on ith day,

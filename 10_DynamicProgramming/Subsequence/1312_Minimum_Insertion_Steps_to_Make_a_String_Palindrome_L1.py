@@ -3,7 +3,7 @@ variance of LCS
 """
 class Solution:
     def minInsertions(self, s: str) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i, j):
             if i >= j: return 0
             if s[i] == s[j]: return dfs(i+1, j-1)

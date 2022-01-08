@@ -8,7 +8,7 @@ class Solution:
         basket, rem = divmod(sum(nums), 4)
         if rem or nums[0] > basket: return False
         
-        @lru_cache(None)
+        @cache
         def dfs(mask):
             if mask == 0: return 0
             for j in range(N):

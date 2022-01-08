@@ -4,7 +4,7 @@ TODO: solve this problem
 class Solution:
     def shortestCommonSupersequence(self, A: str, B: str) -> str:
         pass
-#         @lru_cache(None)
+#         @cache
 #         def dfs(i, j):
 #             if i==len(A) or j==len(B): return ''
 #             elif A[i]==B[j]: return A[i]+dfs(i+1, j+1)

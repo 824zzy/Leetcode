@@ -13,7 +13,7 @@ class Solution:
 # top down solution
 class Solution:
     def climbStairs(self, n: int) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(idx):
             if idx<2: return 1
             return dfs(idx-1)+dfs(idx-2)

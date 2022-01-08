@@ -5,7 +5,7 @@ classical knap-sack problem
 class Solution:
     def findMaxForm(self, A: List[str], M: int, N: int) -> int:
         
-        @lru_cache(None)
+        @cache
         def dfs(i, m, n):
             if i==len(A): return 0
             

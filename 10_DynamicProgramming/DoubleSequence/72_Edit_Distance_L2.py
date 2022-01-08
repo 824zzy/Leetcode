@@ -5,7 +5,7 @@ Replace: dfs(i+1, j+1) + 1
 """
 class Solution:
     def minDistance(self, A: str, B: str) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i, j):
             if i==len(A) or j==len(B): return len(A)+len(B)-i-j
             if A[i]==B[j]: return dfs(i+1, j+1)

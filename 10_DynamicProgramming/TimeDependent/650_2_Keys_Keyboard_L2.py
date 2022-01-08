@@ -4,7 +4,7 @@
 class Solution:
     def minSteps(self, n: int) -> int:
         
-        @lru_cache(None)
+        @cache
         def dfs(n): 
             """Return the minimum number of steps to get n 'A's."""
             if n == 1: return 0

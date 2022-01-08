@@ -15,7 +15,7 @@ class Solution:
 # top down
 class Solution:
     def numDecodings(self, s: str) -> int:
-        @lru_cache(None)
+        @cache
         def dfs(i):
             if i==len(s): return 1
             if s[i]=='0': return 0
