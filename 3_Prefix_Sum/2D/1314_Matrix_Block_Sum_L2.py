@@ -1,35 +1,17 @@
+""" https://leetcode.com/problems/matrix-block-sum/
+"""
 class Solution:
-    def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
-        rowl = len(mat)
-        coll = len(mat[0])
-        ans = [[0 for i in range(coll)] for j in range(rowl)]
-
-        for r in range(rowl):
-            for c in range(coll):
-                if r - 1 >= 0:
-                    mat[r][c] += mat[r-1][c]
-                if c - 1 >= 0:
-                    mat[r][c] += mat[r][c-1]
-                if c-1 >=0 and r-1 >= 0:
-                    mat[r][c] -= mat[r-1][c-1]
-                    
-        for r in range(rowl):
-            for c in range(coll):
-                rl = max(0, r - K)
-                rr = min(r + K, rowl-1)
-                cl = max(0, c - K)
-                cr = min(c + K, coll-1)
-
-                A, B, C = 0, 0, 0
-                D = mat[rr][cr]
+    def matrixBlockSum(self, A: List[List[int]], k: int) -> List[List[int]]:
+        m, n = len(A), len(A[0])
+        prefix = [[0]*(n+1) for _ in range(m+1)]
+        for i in range(m):
+            for j in range(n): 
+                prefix[i+1][j+1] = A[i][j] + prefix[i][j+1] + prefix[i+1][j] - prefix[i][j]
                 
-                if rl - 1 >= 0:
-                    B = mat[rl-1][cr]
-                if cl - 1 >= 0:
-                    C = mat[rr][cl - 1]
-                if rl - 1 >= 0 and cl - 1 >= 0:
-                    A = mat[rl - 1][cl - 1]
-                    
-                ans[r][c] = A + D - B - C
-                
-        return ans
+        ans = [[0]*n for _ in range(m)]
+        for i in range(m):
+            for j in range(n): 
+                r0, r1 = max(0, i-k), min(m-1, i+k)
+                c0, c1 = max(0, j-k), min(n-1, j+k)
+                ans[i][j] = prefix[r1+1][c1+1] - prefix[r0][c1+1] - prefix[r1+1][c0] + prefix[r0][c0]
+        return ans 
