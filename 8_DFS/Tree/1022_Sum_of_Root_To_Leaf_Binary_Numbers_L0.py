@@ -1,17 +1,13 @@
+""" https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/
+dfs + bit manipulation
+"""
 class Solution:
-    def sumRootToLeaf(self, root: TreeNode) -> int:
-        self.ans = 0
+    def sumRootToLeaf(self, root: Optional[TreeNode]) -> int:
+        def dfs(node, val):
+            if not node: return 0
+            if not node.left and not node.right: return 2*val+node.val
+            l = dfs(node.left, 2*val+node.val)
+            r = dfs(node.right, 2*val+node.val)
+            return l+r
         
-        def dfs(node, path):
-            if not node.left and not node.right:
-                path += str(node.val)
-                self.ans += int(''.join(path), 2)
-                return
-            
-            if node.left:
-                dfs(node.left, path+[str(node.val)])
-            if node.right:
-                dfs(node.right, path+[str(node.val)])
-        
-        dfs(root, [])
-        return self.ans
+        return dfs(root, 0)
