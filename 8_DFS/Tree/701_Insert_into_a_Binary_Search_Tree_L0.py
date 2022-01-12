@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/insert-into-a-binary-search-tree/submissions/
+""" https://leetcode.com/problems/insert-into-a-binary-search-tree/submissions/
 find an reasonable empty node to insert
 """
 class Solution:
