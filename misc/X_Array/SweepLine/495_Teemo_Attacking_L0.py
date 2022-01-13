@@ -1,7 +1,6 @@
 class Solution:
     def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:
-        if not timeSeries:
-            return 0
+        if not timeSeries: return 0
         n = timeSeries[-1]+duration
         count = [0] * (n+2)
         for i in timeSeries:

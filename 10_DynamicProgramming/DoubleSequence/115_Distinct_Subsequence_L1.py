@@ -1,6 +1,19 @@
-""" L0: find pattern after draw examples
+""" https://leetcode.com/problems/distinct-subsequences/submissions/
 dp[i][j] = dp[i][j-1]+dp[i-1][j-1]
 """
+class Solution:
+    def numDistinct(self, s: str, t: str) -> int:
+        @cache
+        def dfs(i, j):
+            if j==len(t): return 1
+            if i==len(s): return 0
+            ans = 0
+            if s[i]==t[j]: ans += dfs(i+1, j+1)
+            ans += dfs(i+1, j)
+            return ans
+            
+        return dfs(0, 0)
+    
 class Solution:
     def numDistinct(self, s: str, t: str) -> int:
         dp = [[0 for _ in range(len(s)+1)] for _ in range(len(t)+1)]

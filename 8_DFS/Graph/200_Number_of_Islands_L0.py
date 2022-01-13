@@ -1,4 +1,4 @@
-""" L0: simplest template usage
+""" https://leetcode.com/problems/number-of-islands/submissions/
 """
 class Solution:
     def numIslands(self, A: List[List[str]]) -> int:

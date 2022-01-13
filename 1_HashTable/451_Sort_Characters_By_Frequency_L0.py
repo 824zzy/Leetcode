@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/sort-characters-by-frequency/
+""" https://leetcode.com/problems/sort-characters-by-frequency/
 count frequency and sort the counter.
 """
 # most_common()
