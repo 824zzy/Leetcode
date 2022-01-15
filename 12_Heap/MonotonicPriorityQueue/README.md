@@ -2,6 +2,8 @@
 
 ## Template
 
+TODO: update template
+
 ``` py
 def monotonic_priority_queue(self, A: List[List[int]]) -> int:
     A = sorted(A, key=lambda x: x[1])
@@ -13,3 +15,5 @@ def monotonic_priority_queue(self, A: List[List[int]]) -> int:
         while t>y: t += heappop(pq)
     return ?
 ```
+
+TODO: https://leetcode.com/tag/monotonic-queue/

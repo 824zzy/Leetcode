@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/single-number-iii/
+""" https://leetcode.com/problems/single-number-iii/
 Get the xor of the whole array. 
 Retrieve the last set bit and use that as a differentiator to separate the array into two groups. 
 Each group would contain only one single number then.

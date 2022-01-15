@@ -1,7 +1,24 @@
-# Sweep Line template
+# Sweep Line
 
 Note that for all intervals inputs, this method should be the first intuition you come up with.
 Essentially it uses a prefix sum counter to calculate overlaps at each index.
+
+## Sweep Line Template 1
+
+``` py
+_A = []
+for i, j in A:
+    _A.append([i, 1])
+    _A.append([j, -1])
+
+A = sorted(_A)
+cnt = 0
+for _, i in A:
+    cnt += i
+    `logic`
+```
+
+## Sweep Line Template 2
 
 ``` py
 n = len(A)

@@ -5,8 +5,8 @@
 ### Theory/Principle
 
 1. Get lowest bit in x: `x & 1`: 191, 461
-2. Get lowest "1" bit in x: `x & -x`
-3. Remove lowest "1" bit in x: `x & (x-1)`
+2. Get lowest "1" bit and right side bits in x: `x & -x`
+3. Set lowest "1" bit in x to "0": `x & (x-1)`
 4. Three ways to flip a bit on/off:
    1. `x+(2**n)`: flip n-th bit on in `x`
    2. `x-(2**n)`: flip n-th bit off in `x`
