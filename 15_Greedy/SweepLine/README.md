@@ -6,12 +6,7 @@ Essentially it uses a prefix sum counter to calculate overlaps at each index.
 ## Sweep Line Template 1
 
 ``` py
-_A = []
-for i, j in A:
-    _A.append([i, 1])
-    _A.append([j, -1])
-
-A = sorted(_A)
+A = sorted([x for i, j in A for x in [[i, 1], [j, -1]]])
 cnt = 0
 for _, i in A:
     cnt += i

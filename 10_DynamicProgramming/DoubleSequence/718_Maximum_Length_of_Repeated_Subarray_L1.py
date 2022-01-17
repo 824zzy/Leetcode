@@ -1,6 +1,6 @@
 """ L1: https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 A variation of LCS.
-Top down dp is not available.
+Bottom up dp is already very slow, so top down dp is not available.
 """
 class Solution:
     def findLength(self, A1: List[int], A2: List[int]) -> int:

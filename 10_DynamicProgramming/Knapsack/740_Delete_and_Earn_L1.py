@@ -1,7 +1,9 @@
 """ https://leetcode.com/problems/delete-and-earn/
-Create a mapping from value to points in M since we can obstain all the points of a valid value.
-Then apply top down dp
+1. create a mapping from value to points in M since we can obstain all the points of a valid value
+2. if A[i]-1 not in M, then we must choose A[i]
+3. find maximum between choose A[i] and skip A[i]
 """
+    
 class Solution:
     def deleteAndEarn(self, A: List[int]) -> int:
         M = defaultdict(int)
