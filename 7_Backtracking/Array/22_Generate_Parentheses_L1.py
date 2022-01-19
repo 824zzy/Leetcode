@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/generate-parentheses/submissions/
+""" https://leetcode.com/problems/generate-parentheses/
 Use available left and right parenthesis to control backtracking
 """
 class Solution:
