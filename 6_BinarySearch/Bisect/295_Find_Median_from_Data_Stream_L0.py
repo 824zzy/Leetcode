@@ -1,4 +1,4 @@
-""" L0
+""" https://leetcode.com/problems/find-median-from-data-stream/
 """
 class MedianFinder:
     def __init__(self):
@@ -11,5 +11,5 @@ class MedianFinder:
         bisect.insort(self.L, num)
         
     def findMedian(self) -> float:
-        if len(self.L)%2!=0: return self.L[len(self.L)//2]
-        else: return (self.L[len(self.L)//2]+self.L[len(self.L)//2-1])/2
+        if len(self.L)%2!=0: return self.L[len(self.L)//2] # odd
+        else: return (self.L[len(self.L)//2]+self.L[len(self.L)//2-1])/2 # even

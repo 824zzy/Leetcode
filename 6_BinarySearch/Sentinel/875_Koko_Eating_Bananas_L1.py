@@ -1,18 +1,17 @@
 """ https://leetcode.com/problems/koko-eating-bananas/
-can eat m in H hours as sentinel
+check if Koko can eat m bananas in H hours as sentinel
 """
 class Solution:
-    def minEatingSpeed(self, A: List[int], H: int) -> int:
-        def can_eat(m):
-            h = 0
-            for a in A:
-                h += ceil(a/m)
-                if h>H: return False
-            return True
+    def minEatingSpeed(self, A: List[int], h: int) -> int:
+        def fn(m, h):
+            cnt = 0
+            for x in A:
+                cnt += ceil(x/m)
+            return cnt<=h
         
         l, r = 1, max(A)
-        while l<=r:
+        while l<r:
             m = (l+r)//2
-            if not can_eat(m): l = m+1
-            else: r = m-1
+            if fn(m, h): r = m
+            else: l = m + 1
         return l
