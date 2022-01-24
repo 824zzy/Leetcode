@@ -1,4 +1,6 @@
-# Disjoint Set Union
+""" https://leetcode.com/problems/number-of-provinces/
+use DSU to find clusters
+"""
 class DSU: 
     def __init__(self, n):
         self.p = [i for i in range(n)]
