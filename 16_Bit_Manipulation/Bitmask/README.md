@@ -6,6 +6,7 @@
 > **`mask & 1<<i`**: choose i-th bit in 2**i format in bit mask
 > `mask>>i & 1`: choose i-th bit in bit mask
 > `mask ^ 1<<i`: flip i-th bit in bit mask
+> `mask & ~masks[i]`: subtract i-th mask from current mask
 
 ``` py
 for mask in range(1 << N): 

@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/rotate-list/
+""" https://leetcode.com/problems/rotate-list/
 fast slow pointers.
 """
 class Solution:

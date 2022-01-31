@@ -1,4 +1,4 @@
-""" L1
+""" https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 Use dijkstra algorithm to find the shorest path from each point to the others.
 """
 # dijkstra algorithm
@@ -24,18 +24,3 @@ class Solution:
             cnt = sum(seen.values())-1
             if (cnt==ans[0] and start>ans[1]) or (cnt<ans[0]): ans = (cnt, start)
         return ans[1]
-
-# floyd algorithm
-class Solution:
-    def findTheCity(self, n, edges, maxd):
-        dis = [[float('inf')] * n for _ in xrange(n)]
-        for i, j, w in edges:
-            dis[i][j] = dis[j][i] = w
-        for i in xrange(n):
-            dis[i][i] = 0
-        for k in xrange(n):
-            for i in xrange(n):
-                for j in xrange(n):
-                    dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j])
-        res = {sum(d <= maxd for d in dis[i]): i for i in xrange(n)}
-        return res[min(res)]

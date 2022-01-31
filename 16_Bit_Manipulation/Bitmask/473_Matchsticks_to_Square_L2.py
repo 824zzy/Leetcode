@@ -1,4 +1,5 @@
 """ https://leetcode.com/problems/matchsticks-to-square/
+special case of 698
 """
 # top down
 class Solution:

@@ -1,5 +1,8 @@
-""" L3: https://leetcode.com/problems/smallest-sufficient-team/
-TODO: https://leetcode.com/problems/smallest-sufficient-team/discuss/1201778/Python3-top-down-dp
+""" https://leetcode.com/problems/smallest-sufficient-team/
+1. First we need to create masks: set of skills for each person
+2. If i == len(P), it means that it's impossible to have required skill
+3. If mask = 0, it it means that we reach a possible solution.
+4. We have two choices at each state: either take person i or do not take it. Here mask & ~masks[i] is used for subtraction of sets.
 """
 
 class Solution:
