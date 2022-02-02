@@ -4,7 +4,7 @@ A simple idea of Kadane’s algorithm is to **look for all positive contiguous s
 
 For a variance of Kadane's algorithm, it is always necessary to consider to two variable to record subarray.
 
-## template
+## Template
 
 ``` py
 class Solution:

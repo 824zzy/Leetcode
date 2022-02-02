@@ -1,21 +1,23 @@
 """ https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/
-count zeros in a fixed window which size is ones' count.
+1. create a fixed window which size is ones' count.
+2. minimum swaps is the zeros' count in the fixed window
+
 """
 class Solution:
     def minSwaps(self, A: List[int]) -> int:
-        ones = A.count(1)
+        cnt1 = A.count(1)
+        ans = inf
+        cnt0 = 0
         A *= 2
-        ans = inf 
-        cnt = 0
-        i = 0
-        for j in range(len(A)):
-            cnt += A[j]
-            if j>=ones: 
-                cnt -= A[i]
-                i += 1
-            ans = min(ans, ones-cnt)
+        
+        for i in range(len(A)):
+            if A[i]==0: cnt0 += 1
+            if i>=cnt1 and A[i-cnt1]==0: cnt0 -= 1
+            if i>=cnt1: ans = min(ans, cnt0)
         return ans
-    
+
+
+# suboptimal dynamic window solution
 class Solution:
     def minSwaps(self, A: List[int]) -> int:
         if all(A) or not any(A): return 0
