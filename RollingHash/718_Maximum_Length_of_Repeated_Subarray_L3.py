@@ -1,29 +1,32 @@
 """ https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 binary search + rolling hash.
 
-use 100*rh+A[i] as hash function
+1. hash function: hs = hs * size + val
+2. update hash: hs -= val * size ** seq_size
 """
 class Solution:
     def findLength(self, A: List[int], B: List[int]) -> int:
-        
         def fn(k): 
             """Return True if a subarray of length k can be found in A and B."""
-            seen = {}
-            rh = 0 # rolling hash 
+            seen = defaultdict(list)
+            hs = 0 # rolling hash 
             for i in range(len(A)):
-                rh = (100*rh + A[i] - (i >= k)*A[i-k]*100**k) % 1_000_000_007
-                if i >= k-1: seen.setdefault(rh, []).append(i)
-                    
-            rh = 0
-            for i in range(len(B)):
-                rh = (100*rh + B[i] - (i >= k)*B[i-k]*100**k) % 1_000_000_007
+                hs = 100*hs + A[i]
                 if i >= k-1: 
-                    for ii in seen.get(rh, []): 
+                    seen[hs].append(i)
+                    hs -= A[i-(k-1)]*100**(k-1) # % 1_000_000_007
+                    
+            hs = 0
+            for i in range(len(B)):
+                hs = 100*hs + B[i]
+                if i >= k-1:
+                    for ii in seen[hs]: 
                         if A[ii-k+1:ii+1] == B[i-k+1:i+1]: return True 
+                    hs -= B[i-(k-1)]*100**(k-1) # % 1_000_000_007
             return False 
         
         # last True binary search 
-        lo, hi = -1, len(A)
+        lo, hi = 0, len(A)
         while lo < hi: 
             mid = lo + hi + 1>> 1
             if fn(mid): lo = mid
