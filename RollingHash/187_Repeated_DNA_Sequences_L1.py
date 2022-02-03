@@ -3,14 +3,17 @@ apply rolling hash and return the sequence whose hash has appeared before
 """
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
-        # define hash map from char to int
         mp = dict(zip("ACGT", range(4)))
-        ans, seen = set(), set()
-        hs = 0 # initiate rolling hash 
-        for i, x in enumerate(s): 
-            hs = 4*hs + mp[x] # hash function: mpSize*hs+mpVal
-            if i >= 10: hs -= mp[s[i-10]]*4**10 # update rolling hash: mpSize*hs+mpVal
-            if i >= 9: 
+        hs = 0
+        seen = set()
+        ans = set()
+        
+        for i in range(len(s)):
+            # hash function: hs = mpSize * hs + mpVal
+            hs = 4*hs+mp[s[i]]
+            if i>=9:
                 if hs in seen: ans.add(s[i-9:i+1])
                 seen.add(hs)
+                # update rolling hash: hs -= mpval * mpSize ** (seqSize-1)
+                hs -= mp[s[i-9]]*4**9 
         return ans
