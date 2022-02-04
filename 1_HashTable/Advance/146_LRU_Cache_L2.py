@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/lru-cache/
+use OrderedDict
+"""
 from collections import OrderedDict
 class LRUCache:
     def __init__(self, capacity: int):

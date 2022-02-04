@@ -7,8 +7,8 @@ and we need to take next starting index.
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         n = len(gas)
-        if sum(gas)<sum(cost):
-            return -1
+        if sum(gas)<sum(cost): return -1
+        
         prefix = 0
         ans = 0
         for i in range(n):
@@ -16,5 +16,4 @@ class Solution:
             if prefix<0:
                 ans = i + 1
                 prefix = 0
-            print(prefix)
         return ans
