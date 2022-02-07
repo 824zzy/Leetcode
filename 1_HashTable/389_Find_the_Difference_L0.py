@@ -1,20 +1,12 @@
-# Google
-from collections import Counter
+""" https://leetcode.com/problems/find-the-difference/
+use two counters to find the only different element.
+"""
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
-        Cs, Ct = Counter(s), Counter(t)
-        for k, v in (Ct-Cs).items():
-            return k
+        diff = Counter(t)-Counter(s)
+        return [k for k, _ in diff.items()][0]
 
-from collections import Counter
+# or simply sum up the values and compute diffence, then convert it to a character
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
-        cs = dict(Counter(s))
-        ct = dict(Counter(t))
-        words = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-        for word in words:
-            if word in cs and word in ct:
-                if cs[word] != ct[word]:
-                    return word
-            elif word in cs or word in ct:
-                return word
+        return chr(sum(map(ord, t)) - sum(map(ord, s)))
