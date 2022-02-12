@@ -1,4 +1,5 @@
-""" L0: simplest sliding window
+""" https://leetcode.com/problems/remove-element/
+copy A[j] to A[i] if A[j]!=val
 """
 class Solution:
     def removeElement(self, A: List[int], val: int) -> int:
