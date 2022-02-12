@@ -2,17 +2,34 @@
 
 ## Breadth First Search(BFS)
 
-[Go to BFS template](./BFS/README.md)
+In Q, it maybe also stores steps and other information.
+When we have to build a graph by ourself, don't forget try to reduce time complexity by some tricks.
 
-## Depth First Search(DFS)
-
-[Go to DFS template](./DFS/README.md)
+```py
+class Solution:
+    def graghBFS(self, A: List[List[int]]) -> int:
+        Q = ["start_state"]
+        seen = set()
+        while Q:
+            i = Q.pop(0)
+            if/for "logic":
+                "logic to find next state j"
+                if j not in seen:
+                    Q.append(j)
+                    seen.add(j)
+        return ans
+```
 
 ## Shortest Path
 
-TODO: refine template
+### Dijkstra Algorithm
 
-1. Dijstra Algorithm
+Difference between BFS and Dijkstra:
+
+- Breadth-first search is just Dijkstra's algorithm with all edge weights equal to 1.
+- Dijkstra's algorithm is conceptually breadth-first search that respects edge costs.
+
+TODO: refine template below
 
 ``` py
 def dijkstra(self, times: List[List[int]], n: int, k: int) -> int:
@@ -32,7 +49,7 @@ def dijkstra(self, times: List[List[int]], n: int, k: int) -> int:
     else: return max(seen.values())
 ```
 
-2. Floyd algorithm
+1. Floyd algorithm
 
 ``` py
 def findTheCity(self, n, edges, maxd):
