@@ -32,8 +32,8 @@
 > `mask & ~masks[i]`: subtract i-th mask from current mask
 
 ``` py
-for mask in range(1 << N): 
-    for i in range(N):
+for mask in range(1 << n): 
+    for i in range(n):
         if mask & 1<<i :
             `mask ^ 1<<i`
     ans.append(seq)

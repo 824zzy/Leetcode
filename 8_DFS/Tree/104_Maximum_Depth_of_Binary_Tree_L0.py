@@ -1,29 +1,12 @@
-# Google
-""" Iterative Solution
+""" https://leetcode.com/problems/maximum-depth-of-binary-tree/
+Find maximum depth at each node through dfs
 """
 class Solution:
-    def maxDepth(self, root: TreeNode) -> int:
-        if not root:
-            return 0
-        tstack, h = [root], 0
-        while tstack:
-            next_level = []
-            while tstack:
-                top = tstack.pop()
-                if top.left:
-                    next_level.append(top.left)
-                if top.right:
-                    next_level.append(top.right)
-            tstack = next_level
-            h += 1
-        return h
-
-""" Recursive Solution
-"""
-class Solution:
-    def maxDepth(self, root: TreeNode) -> int:
-        def dfs(node, d):
-            if not node:
-                return d
-            return max(dfs(node.left, d+1), dfs(node.right, d+1))
-        return dfs(root, 0)
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        def dfs(node):
+            if not node: return 0
+            l = dfs(node.left)
+            r = dfs(node.right)
+            return 1+max(l, r)
+            
+        return dfs(root)
