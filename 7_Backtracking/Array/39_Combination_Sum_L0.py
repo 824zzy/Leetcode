@@ -1,4 +1,5 @@
-""" L0: https://leetcode.com/problems/combination-sum/
+""" https://leetcode.com/problems/combination-sum/
+use backtracking to find all combination sum and break statement for pruning
 """
 class Solution:
     def combinationSum(self, A: List[int], T: int) -> List[List[int]]:

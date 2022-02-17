@@ -7,12 +7,6 @@
 3. Delete node: `if node.next.val==val: node.next = node.next.next`
 4. Reverse linked list:
 
-    ``` py
-    prev = None
-    while head: prev, head.next, head = head, prev, head.next
-    return prev
-    ```
-
 ## Template
 
 ``` py
@@ -25,7 +19,13 @@ def linklist_template(self, head: ListNode) -> ListNode:
     return ans.next
 ```
 
-## Reverse
+## Reverse Linked List
+
+``` py
+    prev = None
+    while head: prev, head.next, head = head, prev, head.next
+    return prev
+```
 
 ### Iteratively
 
