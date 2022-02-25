@@ -1,4 +1,12 @@
-# Useful thought
+# Math Problem
+
+## Algebra
+
+### Greatest Common Divisor(GCD)
+
+**GCD essentially is an intersection between prime factorizations of two numbers.** For example, 198 (**2** \* **3** \* **3** \* 11) and 84 (**2** \* **2** \* **3** * **7**) GCD is 6(**2** \* **3**).
+
+## Useful thought
 
 1. LCM(Least Common Multiple)
 2. GCF(Greatest Common Factor)

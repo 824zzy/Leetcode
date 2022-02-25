@@ -1,3 +1,24 @@
+""" https://leetcode.com/problems/count-number-of-teams/
+"""
+# top down
+class Solution:
+    def numTeams(self, A: List[int]) -> int:
+        @cache
+        def dp(i, k, mode):
+            if i==len(A): return 0
+            if k==0: return 1
+            
+            ans = 0
+            for j in range(i, len(A)):
+                if mode=='up' and A[i]<A[j]:
+                    ans += dp(j, k-1, 'up')
+                elif mode=='down' and A[i]>A[j]:
+                    ans += dp(j, k-1, 'down')
+            return ans
+        
+        return sum([dp(i, 2, 'up') for i in range(len(A))])+sum([dp(i, 2, 'down') for i in range(len(A))])
+
+        
 # O(N^2)
 class Solution:
     def numTeams(self, A: List[int]) -> int:

@@ -11,6 +11,7 @@
 9. `string.punctuation`: All punctuations in English
 10. `str.islower()/isupper()`: Check string is all capital or not
 11. `str.swapcase()`: swap lower/upper->upper/lower.
+12. `zip_longest(x, y, fillvalue='')`: zip two string or array
 
 ## Collections
 

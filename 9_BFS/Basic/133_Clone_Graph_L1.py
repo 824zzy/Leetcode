@@ -1,19 +1,17 @@
-""" Graph BFS
+""" https://leetcode.com/problems/clone-graph/submissions/
+
 """
-class Solution(object):
-    def cloneGraph(self, node):
-        """
-        :type node: Node
-        :rtype: Node
-        """
-        queue = [node]
-        ans = {node: Node(node.val, [])}
-        while queue:
-            currNode = queue.pop()
-            for nei in currNode.neighbors:
-                if nei not in ans:
-                    newNode = Node(nei.val, [])
-                    ans[nei] = newNode
-                    queue.append(nei)
-                ans[currNode].neighbors.append(ans[nei])
-        return ans[node]
+class Solution:
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        if not node: return None
+        
+        Q = [node]
+        seen = {node: Node(node.val)}
+        while Q:
+            i = Q.pop(0)
+            for j in i.neighbors:
+                if j not in seen:
+                    seen[j] = Node(j.val)
+                    Q.append(j)
+                seen[i].neighbors.append(seen[j])
+        return seen[node]

@@ -1,8 +1,7 @@
-""" basic usage of queue
+""" https://leetcode.com/problems/number-of-recent-calls/
+keep queue by t-3000 > self.queue[0]
 """
-
 class RecentCounter:
-
     def __init__(self):
         self.queue = []
         
@@ -10,10 +9,4 @@ class RecentCounter:
         self.queue.append(t)
         while t-3000 > self.queue[0]:
             self.queue.pop(0)
-            
         return len(self.queue)
-        
-        
-# Your RecentCounter object will be instantiated and called as such:
-# obj = RecentCounter()
-# param_1 = obj.ping(t)
