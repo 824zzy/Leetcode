@@ -19,6 +19,10 @@ One question a day to ensure a sharp mind.
 4. `arr.sort(key=lambda x: (cond1, cond2, ..))`: sort array by multiple conditions. Condition can be `len(x)`, `x` #720
 5. `sorted(list, key=functools.cmp_to_key(lambda x, y: int(y+x)-int(x+y)))`: custom compare function to a list
 
+### String
+
+1. `str.startswith(s)`: returns True if the string starts with the specified value, otherwise False 
+
 ### Hash Table
 
 1. `Counter.most_common(num)`: return a list contains tuple.

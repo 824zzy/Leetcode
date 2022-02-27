@@ -49,19 +49,30 @@ def dijkstra(self, times: List[List[int]], n: int, k: int) -> int:
     else: return max(seen.values())
 ```
 
-1. Floyd algorithm
+### Floyd-Warshall algorithm
 
 ``` py
-def findTheCity(self, n, edges, maxd):
-    dis = [[float('inf')] * n for _ in xrange(n)]
-    for i, j, w in edges:
-        dis[i][j] = dis[j][i] = w
+N = len(G)
+# floyd-warshall
+dist = [[inf]*N for _ in range(N)]
+for i, x in enumerate(G):
+    dist[i][i] = 0
+    for j in x: dist[i][j] = 1
+        
+for k in range(N):
+    for i in range(N):
+        for j in range(N):
+            dist[i][j] = min(dist[i][j], dist[i][k]+dist[k][j])
+
+
+dis = [[float('inf')] * n for _ in xrange(n)]
+for i, j, w in edges:
+    dis[i][j] = dis[j][i] = w
+for i in xrange(n):
+    dis[i][i] = 0
+for k in xrange(n):
     for i in xrange(n):
-        dis[i][i] = 0
-    for k in xrange(n):
-        for i in xrange(n):
-            for j in xrange(n):
-                dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j])
-    res = {sum(d <= maxd for d in dis[i]): i for i in xrange(n)}
-    return res[min(res)]
+        for j in xrange(n):
+            dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j])
+res = {sum(d <= maxd for d in dis[i]): i for i in xrange(n)}
 ```

@@ -2,6 +2,8 @@
 
 ## Hierholzer's Algorithm
 
+For directed connected graph:
+
 ``` py
 def hierholzer(pairs):
     G = defaultdict(list)

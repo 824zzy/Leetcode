@@ -16,7 +16,6 @@ class Solution:
                 for j in range(N):
                     dist[i][j] = min(dist[i][j], dist[i][k]+dist[k][j])
         
-        # bit mask
         @cache
         def dp(i, mask):
             if mask==0: return 0
