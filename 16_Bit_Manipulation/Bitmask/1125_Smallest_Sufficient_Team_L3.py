@@ -8,9 +8,7 @@
 class Solution:
     def smallestSufficientTeam(self, R: List[str], P: List[List[str]]) -> List[int]:
         M = {s:i for i, s in enumerate(R)}
-        print(M)
         masks = [sum(1<<M[s] for s in p) for p in P]
-        print(masks)
         
         @cache
         def fn(i, mask): 
