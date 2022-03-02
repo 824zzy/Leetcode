@@ -9,9 +9,10 @@ class Solution:
         A = [[0 for _ in range(len(tires))] for _ in range(17)]
         
         for i in range(17):
-            for j in range(len(A)):
-                if i: A[i][j] = A[i-1][j]+tires[j][0]*tires[j][1]**i
-                else: A[i][j] = tires[j][0]*tires[j][1]**i+changeTime
+            for j, (f, r) in enumerate(tires):
+                if i: A[i][j] = A[i-1][j]+f*r**i
+                else: A[i][j] = f*r**i
+                    
         A = [min(x) for x in A]
         
         @cache
@@ -19,7 +20,7 @@ class Solution:
             if L<=0: return -changeTime
             ans = inf
             for i, x in enumerate(A):
-                ans = min(ans, x+dp(L-i-1))
+                ans = min(ans, x+dp(L-i-1)+changeTime)
             return ans
         
         return dp(numLaps)
