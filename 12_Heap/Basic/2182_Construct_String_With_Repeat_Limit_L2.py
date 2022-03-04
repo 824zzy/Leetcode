@@ -1,4 +1,5 @@
 """ https://leetcode.com/problems/construct-string-with-repeat-limit/
+simulation by priority queue
 """
 class Solution:
     def repeatLimitedString(self, s: str, rL: int) -> str:

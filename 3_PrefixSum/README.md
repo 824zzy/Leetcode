@@ -1,9 +1,26 @@
 # Prefix Sum template
 
-- `itertools.accumulate(A)`: prefix sum of A
-- `itertools.accumulate(A, mul)`: prefix profuct of A
+## Basic operations
 
-## Basic type
+1. Compute the 1D prefix sum/product of A
+
+``` py
+# prefix sum of A
+itertools.accumulate(A)
+# prefix profuct of A
+itertools.accumulate(A, mul)
+```
+
+2. Compute the 2D prefix sum of A
+
+``` py
+# 2D prefix sum of A
+m, n = len(A), len(A[0])
+prefix = [[0 for _ in range(n+1)] for _ in range(m+1)]
+for i in range(m):
+    for j in range(n): 
+        prefix[i+1][j+1] = A[i][j] + prefix[i][j+1] + prefix[i+1][j] - prefix[i][j]
+```
 
 ## Subarray type
 

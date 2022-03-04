@@ -1,26 +1,32 @@
 """ https://leetcode.com/problems/stamping-the-grid/
-steal from lee: https://leetcode.com/problems/stamping-the-grid/discuss/1675412/JavaC%2B%2BPython-Calulate-the-sub-matrix-sum-twice
+steal from ye15 with my comments: https://leetcode.com/problems/stamping-the-grid/discuss/1684292/Python3-prefix-sum
 """
 class Solution:
-    def possibleToStamp(self, M, h, w):
-        m, n = len(M), len(M[0])
-        A = [[0] * (n + 1) for _ in range(m + 1)]
-        good = [[0] * n for _ in range(m)]
+    def possibleToStamp(self, A: List[List[int]], H: int, W: int) -> bool:
+        # compute the 2D prefix sum of A
+        m, n = len(A), len(A[0])
+        prefix = [[0]*(n+1) for _ in range(m+1)]
         for i in range(m):
-            for j in range(n):
-                A[i + 1][j + 1] = A[i + 1][j] + A[i][j + 1] - A[i][j] + (1 - M[i][j])
-                if i + 1 >= h and j + 1 >= w:
-                    x, y = i + 1 - h, j + 1 -w
-                    if A[i + 1][j + 1] - A[x][j + 1] - A[i + 1][y] + A[x][y] == w * h:
-                        good[i][j] += 1
-                        
-        B = [[0] * (n + 1) for _ in range(m + 1)]
+            for j in range(n): 
+                prefix[i+1][j+1] = A[i][j] + prefix[i+1][j] + prefix[i][j+1] - prefix[i][j]
+        
+        # find places where can put stamp
+        canPut = [[0]*n for _ in range(m)]
+        for i in range(m-H+1): 
+            for j in range(n-W+1): 
+                diff = prefix[i+H][j+W] - prefix[i+H][j] - prefix[i][j+W] + prefix[i][j]
+                if diff == 0: canPut[i][j] = 1
+        
+        # compute the 2D prefix sum of canPut
+        prefix = [[0]*(n+1) for _ in range(m+1)]
+        for i in range(m): 
+            for j in range(n): 
+                prefix[i+1][j+1] = canPut[i][j] + prefix[i+1][j] + prefix[i][j+1] - prefix[i][j]
+        
+        # check if all the cells can be stamped
         for i in range(m):
-            for j in range(n):
-                B[i + 1][j + 1] = B[i + 1][j] + B[i][j + 1] - B[i][j] + good[i][j]
-        for i in range(m):
-            for j in range(n):
-                x, y = min(i + h, m), min(j + w, n)
-                if M[i][j] == 0 and B[x][y] - B[i][y] - B[x][j] + B[i][j] == 0:
-                    return False
-        return True
+            ii = max(0, i-H+1)
+            for j in range(n): 
+                jj = max(0, j-W+1)
+                if A[i][j] == 0 and prefix[i+1][j+1] - prefix[i+1][jj] - prefix[ii][j+1] + prefix[ii][jj] == 0: return False 
+        return True 
