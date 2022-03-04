@@ -1,13 +1,16 @@
 """ https://leetcode.com/problems/matrix-block-sum/
+be careful when dealing with corner indexes
 """
 class Solution:
     def matrixBlockSum(self, A: List[List[int]], k: int) -> List[List[int]]:
+        # compute 2D prefix sum
         m, n = len(A), len(A[0])
         prefix = [[0]*(n+1) for _ in range(m+1)]
         for i in range(m):
             for j in range(n): 
                 prefix[i+1][j+1] = A[i][j] + prefix[i][j+1] + prefix[i+1][j] - prefix[i][j]
-                
+        
+        # find 4 corners for ans
         ans = [[0]*n for _ in range(m)]
         for i in range(m):
             for j in range(n): 
