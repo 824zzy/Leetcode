@@ -21,7 +21,12 @@ One question a day to ensure a sharp mind.
 
 ### String
 
-1. `str.startswith(s)`: returns True if the string starts with the specified value, otherwise False 
+1. `str.startswith(s)`: returns True if the string starts with the specified value, otherwise False
+
+### Set
+
+1. `s.add(x)`: add value x to set s
+2. `s1.update(s2)`: add set s2 to set s1
 
 ### Hash Table
 

@@ -10,7 +10,6 @@ class Trie:
     def insert(self, word: str) -> None:
         node = self.trie
         for c in word:
-            # node = node.setdefault(c, {})
             if c not in node: node[c] = {}
             node = node[c]
         node['#'] = word
@@ -24,7 +23,7 @@ class Trie:
 
     def startsWith(self, prefix: str) -> bool:
         """
-        Returns if there is any word in the trie that starts with the given prefix.
+        Returns if there is any word in the trie that starts with the given prefix AB.
         Eg: ABCD vs AB
         """
         node = self.trie
@@ -35,13 +34,12 @@ class Trie:
     
     def containsWith(self, word: str) -> bool:
         """
-        Returns if there is any word in the trie that contains by the given prefix.
+        Returns if there is any word in the trie that contains by the given prefix ABCDE.
         Eg: ABCD vs ABCDE
         """
         node = self.trie
-            for c in word:
-                if c not in node: return False
-                node = node[c]
-                if '#' in node: return node['#']
-    
+        for c in word:
+            if c not in node: return False
+            node = node[c]
+            if '#' in node: return node['#']    
 ```
