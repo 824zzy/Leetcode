@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/linked-list-cycle/
+""" https://leetcode.com/problems/linked-list-cycle/
 check if fast and slow pointers can meet
 """
 class Solution(object):

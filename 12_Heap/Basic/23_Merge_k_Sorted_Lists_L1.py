@@ -1,6 +1,6 @@
 """ https://leetcode.com/problems/merge-k-sorted-lists/
 find minimal among lists by heap
-note that have to have i in heap otherwise it will cause error
+note that have to have i in heap otherwise it will cause type error
 """
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
