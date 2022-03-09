@@ -1,12 +1,17 @@
+""" https://leetcode.com/problems/next-greater-node-in-linked-list/
+monotonic decreasing stack + linked list
+"""
 class Solution:
-    def nextLargerNodes(self, head: ListNode) -> List[int]:
-        ans, s, pos = [], [], -1
+    def nextLargerNodes(self, head: Optional[ListNode]) -> List[int]:
+        stk = []
+        ans = []
+        i = 0
         while head:
-            pos += 1
             ans.append(0)
-            while s and s[-1][-1]<head.val:
-                idx, _ = s.pop()
-                ans[idx] = head.val
-            s.append([pos, head.val])
+            while stk and stk[-1][1]<head.val:
+                ii, _ = stk.pop()
+                ans[ii] = head.val
+            stk.append([i, head.val])
             head = head.next
+            i += 1
         return ans

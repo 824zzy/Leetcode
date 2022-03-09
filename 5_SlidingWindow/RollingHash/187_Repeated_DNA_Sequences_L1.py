@@ -20,13 +20,12 @@ class Solution:
     
     
 class RabinKarp: 
-
     def __init__(self, s): 
         """Calculate rolling hash of s"""
         self.m = 10**9+7
         self.pow = [1]
         self.roll = [0] # rolling hash 
-        self.mp = mp = dict(zip("ACGT", range(4)))
+        self.mp = dict(zip("ACGT", range(4)))
 
         p = 4
         for x in s: 
