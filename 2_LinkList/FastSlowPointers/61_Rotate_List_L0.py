@@ -10,6 +10,8 @@ class Solution:
             slow = fast = head
             while k: fast, k = fast.next, k-1
             while fast.next: fast, slow = fast.next, slow.next
-                
-            fast.next, head, slow.next = head, slow.next, None
+            ans = slow.next
+            slow.next = None
+            fast.next = head
+            # or fast.next, head, slow.next = head, slow.next, None
         return head
