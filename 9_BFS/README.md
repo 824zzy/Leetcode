@@ -27,26 +27,23 @@ class Solution:
 Difference between BFS and Dijkstra:
 
 - Breadth-first search is just Dijkstra's algorithm with all edge weights equal to 1.
-- Dijkstra's algorithm is conceptually breadth-first search that respects edge costs.
-
-TODO: refine template below
+- Dijkstra's algorithm is conceptually breadth-first search that respects edge costs by heap.
 
 ``` py
-def dijkstra(self, times: List[List[int]], n: int, k: int) -> int:
-    e = collections.defaultdict(dict)
-    for i, j, d in times: e[i][j] = d
-    pq = [(0, k)]
-    seen = {}
-    while pq:
-        delay, i = heapq.heappop(pq)
-        if i not in seen:
-            seen[i] = delay
-            for j in e[i]:
-                delay2 = delay+e[i][j]
-                if j not in seen:
-                    heapq.heappush(pq, (delay2, j))
-    if len(seen)!=n: return -1
-    else: return max(seen.values())
+# time complexity O(n*logE)
+e = collections.defaultdict(dict)
+for i, j, w in edges: e[i][j] = w
+
+pq = [(0, src)]
+seen = {}
+while pq:
+    cost, i = heapq.heappop(pq)
+    if i not in seen:
+        seen[i] = cost
+        for j in e[i]:
+            heapq.heappush(pq, (cost+e[i][j], j))
+# shortest path from src to all the nodes
+shortest_paths = [seen.get(i, float("inf")) for i in range(n)]
 ```
 
 ### Floyd-Warshall algorithm
@@ -58,21 +55,13 @@ dist = [[inf]*N for _ in range(N)]
 for i, x in enumerate(G):
     dist[i][i] = 0
     for j in x: dist[i][j] = 1
-        
-for k in range(N):
-    for i in range(N):
-        for j in range(N):
-            dist[i][j] = min(dist[i][j], dist[i][k]+dist[k][j])
+# or if edges are (i, j, w)
+dist = [[float('inf')] * n for _ in range(n)]
+for i, j, w in edges: dist[i][j] = dist[j][i] = w
+for i in range(n): dist[i][i] = 0
 
-
-dis = [[float('inf')] * n for _ in xrange(n)]
-for i, j, w in edges:
-    dis[i][j] = dis[j][i] = w
-for i in xrange(n):
-    dis[i][i] = 0
-for k in xrange(n):
-    for i in xrange(n):
-        for j in xrange(n):
+for k in range(n):
+    for i in range(n):
+        for j in range(n):
             dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j])
-res = {sum(d <= maxd for d in dis[i]): i for i in xrange(n)}
 ```
