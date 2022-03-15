@@ -9,7 +9,7 @@ When we have to build a graph by ourself, don't forget try to reduce time comple
 class Solution:
     def graghBFS(self, A: List[List[int]]) -> int:
         Q = ["start_state"]
-        seen = set()
+        seen = set("start_state")
         while Q:
             i = Q.pop(0)
             if/for "logic":
