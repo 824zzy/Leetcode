@@ -1,4 +1,7 @@
-# special monotonic stack compared with popped stack.
+""" https://leetcode.com/problems/validate-stack-sequences/
+special monotonic stack compared with popped stack.
+"""
+# 
 class Solution:
     def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
         stk = []
