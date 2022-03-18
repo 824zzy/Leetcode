@@ -1,5 +1,5 @@
-""" Dijkstra template
-pq for tracking minimum delay
+""" https://leetcode.com/problems/network-delay-time/
+use dijkstra to find minimum delay for all the nodes to receive the signal
 """
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:

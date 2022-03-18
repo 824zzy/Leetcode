@@ -1,5 +1,5 @@
-""" L2: Hash Table + DP
-Find left and right endpoint and sequence length then update DP table
+""" https://leetcode.com/problems/longest-consecutive-sequence/
+Find left and right endpoint and sequence length then update hash table
 """
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:

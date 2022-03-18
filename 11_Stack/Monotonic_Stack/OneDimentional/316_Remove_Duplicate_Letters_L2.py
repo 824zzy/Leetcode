@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/remove-duplicate-letters/
 1. maintain a monotonic increasing stack
-2. make sure the stack top character is not the last character in s by emp[stk[-1]]>i 
+2. avoid duplicates by check if character has already in stack
+2. make sure the stack top character is not the last character in s by mp[stk[-1]]>i 
 """
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
