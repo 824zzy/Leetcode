@@ -124,7 +124,7 @@ def levelOrder(self, root):
             queue.append(node.right)
 ```
 
-## Lowest common ancester
+## Lowest common ancestor
 
 ``` py
 def lca(node): 

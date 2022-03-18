@@ -1,3 +1,5 @@
+""" https://leetcode.com/problems/minimum-depth-of-binary-tree/
+"""
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
         if not root:
