@@ -126,6 +126,8 @@ def levelOrder(self, root):
 
 ## Lowest common ancestor
 
+**LCA template**:
+
 ``` py
 def lca(node): 
     """Return lowest common ancestor of start and dest nodes."""

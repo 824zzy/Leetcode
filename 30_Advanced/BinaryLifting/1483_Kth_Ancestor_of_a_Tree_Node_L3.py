@@ -1,9 +1,5 @@
 """ https://leetcode.com/problems/kth-ancestor-of-a-tree-node/
 classic algorithm: binary lifting
-Binary Lifting is a technique used to find the k-th ancestor of any node in a tree in O(logn). 
-This also leads to a faster algorithm in finding the lowest common ancestor (LCA) between two nodes in a tree. 
-It can also be used to compute functions such as minimum, maximum and sum between two nodes of a tree in logarithmic time. 
-The technique requires preprocessing the tree in O(N log N) using dynamic programming.
 """
 class TreeAncestor:
     def __init__(self, n: int, parent: List[int]):
