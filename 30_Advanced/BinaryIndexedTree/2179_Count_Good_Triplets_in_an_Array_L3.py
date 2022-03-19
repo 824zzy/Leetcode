@@ -5,7 +5,7 @@ class BIT:
     def __init__(self, n):
         self.A = [0] * (n+1)
     
-    def get(self, k):
+    def sum(self, k):
         sm = 0
         k += 1
         while k:
@@ -28,8 +28,8 @@ class Solution:
         
         for i, x in enumerate(B):
             x = mp[x]
-            left = bit.get(x)
-            right = (N-1-x)-(bit.get(N-1)-left)
+            left = bit.sum(x)
+            right = (N-1-x)-(bit.sum(N-1)-left)
             ans += left*right
             bit.add(x, 1)
         return ans

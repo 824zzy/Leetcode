@@ -5,7 +5,7 @@ class BIT:
     def __init__(self, n):
         self.A = [0] * (n+1)
     
-    def get(self, k):
+    def sum(self, k):
         sm = 0
         k += 1
         while k:
@@ -31,7 +31,7 @@ class Solution:
         ans = 0
         for _, i in A:
             bit2.add(N-i-1, -1)
-            a, b = bit1.get(i), bit2.get(N-i-1)
+            a, b = bit1.sum(i), bit2.sum(N-i-1)
             ans += a * b + (i - a) * (N - i - b - 1)
             bit1.add(i, 1)
         return ans

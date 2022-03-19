@@ -1,14 +1,14 @@
 """ https://leetcode.com/problems/global-and-local-inversions/
 There are only two conditions:
 1. If A[i-1] > A[i], then number of local inversions increase by 1.
-2. Number of global inversions += number of elements greater than A[i] so far through: i-bit.get(x)
+2. Number of global inversions += number of elements greater than A[i] so far through: i-bit.sum(x)
 """
 
 class BIT:
     def __init__(self, n):
         self.A = [0] * (n+1)
     
-    def get(self, k):
+    def sum(self, k):
         k += 1
         sm = 0
         while k:
@@ -28,6 +28,6 @@ class Solution:
         bit = BIT(len(A))
         for i, x in enumerate(A):
             if i and A[i-1]>A[i]: L += 1
-            G += i-bit.get(x)
+            G += i-bit.sum(x)
             bit.add(x, 1)
         return G==L

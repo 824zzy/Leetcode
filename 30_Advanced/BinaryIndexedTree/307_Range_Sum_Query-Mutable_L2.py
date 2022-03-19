@@ -4,7 +4,7 @@ class BIT:
     def __init__(self, n):
         self.A = [0] * (n+1)
     
-    def get(self, k):
+    def sum(self, k):
         sm = 0
         k += 1
         while k:
@@ -31,4 +31,4 @@ class NumArray:
         self.A[k] = x
         
     def sumRange(self, l: int, r: int) -> int:
-        return self.bit.get(r)-self.bit.get(l-1)
+        return self.bit.sum(r)-self.bit.sum(l-1)

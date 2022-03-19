@@ -1,13 +1,6 @@
-# Segment Tree
-
-There are two types of segment tree implementations: array based and tree based.
-
-1. Array based segment tree
-   1. init: initiate leaves and nodes, O(n)
-   2. update: update values from leave to root, O(logn)
-   3. query: O(logn+k)
-
-``` py
+""" https://leetcode.com/problems/range-sum-query-mutable/
+template problem of segment tree
+"""
 class ST:
     def __init__(self, n):
         self.n = n
@@ -36,9 +29,15 @@ class ST:
             if not r%2: ans, r = ans+self.T[r], r-1
             l, r = l//2, r//2
         return ans
-```
+    
+    
+class NumArray:
+    def __init__(self, nums: List[int]):
+        self.st = ST(len(nums))
+        self.st.build(nums)
 
-## Reference
+    def update(self, index: int, val: int) -> None:
+        self.st.update(index, val)
 
-- [花花酱 Segment Tree 线段树 - 刷题找工作 SP14](https://www.youtube.com/watch?v=rYBtViWXYeI)
-- [https://leetcode.com/problems/range-sum-query-mutable/discuss/1205304/Python3-4-approaches](https://leetcode.com/problems/range-sum-query-mutable/discuss/1205304/Python3-4-approaches)
+    def sumRange(self, left: int, right: int) -> int:
+        return self.st.query(left, right)

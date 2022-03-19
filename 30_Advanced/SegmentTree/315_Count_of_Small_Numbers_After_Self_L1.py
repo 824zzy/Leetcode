@@ -1,13 +1,6 @@
-# Segment Tree
-
-There are two types of segment tree implementations: array based and tree based.
-
-1. Array based segment tree
-   1. init: initiate leaves and nodes, O(n)
-   2. update: update values from leave to root, O(logn)
-   3. query: O(logn+k)
-
-``` py
+""" https://leetcode.com/problems/count-of-smaller-numbers-after-self/
+Reverse the array and compute the smaller element count of current element by indexes and segment tree.
+"""
 class ST:
     def __init__(self, n):
         self.n = n
@@ -21,7 +14,7 @@ class ST:
     
     def update(self, i, val):
         i += self.n
-        self.T[i] = val
+        self.T[i] += val
         while i:
             if i%2: l, r = i-1, i
             else: l, r = i, i+1
@@ -36,9 +29,15 @@ class ST:
             if not r%2: ans, r = ans+self.T[r], r-1
             l, r = l//2, r//2
         return ans
-```
-
-## Reference
-
-- [花花酱 Segment Tree 线段树 - 刷题找工作 SP14](https://www.youtube.com/watch?v=rYBtViWXYeI)
-- [https://leetcode.com/problems/range-sum-query-mutable/discuss/1205304/Python3-4-approaches](https://leetcode.com/problems/range-sum-query-mutable/discuss/1205304/Python3-4-approaches)
+    
+    
+class Solution:
+    def countSmaller(self, A: List[int]) -> List[int]:
+        mp = {x: i for i, x in enumerate(sorted(set(A)))}
+        st = ST(len(mp))
+        
+        ans = []
+        for x in reversed(A):
+            ans.append(st.query(0, mp[x]-1))
+            st.update(mp[x], st.T[mp[x]]+1)
+        return ans[::-1]

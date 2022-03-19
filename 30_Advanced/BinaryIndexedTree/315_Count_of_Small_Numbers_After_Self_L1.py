@@ -5,7 +5,7 @@ class BIT:
     def __init__(self, n):
         self.A = [0] * (n+1)
     
-    def get(self, k):
+    def sum(self, k):
         sm = 0
         k += 1
         while k:
@@ -26,6 +26,6 @@ class Solution:
         bit = BIT(len(mp))
         ans = []
         for x in reversed(A): 
-            ans.append(bit.get(mp[x]-1))
+            ans.append(bit.sum(mp[x]-1))
             bit.add(mp[x], 1)
         return ans[::-1]

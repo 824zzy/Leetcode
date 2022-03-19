@@ -1,11 +1,12 @@
 """ https://leetcode.com/problems/create-sorted-array-through-instructions/
-value based BIT
+Add instructions to BIT on the fly,
+while compute the number of elements strictly less/great than current intruction
 """
 class BIT:
     def __init__(self, n):
         self.A = [0] * (n+1)
     
-    def get(self, k):
+    def sum(self, k):
         sm = 0
         k += 1
         while k:
@@ -25,6 +26,20 @@ class Solution:
         bit = BIT(max(A)+1)
         ans = 0
         for i, x in enumerate(A):
-            ans += min(bit.get(x-1), i-bit.get(x))
+            ans += min(bit.sum(x-1), i-bit.sum(x))
             bit.add(x, 1)
         return ans % (10**9+7)
+    
+  
+class Solution:
+    def createSortedArray(self, A: List[int]) -> int:
+        mp = {x: i for i, x in enumerate(sorted(set(A)))}
+        bit = BIT(len(mp))
+        ans = 0
+        for i, x in enumerate(A):
+            less = bit.sum(mp[x]-1)
+            greater = i-bit.sum(mp[x])
+            ans += min(less, greater)
+            bit.add(mp[x], 1)
+        return ans%(10**9+7)
+    
