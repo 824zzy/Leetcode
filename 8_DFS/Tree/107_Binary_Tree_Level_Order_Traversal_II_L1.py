@@ -1,16 +1,14 @@
-from collections import OrderedDict
+""" https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
+"""
 class Solution:
-    def levelOrderBottom(self, root: TreeNode) -> List[List[int]]:
-        ans = OrderedDict()
+    def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
+        ans = defaultdict(list)
+        
         def dfs(node, d):
-            if not node:
-                return
-            if d not in ans:
-                ans[d] = [node.val]
-            else:
-                ans[d].append(node.val)
-            left = dfs(node.left, d+1)
-            right = dfs(node.right, d+1)
+            if not node: return
+            ans[d].append(node.val)
+            dfs(node.left, d+1)
+            dfs(node.right, d+1)
+        
         dfs(root, 0)
-        ans = [v for _, v in ans.items()]
-        return ans[::-1]
+        return [v for k, v in sorted(ans.items(), key=lambda x: (-x[0]))]

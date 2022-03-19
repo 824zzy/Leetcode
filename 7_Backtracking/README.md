@@ -1,4 +1,14 @@
-# Template for back-tracking
+# Back Tracking
+
+First of all, the difference between DFS and Back tracking is subtle in implementation.
+My back tracking template use stack to store states.
+
+Pruning and optimization are useful techniques to reduce the time complexity:
+
+1. sort the original sequence
+2. exclude redundant information
+3. pruning based on **target state**
+4. optimization based on **current optimal answer**
 
 ``` py
 ans = []

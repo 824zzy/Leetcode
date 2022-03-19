@@ -2,18 +2,17 @@
 iteration solution : use For loop to record level nodes
 """
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
-        if not root:
-            return []
-
-        queue = [root]
+    def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root: return
+        
+        Q = [root]
         ans = []
-        while queue:
-            curr = []
-            for _ in range(len(queue)):
-                node = queue.pop(0)
-                curr.append(node.val)
-                if node.left: queue.append(node.left)
-                if node.right: queue.append(node.right)
-                ans.append(curr)
-        return ans
+        while Q:
+            tmp = []
+            for _ in range(len(Q)):
+                node = Q.pop(0)
+                tmp.append(node.val)
+                if node.left: Q.append(node.left)
+                if node.right: Q.append(node.right)
+            ans.append(tmp)
+        return ans[::-1]

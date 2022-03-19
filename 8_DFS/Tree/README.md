@@ -6,8 +6,7 @@ Recursive version
 
 ``` py
 def dfs(node, args):
-    if not node:
-        return 0/None
+    if not node: return 0/None
     l = dfs(node.left)
     r = dfs(node.right)
     # do sth
@@ -25,23 +24,11 @@ while stack:
     stack.append(curr.left)
 ```
 
-## BFS
-
-Iterative version
-
-``` py
-queue = [root]
-while queue:
-    curr = queue.pop(0)
-    `logic`
-    queue.append(curr.left)
-    queue.append(curr.right)
-```
-
 ## Tree Traversal
 
+**Recursive version**:
+
 ``` py
-# Recursive
 def preOrder(self, root):
     if root == None:
         return
@@ -69,47 +56,46 @@ Pre order, In order, Post order: stack
 Level order: queue
 """
 def preOrder(self, root):
-    if root == None:
-        return
-    stack = []
+    ans = []
+    stk = []
     node = root
-    while stack or node:
-        while node:
-            stack.append(node)
-            print(node.val)
+    
+    while stk or node:
+        if node: 
+            ans.append(node.val)
+            stk.append(node)
             node = node.left
-        node = stack.pop()
-        node = node.right
+        else:
+            node = stk.pop()
+            node = node.right
+    return ans
         
 def inOrder(self, root):
-    if root == None:
-        return
-    stack = []
+    stk = []
+    ans = []
     node = root
-    while stack or node:
-        while node:
-            stack.append(node)
+    while stk or node:
+        if node:
+            stk.append(node)
             node = node.left
-        node = stack.pop()
-        print(node.val)
-        node = node.right
+        else:
+            node = stk.pop()
+            ans.append(node.val)
+            node = node.right
+    return ans
         
 def postOrder(self, root):
-    if root == None:
-        return
-    stack1 = []
-    stack2 = []
-    node = root
-    stack1.append(node)
-    while stack1:
-        node = stack1.pop()
-        if node.left:
-            stack1.append(node.left)
-        if node.right:
-            stack1.append(node.right)
-        stack2.append(node)
-    while stack2:
-        print(stack2.pop().val)
+    if not root: return []
+    stk1 = [root]
+    stk2 = []
+    ans = []
+    while stk1:
+        node = stk1.pop()
+        if node.left: stk1.append(node.left)
+        if node.right: stk1.append(node.right)
+        stk2.append(node)
+    while stk2: ans.append(stk2.pop().val)
+    return ans
         
 # level order
 def levelOrder(self, root):

@@ -1,15 +1,19 @@
+""" https://leetcode.com/problems/binary-tree-inorder-traversal/
+"""
 # Iterative solution
 class Solution:
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
-        curr = root
-        stk, ans = [], []
-        while stk or curr:
-            while curr:
-                stk.append(curr)
-                curr = curr.left
-            curr = stk.pop()
-            ans.append(curr.val)
-            curr = curr.right            
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        stk = []
+        ans = []
+        node = root
+        while stk or node:
+            if node:
+                stk.append(node)
+                node = node.left
+            else:
+                node = stk.pop()
+                ans.append(node.val)
+                node = node.right
         return ans
 
 # Recursive solution
