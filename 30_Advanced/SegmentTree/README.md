@@ -8,7 +8,7 @@ There are two types of segment tree implementations: array based and tree based.
    3. query: O(logn+k)
 
 ``` py
-class ST:
+class SegmentTree:
     def __init__(self, n):
         self.n = n
         self.T = [0]*2*self.n
