@@ -1,6 +1,6 @@
 """ https://leetcode.com/problems/sliding-window-maximum/
-1. maintain a monotonic decreasing queue
-2. pop element based on its index
+1. maintain a priority queue that only keeps k nearest elements 
+2. top element of priority queue is the answer
 """
 class Solution:
     def maxSlidingWindow(self, A: List[int], k: int) -> List[int]:
