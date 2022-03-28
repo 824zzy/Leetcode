@@ -1,18 +1,6 @@
-""" Tiem complexity: O(N). Space complexity: O(N)
-
-"""
-class Solution:
-    def isPalindrome(self, head: ListNode) -> bool:
-        s = []
-        while head:
-            s.append(head.val)
-            head = head.next
-        return s==s[::-1]
-
-
-""" Tiem complexity: O(N). Space complexity: O(1)
-Use fast slow pointer to split linked list
-reverse the second half and compare.
+""" https://leetcode.com/problems/palindrome-linked-list/
+1. use fast slow pointer to split linked list
+2. reverse the second half and compare.
 """
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:

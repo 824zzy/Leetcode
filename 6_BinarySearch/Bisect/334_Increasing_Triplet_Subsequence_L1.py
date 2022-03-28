@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/increasing-triplet-subsequence/submissions/
-maintain an increasing list by bisect_left
+the same as: 300.
+1. find longest increasing subsequence by maintain an increasing list by bisect_left
+2. check the length of LIC if larger or equal than 3
 """
 class Solution:
     def increasingTriplet(self, A: List[int]) -> bool:

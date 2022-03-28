@@ -1,4 +1,5 @@
-""" greedy by sorting and inserting
+""" https://leetcode.com/problems/queue-reconstruction-by-height/
+greedy by sorting and inserting
 """
 class Solution:
     def reconstructQueue(self, people: List[List[int]]) -> List[List[int]]:
