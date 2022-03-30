@@ -1,4 +1,5 @@
-""" L1: https://leetcode.com/problems/sort-colors/
+""" https://leetcode.com/problems/sort-colors/
+https://leetcode.com/problems/sort-colors/discuss/681526/Python-O(n)-3-pointers-in-place-approach-explained
 two methods:
     1. three pointers(dutch national flag problem)
     2. two passes by two pointers

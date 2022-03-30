@@ -1,6 +1,6 @@
-""" Use two pointer in inside loop
-sort string by length and lexicographical order 
-and compare one by one.
+""" https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/
+1. sort string by length and lexicographical order 
+2. compare characters by two pointers
 """
 class Solution:
     def findLongestWord(self, s: str, D: List[str]) -> str:

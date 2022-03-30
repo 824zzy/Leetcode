@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
+""" https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
 non-target binary search, use r -= 1 to deal with duplicated numbers.
 """
 class Solution:
