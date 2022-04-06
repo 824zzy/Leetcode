@@ -1,4 +1,4 @@
-""" L1: renew type dfs
+""" https://leetcode.com/problems/word-search/
 """
 class Solution:
     def exist(self, A: List[List[str]], word: str) -> bool:

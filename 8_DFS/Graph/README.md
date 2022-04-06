@@ -1,54 +1,40 @@
 # Graph DFS template
 
-## Type 1
-
-Problem: 1905
+## Type 1: Matrix
 
 ``` py
-M, N = len(grid), len(grid[0])
-neibs = [(0, -1), (0, 1), (-1, 0), (1, 0)]
-ans = 0
+M, N = len(A), len(A[0])
+D = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 
 def dfs(x, y):
-    for dx, dy in neibs:
-        if 0<=dx+x<nr and 0<=dy+y<nc and CONDITION:
-            if CONDITION:
-                dfs(dx+x, dy+y)
+    LOGIC
+    for dx, dy in D:
+        if 0<=x+dx<M and 0<=y+dy<N and CONDITION:
+            dfs(x+dx, y+dy)
+    return STH
 
 for i in range(M):
-    for j in range(N):
-        if CONDITION:
-            ans = LOGIC
+    for j in range(N):  
+        dfs(i, j)
 return ans
 ```
 
-## Type2
-
-Note: visit array can be replaced by a set
+## Type2: Graph
 
 ``` py
-from collections import defaultdict
-class Solution:
-    def findCircleNum(self, M: List[List[int]]) -> int:
-        if not M:
-            return 0
-        n = len(M)
-        g = defaultdict(list)
-        for i in range(n):
-            for j in range(i+1, n):
-                if M[i][j]==1:
-                    g[i].append(j)
-                    g[j].append(i)
-        visit = [0] * n
-        def dfs(node):
-            for n in g[node]:
-                if not visit[n]:
-                    visit[n] = 1
-                    dfs(n)
-        `init_variable`
-        for i in range(n):
-            if not visit[i]:
-                visit[i] = 1
-                dfs(i)
-        return ans
+G = defaultdict(dict)
+for i in range(len(A)):
+    for j in range(i+1, len(A)):
+        if A[i][j]: G[i][j] = G[j][i] = 1
+seen = set()
+
+def dfs(i):
+    seen.add(i)
+    for j in G[i]:
+        if j not in seen:
+            dfs(j)
+    
+for i in range(len(A)):
+    if i not in seen:
+        dfs(i)
 ```

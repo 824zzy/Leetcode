@@ -1,13 +1,16 @@
-class Solution(object):
-    def combine(self, n, k):
+""" https://leetcode.com/problems/combinations/
+"""
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
         ans = []
+        stk = []
         
-        def dfs(remain, k, path):
-            if k==0:
-                ans.append(path)
-                return
-            for i, n in enumerate(remain):
-                dfs(remain[i+1:], k-1, path+[n])
+        def dfs(i):
+            if len(stk)==k: ans.append(stk.copy())
+            for j in range(i, n+1):
+                stk.append(j)
+                dfs(j+1)
+                stk.pop()
         
-        dfs([i for i in range(1, n+1)], k, [])
+        dfs(1)
         return ans

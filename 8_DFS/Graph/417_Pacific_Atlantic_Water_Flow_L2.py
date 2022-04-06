@@ -1,20 +1,28 @@
+""" https://leetcode.com/problems/pacific-atlantic-water-flow/
+Think reversely, starting from ocean and move in increase way.
+1. flood fill pacific
+2. flood fill atlantic
+3. find valid islands
+"""
 class Solution:
-    def pacificAtlantic(self, matrix: List[List[int]]) -> List[List[int]]:
-        if not matrix or not matrix[0]: return []            
-        M, N = len(matrix), len(matrix[0])
-        p_visited, a_visited = set(), set()
-        directions = [(-1, 0), (1, 0), (0, 1), (0, -1)]
+    def pacificAtlantic(self, A: List[List[int]]) -> List[List[int]]:
+        D = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+        seen = defaultdict(list)
+        
+        def dfs(x, y, O):
+            if O in seen[(x, y)]: return None
+            seen[(x, y)].append(O)
+            for dx, dy in D:        
+                if 0<=x+dx<len(A) and 0<=y+dy<len(A[0]):
+                    print(x, y, x+dx, y+dy)
+                    if A[x][y]<=A[x+dx][y+dy]:
+                        dfs(x+dx, y+dy, O)
+        
+        # flood fill pacific
+        for i in range(len(A)): dfs(i, 0, 'P')
+        for j in range(len(A[0])): dfs(0, j, 'P')
+        # flood fill atlantic
+        for i in range(len(A)): dfs(i, len(A[0])-1, 'O')
+        for j in range(len(A[0])): dfs(len(A)-1, j, 'O')
 
-        def dfs(visited, x, y):
-            visited.add((x, y))
-            for dx, dy in directions:
-                new_x, new_y = x+dx, y+dy
-                if 0<=new_x<M and 0<=new_y<N and (new_x, new_y) not in visited and matrix[new_x][new_y]>=matrix[x][y]:
-                    dfs(visited, new_x, new_y)
-        for i in range(M):
-            dfs(p_visited, i, 0)
-            dfs(a_visited, i, N-1)
-        for j in range(N):
-            dfs(p_visited, 0, j)
-            dfs(a_visited, M-1, j)
-        return list(p_visited.intersection(a_visited))
+        return [k for k, v in seen.items() if len(v)==2]
