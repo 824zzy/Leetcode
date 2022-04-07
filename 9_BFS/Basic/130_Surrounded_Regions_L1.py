@@ -1,6 +1,6 @@
-""" L1: https://leetcode.com/problems/surrounded-regions/
-Flood fill Os from the boundary with a sentinel # to mark that this O is not surrounded. 
-Traverse the board and replace O with X and # with O.
+""" https://leetcode.com/problems/surrounded-regions/
+1. flood fill Os from the boundary with a sentinel # to mark that this O is not surrounded. 
+2. traverse the board and replace O with X and # with O.
 """
 class Solution:
     def solve(self, A: List[List[str]]) -> None:

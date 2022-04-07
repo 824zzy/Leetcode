@@ -1,19 +1,15 @@
-""" Naive Recursive Tree
+""" https://leetcode.com/problems/binary-tree-paths/submissions/
 """
 class Solution:
-    def binaryTreePaths(self, root: TreeNode) -> List[str]:
-        self.ans = []
-        def dfs(node: TreeNode, curPath: str):
-            if not node:
-                return
-            if not node.left and not node.right:
-                curPath += str(node.val)
-                self.ans.append(curPath)
-                return 
-            curPath += str(node.val) + '->'
-            dfs(node.left, curPath)
-            dfs(node.right, curPath)
+    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
+        ans = []
+        
+        def dfs(node, path):
+            if not node: return
+            if not node.left and not node.right: 
+                return ans.append(path+str(node.val))
+            dfs(node.left, path+str(node.val)+'->')
+            dfs(node.right, path+str(node.val)+'->')
         
         dfs(root, '')
-        return self.ans
-            
+        return ans
