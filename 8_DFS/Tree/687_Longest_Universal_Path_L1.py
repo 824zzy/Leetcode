@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/longest-univalue-path/
+""" https://leetcode.com/problems/longest-univalue-path/
 record previous node's value to find maximum length path
 """
 class Solution:

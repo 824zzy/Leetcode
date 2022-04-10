@@ -1,5 +1,7 @@
 # Graph DFS template
 
+Bipartite problem(Painting problem): 785
+
 ## Type 1: Matrix
 
 ``` py

@@ -1,25 +1,16 @@
+""" https://leetcode.com/problems/balanced-binary-tree/submissions/
+For each node, check the absolute difference of subtree height.
+"""
 class Solution:
-    def isBalanced(self, root: TreeNode, d=0) -> bool:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
         self.ans = True
-        def dfs(node, d):
-            if not node: return d
-            l = dfs(node.left, d+1)
-            r = dfs(node.right, d+1)
+        
+        def dfs(node):
+            if not node: return 1
+            l = dfs(node.left)
+            r = dfs(node.right)
             if abs(l-r)>1: self.ans = False
-            return max(l, r)
-        dfs(root, 0)
-        return self.ans
-    
-    
-    
-class Solution:
-    def isBalanced(self, root: TreeNode, d=0) -> bool:
-        self.ans = True
-        def dfs(node, d):
-            if not node: return d
-            l = dfs(node.left, d+1)
-            r = dfs(node.right, d+1)
-            # add code here
-            return max(l, r)
-        dfs(root, 0)
+            return 1+max(l, r)
+        
+        dfs(root)
         return self.ans

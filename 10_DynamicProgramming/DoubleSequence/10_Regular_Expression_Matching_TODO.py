@@ -1,8 +1,17 @@
-"""Description
-Author: your name
-Date: 2021-12-30 02:44:02
-LastEditTime: 2021-12-30 02:44:02
-LastEditors: Please set LastEditors
-Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-FilePath: /Leetcode/10_DynamicProgramming/DoubleSequence/10_Regular-Expression-Matching_TODO.py
+""" https://leetcode.com/problems/regular-expression-matching/submissions/
+steal from ye: https://leetcode.com/problems/regular-expression-matching/discuss/652563/Python3-top-down-dp
 """
+class Solution:
+    def isMatch(self, s: str, p: str) -> bool:
+        
+        @cache
+        def fn(i, j): 
+            """Return True if s[i:] matches p[j:]"""
+            if j == len(p): return i == len(s)
+            match = i < len(s) and (s[i] == p[j] or p[j] == ".")
+            if j+1 < len(p) and p[j+1] == "*": 
+                return fn(i, j+2) or match and fn(i+1, j)
+            else: 
+                return match and fn(i+1, j+1)
+            
+        return fn(0, 0)

@@ -1,11 +1,16 @@
-""" https://leetcode.com/problems/is-graph-bipartite/
-the same as 886,
+""" https://leetcode.com/problems/possible-bipartition/
+the same as 785, 
 classical bipartite problem:
 1. traverse the graph by bfs
 2. check if any node has painted the same color
 """
 class Solution:
-    def isBipartite(self, G: List[List[int]]) -> bool:
+    def possibleBipartition(self, n: int, dislikes: List[List[int]]) -> bool:
+        G = defaultdict(list)
+        for i, j in dislikes:
+            G[i].append(j)
+            G[j].append(i)
+        
         seen = {}
         
         for i in range(len(G)):

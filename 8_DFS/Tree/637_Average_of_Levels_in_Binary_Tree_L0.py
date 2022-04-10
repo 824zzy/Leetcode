@@ -1,17 +1,15 @@
-from collections import defaultdict
-
+""" https://leetcode.com/problems/average-of-levels-in-binary-tree/
+level order traversal by dfs and defaultdict
+"""
 class Solution:
-    def averageOfLevels(self, root: TreeNode) -> List[float]:
-        self.d = defaultdict(int)
+    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
+        mp = defaultdict(list)
         
-        def dfs(node: TreeNode, dept: int) -> None:
-            if not node:
-                return
-            self.d[dep].append(node.val)
-            
-            dfs(node.left, dept+1)
-            dfs(node.right, dept+1)
+        def dfs(node, d):
+            if not node: return
+            mp[d].append(node.val)
+            dfs(node.left, d+1)
+            dfs(node.right, d+1)
         
         dfs(root, 0)
-        
-        return [sum(l)/len(l) for l in self.d.values()]
+        return [sum(v)/len(v) for _, v in mp.items()]

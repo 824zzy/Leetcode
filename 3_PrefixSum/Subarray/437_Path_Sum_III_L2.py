@@ -1,5 +1,5 @@
-""" L1: https://leetcode.com/problems/path-sum-iii/
-prefix sum + back tracking
+""" https://leetcode.com/problems/path-sum-iii/
+prefix sum + dfs
 use prefix sum to find target subarray through back tracking
 """
 class Solution:
