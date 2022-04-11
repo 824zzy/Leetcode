@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/max-chunks-to-make-sorted/
+""" https://leetcode.com/problems/max-chunks-to-make-sorted/
 use seen maximum value as threshold for monotonic stack
 """
 class Solution:

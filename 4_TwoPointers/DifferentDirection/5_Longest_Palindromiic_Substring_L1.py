@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/longest-palindromic-substring/
-lo = i//2, hi = (i+1)//2 to cover odd and even cases
+to cover odd and even cases: 
+1. ranging from 0 to 2*len(s)-1
+2. l = i//2, r = (i+1)//2 
 """
 class Solution:
     def longestPalindrome(self, s: str) -> str:

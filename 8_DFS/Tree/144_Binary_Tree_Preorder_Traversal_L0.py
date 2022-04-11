@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/binary-tree-preorder-traversal/
+""" https://leetcode.com/problems/binary-tree-preorder-traversal/
 """
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:

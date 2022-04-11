@@ -14,3 +14,15 @@ for i in range(len(A)):
         ans = A[i]
 return ans
 ```
+
+## Knuth/Fisher-Yates shuffle
+
+``` py
+for i in range(1, len(self.A)): 
+    ii = randint(0, i)
+    self.A[ii], self.A[i] = self.A[i], self.A[ii]
+```
+
+## Reference
+
+- [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)

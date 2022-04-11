@@ -1,4 +1,4 @@
-""" L1
+""" https://leetcode.com/problems/binary-number-with-alternating-bits/
 Get lowest bit twice and compare them.
 """
 class Solution:

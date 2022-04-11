@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/reverse-bits/
+""" https://leetcode.com/problems/reverse-bits/
 shift and Get lowest bit in x: x & 1
 """
 class Solution:
