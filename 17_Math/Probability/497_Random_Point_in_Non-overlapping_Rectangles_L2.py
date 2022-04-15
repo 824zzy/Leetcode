@@ -1,5 +1,5 @@
-"""Description
-choose rectangle by weights(size of rectangle among rectangles)
+""" https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/
+TODO: choose rectangle by weights(size of rectangle among rectangles)
 """
 class Solution:
 
