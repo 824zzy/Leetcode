@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/search-in-a-binary-search-tree/submissions/
+""" https://leetcode.com/problems/search-in-a-binary-search-tree/submissions/
 """
 class Solution:
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:

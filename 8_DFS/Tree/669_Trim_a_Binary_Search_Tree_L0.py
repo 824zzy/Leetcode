@@ -1,4 +1,5 @@
 """ https://leetcode.com/problems/trim-a-binary-search-tree/
+Traverse the tree and return node according to node.val vs low and high.
 """
 class Solution:
     def trimBST(self, root: TreeNode, low: int, high: int) -> TreeNode:

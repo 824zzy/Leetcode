@@ -1,6 +1,5 @@
-""" L1: https://leetcode.com/problems/insert-delete-getrandom-o1/
-Use value as key and index as value.
-For remove operation, assign index to last element in list.
+""" https://leetcode.com/problems/insert-delete-getrandom-o1/
+TODO: solve it again
 """
 class RandomizedSet:
 
