@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/convert-bst-to-greater-tree/
+use a global sum to update node value in inorder traversal
+"""
 class Solution:
     def convertBST(self, root: TreeNode) -> TreeNode:
         self.sum = 0
