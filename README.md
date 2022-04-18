@@ -6,8 +6,13 @@ One question a day to ensure a sharp mind.
 
 - `L0`: straight forward question
 - `L1`: variance of template
-- `L2`: need to think for a while
+- `L2`: need to think for a while / complex implementation
 - `L3`: need aha moment
+
+## Time Complexity Analysis
+
+Row: input Size, column: time complexity, cell: algorithm
+|| 
 
 ## Python Basic
 

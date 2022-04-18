@@ -13,5 +13,15 @@
         "ios": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "projectManager.git.baseFolders": [
+        "/Users/zzy/Code"
+    ],
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f",
+        "activityBar.background": "#07360D",
+        "titleBar.activeBackground": "#094B13",
+        "titleBar.activeForeground": "#F0FDF2"
+    }
 }

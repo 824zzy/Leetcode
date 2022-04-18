@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/factorial-trailing-zeroes/
-count five
+continuously count five factors since we don't need to care about 2 factors
 """
 class Solution:
     def trailingZeroes(self, n: int) -> int:
