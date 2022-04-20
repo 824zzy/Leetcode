@@ -11,8 +11,29 @@ One question a day to ensure a sharp mind.
 
 ## Time Complexity Analysis
 
-Row: input Size, column: time complexity, cell: algorithm
-|| 
+Row: input size(IS), column: time complexity(TC)
+
+| IS&TC       |O($2^n$) |O($n^4$) |O($n^3$) |O($n^2$) |O(nlogn) | O(n)    | O(logn) |  O(1)   |
+|  ---        | ---     |  ---    |  ---    |  ---    |  ---    |  ---    |  ---    |  ---    |
+| 1-10        | &check; | &check; | &check; | &check; | &check; | &check; | &check; | &check; |
+| 10-50       | &check; | &check; | &check; | &check; | &check; | &check; | &check; | &check; |
+| 50-100      | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; | &check; |
+| 100-500     | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; | &check; |
+| 500-$10^3$  | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; |
+|$10^3$-$10^4$| &cross; | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; |
+|$10^4$-$10^6$| &cross; | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; |
+|$10^6$-$10^9$| &cross; | &cross; | &cross; | &cross; | &cross; | &cross; | &check; | &check; |
+
+| TC       |  Algorithm                                                           |
+|---       |   ---                                                                |
+| O($2^n$) | DFS-combination($2^n$), DFS-permutation(n!),                                     |
+| O($n^4$) | DP                                                                   |
+| O($n^3$) | DP, Floyd-Warshall                                                   |
+| O($n^2$) | DP                                                                   |
+| O(nlogn) | Sorting, heap, divide&conquer, Dijkstra-heap, QuickSort              |
+| O(n)     | DP, DFS-tree(V), BFS(V+E), TopologicalSorting(V+E), BucketSort(N+K), MonotonicStack()  |
+| O(logn)  | BinarySearch,  BinaryIndexTree|
+| O(1)     | Math                                                                 |
 
 ## Python Basic
 
@@ -55,3 +76,4 @@ Row: input Size, column: time complexity, cell: algorithm
 2. [Leetcode 101: A Leetcode Grinding Guide(C++ Version)](https://github.com/changgyhub/leetcode_101)
 3. [Algorithms for Competitive Programming](https://cp-algorithms.com/)
 4. [古城算法 slides(google drive)](https://drive.google.com/drive/folders/17I-0mEeaY8X5j7RRMh0x_a2zNLu7jafq)
+5. [输入数据规模和时间复杂度的关系](https://www.youtube.com/watch?v=eG99FDBeuJo)

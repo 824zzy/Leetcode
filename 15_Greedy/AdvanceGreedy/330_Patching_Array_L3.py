@@ -1,4 +1,5 @@
-""" L4: cnblogs.com/grandyang/p/5165821.html
+""" https://leetcode.com/problems/patching-array/
+TODO: cnblogs.com/grandyang/p/5165821.html
 """
 class Solution:
     def minPatches(self, nums: List[int], n: int) -> int:
