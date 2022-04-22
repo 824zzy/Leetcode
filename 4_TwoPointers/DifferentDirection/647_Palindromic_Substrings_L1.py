@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/palindromic-substrings/
+the same as 5
+
 lo = i//2, hi = (i+1)//2 to cover odd and even cases
 """
 class Solution:

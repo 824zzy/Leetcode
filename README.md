@@ -7,7 +7,7 @@ One question a day to ensure a sharp mind.
 - `L0`: straight forward question
 - `L1`: variance of template
 - `L2`: need to think for a while / complex implementation
-- `L3`: need aha moment
+- `L3`: need aha moment / unexpected algorithm
 
 ## Time Complexity Analysis
 
@@ -30,7 +30,7 @@ Row: input size(IS), column: time complexity(TC)
 | O($n^4$) | DP                                                                   |
 | O($n^3$) | DP, Floyd-Warshall                                                   |
 | O($n^2$) | DP                                                                   |
-| O(nlogn) | Sorting, heap, divide&conquer, Dijkstra-heap, QuickSort              |
+| O(nlogn) | Sorting, Heap, divide&conquer, Dijkstra-heap, QuickSort              |
 | O(n)     | DP, DFS-tree(V), BFS(V+E), TopologicalSorting(V+E), BucketSort(N+K), MonotonicStack()  |
 | O(logn)  | BinarySearch,  BinaryIndexTree|
 | O(1)     | Math                                                                 |

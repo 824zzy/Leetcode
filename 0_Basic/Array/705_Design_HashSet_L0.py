@@ -1,4 +1,5 @@
 """ https://leetcode.com/problems/design-hashset/
+suboptimal solution, please refer to hash function
 """
 class MyHashSet:
     def __init__(self):

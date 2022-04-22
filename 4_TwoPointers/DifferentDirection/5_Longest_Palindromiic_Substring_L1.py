@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/longest-palindromic-substring/
+the same as 647
+
 to cover odd and even cases: 
 1. ranging from 0 to 2*len(s)-1
 2. l = i//2, r = (i+1)//2 
