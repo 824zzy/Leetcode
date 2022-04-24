@@ -4,6 +4,8 @@ Imagine we have two robots starting at 0, 0 and collecting cherries at the same 
 Define fn(t, i, ii) as the maximum cherries collected at time t when the two robots are at i and iith rows. Then,
 
 fn(t, i, ii) = grid[i][j] + (i != ii)*grid[ii][jj] + max(fn(t-1, i-1, ii-1), fn(t-1, i-1, ii), fn(t-1, i, ii-1), fn(t-1, i, ii)).
+
+Time: O(n^3)
 """
 class Solution:
     def cherryPickup(self, grid: List[List[int]]) -> int:

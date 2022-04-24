@@ -1,24 +1,22 @@
-""" double hash table
-Use two hash tables. 
-The first to save the check-in time for a customer
-and the second to update the total time between two stations.
+""" https://leetcode.com/problems/design-underground-system/
+use two hash tables
+
+1. the first hash table is for saving the check-in time for a customer
+2. the second hash table is for updating the prefix time sum between two stations.
 """
 class UndergroundSystem:
-
     def __init__(self):
-        self.customer = {}
-        self.trip = defaultdict()
+        self.mp = {}
+        self.ans = defaultdict(lambda: [0])
 
-    def checkIn(self, id: int, stationName: str, t: int) -> None:
-        self.customer[id] = (stationName, t)
+    def checkIn(self, id: int, startStation: str, t: int) -> None:
+        self.mp[id] = (startStation, t)
 
-    def checkOut(self, id: int, stationName: str, t: int) -> None:
-        (preStation, preT) = self.customer[id]
-        if (preStation, stationName) not in self.trip:
-            self.trip[(preStation, stationName)] = [t-preT, 1]
-        else:
-            self.trip[(preStation, stationName)][0] += t-preT
-            self.trip[(preStation, stationName)][1] += 1
-
+    def checkOut(self, id: int, endStation: str, t1: int) -> None:
+        startStation, t0 = self.mp.pop(id)
+        self.ans[startStation+'|'+endStation].append(self.ans[startStation+'|'+endStation][-1]+(t1-t0)) 
+        
     def getAverageTime(self, startStation: str, endStation: str) -> float:
-        return self.trip[(startStation, endStation)][0]/self.trip[(startStation, endStation)][1]
+        x = self.ans[startStation+'|'+endStation][-1]
+        t = len(self.ans[startStation+'|'+endStation])-1
+        return x/t

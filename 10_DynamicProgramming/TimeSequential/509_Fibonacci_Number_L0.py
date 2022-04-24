@@ -14,6 +14,9 @@ class Solution:
 # top down solution
 class Solution:
     def fib(self, n: int) -> int:
-        if n==1: return 1
-        elif n==0: return 0
-        return self.fib(n-1)+self.fib(n-2)
+        @cache
+        def dfs(n):
+            if n==0: return 0
+            if n==1: return 1
+            return dfs(n-1)+dfs(n-2)
+        return dfs(n)

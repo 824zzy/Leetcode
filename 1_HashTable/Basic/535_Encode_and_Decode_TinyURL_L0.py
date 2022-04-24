@@ -1,4 +1,5 @@
-# TODO: add 62 chars hash solution
+""" https://leetcode.com/problems/encode-and-decode-tinyurl/
+"""
 class Codec:
     def __init__(self):
         self.hash = {}
@@ -15,8 +16,3 @@ class Codec:
         """Decodes a shortened URL to its original URL.
         """
         return self.hash[shortUrl.split('/')[-1]]
-        
-
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.decode(codec.encode(url))
