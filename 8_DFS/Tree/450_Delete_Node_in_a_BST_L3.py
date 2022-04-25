@@ -1,4 +1,4 @@
-"""
+""" https://leetcode.com/problems/delete-node-in-a-bst/
 node.right = dfs(node.right, tmp.val) // Call the recursive function in the right subtree to delete the node with the smallest value
 """
 class Solution:

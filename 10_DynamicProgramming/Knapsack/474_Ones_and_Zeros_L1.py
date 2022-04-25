@@ -1,19 +1,18 @@
 """ https://leetcode.com/problems/ones-and-zeroes/
 classical knap-sack problem
+
+Time: O(m*n*k)
 """
 # top down
 class Solution:
-    def findMaxForm(self, A: List[str], M: int, N: int) -> int:
-        
+    def findMaxForm(self, A: List[str], m: int, n: int) -> int:
         @cache
-        def dfs(i, m, n):
-            if i==len(A): return 0
-            
-            if m+A[i].count('0')<=M and n+A[i].count('1')<=N:
-                return max(1+dfs(i+1, m+A[i].count('0'), n+A[i].count('1')), dfs(i+1, m, n))
-            else: return dfs(i+1, m, n)
-            
-        return dfs(0, 0, 0)
+        def dp(i, m, n):
+            if m<0 or n<0: return -1
+            elif i==len(A): return 0
+            return max(1+dp(i+1, m-A[i].count('0'), n-A[i].count('1')), dp(i+1, m, n))
+        
+        return dp(0, m, n)
             
 
 # bottom up

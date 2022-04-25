@@ -1,4 +1,5 @@
-""" L3: https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
+""" https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
+learn from ye: https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/discuss/1513368/C%2B%2BPython3-binary-search
 goal: 
     2*(Lcomb+Rcomb)+diff=sumA ==> 
     diff = sumA-2*(Lcomb+Rcomb) = L+R-2*Lcomb-2*Rcomb = (L-2*Lcomb)+(R-2*Rcomb)
@@ -24,3 +25,19 @@ class Solution:
                 if idx: ans = min(ans, abs(Lcands[idx-1]+r))
                 if idx<len(Lcands): ans = min(ans, abs(Lcands[idx]+r))
         return ans
+
+
+
+# knapsack dp won't work, damn
+class Solution:
+    def minimumDifference(self, A: List[int]) -> int:
+        t = len(A)//2
+        prefix = list(accumulate(reversed(A)))
+        
+        @cache
+        def dp(sm, m, n):
+            if m==t: return abs(sm-prefix[len(A)-1-m-n])
+            if n==t: return abs(sm+prefix[len(A)-1-m-n])
+            return min(dp(sm+A[m+n], m+1, n), dp(sm-A[m+n], m, n+1))
+        
+        return dp(0, 0, 0)

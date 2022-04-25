@@ -1,25 +1,26 @@
 """ https://leetcode.com/problems/partition-equal-subset-sum/
-choose or not to choose
+at each index we just need to decide add integer or not
+
+Time: O(N*n), where N=sum(A) and n=len
 """
 class Solution:
     def canPartition(self, A: List[int]) -> bool:
-        s = sum(A) 
-        if s&1: return False
-        t = s//2
+        sm = sum(A)
+        if sm&1: return False
+        else: t = sm//2
         
         @cache
-        def dfs(i, ss):
-            if i==len(A): return False
-            if ss==t: return True
-            
-            return dfs(i+1, ss+A[i]) or dfs(i+1, ss)
+        def dp(i, sm):
+            if sm==t: return True
+            elif i==len(A): return False
+            return dp(i+1, sm) or dp(i+1, sm+A[i])
         
-        return dfs(0, 0)
+        return dp(0, 0)
     
 class Solution:
     def canPartition(self, A: List[int]) -> bool:
-        if sum(A)%2 != 0:
-            return False
+        if sum(A)%2 != 0: return False
+
         dp = [0]*(sum(A)+1)
         dp[0] = 1
         for n in A:
