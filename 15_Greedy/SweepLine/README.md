@@ -6,9 +6,13 @@ Essentially it uses a prefix sum counter to calculate overlaps at each index.
 ## Sweep Line Template 1
 
 ``` py
-A = sorted([x for i, j in A for x in [[i, 1], [j, -1]]])
+SL = []
+for i, j in A:
+    SL.extend([[i, 1], [j, -1]])
+SL.sort()
+
 cnt = 0
-for _, i in A:
+for _, i in SL:
     cnt += i
     `logic`
 ```
