@@ -1,15 +1,34 @@
 """ https://codeforces.com/problemset/problem/263/A
 """
-def solution(A):
-    for i in range(5):
-        for j in range(5):
-            if A[i][j] == '1':
-                return abs(2-i)+abs(2-j)
+""" Amazon OA Problem 1
+"""
+class solution:
+    def solution(self, s):
+        return ''.join([chr((219-ord(c))) if 97<=ord(c)<=122 else c for c in s])
+            
 
-A = []
-for _ in range(5):
-    row = input()
-    A.append(row.split())
-
-ans = solution(A)
+s = solution()
+ans = s.solution('wrw blf hvv ozhg mrtsg\'h vkrhlwv?')
 print(ans)
+
+
+
+# L  = [int(x) for x in input().split()]
+# From  = [int(x) for x in input().split()]
+# To = [int(x) for x in input().split()]
+
+# ans = L
+# for i, j in zip(From, To):
+#     ans.remove(i)
+#     ans.append(j)
+
+# print(sorted(list(ans)))
+
+# """
+# 1. 1 1 7 6 8
+# 2. 1 2 7 6 8
+# 3. 1 2 9 6 8
+# 4. 1 5 9 6 8
+
+# 5 6 8 9
+# """
