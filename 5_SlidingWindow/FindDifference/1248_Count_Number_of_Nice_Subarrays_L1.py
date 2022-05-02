@@ -1,5 +1,5 @@
-""" L1
-Exactly K times = at most K times - at most K - 1 times
+""" https://leetcode.com/problems/count-number-of-nice-subarrays/
+The same as 992
 """
 class Solution:
     def numberOfSubarrays(self, A: List[int], k: int) -> int:

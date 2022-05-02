@@ -20,8 +20,9 @@ Row: input size(IS), column: time complexity(TC)
 | 50-100      | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; | &check; |
 | 100-500     | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; | &check; |
 | 500-$10^3$  | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; |
-|$10^3$-$10^4$| &cross; | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; |
-|$10^4$-$10^6$| &cross; | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; |
+|$10^3$-$10^4$| &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; |
+|$10^4$-$10^5$| &cross; | &cross; | &cross; | &quest; | &check; | &check; | &check; | &check; |
+|$10^5$-$10^6$| &cross; | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; |
 |$10^6$-$10^9$| &cross; | &cross; | &cross; | &cross; | &cross; | &cross; | &check; | &check; |
 
 | TC       |  Algorithm                                                           |
@@ -51,8 +52,8 @@ Row: input size(IS), column: time complexity(TC)
 
 ### Set
 
-1. `s.add(x)`: add value x to set s
-2. `s1.update(s2)`: add set s2 to set s1
+1. `s.add(x)`: add value x to set s. Time: O(1)
+2. `s1.update(s2)`: add set s2 to set s1. Time: O(len(s2))
 
 ### Hash Table
 

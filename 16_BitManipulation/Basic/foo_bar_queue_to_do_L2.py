@@ -1,4 +1,5 @@
 """ https://foobar.withgoogle.com/queue-to-do
+XOR from x to y(..x..y), equals to XOR of whole(1...y) and head(1...x-1).
 """
 def XOR_1_to_n(n):
     m = n%4
@@ -10,7 +11,7 @@ def XOR_1_to_n(n):
 def solution(s, l):
     ans = 0
     for i in range(l):
-        head = s+(l*(i+1))-i-1
-        tail = max(0, s+(l*i)-1)
-        ans ^= XOR_1_to_n(head) ^ XOR_1_to_n(tail)
+        whole = s+(l*(i+1))-i-1
+        head = max(0, s+(l*i)-1)
+        ans ^= XOR_1_to_n(whole) ^ XOR_1_to_n(head)
     return ans

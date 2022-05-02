@@ -1,4 +1,4 @@
-""" L3: https://leetcode.com/problems/count-vowel-substrings-of-a-string/
+""" https://leetcode.com/problems/count-vowel-substrings-of-a-string/
 TODO: https://leetcode.com/problems/count-vowel-substrings-of-a-string/discuss/1563707/Python3-sliding-window-O(N)
 due to the small data dize, brute force is available
 """

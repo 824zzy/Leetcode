@@ -13,6 +13,16 @@
    4. `x^(1<<n)`: flip n-th bit on/off in `x`
 6. Gray code of a integer `i`: `(i>>1)^i`
 7. 32 bit mask in hexadecimal: `0xffffffff`
+8. XOR from 1 to n:
+
+    ``` py
+    def XOR_1_to_n(n):
+        m = n%4
+        if m==0: return n
+        elif m==1: return 1
+        elif m==2: return n+1
+        else: return 0
+    ```
 
 ### Functions
 
@@ -25,11 +35,11 @@
 
 ## Bitmask
 
-> `range(1<<N)`: iterate all the states by bit mask
-> **`mask & (1<<i)`**: choose i-th bit in 2**i format in bit mask
-> `mask>>i & 1`: choose i-th bit in bit mask
-> `mask ^ 1<<i`: flip i-th bit in bit mask
-> `mask & ~masks[i]`: subtract i-th mask from current mask
+1. `range(1<<N)`: iterate all the states by bit mask
+2. **`mask & (1<<i)`**: choose i-th bit in 2**i format in bit mask
+3. `mask>>i & 1`: choose i-th bit in bit mask
+4. `mask ^ 1<<i`: flip i-th bit in bit mask
+5. `mask & ~masks[i]`: subtract i-th mask from current mask
 
 ``` py
 for mask in range(1 << n): 

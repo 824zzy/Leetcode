@@ -1,5 +1,8 @@
-""" L1
-Exactly(K) = atMost(K) - atMost(K-1),
+""" https://leetcode.com/problems/subarrays-with-k-different-integers/
+learn from lee: https://leetcode.com/problems/subarrays-with-k-different-integers/discuss/523136/JavaC%2B%2BPython-Sliding-Window
+if the problem asks the number of subarrays with at most K distinct elements.
+
+exactly(K) = atMost(K) - atMost(K-1),
 and use Counter to store seen intergers.
 """
 class Solution:
