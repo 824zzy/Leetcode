@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
 1. sort the array
 2. find left&right most different elements by two pointers
+
+Time: O(nlogn) due to sort function
 """
 class Solution:
     def findUnsortedSubarray(self, A: List[int]) -> int:
