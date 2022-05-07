@@ -1,4 +1,8 @@
-# To make it more efficient, use a pair to store the value and the count of each character.
+""" https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/
+ store characters along with their continuous count in stack for efficiency
+ 
+ Time: O(n)
+"""
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
         stk = [['#', 0]]

@@ -1,4 +1,4 @@
-""" L2: https://leetcode.com/problems/132-pattern/
+""" https://leetcode.com/problems/132-pattern/
 use monotonic decreasing stack to find a reference(2), when find a n(1) then return True
 """
 class Solution:
