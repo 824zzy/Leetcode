@@ -14,6 +14,7 @@
    1. Longest Common Subsequence: 583, 1143
    2. Two pass for 4 directions: 542
 3. LCS(Longest Common Subsequence)
+4. Maze: for this type of problems, it will always give you a matrix and you can only move right or down in the matrix
 
 ## Kadane's algorithm
 
