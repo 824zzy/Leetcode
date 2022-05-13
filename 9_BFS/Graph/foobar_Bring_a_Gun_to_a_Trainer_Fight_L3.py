@@ -1,4 +1,7 @@
 """ https://foobar.withgoogle.com/Bring_a_Gun_to_a_Trainer_Fight
+1. use bfs to find all the reflected points of myself and bunny trainers
+2. remove invalid angles that will shoot me first by "banned" dictionary
+3. go through reflected trainer points to find valid angles
 """
 from __future__  import division
 from math import sqrt, atan2
@@ -6,7 +9,7 @@ from collections import defaultdict
 DIR = [(0, 1), (0, -1), (-1, 0), (1, 0)]
 
 def solution(DIM, S, T, lim):
-    def find_candidates(sx, sy, tx, ty):
+    def find_candidates(sx, sy, tx, ty, mode):
         Q = [(sx, sy, 0, 0)]
         seen = set()
         while Q:
@@ -32,9 +35,12 @@ def solution(DIM, S, T, lim):
                     if not cntyy&1: yy = y-2*sy
                     else: yy = y-2*(N-sy)
                     cntyy -= 1
-                if (xx, yy) not in seen and sqrt((xx-tx)**2+(yy-ty)**2)<lim:
-                    seen.add((xx, yy))
-                    Q.append((xx, yy, cntxx, cntyy))
+                if (xx, yy) not in seen:
+                    if mode=='m': dist = sqrt((xx-sx)**2+(yy-sy)**2)
+                    elif mode=='t': dist = sqrt((xx-tx)**2+(yy-ty)**2)
+                    if dist<lim:
+                        seen.add((xx, yy))
+                        Q.append((xx, yy, cntxx, cntyy))
         return seen
             
     M, N = DIM
@@ -42,61 +48,33 @@ def solution(DIM, S, T, lim):
     tx, ty = T
 
     # use bfs compute all valid reflected points of me and trainer
-    refected_me = find_candidates(sx, sy, tx, ty)
-    refected_trainer = find_candidates(tx, ty, sx, sy)
+    refected_me = find_candidates(sx, sy, tx, ty, 'm')
+    refected_trainer = find_candidates(tx, ty, sx, sy, 't')
     # find invalid points that shot myself
     dx, dy = sx-tx, sy-ty
     init_angle = atan2(dy, dx)
-    # print("init_angle:", init_angle)
 
-    # banned = {init_angle: (dx, dy)}
     banned = defaultdict(lambda: (float('inf'), float('inf')))
     for x, y in refected_me:
         dx, dy = sx-x, sy-y
         angle = atan2(dy, dx)
-
-        banned[angle] = min(banned[angle], (dx, dy))
-    #     print(x, y, dx, dy, angle)
-    # print("banned: ", banned)
+        # find angles that has minimum length
+        banned[angle] = min([banned[angle], (dx, dy)], key=lambda x: abs(x[0])+abs(x[1]))
     
     ans = set([init_angle])
-    # ans = set()
     for x, y in refected_trainer:
         dx, dy = sx-x, sy-y
         angle = atan2(dy, dx)
-        if angle not in banned or (abs(dx)<=abs(banned[angle][0]) and abs(dy)<=abs(banned[angle][1])):
+        if angle not in banned or (abs(dx)<abs(banned[angle][0]) and abs(dy)<abs(banned[angle][1])):
             ans.add(angle)
-            # print(x, y, dx, dy, '|', angle)
-        # else: print(x, y, dx, dy, angle)
-        # ans.add(angle)
-        
-    # print(ans)
-    # print(len(ans|banned))
-    return len(ans)
-
-
-    # banned = set()
-    # for x, y in refected_trainer:
-    #     if x==sx and y==sy: continue
-    #     dx, dy = tx-x, ty-y
-    #     angle = atan2(dy, dx)
-    #     banned.add(angle)
-    #     print(x, y, dx, dy, angle)
-    # print("banned: ", banned)
-
-    # for x, y in refected_me:
-    #     if x==sx and y==sy: continue
-    #     dx, dy = tx-x, ty-y
-    #     angle = atan2(dy, dx)
-    #     if angle not in banned:
-    #         ans.add(angle)
-    #     else: print(x, y, dx, dy, angle)
-    #     # ans.add(angle)
-    #     # print(x, y, dx, dy, '|', angle)
-    # print(ans)
-    # print(len(ans|banned))
-    # return len(ans)
     
+    # corner case
+    if sqrt((sx-tx)**2+(sy-ty)**2)>lim: return len(ans)-1
+    else: return len(ans)
+    
+
+ans = solution([10,10], [3,3], [3,5], 1) # 0
+print(ans)
 
 ans = solution([10,10], [4,4], [3,3], 5000) # 739323
 print(ans)
@@ -111,14 +89,5 @@ ans = solution([300,275], [150,150], [185,100], 500) # 9
 print(ans)
 ans = solution([1250,1250], [1000,1000], [500,400], 10000) # 196
 print(ans)
-ans = solution([42,59], [34,34], [6,34], 5000) # not 31694
+ans = solution([42,59], [34,34], [6,34], 5000) # 29279
 print(ans)
-"""
-int[] dimensions = new int[] {42, 59};
-int[] captain_position = new int [] {34, 44};
-int[] badguy_position = new int[] {6, 34};
-int distance = 5000;
-//Desired Output: ??? (Unknown)
-//Actual Output: 31694 (Incorrect)
-
-"""

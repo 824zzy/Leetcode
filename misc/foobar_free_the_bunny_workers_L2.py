@@ -6,7 +6,7 @@ from __future__  import division
 from itertools import combinations
 
 def solution(b, r):
-    keys = combinations(b, r-1)
+    keys = list(combinations([i for i in range(b)], b-r+1))
     print(keys)
 
 
