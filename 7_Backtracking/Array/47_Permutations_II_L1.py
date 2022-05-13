@@ -25,15 +25,20 @@ class Solution:
         return ans
 
 
-# remove duplication by check if it already existed in the answer
+# remove duplication using set
 class Solution:
     def permuteUnique(self, A: List[int]) -> List[List[int]]:
-        ans = []
-        def dfs(A, perm):
-            if not A and perm not in ans: return ans.append(perm)
-            for i in range(len(A)):
-                dfs(A[:i]+A[i+1:], perm+[A[i]])
-        dfs(A, [])
+        ans = set()
+        stk = []
+        
+        def dfs(rem):
+            if not rem: return ans.add(tuple(stk.copy()))
+            for i, x in enumerate(rem):
+                stk.append(x)
+                dfs(rem[:i]+rem[i+1:])
+                stk.pop()
+        
+        dfs(A)
         return ans
     
 

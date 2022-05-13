@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
 find right node by next: `if node.next: node.right.next = node.next.left`
 """ 
-# optimal
 class Solution:
     def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
         def dfs(node):
@@ -10,23 +9,6 @@ class Solution:
             if node.next: node.right.next = node.next.left
             dfs(node.left)
             dfs(node.right)
-            return node
-        
-        return dfs(root)
-    
-# straight forward
-class Solution:
-    def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
-        def dfs(node):
-            if not node: return
-            l = dfs(node.left)
-            r = dfs(node.right)
-            if l and r:
-                l.next = r
-                while l.right and r.left: 
-                    l.right.next = r.left
-                    l = l.right
-                    r = r.left
             return node
         
         return dfs(root)
