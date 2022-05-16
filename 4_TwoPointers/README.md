@@ -10,18 +10,28 @@ We need to use a `while` loop to move the two pointers and add logic based on pr
 Same direction template:
 
 ``` py
-def twopointer(self, A: List[int]) -> int:
-    l, r = 0, len(A)-1
-    ans = 0
-    while l<=r:
-        "Logic for A and ans"
-    return ans
+# basic version
+def twopointers(self, A: List[int]) -> int:
+    i = 0
+    ans = ?
+    for j in range(len(A)):
+        if LOGIC:
+            MOVE_i
+        UPDATE_answer
+
+# advanced version
+def twopointers(self, A: List[int]) -> int:
+    j = 0
+    ans = ?
+    for i in range(len(A)):
+        while LOGIC: j += 1
+        UPDATE_answer
 ```
 
 Different direction template:
 
 ``` py
-def twopointer(self, A: List[int]) -> int:
+def twopointers(self, A: List[int]) -> int:
     l, r = 0, len(A)-1
     ans = 0
     while l<=r:

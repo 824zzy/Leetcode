@@ -1,14 +1,15 @@
+""" https://leetcode.com/problems/deepest-leaves-sum/
+dfs with deepest node value and depth
+"""
 class Solution:
-    def deepestLeavesSum(self, root: TreeNode) -> int:
-        L = defaultdict(list)
-        
-        def dfs(node, d):
-            if not node: return
-            if not node.left and not node.right:
-                L[d].append(node.val)
-            dfs(node.left, d+1)
-            dfs(node.right, d+1)
+    def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:
+        def dfs(node):
+            if not node: return 0, 0
+            elif not node.left and not node.right: return node.val, 1
+            l, ld = dfs(node.left)
+            r, rd = dfs(node.right)
+            if ld==rd: return l+r, ld+1
+            elif ld>rd: return l, ld+1
+            else: return r, rd+1
             
-        dfs(root, 0)
-        maxL = sorted(L.items(), key=lambda x: x[0])
-        return sum(maxL[-1][-1])
+        return dfs(root)[0]

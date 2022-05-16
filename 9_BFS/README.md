@@ -6,23 +6,19 @@ In Q, it maybe also stores steps and other information.
 When we have to build a graph by ourself, don't forget try to reduce time complexity by some tricks.
 
 ```py
-class Solution:
-    def graghBFS(self, A: List[List[int]]) -> int:
-        Q = ["start_state"]
-        seen = set("start_state")
-        while Q:
-            i = Q.pop(0)
-            if/for "logic":
-                "logic to find next state j"
-                if j not in seen:
-                    Q.append(j)
-                    seen.add(j)
-        return ans
+def graghBFS(self, A: List[List[int]]) -> int:
+    Q = [STATE_STATE]
+    seen = set()
+    while Q:
+        i = Q.pop(0)
+        if i not in seen:
+            seen.add(i)
+            for NEXT_STATES:
+                if CONDITION:
+                    Q.append(NEXT_STATE)
 ```
 
-## Shortest Path
-
-### Dijkstra Algorithm
+## Dijkstra Algorithm for Single-Source Shortest Paths
 
 Difference between BFS and Dijkstra:
 
@@ -51,7 +47,7 @@ while pq:
 shortest_paths = [seen.get(i, float("inf")) for i in range(n)]
 ```
 
-### Floyd-Warshall algorithm
+### Floyd-Warshall algorithm for All Pairs Shortest Paths
 
 ``` py
 N = len(G)

@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 the same as 410
-search final answer rather than index
+Use binary search to check if the array can be splitted as multiple subarray whose sum is m.
+Note that the lower bound is max(A)
 """
 class Solution:
     def splitArray(self, A: List[int], n: int) -> int:
