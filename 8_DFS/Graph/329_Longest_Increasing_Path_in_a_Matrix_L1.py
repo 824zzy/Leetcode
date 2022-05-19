@@ -1,4 +1,5 @@
-""" A combination of DP and dfs
+""" https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+find the longest path in the graph by dfs
 """
 class Solution:
     def longestIncreasingPath(self, A: List[List[int]]) -> int:
