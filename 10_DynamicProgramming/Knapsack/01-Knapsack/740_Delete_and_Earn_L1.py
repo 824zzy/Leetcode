@@ -8,12 +8,12 @@ class Solution:
         A = [k for k, v in sorted(cnt.items())]
         
         @cache
-        def dfs(i):
+        def dp(i):
             if i==len(A): return 0
-            ans = dfs(i+1) # skip
+            ans = dp(i+1) # skip
             if i<len(A)-1 and A[i]+1==A[i+1]: # select and delete
-                return max(ans, cnt[A[i]]*A[i]+dfs(i+2))
+                return max(ans, cnt[A[i]]*A[i]+dp(i+2))
             else: # select and not delete
-                return max(ans, cnt[A[i]]*A[i]+dfs(i+1))
+                return max(ans, cnt[A[i]]*A[i]+dp(i+1))
         
-        return dfs(0)
+        return dp(0)

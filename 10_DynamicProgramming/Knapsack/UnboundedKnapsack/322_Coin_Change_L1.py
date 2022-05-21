@@ -1,16 +1,16 @@
 """ https://leetcode.com/problems/coin-change/
-time-dependent/complete knap sack.
+time-dependent/unbounded knap sack problem.
 """
 # top down
 class Solution:
     def coinChange(self, A: List[int], n: int) -> int:
         @cache
-        def dfs(n):
+        def dp(n):
             if n==0: return 0
             elif n<0: return inf
-            return min(1+dfs(n-c) for c in A)
+            return min(1+dp(n-c) for c in A)
         
-        ans = dfs(n)
+        ans = dp(n)
         return -1 if ans==inf else ans
 
 
