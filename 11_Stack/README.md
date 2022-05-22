@@ -1,17 +1,14 @@
-# Note
+# Monotonic stack
 
 ## Monotonic Stack Template
 
-1. Store index in the monotonic stack can always save space.
-2. Monotonic stack sometime can help building a hash table.(496)
-
 ``` py
-s = []
+stk = []
 for i in range(len(A)):
-    while s and `condition`:
+    while stk and `condition`:
         `logic`
-        s.pop()
+        stk.pop()
     if `condition`:
-        s.append(A[i]) / s.append(i)
+        stk.append(i)
 return ans
 ```
