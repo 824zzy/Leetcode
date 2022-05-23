@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/sum-of-total-strength-of-wizards/
-TODO: from lee: https://leetcode.com/problems/sum-of-total-strength-of-wizards/discuss/2061985/Python-Solution-O(n)
+from lee: https://leetcode.com/problems/sum-of-total-strength-of-wizards/discuss/2061985/Python-Solution-O(n)
+
+similar to 907, almost the same as 1856
 """
 class Solution:
     def totalStrength(self, A: List[int]) -> int:

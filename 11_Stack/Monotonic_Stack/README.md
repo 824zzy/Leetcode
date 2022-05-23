@@ -1,7 +1,8 @@
-# Monotonic Stack Template
+# Monotonic Stack
 
-1. Store index in the monotonic stack can always save space.
-2. Monotonic stack sometime can help building a hash table.(496)
+The monotonic increasing stack and monotonic decreasing stack, namely monotonic stack, is a very powerful tool for finding next greater/smaller element.
+More specifically, always **use monotonic increasing stack when we are trying to find the next smaller element, vice versa.**
+And in the template, `A[stk[-1]]>A[i]` indiates a monotonic increasing stack.
 
 ## Template
 

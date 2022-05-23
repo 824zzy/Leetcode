@@ -1,4 +1,5 @@
-""" L0: https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
+""" https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
+find next smaller or equal element by monotonic increasing stack
 the same as 739
 """
 class Solution:
