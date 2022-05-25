@@ -1,4 +1,4 @@
-""" https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/submissions/
+""" https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/
 Note that in python, 0.1+0.2 = 0.30000000000000004 != 0.3,
 thus in order to compute slope, we can either avoid float calculation(division) or use high precision fractions.Fraction
 """

@@ -1,5 +1,5 @@
-""" L1: https://leetcode.com/problems/course-schedule-iii/
-TODO: greedy using priority queue
+""" https://leetcode.com/problems/course-schedule-iii/
+greedy sort + priority queue
 """
 class Solution:
     def scheduleCourse(self, A: List[List[int]]) -> int:

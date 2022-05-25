@@ -1,4 +1,4 @@
-""" https://leetcode.com/problems/longest-increasing-subsequence/discuss/771027/Python3-binary-search
+""" https://leetcode.com/problems/longest-increasing-subsequence/
 use bisect to maintain a increasing list.
 O(NlogN)
 """
