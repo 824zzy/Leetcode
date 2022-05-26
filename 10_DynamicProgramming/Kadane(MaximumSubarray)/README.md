@@ -11,7 +11,7 @@ class Solution:
     def maxSubArray(self, A: List[int]) -> int:
         ans, cur = -inf, 0
         for x in A:
-            cur = max(0, cur) + x
+            cur = max(x, cur+x)
             ans = max(ans, cur)
         return ans
 ```

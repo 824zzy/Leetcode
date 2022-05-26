@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/number-of-1-bits/
-check if lowest bit of n is 1
+right shift n while checking if lowest bit of n is 1 by `n&1`
 """
 class Solution:
     def hammingWeight(self, n: int) -> int:

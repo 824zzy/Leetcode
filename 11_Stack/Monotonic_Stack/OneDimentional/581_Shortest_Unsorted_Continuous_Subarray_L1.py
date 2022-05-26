@@ -17,7 +17,7 @@ class Solution:
         r = -inf
         stk = []
         for i in reversed(range(len(A))):
-            while stk and A[i]>A[stk[-1]]:
+            while stk and A[stk[-1]]<A[i]:
                 r = max(r, stk.pop())
             stk.append(i)
             
