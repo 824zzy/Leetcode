@@ -11,7 +11,7 @@ class Solution:
             else: cl += 1
             
             if cl==op: ans = max(ans, 2*cl)
-            elif cl>=op: cl = op = 0
+            elif cl>op: cl = op = 0
             
         cl = op = 0
         for c in s[::-1]:
@@ -19,6 +19,6 @@ class Solution:
             else: cl += 1
             
             if cl==op: ans = max(ans, 2*op)
-            elif op>=cl: cl = op = 0
+            elif op>cl: cl = op = 0
             
         return ans
