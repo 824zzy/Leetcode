@@ -23,5 +23,12 @@
         "activityBar.background": "#07360D",
         "titleBar.activeBackground": "#094B13",
         "titleBar.activeForeground": "#F0FDF2"
-    }
+    },
+    "grammarly.selectors": [
+        {
+            "language": "python",
+            "scheme": "file",
+            "pattern": "R_BitManipulation/Basic/268_Missing_Numbers_L1.py"
+        }
+    ]
 }

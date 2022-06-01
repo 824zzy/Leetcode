@@ -1,6 +1,6 @@
 # Sweep Line
 
-Note that for all intervals inputs, this method should be the first intuition you come up with.
+Note that for all interval inputs, this method should be the first intuition you come up with.
 Essentially it uses a prefix sum counter to calculate overlaps at each index.
 
 ## Sweep Line Template 1

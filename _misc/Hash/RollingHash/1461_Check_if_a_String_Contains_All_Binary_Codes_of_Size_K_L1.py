@@ -2,9 +2,10 @@
 Solution 1: rolling hash
 1. hash function: hs = hs * size + val
 2. update hash: hs -= val * size * (SeqSize-1)
+Time complexity: O(n)
 
-Solution 2: brute force
-brute force find all substring
+Solution 2: brute force to find all substring
+Time complexity: O(n)
 """
 class Solution:
     def hasAllCodes(self, s: str, k: int) -> bool:
@@ -16,9 +17,15 @@ class Solution:
                 seen.add(hs)
                 hs -= int(s[i-(k-1)])*2**(k-1)
         return len(seen)==2**k
-    
+
+# brute force
 class Solution:
     def hasAllCodes(self, s: str, k: int) -> bool:
-        S = set()
-        for i in range(len(s)-k+1): S.add(s[i:i+k])
-        return len(S)==2**k
+        seen = set()
+        A = []
+        for i in range(len(s)):
+            A.append(s[i])
+            if i>=k-1: 
+                seen.add(tuple(A))
+                A.pop(0)
+        return len(seen)==2**k

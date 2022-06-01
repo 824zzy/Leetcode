@@ -24,6 +24,14 @@
         else: return 0
     ```
 
+9. String to bit mask:
+
+    ``` py
+    mask = 0
+    for c in w:
+        mask |= 1<<(ord(c)-ord('a'))
+    ```
+
 ### Functions
 
 1. XOR operation: `a ^ 0 = a`  `a ^ a = 0`

@@ -1,7 +1,7 @@
 """ https://leetcode.com/problems/my-calendar-iii/
 learn from: https://leetcode.com/problems/my-calendar-iii/discuss/1646167/Python-O(n-2)-using-SortedDict
 
-Essentially it is a sweep line
+a sweep line algorithm implemented by sorted containers
 """
 from sortedcontainers import SortedDict
 
