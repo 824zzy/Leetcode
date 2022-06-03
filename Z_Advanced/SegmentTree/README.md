@@ -1,4 +1,6 @@
-# Segment Tree
+# Ultimate Segment Tree Templates
+
+TODO: Sweepline, monotonic stack, and (add more type of problems can be solve by segment tree).
 
 There are three types of segment tree implementations: array-based, tree-based and ZKW segment tree.
 
@@ -35,7 +37,7 @@ class Node:
 
 class SegmentTree:
     def __init__(self, lo, hi, A=[]):
-        if A: self.root = self.buildTree(A, lo, hi)
+        if A: self.root = self.buildTree(lo, hi, A)
         else: self.root = Node(lo, hi)
 
     def buildTree(self, lo, hi, A):
@@ -67,54 +69,105 @@ class SegmentTree:
         node.sm = node.left.sm + node.right.sm
         node.mx = max(node.left.mx, node.right.mx)
         
-    def rangeUpdate(self, node, val, lo, hi):
-        if node.lo == lo and node.hi == hi:
-            node.sm += val # or rangeSet node.sm = val
-            node.mx += val # or rangeSet node.mx = val
-            node.lazy += val # or rangeSet node.lazy = val
+    def rangeAdd(self, node, val, lo, hi):
+        if node.lo==lo and node.hi==hi:
+            node.sm += val
+            node.mx += val
+            node.lazy += val
             return 
         
-        m = (node.lo + node.hi) // 2
+        m = (node.lo+node.hi)//2
         # push lazy to children, if no children, create them on the fly
         if not node.left and not node.right:
             node.left = Node(node.lo, m, node.lazy, node.lazy, node.lazy)
-            node.right = Node(m, node.hi, node.lazy, node.lazy, node.lazy)
+            node.right = Node(m+1, node.hi, node.lazy, node.lazy, node.lazy)
         else:
             node.left.sm += node.lazy
             node.left.mx += node.lazy
             node.left.lazy += node.lazy
-            node.right.sm += node.laz9
+            node.right.sm += node.lazy
             node.right.mx += node.lazy
             node.right.lazy += node.lazy
         # reset lazy tag
         node.lazy = 0
         # update the children
         if m>=hi:
-            self.rangeUpdate(node.left, val, lo, hi)
+            self.rangeAdd(node.left, val, lo, hi)
         elif m<lo:
-            self.rangeUpdate(node.right, val, lo, hi)
+            self.rangeAdd(node.right, val, lo, hi)
         else:
-            self.rangeUpdate(node.left, val, lo, m)
-            self.rangeUpdate(node.right, val, m+1, hi)
+            self.rangeAdd(node.left, val, lo, m)
+            self.rangeAdd(node.right, val, m+1, hi)
         # update the node
         node.sm = node.left.sm+node.right.sm
         node.mx = max(node.left.mx, node.right.mx, node.mx)
         return
 
-    def rangeSum(self, node, lo, hi):
+    def rangeAddSum(self, node, lo, hi):
+        if not node: return 0
         if node.lo==lo and node.hi==hi: return node.sm
         m = (node.lo+node.hi)//2
-        if hi<=m: return self.rangeSum(node.left, lo, hi)
-        elif lo>m: return self.rangeSum(node.right, lo, hi)
-        else: return self.rangeSum(node.left, lo, m)+self.rangeSum(node.right, m+1, hi)
+        if hi<=m: return node.lazy+self.rangeAddSum(node.left, lo, hi)
+        elif lo>m: return node.lazy+self.rangeAddSum(node.right, lo, hi)
+        else: return node.lazy+self.rangeAddSum(node.left, lo, m)+self.rangeAddSum(node.right, m+1, hi)
 
-    def rangeMax(self, node, lo, hi):
-        # TODO: update it
+    def rangeAddmax(self, node, lo, hi):
+        if not node: return 0
         if node.lo==lo and node.hi==hi: return node.mx
         m = (node.lo+node.hi)//2
-        if hi<=m: return self.rangeMax(node.left, lo, hi)
-        elif lo>m: return self.rangeMax(node.right, lo, hi)
-        else: return max(self.rangeMax(node.left, lo, m), self.rangeMax(node.right, m+1, hi))
+        if hi<=m: return node.lazy+self.rangeAddmax(node.left, lo, hi)
+        elif lo>m: return node.lazy+self.rangeAddmax(node.right, lo, hi)
+        else: return node.lazy+max(self.rangeAddmax(node.left, lo, m), self.rangeAddmax(node.right, m+1, hi))
+
+    def rangeSet(self, node, val, lo, hi):
+        if node.lo==lo and node.hi==hi:
+            node.sm = val
+            node.mx = val
+            node.lazy = val
+            return 
+        
+        m = (node.lo+node.hi)//2
+        # push lazy to children, if no children, create them on the fly
+        if not node.left and not node.right:
+            node.left = Node(node.lo, m, node.lazy, node.lazy, node.lazy)
+            node.right = Node(m+1, node.hi, node.lazy, node.lazy, node.lazy)
+        else:
+            node.left.sm = max(node.left.sm, node.lazy)
+            node.left.mx = max(node.left.mx, node.lazy)
+            node.left.lazy = max(node.left.lazy, node.lazy)
+            node.right.sm = max(node.right.sm, node.lazy)
+            node.right.mx = max(node.right.mx, node.lazy)
+            node.right.lazy = max(node.right.lazy, node.lazy)
+        # reset lazy tag
+        node.lazy = 0
+        # update the children
+        if m>=hi:
+            self.rangeSet(node.left, val, lo, hi)
+        elif m<lo:
+            self.rangeSet(node.right, val, lo, hi)
+        else:
+            self.rangeSet(node.left, val, lo, m)
+            self.rangeSet(node.right, val, m+1, hi)
+        # update the node
+        node.sm = node.left.sm+node.right.sm
+        node.mx = max(node.left.mx, node.right.mx, node.mx)
+        return
+
+    def rangeSetSum(self, node, lo, hi):
+        if not node: return 0
+        if node.lo==lo and node.hi==hi: return node.sm
+        m = (node.lo+node.hi)//2
+        if hi<=m: return max(node.lazy, self.rangeSetSum(node.left, lo, hi))
+        elif lo>m: return max(node.lazy, self.rangeSetSum(node.right, lo, hi))
+        else: return max(node.lazy, self.rangeSetSum(node.left, lo, m), self.rangeSetSum(node.right, m+1, hi))
+    
+    def rangeSetMax(self, node, lo, hi):
+        if not node: return 0
+        if node.lo==lo and node.hi==hi: return node.mx
+        m = (node.lo+node.hi)//2
+        if hi<=m: return max(node.lazy, self.rangeSetMax(node.left, lo, hi))
+        elif lo>m: return max(node.lazy, self.rangeSetMax(node.right, lo, hi))
+        else: return max(node.lazy, self.rangeSetMax(node.left, lo, m), self.rangeSetMax(node.right, m+1, hi))
 ```
 
 ### Array based segment tree

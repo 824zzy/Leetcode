@@ -1,4 +1,5 @@
-"""L3
+""" https://leetcode.com/problems/rectangle-area-ii/
+2D sweep line
 TODO: https://leetcode.com/problems/rectangle-area-ii/discuss/137914/JavaC%2B%2BPython-Discretization-and-O(NlogN)
 """
 class Solution:
