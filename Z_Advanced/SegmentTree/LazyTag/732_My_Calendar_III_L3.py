@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/my-calendar-iii/
-range max update + global max query
+Range max add + global max query
 
 1. build a tree-based segment tree whose root node is ranging from 0 to 10**9+1.
 2. update the range max by lazy tag

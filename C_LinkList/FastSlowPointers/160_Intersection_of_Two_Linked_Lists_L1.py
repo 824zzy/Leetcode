@@ -1,47 +1,35 @@
-# Trick of two pointer: TIME: O(N), SPACE: O(1)
-class Solution(object):
-    def getIntersectionNode(self, headA, headB):
-        cA, cB = headA, headB
-        while cA != cB:
-            if not cA: cA = headB
-            else: cA = cA.next    
-            if not cB: cB = headA
-            else: cB = cB.next
-        return cA
-
-# Seen set to save linked list A: TIME: O(N), SPACE: O(N)
-class Solution(object):
-    def getIntersectionNode(self, headA, headB):
-        seen = set()
-        while headA:
-            seen.add(headA)
-            headA = headA.next
-        while headB:
-            if headB in seen: return headB
-            headB = headB.next
-        return None
-
-# Straight-forward solution
+""" https://leetcode.com/problems/intersection-of-two-linked-lists/
+"""
+# solution from ye: https://leetcode.com/problems/intersection-of-two-linked-lists/discuss/642385/JavaPython3-traverse-A-greaterB-and-B-greaterA-at-the-same-time
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
-        len_A, len_B = 0, 0
-        tmp_A, tmp_B = headA, headB
-        while tmp_A:
-            len_A += 1
-            tmp_A = tmp_A.next
-        while tmp_B:
-            len_B += 1
-            tmp_B = tmp_B.next
-            
-        step_A = max(0, len_A-len_B)
-        step_B = max(0, len_B-len_A)
-        while step_A:
-            headA = headA.next
-            step_A -= 1
-        while step_B:
-            headB = headB.next
-            step_B -= 1
-        while headA and headB and headA!=headB:
-            headA = headA.next
-            headB = headB.next
-        return headA if headA else None
+        nodeA, nodeB = headA, headB
+        while nodeA != nodeB: 
+            nodeA = nodeA.next if nodeA else headB
+            nodeB = nodeB.next if nodeB else headA
+        return nodeA
+
+# straight-forward solution
+class Solution:
+    def getIntersectionNode(self, A: ListNode, B: ListNode) -> Optional[ListNode]:
+        la, lb = 0, 0
+        tmpa, tmpb = A, B
+        while tmpa:
+            tmpa = tmpa.next
+            la += 1
+        while tmpb:
+            tmpb = tmpb.next
+            lb += 1
+        
+        if lb>la: 
+            A, B = B, A
+            lb, la = la, lb
+        d = (la-lb)
+        for _ in range(d): A = A.next
+        
+        while A and B:
+            if A==B: return A
+            A = A.next
+            B = B.next
+        return None
+        
