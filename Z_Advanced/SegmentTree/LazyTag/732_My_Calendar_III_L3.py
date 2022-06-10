@@ -5,7 +5,7 @@ Range max add + global max query
 2. update the range max by lazy tag
 3. simply return the root(global)'s mx
 
-Note that we should only update all the related nodes for [lo, hi), so the parameter of rangeAdd is (lo, ho-1)
+Note that we should only update all the related nodes for [lo, hi), so the parameter of rangeAddMax is (lo, ho-1)
 """
 class Node:
     def __init__(self, lo, hi, mx=0, lazy=0):
@@ -21,8 +21,7 @@ class SegmentTree:
         if A: self.root = self.buildTree(A, lo, hi)
         else: self.root = Node(lo, hi)
         
-    def rangeAdd(self, node, val, lo, hi):
-        # range matched
+    def rangeAddMax(self, node, val, lo, hi):
         if node.lo == lo and node.hi == hi:
             node.mx += val
             node.lazy += val
@@ -38,16 +37,15 @@ class SegmentTree:
             node.left.lazy += node.lazy
             node.right.mx += node.lazy
             node.right.lazy += node.lazy
-		# reset lazy tag
         node.lazy = 0
         # update the children
         if m>=hi:
-            self.rangeAdd(node.left, val, lo, hi)
+            self.rangeAddMax(node.left, val, lo, hi)
         elif m<lo:
-            self.rangeAdd(node.right, val, lo, hi)
+            self.rangeAddMax(node.right, val, lo, hi)
         else:
-            self.rangeAdd(node.left, val, lo, m)
-            self.rangeAdd(node.right, val, m+1, hi)
+            self.rangeAddMax(node.left, val, lo, m)
+            self.rangeAddMax(node.right, val, m+1, hi)
         # update the node
         node.mx = max(node.left.mx, node.right.mx)
         return
@@ -58,5 +56,5 @@ class MyCalendarThree:
         self.ST = SegmentTree(0, 10**9+1)
 
     def book(self, lo: int, hi: int) -> int:
-        self.ST.rangeAdd(self.ST.root, 1, lo, hi-1)
+        self.ST.rangeAddMax(self.ST.root, 1, lo, hi-1)
         return self.ST.root.mx

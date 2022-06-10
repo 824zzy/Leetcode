@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 Left pointer move right when sum is smaller then target
 Right pointer move left when sum is larger then target
+
+Time complexity: O(n)
 """
 class Solution:
     def twoSum(self, A: List[int], t: int) -> List[int]:

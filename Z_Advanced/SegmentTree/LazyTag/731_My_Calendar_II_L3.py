@@ -1,7 +1,7 @@
 """ https://leetcode.com/problems/my-calendar-ii/
 Even though sweep line is a more efficient solution, segment tree with lazy tag is also available.
 
-Range max update + range max query
+Range max add + range max query
 """
 class Node:
     def __init__(self, lo, hi, sm=0, mx=0, lazy=0):

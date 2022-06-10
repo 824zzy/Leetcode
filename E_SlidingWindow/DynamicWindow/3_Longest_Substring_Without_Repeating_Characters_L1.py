@@ -1,15 +1,15 @@
 """ https://leetcode.com/problems/longest-substring-without-repeating-characters/
-Use a dictionary seen to keep track of visited characters and their last positions in string. 
-While moving a pointer i forward, if s[i] has seen before, 
-move anchor k (forward only) to 1 + seen[s[i]] to make sure no duplicates between k and i.
+Use a dictionary seen as a sliding window
 """
 class Solution:
     def lengthOfLongestSubstring(self, A: str) -> int:
-        i = 0
         ans = 0
-        seen = {}
+        seen = set()
+        i = 0
         for j in range(len(A)):
-            if A[j] in seen: i = max(i, seen[A[j]]+1)
+            while A[j] in seen:
+                seen.remove(A[i])
+                i += 1
             ans = max(ans, j-i+1)
-            seen[A[j]] = j
+            seen.add(A[j])
         return ans
