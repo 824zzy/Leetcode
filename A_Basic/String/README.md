@@ -18,18 +18,3 @@
 
 1. `counter().most_common(n)`: return most common n number
 2. `defaultdict` to avoid key error
-
-## TODO: List
-
-1. 186
-2. 293
-3. 294
-4. 249
-5. 161
-6. 358
-7. 271
-8. 246
-9. 247
-10. 248
-11. 157
-12. 158
