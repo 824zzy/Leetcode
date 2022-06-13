@@ -1,6 +1,6 @@
 # Monotonic Priority Queue
 
-The monotonic priority queue problems are essentially a type of greedy with the help of priority queue.
+The monotonic priority queue problems are essentially a type of greedy and sliding window problem.
 The problem usually gives you a threshold, and you have to leverage the threshold to find out the condition to update priority queue.
 
 ## Template
