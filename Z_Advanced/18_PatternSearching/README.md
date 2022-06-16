@@ -3,11 +3,16 @@
 ## Template
 
 ``` py
+""" find the index of pattern in string, if pattern not in string then return -1
+p: pattern
+s: string
+LPS: longest prefix suffix
+"""
 def getLPS(s):
     i = 0
     lps = [0] * len(s)
     for j in range(1, len(s)):
-        while s[j] != s[i] and i: i = lps[i-1]
+        while s[j]!=s[i] and i: i = lps[i-1]
         if s[j] == s[i]: i += 1
         lps[j] = i
     return lps

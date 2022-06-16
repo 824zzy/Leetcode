@@ -1,5 +1,5 @@
-""" https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/
-The same as 2305, backtracking with pruning: https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/discuss/1010057/JavaPython-Binary-Search-100
+""" https://leetcode.com/problems/fair-distribution-of-cookies/
+the same as 1723, backtracking with pruning: https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/discuss/1010057/JavaPython-Binary-Search-100
 
 Optimization 1:
 we assign the most time consuming job first.
@@ -13,7 +13,7 @@ Update the res and don't go forward if work load already >= result
 Time complexity: O(k^n)
 """
 class Solution:
-    def minimumTimeRequired(self, A, k):
+    def distributeCookies(self, A: List[int], k: int) -> int:
         n = len(A)
         A.sort(reverse=True) # optimization 1
         self.ans = sum(A)

@@ -22,7 +22,7 @@ class Solution:
 class Solution:
     def minDistance(self, A, B):
         @cache
-        def dp(i,j):
+        def dp(i, j):
             if i < 0 or j < 0: return 0
             if A[i] == B[j]: return dp(i-1,j-1) + 1
             else: return max(dp(i-1,j), dp(i,j-1))
