@@ -1,4 +1,4 @@
-""" https://leetcode.com/problems/number-of-submatrices-that-sum-to-t/submissions/
+""" https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/
 2D prefix sum + subarray sum equals to t(problem 560)
 """
 class Solution:

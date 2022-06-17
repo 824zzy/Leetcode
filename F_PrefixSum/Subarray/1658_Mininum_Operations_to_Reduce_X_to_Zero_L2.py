@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/
-https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/discuss/935986/Python3-O(N)-hash-table-of-prefix
 Translate the problem into: find a subarray which sum is sum(A)-x and has maximal length.
+
+Time complexity: O(n)
 """
 class Solution:
     def minOperations(self, A: List[int], x: int) -> int:
