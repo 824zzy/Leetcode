@@ -1,7 +1,7 @@
 """ https://leetcode.com/problems/match-substring-after-replacement/
 Since `1 <= sub.length <= s.length <= 5000`, O(n*m) is acceptable.
 
-TODO: The optimal solution should be O(n+m) by KMP
+The optimal solution should be O(n+m) by KMP, but I don't know how to customize KMP to solve it.
 """
 class Solution:
     def matchReplacement(self, s: str, sub: str, mappings: List[List[str]]) -> bool:
