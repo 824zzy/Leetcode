@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/furthest-building-you-can-reach/
+let's suppose we have a minheap whose size is l and we always want to use ladders.
+When we are run out of ladders, we need to use bricks to replace the ladders for the minimal height difference
 """
 class Solution:
     def furthestBuilding(self, A: List[int], b: int, l: int) -> int:
