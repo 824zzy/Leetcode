@@ -1,5 +1,7 @@
-""" L0
-compare sub-strings
+""" https://leetcode.com/problems/search-suggestions-system/
+brute force to compare sub-strings
+
+Time complexity: O(m*n*n) where m=len(s), n=len(P)
 """
 class Solution:
     def suggestedProducts(self, P: List[str], s: str) -> List[List[str]]:
