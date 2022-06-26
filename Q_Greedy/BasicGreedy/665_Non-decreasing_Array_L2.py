@@ -1,5 +1,9 @@
 """ https://leetcode.com/problems/non-decreasing-array/
-1. count modify times and check if it less or equal than 1
+1. count modify times and check if it less or equal than 1, there are only four legal cases:
+    1. i==0
+    2. i+2==len(A)
+    3. A[i-1]<=A[i+1]: delete left hand side
+    4. A[i]<=A[i+2]: delete right hand side
 2. once find any incorrect order, instantly return False
 """
 class Solution:

@@ -3,6 +3,7 @@
 ``` py
 # 1. path compression during 'find': find the root/cluster-id of u
 # 2. union by rank, merge low rank set to high rank set: merge cluter x and cluster y
+# 3. Time complexity of find and union is log(n)
 class DSU:
     def __init__(self, n):
         self.p = list(range(n))
