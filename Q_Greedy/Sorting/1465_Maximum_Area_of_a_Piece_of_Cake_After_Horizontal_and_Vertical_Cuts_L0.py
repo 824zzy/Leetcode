@@ -1,5 +1,5 @@
-""" L0
-sort and find maximum gaps
+""" https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/
+sort H and W and find their maximum gaps
 """
 class Solution:
     def maxArea(self, h: int, w: int, H: List[int], W: List[int]) -> int:
