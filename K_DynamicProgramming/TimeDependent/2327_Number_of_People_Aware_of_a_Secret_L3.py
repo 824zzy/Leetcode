@@ -1,5 +1,6 @@
 """ https://leetcode.com/problems/number-of-people-aware-of-a-secret/
 this problem is harder than the fourth problem to me.
+dp(i) means the number of people who found the secret on ith day.
 """
 class Solution:
     def peopleAwareOfSecret(self, n: int, delay: int, forget: int) -> int:

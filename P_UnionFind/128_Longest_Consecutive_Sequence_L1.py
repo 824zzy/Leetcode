@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/longest-consecutive-sequence/
 1. union all consecutive element pairs
 2. find maximum size of disjoint set
+
+Time complexity: O(n)
 """
 class DSU:
     def __init__(self, n):

@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/ugly-number-ii/
+""" https://leetcode.com/problems/ugly-number-ii/
 iteratively return next ugly number given an ungly number x
 """
 # top down

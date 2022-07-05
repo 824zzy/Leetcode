@@ -5,8 +5,12 @@ class Solution:
         if n<=0: return False
         
         @cache
-        def dfs(n):
+        def dp(n):
             if n==1: return True
-            return any([dfs(n//f) for f in [2, 3, 5] if n%f==0])
+            ans = False
+            for x in (2,3,5):
+                if n%x==0:
+                    ans |= dp(n//x)
+            return ans
             
-        return dfs(n)
+        return dp(n)

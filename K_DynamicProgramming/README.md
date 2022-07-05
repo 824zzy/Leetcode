@@ -15,6 +15,8 @@
    2. Two pass for 4 directions: 542
 3. LCS(Longest Common Subsequence)
 4. Maze: for this type of problems, it will always give you a matrix and you can only move right or down in the matrix
+5. Time sequencetial: current state is only realted to limited previous states
+6. Time dependent: current state is related to all the previous states
 
 ## Kadane's algorithm
 

@@ -1,4 +1,5 @@
 """ https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+optinal solution using bfs, but not readble than dfs solution
 """
 class Codec:
     def serialize(self, root):

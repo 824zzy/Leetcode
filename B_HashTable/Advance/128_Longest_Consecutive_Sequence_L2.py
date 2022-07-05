@@ -1,14 +1,16 @@
 """ https://leetcode.com/problems/longest-consecutive-sequence/
-Find left and right endpoint and sequence length then update hash table
+1. find left and right end-points to compute the sequence length
+2. update end-points in the hash table
 """
 class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
-        d, ans = {}, 0
-        for n in nums:
-            if n not in d:
-                l = d.get(n-1, 0)
-                r = d.get(n+1, 0)
-                lens = l + r + 1
-                ans = max(ans, lens)
-                d[n-l] = d[n] = d[n+r] = lens
-        return ans
+    def longestConsecutive(self, A: List[int]) -> int:
+        mp = {}
+        ans = 0
+        
+        for x in A:
+            if x not in mp:
+                l = mp.get(x-1, 0)
+                r = mp.get(x+1, 0)
+                L = l+r+1
+                mp[x] = mp[x-l] = mp[x+r] = L       
+        return max(mp.values(), default=0)
