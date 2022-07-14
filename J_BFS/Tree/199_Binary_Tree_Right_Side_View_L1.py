@@ -1,33 +1,32 @@
-""" variants of level order traverse
+""" https://leetcode.com/problems/binary-ans-right-side-view/
+level order traversal using dfs
+
+Time complexity: O(n)
 """
-# recursive version
+# Only save right most node into ans. Space complexity: O(1)
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        ans = []
+        
+        def dfs(node, l):
+            if not node: return
+            if l>len(ans): ans.append(node.val)
+            dfs(node.right, l+1)
+            dfs(node.left, l+1)
+        
+        dfs(root, 1)
+        return ans
+
+# Record every level of nodes in ans. Space complexity: O(n)
 class Solution:
     def rightSideView(self, root: TreeNode) -> List[int]:
-        tree = collections.defaultdict(list)
+        ans = collections.defaultdict(list)
         
         def dfs(node, d):
             if not node: return
-            tree[d].append(node)
+            ans[d].append(node)
             dfs(node.left, d+1)
             dfs(node.right, d+1)
         
         dfs(root, 0)
-        return [v[-1].val for k, v in tree.items()]
-
-# iterative version
-class Solution:
-    def rightSideView(self, root: TreeNode) -> List[int]:
-        if not root:
-            return []
-        queue = [root]
-        ans = []
-        
-        while queue:
-            ans.append(queue[-1].val)
-            for _ in range(len(queue)):
-                cur = queue.pop(0)
-                if cur.left:
-                    queue.append(cur.left)
-                if cur.right:
-                    queue.append(cur.right)
-        return ans
+        return [v[-1].val for k, v in ans.items()]

@@ -1,14 +1,19 @@
 """ https://leetcode.com/problems/maximum-product-after-k-increments/
-lesson learned from contest: DONT THINK TOO MUCH ABOUT TIME COMLEXITY, ALWAYS TRY THE BRUTE FORCE SOLUTION FIRST
+Fill gap trick
 
-Time complexity: O(klogn)
+Time complexity: O(klogn) the higher bound is less than pop k times.
 """
 class Solution:
     def maximumProduct(self, A: List[int], k: int) -> int:
         heapify(A)
+        n = len(A)
         while k:
-            heappush(A, heappop(A)+1)
-            k -= 1
+            mn = heappop(A)
+            if A: gap = max(k//n, 1)
+            else: gap = k
+            
+            heappush(A, mn+gap)
+            k -= gap
         
         ans = 1
         for x in A:

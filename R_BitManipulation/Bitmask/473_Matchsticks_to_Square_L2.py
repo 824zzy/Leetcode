@@ -3,23 +3,23 @@ special case of 698
 """
 # top down
 class Solution:
-    def makesquare(self, nums):
-        N = len(nums)
-        nums.sort(reverse=True)
-        basket, rem = divmod(sum(nums), 4)
-        if rem or nums[0] > basket: return False
+    def makesquare(self, A: List[int]) -> bool:
+        n = len(A)
+        A.sort(reverse=True)
+        k, rem = divmod(sum(A), 4)
+        if rem or A[0]>k: return False
         
         @cache
-        def dfs(mask):
-            if mask == 0: return 0
-            for j in range(N):
-                if mask & 1<<j:
-                    neib = dfs(mask ^ 1<<j)
-                    if neib >= 0 and neib + nums[j] <= basket:
-                        return (neib + nums[j]) % basket
+        def dp(mask):
+            if mask==(1<<n)-1: return 0
+            for j in range(n):
+                if not mask&(1<<j):
+                    neib = dp(mask^(1<<j))
+                    if neib>=0 and neib+A[j]<=k:
+                        return (neib+A[j])%k
             return -1
-                    
-        return dfs((1<<N) - 1) == 0
+        
+        return dp(0)==0
 
 
 # bottom up
