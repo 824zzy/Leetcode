@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/minimum-sum-of-squared-difference/
-
+Fill gap trick, pretty much the same as the 2233.
 """
 class Solution:
     def minSumSquareDiff(self, nums1: List[int], nums2: List[int], k1: int, k2: int) -> int:

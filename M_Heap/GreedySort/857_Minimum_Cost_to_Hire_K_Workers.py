@@ -1,4 +1,5 @@
-""" Greedy heap
+""" https://leetcode.com/problems/minimum-cost-to-hire-k-workers/
+TODO: Greedy heap
 """
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], k: int) -> float:

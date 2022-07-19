@@ -1,4 +1,5 @@
-""" L1: Heap solution
+""" https://leetcode.com/problems/maximum-frequency-stack/
+Heap solution
 maintain a maximum heap by (frequency, index, value)
 """
 class FreqStack:

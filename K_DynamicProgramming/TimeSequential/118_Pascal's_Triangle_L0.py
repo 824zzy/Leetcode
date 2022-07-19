@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/pascals-triangle/
+118, 119 are the same
+
 The values of row[i] only depends on row[i-1]
 initial state: dp = [[1], [1, 1]]
 transition: row[i-1] = dp[-1][i]+dp[-1][i-1]

@@ -1,7 +1,7 @@
 """ https://leetcode.com/problems/maximum-product-after-k-increments/
 Fill gap trick
 
-Time complexity: O(klogn) the higher bound is less than pop k times.
+Time complexity: O(klogn) the upper bound is less than pop k times.
 """
 class Solution:
     def maximumProduct(self, A: List[int], k: int) -> int:

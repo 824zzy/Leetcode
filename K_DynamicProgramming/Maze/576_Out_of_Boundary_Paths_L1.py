@@ -1,16 +1,23 @@
 """ https://leetcode.com/problems/out-of-boundary-paths/
+the answer needs modulo 10^9 + 7 is a hint to use dp, so just apply maze dp to find the answer
+
+Time complexity: O(m*n*maxMove*4) ~= 5 * 10^6
 """
 class Solution:
     def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
         D = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         
         @cache
-        def dfs(i, x, y):
-            if not(0<=x<m) or not(0<=y<n): return 1
-            elif i==maxMove: return 0
-            return sum(dfs(i+1, x+dx, y+dy) for dx, dy in D)
+        def dp(x, y, step):
+            if not (0<=x<m and 0<=y<n): return 1
+            if not step:  return 0
+            
+            ans = 0
+            for dx, dy in D:
+                ans += dp(x+dx, y+dy, step-1)
+            return ans%(10**9+7)
         
-        return dfs(0, startRow, startColumn)%(10**9+7)
+        return dp(startRow, startColumn, maxMove)%(10**9+7)
     
 # bottom up
 class Solution:

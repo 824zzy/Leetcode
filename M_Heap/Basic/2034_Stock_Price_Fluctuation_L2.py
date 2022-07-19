@@ -1,4 +1,4 @@
-""" L2: https://leetcode.com/problems/stock-price-fluctuation/
+""" https://leetcode.com/problems/stock-price-fluctuation/
 while hashmap(always updated) timestamp's value not equals to current maximum/minimum heap value, pop the heap.
 """
 class StockPrice:

@@ -6,6 +6,8 @@ And in the template, `A[stk[-1]]>A[i]` indiates a monotonic increasing stack.
 
 ## Template
 
+Basic template:
+
 ``` py
 stk = []
 for i in range(len(A)):
@@ -15,4 +17,24 @@ for i in range(len(A)):
     `logic`
     stk.append([i, A[i]])
 return ans
+```
+
+Two pass to find next smaller element (greater vice versa):
+
+``` py
+# next small on the right
+R = [len(A)]*len(A)
+stk = []
+for i in range(len(A)):
+    while stk and A[stk[-1]]>=A[i]:
+        R[stk.pop()] = i
+    stk.append(i)
+
+# next small on the left
+L = [-1]*len(A)
+stk = []
+for i in reversed(range(len(A))):
+    while stk and A[stk[-1]]>=A[i]:
+        L[stk.pop()] = i
+    stk.append(i)
 ```

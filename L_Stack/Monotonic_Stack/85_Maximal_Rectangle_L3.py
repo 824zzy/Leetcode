@@ -13,7 +13,8 @@ class Solution:
                 else: dp[c] = 0
             maxArea = max(maxArea, self.maxRectangleInHistogram(dp))
         return maxArea
-    
+
+class Solution:
     def maxRectangleInHistogram(self, A):  # O(N)
         s, ans = [], 0
         for i, h in enumerate(A+[0]):

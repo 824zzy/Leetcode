@@ -1,24 +1,24 @@
-""" Simulation by heap
+""" https://leetcode.com/problems/task-scheduler/
+let min(n, len(pq)) be the stride, and simulate the process by priority queue.
 """
-from collections import Counter
-from heapq import *
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
-        if n==0:
-            return len(tasks)
-        counter, ans, cycle = Counter(tasks), 0, n+1
-        heap = []
-        for k, v in counter.items():
-            # maintain a maxHeap
-            heappush(heap, -v)
-        while heap:
-            works = [heappop(heap) for i in range(cycle) if heap]
-            worktime = len(works)
-            for work in works:
-                work = work*(-1) - 1
-                if work>0:
-                    heappush(heap, -work)
-            ans += cycle if len(heap)>0 else worktime
+        n += 1
+        cnt = Counter(tasks)
+        ans = 0
+        pq = [-v for k, v in cnt.items()]
+        heapify(pq)
+        
+        while pq:
+            tmp = []
+            k = min(n, len(pq))
+            for _ in range(n):
+                if pq:
+                    v = -heappop(pq)
+                    if v-1>0: tmp.append(-(v-1))
+            if tmp: ans += n
+            else: ans += k
+            pq.extend(tmp)
         return ans
 
 """ A tricky math solution

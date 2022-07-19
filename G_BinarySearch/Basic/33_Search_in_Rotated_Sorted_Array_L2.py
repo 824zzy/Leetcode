@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/search-in-rotated-sorted-array/
-Define l and r as the lower and higher bound of the array index that we are checking. 
+Define l and r as the lower and upper bound of the array index that we are checking. 
 Iteratively divide the array into two pieces, and discard the one that target is not in.
 """
 class Solution:

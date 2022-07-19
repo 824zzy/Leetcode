@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/range-frequency-queries/
-create a hash table to find all the indexes for each elements and use bisect to find lower bound and higher bound of indexes.
+create a hash table to find all the indexes for each elements and use bisect to find lower bound and upper bound of indexes.
 """
 class RangeFreqQuery:
 
