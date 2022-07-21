@@ -3,6 +3,7 @@ Intuition: if i and j belong to the same group, the graph is not bipartite
 
 use disjoint set to union all the neighbors of every node
 """
+from typing import List
 class DSU:
     def __init__(self, n):
         self.p = list(range(n))
@@ -26,10 +27,24 @@ class Solution:
                 if ii==jj: return False
                 dsu.union(nodes[0], j)
         return True
-    
-"""
-[[1],[0],[4],[4],[2,3]]
-[[4],[],[4],[4],[0,2,3]]
-[[1,2,3],[0,2],[0,1,3],[0,2]]
-[[1,3],[0,2],[1,3],[0,2]]
-"""
+
+def test():
+    sol = Solution()
+    test_cases = [
+        [[1],[0],[4],[4],[2,3]],
+        [[4],[],[4],[4],[0,2,3]],
+        [[1,2,3],[0,2],[0,1,3],[0,2]],
+        [[1,3],[0,2],[1,3],[0,2]],
+    ]
+    answers = [
+        True,
+        True,
+        False,
+        True
+    ]
+    for t, a in zip(test_cases, answers):
+        assert sol.isBipartite(t) == a
+
+
+if __name__ == "__main__":
+    test()

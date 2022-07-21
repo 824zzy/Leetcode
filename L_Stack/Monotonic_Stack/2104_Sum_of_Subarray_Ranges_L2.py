@@ -7,7 +7,7 @@ For monotonic stack solution, it is essentially the same as 907.
 # O(N)
 class Solution:
     def subArrayRanges(self, A: List[int]) -> int:
-        # next smaller&larger on the right
+        # next smallerer&larger on the right
         R_min = [len(A)]*len(A)
         stk = []
         for i in range(len(A)):
@@ -22,7 +22,7 @@ class Solution:
                 R_max[stk.pop()] = i
             stk.append(i)
         
-        # next smaller&larger on the left
+        # next smallerer&larger on the left
         L_min = [-1]*len(A)
         stk = []
         for i in reversed(range(len(A))):

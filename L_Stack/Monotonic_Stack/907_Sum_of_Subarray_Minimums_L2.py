@@ -1,14 +1,14 @@
 """ https://leetcode.com/problems/sum-of-subarray-minimums/
 Instead of finding all the subarrays, the goal is to check the minimums belongs to which subarrays.
 
-1. scan two pass to find next small on the left and right by monotonic increasing stack
+1. scan two pass to find next smaller on the left and right by monotonic increasing stack
 2. for each A[i] as minimum, find it belongs to which subarrays.
 
 Reference from guan: https://www.youtube.com/watch?v=TZyBPy7iOAw
 """
 class Solution:
     def sumSubarrayMins(self, A: List[int]) -> int:
-        # next small on the right
+        # next smaller on the right
         R = [len(A)]*len(A)
         stk = []
         for i in range(len(A)):
@@ -16,7 +16,7 @@ class Solution:
                 R[stk.pop()] = i
             stk.append(i)
         
-        # next small on the left
+        # next smaller on the left
         L = [-1]*len(A)
         stk = []
         for i in reversed(range(len(A))):

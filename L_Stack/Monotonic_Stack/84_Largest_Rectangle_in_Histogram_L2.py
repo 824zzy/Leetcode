@@ -2,13 +2,13 @@
 Inspiration: translate the problem into finding the maximum value of "subarray minimum * subarray length"
 
 Thus, we can
-1. use monotonic increasing stach to find next small on both the left and right
+1. use monotonic increasing stach to find next smaller on both the left and right
 2. let's consider A[i] as minimum, the largest rectangle should be in the range [prev_small+1, next_small-1]
 
 """
 class Solution:
     def largestRectangleArea(self, A: List[int]) -> int:
-        # next small on the right
+        # next smaller on the right
         R = [len(A)]*len(A)
         stk = []
         for i in range(len(A)):
@@ -16,7 +16,7 @@ class Solution:
                 R[stk.pop()] = i
             stk.append(i)
         
-        # next small on the left
+        # next smaller on the left
         L = [-1]*len(A)
         stk = []
         for i in reversed(range(len(A))):

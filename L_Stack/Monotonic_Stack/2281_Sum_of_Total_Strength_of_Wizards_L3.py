@@ -5,7 +5,7 @@ similar to 907, almost the same as 1856
 """
 class Solution:
     def totalStrength(self, A: List[int]) -> int:
-        # next small on the right
+        # next smaller on the right
         R = [len(A)]*len(A)
         stk = []
         for i in range(len(A)):
@@ -13,7 +13,7 @@ class Solution:
                 R[stk.pop()] = i
             stk.append(i)
         
-        # next small on the left
+        # next smaller on the left
         L = [-1]*len(A)
         stk = []
         for i in reversed(range(len(A))):
