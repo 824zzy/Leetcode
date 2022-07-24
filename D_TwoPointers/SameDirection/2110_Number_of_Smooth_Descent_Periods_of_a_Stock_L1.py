@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/
 count legit periods( (j-i+1)*(j-i)//2 ) by sliding window i..j, note that the last period need to be calculated at the end
 or use i to count legit periods, and reset i to 0 if A[j-1]!=A[j]+1
-
 """
 class Solution:
     def getDescentPeriods(self, A: List[int]) -> int:
