@@ -14,5 +14,5 @@ class Solution:
                 seen[A[i]] -= 1
                 if not seen[A[i]]: del seen[A[i]]
                 i += 1
-            ans = max(ans, sum(seen.values()))
+            ans = max(ans, j-i+1)
         return ans

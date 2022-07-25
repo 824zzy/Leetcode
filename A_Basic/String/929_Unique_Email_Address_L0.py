@@ -1,4 +1,4 @@
-""" L0
+""" https://leetcode.com/problems/unique-email-addresses/
 Basic string usage
 """
 class Solution:
