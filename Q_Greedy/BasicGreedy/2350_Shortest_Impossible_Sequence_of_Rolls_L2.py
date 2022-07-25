@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/shortest-impossible-sequence-of-rolls/
+Translate the problem to: find the length of longest possible sequence of rolls.
+
 greedily check the first occurrence of all number from 1 to k.
 Once find all the numbers, reset the seen set to empty.
 """
