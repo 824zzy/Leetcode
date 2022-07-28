@@ -1,4 +1,4 @@
-""" L2: https://leetcode.com/problems/parallel-courses-iii/
+""" https://leetcode.com/problems/parallel-courses-iii/
 topological sort to find earlist to finish course u and earlist to start course v
 """
 class Solution:
