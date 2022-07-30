@@ -8,3 +8,11 @@ All SQL questions can be boiled down to these 3 types:
 - Type 2: Select the group that did X
 
 - Type 3: Select the group that didn’t do X
+
+## Select
+
+## Group
+
+## Delete
+
+## Union
