@@ -7,20 +7,17 @@ class Solution:
         for u, v in connections:
             G[u].append(v)
             G[v].append(u)
-        # lowest distance
+        
         low = [-1]*n
         
         def dfs(i, p, step):
             low[i] = step+1
             for j in G[i]:
-                # avoid parent
-                if j==p: continue
-                # find lowest distance to i
-                elif low[j]==-1:
+                if low[j]==-1:
                     low[i] = min(low[i], dfs(j, i, step+1))
-                else:
+                elif j!=p:
                     low[i] = min(low[i], low[j])
-            # check critical connection
+            
             if low[i]==step+1 and i!=0:
                 ans.append([p, i])
             return low[i]
