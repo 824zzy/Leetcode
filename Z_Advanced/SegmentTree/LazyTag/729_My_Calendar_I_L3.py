@@ -67,3 +67,16 @@ class MyCalendar:
         self.ST.rangeAdd(self.ST.root, 1, lo, hi-1)
         return True
         
+
+# since at most 1000 calls to book, we can use set to store the intervals
+# Time complexity: O(1000*n)
+class MyCalendar:
+    def __init__(self):
+        self.A = set()
+
+    def book(self, new_s: int, new_e: int) -> bool:
+        for old_s, old_e in self.A:
+            if old_s<new_s<old_e or old_s<new_e<old_e or new_s<=old_s<old_e<=new_e: 
+                return False
+        self.A.add((new_s, new_e))
+        return True
