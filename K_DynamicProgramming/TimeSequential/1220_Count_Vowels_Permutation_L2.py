@@ -1,21 +1,30 @@
 """ https://leetcode.com/problems/count-vowels-permutation/
 Hash table dp using a,e,i,o,u as key and cumulative sum as value.
 """
+# Time complexity: O(5*N), where N is the length of A
+# Space complexity: O(5*N), where N is the length of A
 class Solution:
     def countVowelPermutation(self, n: int) -> int:
-        
         @cache
-        def fn(n, c):
-            """Return count of n vowels starting with c."""
-            if n == 1: return 1
-            if c == "a": return fn(n-1, "e")
-            elif c == "e": return fn(n-1, "a") + fn(n-1, "i")
-            elif c == "i": return fn(n-1, "a") + fn(n-1, "e") + fn(n-1, "o") + fn(n-1, "u")
-            elif c == "o": return fn(n-1, "i") + fn(n-1, "u")
-            else: return fn(n-1, "a")
-            
-        return sum(fn(n, c) for c in "aeiou")%(10**9+7)
-    
+        def dp(i, prev):
+            if i==n: return 1
+            ans = 0
+            if prev=='a':
+                ans += dp(i+1, 'e')
+            elif prev=='e':
+                ans += dp(i+1, 'a')+dp(i+1, 'i')
+            elif prev=='i':
+                ans += dp(i+1, 'a')+dp(i+1, 'e')+dp(i+1, 'o')+dp(i+1, 'u')
+            elif prev=='o': 
+                ans += dp(i+1, 'i')+dp(i+1, 'u')
+            elif prev=='u':
+                ans += dp(i+1, 'a')
+            return ans%(10**9+7)
+
+        return sum(dp(1, c) for c in 'aeiou')%(10**9+7)
+
+# Time complexity: O(5*N), where N is the length of A
+# Space complexity: O(k), where k is 5
 class Solution:
     def countVowelPermutation(self, n: int) -> int:
         dp = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}
