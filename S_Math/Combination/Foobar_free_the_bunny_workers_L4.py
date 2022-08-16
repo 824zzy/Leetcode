@@ -1,6 +1,6 @@
 """ https://foobar.withgoogle.com/free_the_bunny_workers
 1. count the least necessary identical keys by n-r+1.
-2. distribute the keys to bunnies by combiantions
+2. distribute the keys to bunnies by combinations
 """
 from itertools import combinations
 
