@@ -1,15 +1,11 @@
+""" https://leetcode.com/problems/unique-morse-code-words/
+transform word into morse code and check the length of the seen set
+"""
 class Solution:
     def uniqueMorseRepresentations(self, words: List[str]) -> int:
-        mapper = {'a': ".-", 'b': "-...", 'c': "-.-.", 'd': "-..", 
-                  'e': ".", 'f': "..-.", 'g': "--.", 'h': "....", 
-                  'i': "..", 'j': ".---", 'k': "-.-", 'l': ".-..",
-                  'm': "--", 'n': "-.", 'o': "---", 'p': ".--.", 
-                  'q': "--.-", 'r': ".-.", 's': "...", 't': "-", 'u': "..-"
-                  , 'v': "...-", 'w': ".--", 'x': "-..-",'y': "-.--", 'z': "--.."}
-        ans = set()
-        for word in words:
-            morse = ''
-            for c in word:
-                morse += mapper[c]
-            ans.add(morse)
-        return len(ans)
+        mp = {chr(i+97): x for i, x in enumerate([".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."])}
+        seen = set()
+        for w in words:
+            morse = ''.join([mp[c] for c in w])
+            seen.add(morse)
+        return len(seen)
