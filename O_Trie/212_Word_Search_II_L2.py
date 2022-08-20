@@ -1,7 +1,7 @@
 """ https://leetcode.com/problems/word-search-ii/
 trie + dfs
 
-disgust time limit
+disgust time limit exceeded, to avoid this, we need a 
 """
 class Trie:
     def __init__(self):

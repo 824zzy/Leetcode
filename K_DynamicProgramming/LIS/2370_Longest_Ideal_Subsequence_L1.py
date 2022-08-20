@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/longest-ideal-subsequence/
 Longest increasing subsequence - like problem
 """
+from header import *
+
 class Solution:
     def longestIdealString(self, A: str, k: int) -> int:
         A = [ord(x)-97 for x in A]
