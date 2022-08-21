@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/
-it is stolen from genious Bakerston
+it is stolen from genius Bakerston
 https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/discuss/1624232/Python-Explanation-with-pictures-2-solutions.
 """
 class Solution:
