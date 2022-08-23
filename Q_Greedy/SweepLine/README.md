@@ -21,8 +21,8 @@ for _, i in SL:
 
 ``` py
 n = len(A)
-SL = [0] * (n + 1) # 1 indexed array needs one more space.
-for i, j in req:
+SL = [0]*(n+1) # 1 indexed array needs one more space.
+for i, j in A:
     SL[i] += 1 # or SL[i-1] += 1
     SL[j+1] -= 1 # or SL[j] -= 1
 

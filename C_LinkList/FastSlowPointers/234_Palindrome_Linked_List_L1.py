@@ -3,21 +3,21 @@
 2. reverse the second half and compare.
 """
 class Solution:
-    def isPalindrome(self, head: ListNode) -> bool:
-        if not head or not head.next: return True
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        # locate middle node
         fast = slow = head
-        while fast.next and fast.next.next:
-            slow = slow.next
+        while fast and fast.next:
             fast = fast.next.next
-        last = slow.next
-        pre = head
-        while last.next:
-            tmp = last.next
-            last.next = tmp.next
-            tmp.next = slow.next
-            slow.next = tmp
-        while slow.next:
             slow = slow.next
-            if pre.val!=slow.val: return False
-            pre = pre.next
+            
+        # reverse: r, m, l = l, r, m
+        prev = None
+        while slow:
+            slow.next, slow, prev = prev, slow.next, slow
+        
+        # check palindrome
+        while prev:
+            if head.val!=prev.val: return False
+            head = head.next
+            prev = prev.next
         return True

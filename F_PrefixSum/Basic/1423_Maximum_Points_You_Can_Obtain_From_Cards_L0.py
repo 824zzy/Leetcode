@@ -2,6 +2,7 @@
 maintain rolling suffix sum.
 or find largest prefix[i]+suffix[k-i]
 """
+from header import *
 class Solution:
     def maxScore(self, A: List[int], k: int) -> int:
         ans = suffix = sum(A[-k:])

@@ -1,20 +1,13 @@
-# Notes
-
-## Hints
-
-1. Transform linklist to stack/queue can be shortcut.
-2. For some problems, it is helpful to create a dummy node and return the `dummy.next`.
-3. Delete node: `if node.next.val==val: node.next = node.next.next`
-4. Reverse linked list:
+# Link List
 
 ## Template
 
 ``` py
 def linklist_template(self, head: ListNode) -> ListNode:
-    prev = ans = ListNode('inf')
-    prev.next = head
-    curr = head
-    while `condition`: # mostly `curr` or `curr and curr.next`
+    pre = ans = ListNode('inf')
+    pre.next = head
+    cur = head
+    while `condition`: # mostly `cur` or `cur and cur.next`
         'logic to delete, insert, etc.'
     return ans.next
 ```
@@ -22,9 +15,10 @@ def linklist_template(self, head: ListNode) -> ListNode:
 ## Reverse Linked List
 
 ``` py
-    prev = None
-    while head: prev, head.next, head = head, prev, head.next
-    return prev
+# l, r, m = m, l, r 
+pre = None
+while head: pre, head.next, head = head, pre, head.next
+return pre
 ```
 
 ### Iteratively
@@ -32,18 +26,18 @@ def linklist_template(self, head: ListNode) -> ListNode:
 ``` py
 class Solution(object):
     def reverseList(self, head):
-        prev, curr = None, head
-        while curr:
-            prev, prev.next, curr = curr, prev, curr.next
-        return prev
+        pre, cur = None, head
+        while cur:
+            pre, pre.next, cur = cur, pre, cur.next
+        return pre
         # Another form
-        prev, curr = None, head
-        while curr:
-            temp = curr
-            curr = curr.next
-            temp.next = prev
-            prev = temp
-        return prev
+        pre, cur = None, head
+        while cur:
+            tmp = cur
+            cur = cur.next
+            tmp.next = pre
+            pre = tmp
+        return pre
 ```
 
 ### Recursively

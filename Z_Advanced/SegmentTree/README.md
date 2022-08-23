@@ -119,14 +119,14 @@ class SegmentTree:
         m = (node.lo+node.hi)//2
         # push lazy to children, if no children, create them
         if not node.left and not node.right:
-            node.left = Node(node.lo, m, 0, None, 0)
-            node.right = Node(m+1, node.hi, 0, None, 0)
+            node.left = Node(node.lo, m, node.lazy, None, node.lazy)
+            node.right = Node(m+1, node.hi, node.lazy, None, node.lazy)
         else:
             node.left.sm += node.lazy
             node.left.lazy += node.lazy
             node.right.sm += node.lazy
             node.right.lazy += node.lazy
-        node.lazy = None
+        node.lazy = 0
         # update the children
         if m>=hi:
             self.rangeAddSum(node.left, val, lo, hi)

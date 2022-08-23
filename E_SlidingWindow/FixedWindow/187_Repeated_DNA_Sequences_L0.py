@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/repeated-dna-sequences/submissions/
-use hash table to find all substrings which frequence>1
+use hash table to find all substrings which frequency>1
 """
+from header import *
+
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
         seen = Counter()
