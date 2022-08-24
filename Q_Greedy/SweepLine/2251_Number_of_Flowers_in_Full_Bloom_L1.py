@@ -2,7 +2,8 @@
 1. use sweep line to find accumulate full blooms
 2. use binary search to find the last time point that <= t
 """
-from sortedcontainers import SortedDict
+from header import *
+
 class Solution:
     def fullBloomFlowers(self, A: List[List[int]], P: List[int]) -> List[int]:
         sd = SortedDict({0: 0})

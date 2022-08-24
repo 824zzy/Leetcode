@@ -6,13 +6,14 @@ Essentially it uses a prefix sum counter to calculate overlaps at each index.
 ## Sweep Line Template 1
 
 ``` py
-SL = []
+diff = []
 for i, j in A:
-    SL.extend([[i, 1], [j, -1]])
-SL.sort()
+    diff.append((i, 1)) # or diff.append((i-1, 1))
+    diff.append((j+1, -1)) # or diff.append((j, 1))
+diff.sort()
 
 cnt = 0
-for _, i in SL:
+for _, i in diff:
     cnt += i
     `logic`
 ```
@@ -21,13 +22,13 @@ for _, i in SL:
 
 ``` py
 n = len(A)
-SL = [0]*(n+1) # 1 indexed array needs one more space.
+diff = [0]*(n+1) # 1 indexed array needs one more space.
 for i, j in A:
-    SL[i] += 1 # or SL[i-1] += 1
-    SL[j+1] -= 1 # or SL[j] -= 1
+    diff[i] += 1 # or diff[i-1] += 1
+    diff[j+1] -= 1 # or diff[j] -= 1
 
 cnt = 0
 for i in range(1, n+1): # or for i in range(1, n):
-    cnt += SL[i]
+    cnt += diff[i]
     # logic
 ```
