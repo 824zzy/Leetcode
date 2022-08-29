@@ -1,6 +1,6 @@
 """ https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/
 from godv:
-1. count zeros, when meet "1" then we need at least "ans+1" seconds but less than zeros count seconds.
+count zeros, when meet "1" then we need at least "ans+1" seconds but less than zeros count seconds.
       0110101
 zeros:1112233 
 ans  :0122334

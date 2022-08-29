@@ -7,7 +7,7 @@
 ``` py
 # prefix sum of A
 itertools.accumulate(A)
-# prefix profuct of A
+# prefix product of A
 itertools.accumulate(A, mul)
 ```
 
