@@ -1,8 +1,8 @@
-# Note
+# Tree Depth First Search Templates
 
-## BottomUp / DFS
+## DFS General Template
 
-Recursive version
+Recursive version, the arguments can be: parent, value, etc.
 
 ``` py
 def dfs(node, args):
@@ -49,7 +49,6 @@ def postOrder(self, root):
     self.postOrder(self, root.left)
     self.postOrder(self, root.right)
     print(root.val)
-    
         
 # level order
 def levelOrder(self, root):
