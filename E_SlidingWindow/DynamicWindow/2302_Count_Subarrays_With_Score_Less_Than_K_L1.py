@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/count-subarrays-with-score-less-than-k/
 maintain sliding window by sum * length must less than k
 """
+from header import *
+
 class Solution:
     def countSubarrays(self, A: List[int], k: int) -> int:
         i = 0

@@ -1,11 +1,13 @@
 """ https://leetcode.com/problems/sum-of-subarray-minimums/
+Monotonic stack + count subarray element
 Instead of finding all the subarrays, the goal is to check the minimums belongs to which subarrays.
-
 1. scan two pass to find next smaller on the left and right by monotonic increasing stack
 2. for each A[i] as minimum, find it belongs to which subarrays.
 
 Reference from guan: https://www.youtube.com/watch?v=TZyBPy7iOAw
 """
+from header import *
+
 class Solution:
     def sumSubarrayMins(self, A: List[int]) -> int:
         # next smaller on the right

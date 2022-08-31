@@ -3,6 +3,8 @@ from lee: https://leetcode.com/problems/sum-of-total-strength-of-wizards/discuss
 
 similar to 907, almost the same as 1856
 """
+from header import *
+
 class Solution:
     def totalStrength(self, A: List[int]) -> int:
         # next smaller on the right

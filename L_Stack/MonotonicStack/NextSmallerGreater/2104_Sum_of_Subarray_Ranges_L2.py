@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/sum-of-subarray-ranges/
-This problem is lablled as medium simply for the sake of low time limitation.
+This problem is labeled as medium simply for the sake of low time limitation.
 If the size of nums becomes 10**4, only monotonic stack solution is acceptable.
 
 For monotonic stack solution, it is essentially the same as 907.
@@ -7,7 +7,7 @@ For monotonic stack solution, it is essentially the same as 907.
 # O(N)
 class Solution:
     def subArrayRanges(self, A: List[int]) -> int:
-        # next smallerer&larger on the right
+        # next smaller&larger on the right
         R_min = [len(A)]*len(A)
         stk = []
         for i in range(len(A)):
@@ -22,7 +22,7 @@ class Solution:
                 R_max[stk.pop()] = i
             stk.append(i)
         
-        # next smallerer&larger on the left
+        # next smaller&larger on the left
         L_min = [-1]*len(A)
         stk = []
         for i in reversed(range(len(A))):

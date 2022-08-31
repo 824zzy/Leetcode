@@ -22,7 +22,7 @@ return ans
 Two pass to find next smallerer elements:
 
 ``` py
-# next smallerer on the right
+# next smaller on the right
 R = [len(A)]*len(A)
 stk = []
 for i in range(len(A)):
@@ -30,7 +30,7 @@ for i in range(len(A)):
         R[stk.pop()] = i
     stk.append(i)
 
-# next smallerer on the left
+# next smaller on the left
 L = [-1]*len(A)
 stk = []
 for i in reversed(range(len(A))):

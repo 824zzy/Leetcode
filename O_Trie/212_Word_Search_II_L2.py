@@ -1,7 +1,5 @@
 """ https://leetcode.com/problems/word-search-ii/
-trie + dfs
-
-disgust time limit exceeded, to avoid this, we need a 
+trie + dfs, disgust time limit exceeded
 """
 class Trie:
     def __init__(self):
