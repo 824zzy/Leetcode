@@ -6,6 +6,8 @@ Every element in the given list has two roles:
 
 Time: O(n^3)
 """
+from header import *
+
 class Solution:
     def maxCoins(self, A: List[int]) -> int:
         A = [1] + A + [1]
