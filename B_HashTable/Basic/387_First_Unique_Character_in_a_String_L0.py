@@ -1,5 +1,6 @@
 """ https://leetcode.com/problems/first-unique-character-in-a-string/
 """
+from header import *
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         cnt = Counter(s)

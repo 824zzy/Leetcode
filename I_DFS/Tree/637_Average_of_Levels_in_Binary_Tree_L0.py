@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/average-of-levels-in-binary-tree/
 level order traversal by dfs and defaultdict
 """
+from header import *
+
 class Solution:
     def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
         mp = defaultdict(list)

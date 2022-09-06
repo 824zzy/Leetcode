@@ -1,14 +1,16 @@
 """ https://leetcode.com/problems/next-greater-element-ii/
-1. maintain a monotonic decreasing stack
-2. linear scan A+A, and use modulo for ans's indexes
+next greater template using monotonic increasing stack
 """
+from header import *
+
 class Solution:
     def nextGreaterElements(self, A: List[int]) -> List[int]:
-        stk = []
+        n = len(A)
+        A *= 2
         ans = [-1]*len(A)
-        for i, x in enumerate(A+A):
-            while stk and A[stk[-1]]<x:
-                ii = stk.pop()
-                ans[ii] = x
-            stk.append(i%len(A))
-        return ans
+        stk = []
+        for i in range(len(A)):
+            while stk and A[stk[-1]]<A[i]:
+                ans[stk.pop()] = A[i]
+            stk.append(i)
+        return ans[:n]

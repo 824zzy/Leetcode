@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/average-of-levels-in-binary-tree/
 level order traversal by bfs
 """
+from header import *
+
 class Solution:
     def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
         ans = []
@@ -15,4 +17,3 @@ class Solution:
             ans.append(sm/len(Q))
             Q = nextQ
         return ans
-                

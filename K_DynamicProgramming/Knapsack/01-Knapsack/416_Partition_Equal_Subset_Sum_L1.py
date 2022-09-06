@@ -3,20 +3,21 @@ at each index we just need to decide add integer or not
 
 Time: O(N*n), where N=sum(A) and n=len
 """
+from header import *
 class Solution:
     def canPartition(self, A: List[int]) -> bool:
-        sm = sum(A)
-        if sm&1: return False
-        else: t = sm//2
+        half, remainder = divmod(sum(A), 2)
+        if remainder: return False
         
         @cache
         def dp(i, sm):
-            if sm==t: return True
-            elif i==len(A): return False
+            if i==len(A) or sm>half: return False
+            if sm==half: return True
             return dp(i+1, sm) or dp(i+1, sm+A[i])
         
         return dp(0, 0)
     
+
 class Solution:
     def canPartition(self, A: List[int]) -> bool:
         if sum(A)%2 != 0: return False

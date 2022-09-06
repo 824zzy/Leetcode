@@ -1,6 +1,43 @@
 """ https://leetcode.com/problems/basic-calculator-ii/
-TODO: https://leetcode.com/problems/basic-calculator-ii/discuss/750164/Python3-one-stack-and-two-stack-approach
+it is not easy due to the implementation of the stack
+
 """
+from header import *
+
+# maintain two stacks: operation stack and number stack
+class Solution:
+    def calculate(self, s: str) -> int:      
+        s = s.replace(' ', '')
+        i = 0
+        num_stk = []
+        op_stk = []
+        ops = {'+': add, '-': sub, '*': mul, '/': floordiv}
+        while i<len(s):
+            if s[i] in '+-*/':
+                op_stk.append(s[i])
+                i += 1
+            else:
+                tmp = ''
+                while i<len(s) and s[i].isnumeric():
+                    tmp += s[i]
+                    i += 1
+                num_stk.append(tmp)
+                while op_stk and op_stk[-1] in '*/':
+                    y = num_stk.pop()
+                    x = num_stk.pop()
+                    num_stk.append(str(ops[op_stk.pop()](int(x), int(y))))
+        
+        
+        op_stk = op_stk[::-1]
+        num_stk = num_stk[::-1]
+        while op_stk:
+            x = num_stk.pop()
+            y = num_stk.pop()
+            num_stk.append(str(ops[op_stk.pop()](int(x), int(y))))
+        return int(num_stk[0])
+
+
+# solution from others using only one stack
 class Solution:
     def calculate(self, s: str) -> int:
         s = s.replace(' ', '')
@@ -21,10 +58,10 @@ class Solution:
             elif c=='/':
                 n1 = int(stk.pop())
                 n2 = int(s[i+1])
-                stk.append(math.trunc(n1/n2))
+                stk.append(n1//n2)
         return sum(stk)
     
-    
+# another solution from others using only one stack
 class Solution:
     def calculate(self, s: str) -> int:
         op, val = "+", 0 #initialized at "+0"

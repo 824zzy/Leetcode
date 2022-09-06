@@ -1,5 +1,5 @@
-"""L1: https://leetcode.com/problems/bitwise-and-of-numbers-range/
-find the left most same bits of m and n.
+""" https://leetcode.com/problems/bitwise-and-of-numbers-range/
+The common prefix of m and n given the answer to this problem.
 """
 class Solution:
     def rangeBitwiseAnd(self, m: int, n: int) -> int:
