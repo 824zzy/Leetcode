@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/minimum-size-subarray-sum/
 the k is given, just follow the template to solve this problem.
 """
+from header import *
+
 class Solution:
     def minSubArrayLen(self, t: int, A: List[int]) -> int:
         i = 0

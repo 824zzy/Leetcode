@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/minimum-size-subarray-sum/
 prefix sum+binary search to find minimal size
 """
+from header import *
+
 class Solution:
     def minSubArrayLen(self, t: int, A: List[int]) -> int:
         prefix = list(accumulate(A, initial=0))

@@ -2,6 +2,8 @@
 The maximum score we can get when we reached index i is equal to nums[i] + maximum among previous k (or less if we reached boundary) numbers.
 So maintain a monotonic max heap to always keep valid optimal element in heap top
 """
+from header import *
+
 class Solution:
     def maxResult(self, A: List[int], k: int) -> int:
         ans = [0] * len(A)
