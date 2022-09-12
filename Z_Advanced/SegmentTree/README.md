@@ -305,9 +305,8 @@ class SegmentTree:
 
     def _set(self, i, val):
         i += self.n
-        diff = val - self.T[i]
         while i:
-            self.T[i] += diff
+            self.T[i] = max(val, self.T[i])
             i //= 2
             
     def rangeSum(self, l, r):
@@ -316,6 +315,15 @@ class SegmentTree:
         while l<=r:
             if l%2: ans, l = ans+self.T[l], l+1 # if l is right child
             if not r%2: ans, r = ans+self.T[r], r-1 # if r is left child
+            l, r = l//2, r//2
+        return ans
+
+    def rangeMax(self, l, r):
+        ans = 0
+        l, r = l+self.n, r+self.n
+        while l<=r:
+            if l%2: ans, l = max(ans, self.T[l]), l+1 # if l is right child
+            if not r%2: ans, r = max(ans, self.T[r]), r-1 # if r is left child
             l, r = l//2, r//2
         return ans
 ```
