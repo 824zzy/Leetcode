@@ -4,6 +4,8 @@ binary search + rolling hash.
 1. hash function: hs = hs * size + val
 2. update hash: hs -= val * size ** seq_size
 """
+from header import *
+
 class Solution:
     def findLength(self, A: List[int], B: List[int]) -> int:
         def fn(k): 
