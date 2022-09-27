@@ -3,6 +3,8 @@
 
 prefix sum + farmost greater monotonic stack
 """
+from header import *
+
 class Solution:
     def longestWPI(self, A: List[int]) -> int:
         A = [1 if x>8 else -1 for x in A]
