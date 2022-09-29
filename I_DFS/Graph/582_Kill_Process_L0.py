@@ -21,3 +21,21 @@ class Solution:
         
         dfs(kill)
         return self.ans
+
+
+class Solution:
+    def killProcess(self, pid: List[int], ppid: List[int], kill: int) -> List[int]:
+        G = defaultdict(list)
+        for c, p in zip(pid, ppid):
+            G[p].append(c)
+        
+        ans = [kill]
+        def dfs(node, iskill):
+            if node==kill: iskill = True
+            for c in G[node]:
+                if iskill:
+                    ans.append(c)
+                dfs(c, iskill)
+                
+        dfs(0, False)
+        return ans
