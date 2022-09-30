@@ -1,7 +1,8 @@
 """ https://leetcode.com/problems/the-skyline-problem/
 TODO: https://leetcode.com/problems/the-skyline-problem/discuss/812312/Python-Sweep-Line-%2B-SortedList-or-O(nlogn)
 """
-import sortedcontainers
+from header import *
+
 class Solution:
     def getSkyline(self, buildings: List[List[int]]) -> List[List[int]]:
         # to be a skyline point either:

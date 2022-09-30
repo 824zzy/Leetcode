@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/the-skyline-problem/
 https://leetcode.com/problems/the-skyline-problem/discuss/741467/Python3-priority-queue
 """
+from header import *
+
 class Solution:
     def getSkyline(self, A: List[List[int]]) -> List[List[int]]:
         A.append([inf, inf, 0]) # sentinel 
