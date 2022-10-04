@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/path-sum/
 """
+from header import *
+
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], t: int) -> bool:
         def dfs(node, sm):
