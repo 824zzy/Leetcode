@@ -1,3 +1,8 @@
+""" https://leetcode.com/problems/increasing-triplet-subsequence/
+Greedy, a special case in longest increasing subsequence
+"""
+from header import *
+
 class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
         i, j = float('inf'), float('inf')

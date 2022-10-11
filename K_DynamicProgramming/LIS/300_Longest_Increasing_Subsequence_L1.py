@@ -3,6 +3,8 @@ one of the most famous leetcode problem,
 dp[i] denotes length of the longest subsequence from beginning & ending at ith element.
 Time complexity: O(N^2)
 """
+from header import *
+
 # bottom up solution
 class Solution:
     def lengthOfLIS(self, A: List[int]) -> int:

@@ -2,6 +2,8 @@
 use bisect to maintain a increasing list.
 O(NlogN)
 """
+from header import *
+
 class Solution:
     def lengthOfLIS(self, A: List[int]) -> int:
         vals = []
