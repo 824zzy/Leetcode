@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/reverse-vowels-of-a-string/
+""" https://leetcode.com/problems/reverse-vowels-of-a-string/
 basic usage of two pointer
 """
 class Solution:

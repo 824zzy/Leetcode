@@ -1,13 +1,16 @@
 """ https://leetcode.com/problems/subarray-sum-equals-k/
-prefix sum + two sum
+subarray sum template
 """
+from header import *
+
 class Solution:
     def subarraySum(self, A: List[int], k: int) -> int:
-        A = list(accumulate(A, initial=0))
+        seen = Counter([0])
+        prefix = 0
         ans = 0
-        cnt = Counter()
         
         for x in A:
-            ans += cnt[x-k]
-            cnt[x] += 1
+            prefix += x
+            ans += seen[prefix-k]
+            seen[prefix] += 1
         return ans

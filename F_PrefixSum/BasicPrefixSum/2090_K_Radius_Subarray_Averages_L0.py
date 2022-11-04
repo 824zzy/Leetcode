@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/k-radius-subarray-averages/
 use prefix sum array to find range average
 """
+from header import *
+
 class Solution:
     def getAverages(self, A: List[int], k: int) -> List[int]:
         prefix = [0]+list(accumulate(A))

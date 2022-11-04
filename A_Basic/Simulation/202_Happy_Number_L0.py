@@ -1,10 +1,15 @@
 """ https://leetcode.com/problems/happy-number/
+simulation
 """
+
 class Solution:
     def isHappy(self, n: int) -> bool:
-        seen = []
-        while n not in seen:
-            seen.append(n)
-            n = [int(c)**2 for c in str(n)]
-            n = sum(n)
-        return True if 1 in seen else False
+        seen = set()
+        while n!=1 and n not in seen:
+            seen.add(n)
+            sm = 0
+            for c in str(n):
+                c = int(c)
+                sm += c*c
+            n = sm
+        return n==1

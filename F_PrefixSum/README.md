@@ -34,13 +34,13 @@ for i in reversed(range(1, m+1)):
 1. count total number of subarrays: 560, 930, 974
 
 ```py
-cnt = Counter([0])
+seen = Counter([0])
 ans = 0
 prefix = 0
 for n in A:
     prefix = prefix+n # or modulo (prefix + n) % K
-    ans += cnt[prefix-k] # or modulo cnt[prefix]
-    cnt[prefix] += 1
+    ans += seen[prefix-k] # or modulo seen[prefix]
+    seen[prefix] += 1
 return ans
 ```
 

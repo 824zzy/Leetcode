@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/insert-interval/
 insert then merge, the same as 56
 """
+from header import *
+
 class Solution:
     def insert(self, A: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         A.append(newInterval)

@@ -39,7 +39,7 @@ for i in reversed(range(len(A))):
     stk.append(i)
 ```
 
-Two pass to find next smaller elements:
+Two pass to find next greater elements:
 
 ``` py
 # next greater on the right
