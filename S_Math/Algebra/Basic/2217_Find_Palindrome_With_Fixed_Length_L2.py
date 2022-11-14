@@ -1,6 +1,6 @@
 """ https://leetcode.com/problems/find-palindrome-with-fixed-length/
 1. only the first half of palindrome matters to the order
-2. make query palinedrome by add its reversed string
+2. make query palindrome by add its reversed string
 """
 class Solution:
     def kthPalindrome(self, A, l):

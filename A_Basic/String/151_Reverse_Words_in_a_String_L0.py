@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/reverse-prefix-of-word/submissions/
+""" https://leetcode.com/problems/reverse-prefix-of-word/submissions/
 split and reverse the string
 """
 class Solution:

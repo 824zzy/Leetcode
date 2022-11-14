@@ -1,6 +1,38 @@
 """ https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
-find stones in the same row/column and not in the same group, then union them together
+try to union stones in the same row/column while check if they are in the same group, if not, then answer plus one
 """
+from header import *
+
+class Solution:
+    def removeStones(self, A: List[List[int]]) -> int:
+        p = list(range(len(A)))
+        def find(x):
+            if p[x]!=x: p[x] = find(p[x])
+            return p[x]
+
+        def union(x, y):
+            p[find(x)] = find(y)
+
+        row, col = defaultdict(list), defaultdict(list)
+        ans = 0
+        for i, (x, y) in enumerate(A):
+            row[x].append(i)
+            col[y].append(i)
+        for k, v in row.items():
+            for i in range(len(v)-1):
+                if find(v[i])!=find(v[i+1]):
+                    union(v[i], v[i+1])
+                    ans += 1
+
+        for k, v in col.items():
+            for i in range(len(v)-1):
+                if find(v[i])!=find(v[i+1]):
+                    union(v[i], v[i+1])
+                    ans += 1
+        return ans
+
+
+# optional solution using 2 for loop
 class DSU:
     def __init__(self, n):
         self.p = list(range(n))
