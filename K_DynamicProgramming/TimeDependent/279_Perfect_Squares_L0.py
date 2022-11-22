@@ -4,25 +4,25 @@ and update by min(dp[i+j*j], dp[i] + 1);
 
 Note that j**2 is slower than j*j.
 """
+from header import *
+
 class Solution:
     def numSquares(self, n: int) -> int:
         @cache
-        def dfs(x):
-            if x==0: return 0
+        def dp(n):
+            if n==0: return 0
             ans = inf
-            for i in range(1, int(sqrt(x))+1):
-                ans = min(ans, 1+dfs(x-i*i))
+            for x in reversed(range(1, int(sqrt(n))+1)):
+                ans = min(ans, 1+dp(n-x*x))
             return ans
         
-        return dfs(n)
+        return dp(n)
     
 class Solution:
     def numSquares(self, n: int) -> int:
-        dp = [float('inf')] * (n+1)
+        dp = [inf] * (n+1)
         dp[0] = 0
-        for i in range(n+1):
-            j = 1
-            while i+j*j <= n:
-                dp[i+j*j] = min(dp[i+j*j], dp[i] + 1);
-                j += 1
+        for i in range(1, n+1):
+            for x in range(1, int(sqrt(i))+1):
+                dp[i] = min(dp[i], 1+dp[i-x*x])
         return dp[-1]
