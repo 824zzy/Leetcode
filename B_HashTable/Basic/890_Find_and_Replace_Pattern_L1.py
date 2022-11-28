@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/find-and-replace-pattern/
 use two hash table to check if their mapping is the same
 """
+from header import *
+
 class Solution:
     def findAndReplacePattern(self, words: List[str], P: str) -> List[str]:
         ans = []

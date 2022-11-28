@@ -1,7 +1,9 @@
 """ https://leetcode.com/problems/arithmetic-slices/submissions/
 For each x in A, count it has how many continuously arithmetic slices
-dp[i] means how many arithemetic slices till nums[i]
+dp[i] means how many arithmetic slices till nums[i]
 """
+from header import *
+
 # top down
 class Solution:
     def numberOfArithmeticSlices(self, A: List[int]) -> int:

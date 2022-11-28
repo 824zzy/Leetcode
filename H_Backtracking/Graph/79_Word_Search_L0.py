@@ -1,5 +1,8 @@
-""" L1: renew type dfs
+""" https://leetcode.com/problems/word-search/
+a regular backtracking problem
 """
+from header import *
+
 class Solution:
     def exist(self, A: List[List[str]], word: str) -> bool:
         D = [(0, 1), (0, -1), (1, 0), (-1, 0)]

@@ -1,3 +1,6 @@
+"""
+"""
+from header import *
 class Solution:
     def findLengthOfLCIS(self, nums: List[int]) -> int:
         if not nums:
