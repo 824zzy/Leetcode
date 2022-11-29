@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/insert-delete-getrandom-o1/
-TODO: solve it again
 """
+from header import *
+
 class RandomizedSet:
 
     def __init__(self):
@@ -17,7 +18,6 @@ class RandomizedSet:
         if val not in self.M: return False
         idx = self.M[val]
         self.M[self.V[-1]] = idx
-        
         self.V[idx] = self.V[-1]
         self.V.pop()
         return True

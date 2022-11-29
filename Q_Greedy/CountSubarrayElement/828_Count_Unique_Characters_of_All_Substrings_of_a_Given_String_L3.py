@@ -1,5 +1,6 @@
 """ https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/
-Iterative element instead of the whole array.
+Iterate from A to Z instead of the array elements.
+For each character, count how many times it appears in the unique character strings.
 
 1. From A to Z, find all the indexes of every characters
 2. Given ...XXXA[XXAXX]AXX.., the answer of j should be (A[j]-A[i])*(A[k]-A[j])
