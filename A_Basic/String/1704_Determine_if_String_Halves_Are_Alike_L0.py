@@ -1,9 +1,7 @@
+""" https://leetcode.com/problems/determine-if-string-halves-are-alike/description/
+"""
 class Solution:
     def halvesAreAlike(self, s: str) -> bool:
-        a, b = s[:len(s)/2], s[len(s)/2:]
-        V = set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
-        cnt_a, cnt_b = 0, 0
-        for i in range(len(a)):
-            if a[i] in V: cnt_a += 1
-            if b[i] in V: cnt_b += 1
-        return cnt_a==cnt_b
+        a = s[:len(s)//2]
+        b = s[len(s)//2:]
+        return sum(a.count(c) for c in 'aeiouAEIOU')==sum(b.count(c) for c in 'aeiouAEIOU')
