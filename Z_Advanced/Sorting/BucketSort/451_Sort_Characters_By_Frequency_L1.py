@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/sort-characters-by-frequency/
 the same as 347
 """
+from header import *
+
 class Solution:
     def frequencySort(self, s: str) -> str:
         cnt = Counter(s)

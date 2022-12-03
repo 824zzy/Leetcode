@@ -3,6 +3,8 @@
 2. use seen to record the first occurrence of prefix
 3. if a prefix sum has appeared before, it indicates that a piece of subarray sums to 0.
 """
+from header import *
+
 class Solution:
     def findMaxLength(self, A: List[int]) -> int:
         seen = {0: -1}
