@@ -15,6 +15,18 @@ class DSU:
     def union(self, x, y):
         self.p[self.find(x)] = self.find(y)
 
+# optional implementation
+A = list(range(n+1))
+def find(x):
+    if A[x]!=x: A[x] = find(A[x])
+    return A[x]
+
+def union(x, y):
+    A[find(x)] = find(y)
+
+for x, y, v in roads:
+    union(x, y)
+
 dsu = DSU(`length`)
 for i in range(n):
     `Condition`

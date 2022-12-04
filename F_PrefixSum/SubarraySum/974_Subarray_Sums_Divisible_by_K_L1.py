@@ -2,6 +2,8 @@
 1. compute prefix sum with modulo
 2. if a prefix is already seen, that means **all the subarray that it represents can divisible by k**.
 """
+from header import *
+
 # online solution
 class Solution:
     def subarraysDivByK(self, A: List[int], k: int) -> int:
