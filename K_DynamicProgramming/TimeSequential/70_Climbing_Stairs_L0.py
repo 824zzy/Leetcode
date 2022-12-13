@@ -1,20 +1,23 @@
 """ https://leetcode.com/problems/climbing-stairs/
 dp[i-1] + dp[i-2]
 """
+from header import *
+
 class Solution:
     def climbStairs(self, n: int) -> int:
-        if n == 1: return 1
-        dp = [0] * n
-        dp[0], dp[1] = 1, 2
-        for i in range(2, n):
+        dp = [0] * 46
+        dp[1], dp[2] = 1, 2
+        for i in range(3, n+1):
             dp[i] = dp[i-1] + dp[i-2]
-        return dp[-1]
+        return dp[n]
 
 # top down solution
 class Solution:
     def climbStairs(self, n: int) -> int:
         @cache
-        def dfs(idx):
-            if idx<2: return 1
-            return dfs(idx-1)+dfs(idx-2)
-        return dfs(n)
+        def dp(i):
+            if i==2: return 2
+            if i==1: return 1
+            return dp(i-1)+dp(i-2)
+        
+        return dp(n)
