@@ -1,21 +1,22 @@
 """ https://leetcode.com/problems/house-robber/
 max(dp[i-1], A[i-1]+dp[i-2])
 """
+from header import *
+
 # top down
 class Solution:
     def rob(self, A: List[int]) -> int:
         @cache
-        def dfs(i):
-            if i<0: return 0
-            return max(dfs(i-2)+A[i], dfs(i-1))
+        def dp(i):
+            if i>=len(A): return 0
+            return max(dp(i+1), A[i]+dp(i+2))
         
-        return dfs(len(A)-1)
+        return dp(0)
     
 # bottom up
 class Solution:
     def rob(self, A: List[int]) -> int:
-        dp = [0] * (len(A)+1)
-        dp[1] = A[0]
-        for i in range(2, len(A)+1):
-            dp[i] = max(dp[i-1], A[i-1]+dp[i-2])
-        return dp[-1]
+        dp = [0]*(len(A)+2)
+        for i in reversed(range(len(A))):
+            dp[i] = max(dp[i+1], A[i]+dp[i+2])
+        return dp[0]
