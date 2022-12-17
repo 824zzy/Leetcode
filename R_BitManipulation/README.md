@@ -54,8 +54,13 @@ for mask in range(1 << n):
     for i in range(n):
         if mask & 1<<i :
             `mask ^ 1<<i`
-    ans.append(seq)
-return ans 
+
+@cache
+def dp(mask):
+    # define exit condition
+    for j in range(len(B)):
+        if mask&(1<<j):
+            `mask^(1<<j)`
 ```
 
 ## Reference

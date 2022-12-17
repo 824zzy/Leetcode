@@ -2,6 +2,8 @@
 execute expressions by eval or operators
 Time: O(n) 
 """
+from header import *
+
 class Solution:
     def evalRPN(self, A: List[str]) -> int:
         # operators.add etc.
