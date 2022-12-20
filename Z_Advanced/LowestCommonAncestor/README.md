@@ -1,4 +1,16 @@
-# Binary Lifting
+# Lowest common ancestor
+
+**LCA template**:
+
+``` py
+def lca(node): 
+    """Return lowest common ancestor of start and dest nodes."""
+    if not node or node.val in (startValue , destValue): return node 
+    left, right = lca(node.left), lca(node.right)
+    return node if left and right else left or right
+```
+
+## Binary Lifting
 
 Binary Lifting is a technique used to find the k-th ancestor of any node in a tree in O(logn).
 This also leads to a faster algorithm in finding the lowest common ancestor (LCA) between two nodes in a tree.

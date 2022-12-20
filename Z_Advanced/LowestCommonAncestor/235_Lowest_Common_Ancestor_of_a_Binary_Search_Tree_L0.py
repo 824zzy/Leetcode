@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 check node value along with traverse BST tree
 """
+from header import *
+
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         def dfs(node):

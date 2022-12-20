@@ -1,14 +1,15 @@
 """ https://leetcode.com/problems/daily-temperatures/submissions/
 use monotonic decreasing stack to keep track of first temperature larger than stack top element.
 """
+from header import *
+
 class Solution:
     def dailyTemperatures(self, A: List[int]) -> List[int]:
+        R = [0]*len(A)
         stk = []
-        ans = [0]*len(A)
-        
         for i in range(len(A)):
             while stk and A[stk[-1]]<A[i]:
-                ii = stk.pop()
-                ans[ii] = i-ii
+                pre = stk.pop()
+                R[pre] = i-pre
             stk.append(i)
-        return ans
+        return R

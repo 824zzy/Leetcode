@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/validate-binary-search-tree/
 dfs with upper and lower bounds
 """
+from header import *
+
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         def dfs(node, l, r):
