@@ -4,6 +4,8 @@ classical bipartite problem:
 1. traverse the graph by bfs
 2. check if any node has painted the same color
 """
+from header import *
+
 class Solution:
     def possibleBipartition(self, n: int, dislikes: List[List[int]]) -> bool:
         G = defaultdict(list)
@@ -12,9 +14,15 @@ class Solution:
             G[j].append(i)
         
         seen = {}
-        def dfs(i, color):
-            if i in seen: return color*seen[i]>0
-            seen[i] = color
-            return all(dfs(j, -color) for j in G[i])
         
-        return all(dfs(i, 1) for i in range(1, n+1) if i not in seen)
+        for i in range(len(G)):
+            if i not in seen:
+                Q = [(i, 1)]
+                while Q:
+                    i, color = Q.pop(0)
+                    for j in G[i]:
+                        if j not in seen:
+                            seen[j] = -color
+                            Q.append((j, -color))
+                        elif seen[j]*color>0: return False
+        return True
