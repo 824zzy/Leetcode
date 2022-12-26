@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/search-insert-position/
-note that the answer can be len(A)
+binary search template
 """
+from header import *
+
 class Solution:
     def searchInsert(self, A: List[int], target: int) -> int:
         l, r = 0, len(A)

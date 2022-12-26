@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/search-a-2d-matrix/
 apply binary search on 2D matrix by finding row and col indexes by divmod
 """
+from header import *
+
 class Solution:
     def searchMatrix(self, A: List[List[int]], t: int) -> bool:
         l, r = 0, len(A)*len(A[0])

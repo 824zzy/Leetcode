@@ -1,8 +1,13 @@
 # Binary Search
 
-## Basic Problem
+Binary search algorithm can be applied iff the array has **monotonicity**。
 
-Template:
+A few signal that indicates a problem is a binary search problem:
+
+1. The problem asks for the mini-max or max-mini
+2. The array is sorted
+
+## Basic Template
 
 ``` py
 def binary_search(self, A: List[int], t: int) -> int:
@@ -14,13 +19,7 @@ def binary_search(self, A: List[int], t: int) -> int:
       return l
 ```
 
-## Bisect Problem
-
-1. Longest Increasing Subsequence: 300, 334
-
-## Sentinel Problem
-
-## Bisec Module
+## Bisect Module
 
 1. insort: `insort(list, num)`, `insort_left(list, num)` and `insort_right(list, num)`: Insert num in a list. If list has repeat value, insort_left and insort_right will insert num in different position.
 

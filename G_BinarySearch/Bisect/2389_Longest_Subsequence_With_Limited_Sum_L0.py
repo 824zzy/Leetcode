@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/longest-subsequence-with-limited-sum/
-the maximum size of a subsequence is the index of query in prefix sum array, which can be easily found by bisect
+greedily sort + prefix sum + binary search
 """
 from header import *
 

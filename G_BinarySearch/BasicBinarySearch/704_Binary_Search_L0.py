@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/binary-search/
 """
+from header import *
+
 class Solution:
     def search(self, A: List[int], t: int) -> int:
         l, r = 0, len(A) # r = len(A) for corner case ([1] 1)

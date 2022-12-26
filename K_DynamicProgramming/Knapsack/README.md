@@ -2,6 +2,8 @@
 
 There are two variants of knapsack problem, 0/1 knapsack problem and unbounded knapsack problem.
 
+The significant feature of knapsack problem is that the capacity of the knapsack is small, i.e. <=1000.
+
 ## 0/1 knapsack problem
 
 In the case of 0/1 knapsack problem, we can either take an item or not. Thus in the code below, it is essentially a variant of time sequential template.
