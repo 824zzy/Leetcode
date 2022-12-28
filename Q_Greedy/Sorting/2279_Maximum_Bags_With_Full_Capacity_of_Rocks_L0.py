@@ -1,15 +1,20 @@
 """ https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/
 sort the capacity and rocks by difference, then greedily assign additional rocks
 """
+from header import *
+
 class Solution:
-    def maximumBags(self, C: List[int], R: List[int], r: int) -> int:
-        A = list(zip(C, R))
-        A.sort(key=lambda x: x[0]-x[1])
+    def maximumBags(self, C: List[int], R: List[int], x: int) -> int:
+        A = [0] * len(C)
+        for i, (c, r) in enumerate(zip(C, R)):
+            A[i] = c-r
+        A.sort()
         
         ans = 0
         for i in range(len(A)):
-            if A[i][0]-A[i][1]<=r:
-                r -= A[i][0]-A[i][1]
+            if x-A[i]>=0: 
                 ans += 1
-            else: return ans
+                x -= A[i]
+            else:
+                break
         return ans
