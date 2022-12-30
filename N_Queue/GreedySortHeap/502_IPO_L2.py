@@ -2,6 +2,8 @@
 1. sort the profits and capital
 2. use priority queue to greedily finding top k maximum profit
 """
+from header import *
+
 class Solution:
     def findMaximizedCapital(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
         A = sorted(list(zip(capital, profits)))

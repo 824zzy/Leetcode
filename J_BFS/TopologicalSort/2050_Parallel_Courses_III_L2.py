@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/parallel-courses-iii/
-topological sort to find earlist to finish course u and earlist to start course v
+topological sort to find earliest to finish course u and earliest to start course v
 """
+from header import *
+
 class Solution:
     def minimumTime(self, n: int, relations: List[List[int]], time: List[int]) -> int:
         e = defaultdict(list)
