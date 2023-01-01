@@ -1,6 +1,8 @@
-""" L1: https://leetcode.com/problems/unique-paths-iii/
-use backtracking to find all valid paths
+""" https://leetcode.com/problems/unique-paths-iii/
+implementation: use backtracking to find all valid paths
 """
+from header import *
+
 class Solution:
     def uniquePathsIII(self, A: List[List[int]]) -> int:
         M, N = len(A), len(A[0])
