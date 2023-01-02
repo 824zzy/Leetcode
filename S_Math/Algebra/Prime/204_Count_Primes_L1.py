@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/count-primes/
 Template: Sieve of Eratosthenes
 """
+from header import *
+
 class Solution:
     def countPrimes(self, n: int) -> int:
         if n<2: return 0

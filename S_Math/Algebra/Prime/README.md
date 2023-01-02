@@ -1,4 +1,22 @@
-# Sieve of Eratosthenes
+# Prime Number
+
+## Large Prime Optimization
+
+**A number can have at most one prime factor that is greater than its square root.** E.g.: 2521
+
+``` py
+# find all prime factors less than sqrt(max(nums))
+ans = set()
+for p in primes:
+    if n%p == 0:
+        ans.add(p)
+        while n%p == 0:
+            n //= p
+# find a large prime
+if n!=1: ans.add(n)
+```
+
+## Sieve of Eratosthenes
 
 In mathematics, the sieve of Eratosthenes is an ancient algorithm for finding all prime numbers up to any given limit.
 It works by iteratively marking multiples of prime factors non-prime:
