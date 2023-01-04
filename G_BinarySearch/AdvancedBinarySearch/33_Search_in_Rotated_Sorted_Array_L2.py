@@ -15,7 +15,7 @@ class Solution:
                 if A[m]<t<=A[r]: return False
                 else: return True
             
-        l, r = 0, len(A)-1
+        l, r = 0, len(A)
         
         while l<r:
             m = (l+r)//2
