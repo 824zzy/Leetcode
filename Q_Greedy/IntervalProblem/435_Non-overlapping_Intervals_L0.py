@@ -3,6 +3,8 @@ the same as 452
 use ma to greedily keep track of maximum end value
 or use an array to greedily find legit meeting end time
 """
+from header import *
+
 class Solution:
     def eraseOverlapIntervals(self, A: List[List[int]]) -> int:
         A.sort(key=lambda x: x[1])
