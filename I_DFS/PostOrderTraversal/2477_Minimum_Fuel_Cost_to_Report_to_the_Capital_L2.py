@@ -5,6 +5,11 @@ from header import *
 # post order traversal
 class Solution:
     def minimumFuelCost(self, roads: List[List[int]], seats: int) -> int:
+        graph = [[] for _ in range(len(roads)+1)]
+        for u, v in roads: 
+            graph[u].append(v)
+            graph[v].append(u)
+            
         self.ans = 0 
         def dfs(u, p): 
             ppl = 0 

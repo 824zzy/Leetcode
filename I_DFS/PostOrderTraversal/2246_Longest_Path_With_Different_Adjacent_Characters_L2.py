@@ -2,6 +2,8 @@
 1. use dfs to iterate on all the nodes
 2. the 2 longest path can make up the longest path in subtree of node
 """
+from header import *
+
 class Solution:
     def longestPath(self, P: List[int], s: str) -> int:
         G = defaultdict(list)

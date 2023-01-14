@@ -7,11 +7,17 @@ For a variance of Kadane's algorithm, it is always necessary to consider to two 
 ## Template
 
 ``` py
-class Solution:
-    def maxSubArray(self, A: List[int]) -> int:
-        ans, cur = -inf, 0
-        for x in A:
-            cur = max(x, cur+x)
-            ans = max(ans, cur)
-        return ans
+# bottom up template
+ans, cur = -inf, 0
+for x in A:
+    cur = max(x, cur+x)
+    ans = max(ans, cur)
+
+# top down template
+@cache
+def dp(i):
+    if i==len(A): return 0
+    return max(dp(i+1)+A[i], A[i])
+
+return max(dp(i) for i in range(len(A)))
 ```
