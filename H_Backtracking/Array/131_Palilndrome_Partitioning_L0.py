@@ -1,5 +1,8 @@
 """ https://leetcode.com/problems/palindrome-partitioning/
+since s.length<=16, just backtracking is enough
 """
+from header import *
+
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
         ans = []

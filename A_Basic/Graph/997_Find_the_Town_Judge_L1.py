@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/find-the-town-judge/
 find the node that has in-degree=n-1 and out-degree=0
 """
+from header import *
+
 class Solution:
     def findJudge(self, n: int, A: List[List[int]]) -> int:
         inD = [0] * (n+1)
