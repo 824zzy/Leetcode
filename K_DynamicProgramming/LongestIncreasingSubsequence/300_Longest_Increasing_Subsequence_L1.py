@@ -21,7 +21,6 @@ class Solution:
     def lengthOfLIS(self, A: List[int]) -> int:
         @cache
         def dp(i):
-            if i==len(A): return 0
             ans = 1
             for j in range(i):
                 if A[j]<A[i]:

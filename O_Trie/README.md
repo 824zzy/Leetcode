@@ -43,3 +43,14 @@ class Trie:
             node = node[c]
             if '#' in node: return node['#']    
 ```
+
+## Simple version for contest
+
+``` py
+trie = {}
+for word in words:
+    node = trie
+    for c in word:
+        node = node.setdefault(c, {})
+    node['#'] = word
+```

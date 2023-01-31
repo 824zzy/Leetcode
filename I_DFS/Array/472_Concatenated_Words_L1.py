@@ -1,8 +1,11 @@
 """ https://leetcode.com/problems/concatenated-words/
-Consider prefix set as a trie, we scan each word by length order then use dfs to check if the word can be concatenated by prefix set
+Consider prefix set as a trie, we scan each word by length order 
+then use dfs to check if the word can be concatenated by prefix set
 
 Time complexity: O(n)
 """
+from header import *
+
 class Solution:
     def findAllConcatenatedWordsInADict(self, A: List[str]) -> List[str]:
         def dfs(x):

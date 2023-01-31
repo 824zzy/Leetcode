@@ -1,15 +1,17 @@
 """ https://leetcode.com/problems/n-th-tribonacci-number/
 dp[i] = dp[i-1]+dp[i-2]+dp[i-3]
 """
+from header import *
+
 class Solution:
     def tribonacci(self, n: int) -> int:
         @cache
-        def dfs(n):
+        def dp(n):
             if n==0: return 0
             elif n==1: return 1
             elif n==2: return 1
-            return dfs(n-1)+dfs(n-2)+dfs(n-3)
-        return dfs(n)
+            return dp(n-1)+dp(n-2)+dp(n-3)
+        return dp(n)
 
         
 class Solution:
