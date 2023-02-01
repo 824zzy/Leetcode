@@ -1,6 +1,6 @@
 """ https://leetcode.com/problems/break-a-palindrome/
-greedily find non-'a' character in the first half of the string, and replace it with 'a'.
-if no such character exists, replace the last character with 'b'.
+1. greedily find non-'a' character in the first half of the string, and replace it with 'a'.
+2. if no such character exists, replace the last character with 'b'.
 """
 class Solution:
     def breakPalindrome(self, P: str) -> str:

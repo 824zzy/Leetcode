@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/greatest-common-divisor-of-strings/
 find gcd of two string's length
 """
+from header import *
+
 class Solution:
     def gcdOfStrings(self, A: str, B: str) -> str:
         if A+B!=B+A: return ''
@@ -9,16 +11,9 @@ class Solution:
 
 # or brute force
 class Solution:
-    def gcdOfStrings(self, A: str, B: str) -> str:
-        cand = set()
-        for i in reversed(range(len(A))):
-            if len(A)%(i+1)==0:
-                if A[:i+1] * (len(A)//(i+1))==A:
-                    cand.add(A[:i+1])
-                    
-        
-        for i in reversed(range(len(B))):
-            if len(B)%(i+1)==0:
-                if B[:i+1] * (len(B)//(i+1))==B and B[:i+1] in cand:
-                    return B[:i+1]
+    def gcdOfStrings(self, s1: str, s2: str) -> str:
+        for i in reversed(range(min(len(s1), len(s2)))):
+            if len(s1)%(i+1)==0 and len(s2)%(i+1)==0:
+                if s1[:i+1]*(len(s1)//(i+1))==s1 and s1[:i+1]*(len(s2)//(i+1))==s2:
+                    return s1[:i+1]
         return ''
