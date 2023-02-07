@@ -3,6 +3,8 @@ binary search + math(inclusive-exclusive principle)
 
 use a*b//gcd(a, b) to find the joint set.
 """
+from header import *
+
 class Solution:
     def nthMagicalNumber(self, n: int, a: int, b: int) -> int:
         ab = a*b//gcd(a, b)
