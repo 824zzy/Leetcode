@@ -5,9 +5,12 @@ from header import *
 
 class Solution:
     def jump(self, A: List[int]) -> int:
-        ans = pre = cur = 0
-        for i, x in enumerate(A):
-            if pre<i:
-                ans, pre = ans+1, cur
-            cur = max(cur, i+x)
+        right_most = 0
+        ans = 0
+        mx = 0
+        for i in range(len(A)):
+            if i>right_most:
+                right_most = mx
+                ans += 1
+            mx = max(mx, i+A[i])
         return ans
