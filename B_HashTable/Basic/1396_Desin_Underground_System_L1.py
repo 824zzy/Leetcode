@@ -4,6 +4,8 @@ use two hash tables
 1. the first hash table is for saving the check-in time for a customer
 2. the second hash table is for updating the prefix time sum between two stations.
 """
+from header import *
+
 class UndergroundSystem:
     def __init__(self):
         self.mp = {}
