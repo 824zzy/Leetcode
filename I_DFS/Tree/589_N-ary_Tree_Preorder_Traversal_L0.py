@@ -1,4 +1,7 @@
-# Trivial recursive solution
+""" https://leetcode.com/problems/n-ary-tree-preorder-traversal/
+"""
+from header import *
+
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
         self.ans = []

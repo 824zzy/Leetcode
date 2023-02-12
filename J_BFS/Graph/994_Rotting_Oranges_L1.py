@@ -1,7 +1,9 @@
-""" L0: https://leetcode.com/problems/rotting-oranges/
+""" https://leetcode.com/problems/rotting-oranges/
 count fresh oranges to impossible case.
 count steps by bfs, no need to use seen
 """
+from header import *
+
 class Solution:
     def orangesRotting(self, A: List[List[int]]) -> int:
         M, N = len(A), len(A[0])

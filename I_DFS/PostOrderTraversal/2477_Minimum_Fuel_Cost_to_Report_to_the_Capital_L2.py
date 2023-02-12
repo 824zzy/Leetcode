@@ -1,53 +1,28 @@
 """ https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/
+Post order traversal along with the fuel and rep count.
+Note that we need to record the answer in the root node.
 """
 from header import *
 
 # post order traversal
 class Solution:
     def minimumFuelCost(self, roads: List[List[int]], seats: int) -> int:
-        graph = [[] for _ in range(len(roads)+1)]
-        for u, v in roads: 
-            graph[u].append(v)
-            graph[v].append(u)
-            
-        self.ans = 0 
-        def dfs(u, p): 
-            ppl = 0 
-            for v in graph[u]: 
-                if v != p: ppl += dfs(v, u)
-            ppl += 1
-            if u: 
-                self.ans += ceil(ppl/seats)
-            return ppl 
-        
-        dfs(0, -1)
-        return self.ans 
-
-
-# general form
-class Solution:
-    def minimumFuelCost(self, roads: List[List[int]], seats: int) -> int:
-        if not roads: return 0
-
         G = defaultdict(list)
-        for u, v in roads: 
-            G[u].append(v)
-            G[v].append(u)
-
-        cost = [0]*len(G)
-        seen = [False]*len(G)
-        seen[0] = True
-        def dfs(i):
-            if len(G[i])==1 and i!=0: 
-                cost[i] = 1
-                return 1
-            ppl = 1
+        for i, j in roads:
+            G[i].append(j)
+            G[j].append(i)
+        self.ans = 0
+        
+        def dfs(i, p):
+            fuel = 0
+            rep = 1
             for j in G[i]:
-                if not seen[j]:
-                    seen[j] = True
-                    ppl += dfs(j)
-            cost[i] = ceil(ppl/seats)
-            return ppl
-        dfs(0)
-        cost[0] = 0
-        return sum(cost)
+                if j!=p:
+                    _rep, _fuel = dfs(j, i)
+                    fuel += _fuel
+                    rep += _rep
+            if i==0: self.ans = fuel
+            return rep, fuel+ceil(rep/seats)
+        
+        dfs(0, None)
+        return self.ans
