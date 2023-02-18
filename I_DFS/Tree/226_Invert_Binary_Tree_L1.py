@@ -1,6 +1,8 @@
-""" L1: https://leetcode.com/problems/invert-binary-tree/
-famous question
+""" https://leetcode.com/problems/invert-binary-tree/
+very famous question
 """
+from header import *
+
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         def dfs(node):
