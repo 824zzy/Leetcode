@@ -1,8 +1,10 @@
 """ https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 """
+from header import *
+
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
-        self.t = collections.defaultdict(list)
+        self.t = defaultdict(list)
         def dfs(node, d):
             if not node: return
             self.t[d].append(node.val)

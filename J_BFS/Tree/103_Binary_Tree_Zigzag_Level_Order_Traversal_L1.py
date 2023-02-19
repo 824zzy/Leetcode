@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 the same as 102, but use a reverse flag to control zigzag shape
 """
+from header import *
+
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         if not root: return []
