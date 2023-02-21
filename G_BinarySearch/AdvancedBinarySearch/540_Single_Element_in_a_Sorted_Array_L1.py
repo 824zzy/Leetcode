@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/single-element-in-a-sorted-array/
 for m, find if there enough pairs till m by checking previous/next element
 """
+from header import *
+
 class Solution:
     def singleNonDuplicate(self, A: List[int]) -> int:
         def enough(m):
