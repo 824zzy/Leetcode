@@ -3,6 +3,8 @@ Delete: dfs(i+1, j) + 1
 Insert: dfs(i, j+1) + 1
 Replace: dfs(i+1, j+1) + 1
 """
+from header import *
+
 class Solution:
     def minDistance(self, A: str, B: str) -> int:
         @cache
