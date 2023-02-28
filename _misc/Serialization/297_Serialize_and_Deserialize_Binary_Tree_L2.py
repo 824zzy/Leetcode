@@ -2,6 +2,8 @@
 pre-order traversal of the tree to serialize and deserialize.
 Note that serialization/deserialization is commonly used in other problems
 """
+from header import *
+
 class Codec:
     def serialize(self, node):
         if not node: return '#'
