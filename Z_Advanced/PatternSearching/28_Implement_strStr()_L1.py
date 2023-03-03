@@ -20,3 +20,10 @@ class Solution:
             if s[j]==p[i]: i += 1
             if i==len(p): return j-len(p)+1
         return -1
+    
+
+# use index
+class Solution:
+    def strStr(self, A: str, B: str) -> int:
+        if B in A: return A.index(B)
+        else: return -1
