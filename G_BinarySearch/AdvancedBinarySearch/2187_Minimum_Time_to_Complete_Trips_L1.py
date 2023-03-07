@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/minimum-time-to-complete-trips/
 binary search to minimum time, note that the upper bound is to use the fastest bus to complete all trips
 """
+from header import *
+
 class Solution:
     def minimumTime(self, A: List[int], T: int) -> int:
         def fn(m):
