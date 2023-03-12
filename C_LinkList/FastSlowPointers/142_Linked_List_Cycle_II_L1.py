@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/linked-list-cycle-ii/
 if find cycle then detect from start
 """
+from header import *
+
 class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if head==None or head.next==None: return None

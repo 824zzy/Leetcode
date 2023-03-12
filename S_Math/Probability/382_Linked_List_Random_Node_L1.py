@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/linked-list-random-node/
 """
+from header import *
+
 # Reservoir Sampling
 class Solution:
 
@@ -17,9 +19,8 @@ class Solution:
             node = node.next
         return ans
     
-# Straightforword
+# straightforward solution
 class Solution:
-
     def __init__(self, head: ListNode):
         self.head = head
         self.val = []

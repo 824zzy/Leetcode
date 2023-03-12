@@ -2,6 +2,8 @@
 find minimal among lists by heap
 note that have to have i in heap otherwise it will cause type error
 """
+from header import *
+
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         pq = [(x.val, i, x) for i,x in enumerate(lists) if x]
