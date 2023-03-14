@@ -2,6 +2,8 @@
 prefix sum + dfs
 use prefix sum to find target subarray through back tracking
 """
+from header import *
+
 # online solution
 class Solution:
     def pathSum(self, root: Optional[TreeNode], t: int) -> int:

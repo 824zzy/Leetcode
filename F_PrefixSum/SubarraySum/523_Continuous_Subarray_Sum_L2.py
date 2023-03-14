@@ -4,6 +4,8 @@ the same as 525 except use prefix modulo
 2. use seen to record the first occurrence of prefix modulo
 3. if a prefix modulo has appeared before, it indicates that a piece of subarray sums is k.
 """
+from header import *
+
 class Solution:
     def checkSubarraySum(self, A: List[int], k: int) -> bool:
         seen = {0: -1}
