@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 """
+from header import *
+
 class Solution:
     def buildTree(self, I: List[int], P: List[int]) -> Optional[TreeNode]:
         def dfs(I, P):

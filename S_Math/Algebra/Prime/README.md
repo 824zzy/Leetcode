@@ -1,5 +1,24 @@
 # Prime Number
 
+
+## Prime Factorization
+
+**A number can be expressed as a product of prime numbers.** E.g.: `2521 = 7 * 11 * 13`
+
+``` py
+ans = set()
+d = 2
+while d*d<=x:
+    if x%d==0:
+        ans.add(d)
+        x //= d
+        while x%d==0:
+            x //= d
+    d += 1
+if x>1:
+    ans.add(x)
+```
+
 ## Large Prime Optimization
 
 **A number can have at most one prime factor that is greater than its square root.** E.g.: 2521

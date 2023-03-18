@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/largest-component-size-by-common-factor/
 math + union find: Sieve of Eratosthenes
 """
+from header import *
+
 class DSU:
     def __init__(self, n):
         self.p = [i for i in range(n)]

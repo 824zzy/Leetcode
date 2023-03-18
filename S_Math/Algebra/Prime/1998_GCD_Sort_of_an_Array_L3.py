@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/gcd-sort-of-an-array/
 union find + sieve of eratosthenes 
 """
+from header import *
+
 class DSU:
     def __init__(self, n):
         self.p = [i for i in range(n)]
