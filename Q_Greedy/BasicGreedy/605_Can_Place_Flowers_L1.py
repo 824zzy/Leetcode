@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/can-place-flowers/
 greedily find legal places by linear scan
 """
+from header import *
+
 class Solution:
     def canPlaceFlowers(self, A: List[int], n: int) -> bool:
         A = [0] + A + [0]

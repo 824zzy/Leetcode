@@ -36,6 +36,12 @@ Row: input size(IS), column: time complexity(TC)
 | O(logn)  | BinarySearch,  BinaryIndexTree|
 | O(1)     | Math                                                                 |
 
+## Trigger keywords
+
+1. Can I sort the array?
+
+- `subset`: backtracking, bitmask
+
 ## Python Basic
 
 ### Operations
