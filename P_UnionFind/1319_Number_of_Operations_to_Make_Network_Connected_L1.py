@@ -1,6 +1,8 @@
-""" L0
+""" https://leetcode.com/problems/number-of-operations-to-make-network-connected/
 Find all strongly connected components
 """
+from header import *
+
 class DSU:
     def __init__(self, n):
         self.p = [i for i in range(n)]
