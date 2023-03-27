@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/longest-cycle-in-a-graph/
 copy from dafu: https://leetcode.com/problems/longest-cycle-in-a-graph/discuss/2357799/Python-short-cycle-detection-code-learned-from-problem-1192
 """
+from header import *
+
 class Solution:
     def longestCycle(self, E: List[int]) -> int:
         n = len(E)

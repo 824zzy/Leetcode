@@ -2,6 +2,8 @@
 1. use topological sort to remove non-cycle nodes
 2. go over unseen nodes to count length of the cycles
 """
+from header import *
+
 class Solution:
     def longestCycle(self, E: List[int]) -> int:
         n = len(E)

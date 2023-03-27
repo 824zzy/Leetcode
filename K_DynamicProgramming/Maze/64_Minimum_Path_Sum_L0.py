@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/minimum-path-sum/submissions/
 dp[i][j] = A[i][j] + min(dp[i-1][j], dp[i][j-1])
 """
+from header import *
+
 # top down solution
 class Solution:
     def minPathSum(self, A: List[List[int]]) -> int:
