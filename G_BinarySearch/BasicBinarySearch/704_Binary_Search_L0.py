@@ -1,4 +1,5 @@
 """ https://leetcode.com/problems/binary-search/
+binary search template
 """
 from header import *
 

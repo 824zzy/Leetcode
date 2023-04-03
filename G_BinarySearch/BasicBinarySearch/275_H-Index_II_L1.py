@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/h-index-ii/
 """
+from header import *
+
 class Solution:
     def hIndex(self, A: List[int]) -> int:
         l, r = 0, len(A)
