@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/number-of-closed-islands/
 opposite 1020
 """
+from header import *
+
 class Solution:
     def closedIsland(self, A: List[List[int]]) -> int:
         D = [(0, 1), (0, -1), (1, 0), (-1, 0)]

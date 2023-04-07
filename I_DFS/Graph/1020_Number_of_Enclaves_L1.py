@@ -2,6 +2,8 @@
 1. start from edge cells and go inwards by dfs and label them as 0
 2. find the remained 1's cells
 """
+from header import *
+
 class Solution:
     def numEnclaves(self, A: List[List[int]]) -> int:
         D = [(0, 1), (0, -1), (1, 0), (-1, 0)]
