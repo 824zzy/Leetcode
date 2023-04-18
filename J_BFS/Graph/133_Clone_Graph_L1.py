@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/clone-graph/submissions/
 """
+from header import *
+
 class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
         if not node: return None

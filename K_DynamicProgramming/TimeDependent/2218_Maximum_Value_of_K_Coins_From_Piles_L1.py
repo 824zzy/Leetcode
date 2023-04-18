@@ -1,21 +1,30 @@
 """ https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
-from lee: https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/discuss/1887010/JavaC%2B%2BPython-Top-down-DP-solution
-dp[i,k] means picking k elements from pile[i] to pile[n-1].
-We can pick 0,1,2,3... elements from the current pile[i] one by one.
-It asks for the maximum total value of coins we can have,
-so we need to return max of all the options.
+prefix sum + dp
+
+1. prefix sum for reducing time complexity
+2. use dp to find the max value of k coins from piles
 """
+from header import *
+
 class Solution:
-    def maxValueOfCoins(self, A: List[List[int]], k: int) -> int:    
+    def maxValueOfCoins(self, A: List[List[int]], k: int) -> int:
+        pre_sum = [list(accumulate(x, initial=0)) for x in A]
+        
         @cache
         def dp(i, k):
-            if k==0 or i==len(A): return 0
-            ans = dp(i+1, k)
-            val = 0
-            
-            for j in range(min(len(A[i]), k)):
-                val += A[i][j]
-                ans = max(ans, val+dp(i+1, k-j-1))
+            if k==0 or i==len(A):
+                return 0
+            ans = 0
+            for kk in range(min(len(pre_sum[i]), k+1)):
+                ans = max(ans, pre_sum[i][kk]+dp(i+1, k-kk))
             return ans
-                    
+        
         return dp(0, k)
+                
+                
+"""
+[[1,100,3],[7,8,9]]
+2
+[[100],[100],[100],[100],[100],[100],[1,1,1,1,1,1,700]]
+7
+"""
