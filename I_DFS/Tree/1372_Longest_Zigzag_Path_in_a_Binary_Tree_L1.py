@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/
-
+post order traversal
 """
+from header import *
+
 class Solution:
     def longestZigZag(self, root: Optional[TreeNode]) -> int:
         self.ans = 0

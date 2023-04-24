@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
 variance of LCS
 """
+from header import *
+
 class Solution:
     def minInsertions(self, s: str) -> int:
         @cache
