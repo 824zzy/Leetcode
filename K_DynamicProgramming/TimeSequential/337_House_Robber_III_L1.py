@@ -2,6 +2,8 @@
 tree + top down dp
 use canRob to control the dp
 """
+from header import *
+
 class Solution:
     def rob(self, root: Optional[TreeNode]) -> int:
         @cache
