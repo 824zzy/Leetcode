@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/add-digits/
-do exactly what is asked
+simulation
 """
+
 class Solution:
     def addDigits(self, n: int) -> int:
         while len(str(n))>1:
