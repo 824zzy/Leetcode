@@ -3,6 +3,8 @@
 2. add edges whose weight less then query's weight to DSU 
 3. check if query's nodes are in the same set a.k.a connected.
 """
+from header import *
+
 class DSU:
     def __init__(self, n):
         self.p = list(range(n))

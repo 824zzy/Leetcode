@@ -3,14 +3,10 @@ use a size-fixed sliding window with size k to count vowels
 """
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
-        ans = 0
-        vowels = 0
-        i = 0
-        
-        for j in range(len(s)):
-            if s[j] in 'aeiou': vowels += 1
-            if j>=k:
-                if s[i] in 'aeiou': vowels -= 1
-                i += 1
-            ans = max(ans, vowels)
+        x = sum(c in 'aeiou' for c in s[:k])
+        ans = x
+        for i in range(k, len(s)):
+            x += (s[i] in 'aeiou')
+            x -= (s[i-k] in 'aeiou')
+            ans = max(ans, x)
         return ans
