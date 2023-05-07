@@ -47,7 +47,7 @@ while pq:
 shortest_paths = [seen.get(i, float("inf")) for i in range(n)]
 ```
 
-### Floyd-Warshall algorithm for All Pairs Shortest Paths
+### Floyd-Warshall Algorithm for All Pairs Shortest Paths
 
 ``` py
 N = len(G)

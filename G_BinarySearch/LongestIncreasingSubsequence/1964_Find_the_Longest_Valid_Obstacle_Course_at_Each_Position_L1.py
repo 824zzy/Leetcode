@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/
 The same as 300.
 """
+from header import *
+
 class Solution:
     def longestObstacleCourseAtEachPosition(self, A: List[int]) -> List[int]:
         vals = []
