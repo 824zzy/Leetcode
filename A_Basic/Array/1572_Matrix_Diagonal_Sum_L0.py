@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/matrix-diagonal-sum/
 sum the diagonal
 """
+from header import *
+
 class Solution:
     def diagonalSum(self, A: List[List[int]]) -> int:
         ans = 0
