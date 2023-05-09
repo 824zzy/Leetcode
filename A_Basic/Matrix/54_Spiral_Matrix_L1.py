@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/spiral-matrix/
 Simulate spiral matrix by changing directions.
 """
+from header import *
+
 class Solution:
     def spiralOrder(self, M: List[List[int]]) -> List[int]:
         A = []
