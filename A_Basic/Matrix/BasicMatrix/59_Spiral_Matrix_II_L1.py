@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/spiral-matrix-ii/
 be careful when change direction
 """
+from header import *
+
 class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
         A = [[0 for _ in range(n)] for _ in range(n)]
