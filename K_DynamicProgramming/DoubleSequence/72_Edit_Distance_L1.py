@@ -8,9 +8,17 @@ from header import *
 class Solution:
     def minDistance(self, A: str, B: str) -> int:
         @cache
-        def dfs(i, j):
-            if i==len(A) or j==len(B): return len(A)+len(B)-i-j
-            if A[i]==B[j]: return dfs(i+1, j+1)
-            return 1+min(dfs(i+1, j), dfs(i, j+1), dfs(i+1, j+1))
-        
-        return dfs(0, 0)
+        def dp(i, j):
+            if i==len(A):
+                return len(B)-j
+            if j==len(B):
+                return len(A)-i
+            if A[i]==B[j]:
+                return dp(i+1, j+1)
+            else:
+                # replace
+                ans = 1+dp(i+1, j+1)
+                # delete/insert
+                ans = min(ans, 1+dp(i+1, j), 1+dp(i, j+1))
+                return ans
+        return dp(0, 0)   

@@ -3,6 +3,8 @@ two solution:
 1. directly find minimum operations to delete characters
 2. find longest common subsequence and indirectly compute the minimum operations
 """
+from header import *
+
 # top down for #1
 class Solution:
     def minDistance(self, A: str, B: str) -> int:
