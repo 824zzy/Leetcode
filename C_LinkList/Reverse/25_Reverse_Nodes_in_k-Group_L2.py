@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/reverse-nodes-in-k-group/
 TODO: add in-place, O(1) space complexity solution
 """
+from header import *
+
 class Solution:
     def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         node = head

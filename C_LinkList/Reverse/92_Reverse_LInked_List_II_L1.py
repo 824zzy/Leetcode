@@ -3,6 +3,8 @@
 2. reverse nodes in the middle
 3. reconnect the reversed nodes
 """
+from header import *
+
 class Solution:
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         ans = node = ListNode(next=head)
