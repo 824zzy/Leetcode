@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/
 fast-slow pointers to find middle point and reverse the first half 
 """
+from header import *
+
 # O(1) space
 class Solution:
     def pairSum(self, head: Optional[ListNode]) -> int:
