@@ -1,7 +1,9 @@
 """ https://leetcode.com/problems/top-k-frequent-elements/
 1. apply quick select on element frequencies to find lower bound of top k frequent elements.
 2. use Counter to find valid keys.
-"""    
+"""
+from header import *
+
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         cnt = Counter(nums)
@@ -28,3 +30,10 @@ class Solution:
             else: r = m
         
         return [key for key, val in cnt.items() if val>=A[m]]
+
+
+# hash table solution
+class Solution:
+    def topKFrequent(self, A: List[int], k: int) -> List[int]:
+        cnt = Counter(A)
+        return [x for x, _ in sorted(cnt.items(), key=lambda x: -x[1])][:k]

@@ -1,9 +1,10 @@
-""" L2
-lower<=sorted_sum[i]-sorted_sum[j]<=upper
+""" https://leetcode.com/problems/count-of-range-sum/
+lower<=presum[j]-presum[i]<=upper
 ==>
-sorted_sum[i]-upper<=sorted_sum[j]
-sorted_sum[i]-lower>=sorted_sum[j]
+presum[j]-upper<=presum[i]<=presum[j]-lower
 """
+from header import *
+
 class Solution:
     def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
         count, s = 0, 0
