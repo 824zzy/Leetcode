@@ -1,17 +1,23 @@
 """ https://leetcode.com/problems/stone-game-iii/
-minimax
+minimax problem, dp(i) is the max gain of the first player when starting at i
 """
+from header import *
+
 class Solution:
     def stoneGameIII(self, A: List[int]) -> str:
+        A = list(accumulate(A, initial=0))
+        
         @cache
         def dp(i):
             if i>=len(A): return 0
             ans = -inf
-            for j in (1, 2, 3):
-                ans = max(ans, sum(A[i:i+j])-dp(i+j))
+            for j in 1,2,3:
+                ans = max(ans, A[min(i+j, len(A)-1)]-A[i]-dp(i+j))
             return ans
         
-        ans = dp(0)
-        if ans>0: return "Alice"
-        elif ans<0: return "Bob"
-        else: return "Tie"
+        if dp(0)>0:
+            return "Alice"
+        elif dp(0)<0:
+            return "Bob"
+        else:
+            return "Tie"
