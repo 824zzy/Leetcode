@@ -29,3 +29,27 @@ class MyHashMap:
         hs = self.mul_hash(key)
         for i, (k, v) in enumerate(self.A[hs]):
             if k==key: self.A[hs].remove((k, v))
+
+
+# a simpler version of hash function
+class MyHashSet:
+    def __init__(self):
+        self.A = [[]for _ in range(1000)]
+
+    def add(self, key: int) -> None:
+        hs = key%1000
+        if not self.contains(key):
+            self.A[hs].append(key)
+        
+
+    def remove(self, key: int) -> None:
+        hs = key%1000
+        if self.contains(key):
+            self.A[hs].remove(key)
+        
+
+        
+    def contains(self, key: int) -> bool:
+        hs = key%1000
+        return key in self.A[hs]
+        

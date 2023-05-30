@@ -1,6 +1,5 @@
 # Prime Number
 
-
 ## Prime Factorization
 
 **A number can be expressed as a product of prime numbers.** E.g.: `2521 = 7 * 11 * 13`
