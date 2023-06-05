@@ -1,26 +1,21 @@
 """ https://leetcode.com/problems/number-of-provinces/
 use DSU to find clusters
 """
-class DSU: 
-    def __init__(self, n):
-        self.p = [i for i in range(n)]
-    
-    def find(self, u):
-        if self.p[u]!=u:
-            self.p[u] = self.find(self.p[u])
-        return self.p[u]
-    
-    def union(self, x, y):
-        self.p[self.find(x)] = self.find(y)
-        
+from header import *
+
 class Solution:
-    def findCircleNum(self, M: List[List[int]]) -> int:
-        if not M: return 0
+    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+        dsu = {}
+        def find(x):
+            if x not in dsu: dsu[x] = x
+            elif dsu[x]!=x: dsu[x] = find(dsu[x])
+            return dsu[x]
+
+        def union(x, y):
+            dsu[find(x)] = find(y)
+            
         
-        n = len(M)
-        dsu = DSU(n)
-        for i in range(n):
-            for j in range(i+1, n):
-                if M[i][j]==1:
-                    dsu.union(i, j)
-        return len(set([dsu.find(i) for i in range(n)]))
+        for i, r in enumerate(isConnected):
+            for j, x in enumerate(r):
+                if x: union(i, j)
+        return len(set(find(x) for x in dsu))

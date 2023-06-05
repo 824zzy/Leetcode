@@ -1,5 +1,23 @@
 """ https://leetcode.com/problems/number-of-digit-one/
 """
+from header import *
+
+# 0x3ff template
+class Solution:
+    def countDigitOne(self, n: int) -> int:
+        s = str(n)
+        @cache
+        def dp(i, cnt, is_limit):
+            if i==len(s): return cnt
+            ans = 0
+            up = int(s[i]) if is_limit else 9
+            for j in range(up+1):
+                ans += dp(i+1, cnt+(j==1), is_limit and j==up)
+            return ans
+        return dp(0, 0, True)
+
+
+# old template
 class Solution:
     def countDigitOne(self, n: int) -> int:
         A = list(map(int, str(n)))

@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/number-of-provinces/
 dfs template
 """
+from header import *
+
 class Solution:
     def findCircleNum(self, A: List[List[int]]) -> int:
         G = defaultdict(dict)
