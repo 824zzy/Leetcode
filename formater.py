@@ -1,9 +1,8 @@
 # read all the files in the directory and format them
-
 import os
 
 def read_files_in_directory(directory_path):
-    for root, dirs, files in os.walk(directory_path):
+    for root, _, files in os.walk(directory_path):
         for file_name in files:
             if file_name.endswith('.py') and file_name[-5]=='L':
                 original_file_path = os.path.join(root, file_name)            
