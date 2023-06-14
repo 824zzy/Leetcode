@@ -89,7 +89,7 @@ class SegmentTree:
         if i<=m: self._set(node.left, i, val)
         elif i>m: self._set(node.right, i, val)
         node.sm = node.left.sm + node.right.sm
-        node.mx = max(node.left.mx, node.right.mx)        
+        node.mx = max(node.left.mx, node.right.mx)
 
     def _sumQuery(self, node, lo, hi):
         if not node: return 0

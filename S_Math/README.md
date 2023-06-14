@@ -1,8 +1,8 @@
 # Math Problem
 
-## Algebra
+- Summation formula of arithmetic sequence: `n*(a1+an)/2`, `n*a1+n(n-1)d/2`
 
-### Greatest Common Divisor(GCD)
+## Greatest Common Divisor(GCD)
 
 **GCD essentially is an intersection between prime factorizations of two numbers.** For example, 198 (**2** \* **3** \* **3** \* 11) and 84 (**2** \* **2** \* **3** * **7**) GCD is 6(**2** \* **3**).
 

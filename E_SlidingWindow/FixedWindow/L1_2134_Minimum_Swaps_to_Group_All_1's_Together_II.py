@@ -11,10 +11,10 @@ class Solution:
         if ones==0: return 0
         
         ans = A.count(0)
-        A *= 2
-        for i, x in enumerate(A):
-            zeros += x==0
+        n = len(A)
+        for i in range(2*n):
+            zeros += A[i%n]==0
             if i>=ones-1:
                 ans = min(ans, zeros)
-                zeros -= A[i-ones+1]==0
+                zeros -= A[(i%n)-ones+1]==0
         return ans

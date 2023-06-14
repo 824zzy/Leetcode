@@ -1,7 +1,13 @@
 from header import *
 
 def solution(A):
-    pass
+    # Kadane's algorithm
+    mn = inf
+    ans = -inf
+    for p in A:
+        mn = min(mn, p)
+        ans = max(ans, p-mn)
+    return ans if ans!=-inf else -1
 
 
 A = input()
@@ -11,14 +17,4 @@ print(ans)
 
 
 """
-001
-010
-011
-100
-011
-
-sum(A') = 1+2+3+4+5 = 15
-sum(A) = 1+2+3+4+3 = 13
-# find duplicate 3 and missing 5=3+(15-13)
-
 """
