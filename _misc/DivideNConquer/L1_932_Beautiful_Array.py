@@ -1,7 +1,8 @@
 """ https://leetcode.com/problems/beautiful-array/
-reference: https://www.youtube.com/watch?v=9L6bPGDfyqo&t=94s
-obtain beautiful array by rearraning elements in nums
+obtain beautiful array by rearranging elements in nums
 """
+from header import *
+
 # top down divide and conquer
 class Solution:
     def beautifulArray(self, n: int) -> List[int]:
