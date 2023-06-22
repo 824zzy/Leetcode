@@ -4,6 +4,8 @@ The solution format is the same as top down dp.
 
 Time complexity: O(m*n)
 """
+from header import *
+
 class Solution:
     def countPaths(self, A: List[List[int]]) -> int:
         D = [(0, 1), (0, -1), (1, 0), (-1, 0)]

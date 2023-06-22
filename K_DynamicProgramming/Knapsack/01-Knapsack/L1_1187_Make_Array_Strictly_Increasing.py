@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/make-array-strictly-increasing/
 change or not to change the i-th element
 """
+from header import *
+
 class Solution:
     def makeArrayIncreasing(self, A: List[int], B: List[int]) -> int:
         B.sort()
@@ -18,4 +20,4 @@ class Solution:
             return ans
         
         ans = dp(0, -inf)
-        return dp(0, -inf)
+        return dp(0, -inf) if ans!=inf else -1

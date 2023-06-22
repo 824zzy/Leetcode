@@ -1,16 +1,22 @@
 """ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
 three states: skip / sell / buy with fee
 """
+from header import *
+
 class Solution:
     def maxProfit(self, A: List[int], fee: int) -> int:
         @cache
-        def dfs(i, can):
-            if i>=len(A): return 0
-            ans = dfs(i+1, can) # skip
-            if not can: ans = max(ans, A[i]+dfs(i+1, 1)) # sell
-            return max(ans, -A[i]-fee+dfs(i+1, 0)) # buy
+        def dp(i, canBuy):
+            if i==len(A):
+                return 0
+            ans = dp(i+1, canBuy)  # do nothing
+            if canBuy: # buy
+                ans = max(ans, dp(i+1, False)-A[i]-fee)
+            else:
+                ans = max(ans, dp(i+1, True)+A[i])
+            return ans
         
-        return dfs(0, 1)
+        return dp(0, True)
     
 class Solution:
     def maxProfit(self, A: List[int], f: int) -> int:
