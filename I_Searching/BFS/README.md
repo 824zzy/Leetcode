@@ -32,19 +32,20 @@ Difference between Dijkstra and Floyd-Warshall algorithm
 
 ``` py
 # time complexity O(E*logV)
-G = collections.defaultdict(dict)
-for i, j, w in edges: G[i][j] = w
+G = defaultdict(list)
+for u, v, w in edges: 
+    G[u].append((v, w))
 
 pq = [(0, src)]
 seen = {}
 while pq:
-    cost, i = heapq.heappop(pq)
+    cost, i = heappop(pq)
     if i not in seen:
         seen[i] = cost
         for j in G[i]:
-            heapq.heappush(pq, (cost+G[i][j], j))
+            heappush(pq, (cost+G[i][j], j))
 # shortest path from src to all the nodes
-shortest_paths = [seen.get(i, float("inf")) for i in range(n)]
+shortest_paths = [seen.get(i, inf) for i in range(n)]
 ```
 
 ### Floyd-Warshall Algorithm for All Pairs Shortest Paths
