@@ -1,35 +1,19 @@
 """ https://leetcode.com/problems/minimum-depth-of-binary-tree/
 """
+from header import *
+
 class Solution:
-    def minDepth(self, root: TreeNode) -> int:
-        if not root:
-            return 0
-        def dfs(node, depth):
-            if not node:
-                return float('inf')
+    def minDepth(self, root: Optional[TreeNode]) -> int:
+        def dfs(node):
+            if not node: 
+                return inf
             if not node.left and not node.right:
-                return depth
-            left = dfs(node.left, depth+1)
-            right = dfs(node.right, depth+1)
-            return min(left, right)
-        return dfs(root, 1)
-    
-        
-class Solution:
-    def minDepth(self, root: TreeNode) -> int:
-        if not root:
-            return 0
-        self.ans = float('inf')
-        def dfs(node, d):
-            if not node:
-                return
-            if not node.left and not node.right:
-                self.ans = min(d+1, self.ans)
-                return
-            dfs(node.left, d+1)
-            dfs(node.right, d+1)
-        dfs(root, 0)
-        return self.ans
+                return 1
+            l = dfs(node.left)
+            r = dfs(node.right)
+            return min(l, r)+1
+        ans = dfs(root)
+        return ans if ans!=inf else 0
     
     
 class Solution:
