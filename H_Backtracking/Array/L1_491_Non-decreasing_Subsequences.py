@@ -20,5 +20,3 @@ class Solution:
             stk = [A[i]]
             dfs(i)
         return ans
-            
-            

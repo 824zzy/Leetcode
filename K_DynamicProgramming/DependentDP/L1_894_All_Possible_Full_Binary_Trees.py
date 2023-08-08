@@ -3,6 +3,8 @@ Create full binary trees recursively.
 
 Time complexity: O(2^N)
 """
+from header import *
+
 class Solution:
     def allPossibleFBT(self, n: int) -> List[Optional[TreeNode]]:
         @cache

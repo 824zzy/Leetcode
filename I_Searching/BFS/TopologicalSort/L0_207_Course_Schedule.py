@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/course-schedule/
-count courses while topological sort
+topological sort template
 """
+from header import *
 class Solution:
     def canFinish(self, n: int, P: List[List[int]]) -> bool:
         e = defaultdict(list)

@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/combinations/
 """
+from header import *
+
 class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
         ans = []

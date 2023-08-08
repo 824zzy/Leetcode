@@ -1,4 +1,4 @@
-""" L0: http://lkw222.pythonanywhere.com/question_detail/parallel-courses/
+""" http://lkw222.pythonanywhere.com/question_detail/parallel-courses/
 """
 from collections import defaultdict
 class Solution:

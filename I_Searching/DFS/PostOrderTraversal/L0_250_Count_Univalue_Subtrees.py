@@ -1,8 +1,8 @@
 """ https://leetcode.com/problems/count-univalue-subtrees/
+use set to store the value of subtree
 """
 from header import *
 
-# use set to store the value of subtree
 class Solution:
     def countUnivalSubtrees(self, root: Optional[TreeNode]) -> int:
         self.ans = 0
@@ -17,3 +17,19 @@ class Solution:
 
         dfs(root)
         return self.ans
+    
+ 
+class Solution:
+    def countUnivalSubtrees(self, root: Optional[TreeNode]) -> int:
+        @cache
+        def dfs(node):
+            if not node:
+                return 0, None
+            if not node.left and not node.right:
+                return 0, node.val
+            lc, lv = dfs(node.left)
+            rc, rv = dfs(node.right)
+            if lv==rv==node.val:
+                return lc+rc+1, node.val
+            return lc+rc, None
+        return dfs(root)[0]

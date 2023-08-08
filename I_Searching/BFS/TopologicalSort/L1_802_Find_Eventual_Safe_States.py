@@ -1,6 +1,12 @@
 """ https://leetcode.com/problems/find-eventual-safe-states
+translate problem:
+    A node is a safe node if every possible path starting from that node leads to a terminal node (or another safe node).
+    ==> A node is a safe node if its out degree is 0
+    
 twist topological sort to find nodes which out degree is 0
 """
+from header import *
+
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         E = defaultdict(list)

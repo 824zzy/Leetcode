@@ -1,5 +1,7 @@
 # Longest Increasing Subsequence
 
+## Type 1: Longest Increasing Subsequence
+
 Bottom up template:
 
 ``` py
@@ -24,3 +26,7 @@ def dp(i):
 
 return max(dp(i) for i in range(len(A)))
 ```
+
+## Type 2: Longest Common Subsequence
+
+Consider using hash table or binary search to optimize the time complexity.
