@@ -1,6 +1,8 @@
-""" L1:
-build the graph then find maximum degrees among node pairs.
+""" https://leetcode.com/problems/maximal-network-rank/
+brute force: build the graph then find maximum degrees among node pairs.
 """
+from header import *
+
 class Solution:
     def maximalNetworkRank(self, n: int, roads: List[List[int]]) -> int:
         e = defaultdict(list)
