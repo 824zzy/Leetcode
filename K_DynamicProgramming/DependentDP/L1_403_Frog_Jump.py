@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/frog-jump/
+dp + pruning
+
 Solution 1: define dp state as dp[i][k], where i is the index of the stone, k is the last jump distance
 Solution 2: define dp state as dp[i][k], where x is the current position's unit, k is the last jump distance
 """

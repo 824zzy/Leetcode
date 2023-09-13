@@ -18,6 +18,21 @@ class Solution:
             return ans
         return dp(len(s)-1)
     
+
+# KnapSack Solution
+class Solution:
+    def minExtraChar(self, s: str, D: List[str]) -> int:
+        @cache
+        def dp(i):
+            if i>=len(s):
+                return 0
+            ans = 1+dp(i+1)
+            for d in D:
+                if s[i:i+len(d)]==d:
+                    ans = min(ans, dp(i+len(d)))
+            return ans
+        return dp(0)
+    
     
 class Solution:
     def minExtraChar(self, s: str, D: List[str]) -> int:

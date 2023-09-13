@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/minimum-replacements-to-sort-the-array/
 greedily update upper bound reversely
 """
+from header import *
+
 class Solution:
     def minimumReplacement(self, A: List[int]) -> int:
         n = len(A)

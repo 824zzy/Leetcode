@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/maximum-length-of-pair-chain/
-classic interval problem
+non-overlap interval problem
 """
 from header import *
 

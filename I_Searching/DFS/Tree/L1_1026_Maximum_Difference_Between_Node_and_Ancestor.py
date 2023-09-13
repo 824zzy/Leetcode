@@ -20,6 +20,7 @@ class Solution:
 
         dfs(root)
         return self.ans    
+    
 class Solution:
     def maxAncestorDiff(self, root: Optional[TreeNode]) -> int:
         def dfs(node, ma, mi):

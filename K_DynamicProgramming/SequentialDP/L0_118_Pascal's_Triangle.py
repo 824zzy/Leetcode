@@ -5,6 +5,8 @@ The values of row[i] only depends on row[i-1]
 initial state: dp = [[1], [1, 1]]
 transition: row[i-1] = dp[-1][i]+dp[-1][i-1]
 """
+from header import *
+
 class Solution:
     def generate(self, n: int) -> List[List[int]]:
         if n==1: return [[1]]
