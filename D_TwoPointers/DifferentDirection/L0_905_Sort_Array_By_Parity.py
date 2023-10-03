@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/sort-array-by-parity/
 Time: O(n), Space: O(1)
 """
+from header import *
+
 class Solution:
     def sortArrayByParity(self, A: List[int]) -> List[int]:
         l, r = 0, len(A)-1

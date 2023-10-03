@@ -1,7 +1,9 @@
 """ https://leetcode.com/problems/champagne-tower/
-2D time sequential dp, the tranform equation is: 
+2D time sequential dp, the transform equation is: 
 dp(i, j) = max(0, dp(i-1, j-1)-1)/2 + max(0, dp(i-1, j)-1)/2.
 """
+from header import *
+
 # top down
 class Solution:
     def champagneTower(self, N: int, R: int, C: int) -> float:
