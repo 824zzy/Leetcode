@@ -1,7 +1,8 @@
 """ https://leetcode.com/problems/flatten-nested-list-iterator/
+dfs on a special data structure
 """
 class NestedIterator:
-    def __init__(self, A: [NestedInteger]):
+    def __init__(self, A):
         self.A = []
         def dfs(node):
             for n in node:

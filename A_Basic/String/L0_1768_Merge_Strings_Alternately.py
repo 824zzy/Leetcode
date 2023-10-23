@@ -14,10 +14,12 @@ class Solution:
 
 # linear scan
 class Solution:
-    def mergeAlternately(self, word1: str, word2: str) -> str:
-        ans = [''] * 200
-        for i in range(len(word1)):
-            ans[2*i] = word1[i]
-        for i in range(len(word2)):
-            ans[2*i+1] = word2[i]
-        return ''.join(ans)
+    def mergeAlternately(self, A: str, B: str) -> str:
+        A, B = list(A), list(B)
+        ans = ''
+        while A or B:
+            if A:
+                ans += A.pop(0)
+            if B:
+                ans += B.pop(0)
+        return ans

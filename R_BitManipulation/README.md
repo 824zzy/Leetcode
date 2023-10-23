@@ -13,7 +13,8 @@
    4. `x^(1<<n)`: flip n-th bit on/off in `x`
 6. Gray code of a integer `i`: `(i>>1)^i`
 7. 32 bit mask in hexadecimal: `0xffffffff`
-8. XOR from 1 to n:
+8. Only keep the odd position's bit: `num & 0x55555555`
+9. XOR from 1 to n: 
 
     ``` py
     def XOR_1_to_n(n):
@@ -24,7 +25,7 @@
         else: return 0
     ```
 
-9. String to bit mask:
+10. String to bit mask:
 
     ``` py
     mask = 0

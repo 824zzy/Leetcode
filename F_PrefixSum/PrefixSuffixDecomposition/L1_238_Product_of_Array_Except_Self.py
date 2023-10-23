@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/product-of-array-except-self/
 """
+from header import *
+
 class Solution:
     def productExceptSelf(self, A: List[int]) -> List[int]:
         ans = [1] * len(A)
@@ -13,8 +15,8 @@ class Solution:
 
 class Solution:
     def productExceptSelf(self, A: List[int]) -> List[int]:
-        prefix = [1] + list(itertools.accumulate(A, mul)) + [1]
-        suffix = [1] + list(itertools.accumulate(A[::-1], mul))[::-1] + [1]
+        prefix = [1] + list(accumulate(A, mul)) + [1]
+        suffix = [1] + list(accumulate(A[::-1], mul))[::-1] + [1]
         
         ans = []
         for i in range(1, len(prefix)-1):
