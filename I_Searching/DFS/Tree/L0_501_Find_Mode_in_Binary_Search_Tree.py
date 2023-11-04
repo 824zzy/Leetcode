@@ -1,6 +1,8 @@
-""" L0: https://leetcode.com/problems/find-mode-in-binary-search-tree/submissions/
+""" https://leetcode.com/problems/find-mode-in-binary-search-tree/submissions/
 find the most frequent node by counter
 """
+from header import *
+
 class Solution:
     def findMode(self, root: Optional[TreeNode]) -> List[int]:
         M = Counter()

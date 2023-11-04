@@ -2,19 +2,21 @@
 
 ## Operations
 
-1. Get lowest bit in x: `x & 1`: 191, 461
-2. Get lowest "1" bit and right side bits in x: `x & -x`
-3. Set lowest "1" bit in x to "0": `x & (x-1)`
-4. Flip whole n-bits bit mask: `x ^= (1 << n) - 1`
-5. Three ways to flip a bit on/off:
-   1. `x+(2**n)`: flip n-th bit on in `x`
-   2. `x-(2**n)`: flip n-th bit off in `x`
-   3. `x^(2**n)`: flip n-th bit on/off in `x`
-   4. `x^(1<<n)`: flip n-th bit on/off in `x`
-6. Gray code of a integer `i`: `(i>>1)^i`
-7. 32 bit mask in hexadecimal: `0xffffffff`
-8. Only keep the odd position's bit: `num & 0x55555555`
-9. XOR from 1 to n: 
+- Get lowest bit in x: `x & 1`: 191, 461
+- Get i-th bit in x: `(x>>i) & 1`
+- Add i-th bit in x: `x | (1<<i)`
+- Get lowest "1" bit and right side bits in x: `x & -x`
+- Set lowest "1" bit in x to "0": `x & (x-1)`
+- Flip whole n-bits bit mask: `x ^= (1 << n) - 1`
+- Three ways to flip a bit on/off:
+   - `x+(2**n)`: flip n-th bit on in `x`
+   - `x-(2**n)`: flip n-th bit off in `x`
+   - `x^(2**n)`: flip n-th bit on/off in `x`
+   - `x^(1<<n)`: flip n-th bit on/off in `x`
+- Gray code of a integer `i`: `(i>>1)^i`
+- 32 bit mask in hexadecimal: `0xffffffff`
+- Only keep the odd position's bit: `num & 0x55555555`
+- XOR from 1 to n: 
 
     ``` py
     def XOR_1_to_n(n):
@@ -25,7 +27,7 @@
         else: return 0
     ```
 
-10. String to bit mask:
+1.  String to bit mask:
 
     ``` py
     mask = 0
@@ -35,12 +37,11 @@
 
 ### Functions
 
-1. XOR operation: `a ^ 0 = a`  `a ^ a = 0`
-2. bin(number): `0b***`
-3. Decimal conversion: `int(num, decimal)`, e.g. `int('10', 2)==2`
-4. Pre fill zero to num: `rjust(num)`; Post fill zero to num: `ljust(num)`
-5. `str.zfill(32)`: fill a string with 0 to 32 bit
-6. `'{0:032b}'.format`: a short way to format the integer to a 32 bit binary
+1. bin(number): `0b***`
+2. Decimal conversion: `int(num, decimal)`, e.g. `int('10', 2)==2`
+3. Pre fill zero to num: `rjust(num)`; Post fill zero to num: `ljust(num)`
+4. `str.zfill(32)`: fill a string with 0 to 32 bit
+5. `'{0:032b}'.format`: a short way to format the integer to a 32 bit binary
 
 ## Bitmask
 
@@ -67,3 +68,4 @@ def dp(mask):
 ## Reference
 
 - [bitmask problem list](https://leetcode.com/discuss/general-discussion/1125779/Dynamic-programming-on-subsets-with-examples-explained)
+- [从集合论到位运算，常见位运算技巧分类总结！](https://leetcode.cn/circle/discuss/CaOJ45/)

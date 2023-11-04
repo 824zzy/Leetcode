@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/count-vowels-permutation/
 Hash table dp using a,e,i,o,u as key and cumulative sum as value.
 """
+from header import *
+
 # Time complexity: O(5*N), where N is the length of A
 # Space complexity: O(5*N), where N is the length of A
 class Solution:

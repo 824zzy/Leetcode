@@ -52,13 +52,14 @@ def postOrder(self, root):
         
 # level order
 def levelOrder(self, root):
-    queue = [root]
-    node = root
-    while queue:
-        node = queue.pop(0)
-        print(node.val)
-        if node.left:
-            queue.append(node.left)
-        if node.right:
-            queue.append(node.right)
+    Q = [root]
+    while Q:
+        nxtQ = []
+        for node in Q:
+            print(node.val)
+            if node.left:
+                nxtQ.append(node.left)
+            if node.right:
+                nxtQ.append(node.right)
+        Q = nxtQ
 ```

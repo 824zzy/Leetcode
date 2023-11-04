@@ -1,16 +1,16 @@
 """ https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
-simulate the process forwardly
+simulate the process reversely
 """
 from header import *
 
 class Solution:
     def findArray(self, A: List[int]) -> List[int]:
-        ans = [A[0]]
-        x = A[0]
-        for i in range(1, len(A)):
-            xx = x ^ A[i]
-            ans.append(xx)
-            x ^= xx
+        pre1 = 0
+        ans = []
+        for x in A:
+            pre2 = pre1^x
+            ans.append(pre2)
+            pre1 ^= pre2
         return ans
     
     

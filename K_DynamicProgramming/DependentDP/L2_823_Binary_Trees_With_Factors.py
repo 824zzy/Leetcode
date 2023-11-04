@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/binary-trees-with-factors/
-Sort the list A at first. Scan A from small element to bigger.
+Sort the list A at first. Scan A from small element instead of index.
 DP equation: dp[x] = sum(dp[y] * dp[x//y])
 Time complexity: O(N^2), where N is the length of A
 """
