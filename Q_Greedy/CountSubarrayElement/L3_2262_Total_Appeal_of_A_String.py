@@ -4,7 +4,7 @@ Similar to /Q_Greedy/CountSubarrayElement/828_Count_Unique_Characters_of_All_Sub
 Iterative element instead of the whole array.
 
 1. From A to Z, find all the indexes of every characters
-2. Given ...XXXA[XXAXX]AXX.., the answer of j should be (A[j]-A[i])*(n-A[j])
+2. Given ...XXXA[XXAXX]AXX.., the answer of j should be (A[j]-A[i])*(A[k]-A[j])
                i   j   k
 """
 class Solution:
@@ -21,3 +21,35 @@ class Solution:
             for i in range(1, len(x)-1):
                 ans += (x[i]-x[i-1])*(n-x[i])
         return ans
+    
+
+""" https://leetcode.com/problems/total-appeal-of-a-string/
+from lee: https://leetcode.com/problems/total-appeal-of-a-string/discuss/1996390/JavaC%2B%2BPython-Easy-and-Concise-with-Explanation
+record the increment using hash table, check the example below
+"""
+class Solution:
+    def appealSum(self, s: str) -> int:
+        ans = 0
+        sm = 0
+        last = {}
+        for i, c in enumerate(s):
+            sm += i-last.get(c, -1)
+            ans += sm
+            last[c] = i
+        return ans
+
+"""
+abbca
+[a]
+ 1
+abbca
+ [b]
+[ab]
+2 1
+abbca
+  [b]
+ [bb]
+[abb]
+2 1 1
+.......
+"""
