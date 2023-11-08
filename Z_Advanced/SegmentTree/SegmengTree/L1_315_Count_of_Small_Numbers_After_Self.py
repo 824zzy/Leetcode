@@ -3,6 +3,8 @@ Reverse the array and compute the smaller element count of current element by in
 
 Segment tree type: discretization + single point add + range sum query
 """
+from header import *
+
 # Tree-based segment tree
 class Node:
     def __init__(self, lo, hi, sm=0, mx=0, lazy=None):
@@ -95,3 +97,65 @@ class Solution:
             ans.append(st.query(0, mp[x]-1))
             st.update(mp[x], st.T[mp[x]]+1)
         return ans[::-1]
+    
+# array-based segment tree
+class Solution:
+    def countSmaller(self, A: List[int]) -> List[int]:
+        mp = {x: i for i, x in enumerate(sorted(set(A)))}
+        n = len(A)
+        T = [0] * (4 * n)
+        todo = [0] * (4 * n)
+
+        # 初始化线段树  o,l,r = 1,1,n
+        def build(o , l , r ):
+            if l == r:
+                T[o] = A[l - 1]
+                return
+            m = (l + r) // 2
+            build(o * 2, l, m)
+            build(o * 2 + 1, m + 1, r)
+            maintain(o)
+
+        def maintain(o):
+            # sum
+            T[o] = T[o * 2] + T[o * 2 + 1]
+
+        def do(o, l, r, val):
+            if val!=None:
+                # add
+                T[o] += val
+                todo[o] += val
+
+        def query_and_update(o, l, r, L, R, val):
+            if L <= l and r <= R:
+                ans = T[o]
+                do(o, l, r, val)
+                return ans
+            m = (l + r) // 2
+            if todo[o]:
+                do(o * 2, l, m, val)
+                do(o * 2 + 1, m + 1, r, val)
+                todo[o] = 0
+            ans = 0
+            if m >= L: 
+                # sum
+                ans += query_and_update(o * 2, l, m, L, R, val)
+            if m < R:
+                # sum
+                ans += query_and_update(o * 2 + 1, m + 1, r, L, R, val)
+            maintain(o)
+            return ans
+
+        ans = []
+        for x in reversed(A):
+            i = mp[x]
+            print(T)
+            ans.append(query_and_update(1, 1, n, 1, i+1, None))
+            query_and_update(1, 1, n, i+2, i+2, 1)
+        return ans[::-1]
+    
+"""
+[5,2,6,1]
+[-1]
+[-1,-1]
+"""

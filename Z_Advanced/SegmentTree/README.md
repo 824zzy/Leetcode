@@ -25,7 +25,6 @@ Suppose we have a segment tree with `N` leaves:
 
 ### Tree based segment tree
 
-TODO: update some of the templates
 
 ``` py
 # Discretization from value to index if necessary
@@ -47,6 +46,7 @@ class SegmentTree:
         else: self.root = Node(lo, hi)
 
     def _build(self, lo, hi, A):
+        # build segment tree based on array A
         node = Node(lo, hi)
         if lo==hi: 
             node.sm = A[lo]
@@ -60,6 +60,7 @@ class SegmentTree:
         return node
     
     def _add(self, node, i, val):
+        # add val to the i-th element
         if node.lo==node.hi:
             node.sm += val
             node.mx += val
@@ -76,6 +77,7 @@ class SegmentTree:
         node.mx = max(node.left.mx, node.right.mx)
 
     def _set(self, node, i, val):
+        # set the i-th element to val
         if node.lo==node.hi:
             node.sm = val
             node.mx = val
@@ -92,6 +94,7 @@ class SegmentTree:
         node.mx = max(node.left.mx, node.right.mx)
 
     def _sumQuery(self, node, lo, hi):
+        # return the sum from lo to hi
         if not node: return 0
         if node.lo==lo and node.hi==hi: return node.sm
         m = (node.lo+node.hi)//2
@@ -100,6 +103,7 @@ class SegmentTree:
         else: return self._sumQuery(node.left, lo, m)+self._sumQuery(node.right, m+1, hi)
 
     def _maxQuery(self, node, lo, hi):
+        # return the max from lo to hi
         if not node: return 0
         if node.lo==lo and node.hi==hi: return node.mx
         m = (node.lo+node.hi)//2
@@ -111,6 +115,7 @@ class SegmentTree:
     Range add sum & query
     """
     def rangeAddSum(self, node, val, lo, hi):
+        # add val to the range from lo to hi
         if node.lo==lo and node.hi==hi:
             node.sm += val
             node.lazy += val
@@ -279,7 +284,62 @@ class SegmentTree:
 ### Array based segment tree
 
 ``` py
-TODO:
+n = len(nums)
+T = [0] * (4 * n)
+todo = [0] * (4 * n)
+
+# 初始化线段树  o,l,r = 1,1,n
+def build(o , l , r ):
+    if l == r:
+        T[o] = nums[l - 1]
+        return
+    m = (l + r) // 2
+    build(o * 2, l, m)
+    build(o * 2 + 1, m + 1, r)
+    maintain(o)
+
+def maintain(o):
+    # sum
+    T[o] = T[o * 2] + T[o * 2 + 1]
+    # max
+    T[o] = max(T[o * 2], T[o * 2 + 1])
+
+
+def do(o, l, r, val):
+    if val!=None:
+        # set
+        T[o] = val
+        todo[o] = val
+        # add
+        T[o] += val
+        todo[o] += val
+
+def query_and_update(o, l, r, L, R, val):
+    if L <= l and r <= R:
+        ans = T[o]
+        do(o, l, r, val)
+        return ans
+    m = (l + r) // 2
+    if todo[o]:
+        do(o * 2, l, m, val)
+        do(o * 2 + 1, m + 1, r, val)
+        todo[o] = 0
+    ans = 0
+    if m >= L: 
+        # sum
+        ans += query_and_update(o * 2, l, m, L, R, val)
+        # max
+        ans = max(ans, query_and_update(o * 2, l, m, L, R, val))
+    if m < R:
+        # sum
+        ans = query_and_update(o * 2 + 1, m + 1, r, L, R, val)
+        # max
+        ans = max(ans, query_and_update(o * 2 + 1, m + 1, r, L, R, val))
+    maintain(o)
+    return ans
+
+build(1, 1, n)
+query_and_update(1, 1, n, l + 1, r + 1, val)
 ```
 
 ## ZKW Segment Tree

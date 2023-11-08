@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/range-sum-query-mutable/
-segment tree template
+segment tree template for single point set and sum query
 """
+from header import *
+
 # ZWK segment tree
 class SegmentTree:
     def __init__(self, n):
@@ -103,3 +105,64 @@ class NumArray:
         
     def sumRange(self, left: int, right: int) -> int:
         return self.ST._sumQuery(self.ST.root, left, right)
+    
+
+# array-based segment tree
+class NumArray:
+    def __init__(self, nums: List[int]):
+        self.n = len(nums)
+        self.nums = nums
+        self.T = [0] * (4 * self.n)
+        self.todo = [0] * (4 * self.n)
+        self.build(1, 1, self.n)
+        
+    def build(self, o: int, l: int, r: int) -> None:
+        if l == r:
+            self.T[o] = self.nums[l - 1]
+            return
+        m = (l + r) // 2
+        self.build(o * 2, l, m)
+        self.build(o * 2 + 1, m + 1, r)
+        self.maintain(o)
+    
+    def do(self, o: int, l: int, r: int, val: int) -> None:
+        if val!=None:
+            self.T[o] = val
+            self.todo[o] = val
+            
+    def maintain(self, o):
+        self.T[o] = self.T[o*2]+self.T[o*2+1]
+        
+    def query_and_set(self, o, l, r, L, R, val):
+        if L <= l and r <= R:
+            ans = self.T[o]
+            self.do(o, l, r, val)
+            return ans
+        m = (l + r) // 2
+        if self.todo[o]:
+            self.do(o * 2, l, m, val)
+            self.do(o * 2 + 1, m + 1, r, val)
+            self.todo[o] = None
+        ans = 0
+        if m >= L: 
+            ans += self.query_and_set(o*2, l, m, L, R, val)
+        if m < R: 
+            ans += self.query_and_set(o*2+1, m+1, r, L, R, val)
+        self.maintain(o)
+        return ans
+        
+
+    def update(self, index: int, val: int) -> None:
+        self.query_and_set(1, 1, self.n, index+1, index+1, val)
+
+    def sumRange(self, left: int, right: int) -> int:
+        return self.query_and_set(1, 1, self.n, left+1, right+1, None)
+        
+"""
+["NumArray","sumRange","update","sumRange"]
+[[[1,3,5]],[0,2],[1,2],[0,2]]
+["NumArray","update","sumRange","sumRange","update","sumRange"]
+[[[9,-8]],[0,3],[1,1],[0,1],[1,-3],[0,1]]
+["NumArray","sumRange","sumRange","sumRange","update","update","update","sumRange","update","sumRange","update"]
+[[[0,9,5,7,3]],[4,4],[2,4],[3,3],[4,5],[1,7],[0,8],[1,2],[1,9],[4,4],[3,4]]
+"""
