@@ -1,8 +1,8 @@
 """ https://leetcode.com/problems/unique-length-3-palindromic-subsequences/description/
 smart solution:
-    we enumerate each character on two side.
-    We find its first occurrence and its last occurrence,
-    all the characters in the middle are the candidate for the middle char.
+1. we enumerate each character on two side.
+2. We find its first occurrence and its last occurrence,
+3. all the characters in the middle are the candidate for the middle char.
 naive solution:
     for each element in the string, we check if any character is located on the two side.
 """
@@ -11,10 +11,16 @@ from header import *
 # smart solution from lee: 
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
+        left_most = defaultdict(lambda: inf)
+        right_most = defaultdict(lambda: -inf)
+        for i, c in enumerate(s):
+            left_most[c] = min(left_most[c], i)
+            right_most[c] = max(right_most[c], i)
+
         ans = 0
-        for c in ascii_lowercase:
-            i, j = s.find(c), s.rfind(c)
-            if i!=-1:
+        for x in range(26):
+            i, j = left_most[chr(x+97)], right_most[chr(x+97)]
+            if i!=inf and j!=-inf:
                 ans += len(set(s[i+1:j]))
         return ans
 

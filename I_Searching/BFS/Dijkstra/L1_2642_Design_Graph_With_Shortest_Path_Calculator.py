@@ -6,26 +6,47 @@ from header import *
 
 class Graph:
     def __init__(self, n: int, edges: List[List[int]]):
-        self.n = n
         self.G = defaultdict(dict)
-        for i, j, w in edges: 
-            self.G[i][j] = w
-        self.dis = defaultdict(dict)
+        for i, j, c in edges:
+            self.G[i][j] = c
 
     def addEdge(self, edge: List[int]) -> None:
-        src, dst, w = edge
-        self.G[src][dst] = w
-        
+        i, j, c = edge
+        self.G[i][j] = c
 
-    def shortestPath(self, src: int, dst: int) -> int:
+    def shortestPath(self, src: int, dest: int) -> int:
         pq = [(0, src)]
         seen = {}
         while pq:
-            cost, i = heappop(pq)
+            c, i = heappop(pq)
+            if i==dest:
+                return c
             if i not in seen:
-                seen[i] = cost
+                seen[i] = c
                 for j in self.G[i]:
-                    heappush(pq, (cost+self.G[i][j], j))
-        for _dst in range(self.n):
-            self.dis[src][_dst] = seen.get(_dst, -1)
-        return self.dis[src].get(dst)
+                    heappush(pq, (c+self.G[i][j], j))
+        return -1
+    
+# another way to implement the same thing
+class Graph:
+    def __init__(self, n: int, edges: List[List[int]]):
+        self.G = defaultdict(dict)
+        for i, j, c in edges:
+            self.G[i][j] = c
+
+    def addEdge(self, edge: List[int]) -> None:
+        i, j, c = edge
+        self.G[i][j] = c
+
+    def shortestPath(self, src: int, dest: int) -> int:
+        pq = [(0, src)]
+        seen = {src: 0}
+        while pq:
+            c, i = heappop(pq)
+            if i==dest:
+                return c
+            for j in self.G[i]:
+                if j not in seen or c+self.G[i][j]<seen[j]:
+                    seen[j] = c+self.G[i][j]
+                    heappush(pq, (c+self.G[i][j], j))
+        return -1
