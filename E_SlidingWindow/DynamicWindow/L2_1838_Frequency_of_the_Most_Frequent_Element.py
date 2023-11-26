@@ -4,6 +4,8 @@ maintain the sliding window by making sure the increments always less or equal t
 the increments in the sliding window is `current_max * window_size - current_sum`.
 Note that the current max can be easily found by sorting the array beforehand.
 """
+from header import *
+
 class Solution:
     def maxFrequency(self, A: List[int], k: int) -> int:
         A.sort()

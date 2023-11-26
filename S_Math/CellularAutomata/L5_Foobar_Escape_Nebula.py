@@ -1,14 +1,14 @@
 """ https://foobar.withgoogle.com/escape_nebula
 This is a great problem to learn the basic of cellular automata.
-First of all, we need to simplfy the 2D problem into 1D cellular automata.
-To do that, we can seperately compute all the valid previous states column by column and save them into a hash table.
+First of all, we need to simplify the 2D problem into 1D cellular automata.
+To do that, we can separately compute all the valid previous states column by column and save them into a hash table.
 
 Secondly, go over every current state's column from left to right to compute the sum of all the legit previous states.
 
 Reference:
 1. [Wikipedia](https://en.wikipedia.org/wiki/Cellular_automaton)
 2. [Natural of Code](https://natureofcode.com/book/chapter-7-cellular-automata/)
-3. [Idead from this blog](https://michael.kim/blog/cellular-automaton)
+3. [Idea from this blog](https://michael.kim/blog/cellular-automaton)
 """
 from collections import defaultdict
 # use previous state mapping to easily build columns of bits

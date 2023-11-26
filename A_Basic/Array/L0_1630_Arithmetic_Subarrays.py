@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/arithmetic-subarrays/
 zipping+sorting
 """
+from header import *
+
 class Solution:
     def checkArithmeticSubarrays(self, A: List[int], l: List[int], r: List[int]) -> List[bool]:
         def fn(A):
