@@ -19,11 +19,11 @@ Row: input size(IS), column: time complexity(TC)
 | 10-50       | &check; | &check; | &check; | &check; | &check; | &check; | &check; | &check; |
 | 50-100      | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; | &check; |
 | 100-500     | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; | &check; |
-| 500-$10^3$  | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; |
-|$10^3$-$10^4$| &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; |
-|$10^4$-$10^5$| &cross; | &cross; | &cross; | &quest; | &check; | &check; | &check; | &check; |
-|$10^5$-$10^6$| &cross; | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; |
-|$10^6$-$10^9$| &cross; | &cross; | &cross; | &cross; | &cross; | &cross; | &check; | &check; |
+| 500 - $10^3$  | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; |
+|$10^3$ - $10^4$| &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; | &check; |
+|$10^4$ - $10^5$| &cross; | &cross; | &cross; | &quest; | &check; | &check; | &check; | &check; |
+|$10^5$ - $10^6$| &cross; | &cross; | &cross; | &cross; | &check; | &check; | &check; | &check; |
+|$10^6$ - $10^9$| &cross; | &cross; | &cross; | &cross; | &cross; | &cross; | &check; | &check; |
 
 | TC       |  Algorithm                                                           |
 |---       |   ---                                                                |
