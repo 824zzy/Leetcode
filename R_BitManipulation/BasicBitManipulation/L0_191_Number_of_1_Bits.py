@@ -8,3 +8,8 @@ class Solution:
             ans += n & 1
             n >>= 1
         return ans
+    
+
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        return sum((n>>i)&1 for i in range(32))
