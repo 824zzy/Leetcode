@@ -20,11 +20,16 @@ class Solution:
 # deque implementation
 class Solution:
     def maxSlidingWindow(self, A: List[int], k: int) -> List[int]:
-        dq = deque()
+        q = deque()
         ans = []
         for i, x in enumerate(A):
-            while dq and dq[0][0]<=i-k: dq.popleft()
-            while dq and dq[-1][1]<=x: dq.pop()
-            dq.append((i, x))
-            if i>=k-1: ans.append(dq[0][1])
+            # in
+            while q and A[q[-1]]<=x:
+                q.pop()
+            q.append(i)
+            # out
+            while q and i-q[0]>=k:
+                q.popleft()
+            if i>=k-1:
+                ans.append(A[q[0]])
         return ans
