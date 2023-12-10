@@ -10,10 +10,12 @@ Note that sliding window technique only for **Non-Negative element array**.
 
 ``` py
 i = 0
+# cnt/container
 for j in range(len(A)):
+    # update cnt/container
     while/if logic:
-        update i
-return ans/j-i+1
+        # update i
+    # update answer
 ```
 
 ## Fixed Window

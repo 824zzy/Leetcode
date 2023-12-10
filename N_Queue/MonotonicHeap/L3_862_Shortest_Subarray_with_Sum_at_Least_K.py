@@ -2,6 +2,8 @@
 Maintain a monotonic priority queue to find the minimum range, 
 in other words, pop pq while the prefix range sum larger or equal than k.
 """
+from header import *
+
 class Solution:
     def shortestSubarray(self, A: List[int], k: int) -> int:
         A = list(accumulate(A, initial=0))

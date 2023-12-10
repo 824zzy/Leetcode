@@ -45,6 +45,8 @@ Row: input size(IS), column: time complexity(TC)
 5. Can I use two passes?
 6. Can I solve it reversely?
 7. Can I convert the problem to a other problem?
+8. "Subarray" ==> sliding window, monotonic stack/queue
+9. "Sum" ==> prefix sum
 
 ## Python Basic
 

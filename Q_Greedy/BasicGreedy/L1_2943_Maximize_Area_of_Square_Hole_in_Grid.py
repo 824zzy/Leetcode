@@ -2,6 +2,8 @@
 problem conversion
 find square as a hole ==> find consecutive bars ==> greedy
 """
+from header import *
+
 class Solution:
     def maximizeSquareHoleArea(self, n: int, m: int, hBars: List[int], vBars: List[int]) -> int:
         hBars.sort()

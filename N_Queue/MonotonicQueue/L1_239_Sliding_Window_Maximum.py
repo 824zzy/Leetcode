@@ -20,7 +20,7 @@ class Solution:
 # deque implementation
 class Solution:
     def maxSlidingWindow(self, A: List[int], k: int) -> List[int]:
-        q = deque()
+        q = deque() # monotonic decreasing queue
         ans = []
         for i, x in enumerate(A):
             # in

@@ -8,12 +8,15 @@ from header import *
 class Solution:
     def shortestSubarray(self, A: List[int], k: int) -> int:
         A = list(accumulate(A, initial=0))
-        dq = deque()
+        q = deque()
         ans = inf
         for i in range(len(A)):
-            # update ans based on head of queue
-            while dq and A[i]-A[dq[0]]>=k: ans = min(ans, i-dq.popleft())
-            # ensure monotonic increasing
-            while dq and A[dq[-1]]>=A[i]: dq.pop()
-            dq.append(i)
+            # in: ensure monotonic increasing
+            while q and A[q[-1]]>=A[i]:
+                q.pop()
+            q.append(i)
+            # out: pop when the window sum larger than k
+            while q and A[i]-A[q[0]]>=k:
+                ans = min(ans, i-q[0])
+                q.popleft()
         return ans if ans!=inf else -1

@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
-calcualte prefix sum of 0s and 1s and find highest score by linear scan
+calculate prefix sum of 0s and 1s and find highest score by linear scan
 """
+from header import *
+
 class Solution:
     def maxScoreIndices(self, A: List[int]) -> List[int]:
         prefix0, prefix1 = [0], [0]

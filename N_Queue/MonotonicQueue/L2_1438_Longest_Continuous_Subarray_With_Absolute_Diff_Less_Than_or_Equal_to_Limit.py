@@ -2,21 +2,28 @@
 1. maintain max and min queues and left most legit index
 2. pop elements when absolute difference larger than limit, while update left most index
 """
+from header import *
+
 class Solution:
-    def longestSubarray(self, A: List[int], L: int) -> int:
-        min_dq = deque()
-        max_dq = deque()
-        ans = 0
+    def longestSubarray(self, A: List[int], limit: int) -> int:
+        mx_q = deque() # monotonic decrease
+        mn_q = deque() # monotonic increase
         i = 0
+        ans = 0
         for j, x in enumerate(A):
-            while min_dq and min_dq[-1]>x: min_dq.pop()
-            while max_dq and max_dq[-1]<x: max_dq.pop()
-            min_dq.append(x)
-            max_dq.append(x)
-            
-            if max_dq[0]-min_dq[0]>L:
-                if A[i]==min_dq[0]: min_dq.popleft()
-                if A[i]==max_dq[0]: max_dq.popleft()
+            # in
+            while mn_q and A[mn_q[-1]]>x:
+                mn_q.pop()
+            while mx_q and A[mx_q[-1]]<x:
+                mx_q.pop()
+            mx_q.append(j)
+            mn_q.append(j)
+            # out
+            if A[mx_q[0]]-A[mn_q[0]]>limit:
+                if i==mn_q[0]:
+                    mn_q.popleft()
+                if i==mx_q[0]:
+                    mx_q.popleft()
                 i += 1
             ans = max(ans, j-i+1)
         return ans

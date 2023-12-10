@@ -29,6 +29,21 @@ for i, x in enumerate(A):
     # monotonic decreasing queue
     while dq and CONDITION1: dq.pop()
     dq.append((i, x))
+
+# Dequeue implementation 2
+q = deque() # monotonic decreasing queue
+ans = []
+for i, x in enumerate(A):
+    # in
+    while q and A[q[-1]]<=x:
+        q.pop()
+    q.append(i)
+    # out
+    while q and i-q[0]>=k:
+        q.popleft()
+    if i>=k-1:
+        ans.append(A[q[0]])
+return ans
 ```
 
 The monotonic priority queue problems are essentially a type of greedy and sliding window problem.
