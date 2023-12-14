@@ -2,6 +2,8 @@
 A variation of LCS.
 Bottom up dp is already very slow, so top down dp is not available.
 """
+from header import *
+
 class Solution:
     def findLength(self, A1: List[int], A2: List[int]) -> int:
         dp = [[0 for _ in range(len(A2)+1)] for _ in range(len(A1)+1)]

@@ -28,12 +28,12 @@ for i, x in enumerate(G):
     dist[i][i] = 0
     for j in x: dist[i][j] = 1
 # or if edges are (i, j, w)
-dist = [[float('inf')] * n for _ in range(n)]
+dist = [[inf] * n for _ in range(n)]
 for i, j, w in edges: dist[i][j] = dist[j][i] = w
 for i in range(n): dist[i][i] = 0
 
 for k in range(n):
     for i in range(n):
         for j in range(n):
-            dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j])
+            dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
 ```
