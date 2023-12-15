@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/shifting-letters-ii/
 use sweep line to count accumulated sum of each letter, then update the letters
 """
+from header import *
+
 class Solution:
     def shiftingLetters(self, s: str, A: List[List[int]]) -> str:
         n = len(s)
