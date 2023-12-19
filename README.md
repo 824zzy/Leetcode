@@ -48,40 +48,35 @@ Row: input size(IS), column: time complexity(TC)
 8. "Subarray" ==> sliding window, monotonic stack/queue
 9. "Sum" ==> prefix sum
 
-## Python Basic
+## Cheat sheet
 
-### Operations
 
-1. `[a if cond1 else cond2 for a in A]`: `if-else` statement in `for` loop
-2. `A[::i]`: jump i-steps in a list, e.g., odd index elements `A[::2]` and even index elements `A[1::2]`
-3. `A.insert(0, n)`: insert item to list by a specific index
-4. `arr.sort(key=lambda x: (cond1, cond2, ..))`: sort array by multiple conditions. Condition can be `len(x)`, `x` #720
-5. `sorted(list, key=functools.cmp_to_key(lambda x, y: int(y+x)-int(x+y)))`: custom compare function to a list
+### Palindrome
+Efficiently find all the palindrome numbers in a range 10**9:
 
-### String
-
-1. `str.startswith(s)`: returns True if the string starts with the specified value, otherwise False
-
-### Set
-
-1. `s.add(x)`: add value x to set s. Time: O(1)
-2. `s1.update(s2)`: add set s2 to set s1. Time: O(len(s2))
-
-### Hash Table
-
-1. `Counter.most_common(num)`: return a list contains tuple.
-2. `del Counter[key]`: delete an item. or `Counter[key]=0`.
-3. `cntA+cntB`: add two counters together.
-4. `cntA-cntB`: subtract (keeping only positive counts).
-5. `cntA&cntB`: find intersection of two counters. min(cntA, cntB)
-6. `cntA|cntB`: find union of two counters. max(cntA, cntB)
-
-### Heap
-
-1. `heapq.heappush(heap, item)`: Push the value item onto the heap, maintaining the heap invariant.
-2. `heapq.heappop(heap)`: Pop and return the smallest item from the heap, maintaining the heap invariant. If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0].
-3. `heapq.heapify(x)`: Transform list x into a heap, in-place, **in linear time**.
-4. `heapq.nlargest/nsmallest(n, iterable[, key])`: Return a list with the n largest elements from the dataset defined by iterable.
+```py
+pal = []
+base = 1
+while base <= 10000: # 
+    # odd number
+    for i in range(base, base * 10):
+        x = i
+        t = i // 10
+        while t:
+            x = x * 10 + t % 10
+            t //= 10
+        pal.append(x)
+    # even number
+    if base <= 1000:
+        for i in range(base, base * 10):
+            x = t = i
+            while t:
+                x = x * 10 + t % 10
+                t //= 10
+            pal.append(x)
+    base *= 10
+pal.append(1_000_000_001)  # sentinel
+```
 
 ## Reference
 
@@ -90,3 +85,4 @@ Row: input size(IS), column: time complexity(TC)
 3. [Algorithms for Competitive Programming](https://cp-algorithms.com/)
 4. [古城算法 slides(google drive)](https://drive.google.com/drive/folders/17I-0mEeaY8X5j7RRMh0x_a2zNLu7jafq)
 5. [输入数据规模和时间复杂度的关系](https://www.youtube.com/watch?v=eG99FDBeuJo)
+6. [0x3ff-palindrome](https://leetcode.cn/problems/minimum-cost-to-make-array-equalindromic/solutions/2569308/yu-chu-li-hui-wen-shu-zhong-wei-shu-tan-7j0zy/)

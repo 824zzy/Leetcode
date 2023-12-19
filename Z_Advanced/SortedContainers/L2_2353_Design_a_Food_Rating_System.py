@@ -1,7 +1,8 @@
 """ https://leetcode.com/problems/design-a-food-rating-system/
-complexy but not hard to implement.
+complex but not hard to implement.
 """
-from sortedcontainers import SortedList
+from header import *
+
 class FoodRatings:
     def __init__(self, foods: List[str], cuisines: List[str], ratings: List[int]):
         self.f2c = {f:c for f, c in zip(foods, cuisines)}

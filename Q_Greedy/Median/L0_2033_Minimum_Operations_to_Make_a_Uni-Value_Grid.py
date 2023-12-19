@@ -1,6 +1,8 @@
-""" L1: https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid
-Find the second medium
+""" https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid
+Find the median
 """
+from header import *
+
 class Solution:
     def minOperations(self, A: List[List[int]], x: int) -> int:
         M, N = len(A), len(A[0])

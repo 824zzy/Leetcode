@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/valid-anagram/
 count or sorted characters 
 """
+from header import *
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         return Counter(s)==Counter(t)
