@@ -1,7 +1,9 @@
 """ https://leetcode.com/problems/smallest-string-with-swaps/
 union find+hash table
-use DSU to find character's group and contruct result by hashtable
+use DSU to find character's group and construct result by hash table
 """
+from header import *
+
 class DSU:
     def __init__(self, n):
         self.p = [i for i in range(n)]
@@ -22,5 +24,4 @@ class Solution:
         M = defaultdict(list)
         for i in range(len(s)): M[dsu.find(i)].append(s[i])
         for k, v in M.items(): M[k] = sorted(v)
-        ans = []
         return ''.join([M[p].pop(0) for p in dsu.p])
