@@ -15,6 +15,24 @@ class Solution:
             return ans
         
         return dp(0)
+    
+
+# top down without integer conversion
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        @cache
+        def dp(i):
+            if i==len(s):
+                return 1
+            if s[i]=='0':
+                return 0
+            ans = dp(i+1)
+            if i+1<len(s):
+                if s[i]=='1' and s[i+1] in '0123456789' or s[i]=='2' and s[i+1] in '0123456':
+                    ans += dp(i+2)
+            return ans
+        return dp(0)
+
 
 # bottom up
 class Solution:

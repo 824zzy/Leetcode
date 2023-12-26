@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/decode-ways-ii/
+a complex sequential dp problem
+
 dp['0'] = current number of ways we could decode, ending on any number;
 dp['1'] = current number of ways we could decode, ending on an open 1;
 dp['2'] = current number of ways we could decode, ending on an open 2;
@@ -30,6 +32,40 @@ class Solution:
         return dp['0']
     
 
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        MOD = 10**9+7
+        @cache
+        def dp(i):
+            if i==len(s):
+                return 1
+            if s[i]=='0':
+                return 0
+            ans = 0
+            if s[i]=='*':
+                ans += 9*dp(i+1)
+                if i+1<len(s):
+                    if s[i+1]=='*':
+                        ans += 15*dp(i+2)
+                    else:
+                        if s[i+1] in '0123456':
+                            ans += 2*dp(i+2)
+                        else:
+                            ans += dp(i+2)
+            else:
+                ans += dp(i+1)
+                if i+1<len(s):
+                    if s[i+1]=='*':
+                        if s[i]=='1':
+                            ans += 9*dp(i+2)
+                        elif s[i]=='2':
+                            ans += 6*dp(i+2)
+                    else:
+                        if (s[i]=='1' and s[i+1] in '0123456789') or (s[i]=='2' and s[i+1] in '0123456'):
+                            ans += dp(i+2)
+            return ans%MOD
+        return dp(0)%MOD
+    
 
 class Solution:
     def numDecodings(self, s: str) -> int:

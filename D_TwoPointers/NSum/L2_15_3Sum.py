@@ -1,8 +1,31 @@
 """ https://leetcode.com/problems/3sum/
-classic 3-sum, two pointers or hash table
+1. nums[i] + nums[j] + nums[k] == 0  ==> nums[i] + nums[j] == -nums[k]
+2. sort the array
+3. for each i, use two pointers to find and update j and k
 """
 from header import *
 
+class Solution:
+    def threeSum(self, A: List[int]) -> List[List[int]]:
+        A.sort()
+        ans = []
+        n = len(A)
+        for i in range(n):
+            if i and A[i-1]==A[i]: continue # remove duplicates
+            l, r = i+1, n-1
+            while l<r:
+                if A[i]+A[l]+A[r]>0:
+                    r -= 1
+                elif A[i]+A[l]+A[r]<0:
+                    l += 1
+                else:
+                    ans.append([A[i], A[l], A[r]])
+                    l += 1
+                    while l<r and A[l-1]==A[l]: # remove duplicates
+                        l += 1
+        return ans
+    
+# use tuple to remove duplicates, which is not optimal
 class Solution:
     def threeSum(self, A: List[int]) -> List[List[int]]:
         A.sort()
@@ -23,8 +46,6 @@ class Solution:
     
 """
 non-sort solution using hash table
-nums[i] + nums[j] + nums[k] == 0
-==> nums[i] + nums[j] == -nums[k]
 """
 class Solution:
     def threeSum(self, A: List[int]) -> List[List[int]]:

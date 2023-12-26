@@ -4,6 +4,8 @@ Note that using MOD everywhere can save you a lot of time!
 
 Time: O(4*n)
 """
+from header import *
+
 class Solution:
     def countTexts(self, A: str) -> int:
         mp = set(["2", "22", "222",
