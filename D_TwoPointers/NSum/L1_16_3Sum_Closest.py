@@ -7,7 +7,7 @@ from header import *
 class Solution:
     def threeSumClosest(self, A: List[int], t: int) -> int:
         A.sort()
-        ans = float('inf')
+        ans = inf
         for i in range(len(A)):
             if i and A[i-1] == A[i]: continue
             l, r = i+1, len(A)-1

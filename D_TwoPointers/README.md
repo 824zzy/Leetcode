@@ -21,10 +21,13 @@ def twopointers(self, A: List[int]) -> int:
 
 # advanced version
 def twopointers(self, A: List[int]) -> int:
-    j = 0
+    i = 0
+    DEFINE CONTAINER
     ans = ?
-    for i in range(len(A)):
-        while LOGIC: j += 1
+    for j in range(len(A)):
+        while LOGIC: 
+            UPDATE_CONTAINER
+            i += 1
         UPDATE_answer
 ```
 

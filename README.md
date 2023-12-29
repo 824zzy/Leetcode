@@ -47,6 +47,7 @@ Row: input size(IS), column: time complexity(TC)
 7. Can I convert the problem to a other problem?
 8. "Subarray" ==> sliding window, monotonic stack/queue
 9. "Sum" ==> prefix sum
+10. "Maximum Subarray" ==> Kadane's algorithm
 
 ## Cheat sheet
 

@@ -2,6 +2,8 @@
 1. compute the frequency of -(a+b) using a Counter
 2. check if c+d in the Counter
 """
+from header import *
+
 class Solution:
     def fourSumCount(self, A: List[int], B: List[int], C: List[int], D: List[int]) -> int:
         ans = 0

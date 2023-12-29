@@ -4,6 +4,8 @@ Right pointer move left when sum is larger then target
 
 Time complexity: O(n)
 """
+from header import *
+
 class Solution:
     def twoSum(self, A: List[int], t: int) -> List[int]:
         l, r = 0, len(A)-1

@@ -16,7 +16,7 @@ class Solution:
 # bottom up do
 class Solution:
     def maxProduct(self, A: List[int]) -> int:
-        dp = [[1, 1] for i in range(len(A))]
+        dp = [[1, 1] for _ in range(len(A))]
         dp[0] = (A[0], A[0])
         for i in range(1, len(A)):
             dp[i][0] = max(A[i], dp[i-1][0]*A[i], dp[i-1][1]*A[i])

@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/count-special-quadruplets/
 brute force search quadruplets
 """
+from header import *
+
 class Solution:
     def countQuadruplets(self, A: List[int]) -> int:
         ans = 0

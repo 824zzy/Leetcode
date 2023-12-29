@@ -16,15 +16,12 @@ class Solution:
 # bottom up dp
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        if len(prices)<=1: return 0
-        
-        A = [prices[i+1]-prices[i] for i in range(len(prices)-1)]
-        dp = [0] * len(A)
+        A = [y-x for x, y in pairwise(prices)]
+        dp = [0]*len(A)
         dp[0] = A[0]
-        
         for i in range(1, len(A)):
-            dp[i] = max(dp[i-1]+A[i], A[i])
-        return max(dp+[0])
+            dp[i] = max(A[i]+dp[i-1], A[i])
+        return max(dp)
 
 
 # top down dp
@@ -51,3 +48,19 @@ class Solution:
             return max(ans, -A[i]+dp(i+1, 0)) # buy
         
         return dp(0, 1)
+    
+
+# greedily find the minimum and maximum
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        mn, mx = inf, -inf
+        A, B = [], []
+        for x, y in zip(prices, prices[::-1]):
+            mn = min(mn, x)
+            mx = max(mx, y)
+            A.append(mn)
+            B.append(mx)
+        ans = 0
+        for a, b in zip(A, B[::-1]):
+            ans = max(ans, b-a)
+        return ans

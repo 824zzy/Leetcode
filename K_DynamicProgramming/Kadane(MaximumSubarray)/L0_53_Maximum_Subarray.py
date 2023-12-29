@@ -7,7 +7,7 @@ Or use bottom up dp template:
 """
 from header import *
 
-# original kadane's alogrithm
+# original kadane's algorithm
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         ans, cur = -inf, 0
@@ -16,7 +16,7 @@ class Solution:
             ans = max(ans, cur)
         return ans
 
-# bottom-up dp kadane's alogrithm
+# bottom-up dp kadane's algorithm
 class Solution:
     def maxSubArray(self, A: List[int]) -> int:
         dp = [0] * len(A)
@@ -26,7 +26,7 @@ class Solution:
         return max(dp)
 
 
-# top-down dp kadane's alogrithm
+# top-down dp kadane's algorithm
 class Solution:
     def maxSubArray(self, A: List[int]) -> int:
         @cache
