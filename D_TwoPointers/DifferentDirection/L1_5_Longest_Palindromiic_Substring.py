@@ -14,3 +14,17 @@ class Solution:
                 l, r = l-1, r+1
             ans = max(ans, s[l+1:r], key=len)
         return ans
+    
+
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        def expand(l, r):
+            while 0<=l<=r<len(s) and s[l]==s[r]:
+                l -= 1
+                r += 1
+            return s[l+1:r]
+            
+        ans = ''
+        for i in range(len(s)):
+            ans = max(ans, expand(i, i), expand(i, i+1), key=len)
+        return ans

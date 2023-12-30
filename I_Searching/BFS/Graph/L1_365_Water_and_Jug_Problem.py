@@ -1,0 +1,32 @@
+""" https://leetcode.com/problems/water-and-jug-problem/
+define 6 operations:
+1. fill a
+2. fill b
+3. if a not full and b has water, b to a
+4. if b not full and a has water, a to b
+5. empty a
+6. empty b
+"""
+
+class Solution:
+    def canMeasureWater(self, a: int, b: int, t: int) -> bool:
+        op1 = lambda x, y, a, b: (a, y)
+        op2 = lambda x, y, a, b: (x, b)
+        op5 = lambda x, y, a, b: (0, y)
+        op6 = lambda x, y, a, b: (x, 0)
+        op3 = lambda x, y, a, b: (a+min(a-x, y), b-min(a-x, y))
+        op4 = lambda x, y, a, b: (a-min(x, b-y), b+min(x, b-y))
+        
+        Q = [(0, 0)]
+        seen = set(Q)
+        
+        while Q:
+            aa, bb = Q.pop(0)
+            if aa==t or bb==t or (aa+bb)==t:
+                return True
+            for op in (op1, op2, op3, op4, op5, op6):
+                _aa, _bb = op(aa, bb, a, b)
+                if (_aa, _bb) not in seen:
+                    seen.add((_aa, _bb))
+                    Q.append((_aa, _bb))
+        return False
