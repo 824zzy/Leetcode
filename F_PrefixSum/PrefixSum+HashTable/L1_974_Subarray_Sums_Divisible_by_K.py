@@ -7,26 +7,26 @@ from header import *
 # online solution
 class Solution:
     def subarraysDivByK(self, A: List[int], k: int) -> int:
-        seen = Counter()
-        seen[0] = 1
+        cnt = Counter()
+        cnt[0] = 1
         ans = 0
         prefix = 0
         
         for x in A:
             prefix = (prefix+x)%k
-            ans += seen[prefix]
-            seen[prefix] += 1
+            ans += cnt[prefix]
+            cnt[prefix] += 1
         return ans
 
 # offline solution
 class Solution:
     def subarraysDivByK(self, A: List[int], k: int) -> int:
         prefix = list(accumulate(A, initial=0))
-        seen = Counter()
+        cnt = Counter()
         ans = 0
         
         for x in prefix:
             x %= k 
-            ans += seen[x]
-            seen[x] += 1
+            ans += cnt[x]
+            cnt[x] += 1
         return ans
