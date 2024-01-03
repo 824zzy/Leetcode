@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/number-of-laser-beams-in-a-bank/
 simulate laser beam row by row
 """
+from header import *
+
 class Solution:
     def numberOfBeams(self, A: List[str]) -> int:
         ans = 0

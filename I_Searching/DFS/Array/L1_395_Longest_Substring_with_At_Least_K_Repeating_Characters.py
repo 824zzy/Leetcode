@@ -1,6 +1,6 @@
 """ https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/
 TODO: put it to correct place
-Essentially it is a divide and conquer problem: divde the string by characters which frequency lower than k.
+Essentially it is a divide and conquer problem: divide the string by characters which frequency lower than k.
 """
 class Solution:
     def longestSubstring(self, s: str, k: int) -> int:

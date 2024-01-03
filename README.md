@@ -39,13 +39,13 @@ Row: input size(IS), column: time complexity(TC)
 ## Trigger keywords
 
 1. What is the data size?
-2. Can I use DP?
-3. Can I sort the array to use greedy or binary search?
+2. Can I sort or group the elements?
+3. Can I use DP, greedy or binary search?
 4. Can I enumerate on specific variable?
 5. Can I use two passes?
 6. Can I solve it reversely?
 7. Can I convert the problem to a other problem?
-8. "Subarray" ==> sliding window, monotonic stack/queue, prefix sum + hash table, Kadane's algorithm
+8. If the problem mentions "Subarray", consider sliding window, monotonic stack/queue, prefix sum + hash table, Kadane's algorithm.
 
 ## Cheat sheet
 

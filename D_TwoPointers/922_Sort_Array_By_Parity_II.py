@@ -1,5 +1,5 @@
 """ L1
-simple two pointer usage
+simple usage of two pointer 
 """
 # in-place solution
 class Solution:
