@@ -1,15 +1,15 @@
 """ https://leetcode.com/problems/binary-subarrays-with-sum/
-subarray sum template
+presum[j]-presum[i] = t
+===> presum[j]-t = presum[i]
 """
 from header import *
+
 class Solution:
-    def numSubarraysWithSum(self, A: List[int], k: int) -> int:
-        seen = Counter([0])
-        prefix = 0
-        ans = 0
-        
+    def numSubarraysWithSum(self, A: List[int], t: int) -> int:
+        cnt = Counter([0])
+        ans = pre = 0
         for x in A:
-            prefix += x
-            ans += seen[prefix-k]
-            seen[prefix] += 1
+            pre += x
+            ans += cnt[pre-t]
+            cnt[pre] += 1
         return ans
