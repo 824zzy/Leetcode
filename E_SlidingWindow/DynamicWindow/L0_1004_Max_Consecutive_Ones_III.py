@@ -2,6 +2,7 @@
 sliding window template: move i when k<0
 """
 from header import *
+
 class Solution:
     def longestOnes(self, A: List[int], k: int) -> int:
         i = 0

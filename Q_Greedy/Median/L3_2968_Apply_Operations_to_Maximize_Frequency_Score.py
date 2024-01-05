@@ -1,36 +1,31 @@
 """ https://leetcode.com/problems/apply-operations-to-maximize-frequency-score/
+greedy median + prefix sum + sliding window
+
+1. prerequisite: median is the best option for the elements in an array become equal
+2. convert the problem into find a subarray that sum less than the median of subarray ==> sliding window
 """
 from header import *
 
 class Solution:
     def maxFrequencyScore(self, A: List[int], k: int) -> int:
-        def fn(x):
-            # return False if exist a subarray that length is x and elements are the sames within k ops.
-            print('--')
-            print(x)
-            for i in range(x, len(pre)):
-                if x&1:
-                    med = A[i-x//2]
-                else:
-                    med = (A[i-x//2-1] + A[i-x//2]) // 2
-                print(pre[i]-pre[i-x], med, (pre[i]-pre[i-x]) - x*med <= k)
-                if x*med - (pre[i]-pre[i-x]) <= k:
-                    return False
-            return True
+        def valid(l, r):
+            m = (l+r)//2
+            t = A[m]
             
+            left = t*(m+1-l) - (pre[m+1]-pre[l])
+            right = (pre[r+1]-pre[m]) - t*(r+1-m)
+            return left+right<=k
             
         A.sort()
-        print(A)
         pre = list(accumulate(A, initial=0))
-        print(pre)
-        l, r = 0, len(pre)
-        while l<r:
-            m = (l+r)//2
-            if fn(m):
-                r = m
-            else:
-                l = m+1
-        return l-1
+        
+        i = 0
+        ans = 0
+        for j, x in enumerate(A):
+            while not valid(i, j):
+                i += 1
+            ans = max(ans, j-i+1)
+        return ans
     
     
 """
@@ -38,4 +33,6 @@ class Solution:
 3
 [1,4,4,2,4]
 0
+[27,8,30,3,13,28,7,14,21,19,24,28,29,1,14,22,6]
+23
 """
