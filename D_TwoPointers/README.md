@@ -11,33 +11,26 @@ Same direction template:
 
 ``` py
 # basic version
-def twopointers(self, A: List[int]) -> int:
-    i = 0
-    ans = ?
-    for j in range(len(A)):
-        if LOGIC:
-            MOVE_i
-        UPDATE_answer
-
-# advanced version
-def twopointers(self, A: List[int]) -> int:
-    i = 0
-    DEFINE CONTAINER
-    ans = ?
-    for j in range(len(A)):
-        while LOGIC: 
-            UPDATE_CONTAINER
-            i += 1
-        UPDATE_answer
+i = 0
+ans = ?
+for j in range(len(A)):
+    if/while LOGIC:
+        MOVE_i
+    UPDATE_answer
+# another version
+i, j = 0, 0
+ans = ?
+while i<len(A) and j<len(A):
+    MOVE_i
+    MOVE_j
+    UPDATE_answer
 ```
 
 Different direction template:
 
 ``` py
-def twopointers(self, A: List[int]) -> int:
-    l, r = 0, len(A)-1
-    ans = 0
-    while l<=r:
-        "Logic for A and ans"
-    return ans
+l, r = 0, len(A)-1
+ans = 0
+while l<=r:
+    "Logic for A and ans"
 ```

@@ -6,14 +6,14 @@ from header import *
 class Solution:
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
         def dfs(node):
-            if not node: return 0
+            if not node:
+                return 0
+            ans = 0
+            if node.val>low:
+                ans += dfs(node.left)
+            if node.val<high:
+                ans += dfs(node.right)
             if low<=node.val<=high:
-                l = dfs(node.left)
-                r = dfs(node.right)
-                return node.val+l+r
-            elif node.val<low:
-                return dfs(node.right)
-            elif node.val>high:
-                return dfs(node.left)
-
+                ans += node.val
+            return ans
         return dfs(root)
