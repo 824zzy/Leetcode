@@ -5,16 +5,20 @@ from header import *
 
 class Solution:
     def verticalOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        ans = defaultdict(list)
+        T = defaultdict(list)
         
-        def dfs(node, vert, d):
-            if not node: return
-            ans[vert].append((d, node.val))
-            dfs(node.left, vert-1, d+1)
-            dfs(node.right, vert+1, d+1)
-            
+        def dfs(node, p, d):
+            if not node:
+                return
+            T[p].append((d, node.val))
+            dfs(node.left, p-1, d+1)
+            dfs(node.right, p+1, d+1)
         dfs(root, 0, 0)
-        return [[x[1] for x in sorted(v, key=lambda x: x[0])] for k, v in sorted(ans.items(), key=lambda x: x[0])]
+        
+        ans = []
+        for x in sorted(T.items()):
+            ans.append(y[1] for y in sorted(x[1], key=lambda x: x[0]))
+        return ans
     
 """
 [3,9,20,null,null,15,7]

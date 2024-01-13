@@ -4,15 +4,13 @@ in-order dfs traversal
 from header import *
 
 class Solution:
-    def leafSimilar(self, root1: TreeNode, root2: TreeNode) -> bool:
+    def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
         def dfs(node):
-            if not node: 
+            if not node:
                 return []
             if not node.left and not node.right:
                 return [node.val]
-            ans = []
-            ans += dfs(node.left)
-            ans += dfs(node.right)
-            return ans
-        
+            l = dfs(node.left)
+            r = dfs(node.right)
+            return l+r
         return dfs(root1)==dfs(root2)

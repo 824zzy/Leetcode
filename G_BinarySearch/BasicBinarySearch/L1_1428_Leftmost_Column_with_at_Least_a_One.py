@@ -20,3 +20,13 @@ class Solution:
         for i in range(r):
             ans[i] = fn(i)
         return min(ans) if min(ans)<c else -1
+    
+# greedy solution from top right to bottom left
+class Solution:
+    def leftMostColumnWithOne(self, M: 'BinaryMatrix') -> int:
+        R, C = M.dimensions()
+        c = C
+        for i in range(R):
+            while c-1>=0 and M.get(i, c-1):
+                c -= 1
+        return c if c!=C else -1

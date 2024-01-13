@@ -1,5 +1,5 @@
 """ https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/
-bfs to count in-degrees
+search for in-degrees
 """
 from header import *
 
@@ -21,3 +21,20 @@ class Solution:
                     seen.add(j)
                     if G[i][j]==False: ans += 1
         return ans
+    
+# dfs solution
+class Solution:
+    def minReorder(self, n: int, connections: List[List[int]]) -> int:
+        G = defaultdict(list)
+        for i, j in connections:
+            G[i].append((j, True))
+            G[j].append((i, False))
+        
+        def dfs(i, p):
+            ans = 0
+            for j, x in G[i]:
+                if j!=p:
+                    ans += x
+                    ans += dfs(j, i)
+            return ans
+        return dfs(0, -1)

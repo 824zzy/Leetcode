@@ -37,3 +37,9 @@ class NodeCopy:
         self.left = left
         self.right = right
         self.random = random
+
+class BinaryMatrix:
+    def get(self, row: int, col: int) -> int:
+        pass
+    def dimensions(self):
+        pass
