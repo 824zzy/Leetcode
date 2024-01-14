@@ -1,12 +1,12 @@
-""" https://leetcode.com/problems/numbers-with-repeated-digits/
+""" https://leetcode.com/problems/count-special-integers/
 dp with leading zero and mask
 
-the same as 357, 2376
+the same as 357, 1012
 """
 from header import *
+
 class Solution:
-    def numDupDigitsAtMostN(self, n: int) -> int:
-        total = n
+    def countSpecialNumbers(self, n: int) -> int:
         high = str(n)
         n = len(high)
         low = str(0).zfill(n)
@@ -27,4 +27,4 @@ class Solution:
                 if mask & (1<<d) == 0:
                     ans += dfs(i+1, limit_low and d==lo, limit_high and d==hi, True, mask ^ (1<<d))
             return ans
-        return total-dfs(0, True, True, False, 0)
+        return dfs(0, True, True, False, 0)

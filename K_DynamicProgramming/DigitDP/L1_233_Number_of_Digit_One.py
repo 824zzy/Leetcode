@@ -1,20 +1,26 @@
 """ https://leetcode.com/problems/number-of-digit-one/
+digits dp + counting
 """
 from header import *
 
-# 0x3ff template
+# new template
 class Solution:
     def countDigitOne(self, n: int) -> int:
-        s = str(n)
+        high = str(n)
+        n = len(high)
+        low = str(0).zfill(n)
+        
         @cache
-        def dp(i, cnt, is_limit):
-            if i==len(s): return cnt
+        def dfs(i, limit_low, limit_high, cnt):
+            if i==n:
+                return cnt
+            lo = int(low[i]) if limit_low else 0
+            hi = int(high[i]) if limit_high else 9
             ans = 0
-            up = int(s[i]) if is_limit else 9
-            for j in range(up+1):
-                ans += dp(i+1, cnt+(j==1), is_limit and j==up)
+            for d in range(lo, hi+1):
+                ans += dfs(i+1, limit_low and d==lo, limit_high and d==hi, cnt+(d==1))
             return ans
-        return dp(0, 0, True)
+        return dfs(0, True, True, 0)
 
 
 # old template

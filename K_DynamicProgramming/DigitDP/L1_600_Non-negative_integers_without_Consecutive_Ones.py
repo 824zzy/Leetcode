@@ -1,23 +1,29 @@
 """ https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/
-convert n into binary and apply the digit dp template
+digit dp which consider leading zero
+
+ensure the number has at least one 1 and previous digit is not the same
 """
 from header import *
 
 # new template
 class Solution:
     def findIntegers(self, n: int) -> int:
-        s = bin(n)[2:]
+        high = bin(n)[2:]
+        n = len(high)
         
         @cache
-        def dp(i, prev_one, is_limit):
-            if i==len(s): return 1
+        def dfs(i, limit_high, is_num, pre):
+            if i==n:
+                return is_num
             ans = 0
-            up = int(s[i]) if is_limit else 1
-            for j in range(up+1):
-                if not prev_one or (prev_one and j!=1):
-                    ans += dp(i+1, j==1, is_limit and j==up)
+            if not is_num:
+                ans += dfs(i+1, False, False, pre)
+            hi = int(high[i]) if limit_high else 1
+            for d in range(hi+1):
+                if pre!=d:
+                    ans += dfs(i+1, limit_high and d==int(high[i]), d==1, d)
             return ans
-        return dp(0, False, True)
+        return dfs(0, True, False, None)+1
 
 
 # old template

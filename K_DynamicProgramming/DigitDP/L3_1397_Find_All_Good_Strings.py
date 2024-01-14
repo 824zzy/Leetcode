@@ -2,6 +2,8 @@
 from: https://leetcode.cn/problems/find-all-good-strings/solution/by-jmy45-r5j1/
 digit DP + KMP
 """
+from header import *
+
 class Solution:
     def findGoodStrings(self, n: int, s1: str, s2: str, evil: str) -> int:
         #KMP求next
@@ -16,6 +18,7 @@ class Solution:
             if evil[i]==evil[j+1]:
                 j+=1
             ne[i]=j
+
         @cache
         def f(i: int, j: int, is_limit: bool, s: str)->int:
             if i==n:
