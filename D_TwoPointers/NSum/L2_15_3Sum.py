@@ -2,6 +2,8 @@
 1. nums[i] + nums[j] + nums[k] == 0  ==> nums[i] + nums[j] == -nums[k]
 2. sort the array
 3. for each i, use two pointers to find and update j and k
+
+The hardest part is to remove duplicates.
 """
 from header import *
 

@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/valid-palindrome/
 simulation
 """
+from header import *
+
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         sentence = ''.join(s.split()).lower()
@@ -8,7 +10,6 @@ class Solution:
         return words==words[::-1]
     
     
-from string import punctuation
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         s = s.lower()

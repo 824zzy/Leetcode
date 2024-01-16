@@ -2,7 +2,7 @@
 prefix sum + hash table
 
 (presum[j]-presum[i]) % k = 0
-==> presum[j] % k = presum[i] % k
+==> presum[j] % k = presum[i] % k, when presum[j]-presum[i] is positive
 """
 from header import *
 
@@ -13,8 +13,8 @@ class Solution:
         pre = 0
         for i, x in enumerate(A):
             pre = (pre+x)%k
-            if pre%k in cnt:
-                if i-cnt[pre%k]>1:
+            if pre in cnt:
+                if i-cnt[pre]>1:
                     return True
             cnt.setdefault(pre, i)
         return False

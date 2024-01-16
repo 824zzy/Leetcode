@@ -5,22 +5,23 @@ from header import *
 class RandomizedSet:
 
     def __init__(self):
-        self.V = []
-        self.M = {}
-        
-    def insert(self, val: int) -> bool:
-        if val in self.M: return False
-        self.M[val] = len(self.V) # len(self.V) as index
-        self.V.append(val)
-        return True
-    
-    def remove(self, val: int) -> bool:
-        if val not in self.M: return False
-        idx = self.M[val]
-        self.M[self.V[-1]] = idx
-        self.V[idx] = self.V[-1]
-        self.V.pop()
-        return True
+        self.loc = {} # val-to-index mapping
+        self.vals = []
 
+    def insert(self, val: int) -> bool:
+        if val in self.loc: return False 
+        self.loc[val] = len(self.vals)
+        self.vals.append(val)
+        return True 
+
+    def remove(self, val: int) -> bool:
+        if val not in self.loc: return False 
+        i = self.loc[val] 
+        self.loc[self.vals[-1]] = i 
+        self.loc.pop(val)
+        self.vals[i] = self.vals[-1]
+        self.vals.pop()
+        return True 
+ 
     def getRandom(self) -> int:
-        return choice(self.V)
+        return choice(self.vals)
