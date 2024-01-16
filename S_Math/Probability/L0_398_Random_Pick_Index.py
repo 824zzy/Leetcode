@@ -1,8 +1,10 @@
 """ https://leetcode.com/problems/random-pick-index/
 """
+from header import *
+
 class Solution:
     def __init__(self, nums: List[int]):
-        self.d = collections.defaultdict(list)
+        self.d = defaultdict(list)
         for i, n in enumerate(nums):
             self.d[n].append(i)
 

@@ -12,7 +12,7 @@ class LRUCache:
         if key in self.A:
             val = self.A[key]
             self.A.pop(key)
-            self.A[key] = va
+            self.A[key] = val
             return val
         else:
             return -1

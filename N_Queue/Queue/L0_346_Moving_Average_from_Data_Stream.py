@@ -1,18 +1,20 @@
 """ https://leetcode.com/problems/moving-average-from-data-stream/
 sliding window simulation using queue
 """
+from header import *
+
 class MovingAverage:
     def __init__(self, size: int):
         self.sm = 0
-        self.W = []
+        self.sw = deque()
         self.size = size
 
     def next(self, val: int) -> float:
-        self.W.append(val)
-        if len(self.W)>self.size:
-            self.sm -= self.W.pop(0)
+        self.sw.append(val)
+        if len(self.sw)>self.size:
+            self.sm -= self.sw.popleft()
         self.sm += val
-        return self.sm/(len(self.W))
+        return self.sm/len(self.sw)
         
 
 

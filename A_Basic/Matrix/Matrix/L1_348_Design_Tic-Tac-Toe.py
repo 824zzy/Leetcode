@@ -4,23 +4,24 @@
 """
 class TicTacToe:
     def __init__(self, n: int):
+        self.rows = [[0, 0] for _ in range(n)]
+        self.cols = [[0, 0] for _ in range(n)]
+        self.dig = [0, 0]
+        self.rev_dig = [0, 0]
         self.n = n
-        self.P = {
-            1: [[0 for _ in range(n)] for _ in range(2)]+[[0, 0]],
-            2: [[0 for _ in range(n)] for _ in range(2)]+[[0, 0]]
-        }
-
-    def move(self, r: int, c: int, p: int) -> int:
-        R, C, D = self.P[p]
-        R[r] += 1
-        C[c] += 1
-        if r==c: D[0] += 1
-        if r+c==self.n-1: D[1] += 1
         
-        if R[r]==self.n or C[c]==self.n or D[0]==self.n or D[1]==self.n:
-            return p
-        else:
-            return 0
+    def move(self, row: int, col: int, player: int) -> int:
+        p = player-1
+        self.rows[row][p] += 1
+        self.cols[col][p] += 1
+        if row==col:
+            self.dig[p] += 1
+        if row+col==self.n-1:
+            self.rev_dig[p] += 1
+        if any(x==self.n for x in (self.rows[row][p], self.cols[col][p], self.dig[p], self.rev_dig[p])):
+            return player
+        return 0
+    
 """
 ["TicTacToe","move","move","move","move","move","move","move"]
 [[3],[0,0,1],[0,2,2],[2,2,1],[1,1,2],[2,0,1],[1,0,2],[2,1,1]]

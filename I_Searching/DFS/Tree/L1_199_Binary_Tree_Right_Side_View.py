@@ -3,6 +3,8 @@ level order traversal using dfs
 
 Time complexity: O(n)
 """
+from header import *
+
 # Only save right most node into ans. Space complexity: O(1)
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
@@ -20,7 +22,7 @@ class Solution:
 # Record every level of nodes in ans. Space complexity: O(n)
 class Solution:
     def rightSideView(self, root: TreeNode) -> List[int]:
-        ans = collections.defaultdict(list)
+        ans = defaultdict(list)
         
         def dfs(node, d):
             if not node: return

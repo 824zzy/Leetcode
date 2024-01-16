@@ -3,11 +3,18 @@
 **LCA template**:
 
 ``` py
-def lca(node): 
+def dfs(node):
     """Return lowest common ancestor of start and dest nodes."""
-    if not node or node.val in (startValue , destValue): return node 
-    left, right = lca(node.left), lca(node.right)
-    return node if left and right else left or right
+    if not node:
+        return None
+    if node==p or node==q:
+        return node
+    l = dfs(node.left)
+    r = dfs(node.right)
+    if l and r:
+        return node
+    return l or r
+return dfs(root)
 ```
 
 ## Binary Lifting

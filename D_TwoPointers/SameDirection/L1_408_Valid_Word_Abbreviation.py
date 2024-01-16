@@ -1,7 +1,5 @@
 """ https://leetcode.com/problems/valid-word-abbreviation/
-two pointers + simulation
-
-very tricky problem
+two pointers + categorization
 """
 class Solution:
     def validWordAbbreviation(self, s: str, abbr: str) -> bool:
@@ -25,30 +23,22 @@ class Solution:
 # string construction and comparison
 class Solution:
     def validWordAbbreviation(self, s: str, abbr: str) -> bool:
-        D = "". join(["*" if not c.isdigit() else c for c in abbr]).replace("*", ' ').split()
-        C = "". join(["*" if c.isdigit() else c for c in abbr]).replace("*", ' ').split()
-        _s = ''
-        if abbr[0].isdigit():
-            while C or D:
-                if D:
-                    d = D.pop(0)
-                    if d[0]=='0' or int(d)>20: return False
-                    _s += "*"*(int(d))
-                if C:
-                    _s += C.pop(0)
-        else:
-            while C or D:
-                if C:
-                    _s += C.pop(0)
-                if D:
-                    d = D.pop(0)
-                    if d[0]=='0' or int(d)>20: return False
-                    _s += "*"*(int(d))
-        if len(s)!=len(_s): return False
-        for x, y in zip(s, _s):
-            if y=="*": continue
-            if x!=y: return False
-        return True
+        i = 0
+        n = 0
+        for j in range(len(abbr)):
+            if abbr[j].isalpha():
+                if n:
+                    i += n
+                    n = 0
+                if i<len(s) and s[i]!=abbr[j]:
+                    return False
+                else:
+                    i += 1
+            elif abbr[j].isdigit():
+                if n==0 and abbr[j]=='0': 
+                    return False
+                n = n*10+int(abbr[j])
+        return (i+n)==len(s)
                 
                          
                 

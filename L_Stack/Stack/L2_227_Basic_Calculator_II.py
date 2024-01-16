@@ -1,66 +1,11 @@
 """ https://leetcode.com/problems/basic-calculator-ii/
-it is not easy due to the implementation of the stack
+1. use op and val to store the current operator and value
+2. use stack to store the previous value
 
+it is not easy due to the implementation of the stack
 """
 from header import *
 
-# maintain two stacks: operation stack and number stack
-class Solution:
-    def calculate(self, s: str) -> int:      
-        s = s.replace(' ', '')
-        i = 0
-        num_stk = []
-        op_stk = []
-        ops = {'+': add, '-': sub, '*': mul, '/': floordiv}
-        while i<len(s):
-            if s[i] in '+-*/':
-                op_stk.append(s[i])
-                i += 1
-            else:
-                tmp = ''
-                while i<len(s) and s[i].isnumeric():
-                    tmp += s[i]
-                    i += 1
-                num_stk.append(tmp)
-                while op_stk and op_stk[-1] in '*/':
-                    y = num_stk.pop()
-                    x = num_stk.pop()
-                    num_stk.append(str(ops[op_stk.pop()](int(x), int(y))))
-        
-        
-        op_stk = op_stk[::-1]
-        num_stk = num_stk[::-1]
-        while op_stk:
-            x = num_stk.pop()
-            y = num_stk.pop()
-            num_stk.append(str(ops[op_stk.pop()](int(x), int(y))))
-        return int(num_stk[0])
-
-
-# solution from others using only one stack
-class Solution:
-    def calculate(self, s: str) -> int:
-        s = s.replace(' ', '')
-        for sp in ['+', '-', '*', '/']:
-            s = s.replace(sp, ' '+sp+' ')
-        s = s.split(' ')
-        s = ['+'] + s
-        stk = []
-        for i, c in enumerate(s):
-            if c=='+':
-                stk.append(int(s[i+1]))
-            elif c=='-':
-                stk.append(-int(s[i+1]))
-            elif c=='*':
-                n1 = int(stk.pop())
-                n2 = int(s[i+1])
-                stk.append(n1*n2)
-            elif c=='/':
-                n1 = int(stk.pop())
-                n2 = int(s[i+1])
-                stk.append(n1//n2)
-        return sum(stk)
-    
 # another solution from others using only one stack
 class Solution:
     def calculate(self, s: str) -> int:
@@ -76,3 +21,40 @@ class Solution:
                 elif op == "/": stack.append(int(stack.pop()/val))
                 op, val = x, 0 #reset 
         return sum(stack)
+    
+
+# maintain two stacks: operation stack and number stack
+class Solution:
+    def calculate(self, s: str) -> int:
+        def compute(x, y, op):
+            if op=='+': return x+y
+            if op=='-': return x-y
+            if op=='*': return x*y
+            if op=='/': return x//y
+        
+        s += '+'
+        n_stk = []
+        op_stk = []
+        n = ''
+        for i, c in enumerate(s):
+            if c.isdigit():
+                n += c
+            if c in '+-*/':
+                if op_stk and op_stk[-1] in '*/':
+                    y = int(n)
+                    op = op_stk.pop()
+                    x = n_stk.pop()
+                    n_stk.append(compute(x, y, op))
+                    op_stk.append(c)
+                else:
+                    n_stk.append(int(n))
+                    if i!=len(s)-1:
+                        op_stk.append(c)
+                n = ''
+            
+        ans = n_stk.pop(0)
+        while n_stk and op_stk:
+            y = n_stk.pop(0)
+            op = op_stk.pop(0)
+            ans = compute(ans, y, op)
+        return ans

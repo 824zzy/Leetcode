@@ -1,4 +1,5 @@
-""" Facebook
+""" https://leetcode.com/problems/valid-palindrome/
+simulation
 """
 class Solution:
     def isPalindrome(self, s: str) -> bool:

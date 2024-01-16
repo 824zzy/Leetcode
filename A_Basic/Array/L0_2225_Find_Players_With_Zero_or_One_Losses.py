@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/find-players-with-zero-or-one-losses/
+hash table + counting
+
 use hash table to add new players and count players' losses
 """
 from header import *

@@ -1,5 +1,5 @@
-""" https://leetcode.com/problems/simplify-path/submissions/
-simulate path rules by stack
+""" https://leetcode.com/problems/simplify-path/
+stack + simulation
 """
 class Solution:
     def simplifyPath(self, path: str) -> str:

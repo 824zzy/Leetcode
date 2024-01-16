@@ -1,22 +1,18 @@
 """ https://leetcode.com/problems/powx-n/
+Binary Exponentiation technique
 """
 from header import *
 
 class Solution:
-    def myPow(self, a: float, b: int) -> float:
+    def myPow(self, x: float, n: int) -> float:
         @cache
-        def dfs(x):
-            if x==0:
-                return 1
-            if x==1:
-                return a
-            if x==-1:
-                return 1/a
-            if x&1:
-                return dfs(x//2)*dfs(x//2+1)
-            else:
-                return dfs(x//2)*dfs(x//2)
-        return dfs(b)
+        def dq(n):
+            if n==0: return 1
+            if n==1: return x
+            if n==-1: return 1/x
+            if n&1: return dq(n//2)*dq(n//2+1)
+            else: return dq(n//2)*dq(n//2)
+        return dq(n)
     
 """
 2.00000

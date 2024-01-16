@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/diameter-of-binary-tree/
 return max(l, r) + 1 to find the maximal diameter for each node
 """
+from header import *
+
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         self.ans = 0
