@@ -1,4 +1,4 @@
-# Leetcode fun
+# Leetcode for fun
 
 One question a day to ensure a sharp mind.
 

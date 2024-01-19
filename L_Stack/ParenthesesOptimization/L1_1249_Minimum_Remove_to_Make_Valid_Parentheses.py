@@ -36,7 +36,6 @@ class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
         stk = []
         ans = list(s.replace('(', '*').replace(')', '*'))
-        op = 0
         for i, c in enumerate(s):
             if c not in '()':
                 continue

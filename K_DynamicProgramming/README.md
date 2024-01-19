@@ -15,21 +15,9 @@
    2. Two pass for 4 directions: 542
 3. LCS(Longest Common Subsequence)
 4. Maze: for this type of problems, it will always give you a matrix and you can only move right or down in the matrix
-5. Time sequencetial: current state is only realted to limited previous states
+5. Time sequential: current state is only related to limited previous states
 6. Time dependent: current state is related to all the previous states
 
-## Kadane's algorithm
-
-``` py
-def max_subarray(numbers):
-    """Find the largest sum of any contiguous subarray."""
-    best_sum = 0  # or: float('-inf')
-    current_sum = 0
-    for x in numbers:
-        current_sum = max(0, current_sum + x)
-        best_sum = max(best_sum, current_sum)
-    return best_sum
-```
 
 ## Reference
 
