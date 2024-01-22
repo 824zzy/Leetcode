@@ -1,3 +1,8 @@
+""" https://leetcode.com/problems/set-mismatch/
+counting
+"""
+from header import *
+
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
         cnt = [0] * (len(nums)+1)
