@@ -10,17 +10,16 @@ class LRUCache:
 
     def get(self, key: int) -> int:
         if key in self.A:
-            val = self.A[key]
-            self.A.pop(key)
-            self.A[key] = val
-            return val
+            res = self.A.pop(key)
+            self.A[key] = res
+            return res
         else:
             return -1
-        
         
     def put(self, key: int, value: int) -> None:
         if key in self.A:
             self.A.pop(key)
+        elif self.c==len(self.A):
+            self.A.pop(next(iter(self.A.keys()))) # or: self.A.pop(list(self.A.keys())[0]) but slower
         self.A[key] = value
-        if len(self.A)>self.cap:
-            self.A.pop(next(iter(self.A.keys())))
+        

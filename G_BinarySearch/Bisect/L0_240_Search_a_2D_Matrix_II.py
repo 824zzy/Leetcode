@@ -13,7 +13,7 @@ class Solution:
                 return True
         return False
         
-# start from bottom left corner and search the target
+# start from bottom left corner and greedily search the target
 # O(max(m, n))
 class Solution:
     def searchMatrix(self, A: List[List[int]], t: int) -> bool:

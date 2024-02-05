@@ -1,4 +1,5 @@
 """ https://leetcode.com/problems/first-unique-character-in-a-string/
+counting through Counter
 """
 from header import *
 class Solution:
