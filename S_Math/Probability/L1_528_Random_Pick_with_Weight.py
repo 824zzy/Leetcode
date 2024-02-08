@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/random-pick-with-weight/
 Probability == prefix sum + binary search
+
+zillow interview problem
 """
 from header import *
 
