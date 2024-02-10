@@ -32,3 +32,28 @@ class Solution:
             return ans
             
         return max([dp(i) for i in range(len(A))], key=len)
+    
+
+# knap sack solution
+"""
+knap sack:
+1. sort the array to ensure&check whether the larger element can divide the previous element
+2. for each element, we have two choice:
+    1. skip it
+    2. choose it if the current element can divide previous one
+"""
+class Solution:
+    def largestDivisibleSubset(self, A: List[int]) -> List[int]:
+        A.sort()
+        
+        @cache
+        def dp(i, pre):
+            if i==len(A):
+                return []
+            # skip
+            ans = dp(i+1, pre)
+            # choose
+            if pre==None or A[i]%pre==0:
+                ans = max(ans, [A[i]]+dp(i+1, A[i]), key=len)
+            return ans
+        return dp(0, None)
