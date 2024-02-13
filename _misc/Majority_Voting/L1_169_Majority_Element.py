@@ -5,9 +5,20 @@ from header import *
 
 class Solution:
     def majorityElement(self, A: List[int]) -> int:
-        cnt, cand = 0, None
-        for x in A:
-            if x==cand: cnt += 1
-            elif cnt==0: cand = x
-            else: cnt -= 1
+        cand, freq = None, 0
+        for i in range(len(A)):
+            if A[i]==cand:
+                freq += 1
+            else:
+                if freq==0:
+                    cand = A[i]
+                    freq = 1
+                else:
+                    freq -= 1
         return cand
+
+
+# suboptimal solution: brute force to find major element by frequency table
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        return [k for k, v in Counter(nums).items() if v>len(nums)//2][0]
