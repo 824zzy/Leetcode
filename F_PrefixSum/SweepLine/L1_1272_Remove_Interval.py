@@ -1,16 +1,36 @@
 """ https://leetcode.com/problems/remove-interval/
-greedily find valid intervals under three cases
+categorization: greedily find valid intervals under three cases
+
 time complexity: O(n)
 """
 from header import *
+
 class Solution:
-    def removeInterval(self, A: List[List[int]], removed: List[int]) -> List[List[int]]:
+    def removeInterval(self, A: List[List[int]], t: List[int]) -> List[List[int]]:
         ans = []
-        ii, jj = removed
-        for i, j in A:
-            if j<=ii or i>=jj: ans.append([i, j])
-            if i<ii<j: ans.append([i, ii])
-            if i<=jj<j: ans.append([jj, j])
+        L, R = t
+        for l, r in A:
+            """
+            [ ]
+                [  ]
+            or
+                 [  ]
+            [  ]
+            """
+            if r<=L or l>=R:
+                ans.append((l, r))
+            """
+            [  ]
+              [  ]
+            """
+            if l<L<r:
+                ans.append([l, L])
+            """
+              [   ]
+            [   ]
+            """
+            if l<=R<r:
+                ans.append([R, r])
         return ans
             
             

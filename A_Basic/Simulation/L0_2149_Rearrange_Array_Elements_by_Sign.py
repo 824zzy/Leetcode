@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/rearrange-array-elements-by-sign/
 """
+from header import *
+
 class Solution:
     def rearrangeArray(self, A: List[int]) -> List[int]:
         ans, pos, neg = [], [], []
