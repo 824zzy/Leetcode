@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/missing-number/
-Gaussian sum
+Gaussian summation
 """
+from header import *
+
 class Solution:
     def missingNumber(self, A: List[int]) -> int:
         n = len(A)
