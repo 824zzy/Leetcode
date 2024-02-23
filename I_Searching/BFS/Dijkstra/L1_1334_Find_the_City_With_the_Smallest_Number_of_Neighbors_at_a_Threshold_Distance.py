@@ -1,7 +1,8 @@
 """ https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
-Use dijkstra algorithm to find the shorest path from each point to the others.
+Use dijkstra algorithm to find the shortest path from each point to the others.
 """
-# dijkstra algorithm
+from header import *
+
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], T: int) -> int:
         e = defaultdict(dict)

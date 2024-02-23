@@ -5,18 +5,18 @@ from header import *
 
 class Solution:
     def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, k: int) -> int:
-        G = defaultdict(dict) 
-        for i, j, c in flights:
-            G[i][j] = c
-            
-        k += 1
-        Q = [(0, src, k)]
-        seen = {(0, src)}
-        while Q:
-            cost, i, k = heappop(Q)
-            if i==dst: return cost
+        G = defaultdict(dict)
+        for i, j, w in flights:
+            G[i][j] = w
+        pq = [(0, src, -1)]
+        seen = {src: (0, -1)}
+        while pq:
+            c, i, step = heappop(pq)
+            if i==dst:
+                return c
+            if step+1>k: continue
             for j in G[i]:
-                if (j, cost+G[i][j]) not in seen and k:
-                    seen.add((j, cost+G[i][j]))
-                    heappush(Q, (cost+G[i][j], j, k-1))
+                if j not in seen or c+G[i][j]<seen[j][0] or step+1<seen[j][1]:
+                    seen[j] = (c+G[i][j], step+1)
+                    heappush(pq, (c+G[i][j], j, step+1))
         return -1

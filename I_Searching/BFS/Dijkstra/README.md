@@ -17,10 +17,10 @@ for u, v, w in edges:
     G[u].append((v, w))
 
 pq = [(0, src)]
-seen = {}
+seen = {} # need to design carefully
 while pq:
     cost, i = heappop(pq)
-    if i not in seen:
+    if i not in seen: # need to design carefully
         seen[i] = cost
         for j in G[i]:
             heappush(pq, (cost+G[i][j], j))
