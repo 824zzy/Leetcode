@@ -1,6 +1,8 @@
-""" L0: https://leetcode.com/problems/squares-of-a-sorted-array/
+""" https://leetcode.com/problems/squares-of-a-sorted-array/
 find larger absolute value of two pointers
 """
+from header import *
+
 class Solution:
     def sortedSquares(self, A: List[int]) -> List[int]:
         ans = []
