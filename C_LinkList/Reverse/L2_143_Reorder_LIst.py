@@ -1,10 +1,12 @@
 """ https://leetcode.com/problems/reorder-list/
-It takes 3 steps to achive O(N) time and O(1) space for this problem.
+It takes 3 steps to achieve O(N) time and O(1) space for this problem.
 
 locate the mid-point;
 reverse the 2nd half;
 merge 1st and 2nd half.
 """
+from header import *
+
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         """

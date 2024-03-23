@@ -1,4 +1,4 @@
-# Sweep Line
+# Difference Array (Sweep Line)
 
 Note that for all interval inputs, this method should be the first intuition you come up with.
 Essentially it uses a prefix sum counter to calculate overlaps at each index.
