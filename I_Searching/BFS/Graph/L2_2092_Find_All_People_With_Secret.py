@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/find-all-people-with-secret/
 """
+from header import *
+
 class Solution:
     def findAllPeople(self, n: int, meetings: List[List[int]], firstPerson: int) -> List[int]:
         can = {0, firstPerson}
