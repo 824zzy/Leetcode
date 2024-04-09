@@ -5,10 +5,11 @@ since we only need to count substrings that grouped consecutively,
 """
 from header import *
 
+
 class Solution:
     def countBinarySubstrings(self, s: str) -> int:
         A = [len(list(v)) for k, v in groupby(s)]
         ans = 0
-        for i in range(len(A)-1):
-            ans += min(A[i], A[i+1])
+        for i in range(len(A) - 1):
+            ans += min(A[i], A[i + 1])
         return ans

@@ -3,6 +3,7 @@ find intersection using set
 """
 from header import *
 
+
 class Solution:
     def intersection(self, A: List[List[int]]) -> List[int]:
         ans = set(A[0])

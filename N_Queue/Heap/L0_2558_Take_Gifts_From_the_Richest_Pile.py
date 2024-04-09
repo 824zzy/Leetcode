@@ -4,6 +4,8 @@ greedily get maximum gift from each pile, and put back the square root of the gi
 from header import *
 
 # heapreplace is preferred for performance
+
+
 class Solution:
     def pickGifts(self, A: List[int], k: int) -> int:
         A = [-x for x in A]

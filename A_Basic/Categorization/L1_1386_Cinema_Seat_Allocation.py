@@ -13,26 +13,27 @@ Categorize into two cases:
 """
 from header import *
 
+
 class Solution:
-    def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
+    def maxNumberOfFamilies(
+            self, n: int, reservedSeats: List[List[int]]) -> int:
         mp = defaultdict(lambda: [0, 10])
         for r, x in reservedSeats:
             mp[r].append(x)
-        
-        ans = (n-len(mp))*2
+
+        ans = (n - len(mp)) * 2
         for k, v in mp.items():
             v.sort()
-            for i in range(len(v)-1):
-                l, r = v[i], v[i+1]
+            for i in range(len(v) - 1):
+                l, r = v[i], v[i + 1]
                 # two valid answer
-                if l<2 and r>9:
+                if l < 2 and r > 9:
                     ans += 2
                 # one valid answer
-                elif l<2 and r>5:
+                elif l < 2 and r > 5:
                     ans += 1
-                elif l<4 and r>7:
+                elif l < 4 and r > 7:
                     ans += 1
-                elif l<6 and r>9:
+                elif l < 6 and r > 9:
                     ans += 1
         return ans
-        

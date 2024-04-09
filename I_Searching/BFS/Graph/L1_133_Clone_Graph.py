@@ -2,10 +2,12 @@
 """
 from header import *
 
+
 class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
-        if not node: return None
-        
+        if not node:
+            return None
+
         Q = [node]
         seen = {node: Node(node.val)}
         while Q:

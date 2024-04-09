@@ -3,16 +3,17 @@ Longest increasing subsequence - like problem
 """
 from header import *
 
+
 class Solution:
     def longestIdealString(self, A: str, k: int) -> int:
-        A = [ord(x)-97 for x in A]
-        dp = [0]*26
-        
+        A = [ord(x) - 97 for x in A]
+        dp = [0] * 26
+
         for x in A:
             mx = 0
-            for y in range(max(x-k, 0), min(x+k+1, 26)):
+            for y in range(max(x - k, 0), min(x + k + 1, 26)):
                 mx = max(mx, dp[y])
-            dp[x] = mx+1
+            dp[x] = mx + 1
         return max(dp)
 
 
@@ -22,11 +23,13 @@ class Solution:
 class Solution:
     def longestIdealString(self, A: str, k: int) -> int:
         A = [ord(x) for x in A]
+
         @cache
         def dp(i, prev):
-            if i==len(A): return 0
-            ans = dp(i+1, prev)
-            if prev==None or abs(A[i]-prev)<=k: 
-                ans = max(ans, 1+dp(i+1, A[i]))
+            if i == len(A):
+                return 0
+            ans = dp(i + 1, prev)
+            if prev is None or abs(A[i] - prev) <= k:
+                ans = max(ans, 1 + dp(i + 1, A[i]))
             return ans
         return dp(0, None)

@@ -1,22 +1,26 @@
 """ https://leetcode.com/problems/meeting-rooms-iii/
 """
 from header import *
+
+
 class Solution:
     def mostBooked(self, n: int, meetings: List[List[int]]) -> int:
         meetings.sort()
         A = [(0, i, 0) for i in range(n)]
         for i, j in meetings:
             for idx, (ii, x, cnt) in enumerate(A):
-                if ii<=i: A[idx] = (0, x, cnt)
+                if ii <= i:
+                    A[idx] = (0, x, cnt)
             heapify(A)
             ii, x, cnt = heappop(A)
-            if ii<=i:
-                heappush(A, (j, x, cnt+1))
+            if ii <= i:
+                heappush(A, (j, x, cnt + 1))
             else:
-                heappush(A, (ii+(j-i), x, cnt+1))
+                heappush(A, (ii + (j - i), x, cnt + 1))
         A.sort(key=lambda x: (-x[2], x[1]))
         return A[0][1]
-    
+
+
 """ 0 1 0 0 0
 2
 [[0,10],[1,5],[2,7],[3,4]]

@@ -9,34 +9,35 @@ A special case is when A[l]==A[r], we can't tell which part is sorted, so we jus
 """
 from header import *
 
+
 class Solution:
     def search(self, A: List[int], t: int) -> int:
         def fn(m):
-            if A[l]<=A[m]: # if left part is ordered
+            if A[l] <= A[m]:  # if left part is ordered
                 # if t in left part
-                if A[l]<=t<=A[m]:
+                if A[l] <= t <= A[m]:
                     return True
                 else:
                     return False
-            elif A[l]<=t or t<=A[m]: # [6]70[1]
+            elif A[l] <= t or t <= A[m]:  # [6]70[1]
                 return True
-                
-            if A[m]<=A[r]: # if right part is ordered
+
+            if A[m] <= A[r]:  # if right part is ordered
                 # if t in right part
-                if A[m]<=t<=A[r]:
+                if A[m] <= t <= A[r]:
                     return False
                 else:
                     return True
-            elif A[m]<=t or t<=A[r]: # [6]70[1]
+            elif A[m] <= t or t <= A[r]:  # [6]70[1]
                 return False
-            
-        l, r = 0, len(A)-1
-        while l<r:
-            m = (l+r)//2
-            if A[l]==A[r]:
+
+        l, r = 0, len(A) - 1
+        while l < r:
+            m = (l + r) // 2
+            if A[l] == A[r]:
                 l += 1
             elif fn(m):
                 r = m
             else:
-                l = m+1
-        return True if l<len(A) and A[l]==t else 0
+                l = m + 1
+        return True if l < len(A) and A[l] == t else 0

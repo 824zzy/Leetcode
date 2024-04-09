@@ -3,6 +3,7 @@ https://leetcode.cn/problems/minimum-adjacent-swaps-for-k-consecutive-ones/solut
 """
 from header import *
 
+
 class Solution:
     def minMoves(self, nums: List[int], k: int) -> int:
         # TODO:

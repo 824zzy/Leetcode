@@ -3,18 +3,19 @@ sweep line to find maximum population and its year.
 """
 from header import *
 
+
 class Solution:
     def maximumPopulation(self, A: List[List[int]]) -> int:
         SL = []
         for i, j in A:
             SL.extend([(i, 1), (j, -1)])
         SL.sort()
-        
+
         cnt = 0
         ans = [-inf, inf]
         for y, x in SL:
             cnt += x
-            if cnt>ans[0]:
+            if cnt > ans[0]:
                 ans = (cnt, y)
         return ans[1]
 

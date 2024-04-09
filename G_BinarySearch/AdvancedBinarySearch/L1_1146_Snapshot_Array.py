@@ -3,11 +3,12 @@ hashmap + binary search
 """
 from header import *
 
+
 class SnapshotArray:
     def __init__(self, l: int):
         self.A = defaultdict(list)
         self.idx = 0
-        
+
     def set(self, index: int, val: int) -> None:
         self.A[index].append((self.idx, val))
 
@@ -18,9 +19,10 @@ class SnapshotArray:
 
     def get(self, index: int, snap_id: int) -> int:
         k = bisect_right(self.A[index], (snap_id, inf))
-        if k==0: return 0
-        return self.A[index][k-1][1]
-        
+        if k == 0:
+            return 0
+        return self.A[index][k - 1][1]
+
 
 """
 ["SnapshotArray","set","snap","set","get"]

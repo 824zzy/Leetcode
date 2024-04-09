@@ -7,8 +7,12 @@ type3: append current sum of nums2 to answer
 """
 from header import *
 
+
 class Solution:
-    def handleQuery(self, nums1: List[int], nums2: List[int], queries: List[List[int]]) -> List[int]:
+    def handleQuery(self,
+                    nums1: List[int],
+                    nums2: List[int],
+                    queries: List[List[int]]) -> List[int]:
         n = len(nums1)
         cnt1 = [0] * (4 * n)
         flip = [False] * (4 * n)
@@ -42,14 +46,19 @@ class Solution:
                 do(o * 2, l, m)
                 do(o * 2 + 1, m + 1, r)
                 flip[o] = False
-            if m >= L: update(o * 2, l, m, L, R)
-            if m < R: update(o * 2 + 1, m + 1, r, L, R)
+            if m >= L:
+                update(o * 2, l, m, L, R)
+            if m < R:
+                update(o * 2 + 1, m + 1, r, L, R)
             maintain(o)
 
         build(1, 1, n)
         ans, s = [], sum(nums2)
         for op, l, r in queries:
-            if op == 1: update(1, 1, n, l + 1, r + 1)
-            elif op == 2: s += l * cnt1[1]
-            else: ans.append(s)
+            if op == 1:
+                update(1, 1, n, l + 1, r + 1)
+            elif op == 2:
+                s += l * cnt1[1]
+            else:
+                ans.append(s)
         return ans

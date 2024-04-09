@@ -3,7 +3,8 @@ use zip to find all the columns and check if each column is lexicographically
 """
 from header import *
 
+
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
         cols = [list(s) for s in zip(*strs)]
-        return sum([1 for c in cols if c!=sorted(c)])
+        return sum([1 for c in cols if c != sorted(c)])

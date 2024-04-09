@@ -3,12 +3,14 @@ sort
 """
 from header import *
 
+
 class Solution:
     def areaOfMaxDiagonal(self, A: List[List[int]]) -> int:
-        A = [(a*a+b*b, a*b) for a, b in A]
+        A = [(a * a + b * b, a * b) for a, b in A]
         A.sort(reverse=True)
         return A[0][1]
-        
+
+
 """
 [[9,3],[8,6]]
 [[3,4],[4,3]]

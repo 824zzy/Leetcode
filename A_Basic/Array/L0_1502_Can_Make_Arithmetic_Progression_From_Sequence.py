@@ -3,10 +3,13 @@ sort the array
 """
 from header import *
 
+
 class Solution:
     def canMakeArithmeticProgression(self, A: List[int]) -> bool:
-        if len(A)==2: return True
+        if len(A) == 2:
+            return True
         A.sort()
-        for i in range(1, len(A)-1):
-            if A[i+1]-A[i]!=A[i]-A[i-1]: return False
+        for i in range(1, len(A) - 1):
+            if A[i + 1] - A[i] != A[i] - A[i - 1]:
+                return False
         return True

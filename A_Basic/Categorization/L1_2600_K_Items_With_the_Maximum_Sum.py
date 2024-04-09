@@ -4,16 +4,18 @@
 3. o<o+z<k<o+z+n ==> o-(k-o-z)
 """
 # categorization
+
+
 class Solution:
     def kItemsWithMaximumSum(self, o: int, z: int, n: int, k: int) -> int:
-        if k<=o:
+        if k <= o:
             return k
-        elif k<=o+z:
+        elif k <= o + z:
             return o
         else:
-            return o-(k-o-z)
-        
-        
+            return o - (k - o - z)
+
+
 # simulation
 class Solution:
     def kItemsWithMaximumSum(self, o: int, z: int, n: int, k: int) -> int:

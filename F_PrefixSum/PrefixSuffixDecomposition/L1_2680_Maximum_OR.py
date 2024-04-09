@@ -4,15 +4,16 @@
 """
 from header import *
 
+
 class Solution:
     def maximumOr(self, A: List[int], k: int) -> int:
         suf = [0] * len(A)
-        for i in range(len(A)-2, -1, -1):
-            suf[i] = suf[i+1] | A[i+1]
-            
+        for i in range(len(A) - 2, -1, -1):
+            suf[i] = suf[i + 1] | A[i + 1]
+
         ans = 0
         pre = 0
         for i in range(len(A)):
-            ans = max(ans, pre|A[i]<<k|suf[i])
+            ans = max(ans, pre | A[i] << k | suf[i])
             pre |= A[i]
         return ans

@@ -6,12 +6,13 @@ Observation:
 """
 from header import *
 
+
 class Solution:
     def maxPalindromesAfterOperations(self, words: List[str]) -> int:
         # count pairs that can fill half of the palindrome
         cnt = Counter(c for w in words for c in w)
         pairs = sum(v // 2 for v in cnt.values())
-        
+
         # fill the strings from the shortest to the longest
         A = sorted(map(len, words))
         for i, a in enumerate(A):

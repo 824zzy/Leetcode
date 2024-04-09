@@ -3,6 +3,7 @@ greedily find the median of rows and columns
 """
 from header import *
 
+
 class Solution:
     def minTotalDistance(self, G: List[List[int]]) -> int:
         m, n = len(G), len(G[0])
@@ -10,13 +11,14 @@ class Solution:
         rows, cols = [], []
         for i in range(m):
             for j in range(n):
-                if G[i][j]==1:
+                if G[i][j] == 1:
                     rows.append(i)
                     cols.append(j)
         cols.sort()
-        t = [rows[len(rows)//2], cols[len(cols)//2]]
-        return sum(abs(t[0]-x)+abs(t[1]-y) for x, y in friends)
-    
+        t = [rows[len(rows) // 2], cols[len(cols) // 2]]
+        return sum(abs(t[0] - x) + abs(t[1] - y) for x, y in friends)
+
+
 """
 [[1,0,0,0,1],[0,0,0,0,0],[0,0,1,0,0]]
 [[1,1]]

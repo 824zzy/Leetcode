@@ -4,12 +4,14 @@
 3. It can be seen that every subarray starting from earlier than index “j” and ending at the current index has an even product.
 """
 from header import *
+
+
 class Solution:
     def evenProduct(self, A: List[int]) -> int:
         ans = 0
         cnt = 0
         for i, x in enumerate(A):
-            if x&1==0:
-                cnt = i+1
+            if x & 1 == 0:
+                cnt = i + 1
             ans += cnt
         return ans

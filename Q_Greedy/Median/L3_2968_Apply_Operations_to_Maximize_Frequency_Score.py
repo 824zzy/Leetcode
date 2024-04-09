@@ -6,28 +6,29 @@ greedy median + prefix sum + sliding window
 """
 from header import *
 
+
 class Solution:
     def maxFrequencyScore(self, A: List[int], k: int) -> int:
         def valid(l, r):
-            m = (l+r)//2
+            m = (l + r) // 2
             t = A[m]
-            
-            left = t*(m+1-l) - (pre[m+1]-pre[l])
-            right = (pre[r+1]-pre[m]) - t*(r+1-m)
-            return left+right<=k
-            
+
+            left = t * (m + 1 - l) - (pre[m + 1] - pre[l])
+            right = (pre[r + 1] - pre[m]) - t * (r + 1 - m)
+            return left + right <= k
+
         A.sort()
         pre = list(accumulate(A, initial=0))
-        
+
         i = 0
         ans = 0
         for j, x in enumerate(A):
             while not valid(i, j):
                 i += 1
-            ans = max(ans, j-i+1)
+            ans = max(ans, j - i + 1)
         return ans
-    
-    
+
+
 """
 [1,2,6,4]
 3

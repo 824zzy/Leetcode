@@ -7,16 +7,17 @@ count differences:
 """
 from header import *
 
+
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
         cntS, cntT = Counter(s), Counter(t)
         ans = 0
         for ks, vs in cntS.items():
-            if ks not in cntT: # find diff
+            if ks not in cntT:  # find diff
                 ans += vs
         for kt, vt in cntT.items():
-            if kt not in cntS: # find diff
+            if kt not in cntS:  # find diff
                 ans += vt
-            else: # find overlap
-                ans += abs(vt-cntS[kt])        
-        return ans//2
+            else:  # find overlap
+                ans += abs(vt - cntS[kt])
+        return ans // 2

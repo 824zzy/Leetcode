@@ -9,15 +9,16 @@ Case3: both array has zero:
 """
 from header import *
 
+
 class Solution:
     def minSum(self, A: List[int], B: List[int]) -> int:
         a, b = sum(A), sum(B)
         a0, b0 = A.count(0), B.count(0)
-        if (a0==0 and b+b0>a) or (b0==0 and a+a0>b):
+        if (a0 == 0 and b + b0 > a) or (b0 == 0 and a + a0 > b):
             return -1
-        return max(a+a0, b+b0)
-        
-        
+        return max(a + a0, b + b0)
+
+
 """
 [3,2,0,1,0]
 [6,5,0]

@@ -10,26 +10,29 @@ and ideas[j] can not pair with any idea starts with ideas[i][0].
 """
 from header import *
 
+
 class Solution:
     def distinctNames(self, ideas: List[str]) -> int:
         mp = defaultdict(set)
         for x in ideas:
             mp[x[0]].add(x[1:])
-        
+
         ans = 0
         for _, x in mp.items():
             for _, y in mp.items():
-                same = len(x&y)
-                ans += (len(x)-same) * (len(y)-same)
+                same = len(x & y)
+                ans += (len(x) - same) * (len(y) - same)
         return ans
 
 # another implementation
+
+
 class Solution:
     def distinctNames(self, ideas: List[str]) -> int:
         # Group strings by their initials
         mp = defaultdict(set)
         for x in ideas:
-            mp[ord(x[0])-97].add(x[1:])
+            mp[ord(x[0]) - 97].add(x[1:])
 
         ans = 0
         # Calculate number of valid names from every initial pair.

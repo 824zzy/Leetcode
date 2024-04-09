@@ -3,6 +3,7 @@ grouping + greedy median + bezout's
 """
 from header import *
 
+
 class Solution:
     def makeSubKSumEqual(self, arr: List[int], k: int) -> int:
         # bezout's lemma to find repeat cycle length
@@ -15,7 +16,8 @@ class Solution:
             mid = b[len(b) // 2]
             ans += sum(abs(x - mid) for x in b)
         return ans
-    
+
+
 """
 [1,4,1,3]
 2

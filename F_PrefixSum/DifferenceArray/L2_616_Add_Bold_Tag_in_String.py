@@ -5,36 +5,39 @@
 """
 from header import *
 
+
 class Solution:
     def addBoldTag(self, s: str, words: List[str]) -> str:
         # build difference array
-        sl = [0] * (len(s)+1)
+        sl = [0] * (len(s) + 1)
         for i, c in enumerate(s):
             for w in words:
-                if i+len(w)<=len(s) and s[i:i+len(w)]==w:
+                if i + len(w) <= len(s) and s[i:i + len(w)] == w:
                     sl[i] += 1
-                    sl[i+len(w)] -= 1
+                    sl[i + len(w)] -= 1
         # sweep line to find intervals
         cnt = 0
         I = []
         l = None
         for i, x in enumerate(sl):
-            if cnt==0 and l==None:
+            if cnt == 0 and l is None:
                 l = i
             cnt += x
-            if cnt==0:
-                if i!=l: I.append((l, i))
+            if cnt == 0:
+                if i != l:
+                    I.append((l, i))
                 l = None
         # build answer from intervals
         ans = ''
-        I = [(0, 0)]+I+[(len(s), len(s))]
+        I = [(0, 0)] + I + [(len(s), len(s))]
         for i, (l, r) in enumerate(I):
             if i:
-                ans += s[I[i-1][1] : I[i][0]]
-            if l!=r:
-                ans += '<b>'+s[l:r]+'</b>'
+                ans += s[I[i - 1][1]: I[i][0]]
+            if l != r:
+                ans += '<b>' + s[l:r] + '</b>'
         return ans
-            
+
+
 """
 "abcxyz123"
 ["abc","123"]

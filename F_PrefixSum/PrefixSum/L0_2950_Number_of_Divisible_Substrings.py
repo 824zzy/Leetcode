@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/number-of-divisible-substrings/
 prefix sum simulation
 """
+
+
 class Solution:
     def countDivisibleSubstrings(self, A: str) -> int:
         mp = {}
@@ -13,6 +15,6 @@ class Solution:
             for j in range(i, len(A)):
                 sm += mp[A[j]]
                 l += 1
-                if sm%l==0:
+                if sm % l == 0:
                     ans += 1
         return ans

@@ -2,24 +2,30 @@
 """
 from header import *
 
+
 class Solution:
     def insert(self, head: 'Optional[Node]', insertVal: int) -> 'Node':
-        if not head: 
+        if not head:
             ans = Node(val=insertVal)
             ans.next = ans
             return ans
-        
+
         pre, node = head, head.next
         while True:
-            if pre.val <= insertVal <= node.val: break 
-            if pre.val > node.val and (insertVal < node.val or pre.val < insertVal): break
+            if pre.val <= insertVal <= node.val:
+                break
+            if pre.val > node.val and (
+                    insertVal < node.val or pre.val < insertVal):
+                break
             pre, node = pre.next, node.next
-            if pre==head: break
+            if pre == head:
+                break
         tmp = Node(insertVal)
         pre.next = tmp
         tmp.next = node
         return head
-    
+
+
 """
 [3,4,1]
 2

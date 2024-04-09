@@ -6,14 +6,15 @@ From the highest bit to the lowest bit:
 """
 from header import *
 
+
 class Solution:
     def findMaximumXOR(self, nums: List[int]) -> int:
         ans = 0
         for i in reversed(range(32)):
             ans <<= 1
-            prefixes = {x>>i for x in nums}
+            prefixes = {x >> i for x in nums}
             for p in prefixes:
-                if ans^1^p in prefixes:
+                if ans ^ 1 ^ p in prefixes:
                     ans += 1
                     break
         return ans

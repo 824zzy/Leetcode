@@ -7,9 +7,11 @@ It is easier to treat the problem as a graph problem:
 """
 from header import *
 
+
 class Solution:
     def amountOfTime(self, root: Optional[TreeNode], start: int) -> int:
         G = defaultdict(list)
+
         def dfs(node):
             if node.left:
                 G[node.val].append(node.left.val)
@@ -20,7 +22,7 @@ class Solution:
                 G[node.right.val].append(node.val)
                 dfs(node.right)
         dfs(root)
-        
+
         Q = [start]
         seen = {start}
         ans = 0
@@ -33,4 +35,4 @@ class Solution:
                         nxtQ.append(j)
             Q = nxtQ
             ans += 1
-        return ans-1
+        return ans - 1

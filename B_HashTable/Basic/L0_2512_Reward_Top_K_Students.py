@@ -3,8 +3,15 @@ implementation problem
 """
 from header import *
 
+
 class Solution:
-    def topStudents(self, P: List[str], N: List[str], R: List[str], IDs: List[int], k: int) -> List[int]:
+    def topStudents(
+            self,
+            P: List[str],
+            N: List[str],
+            R: List[str],
+            IDs: List[int],
+            k: int) -> List[int]:
         P, N = set(P), set(N)
         mp = Counter()
         for r, i in zip(R, IDs):
@@ -14,5 +21,6 @@ class Solution:
                     x += 3
                 elif w in N:
                     x -= 1
-            mp[i] = x        
-        return [x[0] for x in sorted(mp.items(), key=lambda x: (-x[1], x[0]))[:k]]
+            mp[i] = x
+        return [x[0]
+                for x in sorted(mp.items(), key=lambda x: (-x[1], x[0]))[:k]]

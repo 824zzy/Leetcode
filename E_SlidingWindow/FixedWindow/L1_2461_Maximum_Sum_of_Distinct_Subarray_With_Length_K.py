@@ -4,6 +4,7 @@
 """
 from header import *
 
+
 class Solution:
     def maximumSubarraySum(self, A: List[int], k: int) -> int:
         seen = set()
@@ -13,17 +14,16 @@ class Solution:
             if A[i] not in seen:
                 sm += A[i]
                 seen.add(A[i])
-                if len(seen)==k:
+                if len(seen) == k:
                     ans = max(ans, sm)
-                    sm -= A[i-k+1]
-                    seen.remove(A[i-k+1])
+                    sm -= A[i - k + 1]
+                    seen.remove(A[i - k + 1])
             else:
                 sm = A[i]
                 seen = {A[i]}
         return ans
-                
-                
-                
+
+
 """ 15 0 24 12
 [1,5,4,2,9,9,9]
 3

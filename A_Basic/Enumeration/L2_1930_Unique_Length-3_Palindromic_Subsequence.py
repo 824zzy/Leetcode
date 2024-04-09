@@ -8,7 +8,9 @@ naive solution:
 """
 from header import *
 
-# smart solution from lee: 
+# smart solution from lee:
+
+
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
         left_most = defaultdict(lambda: inf)
@@ -19,9 +21,9 @@ class Solution:
 
         ans = 0
         for x in range(26):
-            i, j = left_most[chr(x+97)], right_most[chr(x+97)]
-            if i!=inf and j!=-inf:
-                ans += len(set(s[i+1:j]))
+            i, j = left_most[chr(x + 97)], right_most[chr(x + 97)]
+            if i != inf and j != -inf:
+                ans += len(set(s[i + 1:j]))
         return ans
 
 
@@ -31,11 +33,11 @@ class Solution:
         ans = set()
         seen = Counter()
         remain = Counter(s)
-        
+
         for c in s:
             remain[c] -= 1
             for x in ascii_lowercase:
                 if seen[x] and remain[x]:
-                    ans.add(x+c+x)
+                    ans.add(x + c + x)
             seen[c] += 1
         return len(ans)

@@ -4,10 +4,12 @@ while non-coprime pairs in stack then update it until all the pairs in stack are
 """
 from header import *
 
+
 class Solution:
     def replaceNonCoprimes(self, nums: List[int]) -> List[int]:
         stack = []
-        for x in nums: 
-            while stack and gcd(stack[-1], x) > 1: x = lcm(x, stack.pop())
+        for x in nums:
+            while stack and gcd(stack[-1], x) > 1:
+                x = lcm(x, stack.pop())
             stack.append(x)
         return stack

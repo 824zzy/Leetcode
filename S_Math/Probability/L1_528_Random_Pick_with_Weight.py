@@ -5,6 +5,7 @@ zillow interview problem
 """
 from header import *
 
+
 class Solution:
     def __init__(self, w: List[int]):
         self.prefix = list(accumulate(w))

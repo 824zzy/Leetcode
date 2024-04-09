@@ -1,8 +1,9 @@
 """ https://leetcode.com/problems/contiguous-array/
-consider 0 as -1: 
+consider 0 as -1:
     presum[j]-presum[i] = 0 ===> presum[j] = presum[i]
 """
 from header import *
+
 
 class Solution:
     def findMaxLength(self, A: List[int]) -> int:
@@ -16,6 +17,6 @@ class Solution:
             else:
                 pre += 1
             if pre in cnt:
-                ans = max(ans, i-cnt[pre])
+                ans = max(ans, i - cnt[pre])
             cnt.setdefault(pre, i)
         return ans

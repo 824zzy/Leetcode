@@ -4,6 +4,8 @@ Greedy by 3 rules:
 2. If we have even number of negatives, we can turn all negatives into positives.
 3. Otherwise, we turn the smallest absolute value into a negative, and everything else - into positives.
 """
+
+
 class Solution:
     def maxMatrixSum(self, A: List[List[int]]) -> int:
         negs = []
@@ -12,16 +14,19 @@ class Solution:
         mn = inf
         for i in range(len(A)):
             for j in range(len(A[0])):
-                if A[i][j]==0: zeros += 1
-                elif A[i][j]<0: negs.append(A[i][j])
+                if A[i][j] == 0:
+                    zeros += 1
+                elif A[i][j] < 0:
+                    negs.append(A[i][j])
                 sm += abs(A[i][j])
                 mn = min(A[i][j], mn, key=abs)
-        
-        if not max(len(negs)-zeros, 0)&1:
+
+        if not max(len(negs) - zeros, 0) & 1:
             return sm
         else:
-            return sm-2*mn
-        
+            return sm - 2 * mn
+
+
 """
 [[1,-1],[-1,1]]
 [[1,2,3],[-1,-2,-3],[1,2,3]]

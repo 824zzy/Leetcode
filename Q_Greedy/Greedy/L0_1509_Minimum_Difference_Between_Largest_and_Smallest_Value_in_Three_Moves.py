@@ -3,16 +3,18 @@ greedily enumerate all possible cases
 """
 from header import *
 
+
 class Solution:
     def minDifference(self, A: List[int]) -> int:
-        if len(A)<=4: return 0
+        if len(A) <= 4:
+            return 0
         A.sort()
         ans = inf
         for i in range(4):
-            ans = min(ans, A[-4+i]-A[i])
+            ans = min(ans, A[-4 + i] - A[i])
         return ans
-    
-    
+
+
 """
 [5,3,2,4]
 [1,5,0,10,14]

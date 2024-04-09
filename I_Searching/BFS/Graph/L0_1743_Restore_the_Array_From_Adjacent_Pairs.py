@@ -3,6 +3,7 @@ build graph and do BFS
 """
 from header import *
 
+
 class Solution:
     def restoreArray(self, adjacentPairs: List[List[int]]) -> List[int]:
         G = defaultdict(list)
@@ -11,7 +12,7 @@ class Solution:
             G[i].append(j)
             G[j].append(i)
 
-        i = next(i for i, x in G.items() if len(x)==1)
+        i = next(i for i, x in G.items() if len(x) == 1)
         Q = [i]
         ans = [i]
         seen = {i}

@@ -3,6 +3,7 @@ sliding window simulation using queue
 """
 from header import *
 
+
 class MovingAverage:
     def __init__(self, size: int):
         self.sm = 0
@@ -11,11 +12,10 @@ class MovingAverage:
 
     def next(self, val: int) -> float:
         self.sw.append(val)
-        if len(self.sw)>self.size:
+        if len(self.sw) > self.size:
             self.sm -= self.sw.popleft()
         self.sm += val
-        return self.sm/len(self.sw)
-        
+        return self.sm / len(self.sw)
 
 
 # Your MovingAverage object will be instantiated and called as such:

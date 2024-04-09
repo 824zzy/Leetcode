@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/find-median-from-data-stream/
 """
+
+
 class MedianFinder:
     def __init__(self):
         self.minHeap = []

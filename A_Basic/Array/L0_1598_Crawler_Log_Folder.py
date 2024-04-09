@@ -2,10 +2,10 @@ class Solution:
     def minOperations(self, logs: List[str]) -> int:
         ans = 0
         for l in logs:
-            if l=='../':
-                if ans>0:
+            if l == '../':
+                if ans > 0:
                     ans -= 1
-            elif l=='./':
+            elif l == './':
                 continue
             else:
                 ans += 1

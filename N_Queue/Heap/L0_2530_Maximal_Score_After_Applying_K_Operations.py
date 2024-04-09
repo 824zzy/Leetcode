@@ -3,6 +3,7 @@ simulate by heap
 """
 from header import *
 
+
 class Solution:
     def maxkelements(self, A: List[int], k: int) -> int:
         A = [-x for x in A]
@@ -11,5 +12,5 @@ class Solution:
         for _ in range(k):
             x = heappop(A)
             ans -= x
-            heappush(A, floor(x/3))
+            heappush(A, floor(x / 3))
         return ans

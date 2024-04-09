@@ -5,6 +5,7 @@ greedily use two pointers to:
 """
 from header import *
 
+
 class Solution:
     def minCost(self, S: str, T: List[int]) -> int:
         i = 0
@@ -12,19 +13,17 @@ class Solution:
         mx = 0
         ans = 0
         for j in range(len(S)):
-            while i<len(S) and S[i]==S[j]:
+            while i < len(S) and S[i] == S[j]:
                 sm += T[i]
                 mx = max(mx, T[i])
                 i += 1
-            if sm-mx:
-                ans += sm-mx
+            if sm - mx:
+                ans += sm - mx
             sm = 0
             mx = 0
         return ans
-            
-            
-                
-            
+
+
 """
 "abaac"
 [1,2,3,4,5]

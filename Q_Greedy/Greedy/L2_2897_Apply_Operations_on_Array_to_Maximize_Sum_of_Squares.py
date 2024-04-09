@@ -7,34 +7,27 @@ Note: trick to count bits and add 2**i to ans
 """
 from header import *
 
+
 class Solution:
     def maxSum(self, nums: List[int], k: int) -> int:
-        MOD = 10**9+7
+        MOD = 10**9 + 7
         m = max(nums).bit_length()
-        A = [0]*m
+        A = [0] * m
         for x in nums:
             for i in range(m):
-                A[i] += (x>>i) & 1
-                
+                A[i] += (x >> i) & 1
+
         ans = 0
         for _ in range(k):
-            t = 0            
+            t = 0
             for i in range(len(A)):
                 if A[i]:
                     A[i] -= 1
-                    t |= 1<<i
-            ans = (ans + t*t)%MOD
-        return ans           
-                    
-                
-        
-        
-                    
-        
-        
-        
-        
-        
+                    t |= 1 << i
+            ans = (ans + t * t) % MOD
+        return ans
+
+
 """
 0010
 0110

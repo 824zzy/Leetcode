@@ -2,14 +2,15 @@
 """
 from header import *
 
+
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         ans = []
         stk = []
         node = root
-        
+
         while stk or node:
-            if node: 
+            if node:
                 ans.append(node.val)
                 stk.append(node)
                 node = node.left

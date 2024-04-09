@@ -7,25 +7,29 @@ Time complexity: O(n)
 Solution 2: brute force to find all substring
 Time complexity: O(n)
 """
+
+
 class Solution:
     def hasAllCodes(self, s: str, k: int) -> bool:
         seen = set()
         hs = 0
         for i in range(len(s)):
-            hs = hs*2+int(s[i])
-            if i>=k-1:
+            hs = hs * 2 + int(s[i])
+            if i >= k - 1:
                 seen.add(hs)
-                hs -= int(s[i-(k-1)])*2**(k-1)
-        return len(seen)==2**k
+                hs -= int(s[i - (k - 1)]) * 2**(k - 1)
+        return len(seen) == 2**k
 
 # brute force
+
+
 class Solution:
     def hasAllCodes(self, s: str, k: int) -> bool:
         seen = set()
         A = []
         for i in range(len(s)):
             A.append(s[i])
-            if i>=k-1: 
+            if i >= k - 1:
                 seen.add(tuple(A))
                 A.pop(0)
-        return len(seen)==2**k
+        return len(seen) == 2**k

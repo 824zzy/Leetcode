@@ -4,24 +4,27 @@ simulation using dfs/bfs
 from header import *
 
 # dfs
+
+
 class Solution:
     def largestValues(self, root: Optional[TreeNode]) -> List[int]:
         T = defaultdict(list)
-        
+
         def dfs(node, d):
             if not node:
                 return
             T[d].append(node.val)
-            dfs(node.left, d+1)
-            dfs(node.right, d+1)
+            dfs(node.left, d + 1)
+            dfs(node.right, d + 1)
         dfs(root, 0)
         return [sorted(v)[-1] for k, v in T.items()]
-    
+
 
 # bfs
 class Solution:
     def largestValues(self, root: Optional[TreeNode]) -> List[int]:
-        if not root: return []
+        if not root:
+            return []
         Q = [root]
         ans = []
         while Q:

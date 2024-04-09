@@ -2,24 +2,25 @@
 """
 from header import *
 
+
 class Solution:
     def minCostII(self, A: List[List[int]]) -> int:
         n = len(A)
         k = len(A[0])
+
         @cache
         def dp(i, pre):
-            if i==len(A): 
+            if i == len(A):
                 return 0
             c = inf
             for j in range(k):
-                if pre!=j:
-                    c = min(c, A[i][j]+dp(i+1, j))
+                if pre != j:
+                    c = min(c, A[i][j] + dp(i + 1, j))
             return c
-            
+
         return dp(0, -1)
-        
-        
-        
+
+
 """
 [[11,20,4,3,19,3,18,17,6,8,18,18],
  [6,14,13,4,8,12,16,4,14,15,11,12],

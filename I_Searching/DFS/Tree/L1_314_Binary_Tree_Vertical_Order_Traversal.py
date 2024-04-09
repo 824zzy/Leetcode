@@ -3,23 +3,25 @@ lots of edge cases, carefully sort the tree by vertical order and depth!
 """
 from header import *
 
+
 class Solution:
     def verticalOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         T = defaultdict(list)
-        
+
         def dfs(node, p, d):
             if not node:
                 return
             T[p].append((d, node.val))
-            dfs(node.left, p-1, d+1)
-            dfs(node.right, p+1, d+1)
+            dfs(node.left, p - 1, d + 1)
+            dfs(node.right, p + 1, d + 1)
         dfs(root, 0, 0)
-        
+
         ans = []
         for x in sorted(T.items()):
             ans.append(y[1] for y in sorted(x[1], key=lambda x: x[0]))
         return ans
-    
+
+
 """
 [3,9,20,null,null,15,7]
 [3,9,8,4,0,1,7]

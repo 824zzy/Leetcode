@@ -5,6 +5,7 @@ presum[j]-upper<=presum[i]<=presum[j]-lower
 """
 from header import *
 
+
 class Solution:
     def countRangeSum(self, nums: List[int], lower: int, upper: int) -> int:
         count, s = 0, 0

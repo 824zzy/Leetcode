@@ -7,6 +7,7 @@ class Solution:
             imap[e.id] = e.importance
             emap[e.id] = e.subordinates
         self.ans = imap[id]
+
         def dfs(subs):
             if not subs:
                 return

@@ -4,7 +4,8 @@
 """
 from header import *
 
+
 class Solution:
     def isReachable(self, x: int, y: int) -> bool:
         n = gcd(x, y)
-        return n&(n-1)==0
+        return n & (n - 1) == 0

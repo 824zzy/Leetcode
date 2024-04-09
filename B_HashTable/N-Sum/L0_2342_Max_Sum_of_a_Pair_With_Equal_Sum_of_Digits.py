@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/
 """
 # two-sum like solution
+
+
 class Solution:
     def maximumSum(self, A: List[int]) -> int:
         seen = defaultdict(int)
@@ -8,27 +10,29 @@ class Solution:
         for x in A:
             sm = sum(int(c) for c in str(x))
             if sm in seen:
-                ans = max(ans, x+seen[sm])
+                ans = max(ans, x + seen[sm])
                 seen[sm] = max(x, seen[sm])
-            else: seen[sm] = x
+            else:
+                seen[sm] = x
         return ans
 
 # straight forward solution: sort the hash table and find the max two sum
+
+
 class Solution:
     def maximumSum(self, A: List[int]) -> int:
         mp = defaultdict(list)
         for x in A:
             mp[sum([int(c) for c in str(x)])].append(x)
-        
+
         ans = -1
         for k, v in mp.items():
-            if len(v)>=2:
+            if len(v) >= 2:
                 vv = sorted(v, reverse=True)
-                ans = max(ans, vv[0]+vv[1])
+                ans = max(ans, vv[0] + vv[1])
         return ans
-            
-            
-        
+
+
 """ 54 -1 973
 [18,43,36,13,7]
 [10,12,19,14]

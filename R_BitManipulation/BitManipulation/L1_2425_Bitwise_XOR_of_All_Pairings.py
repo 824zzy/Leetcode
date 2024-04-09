@@ -5,17 +5,22 @@ There are three conditions:
 3. If one of the length is even and the other is odd, then the XOR of all pairings is the XOR of the even one.
 """
 from header import *
+from functools import reduce
+
 
 class Solution:
     def xorAllNums(self, A: List[int], B: List[int]) -> int:
-        if len(A)%2==0 and len(B)%2==0: 
+        if len(A) % 2 == 0 and len(B) % 2 == 0:
             return 0
-        if len(A)%2==1 and len(B)%2==1: 
-            return reduce(lambda a, b: a^b, A+B)
+        if len(A) % 2 == 1 and len(B) % 2 == 1:
+            return reduce(lambda a, b: a ^ b, A + B)
         else:
-            if len(A)%2==0: return reduce(lambda a, b: a^b, A)
-            else: return reduce(lambda a, b: a^b, B)
-        
+            if len(A) % 2 == 0:
+                return reduce(lambda a, b: a ^ b, A)
+            else:
+                return reduce(lambda a, b: a ^ b, B)
+
+
 """
 [2,1,3]
 [10,2,5,0]

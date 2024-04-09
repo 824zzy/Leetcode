@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/unique-email-addresses/
 Basic string usage
 """
+
+
 class Solution:
     def numUniqueEmails(self, emails: List[str]) -> int:
         seen = set()
@@ -10,5 +12,8 @@ class Solution:
             seen.add('@'.join([local, domain]))
         return len(seen)
 
+
 s = Solution()
-print(s.numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]))
+print(s.numUniqueEmails(["test.email+alex@leetcode.com",
+                         "test.e.mail+bob.cathy@leetcode.com",
+                         "testemail+david@lee.tcode.com"]))

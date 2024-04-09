@@ -2,6 +2,8 @@
 https://cp-algorithms.com/string/z-function.html
 Know it or lose it
 """
+
+
 class Solution:
     def sumScores(self, s):
         def z_function(s):
@@ -16,5 +18,5 @@ class Solution:
                 if i + z[i] - 1 > r:
                     l, r = i, i + z[i] - 1
             return z
-        
+
         return sum(z_function(s)) + len(s)

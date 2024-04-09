@@ -2,6 +2,8 @@
 Heap solution
 maintain a maximum heap by (frequency, index, value)
 """
+
+
 class FreqStack:
 
     def __init__(self):
@@ -17,5 +19,6 @@ class FreqStack:
     def pop(self) -> int:
         f, i, v = heapq.heappop(self.mfs)
         self.freq[v] -= 1
-        if self.freq[v]==0: del self.freq[v]
+        if self.freq[v] == 0:
+            del self.freq[v]
         return v

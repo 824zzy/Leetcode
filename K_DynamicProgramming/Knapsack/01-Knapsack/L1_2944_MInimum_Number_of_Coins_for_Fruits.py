@@ -2,19 +2,21 @@
 knap-sack dp
 """
 from header import *
+
+
 class Solution:
     def minimumCoins(self, A: List[int]) -> int:
         @cache
         def dp(i):
-            if i>len(A):
+            if i > len(A):
                 return 0
             ans = inf
-            for j in range(i+1, 2*i+2):
+            for j in range(i + 1, 2 * i + 2):
                 ans = min(ans, dp(j))
-            return ans+A[i-1]
+            return ans + A[i - 1]
         return dp(1)
-            
-        
+
+
 """
 [3,1,2]
 [1,10,1,1]

@@ -4,17 +4,18 @@
 """
 from header import *
 
+
 class Solution:
     def bagOfTokensScore(self, A: List[int], p: int) -> int:
         A.sort()
         res = 0
-        l, r = 0, len(A)-1
-        while l<=r:
-            while l<=r and p>=A[l]:
+        l, r = 0, len(A) - 1
+        while l <= r:
+            while l <= r and p >= A[l]:
                 p -= A[l]
                 l += 1
                 res += 1
-            if l<r and res:
+            if l < r and res:
                 p += A[r]
                 r -= 1
                 res -= 1

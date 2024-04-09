@@ -1,5 +1,7 @@
 """ TODO: https://leetcode.com/problems/constrained-subsequence-sum/discuss/597751/JavaC%2B%2BPython-O(N)-Decreasing-Deque
 """
+
+
 class Solution:
     def constrainedSubsetSum(self, A: List[int], k: int) -> int:
         deque = collections.deque()

@@ -7,36 +7,41 @@ Iterative element instead of the whole array.
 2. Given ...XXXA[XXAXX]AXX.., the answer of j should be (A[j]-A[i])*(A[k]-A[j])
                i   j   k
 """
+
+
 class Solution:
     def appealSum(self, s: str) -> int:
         mp = [[-1] for _ in range(26)]
         n = len(s)
         for i, c in enumerate(s):
-            mp[ord(c)-97].append(i)
+            mp[ord(c) - 97].append(i)
         for i in range(26):
             mp[i].append(n)
-            
+
         ans = 0
         for x in mp:
-            for i in range(1, len(x)-1):
-                ans += (x[i]-x[i-1])*(n-x[i])
+            for i in range(1, len(x) - 1):
+                ans += (x[i] - x[i - 1]) * (n - x[i])
         return ans
-    
+
 
 """ https://leetcode.com/problems/total-appeal-of-a-string/
 from lee: https://leetcode.com/problems/total-appeal-of-a-string/discuss/1996390/JavaC%2B%2BPython-Easy-and-Concise-with-Explanation
 record the increment using hash table, check the example below
 """
+
+
 class Solution:
     def appealSum(self, s: str) -> int:
         ans = 0
         sm = 0
         last = {}
         for i, c in enumerate(s):
-            sm += i-last.get(c, -1)
+            sm += i - last.get(c, -1)
             ans += sm
             last[c] = i
         return ans
+
 
 """
 abbca

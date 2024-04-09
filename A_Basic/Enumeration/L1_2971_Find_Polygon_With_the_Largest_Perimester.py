@@ -5,16 +5,17 @@ reading comprehension:
 """
 from header import *
 
+
 class Solution:
     def largestPerimeter(self, A: List[int]) -> int:
         A.sort()
         prefix = list(accumulate(A))
         for i in reversed(range(2, len(A))):
-            if prefix[i-1]>A[i]:
+            if prefix[i - 1] > A[i]:
                 return prefix[i]
         return -1
-        
-        
+
+
 """
 [5,5,5]
 [1,12,1,2,5,50,3]

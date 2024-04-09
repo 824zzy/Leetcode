@@ -3,6 +3,7 @@
 """
 from header import *
 
+
 class Solution:
     def minimumTotalDistance(self, A: List[int], F: List[List[int]]) -> int:
         A.sort()
@@ -10,15 +11,17 @@ class Solution:
 
         @cache
         def dp(i, j, k):
-            if i==len(A): return 0
-            if j==len(F): return inf
+            if i == len(A):
+                return 0
+            if j == len(F):
+                return inf
             # skip j
-            ans1 = dp(i, j+1, 0)
+            ans1 = dp(i, j + 1, 0)
             # fix i in j
-            if F[j][1]>k:
-                ans2 = dp(i+1, j, k+1)+abs(A[i]-F[j][0])
+            if F[j][1] > k:
+                ans2 = dp(i + 1, j, k + 1) + abs(A[i] - F[j][0])
             else:
                 ans2 = inf
             return min(ans1, ans2)
-        
+
         return dp(0, 0, 0)

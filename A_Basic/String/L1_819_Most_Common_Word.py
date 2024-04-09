@@ -3,6 +3,8 @@ string.punctuation
 """
 from string import punctuation
 from collections import Counter
+
+
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
         P = [c.lower() if c not in punctuation else ' ' for c in paragraph]

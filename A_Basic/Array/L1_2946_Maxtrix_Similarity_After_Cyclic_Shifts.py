@@ -3,20 +3,21 @@ don't think too much, just simulate
 """
 from header import *
 
+
 class Solution:
     def areSimilar(self, A: List[List[int]], k: int) -> bool:
         n = len(A[0])
         for i, row in enumerate(A):
             for i, x in enumerate(row):
-                if i&1:
-                    if x!=row[(i+k)%n]:
+                if i & 1:
+                    if x != row[(i + k) % n]:
                         return False
                 else:
-                    if x!=row[(i-k)%n]:
+                    if x != row[(i - k) % n]:
                         return False
         return True
-                
-    
+
+
 """
 [[1,2,1,2],[5,5,5,5],[6,3,6,3]]
 2

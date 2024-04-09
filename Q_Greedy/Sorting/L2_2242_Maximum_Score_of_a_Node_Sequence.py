@@ -8,6 +8,8 @@ The intuition is no need to enumerate all neighbors, just need to check top 3 ne
 
 Time: O(E*k^2), where E is the number of edges, k is the number of neighbors(3)
 """
+
+
 class Solution:
     def maximumScore(self, scores: List[int], edges: List[List[int]]) -> int:
         G = defaultdict(list)
@@ -16,11 +18,16 @@ class Solution:
             G[j].append([-scores[i], i])
         for k, v in G.items():
             G[k] = sorted(v)[:3]
-        
+
         ans = -1
         for i, j in edges:
             for _, ii in G[i]:
                 for _, jj in G[j]:
-                    if ii!=jj and ii!=j and jj!=i:
-                        ans = max(ans, scores[i]+scores[j]+scores[ii]+scores[jj])
+                    if ii != jj and ii != j and jj != i:
+                        ans = max(
+                            ans,
+                            scores[i] +
+                            scores[j] +
+                            scores[ii] +
+                            scores[jj])
         return ans

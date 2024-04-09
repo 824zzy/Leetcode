@@ -3,6 +3,7 @@ find distinct integers after reverse operations by a set
 """
 from header import *
 
+
 class Solution:
     def countDistinctIntegers(self, A: List[int]) -> int:
         A = set(A)

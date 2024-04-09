@@ -4,17 +4,19 @@ note that we need to return 0 if path sum of left subtree and right subtree are 
 """
 from header import *
 
+
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         self.ans = -inf
-        
+
         def dfs(node):
-            if not node: return 0
+            if not node:
+                return 0
             l = dfs(node.left)
             r = dfs(node.right)
-            self.ans = max(self.ans, l+node.val+r)
-            return max(node.val+l, node.val+r, 0)
-        
+            self.ans = max(self.ans, l + node.val + r)
+            return max(node.val + l, node.val + r, 0)
+
         dfs(root)
         return self.ans
 
@@ -25,11 +27,17 @@ class Solution:
         self.ans = -inf
 
         def dfs(node):
-            if not node: return 0
+            if not node:
+                return 0
             l = dfs(node.left)
             r = dfs(node.right)
-            self.ans = max(self.ans, node.val+l+r, node.val+l, node.val+r, node.val)
-            return max(node.val+l, node.val+r, node.val)
+            self.ans = max(
+                self.ans,
+                node.val + l + r,
+                node.val + l,
+                node.val + r,
+                node.val)
+            return max(node.val + l, node.val + r, node.val)
         dfs(root)
 
         return self.ans

@@ -10,13 +10,17 @@ dp(n, k) = dp(n, k-1) + dp(n-1, k) - dp(n-1, k-n)
 """
 from header import *
 
+
 class Solution:
     def kInversePairs(self, n: int, k: int) -> int:
-        MOD = 10**9+7
+        MOD = 10**9 + 7
+
         @cache
         def dp(n, k):
-            if k==0: return 1
-            if n<=0 or k<0: return 0
-            return (dp(n-1, k)+dp(n, k-1)-dp(n-1, k-n)) % MOD
-        
+            if k == 0:
+                return 1
+            if n <= 0 or k < 0:
+                return 0
+            return (dp(n - 1, k) + dp(n, k - 1) - dp(n - 1, k - n)) % MOD
+
         return dp(n, k) % MOD

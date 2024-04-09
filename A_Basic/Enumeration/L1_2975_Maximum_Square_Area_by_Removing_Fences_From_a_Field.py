@@ -4,24 +4,32 @@
 """
 from header import *
 
+
 class Solution:
-    def maximizeSquareArea(self, m: int, n: int, H: List[int], V: List[int]) -> int:
+    def maximizeSquareArea(
+            self,
+            m: int,
+            n: int,
+            H: List[int],
+            V: List[int]) -> int:
         H.sort()
         V.sort()
-        MOD = 10**9+7
+        MOD = 10**9 + 7
+
         def find_cand(A):
             seen = set()
             for i in range(len(A)):
-                for j in range(i+1, len(A)):
-                    seen.add(A[j]-A[i])
+                for j in range(i + 1, len(A)):
+                    seen.add(A[j] - A[i])
             return seen
-        
-        H, V = [1]+H+[m], [1]+V+[n]
+
+        H, V = [1] + H + [m], [1] + V + [n]
         A = find_cand(H)
         B = find_cand(V)
-        mx = max(A&B, default=0)
+        mx = max(A & B, default=0)
         return pow(mx, 2, MOD) if mx else -1
-        
+
+
 """
 4
 3

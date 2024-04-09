@@ -4,6 +4,7 @@ learn from 0x3f: https://leetcode.cn/problems/subarrays-distinct-element-sum-of-
 """
 from header import *
 
+
 class Solution:
     def sumCounts(self, nums: List[int]) -> int:
         n = len(nums)
@@ -30,8 +31,10 @@ class Solution:
                 todo[o] = 0
 
             res = 0
-            if L <= m: res += query_and_add1(o * 2, l, m, L, R)
-            if m < R:  res += query_and_add1(o * 2 + 1, m + 1, r, L, R)
+            if L <= m:
+                res += query_and_add1(o * 2, l, m, L, R)
+            if m < R:
+                res += query_and_add1(o * 2 + 1, m + 1, r, L, R)
             sum[o] = sum[o * 2] + sum[o * 2 + 1]
             return res
 

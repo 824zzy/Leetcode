@@ -2,23 +2,28 @@
 """
 from header import *
 
+
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
         self.ans = []
-        
+
         def dfs(node):
-            if not node: return
+            if not node:
+                return
             self.ans.append(node.val)
             for c in node.children:
                 dfs(c)
-        
+
         dfs(root)
         return self.ans
 
 # Smarter iterative solution
+
+
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
-        if not root: return []
+        if not root:
+            return []
         Q = [root]
         ans = []
         while Q:

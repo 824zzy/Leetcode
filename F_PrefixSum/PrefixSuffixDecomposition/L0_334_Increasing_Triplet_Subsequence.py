@@ -3,6 +3,7 @@ greedy + prefix suffix decomposition
 """
 from header import *
 
+
 class Solution:
     def increasingTriplet(self, A: List[int]) -> bool:
         pre = []
@@ -15,8 +16,8 @@ class Solution:
             pre.append(mn)
             suf.append(mx)
         suf.reverse()
-        
+
         for i, (p, s) in enumerate(zip(pre, suf)):
-            if p<A[i]<s:
+            if p < A[i] < s:
                 return True
         return False

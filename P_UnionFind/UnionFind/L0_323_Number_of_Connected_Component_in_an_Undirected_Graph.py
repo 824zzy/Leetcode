@@ -3,11 +3,13 @@ union find template
 """
 from header import *
 
+
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
         A = list(range(n))
+
         def find(x):
-            if A[x]!=x:
+            if A[x] != x:
                 A[x] = find(A[x])
             return A[x]
 

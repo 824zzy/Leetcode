@@ -7,5 +7,7 @@ class Solution:
             for c in w[:-1]:
                 r += c
                 cnt[r] += 1
-        if cnt: return len(wall)-cnt.most_common(1)[0][1]
-        else: return len(wall)
+        if cnt:
+            return len(wall) - cnt.most_common(1)[0][1]
+        else:
+            return len(wall)

@@ -3,6 +3,7 @@ use binary search to find the left and right boundary of the target
 """
 from header import *
 
+
 class Solution:
     def isMajorityElement(self, A: List[int], t: int) -> bool:
-        return bisect_right(A, t)-bisect_left(A, t)>len(A)//2
+        return bisect_right(A, t) - bisect_left(A, t) > len(A) // 2

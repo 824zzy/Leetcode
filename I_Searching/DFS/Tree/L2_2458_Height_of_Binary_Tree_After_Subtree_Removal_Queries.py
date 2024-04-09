@@ -7,43 +7,48 @@
 """
 from header import *
 
+
 class Solution:
-    def treeQueries(self, root: Optional[TreeNode], queries: List[int]) -> List[int]:
+    def treeQueries(
+            self,
+            root: Optional[TreeNode],
+            queries: List[int]) -> List[int]:
         node2d = {}
         d2node = defaultdict(set)
-        
+
         def dfs(node, d):
-            if not node: return 0
+            if not node:
+                return 0
             d2node[d].add(node.val)
-            l = dfs(node.left, d+1)
-            r = dfs(node.right, d+1)
+            l = dfs(node.left, d + 1)
+            r = dfs(node.right, d + 1)
             v = max(l, r)
             node2d[node.val] = (d, max(l, r))
-            return v+1
-        
+            return v + 1
+
         dfs(root, 0)
-        
+
         mp = defaultdict(list)
         for d, n in d2node.items():
             vals = []
             for nn in n:
-                vals.append((node2d[nn][0]+node2d[nn][1], nn))
+                vals.append((node2d[nn][0] + node2d[nn][1], nn))
             vals.sort(reverse=True)
             mp[d] = vals
-        
+
         ans = []
         for q in queries:
-            if len(d2node[node2d[q][0]])>1:
+            if len(d2node[node2d[q][0]]) > 1:
                 d = node2d[q][0]
-                if q!=mp[d][0][1]:
+                if q != mp[d][0][1]:
                     ans.append(mp[d][0][0])
                 else:
                     ans.append(mp[d][1][0])
             else:
-                ans.append(node2d[q][0]-1)
+                ans.append(node2d[q][0] - 1)
         return ans
-                    
-            
+
+
 """ [2] [3,2,3,2] [1,0,3,3,3]
 [1,3,4,2,null,6,5,null,null,null,null,null,7]
 [4]

@@ -6,37 +6,43 @@ A subarray has a median k if:
 """
 from header import *
 
+
 class Solution:
     def countSubarrays(self, A: List[int], k: int) -> int:
         def find(i, k):
             L = Counter()
             cnt = 0
-            for ii in reversed(range(i+1)):
-                if A[ii]<k: cnt += 1
-                else: cnt -= 1
+            for ii in reversed(range(i + 1)):
+                if A[ii] < k:
+                    cnt += 1
+                else:
+                    cnt -= 1
                 L[cnt] += 1
-            
+
             R = Counter()
             cnt = 0
             for ii in range(i, len(A)):
-                if A[ii]>k: cnt += 1
-                else: cnt -= 1
+                if A[ii] > k:
+                    cnt += 1
+                else:
+                    cnt -= 1
                 R[cnt] += 1
 
             ans = 0
             for k, v in L.items():
                 if k in R:
-                    ans += v*R[k]
-                if k+1 in R:
-                    ans += v*R[k+1]
+                    ans += v * R[k]
+                if k + 1 in R:
+                    ans += v * R[k + 1]
             return ans
-                    
+
         ans = 0
         for i in range(len(A)):
-            if A[i]==k:
+            if A[i] == k:
                 ans += find(i, k)
         return ans
-    
+
+
 """ 3 1 4
 [3,2,1,4,5]
 4

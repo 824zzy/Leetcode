@@ -3,16 +3,19 @@ copy A[j] to A[i] if A[j] is not seen yet
 """
 from header import *
 
+
 class Solution:
     def removeDuplicates(self, A: List[int]) -> int:
         i = 0
         for j in range(len(A)):
-            if i==0 or A[j]!=A[i-1]:
+            if i == 0 or A[j] != A[i - 1]:
                 A[i] = A[j]
                 i += 1
         return i
 
 # suboptimal solution
+
+
 class Solution:
     def removeDuplicates(self, A: List[int]) -> int:
         seen = set()

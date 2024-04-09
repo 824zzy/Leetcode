@@ -7,6 +7,7 @@
 """
 from header import *
 
+
 class Solution:
     def minimizeMax(self, A: List[int], p: int) -> int:
         def fn(x):
@@ -14,38 +15,38 @@ class Solution:
             # can we find less than p pairs? ==> greedy
             cnt = 0
             i = 0
-            while i<len(A):
-                j = bisect_right(A, A[i]+x)
-                if j-i<=1:
+            while i < len(A):
+                j = bisect_right(A, A[i] + x)
+                if j - i <= 1:
                     i += 1
-                a, b = divmod(j-i, 2)
+                a, b = divmod(j - i, 2)
                 cnt += a
-                i = j-b
-            return cnt>=p
-        
+                i = j - b
+            return cnt >= p
+
         def fn(x):
             # given the maximum diff x ana a sorted array
             # can we find less than p pairs? ==> greedy
             cnt = 0
             i = 0
-            while i<len(A)-1:
-                if A[i+1]-A[i]<=x:
+            while i < len(A) - 1:
+                if A[i + 1] - A[i] <= x:
                     cnt += 1
                     i += 1
                 i += 1
-            return cnt>=p
-            
+            return cnt >= p
+
         A.sort()
-        l, r = 0, A[-1]-A[0]+1
-        while l<r:
-            m = (l+r)//2
+        l, r = 0, A[-1] - A[0] + 1
+        while l < r:
+            m = (l + r) // 2
             if fn(m):
                 r = m
             else:
-                l = m+1
+                l = m + 1
         return l
-        
-        
+
+
 """
 [10,1,2,7,1,3]
 2

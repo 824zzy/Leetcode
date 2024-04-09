@@ -3,6 +3,7 @@ greedily sort + prefix sum + binary search
 """
 from header import *
 
+
 class Solution:
     def answerQueries(self, A: List[int], Q: List[int]) -> List[int]:
         A = list(accumulate(sorted(A)))

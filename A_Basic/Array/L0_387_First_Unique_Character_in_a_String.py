@@ -2,6 +2,8 @@
 counting through Counter
 """
 from header import *
+
+
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         cnt = Counter(s)

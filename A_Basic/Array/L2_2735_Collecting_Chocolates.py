@@ -4,6 +4,7 @@
 """
 from header import *
 
+
 class Solution:
     def minCost(self, nums: List[int], x: int) -> int:
         n = len(nums)
@@ -13,15 +14,15 @@ class Solution:
                 mn = min(mn, nums[j % n])
                 s[j - i] += mn
         return min(s)
-    
-    
+
+
 class Solution:
     def minCost(self, A: List[int], x: int) -> int:
         N = len(A)
         mn = A[:]
         ans = sum(A)
-        for i in range(N): # rotate i times
-            for j in range(N): # the minimum for each type
-                mn[j] = min(mn[j], A[(i+j)%N])
-            ans = min(ans, sum(mn)+i*x)
+        for i in range(N):  # rotate i times
+            for j in range(N):  # the minimum for each type
+                mn[j] = min(mn[j], A[(i + j) % N])
+            ans = min(ans, sum(mn) + i * x)
         return ans

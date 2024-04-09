@@ -5,10 +5,12 @@ keep track of head and tail of the linked list
 """
 from header import *
 
+
 class Solution:
     def treeToDoublyList(self, root: 'Optional[Node]') -> 'Optional[Node]':
-        if not root: return None
-        
+        if not root:
+            return None
+
         def dfs(node):
             head = tail = node
             if node.left:
@@ -20,7 +22,7 @@ class Solution:
                 node.right = _head
                 _head.left = node
             return head, tail
-            
+
         head, tail = dfs(root)
         head.left = tail
         tail.right = head

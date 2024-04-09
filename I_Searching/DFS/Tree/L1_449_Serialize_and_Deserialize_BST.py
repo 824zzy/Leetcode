@@ -9,9 +9,9 @@ class Codec:
             if not node:
                 return ''
             else:
-                return str(node.val)+'-'+encode(node.left)+encode(node.right)
+                return str(node.val) + '-' + \
+                    encode(node.left) + encode(node.right)
         return encode(node)
-        
 
     def deserialize(self, data: str) -> TreeNode:
         """Decodes your encoded data to tree.
@@ -19,7 +19,7 @@ class Codec:
         def insert(node, val):
             if not node:
                 return TreeNode(val)
-            if val<=node.val:
+            if val <= node.val:
                 node.left = insert(node.left, val)
             else:
                 node.right = insert(node.right, val)

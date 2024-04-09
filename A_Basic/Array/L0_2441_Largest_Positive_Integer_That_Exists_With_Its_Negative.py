@@ -3,6 +3,7 @@ linear scan to find the largest positive integer that exists with its negative b
 """
 from header import *
 
+
 class Solution:
     def findMaxK(self, A: List[int]) -> int:
         A.sort()
@@ -13,4 +14,3 @@ class Solution:
                 ans = x
             seen.add(x)
         return ans
-        

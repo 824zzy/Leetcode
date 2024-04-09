@@ -7,6 +7,7 @@ Idea from ye: https://leetcode.com/problems/count-complete-tree-nodes/discuss/70
 """
 from header import *
 
+
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
         def height(node):
@@ -15,12 +16,14 @@ class Solution:
                 h += 1
                 node = node.left
             return h
-        
+
         def dfs(node):
-            if not node: return 0
+            if not node:
+                return 0
             h = height(node)
-            if height(node.right)==h-1:
-                return 2**(h-1)+dfs(node.right)
-            else: return 2**(h-2)+dfs(node.left)
-        
+            if height(node.right) == h - 1:
+                return 2**(h - 1) + dfs(node.right)
+            else:
+                return 2**(h - 2) + dfs(node.left)
+
         return dfs(root)

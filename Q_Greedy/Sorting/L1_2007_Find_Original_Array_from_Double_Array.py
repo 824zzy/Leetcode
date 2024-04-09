@@ -4,17 +4,21 @@
 """
 from header import *
 
+
 class Solution:
     def findOriginalArray(self, A: List[int]) -> List[int]:
         cnt = Counter(A)
         ans = []
         for k in sorted(cnt):
-            if k==0:
-                if cnt[k]%2: return []
-                else: ans.extend([k]*(cnt[k]//2))
-            else:
-                if cnt[k]>cnt[2*k]: return []
+            if k == 0:
+                if cnt[k] % 2:
+                    return []
                 else:
-                    cnt[2*k] -= cnt[k]
-                    ans.extend([k]*cnt[k])
+                    ans.extend([k] * (cnt[k] // 2))
+            else:
+                if cnt[k] > cnt[2 * k]:
+                    return []
+                else:
+                    cnt[2 * k] -= cnt[k]
+                    ans.extend([k] * cnt[k])
         return ans

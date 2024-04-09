@@ -11,6 +11,7 @@ time complexity: O(n)
 """
 from header import *
 
+
 class Solution:
     def unequalTriplets(self, A: List[int]) -> int:
         mp = Counter(A)
@@ -18,6 +19,6 @@ class Solution:
         ans = 0
         for _, v in mp.items():
             r -= v
-            ans += l*v*r
+            ans += l * v * r
             l += v
         return ans

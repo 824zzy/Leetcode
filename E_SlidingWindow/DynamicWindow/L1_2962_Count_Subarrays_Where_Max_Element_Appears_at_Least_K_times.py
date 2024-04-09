@@ -3,6 +3,7 @@ convert the problem into: find the subarrays where the maximum element of nums a
 """
 from header import *
 
+
 class Solution:
     def countSubarrays(self, A: List[int], k: int) -> int:
         mx = max(A)
@@ -10,15 +11,16 @@ class Solution:
         i = 0
         cnt = 0
         ans = 0
-        
+
         for j in range(len(A)):
-            cnt += A[j]==mx
-            while cnt==k:
-                cnt -= A[i]==mx
+            cnt += A[j] == mx
+            while cnt == k:
+                cnt -= A[i] == mx
                 i += 1
-            ans += (j-i+1)
-        return n*(n+1)//2-ans
-    
+            ans += (j - i + 1)
+        return n * (n + 1) // 2 - ans
+
+
 """
 [1,3,2,3,3]
 2

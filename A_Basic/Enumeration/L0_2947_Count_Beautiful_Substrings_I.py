@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/count-beautiful-substrings-i/
 brute force
 """
+
+
 class Solution:
     def beautifulSubstrings(self, A: str, k: int) -> int:
         ans = 0
@@ -11,11 +13,11 @@ class Solution:
                     v += 1
                 else:
                     c += 1
-                if v==c and (v*c)%k==0:
+                if v == c and (v * c) % k == 0:
                     ans += 1
         return ans
-                    
-        
+
+
 """
 "baeyh"
 2

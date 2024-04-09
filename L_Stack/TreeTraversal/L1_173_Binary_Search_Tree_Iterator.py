@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/binary-search-tree-iterator/
 minor modification on the stack inorder traversal template
 """
+
+
 class BSTIterator:
     def __init__(self, root: Optional[TreeNode]):
         self.stk = []

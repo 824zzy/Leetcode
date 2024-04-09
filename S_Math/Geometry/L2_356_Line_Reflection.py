@@ -3,22 +3,23 @@ Find the center and check if the reflected points (2*avg-x) exist.
 """
 from header import *
 
+
 class Solution:
     def isReflected(self, points: List[List[int]]) -> bool:
         mp = defaultdict(set)
         for x, y in points:
             mp[y].add(x)
-            
+
         ans = set()
         for _, v in mp.items():
-            avg = sum(v)/len(v)
+            avg = sum(v) / len(v)
             for vv in v:
-                if avg*2-vv not in v:
+                if avg * 2 - vv not in v:
                     return False
             ans.add(avg)
-        return len(ans)==1
-    
-    
+        return len(ans) == 1
+
+
 """
 [[1,1],[-1,1]]
 [[1,1],[-1,-1]]

@@ -1,5 +1,7 @@
 """ Delete op like P203
 """
+
+
 class Solution(object):
     def deleteDuplicates(self, head):
         ans = pre = ListNode(float('inf'))

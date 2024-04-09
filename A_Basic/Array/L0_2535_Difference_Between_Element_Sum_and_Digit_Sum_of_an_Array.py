@@ -2,6 +2,7 @@
 """
 from header import *
 
+
 class Solution:
     def differenceOfSum(self, A: List[int]) -> int:
         a = sum(A)
@@ -9,4 +10,4 @@ class Solution:
         for x in A:
             for c in str(x):
                 b += int(c)
-        return abs(a-b)
+        return abs(a - b)

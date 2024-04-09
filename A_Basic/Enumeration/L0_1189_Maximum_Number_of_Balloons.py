@@ -3,6 +3,7 @@ enumerate "balloon" and find the minimum count of each letter in s
 """
 from header import *
 
+
 class Solution:
     def maxNumberOfBalloons(self, s: str) -> int:
         cnt = Counter(s)
@@ -12,5 +13,5 @@ class Solution:
             if k not in cnt:
                 return 0
             else:
-                ans = min(ans, cnt[k]//v)
+                ans = min(ans, cnt[k] // v)
         return ans

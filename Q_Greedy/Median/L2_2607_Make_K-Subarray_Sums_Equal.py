@@ -3,6 +3,7 @@ https://leetcode.cn/problems/make-k-subarray-sums-equal/solutions/2203591/zhuan-
 """
 from header import *
 
+
 class Solution:
     def makeSubKSumEqual(self, arr: List[int], k: int) -> int:
         # TODO:

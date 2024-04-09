@@ -2,23 +2,24 @@
 """
 from header import *
 
+
 class Solution:
     def lengthOfLongestSubsequence(self, A: List[int], t: int) -> int:
-        dp = [[0]*(t+1) for _ in range(len(A)+1)]
+        dp = [[0] * (t + 1) for _ in range(len(A) + 1)]
         for i in range(t):
             dp[-1][i] = -inf
         dp[-1][t] = 0
-        
-        for i in range(len(A)-1, -1, -1):
+
+        for i in range(len(A) - 1, -1, -1):
             for j in range(t):
                 # skip
-                ans1 = dp[i+1][j]
+                ans1 = dp[i + 1][j]
                 # choose
                 ans2 = -inf
-                if j+A[i]<=t:
-                    ans2 = 1+dp[i+1][j+A[i]]
+                if j + A[i] <= t:
+                    ans2 = 1 + dp[i + 1][j + A[i]]
                 dp[i][j] = max(ans1, ans2)
-        return dp[0][0] if dp[0][0]!=-inf else -1
+        return dp[0][0] if dp[0][0] != -inf else -1
 
 
 # top down will get memory limit exceeded
@@ -26,21 +27,22 @@ class Solution:
     def lengthOfLongestSubsequence(self, A: List[int], t: int) -> int:
         @cache
         def dp(i, sm):
-            if i==len(A):
-                if sm==t:
+            if i == len(A):
+                if sm == t:
                     return 0
                 else:
                     return -inf
             # skip
-            ans1 = dp(i+1, sm)
+            ans1 = dp(i + 1, sm)
             # choose
             ans2 = -inf
-            if sm+A[i]<=t:
-                ans2 = 1+dp(i+1, sm+A[i])
+            if sm + A[i] <= t:
+                ans2 = 1 + dp(i + 1, sm + A[i])
             return max(ans1, ans2)
         ans = dp(0, 0)
-        return ans if ans!=-inf else -1
-    
+        return ans if ans != -inf else -1
+
+
 """
 [1,2,3,4,5]
 9

@@ -3,6 +3,7 @@ simulation
 """
 from header import *
 
+
 class Solution:
     def countNegatives(self, G: List[List[int]]) -> int:
         ans = 0

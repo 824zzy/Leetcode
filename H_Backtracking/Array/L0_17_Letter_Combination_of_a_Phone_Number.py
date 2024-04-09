@@ -2,6 +2,7 @@
 """
 from header import *
 
+
 class Solution:
     def letterCombinations(self, A: str) -> List[str]:
         mp = {'2': ['a', 'b', 'c'],
@@ -14,16 +15,18 @@ class Solution:
               '9': ['w', 'x', 'y', 'z']}
         ans = []
         stk = []
-        
+
         def dfs(i):
-            if i==len(A): 
-                if stk: return ans.append(''.join(stk.copy()))
-                else: return
-                
+            if i == len(A):
+                if stk:
+                    return ans.append(''.join(stk.copy()))
+                else:
+                    return
+
             for c in mp[A[i]]:
                 stk.append(c)
-                dfs(i+1)
+                dfs(i + 1)
                 stk.pop()
-        
+
         dfs(0)
         return ans

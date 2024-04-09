@@ -6,29 +6,34 @@ Use two pass monotonic stack to compute decreasing times and check if the minima
 3. Finally check if the minimal of dec1 and dec2 less or equal to 1.
 Time complexity: O(n)
 """
+
+
 class Solution:
     def canBeIncreasing(self, A: List[int]) -> bool:
         dec1 = 0
         stk = []
         for i in range(len(A)):
-            while stk and A[stk[-1]]>=A[i]:
+            while stk and A[stk[-1]] >= A[i]:
                 stk.pop()
                 dec1 += 1
-            stk.append(i)           
-            
+            stk.append(i)
+
         dec2 = 0
-        stk = []     
+        stk = []
         for i in reversed(range(len(A))):
-            while stk and A[stk[-1]]<=A[i]:
+            while stk and A[stk[-1]] <= A[i]:
                 stk.pop()
                 dec2 += 1
             stk.append(i)
-        return min(dec1, dec2)<=1
+        return min(dec1, dec2) <= 1
 
 # brute force solution also works due to the low data size
+
+
 class Solution:
     def canBeIncreasing(self, A: List[int]) -> bool:
         for i in range(len(A)):
-            x = A[:i]+A[i+1:]
-            if x==sorted(x) and len(x)==len(set(x)): return True
+            x = A[:i] + A[i + 1:]
+            if x == sorted(x) and len(x) == len(set(x)):
+                return True
         return False

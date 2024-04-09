@@ -7,6 +7,7 @@ merge 1st and 2nd half.
 """
 from header import *
 
+
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         """
@@ -16,13 +17,12 @@ class Solution:
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
-        
+
         prev = None
         while slow:
             prev, slow.next, slow = slow, prev, slow.next
-        
+
         node = head
         while prev and prev.next:
             node.next, node = prev, node.next
             prev.next, prev = node, prev.next
-            

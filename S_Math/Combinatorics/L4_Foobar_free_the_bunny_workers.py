@@ -4,11 +4,12 @@
 """
 from itertools import combinations
 
+
 def solution(n, r):
-    key_cnts = n-r+1
+    key_cnts = n - r + 1
     ans = [[] for _ in range(n)]
     for k, v in enumerate(combinations([i for i in range(n)], key_cnts)):
-        for i in v: 
+        for i in v:
             ans[i].append(k)
     return ans
 

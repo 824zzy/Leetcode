@@ -5,12 +5,13 @@ So find longest consecutive subarray of all maximum by groupby.
 """
 from header import *
 
+
 class Solution:
     def longestSubarray(self, A: List[int]) -> int:
         mx = max(A)
         A = [[k, len(list(v))] for k, v in groupby(A)]
         ans = 0
         for k, v in A:
-            if k==mx:
+            if k == mx:
                 ans = max(v, ans)
         return ans

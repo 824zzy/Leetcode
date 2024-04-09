@@ -6,6 +6,7 @@ use two hash tables
 """
 from header import *
 
+
 class UndergroundSystem:
     def __init__(self):
         self.mp = {}
@@ -16,9 +17,10 @@ class UndergroundSystem:
 
     def checkOut(self, id: int, endStation: str, t1: int) -> None:
         startStation, t0 = self.mp.pop(id)
-        self.ans[startStation+'|'+endStation].append(self.ans[startStation+'|'+endStation][-1]+(t1-t0)) 
-        
+        self.ans[startStation + '|' + endStation].append(
+            self.ans[startStation + '|' + endStation][-1] + (t1 - t0))
+
     def getAverageTime(self, startStation: str, endStation: str) -> float:
-        x = self.ans[startStation+'|'+endStation][-1]
-        t = len(self.ans[startStation+'|'+endStation])-1
-        return x/t
+        x = self.ans[startStation + '|' + endStation][-1]
+        t = len(self.ans[startStation + '|' + endStation]) - 1
+        return x / t

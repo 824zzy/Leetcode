@@ -6,17 +6,19 @@
 from header import *
 
 # TC: O(n^2)
+
+
 class Solution:
     def threeSumSmaller(self, A: List[int], t: int) -> int:
         A.sort()
         ans = 0
-        for i in range(len(A)-1):
-            j, k = i+1, len(A)-1
-            while j<k:
-                if j<k and A[j]+A[k]>=t-A[i]:
+        for i in range(len(A) - 1):
+            j, k = i + 1, len(A) - 1
+            while j < k:
+                if j < k and A[j] + A[k] >= t - A[i]:
                     k -= 1
                 else:
-                    ans += k-j
+                    ans += k - j
                     j += 1
         return ans
 
@@ -27,18 +29,21 @@ class Solution:
 3. binary search to find the k's position
 """
 # TC: O(n^2*logn)
+
+
 class Solution:
     def threeSumSmaller(self, A: List[int], t: int) -> int:
         A.sort()
         ans = 0
         for i in range(len(A)):
-            for j in range(i+1 , len(A)):
-                kx = t-A[i]-A[j]
+            for j in range(i + 1, len(A)):
+                kx = t - A[i] - A[j]
                 k = bisect_left(A, kx)
-                if k>j:
-                    ans += k-j-1
+                if k > j:
+                    ans += k - j - 1
         return ans
-                
+
+
 """
 [-2,0,1,3]
 2

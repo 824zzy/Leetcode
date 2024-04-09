@@ -6,18 +6,20 @@ prefix sum + hash table
 """
 from header import *
 
+
 class Solution:
     def checkSubarraySum(self, A: List[int], k: int) -> bool:
         cnt = Counter()
         cnt[0] = -1
         pre = 0
         for i, x in enumerate(A):
-            pre = (pre+x)%k
+            pre = (pre + x) % k
             if pre in cnt:
-                if i-cnt[pre]>1:
+                if i - cnt[pre] > 1:
                     return True
             cnt.setdefault(pre, i)
         return False
+
 
 """
 [23,2,4,6,7]

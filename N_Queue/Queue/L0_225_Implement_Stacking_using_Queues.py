@@ -28,7 +28,7 @@ class MyStack:
         """
         Returns whether the stack is empty.
         """
-        return True if len(self.s)==0 else False
+        return True if len(self.s) == 0 else False
 
 
 # Your MyStack object will be instantiated and called as such:

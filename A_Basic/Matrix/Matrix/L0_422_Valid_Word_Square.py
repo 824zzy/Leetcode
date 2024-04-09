@@ -3,11 +3,12 @@ zip_longest
 """
 from header import *
 
+
 class Solution:
     def validWordSquare(self, A: List[str]) -> bool:
         return A == ["".join(filter(None, x)) for x in zip_longest(*A)]
-            
-    
+
+
 """
 ["abcd","bnrt","crmy","dtye"]
 ["abcd","bnrt","crm","dt"]

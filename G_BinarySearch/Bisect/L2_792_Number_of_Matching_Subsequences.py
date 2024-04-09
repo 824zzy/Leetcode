@@ -5,17 +5,22 @@
 Time complexity: O(TlogS), where T is the sum of word length and S is string length.
 
 """
+
+
 class Solution:
     def numMatchingSubseq(self, s: str, words: List[str]) -> int:
         mp = defaultdict(list)
-        for i, c in enumerate(s): mp[c].append(i)
-        
+        for i, c in enumerate(s):
+            mp[c].append(i)
+
         ans = 0
         for w in words:
             i = 0
             for c in w:
                 j = bisect_left(mp[c], i)
-                if j==len(mp[c]): break
-                i = mp[c][j]+1
-            else: ans += 1
+                if j == len(mp[c]):
+                    break
+                i = mp[c][j] + 1
+            else:
+                ans += 1
         return ans

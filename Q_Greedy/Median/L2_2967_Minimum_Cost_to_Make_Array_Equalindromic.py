@@ -7,23 +7,23 @@ from header import *
 
 cand = list(range(1, 10))
 for i in range(1, 10000):
-    cand.append(int(str(i)+str(i)[::-1]))
+    cand.append(int(str(i) + str(i)[::-1]))
     for j in range(10):
-        cand.append(int(str(i)+str(j)+str(i)[::-1]))
-cand.append(10**9+7)
+        cand.append(int(str(i) + str(j) + str(i)[::-1]))
+cand.append(10**9 + 7)
 cand.sort()
-        
+
 
 class Solution:
     def minimumCost(self, A: List[int]) -> int:
         A.sort()
-        x = A[len(A)//2]
+        x = A[len(A) // 2]
         i = bisect_left(cand, x)
-        a = cand[i-1]
+        a = cand[i - 1]
         b = cand[i]
-        return min(sum(abs(x-a) for x in A), sum(abs(x-b) for x in A))
-    
-    
+        return min(sum(abs(x - a) for x in A), sum(abs(x - b) for x in A))
+
+
 """
 [1,2,3,4,5]
 [10,12,13,14,15]

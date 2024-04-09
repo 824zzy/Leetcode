@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/encode-and-decode-tinyurl/
 """
+
+
 class Codec:
     def __init__(self):
         self.hash = {}
@@ -10,7 +12,7 @@ class Codec:
         """
         self.cnt += 1
         self.hash[str(self.cnt)] = longUrl
-        return "http://tinyurl.com/"+str(self.cnt)
+        return "http://tinyurl.com/" + str(self.cnt)
 
     def decode(self, shortUrl: str) -> str:
         """Decodes a shortened URL to its original URL.

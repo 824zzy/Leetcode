@@ -2,26 +2,31 @@
 since 0 <= coins[i] <= 10**4 and 2**14=16384, 14 is the upper bound of half_cnt
 """
 from header import *
+
+
 class Solution:
-    def maximumPoints(self, edges: List[List[int]], A: List[int], k: int) -> int:
+    def maximumPoints(self,
+                      edges: List[List[int]],
+                      A: List[int],
+                      k: int) -> int:
         G = defaultdict(list)
         for i, j in edges:
             G[i].append(j)
             G[j].append(i)
-            
+
         @cache
         def dp(i, p, half_cnt):
-            ans1 = (A[i]>>half_cnt) - k
-            ans2 = A[i]>>(half_cnt+1)
+            ans1 = (A[i] >> half_cnt) - k
+            ans2 = A[i] >> (half_cnt + 1)
             for j in G[i]:
-                if j!=p:
+                if j != p:
                     ans1 += dp(j, i, half_cnt)
-                    if half_cnt+1<14:
-                        ans2 += dp(j, i, half_cnt+1)
+                    if half_cnt + 1 < 14:
+                        ans2 += dp(j, i, half_cnt + 1)
             return max(ans1, ans2)
         return dp(0, None, 0)
-                    
-                    
+
+
 """
 [[0,1],[1,2],[2,3]]
 [10,10,3,3]

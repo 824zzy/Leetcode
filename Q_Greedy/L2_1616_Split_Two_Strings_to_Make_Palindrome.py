@@ -10,4 +10,4 @@ class Solution:
             i, j = i + 1, j - 1
         s3, s4 = a[i:j + 1], b[i:j + 1]
 
-        return any(s == s[::-1] for s in (s1,s2,s3,s4))
+        return any(s == s[::-1] for s in (s1, s2, s3, s4))

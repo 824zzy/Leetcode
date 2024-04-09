@@ -6,6 +6,7 @@ Time complexity: O(m*logn*k), where fn(x) accounts for m*logn, and the outer bin
 """
 from header import *
 
+
 class Solution:
     def matrixMedian(self, A: List[List[int]]) -> int:
         def fn(x):
@@ -13,18 +14,20 @@ class Solution:
             for row in A:
                 cnt += bisect_right(row, x)
             return cnt
-            
+
         m, n = len(A), len(A[0])
-        target = (m*n)//2
-        
-        l, r = min(list(zip(*A))[0]), max(list(zip(*A))[-1])+1
-        while l<r:
-            mid = (l+r)//2
-            if fn(mid)>target: r = mid
-            else: l = mid+1
+        target = (m * n) // 2
+
+        l, r = min(list(zip(*A))[0]), max(list(zip(*A))[-1]) + 1
+        while l < r:
+            mid = (l + r) // 2
+            if fn(mid) > target:
+                r = mid
+            else:
+                l = mid + 1
         return l
-    
-    
+
+
 """
 [[1,1,2],[2,3,3],[1,3,4]]
 [[1,1,3,3,4]]

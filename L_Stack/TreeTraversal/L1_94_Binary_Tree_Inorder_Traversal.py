@@ -3,6 +3,7 @@ algorithm template
 """
 from header import *
 
+
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         stk = []

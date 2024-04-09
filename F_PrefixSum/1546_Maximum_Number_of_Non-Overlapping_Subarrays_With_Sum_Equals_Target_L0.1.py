@@ -6,7 +6,7 @@ class Solution:
         prefix = 0
         for n in nums:
             prefix += n
-            if cnt[prefix-target]!=0:
+            if cnt[prefix - target] != 0:
                 ans += 1
                 cnt = collections.Counter()
             cnt[prefix] += 1

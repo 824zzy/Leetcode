@@ -3,21 +3,26 @@ greedily find the longest substring of T that can be formed by concatenating som
 
 Time complexity: O(m*n)
 """
+
+
 class Solution:
     def shortestWay(self, S: str, T: str) -> int:
         j = 0
         ans = 0
-        while 1:
+        while True:
             f = False
             for i in range(len(S)):
-                if S[i]==T[j]:
+                if S[i] == T[j]:
                     j += 1
                     f = True
-                if j==len(T): return ans+1
-            if not f: return -1
+                if j == len(T):
+                    return ans + 1
+            if not f:
+                return -1
             ans += 1
         return ans
-    
+
+
 """
 "abc"
 "abcbc"

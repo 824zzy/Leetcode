@@ -3,11 +3,12 @@ find pattern from test cases
 """
 from header import *
 
+
 class Solution:
     def bulbSwitch(self, n: int) -> int:
         return isqrt(n)
-        
-    
+
+
 """
 1
 1

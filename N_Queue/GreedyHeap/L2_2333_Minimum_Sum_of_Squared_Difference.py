@@ -1,23 +1,34 @@
 """ https://leetcode.com/problems/minimum-sum-of-squared-difference/
 Fill gap trick, pretty much the same as the 2233.
 """
+
+
 class Solution:
-    def minSumSquareDiff(self, nums1: List[int], nums2: List[int], k1: int, k2: int) -> int:
-        pq = [-abs(x-y) for x, y in list(zip(nums1, nums2))]
-        if -sum(pq)<=(k1+k2): return 0
-        
+    def minSumSquareDiff(
+            self,
+            nums1: List[int],
+            nums2: List[int],
+            k1: int,
+            k2: int) -> int:
+        pq = [-abs(x - y) for x, y in list(zip(nums1, nums2))]
+        if -sum(pq) <= (k1 + k2):
+            return 0
+
         heapify(pq)
-        k = k1+k2
+        k = k1 + k2
         n = len(pq)
         while k:
             mx = heappop(pq)
-            if pq: gap = max(k//n, 1)
-            else: gap = k
-            
-            heappush(pq, mx+gap)
+            if pq:
+                gap = max(k // n, 1)
+            else:
+                gap = k
+
+            heappush(pq, mx + gap)
             k -= gap
-        return sum([e*e for e in pq])
-    
+        return sum([e * e for e in pq])
+
+
 """
 [1,2,3,4]
 [2,10,20,19]

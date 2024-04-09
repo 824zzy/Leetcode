@@ -2,18 +2,19 @@
 """
 from header import *
 
+
 class Solution:
     def stringShift(self, s: str, shift: List[List[int]]) -> str:
         x = 0
         for d, a in shift:
-            if d==0:
+            if d == 0:
                 x += a
             else:
                 x -= a
         x %= len(s)
-        return s[x:]+s[:x]
-        
-        
+        return s[x:] + s[:x]
+
+
 """
 "abc"
 [[0,1],[1,2]]

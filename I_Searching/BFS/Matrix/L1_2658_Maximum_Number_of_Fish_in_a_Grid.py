@@ -3,6 +3,7 @@ searching answer by bfs
 """
 from header import *
 
+
 class Solution:
     def findMaxFish(self, G: List[List[int]]) -> int:
         D = [(0, 1), (0, -1), (1, 0), (-1, 0)]
@@ -17,13 +18,14 @@ class Solution:
                         x, y, fish = Q.pop(0)
                         _ans += fish
                         for dx, dy in D:
-                            if 0<=x+dx<len(G) and 0<=y+dy<len(G[0]) and G[x+dx][y+dy]:
-                                tmp = G[x+dx][y+dy]
-                                G[x+dx][y+dy] = 0
-                                Q.append((x+dx, y+dy, tmp))
+                            if 0 <= x + dx < len(G) and 0 <= y + \
+                                    dy < len(G[0]) and G[x + dx][y + dy]:
+                                tmp = G[x + dx][y + dy]
+                                G[x + dx][y + dy] = 0
+                                Q.append((x + dx, y + dy, tmp))
                     ans = max(ans, _ans)
         return ans
-    
+
 
 """
 [[0,2,1,0],[4,0,0,3],[1,0,0,4],[0,3,2,0]]

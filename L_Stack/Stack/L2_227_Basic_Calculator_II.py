@@ -7,31 +7,42 @@ it is not easy due to the implementation of the stack
 from header import *
 
 # another solution from others using only one stack
+
+
 class Solution:
     def calculate(self, s: str) -> int:
-        op, val = "+", 0 #initialized at "+0"
+        op, val = "+", 0  # initialized at "+0"
         stack = []
         for i, x in enumerate(s):
-            if x.isdigit(): val = 10*val + int(x) #accumulating digits 
-                
-            if x in "+-*/" or i == len(s) - 1: #
-                if   op == "+": stack.append(val)
-                elif op == "-": stack.append(-val)
-                elif op == "*": stack.append(stack.pop() * val)
-                elif op == "/": stack.append(int(stack.pop()/val))
-                op, val = x, 0 #reset 
+            if x.isdigit():
+                val = 10 * val + int(x)  # accumulating digits
+
+            if x in "+-*/" or i == len(s) - 1:
+                if op == "+":
+                    stack.append(val)
+                elif op == "-":
+                    stack.append(-val)
+                elif op == "*":
+                    stack.append(stack.pop() * val)
+                elif op == "/":
+                    stack.append(int(stack.pop() / val))
+                op, val = x, 0  # reset
         return sum(stack)
-    
+
 
 # maintain two stacks: operation stack and number stack
 class Solution:
     def calculate(self, s: str) -> int:
         def compute(x, y, op):
-            if op=='+': return x+y
-            if op=='-': return x-y
-            if op=='*': return x*y
-            if op=='/': return x//y
-        
+            if op == '+':
+                return x + y
+            if op == '-':
+                return x - y
+            if op == '*':
+                return x * y
+            if op == '/':
+                return x // y
+
         s += '+'
         n_stk = []
         op_stk = []
@@ -48,10 +59,10 @@ class Solution:
                     op_stk.append(c)
                 else:
                     n_stk.append(int(n))
-                    if i!=len(s)-1:
+                    if i != len(s) - 1:
                         op_stk.append(c)
                 n = ''
-            
+
         ans = n_stk.pop(0)
         while n_stk and op_stk:
             y = n_stk.pop(0)

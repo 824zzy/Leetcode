@@ -3,12 +3,13 @@ BFS template
 """
 from header import *
 
+
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         G = defaultdict(list)
         for i, j in enumerate(rooms):
             G[i].extend(j)
-        
+
         Q = [0]
         seen = {0}
         while Q:
@@ -17,4 +18,4 @@ class Solution:
                 if j not in seen:
                     seen.add(j)
                     Q.append(j)
-        return len(seen)==len(rooms)
+        return len(seen) == len(rooms)

@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/design-circular-deque/
 """
+
+
 class MyCircularDeque:
 
     def __init__(self, k: int):
@@ -8,13 +10,12 @@ class MyCircularDeque:
         """
         self.k = k
         self.deque = []
-        
 
     def insertFront(self, value: int) -> bool:
         """
         Adds an item at the front of Deque. Return true if the operation is successful.
         """
-        if len(self.deque)<self.k:
+        if len(self.deque) < self.k:
             self.deque.insert(0, value)
             return True
         else:
@@ -24,12 +25,11 @@ class MyCircularDeque:
         """
         Adds an item at the rear of Deque. Return true if the operation is successful.
         """
-        if len(self.deque)<self.k:
+        if len(self.deque) < self.k:
             self.deque.append(value)
             return True
         else:
             return False
-        
 
     def deleteFront(self) -> bool:
         """
@@ -59,7 +59,6 @@ class MyCircularDeque:
             return self.deque[0]
         else:
             return -1
-        
 
     def getRear(self) -> int:
         """
@@ -69,7 +68,6 @@ class MyCircularDeque:
             return self.deque[-1]
         else:
             return -1
-        
 
     def isEmpty(self) -> bool:
         """
@@ -79,17 +77,15 @@ class MyCircularDeque:
             return False
         else:
             return True
-        
 
     def isFull(self) -> bool:
         """
         Checks whether the circular deque is full or not.
         """
-        if len(self.deque)!=self.k:
+        if len(self.deque) != self.k:
             return False
         else:
             return True
-        
 
 
 # Your MyCircularDeque object will be instantiated and called as such:

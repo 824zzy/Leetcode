@@ -7,10 +7,12 @@ there are three conditions:
 3. we can go from s to e in k steps, then we need to pick right steps from k steps to go right
 """
 from header import *
+
+
 class Solution:
     def numberOfWays(self, s: int, e: int, k: int) -> int:
-        if k-abs(s-e)<0:
+        if k - abs(s - e) < 0:
             return 0
-        if (s-e-k)%2!=0: 
+        if (s - e - k) % 2 != 0:
             return 0
-        return comb(k, (e-s+k)//2)%(10**9+7)
+        return comb(k, (e - s + k) // 2) % (10**9 + 7)

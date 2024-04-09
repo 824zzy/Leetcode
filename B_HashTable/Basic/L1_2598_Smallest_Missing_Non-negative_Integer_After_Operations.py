@@ -4,12 +4,14 @@
 """
 from header import *
 
+
 class Solution:
     def findSmallestInteger(self, A: List[int], value: int) -> int:
         cnt = Counter()
         for x in A:
-            cnt[x%value] += 1
-        for i in range(len(A)+100):
-            if cnt[i%value]!=0:
-                cnt[i%value] -= 1
-            else: return i
+            cnt[x % value] += 1
+        for i in range(len(A) + 100):
+            if cnt[i % value] != 0:
+                cnt[i % value] -= 1
+            else:
+                return i

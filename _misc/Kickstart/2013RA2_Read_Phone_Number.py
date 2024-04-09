@@ -24,6 +24,8 @@ M = {
     9: 'nonuple',
     10: 'decuple',
 }
+
+
 def ReadPhoneNumber(P, F):
     ans = []
     lengths = F.split('-')
@@ -33,18 +35,22 @@ def ReadPhoneNumber(P, F):
         pref += int(l)
         pref_L.append(pref)
     pref_L = [0] + pref_L
-    for i in range(len(pref_L)-1):
-        p = [[k, len(list(v))] for k, v in groupby(P[pref_L[i]:pref_L[i+1]])]
+    for i in range(len(pref_L) - 1):
+        p = [[k, len(list(v))] for k, v in groupby(P[pref_L[i]:pref_L[i + 1]])]
         s = []
         for k, l in p:
-            if l>10: s.append(" ".join(l*[M[k]]))
-            elif l==1: s.append(M[k])
-            else: s.append(M[l]+" "+M[k])
+            if l > 10:
+                s.append(" ".join(l * [M[k]]))
+            elif l == 1:
+                s.append(M[k])
+            else:
+                s.append(M[l] + " " + M[k])
         ans.append(" ".join(s))
     return ' '.join(ans)
-        
+
+
 t = int(input())
-for i in range(1, t+1):
+for i in range(1, t + 1):
     P, F = input().split()
     ans = ReadPhoneNumber(P, F)
     print("Case #{}: {}\n".format(i, ans), flush=True)

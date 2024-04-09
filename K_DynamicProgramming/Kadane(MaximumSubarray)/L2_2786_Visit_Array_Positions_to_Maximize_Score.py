@@ -1,19 +1,20 @@
 """ https://leetcode.com/problems/visit-array-positions-to-maximize-score/
 """
 from header import *
+
+
 class Solution:
     def maxScore(self, A: List[int], x: int) -> int:
-        o = A[0] if A[0]&1 else -x
-        e = A[0] if not A[0]&1 else -x
+        o = A[0] if A[0] & 1 else -x
+        e = A[0] if not A[0] & 1 else -x
         for i in range(1, len(A)):
-            if A[i]&1:
-                o = A[i]+max(o, e-x)
+            if A[i] & 1:
+                o = A[i] + max(o, e - x)
             else:
-                e = A[i]+max(e, o-x)
+                e = A[i] + max(e, o - x)
         return max(o, e)
-                
-            
-            
+
+
 """
 [2,3,6,1,9,2]
 5

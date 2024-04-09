@@ -4,13 +4,15 @@ So maintain a monotonic max heap to always keep valid optimal element in heap to
 """
 from header import *
 
+
 class Solution:
     def maxResult(self, A: List[int], k: int) -> int:
         ans = [0] * len(A)
         ans[0] = A[0]
         pq = [[-A[0], 0]]
         for i in range(1, len(A)):
-            while i-pq[0][1]>k: heappop(pq)
+            while i - pq[0][1] > k:
+                heappop(pq)
             ans[i] = A[i] + ans[pq[0][1]]
             heappush(pq, [-ans[i], i])
         return ans[-1]

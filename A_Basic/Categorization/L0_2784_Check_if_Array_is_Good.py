@@ -3,13 +3,14 @@ construct array and compare
 """
 from header import *
 
+
 class Solution:
     def isGood(self, A: List[int]) -> bool:
         A.sort()
         mx = max(A)
-        return A==list(range(1, mx+1))+[mx]
-            
-        
+        return A == list(range(1, mx + 1)) + [mx]
+
+
 """
 [2, 1, 3]
 [1, 3, 3, 2]

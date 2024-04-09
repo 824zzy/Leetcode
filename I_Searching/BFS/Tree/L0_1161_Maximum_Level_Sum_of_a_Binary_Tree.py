@@ -3,6 +3,7 @@ traverse level by level, keep track of the max sum and the level
 """
 from header import *
 
+
 class Solution:
     def maxLevelSum(self, root: Optional[TreeNode]) -> int:
         Q = [root]
@@ -20,7 +21,7 @@ class Solution:
                 if node.right:
                     nxt.append(node.right)
             Q = nxt
-            if sm>mx:
+            if sm > mx:
                 mx = max(mx, sm)
                 ans = d
         return ans

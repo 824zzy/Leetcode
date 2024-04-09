@@ -4,6 +4,8 @@ enumerate all possible combinations of columns, and check if the rows are covere
 from header import *
 
 # bit manipulation
+
+
 class Solution:
     def maximumRows(self, M: List[List[int]], n: int) -> int:
         A = []
@@ -11,21 +13,23 @@ class Solution:
             tmp = 0
             for j in range(len(M[0])):
                 if M[i][j]:
-                    tmp += 1<<j
+                    tmp += 1 << j
             A.append(tmp)
-        
+
         ans = 0
-        for mask in range(1<<len(M[0])):
-            if mask.bit_count()!=n:
+        for mask in range(1 << len(M[0])):
+            if mask.bit_count() != n:
                 continue
             cnt = 0
             for x in A:
-                if x&mask==x:
+                if x & mask == x:
                     cnt += 1
             ans = max(ans, cnt)
         return ans
-    
+
 # combinatorics and array comparison
+
+
 class Solution:
     def maximumRows(self, A: List[List[int]], cols: int) -> int:
         cands = list(combinations(range(len(A[0])), cols))
@@ -36,9 +40,9 @@ class Solution:
                 x = A[i].count(1)
                 y = 0
                 for j in cand:
-                    if A[i][j]==1: 
+                    if A[i][j] == 1:
                         y += 1
-                if x==y: 
+                if x == y:
                     tmp += 1
             ans = max(ans, tmp)
         return ans

@@ -4,20 +4,22 @@
 """
 from header import *
 
+
 class Solution:
     def productQueries(self, n: int, queries: List[List[int]]) -> List[int]:
-        M = 10**9+7
+        M = 10**9 + 7
         A = []
         for i in range(32):
-            if n&(1<<i):
-                A.append(1<<i)
-        
+            if n & (1 << i):
+                A.append(1 << i)
+
         pref = list(accumulate(A, mul, initial=1))
         ans = []
         for i, j in queries:
-            ans.append((pref[j+1]//pref[i])%M)
+            ans.append((pref[j + 1] // pref[i]) % M)
         return ans
-        
+
+
 """
 15
 [[0,1],[2,2],[0,3]]

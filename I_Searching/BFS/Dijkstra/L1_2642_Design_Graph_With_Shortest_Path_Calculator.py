@@ -4,6 +4,7 @@
 """
 from header import *
 
+
 class Graph:
     def __init__(self, n: int, edges: List[List[int]]):
         self.G = defaultdict(dict)
@@ -19,15 +20,17 @@ class Graph:
         seen = {}
         while pq:
             c, i = heappop(pq)
-            if i==dest:
+            if i == dest:
                 return c
             if i not in seen:
                 seen[i] = c
                 for j in self.G[i]:
-                    heappush(pq, (c+self.G[i][j], j))
+                    heappush(pq, (c + self.G[i][j], j))
         return -1
-    
+
 # another way to implement the same thing
+
+
 class Graph:
     def __init__(self, n: int, edges: List[List[int]]):
         self.G = defaultdict(dict)
@@ -43,10 +46,10 @@ class Graph:
         seen = {src: 0}
         while pq:
             c, i = heappop(pq)
-            if i==dest:
+            if i == dest:
                 return c
             for j in self.G[i]:
-                if j not in seen or c+self.G[i][j]<seen[j]:
-                    seen[j] = c+self.G[i][j]
-                    heappush(pq, (c+self.G[i][j], j))
+                if j not in seen or c + self.G[i][j] < seen[j]:
+                    seen[j] = c + self.G[i][j]
+                    heappush(pq, (c + self.G[i][j], j))
         return -1

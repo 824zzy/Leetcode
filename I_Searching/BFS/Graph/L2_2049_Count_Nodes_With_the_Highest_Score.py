@@ -4,15 +4,18 @@ use dfs to calculate score based on the above formula
 """
 from header import *
 
+
 class Solution:
     def countHighestScoreNodes(self, parents: List[int]) -> int:
         n = len(parents)
         G = defaultdict(list)
         for i, x in enumerate(parents):
-            if i==0: continue
+            if i == 0:
+                continue
             G[x].append(i)
-        
+
         ans = Counter()
+
         def dfs(i):
             score = 1
             cnt = 0
@@ -20,14 +23,14 @@ class Solution:
                 subtree_size = dfs(j)
                 score *= subtree_size
                 cnt += subtree_size
-            score *= max(n-cnt-1, 1)
+            score *= max(n - cnt - 1, 1)
             ans[score] += 1
-            return cnt+1
-        
+            return cnt + 1
+
         dfs(0)
         return ans[max(ans)]
-            
-                
+
+
 """
 [-1,2,0,2,0]
 [-1,2,0]

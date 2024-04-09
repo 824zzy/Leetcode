@@ -6,19 +6,23 @@ there are only two cases the answer is true:
 """
 from header import *
 
+
 class Solution:
     def isItPossible(self, word1: str, word2: str) -> bool:
         c1 = Counter(word1)
         c2 = Counter(word2)
         for x, c in c1.items():
             for y, d in c2.items():
-                if x==y:
-                    if len(c1)==len(c2): return True
-                elif len(c1)-(c==1)+(y not in c1) == len(c2)-(d==1)+(x not in c2):
+                if x == y:
+                    if len(c1) == len(c2):
+                        return True
+                elif len(c1) - (c == 1) + (y not in c1) == len(c2) - (d == 1) + (x not in c2):
                     return True
         return False
 
 # suboptimal solution but easy to understand
+
+
 class Solution:
     def isItPossible(self, word1: str, word2: str) -> bool:
         cnt1 = Counter(word1)
@@ -30,8 +34,10 @@ class Solution:
                 c2[x] += 1
                 c1[y] += 1
                 c2[y] -= 1
-                if not c1[x]: c1.pop(x)
-                if not c2[y]: c2.pop(y)
-                if len(c1)==len(c2):  
+                if not c1[x]:
+                    c1.pop(x)
+                if not c2[y]:
+                    c2.pop(y)
+                if len(c1) == len(c2):
                     return True
         return False

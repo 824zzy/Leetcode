@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/reverse-bits/
 shift and Get lowest bit in x: x & 1
 """
+
+
 class Solution:
     def reverseBits(self, n: int) -> int:
         ans = 0
@@ -11,6 +13,8 @@ class Solution:
         return ans
 
 # Pythonic solution
+
+
 class Solution:
     def reverseBits(self, n):
         n = str(bin(n))[:2]

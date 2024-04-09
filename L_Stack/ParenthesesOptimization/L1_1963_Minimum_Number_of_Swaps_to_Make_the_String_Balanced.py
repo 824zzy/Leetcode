@@ -3,13 +3,17 @@ learn from: https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-st
 greedily find minimum swaps through counting not-opened parentheses
 the swaps is `(cl+1)//2` since one swap can eliminate at most 2 not-opened parentheses
 """
+
+
 class Solution:
     def minSwaps(self, s: str) -> int:
         cl = op = 0
         for c in s:
-            if c=='[': op += 1
-            else: op -= 1
-            if op<0:
+            if c == '[':
+                op += 1
+            else:
+                op -= 1
+            if op < 0:
                 op = 0
                 cl += 1
-        return (cl+1)//2
+        return (cl + 1) // 2

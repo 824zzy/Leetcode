@@ -3,6 +3,7 @@ update max and prefix sum at the same time
 """
 from header import *
 
+
 class Solution:
     def findPrefixScore(self, A: List[int]) -> List[int]:
         ans = []
@@ -10,6 +11,6 @@ class Solution:
         pre_sum = 0
         for x in A:
             mx = max(mx, x)
-            pre_sum += x+mx
+            pre_sum += x + mx
             ans.append(pre_sum)
         return ans

@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant/
 use dict of Counters and ordered food name list to build table
 """
+
+
 class Solution:
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
         sd = defaultdict(Counter)
@@ -9,9 +11,9 @@ class Solution:
             t = int(t)
             sd[t][f] += 1
             foods.add(f)
-        
+
         foods = sorted(foods)
-        ans = [["Table"]+foods]
+        ans = [["Table"] + foods]
         for k, cnt in sorted(sd.items()):
             row = [str(k)]
             for f in foods:

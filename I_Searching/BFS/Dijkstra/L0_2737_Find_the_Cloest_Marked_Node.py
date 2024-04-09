@@ -3,10 +3,15 @@ directly apply Dijkstra's algorithm
 """
 from header import *
 
+
 class Solution:
-    def minimumDistance(self, n: int, edges: List[List[int]], src: int, marked: List[int]) -> int:
+    def minimumDistance(self,
+                        n: int,
+                        edges: List[List[int]],
+                        src: int,
+                        marked: List[int]) -> int:
         G = defaultdict(list)
-        for u, v, w in edges: 
+        for u, v, w in edges:
             G[u].append((v, w))
 
         pq = []
@@ -20,5 +25,5 @@ class Solution:
             if i not in seen:
                 seen[i] = cost
                 for j, w in G[i]:
-                    heapq.heappush(pq, (cost+w, j))
+                    heapq.heappush(pq, (cost + w, j))
         return -1

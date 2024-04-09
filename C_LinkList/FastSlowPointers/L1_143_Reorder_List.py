@@ -3,6 +3,8 @@
 2. reverse the 2nd half
 3. merge 1st and 2nd half
 """
+
+
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         """
@@ -14,7 +16,8 @@ class Solution:
             fast, slow = fast.next.next, slow.next
         # reverse the second half
         prev = None
-        while slow: prev, slow.next, slow = slow, prev, slow.next
+        while slow:
+            prev, slow.next, slow = slow, prev, slow.next
         # merge first and second half
         node = head
         while prev and prev.next:

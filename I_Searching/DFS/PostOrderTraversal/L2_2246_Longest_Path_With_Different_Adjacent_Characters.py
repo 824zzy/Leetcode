@@ -4,24 +4,26 @@
 """
 from header import *
 
+
 class Solution:
     def longestPath(self, P: List[int], s: str) -> int:
         G = defaultdict(list)
         for i, j in enumerate(P):
-            if j>=0: G[j].append(i)
-        
+            if j >= 0:
+                G[j].append(i)
+
         self.ans = 0
-        
+
         def dfs(i):
             cand = [0]
             for j in G[i]:
                 tmp = dfs(j)
-                if s[i]!=s[j]:
+                if s[i] != s[j]:
                     cand.append(tmp)
-                    
+
             cand = nlargest(2, cand)
-            self.ans = max(self.ans, sum(cand)+1)
-            return max(cand)+1
-        
-        dfs(0)    
+            self.ans = max(self.ans, sum(cand) + 1)
+            return max(cand) + 1
+
+        dfs(0)
         return self.ans

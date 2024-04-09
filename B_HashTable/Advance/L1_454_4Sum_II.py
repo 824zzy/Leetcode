@@ -4,14 +4,21 @@
 """
 from header import *
 
+
 class Solution:
-    def fourSumCount(self, A: List[int], B: List[int], C: List[int], D: List[int]) -> int:
+    def fourSumCount(
+            self,
+            A: List[int],
+            B: List[int],
+            C: List[int],
+            D: List[int]) -> int:
         ans = 0
-        cnt= Counter()
+        cnt = Counter()
         for a in A:
             for b in B:
-                cnt[-(a+b)] += 1
+                cnt[-(a + b)] += 1
         for c in C:
             for d in D:
-                if c+d in cnt: ans += cnt[c+d]
+                if c + d in cnt:
+                    ans += cnt[c + d]
         return ans

@@ -5,6 +5,8 @@ bisect.bisect_left to find position to insert(how many nodes smaller than itself
 Notet that SortedList is way much faster
 """
 from sortedcontainers import SortedList
+
+
 class Solution:
     def countSmaller(self, A):
         SList, ans = SortedList(), []

@@ -13,14 +13,18 @@ one can derive dp(n) = (1+W)/W*dp(n) - 1/W*dp(n+W+1). When n+1 == K, this trick 
 """
 from header import *
 
+
 class Solution:
     def new21Game(self, N: int, K: int, W: int) -> float:
         @cache
         def dp(i):
-            if i>N: return 0
-            elif K<=i<=N: return 1
-            elif i+1<K: return dp(i+1)-(dp(i+W+1)-dp(i+1))/W
+            if i > N:
+                return 0
+            elif K <= i <= N:
+                return 1
+            elif i + 1 < K:
+                return dp(i + 1) - (dp(i + W + 1) - dp(i + 1)) / W
             else:
-                return 1/W*sum(dp(j) for j in range(i+1, i+W+1))
-        
+                return 1 / W * sum(dp(j) for j in range(i + 1, i + W + 1))
+
         return dp(0)

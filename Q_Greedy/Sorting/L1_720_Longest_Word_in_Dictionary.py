@@ -3,6 +3,7 @@ sort and check if the prefix is in the set
 """
 from header import *
 
+
 class Solution:
     def longestWord(self, W: List[str]) -> str:
         W.sort()

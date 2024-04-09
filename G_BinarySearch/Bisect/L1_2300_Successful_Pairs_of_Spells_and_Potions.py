@@ -2,12 +2,13 @@
 """
 from header import *
 
+
 class Solution:
     def successfulPairs(self, S: List[int], P: List[int], k: int) -> List[int]:
         P.sort()
         ans = []
         for s in S:
-            kk = k/s
+            kk = k / s
             idx = bisect_left(P, kk)
-            ans.append(len(P)-idx)
+            ans.append(len(P) - idx)
         return ans

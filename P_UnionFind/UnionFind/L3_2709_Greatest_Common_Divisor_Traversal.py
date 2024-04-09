@@ -5,22 +5,92 @@
 """
 from header import *
 
-PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313]     
+PRIMES = [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97,
+    101,
+    103,
+    107,
+    109,
+    113,
+    127,
+    131,
+    137,
+    139,
+    149,
+    151,
+    157,
+    163,
+    167,
+    173,
+    179,
+    181,
+    191,
+    193,
+    197,
+    199,
+    211,
+    223,
+    227,
+    229,
+    233,
+    239,
+    241,
+    251,
+    257,
+    263,
+    269,
+    271,
+    277,
+    281,
+    283,
+    293,
+    307,
+    311,
+    313]
+
 
 class Solution:
     def canTraverseAllPairs(self, A: List[int]) -> bool:
         n = len(A)
         dsu = {}
+
         def find(x):
-            if x not in dsu: dsu[x] = x
-            elif dsu[x]!=x: dsu[x] = find(dsu[x])
+            if x not in dsu:
+                dsu[x] = x
+            elif dsu[x] != x:
+                dsu[x] = find(dsu[x])
             return dsu[x]
 
         def union(x, y):
             dsu[find(x)] = find(y)
-            
+
         for x in A:
-            if x==1: return len(A)==1
+            if x == 1:
+                return len(A) == 1
             # prime factorization
             pf = []
             for p in PRIMES:
@@ -32,8 +102,9 @@ class Solution:
                 pf.append(x)
             for x in pf:
                 union(x, pf[0])
-        return len(set(find(x) for x in dsu))==1
-    
+        return len(set(find(x) for x in dsu)) == 1
+
+
 """
 [2,3,6]
 [3,9,5]

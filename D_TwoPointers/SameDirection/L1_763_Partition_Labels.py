@@ -3,6 +3,8 @@
 2. use extra pointer r to indicate the right most of a partition
 3. when j reaches the right most index, then update two pointers
 """
+
+
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
         mp = {c: i for i, c in enumerate(s)}
@@ -11,7 +13,7 @@ class Solution:
         r = 0
         for j in range(len(s)):
             r = max(r, mp[s[j]])
-            if r==j:
-                ans.append(j-i+1)
-                i = j+1
+            if r == j:
+                ans.append(j - i + 1)
+                i = j + 1
         return ans

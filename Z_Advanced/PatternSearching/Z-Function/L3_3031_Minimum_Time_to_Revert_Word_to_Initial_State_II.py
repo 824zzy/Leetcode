@@ -2,6 +2,7 @@
 """
 from header import *
 
+
 class Solution:
     def minimumTimeToInitialState(self, s: str, k: int) -> int:
         def z_function(s):
@@ -17,9 +18,10 @@ class Solution:
                     l, r = i, i + z[i] - 1
             return z
         z = z_function(s)
-        
+
         for i, x in enumerate(z):
-            if i%k!=0: continue
-            if len(s)-i==x:
-                return i//k
-        return ceil(len(s)/k)
+            if i % k != 0:
+                continue
+            if len(s) - i == x:
+                return i // k
+        return ceil(len(s) / k)

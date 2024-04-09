@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/node-with-highest-edge-score/
 count in-coming scores by hash table and return the highest score node with smallest index
 """
+
+
 class Solution:
     def edgeScore(self, E: List[int]) -> int:
         cnt = Counter()

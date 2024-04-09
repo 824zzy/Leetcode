@@ -4,6 +4,7 @@
 """
 from header import *
 
+
 class TimeMap:
     def __init__(self):
         self.mp = defaultdict(list)
@@ -13,9 +14,11 @@ class TimeMap:
 
     def get(self, key: str, timestamp: int) -> str:
         idx = bisect_right(self.mp[key], timestamp, key=lambda x: x[0])
-        if idx: return self.mp[key][idx-1][1]
-        else: return ''
-        
+        if idx:
+            return self.mp[key][idx - 1][1]
+        else:
+            return ''
+
 
 """
 ["TimeMap","set","get","get","set","get","get"]

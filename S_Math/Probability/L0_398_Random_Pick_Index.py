@@ -2,6 +2,7 @@
 """
 from header import *
 
+
 class Solution:
     def __init__(self, nums: List[int]):
         self.d = defaultdict(list)
@@ -13,6 +14,6 @@ class Solution:
         for i in range(len(self.d[target])):
             cnt += 1
             p = random.random()
-            if p < 1/cnt:
+            if p < 1 / cnt:
                 ans = self.d[target][i]
         return ans

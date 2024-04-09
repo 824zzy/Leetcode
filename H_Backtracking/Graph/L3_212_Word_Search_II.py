@@ -9,6 +9,7 @@ disgust time limit
 """
 from header import *
 
+
 class Solution:
     def findWords(self, A: List[List[str]], words: List[str]) -> List[str]:
         trie = {}
@@ -27,12 +28,13 @@ class Solution:
             tmp = A[x][y]
             A[x][y] = '!'
             for dx, dy in D:
-                if 0<=x+dx<len(A) and 0<=y+dy<len(A[0]) and A[x+dx][y+dy] in node:
-                    search(node, x+dx, y+dy)
+                if 0 <= x + dx < len(A) and 0 <= y + \
+                        dy < len(A[0]) and A[x + dx][y + dy] in node:
+                    search(node, x + dx, y + dy)
             A[x][y] = tmp
             # Pruning: incrementally remove the matched leaf node in Trie.
-            if not node: p.pop(A[x][y])
-            
+            if not node:
+                p.pop(A[x][y])
 
         D = ((0, 1), (0, -1), (1, 0), (-1, 0))
         ans = []

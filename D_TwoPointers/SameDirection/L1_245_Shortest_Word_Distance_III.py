@@ -5,29 +5,35 @@ two cases:
 """
 from header import *
 
+
 class Solution:
-    def shortestWordDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
+    def shortestWordDistance(
+            self,
+            wordsDict: List[str],
+            word1: str,
+            word2: str) -> int:
         ans = inf
         i, j = inf, inf
-        if word1==word2:
+        if word1 == word2:
             f = True
             for idx, w in enumerate(wordsDict):
-                if w==word1:
+                if w == word1:
                     if f:
                         i = idx
                         f = False
                     else:
                         j = idx
                         f = True
-                ans = min(ans, abs(i-j))
+                ans = min(ans, abs(i - j))
         else:
             for idx, w in enumerate(wordsDict):
-                if w==word1:
+                if w == word1:
                     i = idx
-                elif w==word2:
+                elif w == word2:
                     j = idx
-                ans = min(ans, abs(i-j))
+                ans = min(ans, abs(i - j))
         return ans
+
 
 """
 ["practice", "makes", "perfect", "coding", "makes"]

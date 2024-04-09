@@ -4,16 +4,19 @@
 """
 from header import *
 
+
 class Solution:
     def minAbsoluteDifference(self, A: List[int], x: int) -> int:
         sl = []
         ans = inf
         for i in range(x, len(A)):
-            insort(sl, A[i-x])
+            insort(sl, A[i - x])
             j = bisect_left(sl, A[i])
-            ans = min(ans, abs(A[i]-sl[min(j, len(sl)-1)]), abs(A[i]-sl[max(j-1, 0)]))
+            ans = min(ans, abs(A[i] - sl[min(j, len(sl) - 1)]),
+                      abs(A[i] - sl[max(j - 1, 0)]))
         return ans
-            
+
+
 """
 [4,3,2,4]
 2

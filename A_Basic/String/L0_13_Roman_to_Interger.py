@@ -1,5 +1,7 @@
 """ https://leetcode.com/problems/roman-to-integer/
 """
+
+
 class Solution:
     def romanToInt(self, s: str) -> int:
         m = {
@@ -36,11 +38,11 @@ class Solution:
         }
         ans = 0
         i = 0
-        while i<len(s):
-            if s[i:i+2] in mp:
-                ans += mp[s[i:i+2]]
+        while i < len(s):
+            if s[i:i + 2] in mp:
+                ans += mp[s[i:i + 2]]
                 i += 2
             else:
-                ans += mp[s[i:i+1]]
+                ans += mp[s[i:i + 1]]
                 i += 1
         return ans

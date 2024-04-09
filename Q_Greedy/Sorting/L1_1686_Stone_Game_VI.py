@@ -8,15 +8,22 @@ The difference will be a+b.
 That's the reason why we need to sort based on a+b.
 And Alice and Bob will take one most valued stone each turn.
 """
+
+
 class Solution:
     def stoneGameVI(self, A: List[int], B: List[int]) -> int:
         S = sorted(list(zip(A, B)), key=sum)
 
         a_val, b_val = 0, 0
         for i, (a, b) in enumerate(S):
-            if i&1==0: a_val += a
-            else: b_val += b
-        
-        if a_val>b_val: return 1
-        elif a_val<b_val: return -1
-        else: return 0
+            if i & 1 == 0:
+                a_val += a
+            else:
+                b_val += b
+
+        if a_val > b_val:
+            return 1
+        elif a_val < b_val:
+            return -1
+        else:
+            return 0

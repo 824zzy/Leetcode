@@ -3,6 +3,7 @@ use flag to check if there is a missing node
 """
 from header import *
 
+
 class Solution:
     def isCompleteTree(self, root: TreeNode) -> bool:
         Q = [root]
@@ -11,13 +12,14 @@ class Solution:
         while Q:
             nxtQ = []
             miss = False
-            if pre_cnt!=2**d: return False
+            if pre_cnt != 2**d:
+                return False
             pre_cnt = len(Q)
             for node in Q:
                 if not node:
                     miss = True
                 else:
-                    if miss==True:
+                    if miss:
                         return False
                     nxtQ.append(node.left)
                     nxtQ.append(node.right)

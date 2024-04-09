@@ -5,11 +5,13 @@ Since for A[i], there are A[i] * count(A[j]>=A[i]) beans left, the rest of the b
 1. sort the array
 2. the beans will be removed can be represented as: sum(A)-A[i]*(len(A)-i)
 """
+
+
 class Solution:
     def minimumRemoval(self, A: List[int]) -> int:
         A.sort()
         sm = sum(A)
         ans = []
         for i in range(len(A)):
-            ans.append(sm-A[i]*(len(A)-i))
+            ans.append(sm - A[i] * (len(A) - i))
         return min(ans)

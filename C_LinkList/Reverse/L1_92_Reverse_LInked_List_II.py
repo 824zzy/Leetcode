@@ -5,8 +5,13 @@
 """
 from header import *
 
+
 class Solution:
-    def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+    def reverseBetween(
+            self,
+            head: Optional[ListNode],
+            left: int,
+            right: int) -> Optional[ListNode]:
         ans = node = ListNode(next=head)
         # locate the left position node
         prev = None
@@ -15,7 +20,7 @@ class Solution:
             node = node.next
         # reverse nodes in the middle
         pp, nn = prev, node
-        for _ in range(left, right+1):
+        for _ in range(left, right + 1):
             nxt = node.next
             node.next = prev
             prev = node
@@ -24,15 +29,22 @@ class Solution:
         pp.next = prev
         nn.next = node
         return ans.next
-    
+
+
 class Solution:
-    def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+    def reverseBetween(
+            self,
+            head: Optional[ListNode],
+            left: int,
+            right: int) -> Optional[ListNode]:
         ans = ListNode(next=head)
         prev = None
-        for _ in range(left-1): head, prev = head.next, head
-            
+        for _ in range(left - 1):
+            head, prev = head.next, head
+
         pp, nn = prev, head
-        for _ in range(left, right+1): head.next, head, prev = prev, head.next, head
+        for _ in range(left, right + 1):
+            head.next, head, prev = prev, head.next, head
 
         pp.next, nn.next = prev, head
-        return ans.next 
+        return ans.next

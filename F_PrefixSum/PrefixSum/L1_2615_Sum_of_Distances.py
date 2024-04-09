@@ -6,17 +6,18 @@ grouping + prefix sum
 """
 from header import *
 
+
 class Solution:
     def distance(self, A: List[int]) -> List[int]:
         mp = defaultdict(list)
         for i, x in enumerate(A):
             mp[x].append(i)
-        
-        ans = [0]*len(A)
+
+        ans = [0] * len(A)
         for k, v in mp.items():
             pre = list(accumulate(v, initial=0))
             for i, x in enumerate(v):
-                l = x*i - pre[i]
-                r = (pre[len(v)]-pre[i]) - x*(len(v)-i)
-                ans[x] = l+r
+                l = x * i - pre[i]
+                r = (pre[len(v)] - pre[i]) - x * (len(v) - i)
+                ans[x] = l + r
         return ans

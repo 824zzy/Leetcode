@@ -11,14 +11,15 @@ presum[j] ^ presum[j]:
 """
 from header import *
 
+
 class Solution:
     def wonderfulSubstrings(self, word: str) -> int:
         cnt = Counter([0])
         ans = 0
         pre = 0
         for c in word:
-            pre ^= 1 << (ord(c)-97)
+            pre ^= 1 << (ord(c) - 97)
             ans += cnt[pre]
-            ans += sum(cnt[pre^(1<<i)] for i in range(10))
+            ans += sum(cnt[pre ^ (1 << i)] for i in range(10))
             cnt[pre] += 1
         return ans

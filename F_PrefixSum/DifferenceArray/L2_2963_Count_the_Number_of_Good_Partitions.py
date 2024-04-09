@@ -5,16 +5,17 @@
 """
 from header import *
 
+
 class Solution:
     def numberOfGoodPartitions(self, A: List[int]) -> int:
-        MOD = 10**9+7
+        MOD = 10**9 + 7
         ht = defaultdict(lambda: [inf, -inf])
         for i, x in enumerate(A):
             ht[x][0] = min(i, ht[x][0])
             ht[x][1] = max(i, ht[x][1])
-        
+
         n = len(A)
-        sl = [0]*n
+        sl = [0] * n
         for _, (i, j) in ht.items():
             sl[i] += 1
             sl[j] -= 1
@@ -22,11 +23,11 @@ class Solution:
         x = 0
         for i in range(n):
             cnt += sl[i]
-            if cnt==0:
+            if cnt == 0:
                 x += 1
-        return pow(2, x-1, MOD)
-    
-    
+        return pow(2, x - 1, MOD)
+
+
 """
 [1,2,3,4]
 [1,1,1,1]

@@ -3,6 +3,7 @@ simulation
 """
 from header import *
 
+
 class Solution:
     def kWeakestRows(self, A: List[List[int]], k: int) -> List[int]:
-        return [x for _,  x in sorted((sum(x), i) for i, x in enumerate(A))[:k]]
+        return [x for _, x in sorted((sum(x), i) for i, x in enumerate(A))[:k]]

@@ -4,16 +4,23 @@
 """
 from header import *
 
+
 class Solution:
-    def findMaximizedCapital(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
+    def findMaximizedCapital(
+            self,
+            k: int,
+            w: int,
+            profits: List[int],
+            capital: List[int]) -> int:
         A = sorted(list(zip(capital, profits)))
         ans = w
         i = 0
         pq = []
-        
+
         for _ in range(k):
-            while i<len(A) and A[i][0]<=ans:
+            while i < len(A) and A[i][0] <= ans:
                 heappush(pq, -A[i][1])
                 i += 1
-            if pq: ans -= heappop(pq)
+            if pq:
+                ans -= heappop(pq)
         return ans

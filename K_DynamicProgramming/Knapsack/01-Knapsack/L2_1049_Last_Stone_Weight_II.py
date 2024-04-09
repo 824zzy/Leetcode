@@ -3,11 +3,14 @@ Intuition: the final answer as a sum of weights with + or - sign symbols infront
 
 for each weight, apply dp to find minimum summation when either add + sign or - sign.
 """
+
+
 class Solution:
     def lastStoneWeightII(self, A: List[int]) -> int:
         @cache
         def dp(i, sm):
-            if i==len(A): return abs(sm)
-            return min(dp(i+1, sm+A[i]), dp(i+1, sm-A[i]))
-        
+            if i == len(A):
+                return abs(sm)
+            return min(dp(i + 1, sm + A[i]), dp(i + 1, sm - A[i]))
+
         return dp(0, 0)

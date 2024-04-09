@@ -3,6 +3,7 @@ once the prefix sum is negative, we need to make it non-negative by pop the smal
 """
 from header import *
 
+
 class Solution:
     def makePrefSumNonNegative(self, A: List[int]) -> int:
         ans = 0
@@ -11,14 +12,12 @@ class Solution:
         for x in A:
             sm += x
             heappush(pq, x)
-            if sm<0:
+            if sm < 0:
                 sm -= heappop(pq)
                 ans += 1
         return ans
-            
-        
-        
-        
+
+
 """
 [2,3,-5,4]
 [3,-5,-2,6]

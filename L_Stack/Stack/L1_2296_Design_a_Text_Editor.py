@@ -1,13 +1,15 @@
 """ https://leetcode.com/problems/design-a-text-editor/
 """
+
+
 class TextEditor:
     def __init__(self):
         self.before = []
         self.after = []
-        
+
     def addText(self, text: str) -> None:
         self.before += list(text)
-        
+
     def deleteText(self, k: int) -> int:
         ans = 0
         while self.before and k:

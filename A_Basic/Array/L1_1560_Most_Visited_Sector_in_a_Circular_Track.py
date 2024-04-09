@@ -1,9 +1,11 @@
 class Solution:
     def mostVisited(self, n: int, rounds: List[int]) -> List[int]:
-        if rounds[0]<=rounds[-1]:
-            return [i for i in range(rounds[0], rounds[-1]+1)]
+        if rounds[0] <= rounds[-1]:
+            return [i for i in range(rounds[0], rounds[-1] + 1)]
         else:
-            return [i for i in range(1, rounds[-1]+1)]+[i for i in range(rounds[0], n+1)]
+            return [i for i in range(1, rounds[-1] + 1)] + \
+                [i for i in range(rounds[0], n + 1)]
+
 
 """
 4

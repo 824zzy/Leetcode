@@ -3,11 +3,13 @@ at index i, we can reach i-1 and i+1.
 """
 from header import *
 
+
 class Solution:
     def numberOfWays(self, s: int, e: int, k: int) -> int:
         @cache
         def dp(i, k):
-            if k==0: return i==e
-            return (dp(i+1, k-1)+dp(i-1, k-1))%(10**9+7)
-            
-        return dp(s, k)%(10**9+7)
+            if k == 0:
+                return i == e
+            return (dp(i + 1, k - 1) + dp(i - 1, k - 1)) % (10**9 + 7)
+
+        return dp(s, k) % (10**9 + 7)

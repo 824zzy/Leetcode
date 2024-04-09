@@ -4,14 +4,17 @@
 """
 from header import *
 
+
 class Solution:
     def dividePlayers(self, A: List[int]) -> int:
-        t, m = divmod(sum(A), len(A)//2)
-        if m: return -1
-        
+        t, m = divmod(sum(A), len(A) // 2)
+        if m:
+            return -1
+
         A.sort()
         ans = 0
-        for i in range(len(A)//2):
-            if A[i]+A[~i]!=t: return -1
-            ans += A[i]*A[~i]
+        for i in range(len(A) // 2):
+            if A[i] + A[~i] != t:
+                return -1
+            ans += A[i] * A[~i]
         return ans

@@ -8,6 +8,8 @@ dp[t + 1] = max(dp[t + 1], dp[t] + s[i][1])
 In the end, we'll return the first t with dp[t] >= target,
 otherwise we'll return -1.
 """
+
+
 class Solution:
     def minRefuelStops(self, target, startFuel, s):
         dp = [startFuel] + [0] * len(s)
@@ -16,5 +18,6 @@ class Solution:
                 if dp[t] >= s[i][0]:
                     dp[t + 1] = max(dp[t + 1], dp[t] + s[i][1])
         for t, d in enumerate(dp):
-            if d >= target: return t
+            if d >= target:
+                return t
         return -1

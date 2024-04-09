@@ -6,6 +6,7 @@ bit mask + prefix sum + hash table
 """
 from header import *
 
+
 class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
         mp = {'a': 0, 'e': 1, 'i': 2, 'o': 3, 'u': 4}
@@ -14,10 +15,8 @@ class Solution:
         ans = pre = 0
         for i, c in enumerate(s):
             if c in mp:
-                pre ^= 1 << (1<<mp[c])
+                pre ^= 1 << (1 << mp[c])
             if pre in cnt:
-                ans = max(ans, i-cnt[pre])
+                ans = max(ans, i - cnt[pre])
             cnt.setdefault(pre, i)
         return ans
-            
-                

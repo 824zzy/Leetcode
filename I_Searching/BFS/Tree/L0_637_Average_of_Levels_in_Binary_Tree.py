@@ -3,6 +3,7 @@ level order traversal by bfs
 """
 from header import *
 
+
 class Solution:
     def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
         ans = []
@@ -12,8 +13,10 @@ class Solution:
             sm = 0
             for node in Q:
                 sm += node.val
-                if node.left: nextQ.append(node.left)
-                if node.right: nextQ.append(node.right)
-            ans.append(sm/len(Q))
+                if node.left:
+                    nextQ.append(node.left)
+                if node.right:
+                    nextQ.append(node.right)
+            ans.append(sm / len(Q))
             Q = nextQ
         return ans

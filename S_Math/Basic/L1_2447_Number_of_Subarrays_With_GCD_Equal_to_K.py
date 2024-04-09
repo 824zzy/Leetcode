@@ -4,6 +4,7 @@ note that don't use array slicing, it's too slow
 """
 from header import *
 
+
 class Solution:
     def subarrayGCD(self, A: List[int], k: int) -> int:
         ans = 0
@@ -11,6 +12,6 @@ class Solution:
             x = 0
             for j in range(i, len(A)):
                 x = gcd(x, A[j])
-                if x==k:
+                if x == k:
                     ans += 1
         return ans

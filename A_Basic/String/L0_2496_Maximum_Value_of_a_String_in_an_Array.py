@@ -4,6 +4,7 @@ isnumeric(): check if one character is digit
 """
 from header import *
 
+
 class Solution:
     def maximumValue(self, strs: List[str]) -> int:
         ans = 0

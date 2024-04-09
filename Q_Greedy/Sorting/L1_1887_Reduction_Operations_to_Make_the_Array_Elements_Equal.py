@@ -3,17 +3,19 @@ greedy sorting from largest to smallest
 """
 from header import *
 
+
 class Solution:
     def reductionOperations(self, A: List[int]) -> int:
         cnt = Counter(A)
         pref = 0
         ans = 0
         for i, (_, f) in enumerate(sorted(cnt.items(), reverse=True)):
-            if i!=len(cnt)-1:
-                ans += (f+pref)
+            if i != len(cnt) - 1:
+                ans += (f + pref)
                 pref += f
         return ans
-    
+
+
 """
 [5,1,3]
 [1,1,1]

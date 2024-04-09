@@ -3,14 +3,15 @@ Boyer-Moore majority voting algorithm
 """
 from header import *
 
+
 class Solution:
     def majorityElement(self, A: List[int]) -> int:
         cand, freq = None, 0
         for i in range(len(A)):
-            if A[i]==cand:
+            if A[i] == cand:
                 freq += 1
             else:
-                if freq==0:
+                if freq == 0:
                     cand = A[i]
                     freq = 1
                 else:
@@ -21,4 +22,4 @@ class Solution:
 # suboptimal solution: brute force to find major element by frequency table
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        return [k for k, v in Counter(nums).items() if v>len(nums)//2][0]
+        return [k for k, v in Counter(nums).items() if v > len(nums) // 2][0]

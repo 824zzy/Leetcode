@@ -1,6 +1,8 @@
 """ L1:
 tricky line to count all the legit substrings: ans += i
 """
+
+
 class Solution:
     def numberOfSubstrings(self, s: str) -> int:
         ans = 0

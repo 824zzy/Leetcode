@@ -4,31 +4,33 @@
 """
 from header import *
 
+
 class Solution:
     def placedCoins(self, edges: List[List[int]], C: List[int]) -> List[int]:
-        ans = [1]*len(C)
+        ans = [1] * len(C)
         G = defaultdict(list)
         for i, j in edges:
             G[i].append(j)
             G[j].append(i)
-            
+
         def dfs(i, p):
             costs = [C[i]]
             for j in G[i]:
-                if j!=p:
+                if j != p:
                     _cost = dfs(j, i)
                     costs.extend(_cost)
             costs.sort()
-            if len(costs)>=3:
-                ans[i] = max(costs[0]*costs[1]*costs[-1], costs[-1]*costs[-2]*costs[-3], 0)
-            if len(costs)>5:
-                costs = costs[:2]+costs[-3:]
+            if len(costs) >= 3:
+                ans[i] = max(costs[0] * costs[1] * costs[-1],
+                             costs[-1] * costs[-2] * costs[-3], 0)
+            if len(costs) > 5:
+                costs = costs[:2] + costs[-3:]
             return costs
-            
+
         dfs(0, -1)
         return ans
-            
-        
+
+
 """
 [[0,1],[0,2],[0,3],[0,4],[0,5]]
 [1,2,3,4,5,6]

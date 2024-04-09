@@ -4,18 +4,18 @@
 """
 from header import *
 
+
 class Solution:
     def validSubarrays(self, A: List[int]) -> int:
         # next smaller on the right
-        R = [len(A)]*len(A)
+        R = [len(A)] * len(A)
         stk = []
         for i in range(len(A)):
-            while stk and A[stk[-1]]>A[i]:
+            while stk and A[stk[-1]] > A[i]:
                 R[stk.pop()] = i
             stk.append(i)
-            
+
         ans = 0
         for i, j in enumerate(R):
-            ans += j-i
+            ans += j - i
         return ans
-            

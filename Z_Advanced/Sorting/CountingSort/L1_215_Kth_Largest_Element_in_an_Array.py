@@ -3,6 +3,7 @@ counting sort
 """
 from header import *
 
+
 class Solution:
     def findKthLargest(self, A: List[int], k: int) -> int:
         mn = min(A)
@@ -11,11 +12,10 @@ class Solution:
 
         for num in A:
             cnt[num - mn] += 1
-        
+
         rem = k
-        for num in range(len(cnt) -1, -1, -1):
+        for num in range(len(cnt) - 1, -1, -1):
             rem -= cnt[num]
             if rem <= 0:
                 return num + mn
         return -1
-        

@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/integer-to-roman/submissions/
 greedily choose the largest roman numeral that is less than or equal to the number
 """
+
+
 class Solution:
     def intToRoman(self, n: int) -> str:
         mp = [
@@ -18,9 +20,9 @@ class Solution:
             [4, 'IV'],
             [1, 'I']
         ]
-        
+
         ans = ''
         for k, v in mp:
             x, n = divmod(n, k)
-            ans += v*x
+            ans += v * x
         return ans

@@ -7,6 +7,7 @@ palindrome ==> at most one odd number, the other should be the same
 """
 from header import *
 
+
 class Solution:
     def longestAwesome(self, s: str) -> int:
         cnt = Counter()
@@ -16,14 +17,15 @@ class Solution:
             pre ^= 1 << int(c)
             # case 1
             if pre in cnt:
-                ans = max(ans, i-cnt[pre])
+                ans = max(ans, i - cnt[pre])
             # case 2
             for j in range(10):
-                if pre^(1<<j) in cnt:
-                    ans = max(ans, i-cnt[pre^(1<<j)])
+                if pre ^ (1 << j) in cnt:
+                    ans = max(ans, i - cnt[pre ^ (1 << j)])
             cnt.setdefault(pre, i)
         return ans
-    
+
+
 """
 "3242415"
 "12345678"

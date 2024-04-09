@@ -3,6 +3,7 @@ from dba: https://leetcode.com/problems/swap-nodes-in-pairs/discuss/984392/Pytho
 """
 from header import *
 
+
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
         ans = pre = ListNode(next=head)

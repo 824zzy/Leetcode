@@ -4,27 +4,30 @@
 """
 from header import *
 
+
 class Solution:
     def minOperations(self, s1: str, s2: str, x: int) -> int:
-        A = [i for i, (x, y) in enumerate(zip(s1, s2)) if x!=y]
-        
+        A = [i for i, (x, y) in enumerate(zip(s1, s2)) if x != y]
+
         @cache
         def dp(i, can_flip):
-            if i==len(A):
-                if can_flip==0:
+            if i == len(A):
+                if can_flip == 0:
                     return 0
                 else:
                     return inf
             # op1
-            ans1 = A[i+1]-A[i]+dp(i+2, can_flip) if i<len(A)-1 else inf
+            ans1 = A[i + 1] - A[i] + \
+                dp(i + 2, can_flip) if i < len(A) - 1 else inf
             # op2
-            ans2 = x+dp(i+1, can_flip+1)
+            ans2 = x + dp(i + 1, can_flip + 1)
             # canFlip
-            ans3 = dp(i+1, can_flip-1) if can_flip else inf
+            ans3 = dp(i + 1, can_flip - 1) if can_flip else inf
             return min(ans1, ans2, ans3)
         ans = dp(0, 0)
-        return ans if ans!=inf else -1
-            
+        return ans if ans != inf else -1
+
+
 """
 "1100011000"
 "0101001010"

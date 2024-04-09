@@ -3,6 +3,7 @@ find set intersection of all rows
 """
 from header import *
 
+
 class Solution:
     def smallestCommonElement(self, A: List[List[int]]) -> int:
         seen = set(A[0])

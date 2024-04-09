@@ -1,7 +1,8 @@
 """ https://leetcode.com/problems/earliest-possible-day-of-full-bloom/
-sort P and G by grow time, find maximum prefix+grow time. 
+sort P and G by grow time, find maximum prefix+grow time.
 """
 from header import *
+
 
 class Solution:
     def earliestFullBloom(self, P: List[int], G: List[int]) -> int:
@@ -10,5 +11,5 @@ class Solution:
         prefix = 0
         for p, g in A:
             prefix += p
-            ans = max(ans, prefix+g)
+            ans = max(ans, prefix + g)
         return ans

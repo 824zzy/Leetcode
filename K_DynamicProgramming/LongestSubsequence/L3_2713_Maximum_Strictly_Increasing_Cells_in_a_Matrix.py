@@ -3,6 +3,7 @@ Data structure optimized DP, learn from: https://leetcode.cn/problems/maximum-st
 """
 from header import *
 
+
 class Solution:
     def maxIncreasingCells(self, mat: List[List[int]]) -> int:
         g = defaultdict(list)

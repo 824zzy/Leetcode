@@ -7,18 +7,21 @@ Theory:
 """
 from header import *
 
+
 class Solution:
     def numSquares(self, n: int) -> int:
         def is_4square(n):
             while n % 4 == 0:
                 n //= 4
             return n % 8 == 7
-        
+
         def is_perfect(n):
             return int(sqrt(n)) ** 2 == n
 
-        if is_perfect(n): return 1
-        if is_4square(n): return 4
+        if is_perfect(n):
+            return 1
+        if is_4square(n):
+            return 4
         # check if the number can be decomposed into the sum of two squares
         for i in range(1, int(sqrt(n)) + 1):
             if is_perfect(n - i * i):

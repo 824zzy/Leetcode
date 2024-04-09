@@ -12,6 +12,7 @@ class Node:
 """
 from header import *
 
+
 class Solution:
     def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
         P = set()
@@ -22,7 +23,8 @@ class Solution:
             if q in P:
                 return q
             q = q.parent
-            
+
+
 """
 [3,5,1,6,2,0,8,null,null,7,4]
 5

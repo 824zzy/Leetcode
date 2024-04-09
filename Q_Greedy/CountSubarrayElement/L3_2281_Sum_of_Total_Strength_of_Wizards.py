@@ -5,31 +5,32 @@ similar to 907, almost the same as 1856
 """
 from header import *
 
+
 class Solution:
     def totalStrength(self, A: List[int]) -> int:
         # next smaller on the right
-        R = [len(A)]*len(A)
+        R = [len(A)] * len(A)
         stk = []
         for i in range(len(A)):
-            while stk and A[stk[-1]]>A[i]:
+            while stk and A[stk[-1]] > A[i]:
                 R[stk.pop()] = i
             stk.append(i)
-        
+
         # next smaller on the left
-        L = [-1]*len(A)
+        L = [-1] * len(A)
         stk = []
         for i in reversed(range(len(A))):
-            while stk and A[stk[-1]]>=A[i]:
+            while stk and A[stk[-1]] >= A[i]:
                 L[stk.pop()] = i
             stk.append(i)
-            
+
         # for each A[i] as minimum, calculate sum
         ans = 0
         prefix = list(accumulate(accumulate(A), initial=0))
         for i in range(len(A)):
             l, r = L[i], R[i]
-            lprefix = prefix[i]-prefix[max(l, 0)]
-            rprefix = prefix[r]-prefix[i]
-            ln, rn = i-l, r-i
-            ans += A[i] * (rprefix*ln-lprefix*rn)
-        return ans%(10**9+7)
+            lprefix = prefix[i] - prefix[max(l, 0)]
+            rprefix = prefix[r] - prefix[i]
+            ln, rn = i - l, r - i
+            ans += A[i] * (rprefix * ln - lprefix * rn)
+        return ans % (10**9 + 7)

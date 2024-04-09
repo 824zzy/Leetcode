@@ -7,32 +7,33 @@ Observation:
 """
 from header import *
 
+
 class Solution:
-    def leftmostBuildingQueries(self, A: List[int], Q: List[List[int]]) -> List[int]:
+    def leftmostBuildingQueries(
+            self, A: List[int], Q: List[List[int]]) -> List[int]:
         # next greater on the right
-        R = [len(A)]*len(A)
+        R = [len(A)] * len(A)
         stk = []
         for i in range(len(A)):
-            while stk and A[stk[-1]]<=A[i]:
+            while stk and A[stk[-1]] <= A[i]:
                 R[stk.pop()] = i
             stk.append(i)
-        
-        
-        ans = [-1]*len(Q)
+
+        ans = [-1] * len(Q)
         for i, (x, y) in enumerate(Q):
             x, y = min(x, y), max(x, y)
-            if x==y or A[x]<A[y]: # cases don't need monotonic stack
+            if x == y or A[x] < A[y]:  # cases don't need monotonic stack
                 ans[i] = y
-            elif R[x]==len(A): # edge case
+            elif R[x] == len(A):  # edge case
                 continue
-            else: # hop until find the valid index
-                while R[y]<len(R) and A[R[y]]<A[x]:
+            else:  # hop until find the valid index
+                while R[y] < len(R) and A[R[y]] < A[x]:
                     y = R[y]
-                if R[y]<len(R) and A[R[y]]>A[x]:
+                if R[y] < len(R) and A[R[y]] > A[x]:
                     ans[i] = R[y]
         return ans
-                
-        
+
+
 """
 [6,4,8,5,2,7]
 [[0,1],[0,3],[2,4],[3,4],[2,2]]

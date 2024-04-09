@@ -3,6 +3,7 @@ TODO:
 """
 from header import *
 
+
 class Solution:
     def minMoves(self, A: List[int], limit: int) -> int:
         pass

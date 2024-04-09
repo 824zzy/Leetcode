@@ -6,16 +6,17 @@ class Solution:
             numBottles -= 1
             ans += 1
             cnt += 1
-            if cnt%numExchange==0:
+            if cnt % numExchange == 0:
                 cnt = 0
                 numBottles += 1
         return ans
-        
+
+
 class Solution(object):
     def numWaterBottles(self, numBottles, numExchange):
         ans = numBottles
-        while numBottles>=numExchange:
-            tmp = numBottles // numExchange 
+        while numBottles >= numExchange:
+            tmp = numBottles // numExchange
             numBottles = numBottles % numExchange + tmp
             ans += tmp
         return ans

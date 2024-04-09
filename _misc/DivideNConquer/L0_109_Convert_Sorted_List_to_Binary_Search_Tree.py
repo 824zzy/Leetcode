@@ -4,17 +4,19 @@
 """
 from header import *
 
+
 class Solution:
     def sortedListToBST(self, head: Optional[ListNode]) -> Optional[TreeNode]:
         A = []
         while head:
             A.append(head.val)
             head = head.next
-        
+
         def fn(A):
-            if not A: return None
-            cur = TreeNode(A[len(A)//2])
-            cur.left = fn(A[:len(A)//2])
-            cur.right = fn(A[len(A)//2+1:])
+            if not A:
+                return None
+            cur = TreeNode(A[len(A) // 2])
+            cur.left = fn(A[:len(A) // 2])
+            cur.right = fn(A[len(A) // 2 + 1:])
             return cur
         return fn(A)

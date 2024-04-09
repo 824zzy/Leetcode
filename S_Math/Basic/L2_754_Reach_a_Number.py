@@ -4,6 +4,8 @@ ans target-ans k
 10 5 5
 15 10 6
 """
+
+
 class Solution:
     def reachNumber(self, target: int) -> int:
         ans, k = 0, 0
@@ -14,4 +16,4 @@ class Solution:
         while (ans - target) % 2:
             ans += k
             k += 1
-        return k - 1  
+        return k - 1

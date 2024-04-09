@@ -2,6 +2,7 @@
 Basic simulation
 """
 
+
 class Solution:
     def judgeCircle(self, moves: str) -> bool:
         coor = [0, 0]

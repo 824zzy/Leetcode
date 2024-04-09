@@ -6,14 +6,15 @@ As a result, X = (fn(0, 1) + sum(piles))//2.
 """
 from header import *
 
+
 class Solution:
     def stoneGameII(self, A: List[int]) -> int:
         @cache
         def dp(i, M):
-            if i>=len(A):
+            if i >= len(A):
                 return 0
             ans = -inf
-            for j in range(1, 2*M+1):
-                ans = max(ans, sum(A[i:i+j])-dp(i+j, max(M, j)))
+            for j in range(1, 2 * M + 1):
+                ans = max(ans, sum(A[i:i + j]) - dp(i + j, max(M, j)))
             return ans
-        return (dp(0, 1)+sum(A))//2
+        return (dp(0, 1) + sum(A)) // 2

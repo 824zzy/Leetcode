@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/shortest-common-supersequence/
 TODO: solve this problem
 """
+
+
 class Solution:
     def shortestCommonSupersequence(self, A: str, B: str) -> str:
         pass
@@ -9,7 +11,7 @@ class Solution:
 #             if i==len(A) or j==len(B): return ''
 #             elif A[i]==B[j]: return A[i]+dfs(i+1, j+1)
 #             else: return max(dfs(i, j+1), dfs(i+1, j), key=len)
-        
+
 #         lcs = dfs(0, 0)
 #         print(lcs, A.index(lcs), B.index(lcs))
 #         ans = []

@@ -11,14 +11,15 @@ check the if it's fair,
 then increse the sum in left.
 """
 
+
 class Solution:
     def waysToMakeFair(self, nums: List[int]) -> int:
         s1 = [0, 0]
         s2 = [sum(nums[0::2]), sum(nums[1::2])]
         ans = 0
         for i, n in enumerate(nums):
-            s2[i%2] -= n
-            if s1[0]+s2[1] == s1[1]+s2[0]:
+            s2[i % 2] -= n
+            if s1[0] + s2[1] == s1[1] + s2[0]:
                 ans += 1
-            s1[i%2] += n
+            s1[i % 2] += n
         return ans

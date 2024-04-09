@@ -6,21 +6,22 @@
 """
 from header import *
 
+
 class Solution:
     def triangleNumber(self, A: List[int]) -> int:
         A.sort()
         ans = 0
         for k in reversed(range(1, len(A))):
-            i, j = 0, k-1
-            while i<j:
-                if A[i]+A[j]>A[k]:
-                    ans += j-i
+            i, j = 0, k - 1
+            while i < j:
+                if A[i] + A[j] > A[k]:
+                    ans += j - i
                     j -= 1
                 else:
                     i += 1
         return ans
-                    
-                    
+
+
 """
 [2,2,3,4]
 [4,2,3,4]

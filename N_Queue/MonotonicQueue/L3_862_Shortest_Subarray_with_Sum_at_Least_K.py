@@ -5,6 +5,7 @@ and try to make queue head as small(but larger than k) as possible and queue tai
 """
 from header import *
 
+
 class Solution:
     def shortestSubarray(self, A: List[int], k: int) -> int:
         A = list(accumulate(A, initial=0))
@@ -12,11 +13,11 @@ class Solution:
         ans = inf
         for i in range(len(A)):
             # in: ensure monotonic increasing
-            while q and A[q[-1]]>=A[i]:
+            while q and A[q[-1]] >= A[i]:
                 q.pop()
             q.append(i)
             # out: pop when the window sum larger than k
-            while q and A[i]-A[q[0]]>=k:
-                ans = min(ans, i-q[0])
+            while q and A[i] - A[q[0]] >= k:
+                ans = min(ans, i - q[0])
                 q.popleft()
-        return ans if ans!=inf else -1
+        return ans if ans != inf else -1

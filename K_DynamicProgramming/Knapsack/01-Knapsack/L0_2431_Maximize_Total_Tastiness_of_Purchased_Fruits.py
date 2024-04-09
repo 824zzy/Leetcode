@@ -6,21 +6,26 @@ three options knapsack problem:
 """
 from header import *
 
+
 class Solution:
-    def maxTastiness(self, P: List[int], T: List[int], maxAmt: int, maxCps: int) -> int:
+    def maxTastiness(
+            self,
+            P: List[int],
+            T: List[int],
+            maxAmt: int,
+            maxCps: int) -> int:
         @cache
         def dp(i, amt, cps):
-            if i==len(P): return 0
+            if i == len(P):
+                return 0
             # skip
-            ans = dp(i+1, amt, cps)
+            ans = dp(i + 1, amt, cps)
             # buy but not use coupon
-            if amt-P[i]>=0:
-                ans = max(ans, T[i]+dp(i+1, amt-P[i], cps))
+            if amt - P[i] >= 0:
+                ans = max(ans, T[i] + dp(i + 1, amt - P[i], cps))
             # buy ans use coupon
-            if amt-P[i]//2>=0 and cps:
-                ans = max(ans, T[i]+dp(i+1, amt-P[i]//2, cps-1))
+            if amt - P[i] // 2 >= 0 and cps:
+                ans = max(ans, T[i] + dp(i + 1, amt - P[i] // 2, cps - 1))
             return ans
-        
+
         return dp(0, maxAmt, maxCps)
-            
-            

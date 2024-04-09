@@ -4,6 +4,8 @@ prefix set trie or trie
 TODO: solve it again
 """
 from header import *
+
+
 class Solution:
     def sumPrefixScores(self, words: List[str]) -> List[int]:
         prefix = defaultdict(int)
@@ -12,7 +14,7 @@ class Solution:
             for i in range(len(w)):
                 _p += w[i]
                 prefix[_p] += 1
-        
+
         ans = []
         for w in words:
             curr = 0
@@ -21,10 +23,10 @@ class Solution:
                 _p += w[i]
                 curr += prefix[_p]
             ans.append(curr)
-            
+
         return ans
-        
-        
+
+
 class Solution:
     def sumPrefixScores(self, words: List[str]) -> List[int]:
         root = {}
@@ -32,15 +34,14 @@ class Solution:
             node = root
             for c in w:
                 node = node.setdefault(c, {})
-                node['#'] = node.get('#', 0)+1
-        
-        
+                node['#'] = node.get('#', 0) + 1
+
         ans = []
-        for word in words: 
+        for word in words:
             val = 0
             node = root
-            for ch in word: 
+            for ch in word:
                 node = node[ch]
                 val += node['#']
-            ans.append(val) 
-        return ans 
+            ans.append(val)
+        return ans

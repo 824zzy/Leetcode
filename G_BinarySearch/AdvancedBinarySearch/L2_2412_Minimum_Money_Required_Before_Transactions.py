@@ -1,32 +1,35 @@
 """ https://leetcode.com/problems/minimum-money-required-before-transactions/
-1. greedily sort the transactions by: 
+1. greedily sort the transactions by:
     - For transactions that have cashback greater or equal to cost, sort them by cost in descending order.
     - For transactions that have cashback less than cost, sort them by cashback in descending order.
 2. use binary search to find the minimum money required before transactions. Note that the upper bound of the money required is 10**14+1.
 """
 from header import *
 
+
 class Solution:
     def minimumMoney(self, A: List[List[int]]) -> int:
-        _A1 = sorted([[x, y] for x, y in A if x<=y], key=lambda xx: -xx[0])
-        _A2 = sorted([[x, y] for x, y in A if x>y], key=lambda xx: xx[1])
-        A = _A2+_A1
-        
+        _A1 = sorted([[x, y] for x, y in A if x <= y], key=lambda xx: -xx[0])
+        _A2 = sorted([[x, y] for x, y in A if x > y], key=lambda xx: xx[1])
+        A = _A2 + _A1
+
         def fn(m):
             for c, cb in A:
-                if m<c: return False
-                m = m-c+cb
+                if m < c:
+                    return False
+                m = m - c + cb
             return True
-        
-        
+
         ans = 0
-        l, r = 0, 10**14+1
-        while l<r:
-            m = (l+r)//2
-            if fn(m): r = m
-            else: l = m+1
+        l, r = 0, 10**14 + 1
+        while l < r:
+            m = (l + r) // 2
+            if fn(m):
+                r = m
+            else:
+                l = m + 1
         return l
-                
+
 
 """
 [[2,1],[5,0],[4,2]]

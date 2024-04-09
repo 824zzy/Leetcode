@@ -4,17 +4,18 @@
 """
 from header import *
 
+
 class Solution:
     def matrixSumQueries(self, n: int, A: List[List[int]]) -> int:
         ans = 0
         seen = [set(), set()]
         for t, i, v in reversed(A):
             if i not in seen[t]:
-                ans += v*(n-len(seen[t^1]))
+                ans += v * (n - len(seen[t ^ 1]))
                 seen[t].add(i)
         return ans
-            
-            
+
+
 """
 3
 [[0,0,1],[1,2,2],[0,2,3],[1,0,4]]

@@ -1,6 +1,8 @@
 """ https://leetcode.com/problems/sequentially-ordinal-rank-tracker/
 use binary search to insert location and k to find kth location
 """
+
+
 class SORTracker:
     def __init__(self):
         self.A = []
@@ -11,4 +13,4 @@ class SORTracker:
 
     def get(self) -> str:
         self.k += 1
-        return self.A[self.k-1][1]
+        return self.A[self.k - 1][1]

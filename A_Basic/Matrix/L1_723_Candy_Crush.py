@@ -5,6 +5,7 @@ simulation on matrix:
 """
 from header import *
 
+
 class Solution:
     def candyCrush(self, B: List[List[int]]) -> List[List[int]]:
         def check(B):
@@ -14,14 +15,15 @@ class Solution:
                     for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
                         x, y = i, j
                         tmp = {(i, j)}
-                        while 0<=x+dx<len(B) and 0<=y+dy<len(B[0]) and B[x][y]==B[x+dx][y+dy] and B[x][y]!=0:
-                            tmp.add((x+dx, y+dy))
+                        while 0 <= x + dx < len(B) and 0 <= y + dy < len(
+                                B[0]) and B[x][y] == B[x + dx][y + dy] and B[x][y] != 0:
+                            tmp.add((x + dx, y + dy))
                             x += dx
                             y += dy
-                        if len(tmp)>=3:
+                        if len(tmp) >= 3:
                             ans |= tmp
             return ans
-        
+
         def eliminate(B, candies):
             cols = list([list(x) for x in zip(*B)])
             for i in range(len(cols)):
@@ -29,10 +31,9 @@ class Solution:
                 for j in range(len(cols[0])):
                     if (j, i) not in candies:
                         tmp.append(cols[i][j])
-                cols[i] = [0]*(len(B)-len(tmp))+tmp
+                cols[i] = [0] * (len(B) - len(tmp)) + tmp
             return list([list(x) for x in zip(*cols)])
-        
-        
-        while candies:=check(B):
+
+        while candies := check(B):
             B = eliminate(B, candies)
         return B

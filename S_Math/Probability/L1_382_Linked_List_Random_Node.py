@@ -3,6 +3,8 @@
 from header import *
 
 # Reservoir Sampling
+
+
 class Solution:
 
     def __init__(self, head: ListNode):
@@ -14,12 +16,14 @@ class Solution:
         while node:
             cnt += 1
             p = random.random()
-            if p<1/cnt:
+            if p < 1 / cnt:
                 ans = node.val
             node = node.next
         return ans
-    
+
 # straightforward solution
+
+
 class Solution:
     def __init__(self, head: ListNode):
         self.head = head
@@ -32,5 +36,5 @@ class Solution:
             self.l += 1
 
     def getRandom(self) -> int:
-        idx = random.randint(0, self.l-1)
+        idx = random.randint(0, self.l - 1)
         return self.val[idx]

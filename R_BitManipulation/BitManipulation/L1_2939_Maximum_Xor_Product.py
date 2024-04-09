@@ -1,20 +1,22 @@
 """ https://leetcode.com/problems/maximum-xor-product/
 greedily choose the bit that maximizes the xor product
 """
+
+
 class Solution:
     def maximumXorProduct(self, a: int, b: int, n: int) -> int:
-        MOD = 10**9+7
+        MOD = 10**9 + 7
         x = 0
-        ans = a*b
-        for i in range(n-1, -1, -1):
-            y1 = (a^x)*(b^x)
-            xx = x + (1<<i)
-            y2 = (a^xx)*(b^xx)
-            if y2>=y1:
+        ans = a * b
+        for i in range(n - 1, -1, -1):
+            y1 = (a ^ x) * (b ^ x)
+            xx = x + (1 << i)
+            y2 = (a ^ xx) * (b ^ xx)
+            if y2 >= y1:
                 x = xx
-        return (a^x)*(b^x)%MOD
-            
-            
+        return (a ^ x) * (b ^ x) % MOD
+
+
 """
 12
 5

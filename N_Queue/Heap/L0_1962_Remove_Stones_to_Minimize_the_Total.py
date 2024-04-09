@@ -6,11 +6,12 @@ greedy: use a max-heap to greedily find the maximal value
 """
 from header import *
 
+
 class Solution:
     def minStoneSum(self, A: List[int], k: int) -> int:
         A = [-x for x in A]
         heapify(A)
         for _ in range(k):
             mx = -heappop(A)
-            heappush(A, -(mx-mx//2))
+            heappush(A, -(mx - mx // 2))
         return -sum(A)

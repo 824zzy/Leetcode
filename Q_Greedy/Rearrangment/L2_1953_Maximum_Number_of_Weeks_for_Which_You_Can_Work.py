@@ -5,9 +5,13 @@ Translate the problem to: rearrange projects to ensure no two adjacent projects 
 2. if most frequent projects more than half total projects, only (sm-mx)*2+1 can be done
     a_a_a_a_a and bcd => abacadaa
 """
+
+
 class Solution:
     def numberOfWeeks(self, A: List[int]) -> int:
         sm = sum(A)
         mx = max(A)
-        if mx<=sm/2: return sm
-        else: return (sm-mx)*2+1
+        if mx <= sm / 2:
+            return sm
+        else:
+            return (sm - mx) * 2 + 1

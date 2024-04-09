@@ -6,6 +6,8 @@ learn from 0x3ff: https://leetcode.cn/problems/find-maximum-non-decreasing-array
     s[i]-s[j]>=last[j] ===> s[i]>=s[j]+last[j]
 """
 from header import *
+
+
 class Solution:
     def findMaximumLength(self, nums: List[int]) -> int:
         n = len(nums)
@@ -17,11 +19,11 @@ class Solution:
             # 1. 去掉队首无用数据（计算转移时，直接取队首）
             while len(q) > 1 and s[q[1]] + last[q[1]] <= s[i]:
                 q.popleft()
-            
+
             # 2. 计算转移
             f[i] = f[q[0]] + 1
             last[i] = s[i] - s[q[0]]
-            
+
             # 3. 去掉队尾无用数据
             while q and s[q[-1]] + last[q[-1]] >= s[i] + last[i]:
                 q.pop()

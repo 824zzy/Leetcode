@@ -3,15 +3,18 @@ return max(l, r) + 1 to find the maximal diameter for each node
 """
 from header import *
 
+
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         self.ans = 0
+
         def dfs(node):
-            if not node: return 0
+            if not node:
+                return 0
             l = dfs(node.left)
             r = dfs(node.right)
-            self.ans = max(self.ans, l+r)
-            return max(l, r)+1
-        
+            self.ans = max(self.ans, l + r)
+            return max(l, r) + 1
+
         dfs(root)
         return self.ans

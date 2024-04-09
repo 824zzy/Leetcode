@@ -4,14 +4,17 @@
 
 Time complexity: O(n)
 """
+
+
 class Solution:
     def maxWidthRamp(self, A: List[int]) -> int:
         ans = 0
         stk = []
-        for i in range(len(A)): 
-            if not stk or A[stk[-1]]>A[i]: stk.append(i)
-        
+        for i in range(len(A)):
+            if not stk or A[stk[-1]] > A[i]:
+                stk.append(i)
+
         for i in reversed(range(len(A))):
-            while stk and A[stk[-1]]<=A[i]:
-                ans = max(ans, i-stk.pop())
+            while stk and A[stk[-1]] <= A[i]:
+                ans = max(ans, i - stk.pop())
         return ans

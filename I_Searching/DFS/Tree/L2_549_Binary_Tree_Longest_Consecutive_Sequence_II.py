@@ -2,40 +2,48 @@
 For each node, we keep track of the longest consecutive increasing and decreasing sequence that starts at that node.
 """
 from header import *
+
+
 class Solution:
     def longestConsecutive(self, root: Optional[TreeNode]) -> int:
         self.ans = 0
-        
+
         # increase
         def dfs(node):
-            if not node: return None, None
+            if not node:
+                return None, None
             li, ld = dfs(node.left)
             ri, rd = dfs(node.right)
-            
+
             cnti = 1
             cntd = 1
-            if node.left and node.left.val+1==node.val:
+            if node.left and node.left.val + 1 == node.val:
                 cnti += ld
                 ld += 1
-            else: ld = 1
-            if node.left and node.left.val-1==node.val:
+            else:
+                ld = 1
+            if node.left and node.left.val - 1 == node.val:
                 cntd += li
                 li += 1
-            else: li = 1
-            if node.right and node.right.val+1==node.val:
+            else:
+                li = 1
+            if node.right and node.right.val + 1 == node.val:
                 cntd += rd
                 rd += 1
-            else: rd = 1
-            if node.right and node.right.val-1==node.val:
+            else:
+                rd = 1
+            if node.right and node.right.val - 1 == node.val:
                 cnti += ri
                 ri += 1
-            else: ri = 1
+            else:
+                ri = 1
             self.ans = max(self.ans, cnti, cntd)
             return max(li, ri), max(ld, rd)
-        
+
         dfs(root)
         return self.ans
-        
+
+
 """
 [1,2,3]
 [2,1,3]

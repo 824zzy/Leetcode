@@ -5,20 +5,24 @@ Let us just use counter and count frequency of each number in our array. We can 
 """
 from header import *
 
+
 class Solution:
     def findPairs(self, A: List[int], k: int) -> int:
-        if k==0: return sum(x>1 for x in Counter(A).values())
-        
+        if k == 0:
+            return sum(x > 1 for x in Counter(A).values())
+
         A.sort()
         seen = set()
         ans = 0
         for i, x in enumerate(A):
-            if i and A[i]==A[i-1]: continue
-            if x-k in seen:
+            if i and A[i] == A[i - 1]:
+                continue
+            if x - k in seen:
                 ans += 1
             seen.add(x)
         return ans
-    
+
+
 """
 [3,1,4,1,5]
 2

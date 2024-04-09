@@ -5,21 +5,25 @@ use two pass monotonic stack to find:
 
 Time: O(n)
 """
+
+
 class Solution:
     def findUnsortedSubarray(self, A: List[int]) -> int:
         l = inf
         stk = []
         for i in range(len(A)):
-            while stk and A[stk[-1]]>A[i]:
+            while stk and A[stk[-1]] > A[i]:
                 l = min(l, stk.pop())
             stk.append(i)
-        
+
         r = -inf
         stk = []
         for i in reversed(range(len(A))):
-            while stk and A[stk[-1]]<A[i]:
+            while stk and A[stk[-1]] < A[i]:
                 r = max(r, stk.pop())
             stk.append(i)
-            
-        if l!=inf and r!=-inf: return r-l+1
-        else: return 0
+
+        if l != inf and r != -inf:
+            return r - l + 1
+        else:
+            return 0

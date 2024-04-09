@@ -4,6 +4,7 @@
 """
 from header import *
 
+
 class Solution:
     def deleteGreatestValue(self, A: List[List[int]]) -> int:
         A = [sorted(x) for x in A]

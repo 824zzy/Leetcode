@@ -7,25 +7,26 @@ idea is the same as 2972.
 """
 from header import *
 
+
 class Solution:
     def findLengthOfShortestSubarray(self, A: List[int]) -> int:
         n = len(A)
-        j = len(A)-1
-        while j>0 and A[j-1]<=A[j]:
+        j = len(A) - 1
+        while j > 0 and A[j - 1] <= A[j]:
             j -= 1
-        if j==0: return 0
-        
-        i = 0    
+        if j == 0:
+            return 0
+
+        i = 0
         ans = j
-        while i==0 or (i<len(A)-1 and A[i-1]<=A[i]):
-            while j<len(A) and A[i]>A[j]:
+        while i == 0 or (i < len(A) - 1 and A[i - 1] <= A[i]):
+            while j < len(A) and A[i] > A[j]:
                 j += 1
-            ans = min(ans, j-i-1)
+            ans = min(ans, j - i - 1)
             i += 1
         return ans
-        
-        
-    
+
+
 """
 [1,2,3,10,4,2,3,5]
 [5,4,3,2,1]

@@ -6,17 +6,21 @@ The same as 2420_Find_All_Good_Indices_L1.py
 """
 from header import *
 
+
 class Solution:
     def goodDaysToRobBank(self, security: List[int], time: int) -> List[int]:
-        A = [0]*len(security)
+        A = [0] * len(security)
         for i in range(1, len(A)):
-            if security[i-1]>=security[i]: A[i] = A[i-1]+1
-        
-        _A = [0]*len(security)
-        for i in reversed(range(len(_A)-1)):
-            if security[i]<=security[i+1]: _A[i] = _A[i+1]+1
-        
+            if security[i - 1] >= security[i]:
+                A[i] = A[i - 1] + 1
+
+        _A = [0] * len(security)
+        for i in reversed(range(len(_A) - 1)):
+            if security[i] <= security[i + 1]:
+                _A[i] = _A[i + 1] + 1
+
         ans = []
         for i in range(len(A)):
-            if A[i]>=time and _A[i]>=time: ans.append(i)
+            if A[i] >= time and _A[i] >= time:
+                ans.append(i)
         return ans

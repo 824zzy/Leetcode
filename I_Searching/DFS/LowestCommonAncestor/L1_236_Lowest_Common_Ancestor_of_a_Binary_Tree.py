@@ -3,12 +3,17 @@ classical problem
 """
 from header import *
 
+
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor(
+            self,
+            root: 'TreeNode',
+            p: 'TreeNode',
+            q: 'TreeNode') -> 'TreeNode':
         def dfs(node):
             if not node:
                 return None
-            if node==p or node==q:
+            if node == p or node == q:
                 return node
             l = dfs(node.left)
             r = dfs(node.right)

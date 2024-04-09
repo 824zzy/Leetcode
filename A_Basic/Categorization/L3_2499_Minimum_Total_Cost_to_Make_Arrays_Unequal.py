@@ -2,7 +2,7 @@
 Observation:
 1. Equal i-th elements in both array must be changed, first sum up their index.
 
-Case1: 
+Case1:
 x = num1[i] = nums2[i]
 1: The major element of x less or equal than half:
     1.1: x's count is even ==> pair them
@@ -12,6 +12,7 @@ x = num1[i] = nums2[i]
          find nums1[j] != nums2[j]!= major element, until major element less or equal than half
 """
 from header import *
+
 
 class Solution:
     def minimumTotalCost(self, nums1: List[int], nums2: List[int]) -> int:
@@ -26,7 +27,8 @@ class Solution:
                     mode_cnt, mode = cnt[x], x
 
         for i, (x, y) in enumerate(zip(nums1, nums2)):
-            if mode_cnt * 2 <= swap_cnt: break
+            if mode_cnt * 2 <= swap_cnt:
+                break
             if x != y and x != mode and y != mode:
                 ans += i
                 swap_cnt += 1

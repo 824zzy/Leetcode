@@ -5,24 +5,27 @@ This solution will TLE, please refer to this better one: https://leetcode.cn/pro
 """
 from header import *
 
+
 class Solution:
     def countCompleteSubstrings(self, A: str, k: int) -> int:
         ans = 0
-        for l in range(1, len(set(A))+1):
+        for l in range(1, len(set(A)) + 1):
             mp = Counter()
             i = 0
             for j, c in enumerate(A):
                 mp[A[j]] += 1
-                while i<j and (j and abs(ord(A[j])-ord(A[j-1]))>2) or len(mp)>l or mp[A[j]]>k:
+                while i < j and (j and abs(
+                        ord(A[j]) - ord(A[j - 1])) > 2) or len(mp) > l or mp[A[j]] > k:
                     mp[A[i]] -= 1
-                    if mp[A[i]]==0:
+                    if mp[A[i]] == 0:
                         mp.pop(A[i])
                     i += 1
-                if len(mp)==l:
-                    if all(v==k for _, v in mp.items()):
+                if len(mp) == l:
+                    if all(v == k for _, v in mp.items()):
                         ans += 1
         return ans
-    
+
+
 """
 "igigee"
 2

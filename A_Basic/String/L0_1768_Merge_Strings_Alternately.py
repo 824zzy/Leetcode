@@ -3,6 +3,7 @@ basic usage of zip_longest
 """
 from header import *
 
+
 class Solution:
     def mergeAlternately(self, x: str, y: str) -> str:
         ans = ''
@@ -10,7 +11,7 @@ class Solution:
             ans += xx
             ans += yy
         return ans
-    
+
 
 # linear scan
 class Solution:

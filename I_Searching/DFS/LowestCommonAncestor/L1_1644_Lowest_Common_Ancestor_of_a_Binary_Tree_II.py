@@ -2,18 +2,25 @@
 Slightly modify the LCA template
 """
 from header import *
+
+
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor(
+            self,
+            root: 'TreeNode',
+            p: 'TreeNode',
+            q: 'TreeNode') -> 'TreeNode':
         self.hasP, self.hasQ = False, False
+
         def dfs(node, p, q):
             if not node:
                 return None
             l = dfs(node.left, p, q)
             r = dfs(node.right, p, q)
-            if node==p:
+            if node == p:
                 self.hasP = True
                 return node
-            elif node==q:
+            elif node == q:
                 self.hasQ = True
                 return node
             elif l and r:

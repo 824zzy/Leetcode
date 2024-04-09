@@ -3,6 +3,7 @@ sweep line template
 """
 from header import *
 
+
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         diff = []
