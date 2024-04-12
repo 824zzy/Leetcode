@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/remove-k-digits/
+greedy + monotonic stack
+
 1. maintain a monotonic increasing stack for finding the smalllest possible integer
 2. the poped element count reach to k then stop poping
 3. the answer will be the first least elements leave in the stask
