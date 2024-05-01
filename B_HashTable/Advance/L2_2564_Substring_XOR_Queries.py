@@ -8,8 +8,7 @@ from header import *
 
 
 class Solution:
-    def substringXorQueries(
-            self, s: str, queries: List[List[int]]) -> List[List[int]]:
+    def substringXorQueries(self, s: str, queries: List[List[int]]) -> List[List[int]]:
         queries = [i ^ j for i, j in queries]
         mp = {}
         for i in range(len(s)):

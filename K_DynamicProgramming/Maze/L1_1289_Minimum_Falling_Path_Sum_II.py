@@ -1,5 +1,6 @@
 """ https://leetcode.com/problems/minimum-falling-path-sum-ii/
 """
+from header import *
 
 
 class Solution:
@@ -20,10 +21,9 @@ class Solution:
         M, N = len(A), len(A[0])
 
         @cache
-        def dfs(i, j):
+        def dp(i, j):
             if i < 0:
                 return 0
-            return min([dfs(i - 1, jj) + A[i][jj]
-                       for jj in range(N) if j != jj])
+            return min([dp(i - 1, jj) + A[i][jj] for jj in range(N) if j != jj])
 
-        return dfs(M - 1, inf)
+        return dp(M - 1, inf)

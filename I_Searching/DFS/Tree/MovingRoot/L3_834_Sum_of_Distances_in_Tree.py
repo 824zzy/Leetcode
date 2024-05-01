@@ -1,11 +1,16 @@
 """ https://leetcode.com/problems/sum-of-distances-in-tree/
 From guan: https://github.com/wisdompeak/LeetCode/tree/master/Tree/834.Sum-of-Distances-in-Tree
-Intuition: f(child) = f(parent) + a - b, where b = subtree_size(child) and a = n - b
+The thought of moving root:
+    Let f(x) be the sum of distances from x to all other nodes and n be the number of nodes in the tree.
+        f(child) = f(parent) + a - b, where b = subtree_size(child) and a = n - b
+    We need to calculate the subtree_size of every node and the distance sum from every node to root.
 
 1. pick "0" as a root
 2. use dfs to get subtree_size of every node
 3. use another dfs to get the distance sum from every node to root.
 3. use the third dfs and the dp formula above to calculate the final answer
+
+Similar question: 1685, 2121
 """
 from header import *
 
