@@ -1,12 +1,12 @@
 """ https://leetcode.com/problems/compare-version-numbers/
 split the string by dot and use zip longest to greedily find the larger one chunk by one chunk
 """
+from header import *
 
 
 class Solution:
     def compareVersion(self, version1: str, version2: str) -> int:
-        for x, y in zip_longest(version1.split(
-                "."), version2.split("."), fillvalue="0"):
+        for x, y in zip_longest(version1.split("."), version2.split("."), fillvalue="0"):
             if int(x) > int(y):
                 return 1
             elif int(x) < int(y):
