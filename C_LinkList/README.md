@@ -17,7 +17,8 @@ def linklist_template(self, head: ListNode) -> ListNode:
 ``` py
 # l, r, m = m, l, r 
 pre = None
-while head: pre, head.next, head = head, pre, head.next
+while head: 
+    pre, head.next, head = head, pre, head.next
 return pre
 ```
 

@@ -1,4 +1,6 @@
 """ https://leetcode.com/problems/boats-to-save-people/
+greedy + two pointers
+
 1. sort people and greedily carry as much people as boat can
 2. since people[i]<limit and as problem described the boat can at least carry one people and at most carry two people,
    so update right pointer when it is possible to carry two people (if A[l]+A[r]<=L: r -= 1)
