@@ -1,7 +1,7 @@
 """ https://leetcode.com/problems/subsets/
-Use bit to indicate which element should be included
+Power set: use bit to indicate which element should be included.
 """
-# iterative
+from header import *
 
 
 class Solution:
@@ -13,7 +13,6 @@ class Solution:
         return ans
 
 
-# recursive
 class Solution:
     def subsets(self, A: List[int]) -> List[List[int]]:
         ans = []
