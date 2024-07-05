@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/insertion-sort-list
 https://leetcode.com/problems/insertion-sort-list/discuss/715153/Python3-O(N2)-algo
 """
+from header import *
 
 
 class Solution:

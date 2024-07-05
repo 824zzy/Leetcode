@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/count-fertile-pyramids-in-a-land/
 refer to: https://leetcode.com/problems/count-fertile-pyramids-in-a-land/discuss/1602439/Python-DP-oror-O(m*n)-oror-Explained-oror-Faster-than-100
 """
+from header import *
 
 
 class Solution:

@@ -1,6 +1,7 @@
-""" Reduce trick
+""" https://leetcode.com/problems/xor-operation-in-an-array/
+bit simulation
 """
-from functools import reduce
+from header import *
 
 
 class Solution:

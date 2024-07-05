@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/intersection-of-two-arrays-ii/
 Find intersections by Counter since the order is not considered.
 """
+from header import *
 
 
 class Solution:

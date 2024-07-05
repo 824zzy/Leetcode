@@ -1,5 +1,13 @@
 """ https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves/
-greedily enumerate all possible cases
+sort + greedy
+
+greedily enumerate all possible cases:
+1. remove 3 largest elements
+2. remove 2 largest elements and 1 smallest element
+3. remove 1 largest element and 2 smallest elements
+4. remove 3 smallest elements
+
+Time complexity: O(nlogn)
 """
 from header import *
 

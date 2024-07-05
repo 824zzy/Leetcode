@@ -2,6 +2,7 @@
 for each word, if it can be formed by current letters, one can choose it or ignore it,
 otherwise one has to ignore it.
 """
+from header import *
 
 
 class Solution:

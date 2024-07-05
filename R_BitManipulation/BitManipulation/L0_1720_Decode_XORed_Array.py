@@ -1,3 +1,9 @@
+""" https://leetcode.com/problems/decode-xored-array/
+bit simulation
+"""
+from header import *
+
+
 class Solution:
     def decode(self, A: List[int], f: int) -> List[int]:
         ans = [f]
