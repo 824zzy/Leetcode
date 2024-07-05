@@ -7,11 +7,7 @@ from header import *
 
 
 class Solution:
-    def shortestWordDistance(
-            self,
-            wordsDict: List[str],
-            word1: str,
-            word2: str) -> int:
+    def shortestWordDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
         ans = inf
         i, j = inf, inf
         if word1 == word2:

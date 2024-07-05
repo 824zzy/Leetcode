@@ -27,8 +27,13 @@ class Solution:
             return False
         elif len(odd) == 4:
             a, b, c, d = odd
-            return b not in G[a] and c not in G[d] or \
-                   c not in G[a] and b not in G[d] or \
-                   d not in G[a] and c not in G[b]
+            return (
+                b not in G[a]
+                and c not in G[d]
+                or c not in G[a]
+                and b not in G[d]
+                or d not in G[a]
+                and c not in G[b]
+            )
         else:
             return False

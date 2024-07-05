@@ -12,7 +12,7 @@ class Solution:
         while Q:
             nxtQ = []
             miss = False
-            if pre_cnt != 2**d:
+            if pre_cnt != 2 ** d:
                 return False
             pre_cnt = len(Q)
             for node in Q:

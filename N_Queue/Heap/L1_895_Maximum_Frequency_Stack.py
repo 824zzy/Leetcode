@@ -5,7 +5,6 @@ maintain a maximum heap by (frequency, index, value)
 
 
 class FreqStack:
-
     def __init__(self):
         self.mfs = []
         self.freq = Counter()

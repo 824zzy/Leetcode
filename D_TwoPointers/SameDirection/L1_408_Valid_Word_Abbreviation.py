@@ -14,13 +14,14 @@ class Solution:
                 else:
                     return False
             else:
-                if abbr[j] == '0':
+                if abbr[j] == "0":
                     return False
                 jj = j
                 while j < len(abbr) and abbr[j].isdigit():
                     j += 1
                 i += int(abbr[jj:j])
         return i == len(s) and j == len(abbr)
+
 
 # string construction and comparison
 
@@ -39,7 +40,7 @@ class Solution:
                 else:
                     i += 1
             elif abbr[j].isdigit():
-                if n == 0 and abbr[j] == '0':
+                if n == 0 and abbr[j] == "0":
                     return False
                 n = n * 10 + int(abbr[j])
         return (i + n) == len(s)

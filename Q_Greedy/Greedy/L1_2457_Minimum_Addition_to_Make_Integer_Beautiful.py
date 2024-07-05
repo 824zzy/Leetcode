@@ -9,8 +9,8 @@ class Solution:
         def get(i):
             if i == 0:
                 return n
-            mod = n // (10**i)
-            return (mod + 1) * (10**i)
+            mod = n // (10 ** i)
+            return (mod + 1) * (10 ** i)
 
         for i in range(len(str(n)) + 1):
             x = get(i)

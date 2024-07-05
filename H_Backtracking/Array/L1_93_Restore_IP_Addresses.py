@@ -10,11 +10,15 @@ class Solution:
 
         def dfs(i):
             if i >= len(A) and len(stk) == 4:
-                ans.add('.'.join(stk))
+                ans.add(".".join(stk))
                 return
             for j in range(i + 1, i + 4):
-                if 0 <= i < j < len(
-                        A) + 1 and 0 <= int(A[i:j]) <= 255 and len(stk) < 4 and str(int(A[i:j])) == A[i:j]:
+                if (
+                    0 <= i < j < len(A) + 1
+                    and 0 <= int(A[i:j]) <= 255
+                    and len(stk) < 4
+                    and str(int(A[i:j])) == A[i:j]
+                ):
                     stk.append(A[i:j])
                     dfs(j)
                     stk.pop()

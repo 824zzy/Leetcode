@@ -12,8 +12,9 @@ class Solution:
         # to handle edge case
         # sort the entering event by increasing order of height
         # sort the leaving event by decreasing order of height
-        events = [[x, b[2], enter]
-                  for b in buildings for x, enter in zip(b[:2], [1, -1])]
+        events = [
+            [x, b[2], enter] for b in buildings for x, enter in zip(b[:2], [1, -1])
+        ]
         events.sort(key=lambda x: (x[0], -x[1] * x[2]))
         ans = []
         # heights so far

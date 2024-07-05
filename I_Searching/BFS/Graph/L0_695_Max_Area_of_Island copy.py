@@ -17,8 +17,11 @@ class Solution:
                     while Q:
                         x, y = Q.pop(0)
                         for dx, dy in D:
-                            if 0 <= x + dx < m and 0 <= y + \
-                                    dy < n and A[x + dx][y + dy] == 1:
+                            if (
+                                0 <= x + dx < m
+                                and 0 <= y + dy < n
+                                and A[x + dx][y + dy] == 1
+                            ):
                                 Q.append([x + dx, y + dy])
                                 A[x + dx][y + dy] = 0
                                 cnt += 1

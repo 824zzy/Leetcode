@@ -5,8 +5,7 @@ from header import *
 
 
 class Solution:
-    def mergeArrays(self, A: List[List[int]],
-                    B: List[List[int]]) -> List[List[int]]:
+    def mergeArrays(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
         ans = []
         i, j = 0, 0
         m, n = len(A), len(B)
@@ -32,8 +31,7 @@ class Solution:
 
 
 class Solution:
-    def mergeArrays(self, A: List[List[int]],
-                    B: List[List[int]]) -> List[List[int]]:
+    def mergeArrays(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
         mp = defaultdict(int)
         for k, v in A:
             mp[k] = v

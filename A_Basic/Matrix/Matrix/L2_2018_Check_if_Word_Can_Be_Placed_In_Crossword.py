@@ -9,7 +9,8 @@ class Solution:
             for row in x:
                 for s in "".join(row).split("#"):
                     for w in word, word[::-1]:
-                        if len(s) == len(w) and all(ss in (" ", ww)
-                                                    for ss, ww in zip(s, w)):
+                        if len(s) == len(w) and all(
+                            ss in (" ", ww) for ss, ww in zip(s, w)
+                        ):
                             return True
         return False

@@ -10,6 +10,6 @@ class Solution:
         def dp(i, k):
             if k == 0:
                 return i == e
-            return (dp(i + 1, k - 1) + dp(i - 1, k - 1)) % (10**9 + 7)
+            return (dp(i + 1, k - 1) + dp(i - 1, k - 1)) % (10 ** 9 + 7)
 
-        return dp(s, k) % (10**9 + 7)
+        return dp(s, k) % (10 ** 9 + 7)

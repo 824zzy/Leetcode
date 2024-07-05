@@ -10,7 +10,7 @@ class Solution:
                 cnt = 0
                 t = chr(c + 97) * l
                 for i in range(l, len(s) + 1):
-                    ss = s[i - l:i]
+                    ss = s[i - l : i]
                     if ss == t:
                         cnt += 1
                         if cnt == 3:

@@ -17,5 +17,4 @@ class Solution:
                 seen.add((x, y))
                 for dx, dy in D:
                     if 0 <= x + dx < N and 0 <= y + dy < N:
-                        heappush(
-                            pq, (max(A[x + dx][y + dy], cost), (x + dx, y + dy)))
+                        heappush(pq, (max(A[x + dx][y + dy], cost), (x + dx, y + dy)))

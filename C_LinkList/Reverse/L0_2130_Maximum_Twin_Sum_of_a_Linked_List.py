@@ -27,6 +27,7 @@ class Solution:
             slow = slow.next
         return ans
 
+
 # O(n) space
 
 

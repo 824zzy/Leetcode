@@ -8,7 +8,7 @@ from header import *
 class Solution:
     def minFlips(self, A: str) -> int:
         A = [k for k, _ in groupby(A)]
-        return len(A) - (A[0] == '0')
+        return len(A) - (A[0] == "0")
 
 
 """

@@ -9,8 +9,8 @@ class Solution:
             if not A:
                 return None
             node = TreeNode(A[len(A) // 2])
-            node.left = dfs(A[:len(A) // 2])
-            node.right = dfs(A[len(A) // 2 + 1:])
+            node.left = dfs(A[: len(A) // 2])
+            node.right = dfs(A[len(A) // 2 + 1 :])
             return node
 
         return dfs(A)

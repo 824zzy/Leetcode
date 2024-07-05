@@ -28,10 +28,10 @@ class Solution:
             if not node:
                 return 0
             if canRob:
-                return max(node.val +
-                           dfs(node.left, False) +
-                           dfs(node.right, False), dfs(node.left, True) +
-                           dfs(node.right, True))
+                return max(
+                    node.val + dfs(node.left, False) + dfs(node.right, False),
+                    dfs(node.left, True) + dfs(node.right, True),
+                )
             else:
                 return dfs(node.left, True) + dfs(node.right, True)
 

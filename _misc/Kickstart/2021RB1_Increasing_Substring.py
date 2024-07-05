@@ -19,5 +19,5 @@ for i in range(N):
     L = int(input())
     S = input()
     ans = increasing_substring(L, S)
-    ans = ' '.join([str(a) for a in ans])
+    ans = " ".join([str(a) for a in ans])
     print("Case #{}: {}".format(i + 1, ans))

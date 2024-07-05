@@ -10,7 +10,7 @@ class Solution:
                 return False
             for c in s:
                 # check leading zero
-                if len(c) > 1 and c[0] == '0':
+                if len(c) > 1 and c[0] == "0":
                     return False
                 # check valid range
                 try:
@@ -35,8 +35,8 @@ class Solution:
                     return False
             return True
 
-        s1 = queryIP.split('.')
-        s2 = queryIP.split(':')
+        s1 = queryIP.split(".")
+        s2 = queryIP.split(":")
 
         is_IPV4 = check_IPV4(s1)
         is_IPV6 = check_IPV6(s2)

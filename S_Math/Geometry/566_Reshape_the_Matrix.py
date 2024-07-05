@@ -4,10 +4,7 @@ From range m*n, indexes are only determined by column number.
 
 
 class Solution:
-    def matrixReshape(self,
-                      nums: List[List[int]],
-                      r: int,
-                      c: int) -> List[List[int]]:
+    def matrixReshape(self, nums: List[List[int]], r: int, c: int) -> List[List[int]]:
         if r * c > len(nums) * len(nums[0]):
             return nums
         m, n = len(nums), len(nums[0])

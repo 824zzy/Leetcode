@@ -4,10 +4,9 @@ Use floyd-warshall to find the shorest path from each point to the others.
 
 
 class Solution:
-    def findTheCity(self,
-                    n: int,
-                    edges: List[List[int]],
-                    distanceThreshold: int) -> int:
+    def findTheCity(
+        self, n: int, edges: List[List[int]], distanceThreshold: int
+    ) -> int:
         dist = [[inf for _ in range(n)] for _ in range(n)]
         for i in range(n):
             dist[i][i] = 0
@@ -19,6 +18,5 @@ class Solution:
                 for j in range(n):
                     dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
 
-        ans = {
-            sum(d <= distanceThreshold for d in dist[i]): i for i in range(n)}
+        ans = {sum(d <= distanceThreshold for d in dist[i]): i for i in range(n)}
         return ans[min(ans)]

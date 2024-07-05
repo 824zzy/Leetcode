@@ -26,6 +26,7 @@ class Solution:
                             return False
         return True
 
+
 # dfs solution
 
 
@@ -40,6 +41,7 @@ class Solution:
             return all(dfs(j, -color) for j in G[i])
 
         return all(dfs(i, 1) for i in range(len(G)) if i not in seen)
+
 
 # union find solution
 

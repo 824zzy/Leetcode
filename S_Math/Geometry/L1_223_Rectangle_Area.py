@@ -6,15 +6,16 @@
 
 class Solution:
     def computeArea(
-            self,
-            ax1: int,
-            ay1: int,
-            ax2: int,
-            ay2: int,
-            bx1: int,
-            by1: int,
-            bx2: int,
-            by2: int) -> int:
+        self,
+        ax1: int,
+        ay1: int,
+        ax2: int,
+        ay2: int,
+        bx1: int,
+        by1: int,
+        bx2: int,
+        by2: int,
+    ) -> int:
         A = (ax2 - ax1) * (ay2 - ay1)
         B = (bx2 - bx1) * (by2 - by1)
         cy2 = min(ay2, by2)

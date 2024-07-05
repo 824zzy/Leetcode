@@ -11,9 +11,9 @@ class Solution:
 
         def fn(A, m):
             if m == 0:
-                B = ['0' if i & 1 else '1' for i in range(len(A))]
+                B = ["0" if i & 1 else "1" for i in range(len(A))]
             if m == 1:
-                B = ['1' if i & 1 else '0' for i in range(len(A))]
+                B = ["1" if i & 1 else "0" for i in range(len(A))]
             ans = 0
             for a, b in zip(A, B):
                 if a != b:

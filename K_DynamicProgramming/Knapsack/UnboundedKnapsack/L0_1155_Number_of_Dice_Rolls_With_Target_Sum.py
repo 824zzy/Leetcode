@@ -19,6 +19,6 @@ class Solution:
             ans = 0
             for x in range(1, k + 1):
                 ans += dp(i + 1, sm + x)
-            return ans % (10**9 + 7)
+            return ans % (10 ** 9 + 7)
 
-        return dp(0, 0) % (10**9 + 7)
+        return dp(0, 0) % (10 ** 9 + 7)

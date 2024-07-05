@@ -27,4 +27,4 @@ class Solution:
                         heapq.heappush(pq, (dists[j], j))
                     elif dists[i] + G[i][j] == dists[j]:
                         ways[j] += ways[i]
-        return ways[-1] % (10**9 + 7)
+        return ways[-1] % (10 ** 9 + 7)

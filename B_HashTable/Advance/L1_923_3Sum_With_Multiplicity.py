@@ -12,4 +12,4 @@ class Solution:
                 if rm in seen:
                     ans += seen[rm]
             seen[A[i]] += 1
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

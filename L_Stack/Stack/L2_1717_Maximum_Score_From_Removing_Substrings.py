@@ -14,7 +14,7 @@ class Solution:
         stk = []
         for c in s:
             stk.append(c)
-            while len(stk) >= 2 and stk[-2:] == ['a', 'b']:
+            while len(stk) >= 2 and stk[-2:] == ["a", "b"]:
                 stk.pop()
                 stk.pop()
                 ans += x
@@ -22,7 +22,7 @@ class Solution:
         stk2 = []
         for c in stk:
             stk2.append(c)
-            while len(stk) >= 2 and stk2[-2:] == ['b', 'a']:
+            while len(stk) >= 2 and stk2[-2:] == ["b", "a"]:
                 stk2.pop()
                 stk2.pop()
                 ans += y

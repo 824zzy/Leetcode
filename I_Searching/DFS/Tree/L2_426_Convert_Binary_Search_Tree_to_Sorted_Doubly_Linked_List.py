@@ -7,7 +7,7 @@ from header import *
 
 
 class Solution:
-    def treeToDoublyList(self, root: 'Optional[Node]') -> 'Optional[Node]':
+    def treeToDoublyList(self, root: "Optional[Node]") -> "Optional[Node]":
         if not root:
             return None
 

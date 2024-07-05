@@ -16,6 +16,7 @@ class Solution:
             T[d].append(node.val)
             dfs(node.left, d + 1)
             dfs(node.right, d + 1)
+
         dfs(root, 0)
         return [sorted(v)[-1] for k, v in T.items()]
 

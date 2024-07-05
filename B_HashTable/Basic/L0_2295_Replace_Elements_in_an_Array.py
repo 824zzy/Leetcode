@@ -4,8 +4,7 @@ create a map from value to index and update it through operations
 
 
 class Solution:
-    def arrayChange(self, A: List[int],
-                    operations: List[List[int]]) -> List[int]:
+    def arrayChange(self, A: List[int], operations: List[List[int]]) -> List[int]:
         mp = {x: i for i, x in enumerate(A)}
         for x, y in operations:
             mp[y] = mp[x]

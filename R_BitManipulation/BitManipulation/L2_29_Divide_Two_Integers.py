@@ -7,7 +7,7 @@ if so, we can remove (2^i * b) from a, which also means there are b can be added
 
 class Solution:
     def divide(self, A: int, B: int) -> int:
-        if (A == -2147483648 and B == -1):
+        if A == -2147483648 and B == -1:
             return 2147483647
         a = abs(A)
         b = abs(B)

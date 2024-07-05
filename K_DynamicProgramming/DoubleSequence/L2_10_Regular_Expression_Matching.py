@@ -5,7 +5,6 @@ steal from ye: https://leetcode.com/problems/regular-expression-matching/discuss
 
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
-
         @cache
         def fn(i, j):
             """Return True if s[i:] matches p[j:]"""

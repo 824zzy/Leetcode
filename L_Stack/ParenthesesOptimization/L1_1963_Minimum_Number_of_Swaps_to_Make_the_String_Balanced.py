@@ -9,7 +9,7 @@ class Solution:
     def minSwaps(self, s: str) -> int:
         cl = op = 0
         for c in s:
-            if c == '[':
+            if c == "[":
                 op += 1
             else:
                 op -= 1

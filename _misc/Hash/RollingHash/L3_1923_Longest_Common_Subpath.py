@@ -4,7 +4,6 @@ https://leetcode.com/problems/longest-common-subpath/discuss/1496426/Python3-rol
 
 
 class RabinKarp:
-
     def __init__(self, s):
         """Calculate rolling hash of s"""
         self.m = 1_111_111_111_111_111_111

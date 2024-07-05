@@ -70,7 +70,8 @@ PRIMES = [
     293,
     307,
     311,
-    313]
+    313,
+]
 
 
 class Solution:

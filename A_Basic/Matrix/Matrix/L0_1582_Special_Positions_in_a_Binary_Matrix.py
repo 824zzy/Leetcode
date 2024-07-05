@@ -14,5 +14,9 @@ class Solution:
         for i, c in enumerate(zip(*A)):
             c_cnt[i] = c.count(1)
 
-        return sum(1 for i in range(len(A)) for j in range(
-            len(A[0])) if r_cnt[i] == 1 and c_cnt[j] == 1 and A[i][j] == 1)
+        return sum(
+            1
+            for i in range(len(A))
+            for j in range(len(A[0]))
+            if r_cnt[i] == 1 and c_cnt[j] == 1 and A[i][j] == 1
+        )

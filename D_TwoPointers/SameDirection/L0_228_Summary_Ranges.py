@@ -14,6 +14,6 @@ class Solution:
                 if i == j - 1:
                     ans.append(str(A[i]))
                 else:
-                    ans.append('->'.join([str(A[i]), str(A[j - 1])]))
+                    ans.append("->".join([str(A[i]), str(A[j - 1])]))
                 i = j
         return ans

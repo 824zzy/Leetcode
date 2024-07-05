@@ -29,10 +29,12 @@ class SegmentTree:
         # push lazy to children, if no children, create them on the fly
         if not node.left and not node.right:
             if node.lazy is not None:
-                node.left = Node(node.lo, m, node.lazy *
-                                 (m - node.lo + 1), None, node.lazy)
-                node.right = Node(m + 1, node.hi, node.lazy *
-                                  (node.hi - m), None, node.lazy)
+                node.left = Node(
+                    node.lo, m, node.lazy * (m - node.lo + 1), None, node.lazy
+                )
+                node.right = Node(
+                    m + 1, node.hi, node.lazy * (node.hi - m), None, node.lazy
+                )
             else:
                 node.left = Node(node.lo, m)
                 node.right = Node(m + 1, node.hi)
@@ -75,20 +77,20 @@ class SegmentTree:
             if node.lazy is not None:
                 return node.lazy * (hi - lo + 1)
             else:
-                return self.rangeSetSumQuery(
-                    node.left, lo, m) + self.rangeSetSumQuery(node.right, m + 1, hi)
+                return self.rangeSetSumQuery(node.left, lo, m) + self.rangeSetSumQuery(
+                    node.right, m + 1, hi
+                )
 
 
 class RangeModule:
     def __init__(self):
-        self.ST = SegmentTree(0, 10**9 + 1)
+        self.ST = SegmentTree(0, 10 ** 9 + 1)
 
     def addRange(self, left: int, right: int) -> None:
         self.ST.rangeSetSum(self.ST.root, 1, left, right - 1)
 
     def queryRange(self, left: int, right: int) -> bool:
-        return self.ST.rangeSetSumQuery(
-            self.ST.root, left, right - 1) == right - left
+        return self.ST.rangeSetSumQuery(self.ST.root, left, right - 1) == right - left
 
     def removeRange(self, left: int, right: int) -> None:
         self.ST.rangeSetSum(self.ST.root, 0, left, right - 1)

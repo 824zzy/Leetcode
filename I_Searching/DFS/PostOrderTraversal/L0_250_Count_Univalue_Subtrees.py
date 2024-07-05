@@ -35,4 +35,5 @@ class Solution:
             if lv == rv == node.val:
                 return lc + rc + 1, node.val
             return lc + rc, None
+
         return dfs(root)[0]

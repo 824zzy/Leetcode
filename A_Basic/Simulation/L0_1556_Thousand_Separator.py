@@ -4,6 +4,6 @@ class Solution:
         ans = []
         for i in range(len(rev_s)):
             if i % 3 == 0 and i != 0:
-                ans.append('.')
+                ans.append(".")
             ans.append(rev_s[i])
-        return ''.join(reversed(ans))
+        return "".join(reversed(ans))

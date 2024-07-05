@@ -5,8 +5,7 @@ from header import *
 
 
 class Solution:
-    def rangeAddQueries(self, n: int,
-                        queries: List[List[int]]) -> List[List[int]]:
+    def rangeAddQueries(self, n: int, queries: List[List[int]]) -> List[List[int]]:
         diff = [[0] * n for _ in range(n)]
         for r1, c1, r2, c2 in queries:
             for r in range(r1, r2 + 1):

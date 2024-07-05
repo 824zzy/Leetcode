@@ -21,4 +21,5 @@ class Solution:
             for xx, yy in ((100, 0), (75, 25), (50, 50), (25, 75)):
                 ans += 0.25 * dp(x - xx, y - yy)
             return ans
+
         return dp(n, n)

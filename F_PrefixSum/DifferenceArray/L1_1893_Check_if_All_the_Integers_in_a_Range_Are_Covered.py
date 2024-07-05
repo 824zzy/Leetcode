@@ -4,10 +4,7 @@ use sweep line/difference array to find the non-overlapped point
 
 
 class Solution:
-    def isCovered(self,
-                  ranges: List[List[int]],
-                  left: int,
-                  right: int) -> bool:
+    def isCovered(self, ranges: List[List[int]], left: int, right: int) -> bool:
         SL = [0] * 52
         for i, j in ranges:
             SL[i] += 1

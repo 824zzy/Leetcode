@@ -32,12 +32,10 @@ class Solution:
             l = dfs(node.left)
             r = dfs(node.right)
             self.ans = max(
-                self.ans,
-                node.val + l + r,
-                node.val + l,
-                node.val + r,
-                node.val)
+                self.ans, node.val + l + r, node.val + l, node.val + r, node.val
+            )
             return max(node.val + l, node.val + r, node.val)
+
         dfs(root)
 
         return self.ans

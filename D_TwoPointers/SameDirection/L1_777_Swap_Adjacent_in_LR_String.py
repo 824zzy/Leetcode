@@ -10,16 +10,20 @@ class Solution:
         n = len(S)
         i, j = 0, 0
         while i < n and j < n:
-            while i < n and S[i] == 'X':
+            while i < n and S[i] == "X":
                 i += 1
-            while j < n and E[j] == 'X':
+            while j < n and E[j] == "X":
                 j += 1
             if i == n or j == n:
                 break
             elif S[i] != E[j]:
                 return False
-            elif (S[i] == 'L' and i < j) or (S[i] == 'R' and i > j):
+            elif (S[i] == "L" and i < j) or (S[i] == "R" and i > j):
                 return False
             i, j = i + 1, j + 1
-        return 'L' not in S[i:] and 'R' not in S[i:
-                                                 ] and 'L' not in E[j:] and 'R' not in E[j:]
+        return (
+            "L" not in S[i:]
+            and "R" not in S[i:]
+            and "L" not in E[j:]
+            and "R" not in E[j:]
+        )

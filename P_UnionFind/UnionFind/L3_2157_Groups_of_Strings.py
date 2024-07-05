@@ -23,7 +23,7 @@ class Solution:
         dt = dict()
 
         for i, w in enumerate(words):
-            x = sum(1 << (ord(c) - ord('a')) for c in w)
+            x = sum(1 << (ord(c) - ord("a")) for c in w)
             # identical words
             if x in dt:
                 dsu.union(i, dt[x])

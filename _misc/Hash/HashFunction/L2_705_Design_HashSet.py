@@ -7,10 +7,10 @@ h(K) = (aK mod 2**w) / 2**(w-m), where K is key, a is big prime number, m is len
 
 class MyHashMap:
     def __init__(self):
-        self.A = [[] for _ in range(2**15)]
+        self.A = [[] for _ in range(2 ** 15)]
 
     def mul_hash(self, key):
-        return (1031237 * key % (2**20)) // 2**5
+        return (1031237 * key % (2 ** 20)) // 2 ** 5
 
     def put(self, key: int, value: int) -> None:
         hs = self.mul_hash(key)
@@ -37,7 +37,7 @@ class MyHashMap:
 # a simpler version of hash function
 class MyHashSet:
     def __init__(self):
-        self.A = [[]for _ in range(1000)]
+        self.A = [[] for _ in range(1000)]
 
     def add(self, key: int) -> None:
         hs = key % 1000

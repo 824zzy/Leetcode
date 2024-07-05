@@ -5,14 +5,14 @@ stack + simulation
 
 class Solution:
     def simplifyPath(self, path: str) -> str:
-        path = path.replace('//', '/').split('/')
+        path = path.replace("//", "/").split("/")
         stk = []
         for p in path:
-            if p == '.' or not p:
+            if p == "." or not p:
                 continue
-            elif p == '..':
+            elif p == "..":
                 if stk:
                     stk.pop()
             else:
                 stk.append(p)
-        return '/' + '/'.join(stk)
+        return "/" + "/".join(stk)

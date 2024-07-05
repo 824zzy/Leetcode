@@ -18,7 +18,7 @@ class Solution:
             while cnt and t and t[-1] <= min(cnt):
                 ans += t.pop()
         ans += t[::-1]
-        return ''.join(ans)
+        return "".join(ans)
 
 
 """ "azz" "abc" "addb" "bdevfziy" "fnohopzv"

@@ -23,8 +23,7 @@ class Solution:
                 # out
                 while q and i - q[0] >= k:
                     q.popleft()
-                if i >= k - 1 and q and A[q[0]] + \
-                        k * (C[i + 1] - C[i - k + 1]) <= b:
+                if i >= k - 1 and q and A[q[0]] + k * (C[i + 1] - C[i - k + 1]) <= b:
                     return False
             return True
 
@@ -50,8 +49,7 @@ class Solution:
                 while pqC and i - pqC[0][1] >= k:
                     heappop(pqC)
                 heappush(pqC, (-C[i], i))
-                if i >= k and pqC and -pqC[0][0] + \
-                        k * (R[i] - R[i - k]) <= budget:
+                if i >= k and pqC and -pqC[0][0] + k * (R[i] - R[i - k]) <= budget:
                     return True
             return False
 

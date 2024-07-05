@@ -12,7 +12,7 @@ class Solution:
         sl = [0] * (len(s) + 1)
         for i, c in enumerate(s):
             for w in words:
-                if i + len(w) <= len(s) and s[i:i + len(w)] == w:
+                if i + len(w) <= len(s) and s[i : i + len(w)] == w:
                     sl[i] += 1
                     sl[i + len(w)] -= 1
         # sweep line to find intervals
@@ -28,13 +28,13 @@ class Solution:
                     I.append((l, i))
                 l = None
         # build answer from intervals
-        ans = ''
+        ans = ""
         I = [(0, 0)] + I + [(len(s), len(s))]
         for i, (l, r) in enumerate(I):
             if i:
-                ans += s[I[i - 1][1]: I[i][0]]
+                ans += s[I[i - 1][1] : I[i][0]]
             if l != r:
-                ans += '<b>' + s[l:r] + '</b>'
+                ans += "<b>" + s[l:r] + "</b>"
         return ans
 
 

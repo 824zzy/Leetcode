@@ -6,9 +6,7 @@ from header import *
 
 
 class Solution:
-    def numberOfSets(self, n: int, maxDistance: int,
-                     G: List[List[int]]) -> int:
-
+    def numberOfSets(self, n: int, maxDistance: int, G: List[List[int]]) -> int:
         def bfs(mask):
             N = len(G)
             dist = [[inf] * n for _ in range(n)]
@@ -27,9 +25,7 @@ class Solution:
 
             for i in range(n):
                 for j in range(n):
-                    if mask & (
-                            1 << i) and mask & (
-                            1 << j) and dist[i][j] > maxDistance:
+                    if mask & (1 << i) and mask & (1 << j) and dist[i][j] > maxDistance:
                         return False
             return True
 

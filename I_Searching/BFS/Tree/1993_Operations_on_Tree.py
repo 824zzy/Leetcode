@@ -3,7 +3,6 @@
 
 
 class LockingTree:
-
     def __init__(self, parent: List[int]):
         self.parent = parent
         self.tree = [[] for _ in parent]

@@ -4,10 +4,9 @@ not very easy to notice it is a graph problem
 
 
 class Solution:
-    def calcEquation(self,
-                     equations: List[List[str]],
-                     values: List[float],
-                     queries: List[List[str]]) -> List[float]:
+    def calcEquation(
+        self, equations: List[List[str]], values: List[float], queries: List[List[str]]
+    ) -> List[float]:
         G = defaultdict(dict)
         for idx, (i, j) in enumerate(equations):
             G[i][j] = values[idx]

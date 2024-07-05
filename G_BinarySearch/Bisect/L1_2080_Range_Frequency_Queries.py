@@ -4,7 +4,6 @@ create a hash table to find all the indexes for each elements and use bisect to 
 
 
 class RangeFreqQuery:
-
     def __init__(self, A: List[int]):
         self.loc = defaultdict(list)
         for i, x in enumerate(A):

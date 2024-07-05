@@ -5,7 +5,7 @@ from header import *
 
 
 class Solution:
-    def connect(self, root: 'Node') -> 'Node':
+    def connect(self, root: "Node") -> "Node":
         if not root:
             return root
 
@@ -29,7 +29,7 @@ class Solution:
 
 
 class Solution:
-    def connect(self, root: 'Node') -> 'Node':
+    def connect(self, root: "Node") -> "Node":
         mp = defaultdict(list)
 
         def dfs(node, d):
@@ -38,6 +38,7 @@ class Solution:
             mp[d].append(node)
             dfs(node.left, d + 1)
             dfs(node.right, d + 1)
+
         dfs(root, 0)
 
         for _, v in mp.items():

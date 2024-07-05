@@ -11,6 +11,7 @@ class Solution:
         else:
             return n
 
+
 # or simulation
 
 

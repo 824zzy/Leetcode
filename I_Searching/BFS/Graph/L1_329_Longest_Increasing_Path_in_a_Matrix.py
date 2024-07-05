@@ -15,8 +15,7 @@ class Solution:
                 return dp[x][y]
             mx = 1
             for dx, dy in neibs:
-                if 0 <= x + dx < M and 0 <= y + \
-                        dy < N and A[x + dx][y + dy] > A[x][y]:
+                if 0 <= x + dx < M and 0 <= y + dy < N and A[x + dx][y + dy] > A[x][y]:
                     mx = max(mx, 1 + dfs(x + dx, y + dy))
             dp[x][y] = mx
             return mx

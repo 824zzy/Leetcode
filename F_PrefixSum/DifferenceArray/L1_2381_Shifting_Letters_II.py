@@ -16,7 +16,7 @@ class Solution:
                 SL[i] -= 1
                 SL[j + 1] += 1
 
-        ans = ''
+        ans = ""
         cnt = 0
         for i in range(n):
             cnt += SL[i]
@@ -82,8 +82,11 @@ class SegmentTree:
         elif lo > m:
             return node.lazy + self.rangeAddSumQuery(node.right, lo, hi)
         else:
-            return node.lazy + \
-                self.rangeAddSumQuery(node.left, lo, m) + self.rangeAddSumQuery(node.right, m + 1, hi)
+            return (
+                node.lazy
+                + self.rangeAddSumQuery(node.left, lo, m)
+                + self.rangeAddSumQuery(node.right, m + 1, hi)
+            )
 
 
 class Solution:
@@ -94,11 +97,7 @@ class Solution:
             d = -1 if d == 0 else 1
             ST.rangeAddSum(ST.root, d, i, j)
         # shift letters
-        ans = ''
+        ans = ""
         for i, c in enumerate(s):
-            ans += chr((ord(c) -
-                        97 +
-                        ST.rangeAddSumQuery(ST.root, i, i)) %
-                       26 +
-                       97)
+            ans += chr((ord(c) - 97 + ST.rangeAddSumQuery(ST.root, i, i)) % 26 + 97)
         return ans

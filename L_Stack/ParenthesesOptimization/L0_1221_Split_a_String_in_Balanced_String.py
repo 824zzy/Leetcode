@@ -7,7 +7,7 @@ class Solution:
         op = 0
         ans = 0
         for c in s:
-            if c == 'L':
+            if c == "L":
                 op += 1
             else:
                 op -= 1

@@ -9,8 +9,11 @@ class Solution:
         def dp(x, y):
             ans = 0
             for dx, dy in ((-1, 1), (0, 1), (1, 1)):
-                if 0 <= x + dx < len(G) and 0 <= y + \
-                        dy < len(G[0]) and G[x][y] < G[x + dx][y + dy]:
+                if (
+                    0 <= x + dx < len(G)
+                    and 0 <= y + dy < len(G[0])
+                    and G[x][y] < G[x + dx][y + dy]
+                ):
                     ans = max(ans, 1 + dp(x + dx, y + dy))
             return ans
 

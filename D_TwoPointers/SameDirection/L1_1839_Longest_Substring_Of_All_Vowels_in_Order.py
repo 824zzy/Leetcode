@@ -21,6 +21,7 @@ class Solution:
                 ans = max(ans, j - i + 1)
         return ans
 
+
 # or use five rules to check if the substring is legit
 
 
@@ -30,28 +31,15 @@ class Solution:
             seen.append(k)
             cnt += v
             if (
-                len(seen) == 1 and seen == ['a']) or (
-                len(seen) == 2 and seen == [
-                    'a',
-                    'e']) or (
-                len(seen) == 3 and seen == [
-                    'a',
-                    'e',
-                    'i']) or (
-                        len(seen) == 4 and seen == [
-                            'a',
-                            'e',
-                            'i',
-                            'o']) or (
-                                len(seen) == 5 and seen == [
-                                    'a',
-                                    'e',
-                                    'i',
-                                    'o',
-                                    'u']):
+                (len(seen) == 1 and seen == ["a"])
+                or (len(seen) == 2 and seen == ["a", "e"])
+                or (len(seen) == 3 and seen == ["a", "e", "i"])
+                or (len(seen) == 4 and seen == ["a", "e", "i", "o"])
+                or (len(seen) == 5 and seen == ["a", "e", "i", "o", "u"])
+            ):
                 return seen, cnt
-            elif k == 'a':
-                return ['a'], v
+            elif k == "a":
+                return ["a"], v
             else:
                 return [], 0
 

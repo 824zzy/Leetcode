@@ -8,7 +8,7 @@ class Solution:
         stk = []
         for c in s:
             stk.append(c)
-            while len(stk) >= 3 and stk[-3:] == ['a', 'b', 'c']:
+            while len(stk) >= 3 and stk[-3:] == ["a", "b", "c"]:
                 stk.pop()
                 stk.pop()
                 stk.pop()

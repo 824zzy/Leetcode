@@ -5,9 +5,7 @@ from header import *
 
 
 class Solution:
-    def replaceValueInTree(
-            self,
-            root: Optional[TreeNode]) -> Optional[TreeNode]:
+    def replaceValueInTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         T = defaultdict(int)
         P = defaultdict(int)
 
@@ -18,6 +16,7 @@ class Solution:
             T[d] += node.val
             P[p] += node.val
             dfs(node.right, node, d + 1)
+
         dfs(root, None, 0)
 
         def dfs(node, p, d):
@@ -27,4 +26,5 @@ class Solution:
             node.val = T[d] - P[p]
             dfs(node.right, node, d + 1)
             return node
+
         return dfs(root, None, 0)

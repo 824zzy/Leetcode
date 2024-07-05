@@ -34,7 +34,7 @@ class Solution:
             b, bb = divmod(b, 2)
             c, cc = divmod(c, 2)
             if cc == 1:
-                ans += (aa == bb == 0)
+                ans += aa == bb == 0
             else:
                 ans += (aa == 1) + (bb == 1)
         return ans

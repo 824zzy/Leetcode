@@ -14,6 +14,6 @@ class Solution:
         while even and even.next:
             odd.next = odd.next.next
             even.next = even.next.next
-            even, odd = even.next. odd.next
+            even, odd = even.next.odd.next
         odd.next = pre
         return ans.next

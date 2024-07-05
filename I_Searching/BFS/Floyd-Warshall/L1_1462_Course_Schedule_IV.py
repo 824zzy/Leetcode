@@ -4,10 +4,9 @@ use floyd-warshall to find connected direct points
 
 
 class Solution:
-    def checkIfPrerequisite(self,
-                            n: int,
-                            prerequisites: List[List[int]],
-                            queries: List[List[int]]) -> List[bool]:
+    def checkIfPrerequisite(
+        self, n: int, prerequisites: List[List[int]], queries: List[List[int]]
+    ) -> List[bool]:
         dist = [[inf for _ in range(n)] for _ in range(n)]
         for i in range(n):
             dist[i][i] = 0

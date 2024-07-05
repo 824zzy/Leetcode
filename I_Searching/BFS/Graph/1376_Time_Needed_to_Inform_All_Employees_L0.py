@@ -8,11 +8,8 @@ from header import *
 
 class Solution:
     def numOfMinutes(
-            self,
-            n: int,
-            headID: int,
-            manager: List[int],
-            informTime: List[int]) -> int:
+        self, n: int, headID: int, manager: List[int], informTime: List[int]
+    ) -> int:
         G = [[] for _ in range(n)]
         for i, x in enumerate(manager):
             if x != -1:
@@ -27,16 +24,14 @@ class Solution:
                 ans = max(ans, t + informTime[i])
         return ans
 
+
 # dfs
 
 
 class Solution:
     def numOfMinutes(
-            self,
-            n: int,
-            headID: int,
-            manager: List[int],
-            informTime: List[int]) -> int:
+        self, n: int, headID: int, manager: List[int], informTime: List[int]
+    ) -> int:
         G = [[] for _ in range(n)]
         for i, x in enumerate(manager):
             if x != -1:

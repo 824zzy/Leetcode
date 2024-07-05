@@ -6,6 +6,8 @@ TODO: solve this problem
 class Solution:
     def shortestCommonSupersequence(self, A: str, B: str) -> str:
         pass
+
+
 #         @cache
 #         def dfs(i, j):
 #             if i==len(A) or j==len(B): return ''

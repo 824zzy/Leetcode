@@ -10,7 +10,7 @@ from functools import reduce
 
 class Solution:
     def numberOfGoodSubarraySplits(self, A: List[int]) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         ans = 1
         pre = -1
         for i, x in enumerate(A):
@@ -21,12 +21,13 @@ class Solution:
             pre = i
         return ans if pre >= 0 else 0
 
+
 # use groupby
 
 
 class Solution:
     def numberOfGoodSubarraySplits(self, A: List[int]) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         ans = []
         while A and A[0] == 0:
             A.pop(0)
@@ -43,7 +44,7 @@ class Solution:
 # Use 01 knapsack, but not efficient
 class Solution:
     def numberOfGoodSubarraySplits(self, A: List[int]) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @cache
         def dp(i, hasOne):
@@ -57,4 +58,5 @@ class Solution:
             else:
                 ans = dp(i + 1, True)
             return ans % MOD
+
         return dp(0, False)

@@ -6,13 +6,14 @@ extension of 127
 
 
 class Solution:
-    def findLadders(self, beginWord: str, endWord: str,
-                    A: List[str]) -> List[List[str]]:
+    def findLadders(
+        self, beginWord: str, endWord: str, A: List[str]
+    ) -> List[List[str]]:
         # build graph of words
         G = defaultdict(list)
         for w in A:
             for i in range(len(w)):
-                G[w[:i] + '*' + w[i + 1:]].append(w)
+                G[w[:i] + "*" + w[i + 1 :]].append(w)
         # bfs to find ladder
         ans = []
         Q = {beginWord: [[beginWord]]}
@@ -21,7 +22,7 @@ class Solution:
             nextQ = defaultdict(list)
             for w1, seqs in Q.items():
                 for i in range(len(w1)):
-                    for w2 in G[w1[:i] + '*' + w1[i + 1:]]:
+                    for w2 in G[w1[:i] + "*" + w1[i + 1 :]]:
                         if w2 == endWord:
                             ans.extend([seq + [w2] for seq in seqs])
                         if w2 not in seen:

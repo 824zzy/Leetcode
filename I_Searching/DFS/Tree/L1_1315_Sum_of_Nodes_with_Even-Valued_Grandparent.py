@@ -4,9 +4,13 @@
 
 class Solution:
     def sumEvenGrandparent(self, root, p=1, gp=1) -> int:
-        return self.sumEvenGrandparent(root.left, root.val, p) +\
-            self.sumEvenGrandparent(root.right, root.val, p) +\
-            root.val * (1 - gp % 2) if root else 0
+        return (
+            self.sumEvenGrandparent(root.left, root.val, p)
+            + self.sumEvenGrandparent(root.right, root.val, p)
+            + root.val * (1 - gp % 2)
+            if root
+            else 0
+        )
 
 
 """ Naive Solution

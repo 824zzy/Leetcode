@@ -17,8 +17,12 @@ class Solution:
                 nxtQ = []
                 for x, y in Q:
                     for dx, dy in (0, 1), (0, -1), (1, 0), (-1, 0):
-                        if 0 <= x + dx < m and 0 <= y + \
-                                dy < n and G[x + dx][y + dy] == 0 and (x + dx, y + dy) not in seen:
+                        if (
+                            0 <= x + dx < m
+                            and 0 <= y + dy < n
+                            and G[x + dx][y + dy] == 0
+                            and (x + dx, y + dy) not in seen
+                        ):
                             seen.add((x + dx, y + dy))
                             nxtQ.append((x + dx, y + dy))
                             D[x + dx][y + dy][i] = step

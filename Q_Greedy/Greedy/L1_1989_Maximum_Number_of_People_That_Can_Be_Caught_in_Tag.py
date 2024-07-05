@@ -21,8 +21,7 @@ class Solution:
                         break
                 else:
                     # go right
-                    for j in range(max(i + 1, right_most),
-                                   min(i + d + 1, len(A))):
+                    for j in range(max(i + 1, right_most), min(i + d + 1, len(A))):
                         right_most = max(right_most, j + 1)
                         if A[j] == 0:
                             ans += 1

@@ -7,10 +7,7 @@ from header import *
 
 
 class Solution:
-    def swapNodes(
-            self,
-            head: Optional[ListNode],
-            k: int) -> Optional[ListNode]:
+    def swapNodes(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         ans = fast = slow = ListNode(next=head)
         for _ in range(k):
             fast = fast.next

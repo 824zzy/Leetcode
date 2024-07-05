@@ -15,4 +15,5 @@ class Solution:
                 if jj != j:
                     ans = min(ans, A[i][jj] + dp(i + 1, jj))
             return ans
+
         return dp(0, None)

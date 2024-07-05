@@ -4,10 +4,7 @@ from header import *
 
 
 class Solution:
-    def removeNthFromEnd(
-            self,
-            head: Optional[ListNode],
-            n: int) -> Optional[ListNode]:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         dummy = fast = slow = ListNode(next=head)
         for _ in range(n):
             fast = fast.next

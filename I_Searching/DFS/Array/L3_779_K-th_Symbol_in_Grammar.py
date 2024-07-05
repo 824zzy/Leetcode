@@ -8,8 +8,9 @@ class Solution:
         def dfs(i, k):
             if k == 1:
                 return 0
-            if k > 2**i:
-                return 1 ^ dfs(i, k - 2**i)
+            if k > 2 ** i:
+                return 1 ^ dfs(i, k - 2 ** i)
             else:
                 return dfs(i - 1, k)
+
         return dfs(n, k)

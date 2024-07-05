@@ -14,6 +14,7 @@ class Solution:
                 return False
         return True
 
+
 # brute force: check every two points are colinear
 
 

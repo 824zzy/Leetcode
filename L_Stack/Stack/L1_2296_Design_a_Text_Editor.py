@@ -22,10 +22,10 @@ class TextEditor:
         while self.before and k:
             self.after.append(self.before.pop())
             k -= 1
-        return ''.join(self.before[-10:])
+        return "".join(self.before[-10:])
 
     def cursorRight(self, k: int) -> str:
         while self.after and k:
             self.before.append(self.after.pop())
             k -= 1
-        return ''.join(self.before[-10:])
+        return "".join(self.before[-10:])

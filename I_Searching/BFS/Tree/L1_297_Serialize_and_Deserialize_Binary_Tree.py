@@ -6,7 +6,7 @@ optinal solution using bfs, but not readble than dfs solution
 class Codec:
     def serialize(self, root):
         if not root:
-            return ''
+            return ""
         nodes = []
         Q = [root]
         while Q:
@@ -19,18 +19,18 @@ class Codec:
                     if cur_n.left:
                         Q.append(cur_n.left)
                     else:
-                        Q.append('null')
+                        Q.append("null")
                     if cur_n.right:
                         Q.append(cur_n.right)
                     else:
-                        Q.append('null')
+                        Q.append("null")
 
         return str(nodes)
 
     def deserialize(self, data):
         if not data:
             return None
-        nodes = data[1:-1].split(', ')
+        nodes = data[1:-1].split(", ")
         dummy = TreeNode(nodes.pop(0))
         Q = [dummy]
         while nodes:

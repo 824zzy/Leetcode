@@ -11,4 +11,5 @@ class Solution:
             if n == 1:
                 return 1
             return (2 * n - 1) * (2 * n) // 2 * dp(n - 1)
-        return dp(n) % (10**9 + 7)
+
+        return dp(n) % (10 ** 9 + 7)

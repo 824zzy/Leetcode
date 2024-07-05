@@ -30,4 +30,4 @@ class Solution:
         ans = -inf
         for i, (l, r) in enumerate(zip(L, R)):
             ans = max(ans, A[i] * (prefix[r] - prefix[l + 1]))
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

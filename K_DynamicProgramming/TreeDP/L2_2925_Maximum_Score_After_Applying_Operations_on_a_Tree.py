@@ -6,9 +6,9 @@ from header import *
 
 
 class Solution:
-    def maximumScoreAfterOperations(self,
-                                    edges: List[List[int]],
-                                    values: List[int]) -> int:
+    def maximumScoreAfterOperations(
+        self, edges: List[List[int]], values: List[int]
+    ) -> int:
         G = defaultdict(list)
         for i, j in edges:
             G[i].append(j)
@@ -41,13 +41,14 @@ class Solution:
                         ans1 += dp(j, i, True)
                         ans2 += dp(j, i, False)
             return max(ans, ans1, ans2)
+
         return dp(0, -1, False)
 
 
 class Solution:
-    def maximumScoreAfterOperations(self,
-                                    edges: List[List[int]],
-                                    values: List[int]) -> int:
+    def maximumScoreAfterOperations(
+        self, edges: List[List[int]], values: List[int]
+    ) -> int:
         G = defaultdict(list)
         for i, j in edges:
             G[i].append(j)

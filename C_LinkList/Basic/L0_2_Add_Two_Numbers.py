@@ -5,9 +5,8 @@ traverse l1 and l2 while using carry
 
 class Solution:
     def addTwoNumbers(
-            self,
-            l1: Optional[ListNode],
-            l2: Optional[ListNode]) -> Optional[ListNode]:
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         ans = node = ListNode(-1)
         carry = 0
         while l1 or l2 or carry:

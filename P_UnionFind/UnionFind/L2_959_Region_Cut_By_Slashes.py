@@ -19,13 +19,13 @@ class Solution:
         for r in range(n):
             for c in range(n):
                 idx = 4 * (r * n + c)
-                if grid[r][c] == '/':
+                if grid[r][c] == "/":
                     dsu.merge(idx + 0, idx + 3)
                     dsu.merge(idx + 1, idx + 2)
-                elif grid[r][c] == '\\':
+                elif grid[r][c] == "\\":
                     dsu.merge(idx + 0, idx + 1)
                     dsu.merge(idx + 2, idx + 3)
-                elif grid[r][c] == ' ':
+                elif grid[r][c] == " ":
                     dsu.merge(idx + 0, idx + 1)
                     dsu.merge(idx + 1, idx + 2)
                     dsu.merge(idx + 2, idx + 3)

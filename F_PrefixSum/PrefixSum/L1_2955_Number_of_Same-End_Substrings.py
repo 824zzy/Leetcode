@@ -5,8 +5,7 @@ from header import *
 
 
 class Solution:
-    def sameEndSubstringCount(
-            self, s: str, queries: List[List[int]]) -> List[int]:
+    def sameEndSubstringCount(self, s: str, queries: List[List[int]]) -> List[int]:
         pre = [0] * 26
         A = [[] for _ in range(len(s) + 1)]
         A[0] = pre.copy()

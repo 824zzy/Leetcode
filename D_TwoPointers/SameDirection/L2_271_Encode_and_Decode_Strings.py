@@ -9,9 +9,9 @@ class Codec:
     def encode(self, strs: List[str]) -> str:
         """Encodes a list of strings to a single string.
         """
-        ans = ''
+        ans = ""
         for s in strs:
-            ans += str(len(s)) + '|' + s
+            ans += str(len(s)) + "|" + s
         return ans
 
     def decode(self, s: str) -> List[str]:
@@ -21,13 +21,14 @@ class Codec:
         i = 0
         j = 0
         while j < len(s):
-            while s[j] != '|':
+            while s[j] != "|":
                 j += 1
             l = int(s[i:j])
-            ans.append(s[j + 1:j + l + 1])
+            ans.append(s[j + 1 : j + l + 1])
             j += l + 1
             i = j
         return ans
+
 
 # cheating by special splitter
 
@@ -36,13 +37,13 @@ class Codec:
     def encode(self, strs: List[str]) -> str:
         """Encodes a list of strings to a single string.
         """
-        splitter = '!#$%^&*()'
+        splitter = "!#$%^&*()"
         return splitter.join(strs)
 
     def decode(self, s: str) -> List[str]:
         """Decodes a single string to a list of strings.
         """
-        return s.split('!#$%^&*()')
+        return s.split("!#$%^&*()")
 
 
 """

@@ -12,7 +12,7 @@ class Solution:
             for i in range(1, len(s)):
                 x = (ord(s[i]) - ord(s[i - 1])) % 26
                 diff.append(str(x))
-            cnt[' '.join(diff)].append(s)
+            cnt[" ".join(diff)].append(s)
         return cnt.values()
 
 

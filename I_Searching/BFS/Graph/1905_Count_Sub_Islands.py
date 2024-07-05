@@ -13,8 +13,7 @@ class Solution:
             B[x][y] = 0
             is_island = A[x][y]
             for dx, dy in neibs:
-                if 0 <= x + dx < M and 0 <= y + \
-                        dy < N and B[x + dx][y + dy] == 1:
+                if 0 <= x + dx < M and 0 <= y + dy < N and B[x + dx][y + dy] == 1:
                     is_island = is_island & dfs(x + dx, y + dy)
             return is_island
 

@@ -4,7 +4,7 @@ from header import *
 
 
 class Solution:
-    def preorder(self, root: 'Node') -> List[int]:
+    def preorder(self, root: "Node") -> List[int]:
         self.ans = []
 
         def dfs(node):
@@ -17,11 +17,12 @@ class Solution:
         dfs(root)
         return self.ans
 
+
 # Smarter iterative solution
 
 
 class Solution:
-    def preorder(self, root: 'Node') -> List[int]:
+    def preorder(self, root: "Node") -> List[int]:
         if not root:
             return []
         Q = [root]

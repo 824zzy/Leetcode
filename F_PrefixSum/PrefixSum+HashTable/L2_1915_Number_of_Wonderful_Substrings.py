@@ -18,7 +18,7 @@ class Solution:
         pre = 0
         ans = 0
         for c in word:
-            c = ord(c)-97
+            c = ord(c) - 97
             pre ^= 1 << c
             ans += cnt[pre]
             ans += sum(cnt[pre ^ (1 << i)] for i in range(10))

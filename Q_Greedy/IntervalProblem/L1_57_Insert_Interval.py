@@ -5,8 +5,7 @@ from header import *
 
 
 class Solution:
-    def insert(self, A: List[List[int]],
-               newInterval: List[int]) -> List[List[int]]:
+    def insert(self, A: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         A.append(newInterval)
         A.sort()
 

@@ -11,8 +11,12 @@ class Solution:
         row_idx = bisect_right(R, t) - 1
         # find appropriate col index
         col_idx = bisect_right(A[row_idx], t) - 1
-        return 0 <= row_idx < len(A) and 0 <= col_idx < len(
-            A[0]) and t == A[row_idx][col_idx]
+        return (
+            0 <= row_idx < len(A)
+            and 0 <= col_idx < len(A[0])
+            and t == A[row_idx][col_idx]
+        )
+
 
 # another solution: apply binary search on 2D matrix by finding row and
 # col indexes by divmod

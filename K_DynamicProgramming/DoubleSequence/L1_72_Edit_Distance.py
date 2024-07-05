@@ -22,4 +22,5 @@ class Solution:
                 # delete/insert
                 ans = min(ans, 1 + dp(i + 1, j), 1 + dp(i, j + 1))
                 return ans
+
         return dp(0, 0)

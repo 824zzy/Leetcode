@@ -8,8 +8,7 @@ class Solution:
         nums = set(nums)
         ans = 0
         while head:
-            if head.val in nums and (
-                    head.next is None or head.next.val not in nums):
+            if head.val in nums and (head.next is None or head.next.val not in nums):
                 ans += 1
             head = head.next
         return ans

@@ -10,9 +10,13 @@ class Solution:
             for i, c in enumerate(word):
                 if c.isdigit() or (c in "!.," and i != len(word) - 1):
                     return False
-                elif c == '-':
-                    if seen or i == 0 or i == len(
-                            word) - 1 or not word[i + 1].isalpha():
+                elif c == "-":
+                    if (
+                        seen
+                        or i == 0
+                        or i == len(word) - 1
+                        or not word[i + 1].isalpha()
+                    ):
                         return False
                     seen = True
             return True

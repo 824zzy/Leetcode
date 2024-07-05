@@ -5,8 +5,9 @@
 class Solution:
     def movesToChessboard(self, b):
         N = len(b)
-        if any(b[0][0] ^ b[i][0] ^ b[0][j] ^ b[i][j]
-               for i in range(N) for j in range(N)):
+        if any(
+            b[0][0] ^ b[i][0] ^ b[0][j] ^ b[i][j] for i in range(N) for j in range(N)
+        ):
             return -1
         if not N / 2 <= sum(b[0]) <= (N + 1) / 2:
             return -1

@@ -7,13 +7,11 @@ then the four points can not form a square.
 
 class Solution:
     def validSquare(
-            self,
-            p1: List[int],
-            p2: List[int],
-            p3: List[int],
-            p4: List[int]) -> bool:
+        self, p1: List[int], p2: List[int], p3: List[int], p4: List[int]
+    ) -> bool:
         def distance(pt1, pt2):
-            return (pt1[0] - pt2[0])**2 + (pt1[1] - pt2[1])**2
+            return (pt1[0] - pt2[0]) ** 2 + (pt1[1] - pt2[1]) ** 2
+
         points = [p1, p2, p3, p4]
         dists = []
         for i in range(len(points)):

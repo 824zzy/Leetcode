@@ -7,11 +7,8 @@ from header import *
 
 class Solution:
     def maxPerformance(
-            self,
-            n: int,
-            speed: List[int],
-            efficiency: List[int],
-            k: int) -> int:
+        self, n: int, speed: List[int], efficiency: List[int], k: int
+    ) -> int:
         A = list(zip(speed, efficiency))
         A.sort(key=lambda x: -x[1])
 
@@ -24,4 +21,4 @@ class Solution:
             if len(pq) > k:
                 sm -= heappop(pq)
             ans = max(ans, sm * e)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

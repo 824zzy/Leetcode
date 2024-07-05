@@ -15,15 +15,19 @@ class Solution:
                 x, y = Q.pop(0)
                 A[x][y] = 0
                 for dx, dy in D:
-                    if 0 <= x + dx < len(A) and 0 <= y + \
-                            dy < len(A[0]) and A[x + dx][y + dy] == 1:
+                    if (
+                        0 <= x + dx < len(A)
+                        and 0 <= y + dy < len(A[0])
+                        and A[x + dx][y + dy] == 1
+                    ):
                         A[x + dx][y + dy] = 0
                         Q.append((x + dx, y + dy))
 
         for i in range(len(A)):
             for j in range(len(A[0])):
-                if (not i or not j or i == len(A) - 1 or j ==
-                        len(A[0]) - 1) and A[i][j] == 1:
+                if (not i or not j or i == len(A) - 1 or j == len(A[0]) - 1) and A[i][
+                    j
+                ] == 1:
                     bfs(i, j)
 
         ans = 0

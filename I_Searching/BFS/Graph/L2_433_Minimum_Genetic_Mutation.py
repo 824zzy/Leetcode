@@ -11,8 +11,8 @@ class Solution:
         G = defaultdict(set)
         for b in B:
             for i in range(len(b)):
-                for c in 'ACGT':
-                    G[b[:i] + c + b[i + 1:]].add(b)
+                for c in "ACGT":
+                    G[b[:i] + c + b[i + 1 :]].add(b)
 
         Q = [(0, S)]
         seen = set([S])

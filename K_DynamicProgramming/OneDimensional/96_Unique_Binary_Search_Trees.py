@@ -11,7 +11,9 @@ class Solution:
             if n <= 1:
                 return 1
             return sum([dfs(i) * dfs(n - 1 - i) for i in range(n)])
+
         return dfs(n)
+
 
 # bottom up
 

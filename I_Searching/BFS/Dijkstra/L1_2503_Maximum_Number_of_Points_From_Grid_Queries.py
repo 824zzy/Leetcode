@@ -18,8 +18,11 @@ class Solution:
                 _, x, y = heappop(Q)
                 cnt += 1
                 for dx, dy in D:
-                    if 0 <= x + \
-                            dx < len(G) and 0 <= y + dy < len(G[0]) and (x + dx, y + dy) not in seen:
+                    if (
+                        0 <= x + dx < len(G)
+                        and 0 <= y + dy < len(G[0])
+                        and (x + dx, y + dy) not in seen
+                    ):
                         seen.add((x + dx, y + dy))
                         heappush(Q, (G[x + dx][y + dy], x + dx, y + dy))
             ans[i] = cnt

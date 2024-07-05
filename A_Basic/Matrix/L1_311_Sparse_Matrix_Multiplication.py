@@ -5,8 +5,7 @@ from header import *
 
 
 class Solution:
-    def multiply(self, A: List[List[int]],
-                 B: List[List[int]]) -> List[List[int]]:
+    def multiply(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
         ans = [[0 for _ in range(len(B[0]))] for _ in range(len(A))]
         for i in range(len(A)):
             for k in range(len(B)):

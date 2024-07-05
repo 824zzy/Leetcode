@@ -9,7 +9,7 @@ class Solution:
         ans = cl = op = 0
 
         for c in s:
-            if c == '(':
+            if c == "(":
                 op += 1
             else:
                 cl += 1
@@ -21,7 +21,7 @@ class Solution:
 
         cl = op = 0
         for c in s[::-1]:
-            if c == '(':
+            if c == "(":
                 op += 1
             else:
                 cl += 1

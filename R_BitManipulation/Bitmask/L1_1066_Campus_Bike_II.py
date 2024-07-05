@@ -15,9 +15,11 @@ class Solution:
             for j in range(len(B)):
                 if not mask & (1 << j):
                     x, y = B[j]
-                    ans = min(ans, abs(x - x0) + abs(y - y0) +
-                              dp(i + 1, mask ^ (1 << j)))
+                    ans = min(
+                        ans, abs(x - x0) + abs(y - y0) + dp(i + 1, mask ^ (1 << j))
+                    )
             return ans
+
         return dp(0, 0)
 
 
@@ -34,6 +36,7 @@ class Solution:
             for mask in range(1 << len(B)):
                 for j in range(len(B)):
                     if mask & (1 << j):
-                        dp[i][mask] = min(dp[i][mask],
-                                          D[i][j] + dp[i + 1][mask ^ (1 << j)])
+                        dp[i][mask] = min(
+                            dp[i][mask], D[i][j] + dp[i + 1][mask ^ (1 << j)]
+                        )
         return dp[0][(1 << len(B)) - 1]

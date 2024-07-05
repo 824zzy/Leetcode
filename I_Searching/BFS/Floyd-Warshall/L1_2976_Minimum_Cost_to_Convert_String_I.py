@@ -6,12 +6,8 @@ from header import *
 
 class Solution:
     def minimumCost(
-            self,
-            S: str,
-            T: str,
-            original: List[str],
-            changed: List[str],
-            cost: List[int]) -> int:
+        self, S: str, T: str, original: List[str], changed: List[str], cost: List[int]
+    ) -> int:
         # floyd warshall
         n = 26
         dist = [[inf] * n for _ in range(n)]

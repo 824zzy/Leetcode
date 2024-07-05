@@ -15,7 +15,8 @@ class Solution:
             return dp(i - 1) + dp(i - 2)
 
         ans = dp(n)
-        return (ans * ans) % (10**9 + 7)
+        return (ans * ans) % (10 ** 9 + 7)
+
 
 # or consider the problem as knapsack problem:
 
@@ -32,4 +33,4 @@ class Solution:
                 return dp(i + 1, True)
 
         ans = dp(0, True) + 1
-        return (ans * ans) % (10**9 + 7)
+        return (ans * ans) % (10 ** 9 + 7)

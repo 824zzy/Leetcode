@@ -15,4 +15,4 @@ class Solution:
         for i in range(len(s)):
             for x in bucket[-i - 1]:
                 ans.append((i + 1) * x)
-        return ''.join(ans[::-1])
+        return "".join(ans[::-1])

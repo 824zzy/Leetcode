@@ -12,11 +12,12 @@ class Solution:
         ans = 0
         zeros = 0
         for i in range(len(A)):
-            if A[i] == '0':
+            if A[i] == "0":
                 zeros += 1
-            if A[i] == '1' and zeros:
+            if A[i] == "1" and zeros:
                 ans = max(ans + 1, zeros)
         return ans
+
 
 # simple simulation since n<=1000, time complexity O(n^2)
 
@@ -30,7 +31,7 @@ class Solution:
             i = 0
             f = False
             while i < len(A) - 1:
-                if A[i] == '0' and A[i + 1] == '1':
+                if A[i] == "0" and A[i + 1] == "1":
                     f = True
                     A[i], A[i + 1] = A[i + 1], A[i]
                     i += 1

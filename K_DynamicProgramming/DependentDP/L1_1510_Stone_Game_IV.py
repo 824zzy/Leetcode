@@ -33,7 +33,7 @@ class Solution:
         dp = [0] * (n + 1)
         dp[1] = 1
         for i in range(1, n + 1):
-            for k in range(1, int(i**0.5) + 1):
+            for k in range(1, int(i ** 0.5) + 1):
                 if k * k <= i and dp[i - k * k] == 0:
                     dp[i] = 1
         return dp[n]

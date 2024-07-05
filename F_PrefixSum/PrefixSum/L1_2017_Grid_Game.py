@@ -9,7 +9,7 @@ robot 1 optimal chose: min(ans, robot2 choose)
 
 class Solution:
     def gridGame(self, A: List[List[int]]) -> int:
-        ans = float('inf')
+        ans = float("inf")
         prefix = 0
         suffix = sum(A[0])
         for i in range(len(A[0])):

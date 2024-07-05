@@ -11,6 +11,6 @@ class Solution:
             x, y, r = c[0], c[1], c[2]
             for xx in range(x - r, x + r + 1):
                 for yy in range(y - r, y + r + 1):
-                    if (x - xx)**2 + (y - yy)**2 <= r**2:
+                    if (x - xx) ** 2 + (y - yy) ** 2 <= r ** 2:
                         ans.add((xx, yy))
         return len(ans)

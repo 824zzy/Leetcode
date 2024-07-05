@@ -5,7 +5,7 @@ from header import *
 
 
 class Solution:
-    def construct(self, G: List[List[int]]) -> 'Node':
+    def construct(self, G: List[List[int]]) -> "Node":
         def fn(x0, x1, y0, y1):
             vals = {G[i][j] for i, j in product(range(x0, x1), range(y0, y1))}
             if len(vals) == 1:
@@ -21,14 +21,7 @@ class Solution:
 
 # Definition for a QuadTree node.
 class Node:
-    def __init__(
-            self,
-            val,
-            isLeaf,
-            topLeft,
-            topRight,
-            bottomLeft,
-            bottomRight):
+    def __init__(self, val, isLeaf, topLeft, topRight, bottomLeft, bottomRight):
         self.val = val
         self.isLeaf = isLeaf
         self.topLeft = topLeft

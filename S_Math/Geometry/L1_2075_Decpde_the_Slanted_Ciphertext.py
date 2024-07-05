@@ -12,4 +12,4 @@ class Solution:
             while i * cols + j < len(T):
                 ans.append(T[i * cols + j])
                 i, j = i + 1, j + 1
-        return ''.join(ans).rstrip()
+        return "".join(ans).rstrip()

@@ -18,4 +18,4 @@ class Solution:
                 sumi, sumj = 0, 0
                 i, j = i + 1, j + 1
         ans += max(sumi + sum(A[i:]), sumj + sum(B[j:]))
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

@@ -19,6 +19,6 @@ class Solution:
             ans = dp(i + 1, k)
             # choose
             ans += dp(i + 1, k - A[i])
-            return ans % (10**9 + 7)
+            return ans % (10 ** 9 + 7)
 
-        return (2**len(A) - dp(0, k) * 2) % (10**9 + 7)
+        return (2 ** len(A) - dp(0, k) * 2) % (10 ** 9 + 7)

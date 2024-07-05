@@ -18,7 +18,9 @@ class Solution:
                 return dp(i + 1, j - 1) + 2
             else:
                 return max(dp(i + 1, j), dp(i, j - 1))
+
         return dp(0, len(A) - 1)
+
 
 # bottom up dp solution
 

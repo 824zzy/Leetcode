@@ -17,7 +17,7 @@ class TimeMap:
         if idx:
             return self.mp[key][idx - 1][1]
         else:
-            return ''
+            return ""
 
 
 """

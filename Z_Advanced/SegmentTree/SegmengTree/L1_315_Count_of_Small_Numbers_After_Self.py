@@ -55,8 +55,9 @@ class SegmentTree:
         elif lo > m:
             return self._sumQuery(node.right, lo, hi)
         else:
-            return self._sumQuery(node.left, lo, m) + \
-                self._sumQuery(node.right, m + 1, hi)
+            return self._sumQuery(node.left, lo, m) + self._sumQuery(
+                node.right, m + 1, hi
+            )
 
 
 class Solution:
@@ -115,6 +116,7 @@ class Solution:
             ans.append(st.query(0, mp[x] - 1))
             st.update(mp[x], st.T[mp[x]] + 1)
         return ans[::-1]
+
 
 # array-based segment tree
 

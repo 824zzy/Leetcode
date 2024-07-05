@@ -17,8 +17,8 @@ class Solution:
 
         a, b = -1, -1
         # case 1
-        if A[:k - 1]:
-            a = max(A[:k - 1])
+        if A[: k - 1]:
+            a = max(A[: k - 1])
         # case 2
         if k < len(A):
             b = A[k]

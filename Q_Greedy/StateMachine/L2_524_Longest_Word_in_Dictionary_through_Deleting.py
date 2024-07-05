@@ -11,7 +11,7 @@ Time complexity: O(m*n), where m is the length of string and n is the length of 
 class Solution:
     def findLongestWord(self, s: str, D: List[str]) -> str:
         n = len(s)
-        s = '#' + s
+        s = "#" + s
         states = [[-1 for _ in range(26)] for _ in range(n + 1)]
         for i in reversed(range(1, n + 1)):
             for j in range(26):
@@ -27,4 +27,4 @@ class Solution:
                     break
             else:
                 return w
-        return ''
+        return ""

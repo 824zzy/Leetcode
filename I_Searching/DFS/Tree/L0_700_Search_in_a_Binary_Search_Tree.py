@@ -3,10 +3,7 @@
 
 
 class Solution:
-    def searchBST(
-            self,
-            root: Optional[TreeNode],
-            val: int) -> Optional[TreeNode]:
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         def dfs(node):
             if not node:
                 return None

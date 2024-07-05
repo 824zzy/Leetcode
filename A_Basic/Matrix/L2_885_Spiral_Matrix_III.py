@@ -5,8 +5,7 @@ generate sequence whose length of each side is following: 1,1,2,2,3,3,4,4, ....
 
 
 class Solution:
-    def spiralMatrixIII(self, r: int, c: int, x: int,
-                        y: int) -> List[List[int]]:
+    def spiralMatrixIII(self, r: int, c: int, x: int, y: int) -> List[List[int]]:
         D = [(0, 1), (1, 0), (0, -1), (-1, 0)]
         d = 0
         dx, dy = D[d]

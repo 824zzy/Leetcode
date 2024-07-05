@@ -11,8 +11,11 @@ class Solution:
         def dp(x, y):
             ans = 1
             for dx, dy in D:
-                if 0 <= x + dx < len(A) and 0 <= y + \
-                        dy < len(A[0]) and A[x + dx][y + dy] > A[x][y]:
+                if (
+                    0 <= x + dx < len(A)
+                    and 0 <= y + dy < len(A[0])
+                    and A[x + dx][y + dy] > A[x][y]
+                ):
                     ans = max(ans, 1 + dp(x + dx, y + dy))
             return ans
 

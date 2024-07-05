@@ -8,10 +8,11 @@ class Solution:
         def process(s):
             stk = []
             for c in s:
-                if c == '#':
+                if c == "#":
                     if stk:
                         stk.pop()
                 else:
                     stk.append(c)
             return stk
+
         return process(s) == process(t)

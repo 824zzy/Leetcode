@@ -8,7 +8,7 @@ class Solution:
         i = 0
         for g in G:
             for ii in range(i, len(A)):
-                if A[ii:ii + len(g)] == g:
+                if A[ii : ii + len(g)] == g:
                     i = ii + len(g)
                     break
             else:

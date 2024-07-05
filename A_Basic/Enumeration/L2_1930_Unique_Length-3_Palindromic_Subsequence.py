@@ -23,7 +23,7 @@ class Solution:
         for x in range(26):
             i, j = left_most[chr(x + 97)], right_most[chr(x + 97)]
             if i != inf and j != -inf:
-                ans += len(set(s[i + 1:j]))
+                ans += len(set(s[i + 1 : j]))
         return ans
 
 

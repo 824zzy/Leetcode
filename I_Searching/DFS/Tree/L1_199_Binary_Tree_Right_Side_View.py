@@ -23,6 +23,7 @@ class Solution:
         dfs(root, 1)
         return ans
 
+
 # Record every level of nodes in ans. Space complexity: O(n)
 
 

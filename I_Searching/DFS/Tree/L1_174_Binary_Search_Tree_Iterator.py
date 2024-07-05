@@ -17,6 +17,7 @@ class BSTIterator:
     def hasNext(self) -> bool:
         return len(self.stk) > 0
 
+
 # Recursive: O(1), O(N)
 
 

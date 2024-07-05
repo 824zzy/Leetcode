@@ -6,9 +6,8 @@ from header import *
 
 class Solution:
     def delNodes(
-            self,
-            root: Optional[TreeNode],
-            to_delete: List[int]) -> List[TreeNode]:
+        self, root: Optional[TreeNode], to_delete: List[int]
+    ) -> List[TreeNode]:
         ans = []
 
         def dfs(node, parent):

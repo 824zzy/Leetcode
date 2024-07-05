@@ -14,7 +14,6 @@ class Solution:
 
         A = sorted(strs, key=lambda x: -len(x))
         for i, word1 in enumerate(A):
-            if all(not subseq(word1, word2)
-                   for j, word2 in enumerate(A) if i != j):
+            if all(not subseq(word1, word2) for j, word2 in enumerate(A) if i != j):
                 return len(word1)
         return -1

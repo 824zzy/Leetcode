@@ -9,8 +9,12 @@ class Solution:
         stack = []
 
         for i, c in enumerate(s):
-            while stack and stack[-1] > c and (len(s) - i + len(
-                    stack) > k) and (stack[-1] != letter or n_letters > r):
+            while (
+                stack
+                and stack[-1] > c
+                and (len(s) - i + len(stack) > k)
+                and (stack[-1] != letter or n_letters > r)
+            ):
                 d = stack.pop()
                 if d == letter:
                     r += 1
@@ -25,4 +29,4 @@ class Solution:
             if c == letter:
                 n_letters -= 1
 
-        return ''.join(stack)
+        return "".join(stack)

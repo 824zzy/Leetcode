@@ -10,7 +10,7 @@ from header import *
 
 class Solution:
     def maxSum(self, nums: List[int], k: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         m = max(nums).bit_length()
         A = [0] * m
         for x in nums:

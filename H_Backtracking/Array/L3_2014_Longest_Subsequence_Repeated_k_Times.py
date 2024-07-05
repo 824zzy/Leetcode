@@ -19,7 +19,7 @@ class Solution:
         cand = [c for c, v in sorted(freq.items()) if v >= k]
 
         stk = []
-        self.ans = ''
+        self.ans = ""
 
         def dfs():
             # pruning
@@ -28,11 +28,10 @@ class Solution:
             for c in cand:
                 stk.append(c)
                 if check(stk):
-                    cur = ''.join(stk)
-                    if len(cur) > len(
-                        self.ans) or (
-                        len(cur) == len(
-                            self.ans) and cur > self.ans):
+                    cur = "".join(stk)
+                    if len(cur) > len(self.ans) or (
+                        len(cur) == len(self.ans) and cur > self.ans
+                    ):
                         self.ans = cur
                     dfs()
                 stk.pop()

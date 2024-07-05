@@ -10,13 +10,13 @@ class Solution:
 
         def dfs(l, r):
             if l == r and r == 0:
-                return ans.append(''.join(stk.copy()))
+                return ans.append("".join(stk.copy()))
             if l > 0:
-                stk.append('(')
+                stk.append("(")
                 dfs(l - 1, r + 1)
                 stk.pop()
             if r > 0:
-                stk.append(')')
+                stk.append(")")
                 dfs(l, r - 1)
                 stk.pop()
 
@@ -33,9 +33,9 @@ class Solution:
                 ans.append(s)
                 return
             if l > 0:
-                dfs(l - 1, r + 1, s + '(')
+                dfs(l - 1, r + 1, s + "(")
             if r > 0:
-                dfs(l, r - 1, s + ')')
+                dfs(l, r - 1, s + ")")
 
-        dfs(n, 0, '')
+        dfs(n, 0, "")
         return ans

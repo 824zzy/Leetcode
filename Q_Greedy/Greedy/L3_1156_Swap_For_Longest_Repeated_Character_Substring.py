@@ -16,6 +16,5 @@ class Solution:
         # case2: [xxxx][y][xxx]
         for i in range(1, len(A) - 1):
             if A[i][1] == 1 and A[i - 1][0] == A[i + 1][0]:
-                ans = max(ans, min(A[i - 1][1] + A[i + 1]
-                          [1] + 1, cnt[A[i - 1][0]]))
+                ans = max(ans, min(A[i - 1][1] + A[i + 1][1] + 1, cnt[A[i - 1][0]]))
         return ans

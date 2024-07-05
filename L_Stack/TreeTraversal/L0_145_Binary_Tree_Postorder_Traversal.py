@@ -21,6 +21,7 @@ class Solution:
             ans.append(stk2.pop().val)
         return ans
 
+
 # recursive solution
 
 

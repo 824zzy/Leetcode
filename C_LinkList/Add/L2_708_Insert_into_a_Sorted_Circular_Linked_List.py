@@ -4,7 +4,7 @@ from header import *
 
 
 class Solution:
-    def insert(self, head: 'Optional[Node]', insertVal: int) -> 'Node':
+    def insert(self, head: "Optional[Node]", insertVal: int) -> "Node":
         if not head:
             ans = Node(val=insertVal)
             ans.next = ans
@@ -14,8 +14,7 @@ class Solution:
         while True:
             if pre.val <= insertVal <= node.val:
                 break
-            if pre.val > node.val and (
-                    insertVal < node.val or pre.val < insertVal):
+            if pre.val > node.val and (insertVal < node.val or pre.val < insertVal):
                 break
             pre, node = pre.next, node.next
             if pre == head:

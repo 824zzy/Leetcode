@@ -12,6 +12,7 @@ class Solution:
             mx, mn = max(mx, x, mx * x, mn * x), min(mn, x, mx * x, mn * x)
         return mx
 
+
 # greedy solution
 
 
@@ -48,6 +49,7 @@ class Solution:
         else:
             return ans
 
+
 # brute force backtracking due to the small data size
 # O(2^n)
 
@@ -64,6 +66,7 @@ class Solution:
                 return
             dfs(i + 1, s, is_empty)
             dfs(i + 1, s * A[i], False)
+
         dfs(0, 1, True)
         return self.ans
 

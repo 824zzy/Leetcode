@@ -6,9 +6,8 @@ note that have to have i in heap otherwise it will cause type error
 
 class Solution:
     def mergeTwoLists(
-            self,
-            l1: Optional[ListNode],
-            l2: Optional[ListNode]) -> Optional[ListNode]:
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         if not l1:
             return l2
         elif not l2:

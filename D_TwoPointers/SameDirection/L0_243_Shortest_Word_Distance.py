@@ -5,11 +5,7 @@ from header import *
 
 
 class Solution:
-    def shortestDistance(
-            self,
-            wordsDict: List[str],
-            word1: str,
-            word2: str) -> int:
+    def shortestDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
         i, j = inf, inf
         ans = inf
         for idx, w in enumerate(wordsDict):

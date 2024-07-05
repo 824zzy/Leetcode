@@ -22,8 +22,8 @@ class Solution:
             heapq.heappush(pre_hp, -min(cur_pop, A[i]))
 
         # Build suf_max.
-        suf_max, cur_max = [sum(A[2 * n:])], sum(A[2 * n:])
-        suf_hp = [x for x in A[2 * n:]]
+        suf_max, cur_max = [sum(A[2 * n :])], sum(A[2 * n :])
+        suf_hp = [x for x in A[2 * n :]]
         heapq.heapify(suf_hp)
         for i in range(2 * n - 1, n - 1, -1):
             cur_pop = heapq.heappop(suf_hp)

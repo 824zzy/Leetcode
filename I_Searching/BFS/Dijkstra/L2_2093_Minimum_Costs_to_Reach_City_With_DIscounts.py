@@ -5,10 +5,7 @@ from header import *
 
 
 class Solution:
-    def minimumCost(self,
-                    n: int,
-                    highways: List[List[int]],
-                    discounts: int) -> int:
+    def minimumCost(self, n: int, highways: List[List[int]], discounts: int) -> int:
         G = defaultdict(dict)
         for i, j, w in highways:
             G[i][j] = w
@@ -25,8 +22,7 @@ class Solution:
                 if (j, d) not in seen or c + G[i][j] < seen[(j, d)]:
                     seen[(j, d)] = c + G[i][j]
                     heappush(pq, (c + G[i][j], j, d))
-                if d and (j, d - 1) not in seen or c + \
-                        G[i][j] // 2 < seen[(j, d - 1)]:
+                if d and (j, d - 1) not in seen or c + G[i][j] // 2 < seen[(j, d - 1)]:
                     seen[(j, d - 1)] = c + G[i][j] // 2
                     heappush(pq, (c + G[i][j] // 2, j, d - 1))
         return -1

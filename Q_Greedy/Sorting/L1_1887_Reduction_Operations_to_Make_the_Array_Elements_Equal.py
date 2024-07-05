@@ -11,7 +11,7 @@ class Solution:
         ans = 0
         for i, (_, f) in enumerate(sorted(cnt.items(), reverse=True)):
             if i != len(cnt) - 1:
-                ans += (f + pref)
+                ans += f + pref
                 pref += f
         return ans
 

@@ -4,7 +4,6 @@ binary serach + hash table
 
 
 class RangeFreqQuery:
-
     def __init__(self, arr: List[int]):
         self.cnt = defaultdict(list)
         for i, a in enumerate(arr):

@@ -11,6 +11,6 @@ class Solution:
         for i in range(len(s)):
             if n <= k:
                 return len(s) - cnt
-            if s[i] == '1':
+            if s[i] == "1":
                 n -= 1 << (len(s) - i - 1)
                 cnt += 1

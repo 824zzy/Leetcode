@@ -16,8 +16,10 @@ class Solution:
                     return True
                 for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
                     if 0 <= x + dx < len(G) and 0 <= y + dy < len(G[0]):
-                        if abs(G[x + dx][y + dy] - G[x][y]
-                               ) <= m and (x + dx, y + dy) not in seen:
+                        if (
+                            abs(G[x + dx][y + dy] - G[x][y]) <= m
+                            and (x + dx, y + dy) not in seen
+                        ):
                             seen.add((x + dx, y + dy))
                             Q.append((x + dx, y + dy))
             return False
@@ -31,11 +33,14 @@ class Solution:
                 ans = False
                 for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
                     if 0 <= x + dx < len(G) and 0 <= y + dy < len(G[0]):
-                        if abs(G[x + dx][y + dy] - G[x][y]
-                               ) <= m and (x + dx, y + dy) not in seen:
+                        if (
+                            abs(G[x + dx][y + dy] - G[x][y]) <= m
+                            and (x + dx, y + dy) not in seen
+                        ):
                             seen.add((x + dx, y + dy))
                             ans |= dfs(x + dx, y + dy)
                 return ans
+
             return dfs(0, 0)
 
         l, r = 0, max(max(G, key=max))

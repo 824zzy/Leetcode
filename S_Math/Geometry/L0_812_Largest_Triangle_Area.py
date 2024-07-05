@@ -14,6 +14,9 @@ class Solution:
                     x1, y1 = A[i][0], A[i][1]
                     x2, y2 = A[j][0], A[j][1]
                     x3, y3 = A[k][0], A[k][1]
-                    ans = max(ans, abs(x1 * y2 + x2 * y3 + x3 *
-                              y1 - y1 * x2 - y2 * x3 - y3 * x1) / 2)
+                    ans = max(
+                        ans,
+                        abs(x1 * y2 + x2 * y3 + x3 * y1 - y1 * x2 - y2 * x3 - y3 * x1)
+                        / 2,
+                    )
         return ans

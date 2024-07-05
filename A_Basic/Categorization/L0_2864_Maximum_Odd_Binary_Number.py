@@ -7,8 +7,8 @@ two cases:
 
 class Solution:
     def maximumOddBinaryNumber(self, s: str) -> str:
-        n = s.count('1')
+        n = s.count("1")
         if n > 1:
-            return '1' * (n - 1) + '0' * (len(s) - n) + '1'
+            return "1" * (n - 1) + "0" * (len(s) - n) + "1"
         else:
-            return '0' * (len(s) - 1) + '1'
+            return "0" * (len(s) - 1) + "1"

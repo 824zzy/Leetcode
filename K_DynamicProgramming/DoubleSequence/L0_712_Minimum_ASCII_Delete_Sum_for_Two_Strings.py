@@ -18,4 +18,5 @@ class Solution:
                 return dp(i + 1, j + 1)
             else:
                 return min(A[i] + dp(i + 1, j), B[j] + dp(i, j + 1))
+
         return dp(0, 0)

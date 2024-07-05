@@ -10,7 +10,7 @@ class Solution:
     def sumPrefixScores(self, words: List[str]) -> List[int]:
         prefix = defaultdict(int)
         for w in words:
-            _p = ''
+            _p = ""
             for i in range(len(w)):
                 _p += w[i]
                 prefix[_p] += 1
@@ -18,7 +18,7 @@ class Solution:
         ans = []
         for w in words:
             curr = 0
-            _p = ''
+            _p = ""
             for i in range(len(w)):
                 _p += w[i]
                 curr += prefix[_p]
@@ -34,7 +34,7 @@ class Solution:
             node = root
             for c in w:
                 node = node.setdefault(c, {})
-                node['#'] = node.get('#', 0) + 1
+                node["#"] = node.get("#", 0) + 1
 
         ans = []
         for word in words:
@@ -42,6 +42,6 @@ class Solution:
             node = root
             for ch in word:
                 node = node[ch]
-                val += node['#']
+                val += node["#"]
             ans.append(val)
         return ans

@@ -20,5 +20,6 @@ class Solution:
                 stk.append(x)
                 dfs(j, sm + x)
                 stk.pop()
+
         dfs(0, 0)
         return ans

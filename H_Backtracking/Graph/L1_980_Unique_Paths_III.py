@@ -23,8 +23,7 @@ class Solution:
             tmp = A[x][y]
             A[x][y] = -1
             for dx, dy in D:
-                if 0 <= x + dx < M and 0 <= y + \
-                        dy < N and A[x + dx][y + dy] != -1:
+                if 0 <= x + dx < M and 0 <= y + dy < N and A[x + dx][y + dy] != -1:
                     ans += dfs(x + dx, y + dy, cnt + 1)
             A[x][y] = tmp
             return ans

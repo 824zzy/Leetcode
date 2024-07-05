@@ -5,11 +5,7 @@ from header import *
 
 
 class Solution:
-    def killProcess(
-            self,
-            pid: List[int],
-            ppid: List[int],
-            kill: int) -> List[int]:
+    def killProcess(self, pid: List[int], ppid: List[int], kill: int) -> List[int]:
         T = defaultdict(list)
         for child, parent in zip(pid, ppid):
             if parent != 0:
@@ -30,11 +26,7 @@ class Solution:
 
 
 class Solution:
-    def killProcess(
-            self,
-            pid: List[int],
-            ppid: List[int],
-            kill: int) -> List[int]:
+    def killProcess(self, pid: List[int], ppid: List[int], kill: int) -> List[int]:
         G = defaultdict(list)
         for c, p in zip(pid, ppid):
             G[p].append(c)

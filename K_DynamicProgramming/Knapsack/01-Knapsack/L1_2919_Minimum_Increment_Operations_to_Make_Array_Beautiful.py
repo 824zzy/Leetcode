@@ -17,7 +17,9 @@ class Solution:
             # choose
             ans2 = max(k - A[i], 0) + dp(i + 1, 3)
             return min(ans1, ans2)
+
         return dp(0, 3)
+
 
 # solution without remaining size
 
@@ -32,4 +34,5 @@ class Solution:
             ans2 = max(k - A[i], 0) + dp(i + 2)
             ans3 = max(k - A[i], 0) + dp(i + 3)
             return min(ans1, ans2, ans3)
+
         return min(dp(0), dp(1), dp(2))

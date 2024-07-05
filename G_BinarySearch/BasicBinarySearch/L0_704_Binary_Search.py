@@ -17,6 +17,7 @@ class Solution:
                 l = m + 1
         return -1
 
+
 # bisect
 
 

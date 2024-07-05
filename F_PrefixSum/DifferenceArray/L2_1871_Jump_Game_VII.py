@@ -6,7 +6,7 @@ from header import *
 
 class Solution:
     def canReach(self, A: str, mn: int, mx: int) -> bool:
-        if A[-1] != '0':
+        if A[-1] != "0":
             return False
 
         diff = [0] * (len(A) + 1)
@@ -14,7 +14,7 @@ class Solution:
         diff[mn], diff[mx + 1] = 1, -1
         for i, x in enumerate(A):
             cnt += diff[i]
-            if x == '1' or cnt == 0:
+            if x == "1" or cnt == 0:
                 continue
             diff[min(i + mn, len(A))] += 1
             diff[min(i + mx + 1, len(A))] -= 1
@@ -30,7 +30,7 @@ class Solution:
                 return True
             ans = False
             for j in range(i + mn, min(i + mx + 1, len(A))):
-                if A[j] == '0':
+                if A[j] == "0":
                     ans |= dp(j)
             return ans
 

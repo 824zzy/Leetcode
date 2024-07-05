@@ -11,7 +11,7 @@ class Solution:
             e[i][j] = k
             e[j][i] = k
 
-        ans = (float('inf'), float('-inf'))
+        ans = (float("inf"), float("-inf"))
         for start in range(n):
             pq = [(-T, start)]
             seen = Counter()

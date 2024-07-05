@@ -16,7 +16,7 @@ class Solution:
 # prefix sum on the fly
 class Solution:
     def getAverages(self, A: List[int], k: int) -> List[int]:
-        sm = sum(A[:(2 * k)])
+        sm = sum(A[: (2 * k)])
         n = len(A)
         ans = [-1] * n
         for i in range(k, n - k):

@@ -17,4 +17,5 @@ class Solution:
                     ans += x
                     dis = max(dis, T[i])
             return ans + dis
-        return count('P') + count('G') + count('M')
+
+        return count("P") + count("G") + count("M")

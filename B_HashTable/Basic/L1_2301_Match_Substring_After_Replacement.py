@@ -6,8 +6,7 @@ The optimal solution should be O(n+m) by KMP, but I don't know how to customize 
 
 
 class Solution:
-    def matchReplacement(self, s: str, sub: str,
-                         mappings: List[List[str]]) -> bool:
+    def matchReplacement(self, s: str, sub: str, mappings: List[List[str]]) -> bool:
         mp = defaultdict(set)
         for v, k in mappings:
             mp[k].add(v)

@@ -5,10 +5,10 @@ count open parentheses
 
 class Solution:
     def removeOuterParentheses(self, s: str) -> str:
-        ans, op, tmp = '', 0, []
+        ans, op, tmp = "", 0, []
         for c in s:
             tmp.append(c)
-            if c == '(':
+            if c == "(":
                 op += 1
             else:
                 op -= 1
@@ -16,6 +16,7 @@ class Solution:
                     ans += "".join(tmp[1:-1])
                     tmp = []
         return ans
+
 
 # elegent solution from ye15
 

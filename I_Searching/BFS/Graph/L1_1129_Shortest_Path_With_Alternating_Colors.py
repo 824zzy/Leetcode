@@ -5,19 +5,18 @@ from header import *
 
 
 class Solution:
-    def shortestAlternatingPaths(self,
-                                 n: int,
-                                 redEdges: List[List[int]],
-                                 blueEdges: List[List[int]]) -> List[int]:
+    def shortestAlternatingPaths(
+        self, n: int, redEdges: List[List[int]], blueEdges: List[List[int]]
+    ) -> List[int]:
         G = defaultdict(list)
         for i, j in redEdges:
-            G[i].append((j, 'r'))
+            G[i].append((j, "r"))
         for i, j in blueEdges:
-            G[i].append((j, 'b'))
+            G[i].append((j, "b"))
 
         ans = [-1] * n
         Q = [(0, 0, None)]
-        seen = {(0, 'r'), (0, 'b')}
+        seen = {(0, "r"), (0, "b")}
         while Q:
             step, i, c1 = Q.pop(0)
             if ans[i] == -1:

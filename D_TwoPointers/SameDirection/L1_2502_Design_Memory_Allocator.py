@@ -15,7 +15,7 @@ class Allocator:
             else:
                 cnt += 1
                 if cnt == size:
-                    self.A[i - size + 1:i + 1] = [mID] * size
+                    self.A[i - size + 1 : i + 1] = [mID] * size
                     return i - size + 1
         return -1
 

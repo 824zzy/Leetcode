@@ -6,7 +6,7 @@ from header import *
 
 class Solution:
     def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:
-        A = list(range(m*n))
+        A = list(range(m * n))
 
         def find(x):
             if A[x] != x:
@@ -29,9 +29,9 @@ class Solution:
             G[x][y] = 1
             island += 1
             for dx, dy in (0, 1), (0, -1), (-1, 0), (1, 0):
-                if 0 <= x+dx < m and 0 <= y+dy < n and G[x+dx][y+dy] == 1:
-                    a = x*n+y
-                    b = (x+dx)*n+(y+dy)
+                if 0 <= x + dx < m and 0 <= y + dy < n and G[x + dx][y + dy] == 1:
+                    a = x * n + y
+                    b = (x + dx) * n + (y + dy)
                     if find(a) != find(b):
                         union(a, b)
                         island -= 1

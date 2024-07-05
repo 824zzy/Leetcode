@@ -16,7 +16,7 @@ class Solution:
                 r -= 1
             else:
                 # delete left
-                if s[l + 1:r + 1] == s[l + 1:r + 1][::-1]:
+                if s[l + 1 : r + 1] == s[l + 1 : r + 1][::-1]:
                     return True
                 # delete right
                 elif s[l:r] == s[l:r][::-1]:

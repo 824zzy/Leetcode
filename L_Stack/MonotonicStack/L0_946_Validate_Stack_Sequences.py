@@ -5,10 +5,7 @@ special monotonic stack compared with popped stack.
 
 
 class Solution:
-    def validateStackSequences(
-            self,
-            pushed: List[int],
-            popped: List[int]) -> bool:
+    def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
         stk = []
         for p in pushed:
             stk.append(p)

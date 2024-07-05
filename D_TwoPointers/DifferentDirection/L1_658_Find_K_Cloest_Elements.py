@@ -11,8 +11,9 @@ class Solution:
         l, r = idx - 1, idx
         L, R = [], []
         for _ in range(k):
-            if (l >= 0 and r < len(A) and abs(
-                    A[l] - x) <= abs(A[r] - x)) or r >= len(A):
+            if (l >= 0 and r < len(A) and abs(A[l] - x) <= abs(A[r] - x)) or r >= len(
+                A
+            ):
                 L.append(A[l])
                 l -= 1
             else:

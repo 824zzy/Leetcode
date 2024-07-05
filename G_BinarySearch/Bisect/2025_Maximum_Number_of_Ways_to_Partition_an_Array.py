@@ -25,10 +25,10 @@ class Solution:
             if target % 2 == 0:
                 target //= 2
                 cnt += bisect_left(loc[target], i)
-                cnt += len(loc[target - diff]) - \
-                    bisect_left(loc[target - diff], i)
+                cnt += len(loc[target - diff]) - bisect_left(loc[target - diff], i)
             ans = max(ans, cnt)
         return ans
+
 
 # TODO:
 # https://leetcode.com/problems/maximum-number-of-ways-to-partition-an-array/discuss/1499026/Short-Python-solution-Compute-prefix-sums%3A-O(n)
@@ -42,8 +42,9 @@ class Solution:
         if total_sum % 2 == 0:
             best = prefix_sums[:-1].count(total_sum // 2)  # If no change
 
-        after_counts = Counter(total_sum - 2 * prefix_sum
-                               for prefix_sum in prefix_sums[:-1])
+        after_counts = Counter(
+            total_sum - 2 * prefix_sum for prefix_sum in prefix_sums[:-1]
+        )
         before_counts = Counter()
 
         best = max(best, after_counts[k - nums[0]])  # If we change first num

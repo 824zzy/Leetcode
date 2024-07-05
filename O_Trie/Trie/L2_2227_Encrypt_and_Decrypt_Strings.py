@@ -13,7 +13,7 @@ class Trie:
             if c not in node:
                 node[c] = {}
             node = node[c]
-        node['#'] = word
+        node["#"] = word
 
     def search(self, word: str) -> bool:
         node = self.trie
@@ -21,15 +21,11 @@ class Trie:
             if c not in node:
                 return False
             node = node[c]
-        return '#' in node
+        return "#" in node
 
 
 class Encrypter:
-    def __init__(
-            self,
-            keys: List[str],
-            values: List[str],
-            dictionary: List[str]):
+    def __init__(self, keys: List[str], values: List[str], dictionary: List[str]):
         self.mp = {k: v for k, v in zip(keys, values)}
         self.mp2 = defaultdict(set)
         for k, v in zip(keys, values):
@@ -40,7 +36,7 @@ class Encrypter:
             self.T.insert(d)
 
     def encrypt(self, word1: str) -> str:
-        ans = ''
+        ans = ""
         for c in word1:
             ans += self.mp[c]
         return ans
@@ -51,10 +47,10 @@ class Encrypter:
 
         def dfs(i, node):
             if i == len(word2):
-                if '#' in node:
+                if "#" in node:
                     self.ans += 1
                     return
-            for c in self.mp2[word2[i:i + 2]]:
+            for c in self.mp2[word2[i : i + 2]]:
                 if c in node:
                     stk.append(c)
                     dfs(i + 2, node[c])

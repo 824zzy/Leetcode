@@ -16,6 +16,7 @@ class Solution:
                 A[l], A[r] = A[r], A[l]
         return A
 
+
 # Time: O(n), Space: O(n)
 
 

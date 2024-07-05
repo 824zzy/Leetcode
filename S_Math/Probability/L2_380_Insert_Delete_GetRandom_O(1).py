@@ -4,7 +4,6 @@ from header import *
 
 
 class RandomizedSet:
-
     def __init__(self):
         self.loc = {}  # val-to-index mapping
         self.vals = []

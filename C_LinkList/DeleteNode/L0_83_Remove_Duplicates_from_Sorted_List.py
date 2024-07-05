@@ -4,7 +4,7 @@
 
 class Solution(object):
     def deleteDuplicates(self, head):
-        ans = pre = ListNode(float('inf'))
+        ans = pre = ListNode(float("inf"))
         pre.next = curr = head
         while curr:
             if curr.val == pre.val:

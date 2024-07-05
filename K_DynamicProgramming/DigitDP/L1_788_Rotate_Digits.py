@@ -23,10 +23,11 @@ class Solution:
             hi = int(high[i]) if limit_high else 9
             for d in range(lo, hi + 1):
                 if d in (2, 5, 6, 9):
-                    ans += dfs(i + 1, limit_high and d ==
-                               int(high[i]), True, True)
+                    ans += dfs(i + 1, limit_high and d == int(high[i]), True, True)
                 if d in (0, 1, 8):
-                    ans += dfs(i + 1, limit_high and d ==
-                               int(high[i]), True, has_diff or False)
+                    ans += dfs(
+                        i + 1, limit_high and d == int(high[i]), True, has_diff or False
+                    )
             return ans
+
         return dfs(0, True, False, False)

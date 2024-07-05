@@ -7,8 +7,8 @@ from header import *
 
 class Solution:
     def countHomogenous(self, s: str) -> int:
-        MOD = 10**9 + 7
-        s += '*'
+        MOD = 10 ** 9 + 7
+        s += "*"
         ans = 0
         i = 0
         for j in range(len(s)):
@@ -21,6 +21,6 @@ class Solution:
 
 class Solution:
     def countHomogenous(self, s: str) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         A = [len(list(x)) for i, x in groupby(s)]
         return sum(x * (x + 1) // 2 for x in A) % MOD

@@ -10,9 +10,9 @@ class Solution:
         l, r = 0, len(A) - 1
         while l <= r:
             if abs(A[l]) > abs(A[r]):
-                ans.append(A[l]**2)
+                ans.append(A[l] ** 2)
                 l += 1
             else:
-                ans.append(A[r]**2)
+                ans.append(A[r] ** 2)
                 r -= 1
         return ans[::-1]

@@ -7,7 +7,7 @@ from header import *
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
         seen = Counter()
-        cur = ''
+        cur = ""
         for i in range(len(s)):
             cur += s[i]
             if i >= 9:
@@ -20,5 +20,5 @@ class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
         freq = defaultdict(int)
         for i in range(len(s) - 9):
-            freq[s[i:i + 10]] += 1
+            freq[s[i : i + 10]] += 1
         return [k for k, v in freq.items() if v > 1]

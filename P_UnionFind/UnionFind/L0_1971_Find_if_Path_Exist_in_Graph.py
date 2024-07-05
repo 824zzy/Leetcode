@@ -5,11 +5,9 @@ from header import *
 
 
 class Solution:
-    def validPath(self,
-                  n: int,
-                  edges: List[List[int]],
-                  source: int,
-                  destination: int) -> bool:
+    def validPath(
+        self, n: int, edges: List[List[int]], source: int, destination: int
+    ) -> bool:
         A = list(range(n))
 
         def find(x):

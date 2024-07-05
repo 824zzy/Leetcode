@@ -21,6 +21,7 @@ class Solution:
                 G[node.val].append(node.right.val)
                 G[node.right.val].append(node.val)
                 dfs(node.right)
+
         dfs(root)
 
         Q = [start]

@@ -47,6 +47,7 @@ class NumArray:
     def sumRange(self, left: int, right: int) -> int:
         return self.ST.rangeSum(left, right)
 
+
 # tree-based segment tree
 
 
@@ -110,8 +111,9 @@ class SegmentTree:
         elif lo > m:
             return self._sumQuery(node.right, lo, hi)
         else:
-            return self._sumQuery(node.left, lo, m) + \
-                self._sumQuery(node.right, m + 1, hi)
+            return self._sumQuery(node.left, lo, m) + self._sumQuery(
+                node.right, m + 1, hi
+            )
 
 
 class NumArray:

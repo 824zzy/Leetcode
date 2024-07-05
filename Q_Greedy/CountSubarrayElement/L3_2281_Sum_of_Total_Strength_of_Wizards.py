@@ -33,4 +33,4 @@ class Solution:
             rprefix = prefix[r] - prefix[i]
             ln, rn = i - l, r - i
             ans += A[i] * (rprefix * ln - lprefix * rn)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

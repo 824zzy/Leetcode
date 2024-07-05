@@ -11,5 +11,6 @@ class Solution:
                 diff += 1
             if diff > 2:
                 return False
-        return diff == 2 or sum(
-            [v for k, v in Counter(A).items()]) > len(Counter(A).items())
+        return diff == 2 or sum([v for k, v in Counter(A).items()]) > len(
+            Counter(A).items()
+        )

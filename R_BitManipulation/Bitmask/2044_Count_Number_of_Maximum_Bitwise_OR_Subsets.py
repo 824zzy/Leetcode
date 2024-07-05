@@ -18,6 +18,7 @@ class Solution:
                     dp[mask] = neib | nums[j]
         return dp.count(max(dp))
 
+
 # from ye15:
 # https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/discuss/1525225/Python3-top-down-dp
 
@@ -30,7 +31,7 @@ class Solution:
         def fn(i, mask):
             """Return number of subsets to get target."""
             if mask == target:
-                return 2**(len(nums) - i)
+                return 2 ** (len(nums) - i)
             if i == len(nums):
                 return 0
             return fn(i + 1, mask | nums[i]) + fn(i + 1, mask)

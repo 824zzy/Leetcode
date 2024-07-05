@@ -13,6 +13,6 @@ class Solution:
             if A[i] + A[j] > target:
                 j -= 1
             else:
-                ans += pow(2, j - i, 10**9 + 7)
+                ans += pow(2, j - i, 10 ** 9 + 7)
                 i += 1
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

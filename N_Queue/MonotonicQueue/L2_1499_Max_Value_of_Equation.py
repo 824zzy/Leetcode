@@ -19,6 +19,7 @@ class Solution:
             heappush(pq, (xj - yj, xj))
         return ans
 
+
 # deque implementation
 
 

@@ -7,7 +7,7 @@ from header import *
 
 
 class Solution:
-    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+    def copyRandomList(self, head: "Optional[Node]") -> "Optional[Node]":
         ans = node = Node(-1)
         orig = head
         seen = {}

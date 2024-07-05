@@ -45,7 +45,7 @@ class Solution:
             greater = st.query(x + 1, hi)
             ans += min(less, greater)
             st.update(x, 1)  # add
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)
 
 
 # Tree based segment tree implementation
@@ -90,8 +90,9 @@ class SegmentTree:
         elif m < lo:
             return self.rangeSum(node.right, lo, hi)
         else:
-            return self.rangeSum(node.left, lo, m) + \
-                self.rangeSum(node.right, m + 1, hi)
+            return self.rangeSum(node.left, lo, m) + self.rangeSum(
+                node.right, m + 1, hi
+            )
 
 
 class Solution:
@@ -104,4 +105,4 @@ class Solution:
             greater = st.rangeSum(st.root, x + 1, hi)
             ans += min(less, greater)
             st.update(st.root, x, 1)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

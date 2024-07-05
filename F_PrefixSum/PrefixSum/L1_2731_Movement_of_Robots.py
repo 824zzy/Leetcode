@@ -7,10 +7,10 @@ from header import *
 
 class Solution:
     def sumDistance(self, nums: List[int], s: str, d: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         A = []
         for x, c in zip(nums, s):
-            if c == 'R':
+            if c == "R":
                 x += d
             else:
                 x -= d
@@ -23,6 +23,7 @@ class Solution:
             presum += x
         return ans % MOD
 
+
 # Induction
 
 
@@ -31,7 +32,7 @@ class Solution:
         A = []
         n = len(nums)
         for x, c in zip(nums, s):
-            if c == 'R':
+            if c == "R":
                 x += d
             else:
                 x -= d
@@ -40,6 +41,6 @@ class Solution:
         ans = 0
         f = 2 if n & 1 else 1
         for i in range(n // 2 - 1, -1, -1):
-            ans += (A[~i] - A[i]) * f % (10**9 + 7)
+            ans += (A[~i] - A[i]) * f % (10 ** 9 + 7)
             f += 2
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

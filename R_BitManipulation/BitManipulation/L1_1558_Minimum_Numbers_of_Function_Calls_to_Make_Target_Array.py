@@ -22,4 +22,4 @@ class Solution:
             _inc, _mul = count(n)
             inc += _inc
             mul = max(mul, _mul)
-        return inc+mul
+        return inc + mul

@@ -17,8 +17,9 @@ class Solution:
             hs = hs * 2 + int(s[i])
             if i >= k - 1:
                 seen.add(hs)
-                hs -= int(s[i - (k - 1)]) * 2**(k - 1)
-        return len(seen) == 2**k
+                hs -= int(s[i - (k - 1)]) * 2 ** (k - 1)
+        return len(seen) == 2 ** k
+
 
 # brute force
 
@@ -32,4 +33,4 @@ class Solution:
             if i >= k - 1:
                 seen.add(tuple(A))
                 A.pop(0)
-        return len(seen) == 2**k
+        return len(seen) == 2 ** k

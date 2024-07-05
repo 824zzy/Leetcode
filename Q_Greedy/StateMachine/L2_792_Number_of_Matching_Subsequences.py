@@ -8,7 +8,7 @@ Time complexity: O(T), where T is the sum of word length
 class Solution:
     def numMatchingSubseq(self, s: str, words: List[str]) -> int:
         n = len(s)
-        s = '#' + s
+        s = "#" + s
         states = [[-1 for _ in range(26)] for _ in range(n + 1)]
         for i in reversed(range(1, n + 1)):
             for j in range(26):

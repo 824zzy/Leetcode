@@ -9,7 +9,8 @@ class Solution:
         releaseTimes = [0] + releaseTimes
         for i in range(len(keysPressed)):
             duration[keysPressed[i]] = max(
-                releaseTimes[i + 1] - releaseTimes[i], duration[keysPressed[i]])
+                releaseTimes[i + 1] - releaseTimes[i], duration[keysPressed[i]]
+            )
         mi = max(duration.values())
         cand = []
         for k, v in duration.items():

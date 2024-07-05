@@ -11,19 +11,20 @@ Reference:
 3. [Idea from this blog](https://michael.kim/blog/cellular-automaton)
 """
 from collections import defaultdict
+
 # use previous state mapping to easily build columns of bits
 PREVMAPPING = {
-    '1': {
-        ('1', '0'): [('0', '0')],
-        ('0', '1'): [('0', '0')],
-        ('0', '0'): [('1', '0'), ('0', '1')],
+    "1": {
+        ("1", "0"): [("0", "0")],
+        ("0", "1"): [("0", "0")],
+        ("0", "0"): [("1", "0"), ("0", "1")],
     },
-    '0': {
-        ('0', '1'): [('0', '1'), ('1', '1'), ('1', '0')],
-        ('1', '0'): [('1', '1'), ('1', '0'), ('0', '1')],
-        ('1', '1'): [('0', '0'), ('1', '0'), ('0', '1'), ('1', '1')],
-        ('0', '0'): [('0', '0'), ('1', '1')]
-    }
+    "0": {
+        ("0", "1"): [("0", "1"), ("1", "1"), ("1", "0")],
+        ("1", "0"): [("1", "1"), ("1", "0"), ("0", "1")],
+        ("1", "1"): [("0", "0"), ("1", "0"), ("0", "1"), ("1", "1")],
+        ("0", "0"): [("0", "0"), ("1", "1")],
+    },
 }
 
 
@@ -38,7 +39,7 @@ def solution(A):
             continue
         column2bits = []
         for c in col:
-            c = '1' if c else '0'
+            c = "1" if c else "0"
             # mapping the top cell in the column to bits
             if not column2bits:
                 prev_state = []
@@ -59,7 +60,7 @@ def solution(A):
         # convert column in bits to column in integers
         bit_column = defaultdict(list)
         for state in column2bits:
-            l, r = [int(''.join(x), 2) for x in zip(*state)]
+            l, r = [int("".join(x), 2) for x in zip(*state)]
             bit_column[r].append(l)
         columns2num[col] = bit_column
     print(columns2num)
@@ -86,8 +87,7 @@ def solution(A):
     return sum(nxt_col.values())
 
 
-ans = solution(
-    [[True, False, True], [False, True, False], [True, False, True]])
+ans = solution([[True, False, True], [False, True, False], [True, False, True]])
 print(ans)
 
 # ans = solution([[True, False, True, False, False, True, True, True], [True, False, True, False, False, False, True, False], [True, True, True, False, False, False, True, False], [True, False, True, False, False, False, True, False], [True, False, True, False, False, True, True, True]])

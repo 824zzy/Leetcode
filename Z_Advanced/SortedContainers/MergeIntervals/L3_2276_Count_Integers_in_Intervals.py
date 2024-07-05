@@ -6,7 +6,6 @@ from sortedcontainers import SortedList
 
 
 class CountIntervals:
-
     def __init__(self):
         self.cnt = 0
         self.A = SortedList()

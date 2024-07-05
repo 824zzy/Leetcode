@@ -11,7 +11,7 @@ class Solution:
     def maxFrequencyScore(self, A: List[int], k: int) -> int:
         ans = 0
         sm = 0
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         cnt = Counter()
         for i, x in enumerate(A):
             sm -= pow(x, cnt[x], mod) if cnt[x] else 0
@@ -21,8 +21,11 @@ class Solution:
                 ans = max(ans, sm % mod)
                 sm -= pow(A[i - k + 1], cnt[A[i - k + 1]], mod)
                 cnt[A[i - k + 1]] -= 1
-                sm += pow(A[i - k + 1], cnt[A[i - k + 1]],
-                          mod) if cnt[A[i - k + 1]] else 0
+                sm += (
+                    pow(A[i - k + 1], cnt[A[i - k + 1]], mod)
+                    if cnt[A[i - k + 1]]
+                    else 0
+                )
         return ans % mod
 
 

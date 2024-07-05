@@ -4,8 +4,8 @@
 
 class Solution:
     def strWithout3a3b(self, a: int, b: int) -> str:
-        ans = ''
-        pq = [[-a, 'a'], [-b, 'b']]
+        ans = ""
+        pq = [[-a, "a"], [-b, "b"]]
         heapify(pq)
         while pq:
             if len(pq) == 1:

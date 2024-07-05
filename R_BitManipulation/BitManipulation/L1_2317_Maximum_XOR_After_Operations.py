@@ -15,6 +15,7 @@ class Solution:
                 ans += 1 << i
         return ans
 
+
 # the above solution is essentially the same as the following:
 
 

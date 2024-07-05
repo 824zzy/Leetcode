@@ -15,6 +15,6 @@ class Solution:
     def isPrefixOfWord(self, A: str, p: str) -> int:
         for i, w in enumerate(A.split()):
             if len(w) >= len(p):
-                if w[:len(p)] == p:
+                if w[: len(p)] == p:
                     return i + 1
         return -1

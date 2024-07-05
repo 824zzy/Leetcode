@@ -13,4 +13,5 @@ class Solution:
             if l.val != r.val:
                 return False
             return dfs(l.left, r.right) and dfs(l.right, r.left)
+
         return dfs(root, root)

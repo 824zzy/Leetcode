@@ -21,7 +21,7 @@ class Solution:
             if i != suf[i] and A[i] != A[suf[i]]:
                 A[i], A[suf[i]] = A[suf[i]], A[i]
                 break
-        return int(''.join(A))
+        return int("".join(A))
 
 
 """

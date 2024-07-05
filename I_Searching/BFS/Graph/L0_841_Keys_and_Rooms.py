@@ -17,5 +17,6 @@ class Solution:
                 if j not in seen:
                     seen.add(j)
                     dfs(j)
+
         dfs(0)
         return len(seen) == len(rooms)

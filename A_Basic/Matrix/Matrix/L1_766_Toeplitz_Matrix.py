@@ -18,6 +18,7 @@ class Solution:
                 return False
         return True
 
+
 # check the Toeplitz property on the fly
 
 

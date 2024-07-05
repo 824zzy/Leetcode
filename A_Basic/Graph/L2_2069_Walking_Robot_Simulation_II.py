@@ -8,14 +8,10 @@ if num == 0 and self.pos == [0, 0] and self.dir == [1, 0]: self.dir = [0, -1]
 
 
 class Robot:
-
     def __init__(self, width: int, height: int):
         self.D = [(1, 0), (0, 1), (-1, 0), (0, -1)]
         self.d = 0
-        self.DIR = {0: 'East',
-                    1: 'North',
-                    2: 'West',
-                    3: 'South'}
+        self.DIR = {0: "East", 1: "North", 2: "West", 3: "South"}
         self.pos = [0, 0]
         self.w, self.h = width, height
 

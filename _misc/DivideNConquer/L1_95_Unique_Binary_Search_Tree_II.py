@@ -12,12 +12,13 @@ class Solution:
             ans = []
             for i, x in enumerate(A):
                 for l in dc(A[:i]):
-                    for r in dc(A[i + 1:]):
+                    for r in dc(A[i + 1 :]):
                         node = TreeNode(x)
                         node.left = l
                         node.right = r
                         ans.append(node)
             return ans
+
         return dc(list(range(1, n + 1)))
 
 

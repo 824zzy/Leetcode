@@ -16,10 +16,12 @@ class Solution:
             if (i, j) not in seen and 0 <= i < M and 0 <= j < N:
                 seen.add((i, j))
                 for dx, dy in D:
-                    if (dx == 0 and dy == 1 and A[i][j] == 1) or \
-                       (dx == 0 and dy == -1 and A[i][j] == 2) or \
-                       (dx == 1 and dy == 0 and A[i][j] == 3) or \
-                       (dx == -1 and dy == 0 and A[i][j] == 4):
+                    if (
+                        (dx == 0 and dy == 1 and A[i][j] == 1)
+                        or (dx == 0 and dy == -1 and A[i][j] == 2)
+                        or (dx == 1 and dy == 0 and A[i][j] == 3)
+                        or (dx == -1 and dy == 0 and A[i][j] == 4)
+                    ):
                         heapq.heappush(pq, (cost, (i + dx, j + dy)))
                     else:
                         heapq.heappush(pq, (cost + 1, (i + dx, j + dy)))

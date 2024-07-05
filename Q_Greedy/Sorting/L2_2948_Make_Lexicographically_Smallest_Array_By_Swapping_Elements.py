@@ -6,8 +6,7 @@ from header import *
 
 
 class Solution:
-    def lexicographicallySmallestArray(
-            self, A: List[int], limit: int) -> List[int]:
+    def lexicographicallySmallestArray(self, A: List[int], limit: int) -> List[int]:
         ans = A.copy()
         A = [(x, i) for i, x in enumerate(A)]
         A.append((inf, inf))

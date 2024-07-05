@@ -7,10 +7,7 @@ from header import *
 
 
 class Solution:
-    def kSmallestPairs(self,
-                       A: List[int],
-                       B: List[int],
-                       k: int) -> List[List[int]]:
+    def kSmallestPairs(self, A: List[int], B: List[int], k: int) -> List[List[int]]:
         m, n = len(A), len(B)
         ans = []
         pq = [[A[0] + B[j], 0, j] for j in range(n)]

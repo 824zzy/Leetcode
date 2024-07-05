@@ -6,11 +6,11 @@
 
 class Solution:
     def getSmallestString(self, n: int, k: int) -> str:
-        ans = ['a'] * n
+        ans = ["a"] * n
         k -= n
         while k:
             n -= 1
             val = min(25, k)
-            ans[n] = chr(ord('a') + val)
+            ans[n] = chr(ord("a") + val)
             k -= val
-        return ''.join(ans)
+        return "".join(ans)

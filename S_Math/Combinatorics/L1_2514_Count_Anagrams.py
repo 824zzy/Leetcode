@@ -14,4 +14,4 @@ class Solution:
             for c in cnt.values():
                 n //= factorial(c)
             ans *= n
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

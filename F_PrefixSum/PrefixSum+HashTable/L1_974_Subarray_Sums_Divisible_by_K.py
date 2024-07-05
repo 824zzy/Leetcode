@@ -20,6 +20,7 @@ class Solution:
             cnt[prefix] += 1
         return ans
 
+
 # offline solution
 
 

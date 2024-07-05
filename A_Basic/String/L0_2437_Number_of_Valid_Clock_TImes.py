@@ -7,14 +7,14 @@ class Solution:
     def countTime(self, T: str) -> int:
         H, M = T[:2], T[3:]
 
-        if H == '??':
+        if H == "??":
             h = 24
-        elif H[0] == '?':
+        elif H[0] == "?":
             if int(H[1]) < 4:
                 h = 3
             else:
                 h = 2
-        elif H[1] == '?':
+        elif H[1] == "?":
             if int(H[0]) < 2:
                 h = 10
             else:
@@ -22,11 +22,11 @@ class Solution:
         else:
             h = 1
 
-        if M == '??':
+        if M == "??":
             m = 60
-        elif M[0] == '?':
+        elif M[0] == "?":
             m = 6
-        elif M[1] == '?':
+        elif M[1] == "?":
             m = 10
         else:
             m = 1

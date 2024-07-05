@@ -20,4 +20,5 @@ class Solution:
                     v = G[i][j1] + G[i][j2] if j1 != j2 else G[i][j1]
                     ans = max(ans, v + dp(i + 1, j1 + d1, j2 + d2))
             return ans
+
         return dp(0, 0, n - 1)

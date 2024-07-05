@@ -15,12 +15,14 @@ class Solution:
             ans = 0
             for j in range(n):
                 for jj in range(j + 1, n):
-                    if j != jj and not mask & (
-                            1 << j) and not mask & (
-                            1 << jj):
-                        ans = max(ans, gcd(A[j], A[jj]) * i +
-                                  dp(i + 1, mask ^ (1 << j) ^ (1 << jj)))
+                    if j != jj and not mask & (1 << j) and not mask & (1 << jj):
+                        ans = max(
+                            ans,
+                            gcd(A[j], A[jj]) * i
+                            + dp(i + 1, mask ^ (1 << j) ^ (1 << jj)),
+                        )
             return ans
+
         return dp(1, 0)
 
 
@@ -33,8 +35,7 @@ class Solution:
                 return sum((i + 1) * c for i, c in enumerate(cands))
             ans = 0
             for i in range(1, len(A)):
-                ans = max(ans, dfs(A[1:i] + A[i + 1:],
-                          cands + [gcd(A[0], A[i])]))
+                ans = max(ans, dfs(A[1:i] + A[i + 1 :], cands + [gcd(A[0], A[i])]))
             return ans
 
         return dfs(A, [])

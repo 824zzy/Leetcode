@@ -5,7 +5,6 @@ steal from: https://leetcode.com/problems/design-a-stack-with-increment-operatio
 
 
 class CustomStack:
-
     def __init__(self, maxSize: int):
         self.size = maxSize
         self.stk = []

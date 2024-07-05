@@ -21,6 +21,7 @@ class Solution:
 
         return [dp(i) for i in range(n + 1)]
 
+
 # bottom up
 
 

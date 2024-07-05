@@ -22,4 +22,4 @@ class Solution:
         for x, y in zip(s1, s2):
             union(ord(x) - 97, ord(y) - 97)
 
-        return ''.join([chr(find(ord(c) - 97) + 97) for c in baseStr])
+        return "".join([chr(find(ord(c) - 97) + 97) for c in baseStr])

@@ -11,8 +11,7 @@ class Solution:
             dp[0][j] = A[0][j]
         for i in range(1, M):
             for j in range(N):
-                dp[i][j] = min(x for k, x in enumerate(
-                    dp[i - 1]) if k != j) + A[i][j]
+                dp[i][j] = min(x for k, x in enumerate(dp[i - 1]) if k != j) + A[i][j]
         return min(dp[-1])
 
 

@@ -18,8 +18,7 @@ class Solution:
             orig = mask
             while mask:
                 mask = orig & (mask - 1)
-                amt = sum(cookies[i]
-                          for i in range(n) if (orig ^ mask) & 1 << i)
+                amt = sum(cookies[i] for i in range(n) if (orig ^ mask) & 1 << i)
                 ans = min(ans, max(amt, fn(mask, k - 1)))
             return ans
 

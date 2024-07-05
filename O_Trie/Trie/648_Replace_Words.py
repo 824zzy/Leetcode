@@ -13,7 +13,7 @@ class Solution:
                 if c not in node:
                     node[c] = {}
                 node = node[c]
-            node['#'] = word
+            node["#"] = word
 
         def search(word):
             node = trie
@@ -21,8 +21,8 @@ class Solution:
                 if c not in node:
                     return False
                 node = node[c]
-                if '#' in node:
-                    return node['#']
+                if "#" in node:
+                    return node["#"]
 
         for d in D:
             insert(d)
@@ -32,4 +32,4 @@ class Solution:
                 ans.append(m)
             else:
                 ans.append(s)
-        return ' '.join(ans)
+        return " ".join(ans)

@@ -18,8 +18,7 @@ class MedianFinder:
         if len(self.L) % 2 != 0:
             return self.L[len(self.L) // 2]  # odd
         else:
-            return (self.L[len(self.L) // 2] +
-                    self.L[len(self.L) // 2 - 1]) / 2  # even
+            return (self.L[len(self.L) // 2] + self.L[len(self.L) // 2 - 1]) / 2  # even
 
 
 # sorted containers implementation

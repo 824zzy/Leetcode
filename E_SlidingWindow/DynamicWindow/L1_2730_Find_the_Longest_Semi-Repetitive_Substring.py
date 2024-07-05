@@ -20,6 +20,7 @@ class Solution:
             ans = max(ans, j - i + 1)
         return ans
 
+
 # brute force since 1 <= s.length <= 50
 
 

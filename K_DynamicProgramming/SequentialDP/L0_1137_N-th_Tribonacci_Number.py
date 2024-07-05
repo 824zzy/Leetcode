@@ -15,6 +15,7 @@ class Solution:
             elif n == 2:
                 return 1
             return dp(n - 1) + dp(n - 2) + dp(n - 3)
+
         return dp(n)
 
 

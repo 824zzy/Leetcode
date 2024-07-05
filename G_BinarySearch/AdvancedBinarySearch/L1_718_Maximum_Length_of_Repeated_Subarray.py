@@ -9,10 +9,10 @@ class Solution:
         def fn(m):
             seenA = set()
             for i in range(m, len(A) + 1):
-                seenA.add(tuple(A[i - m:i]))
+                seenA.add(tuple(A[i - m : i]))
             seenB = set()
             for i in range(m, len(B) + 1):
-                seenB.add(tuple(B[i - m:i]))
+                seenB.add(tuple(B[i - m : i]))
             return len(seenA & seenB) == 0
 
         l, r = 1, len(A) + 1

@@ -1,8 +1,13 @@
 # O(N)
 class Solution:
     def maximumProduct(self, nums: List[int]) -> int:
-        max1, max2, max3, min1, min2 = float(
-            '-inf'), float('-inf'), float('-inf'), float('inf'), float('inf')
+        max1, max2, max3, min1, min2 = (
+            float("-inf"),
+            float("-inf"),
+            float("-inf"),
+            float("inf"),
+            float("inf"),
+        )
         for n in nums:
             if n > max1:
                 max1, max2, max3 = n, max1, max2
@@ -17,6 +22,7 @@ class Solution:
                 min2 = n
 
         return max(max1 * max2 * max3, max1 * min1 * min2)
+
 
 # O(N*log(N))
 

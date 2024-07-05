@@ -14,23 +14,26 @@ class Solution:
 
         def bfs(x, y):
             Q = [[x, y]]
-            A[x][y] = '#'
+            A[x][y] = "#"
             while Q:
                 x, y = Q.pop(0)
                 for dx, dy in D:
-                    if 0 < x + dx < M - 1 and 0 < y + \
-                            dy < N - 1 and A[x + dx][y + dy] == 'O':
-                        A[x + dx][y + dy] = '#'
+                    if (
+                        0 < x + dx < M - 1
+                        and 0 < y + dy < N - 1
+                        and A[x + dx][y + dy] == "O"
+                    ):
+                        A[x + dx][y + dy] = "#"
                         Q.append([x + dx, y + dy])
 
         for i in range(M):
             for j in range(N):
-                if (i in [0, M - 1] or j in [0, N - 1]) and A[i][j] == 'O':
+                if (i in [0, M - 1] or j in [0, N - 1]) and A[i][j] == "O":
                     bfs(i, j)
 
         for i in range(M):
             for j in range(N):
-                if A[i][j] == 'O':
-                    A[i][j] = 'X'
-                if A[i][j] == '#':
-                    A[i][j] = 'O'
+                if A[i][j] == "O":
+                    A[i][j] = "X"
+                if A[i][j] == "#":
+                    A[i][j] = "O"

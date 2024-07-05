@@ -14,13 +14,13 @@ class Trie:
         for c in word:
             if c not in node:
                 node[c] = {}
-                node[c]['#'] = set()
-            node[c]['#'].add(word)
+                node[c]["#"] = set()
+            node[c]["#"].add(word)
             node = node[c]
-        if '#' not in node:
-            node['#'] = set([word])
+        if "#" not in node:
+            node["#"] = set([word])
         else:
-            node['#'].add(word)
+            node["#"].add(word)
 
     def search(self, word):
         node = self.trie
@@ -28,10 +28,10 @@ class Trie:
             if c not in node:
                 return []
             node = node[c]
-        if len(node['#']) >= 3:
-            return sorted(node['#'])[:3]
+        if len(node["#"]) >= 3:
+            return sorted(node["#"])[:3]
         else:
-            return sorted(node['#'])
+            return sorted(node["#"])
 
 
 class Solution:
@@ -42,5 +42,5 @@ class Solution:
 
         ans = []
         for i in range(len(s)):
-            ans.append(T.search(s[:i + 1]))
+            ans.append(T.search(s[: i + 1]))
         return ans

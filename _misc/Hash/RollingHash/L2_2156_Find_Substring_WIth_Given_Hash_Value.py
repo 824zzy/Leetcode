@@ -9,14 +9,9 @@ then we add one previous backward and drop the last characters.
 
 
 class Solution:
-    def subStrHash(
-            self,
-            s: str,
-            p: int,
-            m: int,
-            k: int,
-            hashValue: int) -> str:
-        def val(c): return ord(c) - ord('a') + 1
+    def subStrHash(self, s: str, p: int, m: int, k: int, hashValue: int) -> str:
+        def val(c):
+            return ord(c) - ord("a") + 1
 
         ans = n = len(s)
         pk = pow(p, k, m)
@@ -28,4 +23,4 @@ class Solution:
                 cur = (cur - val(s[i + k]) * pk) % m
             if cur == hashValue:
                 ans = i
-        return s[ans:ans + k]
+        return s[ans : ans + k]

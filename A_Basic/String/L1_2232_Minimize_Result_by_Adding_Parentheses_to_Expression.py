@@ -5,9 +5,9 @@ brute force generate valid expressions and find the minimum
 
 class Solution:
     def minimizeResult(self, expression: str) -> str:
-        A, B = expression.split('+')
+        A, B = expression.split("+")
         ans = eval(expression)
-        res = '(' + expression + ')'
+        res = "(" + expression + ")"
         for i in range(len(A)):
             for j in range(1, len(B) + 1):
                 fl = int(A[:i]) if A[:i] else 1
@@ -17,5 +17,5 @@ class Solution:
                 tmp = fl * (xl + xr) * fr
                 if tmp < ans:
                     ans = tmp
-                    res = A[:i] + '(' + str(xl) + "+" + str(xr) + ')' + B[j:]
+                    res = A[:i] + "(" + str(xl) + "+" + str(xr) + ")" + B[j:]
         return res

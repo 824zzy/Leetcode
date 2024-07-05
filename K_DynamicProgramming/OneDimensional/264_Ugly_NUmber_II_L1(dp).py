@@ -13,6 +13,7 @@ class Solution:
                 heapq.heappush(N, i * m)
         return m
 
+
 # Dynamic Programming
 
 

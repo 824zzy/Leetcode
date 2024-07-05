@@ -11,8 +11,9 @@ class SparseVector:
         self.A = nums
 
     # Return the dotProduct of two sparse vectors
-    def dotProduct(self, vec: 'SparseVector') -> int:
+    def dotProduct(self, vec: "SparseVector") -> int:
         return sum(x * y for x, y in zip(self.A, vec.A))
+
 
 # hash table for spare storage
 
@@ -22,12 +23,13 @@ class SparseVector:
         self.mp = {i: x for i, x in enumerate(nums)}
 
     # Return the dotProduct of two sparse vectors
-    def dotProduct(self, vec: 'SparseVector') -> int:
+    def dotProduct(self, vec: "SparseVector") -> int:
         ans = 0
         for k, v in self.mp.items():
             if k in vec.mp:
                 ans += v * vec.mp[k]
         return ans
+
 
 # two pointer to reduce the time complexity
 
@@ -37,7 +39,7 @@ class SparseVector:
         self.A = tuple((i, x) for i, x in enumerate(nums) if x)
 
     # Return the dotProduct of two sparse vectors
-    def dotProduct(self, vec: 'SparseVector') -> int:
+    def dotProduct(self, vec: "SparseVector") -> int:
         i = 0
         ans = 0
         for j in range(len(vec.A)):
@@ -47,6 +49,7 @@ class SparseVector:
                 ans += self.A[i][1] * vec.A[j][1]
         return ans
 
+
 # binary search when one array is not sparse
 
 
@@ -55,7 +58,7 @@ class SparseVector:
         self.A = tuple((i, x) for i, x in enumerate(nums) if x)
 
     # Return the dotProduct of two sparse vectors
-    def dotProduct(self, vec: 'SparseVector') -> int:
+    def dotProduct(self, vec: "SparseVector") -> int:
         ans = 0
         for i in range(len(vec.A)):
             j = bisect_left(self.A, (vec.A[i][0], -inf))

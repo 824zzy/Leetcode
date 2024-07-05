@@ -15,6 +15,7 @@ class Solution:
                 return 0
             ans = -inf
             for j in range(1, 2 * M + 1):
-                ans = max(ans, sum(A[i:i + j]) - dp(i + j, max(M, j)))
+                ans = max(ans, sum(A[i : i + j]) - dp(i + j, max(M, j)))
             return ans
+
         return (dp(0, 1) + sum(A)) // 2

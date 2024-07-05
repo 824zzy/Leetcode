@@ -18,6 +18,5 @@ class Solution:
         ans = 0
         for i in range(26):
             for k in range(1, len(locs[i]) - 1):
-                ans += (locs[i][k] - locs[i][k - 1]) * \
-                    (locs[i][k + 1] - locs[i][k])
+                ans += (locs[i][k] - locs[i][k - 1]) * (locs[i][k + 1] - locs[i][k])
         return ans

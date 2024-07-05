@@ -12,6 +12,10 @@ class Solution:
                 if G[x][y] == 1:
                     ans += 4
                     for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
-                        if 0 <= x+dx < len(G) and 0 <= y+dy < len(G[0]) and G[x+dx][y+dy]:
+                        if (
+                            0 <= x + dx < len(G)
+                            and 0 <= y + dy < len(G[0])
+                            and G[x + dx][y + dy]
+                        ):
                             ans -= 1
         return ans

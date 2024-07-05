@@ -23,8 +23,8 @@ class Solution:
         @cache
         def dp(mask, i):
             if mask == (1 << N) - 1:
-                return ''
-            ans = '0' * 240
+                return ""
+            ans = "0" * 240
             for j in range(len(A)):
                 if not mask & (1 << j):
                     ans = min(ans, G[i][j] + dp(mask ^ (1 << j), j), key=len)

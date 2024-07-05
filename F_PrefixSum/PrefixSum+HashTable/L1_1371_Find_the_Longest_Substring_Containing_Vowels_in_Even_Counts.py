@@ -9,7 +9,7 @@ from header import *
 
 class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
-        mp = {'a': 0, 'e': 1, 'i': 2, 'o': 3, 'u': 4}
+        mp = {"a": 0, "e": 1, "i": 2, "o": 3, "u": 4}
         cnt = Counter()
         cnt[0] = -1
         ans = pre = 0

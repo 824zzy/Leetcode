@@ -30,4 +30,4 @@ class Solution:
         for i, x in enumerate(A):
             ans += min(bit.sum(x - 1), i - bit.sum(x))
             bit.add(x, 1)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

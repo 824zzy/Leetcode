@@ -5,24 +5,19 @@
 
 
 class Solution:
-    def getIntersectionNode(
-            self,
-            headA: ListNode,
-            headB: ListNode) -> ListNode:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         nodeA, nodeB = headA, headB
         while nodeA != nodeB:
             nodeA = nodeA.next if nodeA else headB
             nodeB = nodeB.next if nodeB else headA
         return nodeA
 
+
 # straight-forward solution
 
 
 class Solution:
-    def getIntersectionNode(
-            self,
-            A: ListNode,
-            B: ListNode) -> Optional[ListNode]:
+    def getIntersectionNode(self, A: ListNode, B: ListNode) -> Optional[ListNode]:
         la, lb = 0, 0
         tmpa, tmpb = A, B
         while tmpa:
@@ -35,7 +30,7 @@ class Solution:
         if lb > la:
             A, B = B, A
             lb, la = la, lb
-        d = (la - lb)
+        d = la - lb
         for _ in range(d):
             A = A.next
 

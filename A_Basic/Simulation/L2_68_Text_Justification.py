@@ -9,29 +9,29 @@ class Solution:
         def process(line):
             words = line.split()
             if len(words) == 1:
-                return words[0] + ' ' * (maxWidth - len(words[0]))
+                return words[0] + " " * (maxWidth - len(words[0]))
             ans = [words[0]]
             for i in range(1, len(words)):
-                ans.append('')
+                ans.append("")
                 ans.append(words[i])
             width = maxWidth - sum(len(w) for w in words)
             i = 0
             while width > 0:
                 if i & 1:
-                    ans[i % (len(ans) - 1)] += ' '
+                    ans[i % (len(ans) - 1)] += " "
                     width -= 1
                 i += 1
-            return ''.join(ans)
+            return "".join(ans)
 
         def process_last(line):
-            return line + ' ' * (maxWidth - len(line))
+            return line + " " * (maxWidth - len(line))
 
         ans = []
         line = words[0]
         for i in range(1, len(words)):
             w = words[i]
             if len(line) + len(w) + 1 <= maxWidth:
-                line += ' ' + w
+                line += " " + w
             else:
                 ans.append(process(line))
                 line = w

@@ -17,7 +17,7 @@ class Solution:
         for i in range(M):
             for j in range(N):
                 ans = max(ans, dfs(i, j))
-        return ans**2
+        return ans ** 2
 
 
 class Solution:
@@ -31,8 +31,7 @@ class Solution:
                 if i == 0 or j == 0:
                     dp[i][j] = int(A[i][j])
                 else:
-                    if A[i][j] == '1':
-                        dp[i][j] = min(dp[i - 1][j], dp[i - 1]
-                                       [j - 1], dp[i][j - 1]) + 1
+                    if A[i][j] == "1":
+                        dp[i][j] = min(dp[i - 1][j], dp[i - 1][j - 1], dp[i][j - 1]) + 1
                 ma = max(ma, dp[i][j])
         return ma * ma

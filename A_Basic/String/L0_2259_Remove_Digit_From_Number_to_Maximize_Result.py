@@ -8,5 +8,5 @@ class Solution:
         ans = []
         for i, c in enumerate(A):
             if c == d:
-                ans.append(A[:i] + A[i + 1:])
+                ans.append(A[:i] + A[i + 1 :])
         return max(ans)

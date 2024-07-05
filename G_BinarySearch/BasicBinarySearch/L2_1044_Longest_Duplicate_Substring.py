@@ -5,8 +5,8 @@ The same as L1_1062_Longest_Repeating_Substring.py
 
 class Solution:
     def longestDupSubstring(self, A: str) -> str:
-        A += '*'
-        self.ans = ''
+        A += "*"
+        self.ans = ""
 
         def fn(x):
             seen = set()
@@ -28,4 +28,4 @@ class Solution:
                 r = m
             else:
                 l = m + 1
-        return ''.join(self.ans)
+        return "".join(self.ans)

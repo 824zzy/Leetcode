@@ -20,4 +20,4 @@ class Solution:
                 if cnt[A[i]] == 0:
                     cnt.pop(A[i])
                 i += 1
-        return A[ans[0]:ans[1] + 1] if ans != (0, len(A) + 1) else ''
+        return A[ans[0] : ans[1] + 1] if ans != (0, len(A) + 1) else ""

@@ -13,8 +13,7 @@ class Solution:
                 return inf
             if i == len(A) - 1:
                 return A[i][j]
-            return A[i][j] + min(dp(i + 1, j - 1),
-                                 dp(i + 1, j), dp(i + 1, j + 1))
+            return A[i][j] + min(dp(i + 1, j - 1), dp(i + 1, j), dp(i + 1, j + 1))
 
         return min(dp(0, j) for j in range(len(A[0])))
 

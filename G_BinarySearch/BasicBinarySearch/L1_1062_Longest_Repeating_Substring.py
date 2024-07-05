@@ -8,7 +8,7 @@ Note: don't use tuple to store the substring.
 
 class Solution:
     def longestRepeatingSubstring(self, A: str) -> int:
-        A += '*'
+        A += "*"
 
         def fn(x):
             seen = set()
@@ -38,7 +38,7 @@ class Solution:
         seen = set()
         ans = 0
         for i in range(len(A)):
-            t = ''
+            t = ""
             for j in range(i, len(A)):
                 t += A[j]
                 if t in seen:

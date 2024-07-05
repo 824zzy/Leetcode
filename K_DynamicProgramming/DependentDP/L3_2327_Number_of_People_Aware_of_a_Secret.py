@@ -21,7 +21,7 @@ class Solution:
                 ans += dp(j)
             return ans
 
-        return dp(1) % (10**9 + 7)
+        return dp(1) % (10 ** 9 + 7)
 
 
 """ 6 2 4

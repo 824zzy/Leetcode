@@ -4,9 +4,9 @@ class Solution:
         start = 0
         stk = []
         for i, c in enumerate(s):
-            if c == '(':
+            if c == "(":
                 stk.append(i)
-            elif c == ')':
+            elif c == ")":
                 if not stk:
                     start = i + 1
                 else:

@@ -13,7 +13,7 @@ class Solution:
 
 class Solution:
     def getDecimalValue(self, head: ListNode) -> int:
-        s = ''
+        s = ""
         while head:
             s += str(head.val)
             head = head.next

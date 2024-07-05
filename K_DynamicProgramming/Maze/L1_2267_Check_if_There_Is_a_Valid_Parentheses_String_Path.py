@@ -5,7 +5,7 @@ count close parenthese at every dp state
 
 class Solution:
     def hasValidPath(self, A: List[List[str]]) -> bool:
-        if A[0][0] == ')' and A[-1][-1] == '(':
+        if A[0][0] == ")" and A[-1][-1] == "(":
             return False
 
         @cache
@@ -16,7 +16,7 @@ class Solution:
                 return cl == 1
 
             ans = False
-            if A[i][j] == '(':
+            if A[i][j] == "(":
                 ans |= dp(i + 1, j, cl + 1)
                 ans |= dp(i, j + 1, cl + 1)
             elif cl - 1 >= 0:

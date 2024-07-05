@@ -11,8 +11,9 @@ class Solution:
         A = [0] + A + [A[-1] + 1]
         ans = []
         for i in range(len(A) - 1):
-            ans.append('Push')
+            ans.append("Push")
             if A[i + 1] - A[i] != 1:
-                ans.extend(['Push'] * (A[i + 1] - A[i] - 1) +
-                           ['Pop'] * (A[i + 1] - A[i] - 1))
+                ans.extend(
+                    ["Push"] * (A[i + 1] - A[i] - 1) + ["Pop"] * (A[i + 1] - A[i] - 1)
+                )
         return ans[1:]

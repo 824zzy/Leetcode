@@ -5,11 +5,9 @@ from header import *
 
 
 class Solution:
-    def minimumDistance(self,
-                        n: int,
-                        edges: List[List[int]],
-                        src: int,
-                        marked: List[int]) -> int:
+    def minimumDistance(
+        self, n: int, edges: List[List[int]], src: int, marked: List[int]
+    ) -> int:
         G = defaultdict(list)
         for u, v, w in edges:
             G[u].append((v, w))

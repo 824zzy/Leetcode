@@ -5,7 +5,7 @@
 
 
 class Solution:
-    def connect(self, root: 'Node') -> 'Node':
+    def connect(self, root: "Node") -> "Node":
         T = defaultdict(list)
 
         def dfs(node, i):

@@ -14,6 +14,7 @@ class Solution:
                 x //= 2
         return ans
 
+
 # or simulation by bit manipulation
 
 

@@ -16,6 +16,7 @@ class Solution:
                 vals[k] = A[i][1]
         return len(vals)
 
+
 # DP(N^2) will TLE
 
 

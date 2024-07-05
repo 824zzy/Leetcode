@@ -13,10 +13,10 @@ class Solution:
             while S[i] == 0:
                 i += 1
             S[0], S[i] = S[i], S[0]
-            return int(''.join(list(map(str, S))))
+            return int("".join(list(map(str, S))))
         else:
             S.sort(reverse=True)
-            return -1 * int(''.join(list(map(str, S))))
+            return -1 * int("".join(list(map(str, S))))
 
 
 """

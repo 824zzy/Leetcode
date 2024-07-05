@@ -7,11 +7,11 @@ class Solution:
     def calPoints(self, ops: List[str]) -> int:
         stk = []
         for op in ops:
-            if op == 'C':
+            if op == "C":
                 stk.pop()
-            elif op == 'D':
+            elif op == "D":
                 stk.append(stk[-1] * 2)
-            elif op == '+':
+            elif op == "+":
                 stk.append(stk[-1] + stk[-2])
             else:
                 stk.append(int(op))

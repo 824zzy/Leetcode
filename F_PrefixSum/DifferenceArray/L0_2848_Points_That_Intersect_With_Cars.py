@@ -16,7 +16,7 @@ class Solution:
         ans = 0
         for i in range(1, n + 1):
             cnt += diff[i]
-            ans += (cnt > 0)
+            ans += cnt > 0
         return ans
 
 

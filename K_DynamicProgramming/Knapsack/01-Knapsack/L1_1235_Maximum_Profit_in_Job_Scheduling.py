@@ -8,10 +8,8 @@ from header import *
 
 class Solution:
     def jobScheduling(
-            self,
-            startTime: List[int],
-            endTime: List[int],
-            profit: List[int]) -> int:
+        self, startTime: List[int], endTime: List[int], profit: List[int]
+    ) -> int:
         A = sorted([(x, y, z) for x, y, z in zip(startTime, endTime, profit)])
 
         @cache

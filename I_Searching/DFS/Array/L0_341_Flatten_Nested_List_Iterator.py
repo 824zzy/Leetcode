@@ -13,6 +13,7 @@ class NestedIterator:
                     self.A.append(n.getInteger())
                 else:
                     dfs(n.getList())
+
         dfs(A)
 
     def next(self) -> int:

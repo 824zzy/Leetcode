@@ -12,18 +12,24 @@ class Solution:
         prefix = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
         for i in range(m):
             for j in range(n):
-                prefix[i + 1][j + 1] = A[i][j] + prefix[i][j + 1] + \
-                    prefix[i + 1][j] - prefix[i][j]
+                prefix[i + 1][j + 1] = (
+                    A[i][j] + prefix[i][j + 1] + prefix[i + 1][j] - prefix[i][j]
+                )
 
         for i in range(m):
             for j in range(n):
                 x1, y1 = max(0, i - 1), max(0, j - 1)
                 x2, y2 = min(m - 1, i + 1), min(n - 1, j + 1)
                 cnt = (x2 - x1 + 1) * (y2 - y1 + 1)
-                sm = prefix[x2 + 1][y2 + 1] - prefix[x1][y2 + 1] - \
-                    prefix[x2 + 1][y1] + prefix[x1][y1]
+                sm = (
+                    prefix[x2 + 1][y2 + 1]
+                    - prefix[x1][y2 + 1]
+                    - prefix[x2 + 1][y1]
+                    + prefix[x1][y1]
+                )
                 A[i][j] = sm // cnt
         return A
+
 
 # simulation
 

@@ -10,7 +10,7 @@ class Solution:
         for row in A:
             seen = [False] * 10
             for x in row:
-                if x == '.':
+                if x == ".":
                     continue
                 x = int(x)
                 if seen[x]:
@@ -21,7 +21,7 @@ class Solution:
         for col in zip(*A):
             seen = [False] * 10
             for x in col:
-                if x == '.':
+                if x == ".":
                     continue
                 x = int(x)
                 if seen[x]:
@@ -32,13 +32,11 @@ class Solution:
         for i in range(0, 9, 3):
             for j in range(0, 9, 3):
                 vals = [
-                    A[ii][jj] for ii in range(
-                        i,
-                        i +
-                        3) for jj in range(
-                        j,
-                        j +
-                        3) if A[ii][jj] != '.']
+                    A[ii][jj]
+                    for ii in range(i, i + 3)
+                    for jj in range(j, j + 3)
+                    if A[ii][jj] != "."
+                ]
                 if len(vals) != len(set(vals)):
                     return False
         return True

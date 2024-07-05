@@ -22,12 +22,13 @@ class Solution:
 
         return ans
 
+
 # or use sliding window to ensure the minimum of seen is less or equal than k
 
 
 class Solution:
     def maxConsecutiveAnswers(self, A: str, k: int) -> int:
-        A = [0 if c == 'T' else 1 for c in A]
+        A = [0 if c == "T" else 1 for c in A]
         seen = [0, 0]
         i = 0
         ans = 0

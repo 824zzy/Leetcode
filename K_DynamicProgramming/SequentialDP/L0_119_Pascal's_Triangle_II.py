@@ -25,6 +25,7 @@ class Solution:
             dp.append(row)
         return dp[-1]
 
+
 # top down solution
 
 
@@ -37,6 +38,6 @@ class Solution:
             elif i == 1:
                 return [1, 1]
             prev = dp(i - 1)
-            return [1] + [prev[j] + prev[j + 1]
-                          for j in range(len(prev) - 1)] + [1]
+            return [1] + [prev[j] + prev[j + 1] for j in range(len(prev) - 1)] + [1]
+
         return dp(n)

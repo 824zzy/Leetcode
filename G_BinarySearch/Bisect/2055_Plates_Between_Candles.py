@@ -6,12 +6,11 @@ find candles by binary search.
 
 
 class Solution:
-    def platesBetweenCandles(
-            self, s: str, queries: List[List[int]]) -> List[int]:
+    def platesBetweenCandles(self, s: str, queries: List[List[int]]) -> List[int]:
         P = [0]
         C = []
         for i, c in enumerate(s):
-            if c == '|':
+            if c == "|":
                 C.append(i)
                 P.append(P[-1])
             else:

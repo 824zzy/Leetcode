@@ -16,7 +16,7 @@ class Trie:
             if c not in node:
                 node[c] = {}
             node = node[c]
-        node['#'] = int(word, 2)
+        node["#"] = int(word, 2)
 
 
 class Solution:
@@ -33,5 +33,5 @@ class Solution:
             for c in map(int, bin(x)[2:].zfill(32)):
                 # find opposite bit
                 node = node.get(1 - c) or node.get(c)
-            ans = max(ans, x ^ node['#'])
+            ans = max(ans, x ^ node["#"])
         return ans

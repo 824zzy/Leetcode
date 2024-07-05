@@ -8,7 +8,7 @@ Everytime we select top two frequent characters to fill the string, then update 
 class Solution:
     def reorganizeString(self, s: str) -> str:
         cnt = Counter(s)
-        ans = ''
+        ans = ""
         pq = [(-v, k) for k, v in cnt.items()]
         heapify(pq)
 
@@ -21,7 +21,7 @@ class Solution:
                 if v + 1 < 0:
                     tmp.append([v + 1, k])
             if stride == 1 and tmp:
-                return ''
+                return ""
             for v, k in tmp:
                 heappush(pq, (v, k))
         return ans

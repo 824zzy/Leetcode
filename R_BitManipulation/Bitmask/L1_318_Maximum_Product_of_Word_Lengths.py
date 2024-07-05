@@ -9,7 +9,7 @@ class Solution:
         for w in A:
             mask = 0
             for c in w:
-                mask |= 1 << (ord(c) - ord('a'))
+                mask |= 1 << (ord(c) - ord("a"))
             S[mask] = max(S[mask], len(w))
 
         ans = 0

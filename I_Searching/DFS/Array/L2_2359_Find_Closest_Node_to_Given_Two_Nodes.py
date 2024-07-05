@@ -14,6 +14,7 @@ class Solution:
             if node != -1 and seen[node] == -1:
                 seen[node] = d
                 dfs(E[node], d + 1, seen)
+
         dfs(n1, 0, seen1)
         dfs(n2, 0, seen2)
 

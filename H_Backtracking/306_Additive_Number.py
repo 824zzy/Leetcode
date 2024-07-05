@@ -12,9 +12,9 @@ class Solution:
             if i == len(A) and len(self.stk) >= 3:
                 return True
             for j in range(i, len(A)):
-                if A[i] == '0' and i != j:
+                if A[i] == "0" and i != j:
                     break
-                n = int(A[i:j + 1])
+                n = int(A[i : j + 1])
                 if len(self.stk) >= 2 and self.stk[-2] + self.stk[-1] < n:
                     break
                 if len(self.stk) <= 1 or self.stk[-2] + self.stk[-1] == n:

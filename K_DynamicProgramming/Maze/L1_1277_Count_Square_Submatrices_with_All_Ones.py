@@ -11,10 +11,10 @@ class Solution:
         for i in range(len(A)):
             for j in range(len(A[0])):
                 if i and j and A[i][j]:
-                    A[i][j] = min(A[i][j - 1], A[i - 1]
-                                  [j], A[i - 1][j - 1]) + 1
+                    A[i][j] = min(A[i][j - 1], A[i - 1][j], A[i - 1][j - 1]) + 1
                 ans += A[i][j]
         return ans
+
 
 # top down solution
 

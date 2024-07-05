@@ -12,13 +12,13 @@ class Solution:
         for x in range(1, n + 1):
             if not x & x - 1:
                 k += 1
-            ans = ((ans << k) + x) % (10**9 + 7)
+            ans = ((ans << k) + x) % (10 ** 9 + 7)
         return ans
 
 
 class Solution:
     def concatenatedBinary(self, n: int) -> int:
-        s = ''
+        s = ""
         for i in range(1, n + 1):
-            s += bin(i)[2:] % (10**9 + 7)
+            s += bin(i)[2:] % (10 ** 9 + 7)
         return int(s, 2)

@@ -34,7 +34,7 @@ class Solution:
             seen = set()
             for i in range(len(A)):
                 if mask & 1 << i:
-                    if A[i]-k in seen:
+                    if A[i] - k in seen:
                         break
                     seen.add(A[i])
             else:

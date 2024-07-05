@@ -15,7 +15,7 @@ class Solution:
         for row in seats:
             mask = 0
             for i, c in enumerate(row):
-                if c == '.':
+                if c == ".":
                     mask |= 1 << i
             A.append(mask)
 
@@ -32,12 +32,14 @@ class Solution:
                 return 0
             ans = dp(i + 1, 0)
             for x in range(1 << len(seats[0])):
-                if x & A[i] == x and (
-                        x << 1) & x == 0 and (
-                        x >> 1) & x == 0 and (
-                        mask >> 1) & x == 0 and (
-                        mask << 1) & x == 0:
-                    ans = max(ans, bin(x).count('1') + dp(i + 1, x))
+                if (
+                    x & A[i] == x
+                    and (x << 1) & x == 0
+                    and (x >> 1) & x == 0
+                    and (mask >> 1) & x == 0
+                    and (mask << 1) & x == 0
+                ):
+                    ans = max(ans, bin(x).count("1") + dp(i + 1, x))
             return ans
 
         return dp(0, 0)

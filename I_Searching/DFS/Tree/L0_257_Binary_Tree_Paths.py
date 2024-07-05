@@ -11,8 +11,8 @@ class Solution:
                 return
             if not node.left and not node.right:
                 return ans.append(path + str(node.val))
-            dfs(node.left, path + str(node.val) + '->')
-            dfs(node.right, path + str(node.val) + '->')
+            dfs(node.left, path + str(node.val) + "->")
+            dfs(node.right, path + str(node.val) + "->")
 
-        dfs(root, '')
+        dfs(root, "")
         return ans

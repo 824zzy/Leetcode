@@ -15,7 +15,7 @@ class Solution:
 
         for i in range(len(s)):
             for j in range(i, len(s)):
-                if len(s[i:j + 1]) > len(ans):
-                    if check(s[i:j + 1]):
-                        ans = s[i:j + 1]
+                if len(s[i : j + 1]) > len(ans):
+                    if check(s[i : j + 1]):
+                        ans = s[i : j + 1]
         return ans

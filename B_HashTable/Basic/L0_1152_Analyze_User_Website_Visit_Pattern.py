@@ -6,10 +6,8 @@ from header import *
 
 class Solution:
     def mostVisitedPattern(
-            self,
-            username: List[str],
-            timestamp: List[int],
-            website: List[str]) -> List[str]:
+        self, username: List[str], timestamp: List[int], website: List[str]
+    ) -> List[str]:
         cnt = defaultdict(list)
         for u, t, w in zip(username, timestamp, website):
             cnt[u].append((t, w))

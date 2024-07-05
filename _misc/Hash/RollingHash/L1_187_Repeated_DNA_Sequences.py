@@ -15,17 +15,17 @@ class Solution:
             hs = 4 * hs + mp[s[i]]
             if i >= 9:
                 if hs in seen:
-                    ans.add(s[i - 9:i + 1])
+                    ans.add(s[i - 9 : i + 1])
                 seen.add(hs)
                 # update rolling hash: hs -= mpval * mpSize ** (seqSize-1)
-                hs -= mp[s[i - 9]] * 4**9
+                hs -= mp[s[i - 9]] * 4 ** 9
         return ans
 
 
 class RabinKarp:
     def __init__(self, s):
         """Calculate rolling hash of s"""
-        self.m = 10**9 + 7
+        self.m = 10 ** 9 + 7
         self.pow = [1]
         self.roll = [0]  # rolling hash
         self.mp = dict(zip("ACGT", range(4)))
@@ -48,6 +48,6 @@ class Solution:
         for i in range(10, len(rks.roll)):
             hs = rks.query(i - 10, i)
             if hs in seen:
-                ans.add(s[i - 10:i])
+                ans.add(s[i - 10 : i])
             seen.add(hs)
         return ans

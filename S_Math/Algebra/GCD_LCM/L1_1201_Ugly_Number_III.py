@@ -14,8 +14,15 @@ class Solution:
     def nthUglyNumber(self, n: int, a: int, b: int, c: int) -> int:
         def fn(x):
             # return True if there are n ugly numbers less than x
-            cnt = x // a + x // b + x // c - \
-                x // lcm(a, b) - x // lcm(b, c) - x // lcm(a, c) + x // lcm(a, b, c)
+            cnt = (
+                x // a
+                + x // b
+                + x // c
+                - x // lcm(a, b)
+                - x // lcm(b, c)
+                - x // lcm(a, c)
+                + x // lcm(a, b, c)
+            )
             return cnt >= n
 
         a, b, c = sorted([a, b, c])

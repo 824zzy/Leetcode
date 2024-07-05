@@ -6,8 +6,7 @@ from header import *
 
 
 class Solution:
-    def mergeKLists(self,
-                    lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         pq = [(x.val, i, x) for i, x in enumerate(lists) if x]
         heapify(pq)
 

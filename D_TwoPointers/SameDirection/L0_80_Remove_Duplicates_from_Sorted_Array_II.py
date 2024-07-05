@@ -12,6 +12,7 @@ class Solution:
                 i += 1
         return i
 
+
 # or use Counter to compute seen element and move pointer i
 
 

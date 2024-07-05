@@ -8,9 +8,4 @@ class Solution:
         cnt = Counter()
         for m, s in zip(messages, senders):
             cnt[s] += len(m.split())
-        return sorted(
-            cnt.items(),
-            key=lambda x: (
-                x[1],
-                x[0]),
-            reverse=True)[0][0]
+        return sorted(cnt.items(), key=lambda x: (x[1], x[0]), reverse=True)[0][0]

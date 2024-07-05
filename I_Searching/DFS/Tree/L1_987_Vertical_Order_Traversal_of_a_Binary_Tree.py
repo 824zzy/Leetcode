@@ -16,6 +16,7 @@ class Solution:
             T[p].append((d, node.val))
             dfs(node.left, p - 1, d + 1)
             dfs(node.right, p + 1, d + 1)
+
         dfs(root, 0, 0)
 
         ans = []

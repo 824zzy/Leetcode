@@ -6,8 +6,8 @@ from header import *
 
 class Solution:
     def mergeAlternately(self, x: str, y: str) -> str:
-        ans = ''
-        for xx, yy in zip_longest(x, y, fillvalue=''):
+        ans = ""
+        for xx, yy in zip_longest(x, y, fillvalue=""):
             ans += xx
             ans += yy
         return ans
@@ -17,7 +17,7 @@ class Solution:
 class Solution:
     def mergeAlternately(self, A: str, B: str) -> str:
         A, B = list(A), list(B)
-        ans = ''
+        ans = ""
         while A or B:
             if A:
                 ans += A.pop(0)

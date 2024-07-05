@@ -12,4 +12,4 @@ class Solution:
                 A[l] = A[r] = min(A[l], A[r])
             l += 1
             r -= 1
-        return ''.join(A)
+        return "".join(A)

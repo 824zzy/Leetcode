@@ -24,4 +24,5 @@ class Solution:
             # use paid
             ans = min(ans, A[i][0] + dp(i + 1, free + A[i][1]))
             return ans
+
         return dp(0, 0)

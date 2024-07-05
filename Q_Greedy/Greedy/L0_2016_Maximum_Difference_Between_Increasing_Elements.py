@@ -7,7 +7,7 @@ from header import *
 class Solution:
     def maximumDifference(self, A: List[int]) -> int:
         ans = -1
-        l = float('inf')
+        l = float("inf")
         for r in A:
             if r > l:
                 ans = max(ans, r - l)
@@ -19,14 +19,12 @@ class Solution:
     def maximumDifference(self, A: List[int]) -> int:
         ans = -1
         for x, y in zip(
-            accumulate(
-                A, min), reversed(
-                list(
-                accumulate(
-                    reversed(A), max)))):
+            accumulate(A, min), reversed(list(accumulate(reversed(A), max)))
+        ):
             if x != y:
                 ans = max(ans, y - x)
         return ans
+
 
 # brute force
 

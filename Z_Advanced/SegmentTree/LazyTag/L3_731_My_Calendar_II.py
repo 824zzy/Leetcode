@@ -64,13 +64,15 @@ class SegmentTree:
         elif m < lo:
             return node.lazy + self.rangeAddMax(node.right, lo, hi)
         else:
-            return node.lazy + \
-                max(self.rangeAddMax(node.left, lo, m), self.rangeAddMax(node.right, m + 1, hi))
+            return node.lazy + max(
+                self.rangeAddMax(node.left, lo, m),
+                self.rangeAddMax(node.right, m + 1, hi),
+            )
 
 
 class MyCalendarTwo:
     def __init__(self):
-        self.ST = SegmentTree(0, 10**9)
+        self.ST = SegmentTree(0, 10 ** 9)
 
     def book(self, lo: int, hi: int) -> bool:
         rangemx = self.ST.rangeAddMax(self.ST.root, lo, hi - 1)

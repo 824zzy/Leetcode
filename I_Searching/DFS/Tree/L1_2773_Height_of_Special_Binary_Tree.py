@@ -32,6 +32,7 @@ class Solution:
             l = dfs(node.left)
             r = dfs(node.right)
             return max(l, r) + 1
+
         return dfs(root)
 
 
@@ -56,6 +57,7 @@ class Solution:
             else:
                 findLeaves(node.left)
                 findLeaves(node.right)
+
         findLeaves(root)
         # 2
 
@@ -67,4 +69,5 @@ class Solution:
             l = dfs(node.left)
             r = dfs(node.right)
             return max(l, r) + 1
+
         return dfs(root)

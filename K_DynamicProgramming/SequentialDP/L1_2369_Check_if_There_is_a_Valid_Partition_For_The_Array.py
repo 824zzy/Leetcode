@@ -17,8 +17,7 @@ class Solution:
             if i - 1 >= 0 and A[i] == A[i - 1]:
                 dp[i + 1] |= dp[i - 1]
             if i - 2 >= 0:
-                if A[i] == A[i - 1] == A[i - 2] or A[i - 2] + \
-                        2 == A[i - 1] + 1 == A[i]:
+                if A[i] == A[i - 1] == A[i - 2] or A[i - 2] + 2 == A[i - 1] + 1 == A[i]:
                     dp[i + 1] |= dp[i - 2]
         return dp[-1]
 
@@ -33,8 +32,7 @@ class Solution:
             if i + 1 < len(A) and A[i] == A[i + 1]:
                 dp[i] |= dp[i + 2]
             if i + 2 < len(A):
-                if A[i] == A[i + 1] == A[i + 2] or A[i] + \
-                        2 == A[i + 1] + 1 == A[i + 2]:
+                if A[i] == A[i + 1] == A[i + 2] or A[i] + 2 == A[i + 1] + 1 == A[i + 2]:
                     dp[i] |= dp[i + 3]
         return dp[0]
 
@@ -50,8 +48,7 @@ class Solution:
             if i + 1 < len(A) and A[i] == A[i + 1]:
                 ans |= dp(i + 2)
             if i + 2 < len(A):
-                if A[i] == A[i + 1] == A[i + 2] or A[i] + \
-                        2 == A[i + 1] + 1 == A[i + 2]:
+                if A[i] == A[i + 1] == A[i + 2] or A[i] + 2 == A[i + 1] + 1 == A[i + 2]:
                     ans |= dp(i + 3)
             return ans
 

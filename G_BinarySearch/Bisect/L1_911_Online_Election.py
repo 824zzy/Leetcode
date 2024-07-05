@@ -5,7 +5,6 @@
 
 
 class TopVotedCandidate:
-
     def __init__(self, P: List[int], T: List[int]):
         self.T = T
         lead = -1

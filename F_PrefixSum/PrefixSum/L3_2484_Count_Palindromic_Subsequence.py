@@ -26,4 +26,4 @@ class Solution:
             for j, c in enumerate(pre):
                 pre2[i * 10 + j] += c
             pre[i] += 1
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

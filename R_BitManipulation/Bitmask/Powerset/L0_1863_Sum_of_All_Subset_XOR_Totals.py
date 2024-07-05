@@ -9,7 +9,8 @@ class Solution:
         def dfs(i, x):
             if i == len(A):
                 return x
-            return dfs(i+1, x)+dfs(i+1, x ^ A[i])
+            return dfs(i + 1, x) + dfs(i + 1, x ^ A[i])
+
         return dfs(0, 0)
 
 

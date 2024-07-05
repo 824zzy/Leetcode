@@ -19,7 +19,7 @@ class Trie:
                 node[c] = {}
             node = node[c]
         if not node:
-            node['#'] = word
+            node["#"] = word
             self.len += len(word) + 1
 
 
@@ -58,4 +58,4 @@ class Solution:
                 else:
                     nxt_seen.add(x)
                 seen |= nxt_seen
-        return len(''.join(seen)) + len(seen)
+        return len("".join(seen)) + len(seen)

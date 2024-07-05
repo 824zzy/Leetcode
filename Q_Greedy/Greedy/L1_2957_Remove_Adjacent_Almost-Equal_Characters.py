@@ -9,7 +9,7 @@ class Solution:
         ans = 0
         for i in range(1, len(A)):
             if abs(ord(A[i]) - ord(A[i - 1])) <= 1:
-                A[i] = '*'
+                A[i] = "*"
                 ans += 1
         return ans
 

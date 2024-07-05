@@ -28,10 +28,7 @@ class Solution:
         return True
 
 
-T = [
-    [[0, 30], [5, 10], [15, 20]],
-    [[7, 10], [2, 4]]
-]
+T = [[[0, 30], [5, 10], [15, 20]], [[7, 10], [2, 4]]]
 sol = Solution()
 for t in T:
     ans = sol.minMeetingRooms(t)

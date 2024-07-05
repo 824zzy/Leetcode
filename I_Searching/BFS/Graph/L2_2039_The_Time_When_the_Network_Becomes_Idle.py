@@ -4,9 +4,7 @@ TODO: https://leetcode.com/problems/the-time-when-the-network-becomes-idle/discu
 
 
 class Solution:
-    def networkBecomesIdle(self,
-                           edges: List[List[int]],
-                           patience: List[int]) -> int:
+    def networkBecomesIdle(self, edges: List[List[int]], patience: List[int]) -> int:
         # build graph
         G = defaultdict(list)
         for u, v in edges:

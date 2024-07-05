@@ -5,10 +5,7 @@ from header import *
 
 
 class Solution:
-    def minTime(self,
-                n: int,
-                edges: List[List[int]],
-                hasApple: List[bool]) -> int:
+    def minTime(self, n: int, edges: List[List[int]], hasApple: List[bool]) -> int:
         G = defaultdict(list)
         for i, j in edges:
             G[i].append(j)

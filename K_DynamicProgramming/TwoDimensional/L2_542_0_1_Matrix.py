@@ -9,7 +9,7 @@ class Solution:
     def updateMatrix(self, A: List[List[int]]) -> List[List[int]]:
         if not A:
             return []
-        dp = [[float('inf') for _ in range(len(A[0]))] for _ in range(len(A))]
+        dp = [[float("inf") for _ in range(len(A[0]))] for _ in range(len(A))]
         for i in range(len(A)):
             for j in range(len(A[0])):
                 if A[i][j] == 0:

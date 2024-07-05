@@ -33,6 +33,7 @@ class Solution:
                 ans += (min(A[l], A[r]) - A[i]) * (r - l - 1)
         return ans
 
+
 # optimal one pass solution
 
 

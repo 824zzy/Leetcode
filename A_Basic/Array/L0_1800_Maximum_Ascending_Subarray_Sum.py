@@ -13,6 +13,7 @@ class Solution:
                 ans[i] += ans[i - 1]
         return max(ans)
 
+
 # brute force solution for contest: O(n^2)
 
 

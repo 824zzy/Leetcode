@@ -10,7 +10,7 @@ class BrowserHistory:
 
     def visit(self, url: str) -> None:
         if self.idx != len(self.A) - 1:
-            self.A = self.A[:self.idx + 1]
+            self.A = self.A[: self.idx + 1]
         self.A.append(url)
         self.idx += 1
 

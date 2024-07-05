@@ -9,4 +9,4 @@ class Solution:
         W = [0] + sorted(W) + [w]
         maxH = max([H[i] - H[i - 1] for i in range(1, len(H))])
         maxW = max([W[i] - W[i - 1] for i in range(1, len(W))])
-        return maxH * maxW % (10**9 + 7)
+        return maxH * maxW % (10 ** 9 + 7)

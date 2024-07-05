@@ -12,10 +12,11 @@ class Solution:
             ans.append(nums.pop(d))
         return "".join(map(str, ans))
 
+
 # simply brute force
 
 
 class Solution:
     def getPermutation(self, n: int, k: int) -> str:
         A = list(permutations(range(1, n + 1)))
-        return ''.join(list(map(str, A[k - 1])))
+        return "".join(list(map(str, A[k - 1])))

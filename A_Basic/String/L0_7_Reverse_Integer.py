@@ -14,7 +14,7 @@ class Solution:
         if neg:
             x *= -1
         # check overflow
-        if x < -2**31 or x > 2**31 - 1:
+        if x < -(2 ** 31) or x > 2 ** 31 - 1:
             return 0
         else:
             return x

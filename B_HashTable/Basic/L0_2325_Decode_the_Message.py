@@ -10,10 +10,10 @@ class Solution:
         i = 0
         for c in key:
             if c.isalpha() and c not in mp:
-                mp[c] = chr(i + ord('a'))
+                mp[c] = chr(i + ord("a"))
                 i += 1
 
-        ans = ''
+        ans = ""
         for c in message:
             if c.isalpha():
                 ans += mp[c]

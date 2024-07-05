@@ -19,6 +19,6 @@ class Solution:
             for x in range(1, 7):
                 if x not in (pre0, pre1) and gcd(x, pre0) == 1:
                     ans += dp(i + 1, x, pre0)
-            return ans % (10**9 + 7)
+            return ans % (10 ** 9 + 7)
 
-        return dp(0, -1, -1) % (10**9 + 7)
+        return dp(0, -1, -1) % (10 ** 9 + 7)

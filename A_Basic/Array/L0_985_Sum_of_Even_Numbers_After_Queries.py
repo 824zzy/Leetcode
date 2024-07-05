@@ -5,9 +5,7 @@ from header import *
 
 
 class Solution:
-    def sumEvenAfterQueries(self,
-                            A: List[int],
-                            Q: List[List[int]]) -> List[int]:
+    def sumEvenAfterQueries(self, A: List[int], Q: List[List[int]]) -> List[int]:
         even_sm = sum(x for x in A if not x & 1)
 
         ans = []

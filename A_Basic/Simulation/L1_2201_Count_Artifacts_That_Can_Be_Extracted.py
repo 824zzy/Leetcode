@@ -4,10 +4,7 @@ Since artifacts[i].length == 4 and 1 <= n <= 1000, brute force enumerate is acce
 
 
 class Solution:
-    def digArtifacts(self,
-                     n: int,
-                     A: List[List[int]],
-                     dig: List[List[int]]) -> int:
+    def digArtifacts(self, n: int, A: List[List[int]], dig: List[List[int]]) -> int:
         dig = set((d0, d1) for d0, d1 in dig)
         ans = 0
 
@@ -24,14 +21,12 @@ class Solution:
                 ans += 1
         return ans
 
+
 # elegent solution from ye15: optimize `extracted` flag by for-else statement
 
 
 class Solution:
-    def digArtifacts(self,
-                     n: int,
-                     A: List[List[int]],
-                     dig: List[List[int]]) -> int:
+    def digArtifacts(self, n: int, A: List[List[int]], dig: List[List[int]]) -> int:
         dig = set((d0, d1) for d0, d1 in dig)
         ans = 0
 

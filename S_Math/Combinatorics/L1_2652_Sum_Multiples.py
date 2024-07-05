@@ -10,7 +10,9 @@ class Solution:
         def fn(x):
             f = n // x
             return f * (f + 1) // 2 * x
+
         return fn(3) + fn(5) + fn(7) - fn(15) - fn(35) - fn(21) + fn(105)
+
 
 # brute force also works due to small n
 

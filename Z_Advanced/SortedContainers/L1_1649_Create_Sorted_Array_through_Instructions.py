@@ -13,4 +13,4 @@ class Solution:
             greater = i - sl.bisect_right(x)
             sl.add(x)
             ans += min(less, greater)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

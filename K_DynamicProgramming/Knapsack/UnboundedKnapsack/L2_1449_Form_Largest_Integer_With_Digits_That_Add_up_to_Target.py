@@ -22,4 +22,4 @@ class Solution:
             return ans
 
         ans = dp(target)
-        return str(ans) if ans != -inf else str('0')
+        return str(ans) if ans != -inf else str("0")

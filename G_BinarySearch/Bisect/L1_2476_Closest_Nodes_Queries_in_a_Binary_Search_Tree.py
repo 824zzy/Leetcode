@@ -6,9 +6,9 @@ from header import *
 
 
 class Solution:
-    def closestNodes(self,
-                     root: Optional[TreeNode],
-                     queries: List[int]) -> List[List[int]]:
+    def closestNodes(
+        self, root: Optional[TreeNode], queries: List[int]
+    ) -> List[List[int]]:
         A = []
 
         def dfs(node):
@@ -17,6 +17,7 @@ class Solution:
             dfs(node.left)
             A.append(node.val)
             dfs(node.right)
+
         dfs(root)
 
         ans = []

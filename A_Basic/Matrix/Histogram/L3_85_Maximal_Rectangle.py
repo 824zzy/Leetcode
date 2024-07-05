@@ -11,7 +11,7 @@ class Solution:
         A = [0] * len(M[0])
         for i in range(len(M)):
             for j in range(len(M[0])):
-                if M[i][j] == '1':
+                if M[i][j] == "1":
                     A[j] += 1
                 else:
                     A[j] = 0

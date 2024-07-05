@@ -16,7 +16,8 @@ class Solution:
             if not A:
                 return None
             cur = TreeNode(A[len(A) // 2])
-            cur.left = fn(A[:len(A) // 2])
-            cur.right = fn(A[len(A) // 2 + 1:])
+            cur.left = fn(A[: len(A) // 2])
+            cur.right = fn(A[len(A) // 2 + 1 :])
             return cur
+
         return fn(A)

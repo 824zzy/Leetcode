@@ -6,8 +6,7 @@ Time complexity: O(m*n*n)
 
 
 class Solution:
-    def minPathCost(self, A: List[List[int]],
-                    moveCost: List[List[int]]) -> int:
+    def minPathCost(self, A: List[List[int]], moveCost: List[List[int]]) -> int:
         mp = {}
         for i in range(len(moveCost)):
             mp[i] = moveCost[i]

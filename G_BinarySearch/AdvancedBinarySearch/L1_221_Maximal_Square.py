@@ -10,15 +10,21 @@ class Solution:
         prefix = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
         for i in range(m):
             for j in range(n):
-                prefix[i + 1][j + 1] = int(A[i][j]) + prefix[i][j + 1] + \
-                    prefix[i + 1][j] - prefix[i][j]
+                prefix[i + 1][j + 1] = (
+                    int(A[i][j]) + prefix[i][j + 1] + prefix[i + 1][j] - prefix[i][j]
+                )
 
         # binary search to find maximum area
         def fn(x):
             for i in range(x - 1, m):
                 for j in range(x - 1, n):
-                    if prefix[i + 1][j + 1] - prefix[i + 1 - x][j + 1] - \
-                            prefix[i + 1][j + 1 - x] + prefix[i + 1 - x][j + 1 - x] >= x * x:
+                    if (
+                        prefix[i + 1][j + 1]
+                        - prefix[i + 1 - x][j + 1]
+                        - prefix[i + 1][j + 1 - x]
+                        + prefix[i + 1 - x][j + 1 - x]
+                        >= x * x
+                    ):
                         return True
             return False
 
@@ -29,4 +35,4 @@ class Solution:
                 r = mid
             else:
                 l = mid + 1
-        return (l - 1)**2
+        return (l - 1) ** 2

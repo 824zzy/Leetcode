@@ -9,7 +9,7 @@ class Solution:
         A.sort(reverse=True)
         ans = 0
         for i in range(k):
-            ans += max(A[i]-i, 0)
+            ans += max(A[i] - i, 0)
         return ans
 
 

@@ -24,11 +24,9 @@ class Solution:
             l = dfs(node.left)
             r = dfs(node.right)
             subtree_sum = l + r + node.val
-            self.ans = max(
-                self.ans,
-                (self.all_sum - subtree_sum) * subtree_sum)
+            self.ans = max(self.ans, (self.all_sum - subtree_sum) * subtree_sum)
             return subtree_sum
 
         self.ans = 0
         dfs(root)
-        return self.ans % (10**9 + 7)
+        return self.ans % (10 ** 9 + 7)

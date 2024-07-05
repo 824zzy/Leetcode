@@ -8,7 +8,7 @@ class Solution:
         def find_sub(m):
             seen = Counter()
             for i in range(len(s) - m + 1):
-                seen[s[i:i + m]] += 1
+                seen[s[i : i + m]] += 1
 
             subs = [k for k, v in seen.items() if v > 1]
             if subs:

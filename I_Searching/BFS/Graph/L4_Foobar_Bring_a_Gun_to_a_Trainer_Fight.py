@@ -6,6 +6,7 @@
 from __future__ import division
 from math import sqrt, atan2
 from collections import defaultdict
+
 DIR = [(0, 1), (0, -1), (-1, 0), (1, 0)]
 
 
@@ -45,10 +46,10 @@ def solution(DIM, S, T, lim):
                         yy = y - 2 * (N - sy)
                     cntyy -= 1
                 if (xx, yy) not in seen:
-                    if mode == 'm':
-                        dist = sqrt((xx - sx)**2 + (yy - sy)**2)
-                    elif mode == 't':
-                        dist = sqrt((xx - tx)**2 + (yy - ty)**2)
+                    if mode == "m":
+                        dist = sqrt((xx - sx) ** 2 + (yy - sy) ** 2)
+                    elif mode == "t":
+                        dist = sqrt((xx - tx) ** 2 + (yy - ty) ** 2)
                     if dist < lim:
                         seen.add((xx, yy))
                         Q.append((xx, yy, cntxx, cntyy))
@@ -59,32 +60,32 @@ def solution(DIM, S, T, lim):
     tx, ty = T
 
     # use bfs compute all valid reflected points of me and trainer
-    refected_me = find_candidates(sx, sy, tx, ty, 'm')
-    refected_trainer = find_candidates(tx, ty, sx, sy, 't')
+    refected_me = find_candidates(sx, sy, tx, ty, "m")
+    refected_trainer = find_candidates(tx, ty, sx, sy, "t")
     # find invalid points that shot myself
     dx, dy = sx - tx, sy - ty
     init_angle = atan2(dy, dx)
 
-    banned = defaultdict(lambda: (float('inf'), float('inf')))
+    banned = defaultdict(lambda: (float("inf"), float("inf")))
     for x, y in refected_me:
         dx, dy = sx - x, sy - y
         angle = atan2(dy, dx)
         # find angles that has minimum length
-        banned[angle] = min([banned[angle], (dx, dy)],
-                            key=lambda x: abs(x[0]) + abs(x[1]))
+        banned[angle] = min(
+            [banned[angle], (dx, dy)], key=lambda x: abs(x[0]) + abs(x[1])
+        )
 
     ans = set([init_angle])
     for x, y in refected_trainer:
         dx, dy = sx - x, sy - y
         angle = atan2(dy, dx)
         if angle not in banned or (
-            abs(dx) < abs(
-                banned[angle][0]) and abs(dy) < abs(
-                banned[angle][1])):
+            abs(dx) < abs(banned[angle][0]) and abs(dy) < abs(banned[angle][1])
+        ):
             ans.add(angle)
 
     # corner case
-    if sqrt((sx - tx)**2 + (sy - ty)**2) > lim:
+    if sqrt((sx - tx) ** 2 + (sy - ty) ** 2) > lim:
         return len(ans) - 1
     else:
         return len(ans)

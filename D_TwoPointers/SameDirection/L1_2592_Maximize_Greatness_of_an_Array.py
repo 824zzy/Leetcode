@@ -14,6 +14,7 @@ class Solution:
                 i += 1
         return i
 
+
 # optional implementation
 
 

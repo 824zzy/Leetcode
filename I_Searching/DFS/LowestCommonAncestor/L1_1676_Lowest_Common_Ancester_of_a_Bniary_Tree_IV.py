@@ -6,9 +6,8 @@ from header import *
 
 class Solution:
     def lowestCommonAncestor(
-            self,
-            root: 'TreeNode',
-            nodes: 'List[TreeNode]') -> 'TreeNode':
+        self, root: "TreeNode", nodes: "List[TreeNode]"
+    ) -> "TreeNode":
         vals = set(n.val for n in nodes)
 
         def dfs(node):
@@ -21,4 +20,5 @@ class Solution:
             if l and r:
                 return node
             return l or r
+
         return dfs(root)

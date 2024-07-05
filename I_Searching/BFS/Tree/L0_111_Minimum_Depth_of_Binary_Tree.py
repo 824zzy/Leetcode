@@ -13,6 +13,7 @@ class Solution:
             l = dfs(node.left)
             r = dfs(node.right)
             return min(l, r) + 1
+
         ans = dfs(root)
         return ans if ans != inf else 0
 

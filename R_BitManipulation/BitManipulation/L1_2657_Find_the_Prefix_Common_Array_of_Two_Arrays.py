@@ -5,10 +5,7 @@ from header import *
 
 
 class Solution:
-    def findThePrefixCommonArray(
-            self,
-            A: List[int],
-            B: List[int]) -> List[int]:
+    def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
         setA, setB = 0, 0
         ans = [0] * len(A)
         for i, (x, y) in enumerate(zip(A, B)):
@@ -19,10 +16,7 @@ class Solution:
 
 
 class Solution:
-    def findThePrefixCommonArray(
-            self,
-            A: List[int],
-            B: List[int]) -> List[int]:
+    def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
         setA, setB = set(), set()
         ans = [0] * len(A)
         for i, (x, y) in enumerate(zip(A, B)):

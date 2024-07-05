@@ -27,6 +27,7 @@ class Solution:
                 if is_palindrome(i, j):
                     ans = max(ans, 1 + dp(j))
             return ans
+
         return dp(0)
 
 

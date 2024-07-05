@@ -8,10 +8,10 @@ class Solution:
     def atMostNGivenDigitSet(self, D: List[str], N: int) -> int:
         N = str(N)
         # case1
-        ans = sum(len(D)**i for i in range(1, len(N)))
+        ans = sum(len(D) ** i for i in range(1, len(N)))
         # case 2
         for i, c in enumerate(N):
-            ans += sum(c < N[i] for c in D) * (len(D)**(len(N) - i - 1))
+            ans += sum(c < N[i] for c in D) * (len(D) ** (len(N) - i - 1))
             if c not in D:
                 return ans
         return ans + 1

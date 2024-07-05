@@ -7,10 +7,9 @@ DONT FORGET TO USE CACHE
 
 
 class Solution:
-    def checkIfPrerequisite(self,
-                            n: int,
-                            prerequisites: List[List[int]],
-                            queries: List[List[int]]) -> List[bool]:
+    def checkIfPrerequisite(
+        self, n: int, prerequisites: List[List[int]], queries: List[List[int]]
+    ) -> List[bool]:
         G = defaultdict(list)
         for i, j in prerequisites:
             G[i].append(j)

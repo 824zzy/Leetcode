@@ -1,6 +1,5 @@
 class Solution:
-    def containsNearbyAlmostDuplicate(
-            self, nums: List[int], k: int, t: int) -> bool:
+    def containsNearbyAlmostDuplicate(self, nums: List[int], k: int, t: int) -> bool:
         if len(nums) > 1000:
             nums = sorted(nums)
             for i in range(len(nums) - 1):

@@ -6,10 +6,9 @@ from header import *
 
 
 class Solution:
-    def buildMatrix(self,
-                    k: int,
-                    R: List[List[int]],
-                    C: List[List[int]]) -> List[List[int]]:
+    def buildMatrix(
+        self, k: int, R: List[List[int]], C: List[List[int]]
+    ) -> List[List[int]]:
         def topo(A):
             e = defaultdict(list)
             inD = [0] * (k + 1)

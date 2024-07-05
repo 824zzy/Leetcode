@@ -12,7 +12,7 @@ class Solution:
             stk.append(x)
             if len(stk) <= i:
                 break
-        return int(''.join(map(str, stk)).ljust(len(A), '9'))
+        return int("".join(map(str, stk)).ljust(len(A), "9"))
 
 
 """

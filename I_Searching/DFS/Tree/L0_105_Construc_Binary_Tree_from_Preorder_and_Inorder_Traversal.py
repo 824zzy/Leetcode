@@ -11,7 +11,7 @@ class Solution:
             idx = I.index(val)
             node = TreeNode(val)
             node.left = dfs(P, I[:idx])
-            node.right = dfs(P, I[idx + 1:])
+            node.right = dfs(P, I[idx + 1 :])
             return node
 
         return dfs(P, I)

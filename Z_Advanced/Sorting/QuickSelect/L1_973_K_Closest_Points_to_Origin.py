@@ -35,6 +35,7 @@ class Solution:
                 r = m
         return [[x, y] for _, x, y in A if x * x + y * y <= A[m][0]]
 
+
 # sort
 
 
@@ -43,6 +44,7 @@ class Solution:
         A = sorted(A, key=lambda x: x[0] * x[0] + x[1] * x[1])
         return A[:k]
 
+
 # heap
 
 
@@ -50,5 +52,5 @@ class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         A = []
         for x, y in points:
-            heappush(A, (x**2 + y**2, [x, y]))
+            heappush(A, (x ** 2 + y ** 2, [x, y]))
         return [heappop(A)[1] for _ in range(k)]

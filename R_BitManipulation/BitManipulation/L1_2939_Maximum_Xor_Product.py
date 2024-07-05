@@ -5,7 +5,7 @@ greedily choose the bit that maximizes the xor product
 
 class Solution:
     def maximumXorProduct(self, a: int, b: int, n: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         x = 0
         ans = a * b
         for i in range(n - 1, -1, -1):

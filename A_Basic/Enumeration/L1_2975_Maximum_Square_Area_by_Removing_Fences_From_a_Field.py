@@ -6,15 +6,10 @@ from header import *
 
 
 class Solution:
-    def maximizeSquareArea(
-            self,
-            m: int,
-            n: int,
-            H: List[int],
-            V: List[int]) -> int:
+    def maximizeSquareArea(self, m: int, n: int, H: List[int], V: List[int]) -> int:
         H.sort()
         V.sort()
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         def find_cand(A):
             seen = set()

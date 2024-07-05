@@ -8,8 +8,8 @@ class Solution:
         A = str(A)
         mx = A
         for i in range(len(A)):
-            if A[i] != '9':
-                mx = A.replace(A[i], '9')
+            if A[i] != "9":
+                mx = A.replace(A[i], "9")
                 break
-        mn = A.replace(A[0], '0')
+        mn = A.replace(A[0], "0")
         return int(mx) - int(mn)

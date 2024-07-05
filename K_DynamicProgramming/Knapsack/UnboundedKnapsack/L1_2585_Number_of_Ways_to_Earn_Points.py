@@ -8,7 +8,7 @@ from header import *
 
 class Solution:
     def waysToReachTarget(self, target: int, A: List[List[int]]) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @cache
         def dp(i, p):

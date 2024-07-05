@@ -15,11 +15,12 @@ class Solution:
                 return cost
             for dx, dy in D:
                 if 0 <= x + dx < len(A) and 0 <= y + dy < len(A[0]):
-                    if not A[x + dx][y +
-                                     dy] and (k, x + dx, y + dy) not in seen:
+                    if not A[x + dx][y + dy] and (k, x + dx, y + dy) not in seen:
                         seen.add((k, x + dx, y + dy))
                         heappush(Q, (cost + 1, x + dx, y + dy, k))
-                    elif A[x + dx][y + dy] and k and (k - 1, x + dx, y + dy) not in seen:
+                    elif (
+                        A[x + dx][y + dy] and k and (k - 1, x + dx, y + dy) not in seen
+                    ):
                         seen.add((k - 1, x + dx, y + dy))
                         heappush(Q, (cost + 1, x + dx, y + dy, k - 1))
         return -1

@@ -14,6 +14,7 @@ class Solution:
             for j in range(i + 1, 2 * i + 2):
                 ans = min(ans, dp(j))
             return ans + A[i - 1]
+
         return dp(1)
 
 

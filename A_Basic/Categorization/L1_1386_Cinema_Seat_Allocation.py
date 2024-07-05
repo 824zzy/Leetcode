@@ -15,8 +15,7 @@ from header import *
 
 
 class Solution:
-    def maxNumberOfFamilies(
-            self, n: int, reservedSeats: List[List[int]]) -> int:
+    def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         mp = defaultdict(lambda: [0, 10])
         for r, x in reservedSeats:
             mp[r].append(x)

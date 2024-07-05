@@ -17,6 +17,7 @@ class Solution:
                 if i + z[i] - 1 > r:
                     l, r = i, i + z[i] - 1
             return z
+
         z = z_function(s)
 
         for i, x in enumerate(z):

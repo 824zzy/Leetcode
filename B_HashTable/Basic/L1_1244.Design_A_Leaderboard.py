@@ -3,7 +3,6 @@ from collections import defaultdict
 
 
 class Leaderboard:
-
     def __init__(self):
         self.lb = defaultdict(int)
 

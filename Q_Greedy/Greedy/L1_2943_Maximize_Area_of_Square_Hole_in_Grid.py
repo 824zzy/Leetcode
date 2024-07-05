@@ -7,11 +7,8 @@ from header import *
 
 class Solution:
     def maximizeSquareHoleArea(
-            self,
-            n: int,
-            m: int,
-            hBars: List[int],
-            vBars: List[int]) -> int:
+        self, n: int, m: int, hBars: List[int], vBars: List[int]
+    ) -> int:
         hBars.sort()
         vBars.sort()
 
@@ -27,7 +24,7 @@ class Solution:
 
         a = find_consecutive(hBars)
         b = find_consecutive(vBars)
-        return (min(a, b) + 1)**2
+        return (min(a, b) + 1) ** 2
 
 
 """

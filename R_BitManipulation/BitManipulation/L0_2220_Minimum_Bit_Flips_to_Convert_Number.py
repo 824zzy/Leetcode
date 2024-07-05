@@ -6,7 +6,7 @@ Solution 2: compare bit by bit
 
 class Solution:
     def minBitFlips(self, S: int, G: int) -> int:
-        return bin(S ^ G).count('1')
+        return bin(S ^ G).count("1")
 
 
 class Solution:

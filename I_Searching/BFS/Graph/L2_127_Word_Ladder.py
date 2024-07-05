@@ -12,10 +12,10 @@ class Solution:
         setA = set(A)
         for w in A:
             for i in range(len(A[0])):
-                p1, p2 = w[:i], w[i + 1:]
+                p1, p2 = w[:i], w[i + 1 :]
                 for j in range(26):
-                    if p1 + chr(ord('a') + j) + p2 in setA:
-                        G[w].append(p1 + chr(ord('a') + j) + p2)
+                    if p1 + chr(ord("a") + j) + p2 in setA:
+                        G[w].append(p1 + chr(ord("a") + j) + p2)
         # bfs
         Q = [[begin, 1]]
         seen = set()

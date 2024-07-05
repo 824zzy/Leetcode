@@ -6,9 +6,9 @@ use stack for simulation and map for brevity
 class Solution:
     def isValid(self, s: str) -> bool:
         stk = []
-        mp = {')': '(', '}': '{', ']': '['}
+        mp = {")": "(", "}": "{", "]": "["}
         for c in s:
-            if c in '([{':
+            if c in "([{":
                 stk.append(c)
             elif not stk or stk.pop() != mp[c]:
                 return False

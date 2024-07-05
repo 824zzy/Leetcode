@@ -8,7 +8,7 @@ class Solution:
                 if ch not in node:
                     node[ch] = {}
                 node = node[ch]
-            node['#'] = '#'
+            node["#"] = "#"
 
         def search(word):
             node = trie
@@ -16,9 +16,9 @@ class Solution:
                 if c not in node:
                     return False
                 node = node[c]
-                if '#' not in node:
+                if "#" not in node:
                     return False
-            return '#' in node
+            return "#" in node
 
         for w in words:
             insert(w)
@@ -26,4 +26,4 @@ class Solution:
         for w in words:
             if search(w):
                 return w
-        return ''
+        return ""

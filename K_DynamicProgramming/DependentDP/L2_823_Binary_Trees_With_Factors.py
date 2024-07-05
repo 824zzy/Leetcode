@@ -14,8 +14,9 @@ class Solution:
             for y in A:
                 if x % y == 0 and x // y in dp:
                     dp[x] += dp[y] * dp[x // y]
-            dp[x] %= (10**9 + 7)
-        return sum(dp.values()) % (10**9 + 7)
+            dp[x] %= 10 ** 9 + 7
+        return sum(dp.values()) % (10 ** 9 + 7)
+
 
 # top down
 
@@ -30,9 +31,9 @@ class Solution:
             for y in A:
                 if x % y == 0 and x // y in A:
                     ans += dp(y) * dp(x // y)
-            return ans % (10**9 + 7)
+            return ans % (10 ** 9 + 7)
 
-        return sum(dp(x) for x in A) % (10**9 + 7)
+        return sum(dp(x) for x in A) % (10 ** 9 + 7)
 
 
 """

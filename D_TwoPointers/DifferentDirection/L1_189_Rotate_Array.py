@@ -14,6 +14,7 @@ class Solution:
             while l < r:
                 A[l], A[r] = A[r], A[l]
                 l, r = l + 1, r - 1
+
         swap(0, len(A) - 1)
         swap(0, k - 1)
         swap(k, len(A) - 1)

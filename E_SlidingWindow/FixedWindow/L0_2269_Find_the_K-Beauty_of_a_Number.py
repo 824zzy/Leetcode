@@ -14,9 +14,7 @@ class Solution:
             seen += A[i]
             if i >= k:
                 seen.pop(0)
-            if len(seen) == k and int(
-                    ''.join(seen)) and num % int(
-                    ''.join(seen)) == 0:
+            if len(seen) == k and int("".join(seen)) and num % int("".join(seen)) == 0:
                 ans += 1
         return ans
 
@@ -26,6 +24,6 @@ class Solution:
         A = str(num)
         ans = 0
         for i in range(len(A) - k + 1):
-            if int(A[i:i + k]) and not num % int(A[i:i + k]):
+            if int(A[i : i + k]) and not num % int(A[i : i + k]):
                 ans += 1
         return ans

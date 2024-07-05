@@ -20,14 +20,14 @@ class Solution:
             if i == len(s):
                 return 0
             if flipped0to1:
-                if s[i] == '1':
+                if s[i] == "1":
                     return dp(i + 1, flipped0to1)
-                elif s[i] == '0':
+                elif s[i] == "0":
                     return 1 + dp(i + 1, flipped0to1)
             else:
-                if s[i] == '0':
+                if s[i] == "0":
                     return min(1 + dp(i + 1, True), dp(i + 1, False))
-                elif s[i] == '1':
+                elif s[i] == "1":
                     return min(1 + dp(i + 1, False), dp(i + 1, True))
 
         return dp(0, False)

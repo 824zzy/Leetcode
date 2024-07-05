@@ -6,7 +6,7 @@ from header import *
 
 class Solution:
     def smallestBeautifulString(self, s: str, k: int) -> str:
-        A = [ord(c) - ord('a') for c in s]
+        A = [ord(c) - ord("a") for c in s]
         i = len(A) - 1
         A[i] += 1
         while 0 <= i < len(A):
@@ -20,7 +20,7 @@ class Solution:
                 A[i] += 1
             else:
                 i += 1
-        return ''.join(chr(ord('a') + a) for a in A)
+        return "".join(chr(ord("a") + a) for a in A)
 
 
 """ cef

@@ -14,7 +14,7 @@ from header import *
 
 
 class Solution:
-    def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
+    def lowestCommonAncestor(self, p: "Node", q: "Node") -> "Node":
         P = set()
         while p:
             P.add(p)

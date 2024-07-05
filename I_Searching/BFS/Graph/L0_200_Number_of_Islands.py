@@ -11,19 +11,18 @@ class Solution:
 
         def bfs(x, y):
             Q = [(x, y)]
-            A[x][y] = '0'
+            A[x][y] = "0"
             while Q:
                 x, y = Q.pop(0)
                 for dx, dy in D:
-                    if 0 <= x + dx < m and 0 <= y + \
-                            dy < n and A[x + dx][y + dy] == '1':
-                        A[x + dx][y + dy] = '0'
+                    if 0 <= x + dx < m and 0 <= y + dy < n and A[x + dx][y + dy] == "1":
+                        A[x + dx][y + dy] = "0"
                         Q.append((x + dx, y + dy))
 
         ans = 0
         for i in range(m):
             for j in range(n):
-                if A[i][j] == '1':
+                if A[i][j] == "1":
                     bfs(i, j)
                     ans += 1
         return ans
@@ -41,15 +40,14 @@ class Solution:
         ans = 0
 
         def dfs(x, y):
-            A[x][y] = '0'
+            A[x][y] = "0"
             for dx, dy in D:
-                if 0 <= x + dx < M and 0 <= y + \
-                        dy < N and A[x + dx][y + dy] == '1':
+                if 0 <= x + dx < M and 0 <= y + dy < N and A[x + dx][y + dy] == "1":
                     dfs(x + dx, y + dy)
 
         for i in range(M):
             for j in range(N):
-                if A[i][j] == '1':
+                if A[i][j] == "1":
                     ans += 1
                     dfs(i, j)
         return ans

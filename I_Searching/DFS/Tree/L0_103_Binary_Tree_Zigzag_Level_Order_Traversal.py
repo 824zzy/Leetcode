@@ -13,6 +13,6 @@ class Solution:
             self.t[d].append(node.val)
             dfs(node.left, d + 1)
             dfs(node.right, d + 1)
+
         dfs(root, 0)
-        return [v if i % 2 == 0 else v[::-1]
-                for i, v in enumerate(self.t.values())]
+        return [v if i % 2 == 0 else v[::-1] for i, v in enumerate(self.t.values())]

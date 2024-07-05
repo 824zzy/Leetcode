@@ -14,4 +14,4 @@ class Solution:
                 f = True
             elif change[c] < c and f:
                 break
-        return ''.join(ans)
+        return "".join(ans)

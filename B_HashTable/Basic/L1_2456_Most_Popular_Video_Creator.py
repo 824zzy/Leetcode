@@ -4,10 +4,9 @@ from header import *
 
 
 class Solution:
-    def mostPopularCreator(self,
-                           C: List[str],
-                           ID: List[str],
-                           V: List[int]) -> List[List[str]]:
+    def mostPopularCreator(
+        self, C: List[str], ID: List[str], V: List[int]
+    ) -> List[List[str]]:
         creator2videos = defaultdict(list)
         creator2views = defaultdict(int)
         for c, i, v in zip(C, ID, V):

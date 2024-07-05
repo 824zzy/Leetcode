@@ -8,12 +8,12 @@ class Solution:
     def getKthCharacter(self, root: Optional[object], k: int) -> str:
         def dfs(node, k):
             if not node:
-                return 0, ''
+                return 0, ""
             if not node.left and not node.right:
                 if k - 1 < len(node.val):
                     return k, node.val[k - 1]
                 else:
-                    return len(node.val), ''
+                    return len(node.val), ""
 
             l, ans_l = dfs(node.left, k)
             r, ans_r = dfs(node.right, k - l)
@@ -26,7 +26,7 @@ class Solution:
     def getKthCharacter(self, root: Optional[object], k: int) -> str:
         def dfs(node):
             if not node:
-                return ''
+                return ""
             if not node.left and not node.right:
                 return node.val
 

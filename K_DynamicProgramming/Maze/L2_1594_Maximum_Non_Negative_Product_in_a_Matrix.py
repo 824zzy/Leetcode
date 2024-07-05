@@ -5,7 +5,7 @@ solution from ye: Return maximum & minimum products ending at (i, j).
 
 class Solution:
     def maxProductPath(self, A: List[List[int]]) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @cache
         def dp(i, j):

@@ -8,7 +8,7 @@ Time: O(n)
 class Solution:
     def largestGoodInteger(self, A: str) -> str:
         A = [[k, len(list(v))] for k, v in groupby(num)]
-        ans = ''
+        ans = ""
         for k, v in A:
             if v >= 3:
                 ans = max(ans, k * 3)

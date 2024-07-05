@@ -52,6 +52,7 @@ class Solution:
 
         return max_sum - min_sum
 
+
 # O(N^2)
 
 

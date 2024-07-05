@@ -6,7 +6,7 @@ from header import *
 
 class Solution:
     def compress(self, A: List[str]) -> int:
-        A += '*'
+        A += "*"
         idx = 0
         i = 0
         for j in range(len(A)):

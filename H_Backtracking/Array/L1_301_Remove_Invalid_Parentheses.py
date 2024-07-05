@@ -12,7 +12,7 @@ class Solution:
         def dfs(i, op):
             if i == len(s):
                 if op == 0:
-                    return self.ans.add(''.join(stk.copy()))
+                    return self.ans.add("".join(stk.copy()))
                 else:
                     return
             if op < 0:
@@ -21,9 +21,9 @@ class Solution:
             if s[i] in "()":
                 dfs(i + 1, op)
             # choose s[i] and count non-closed parentheses
-            if s[i] == '(':
+            if s[i] == "(":
                 op += 1
-            elif s[i] == ')':
+            elif s[i] == ")":
                 op -= 1
             stk.append(s[i])
             dfs(i + 1, op)
@@ -54,9 +54,9 @@ class Solution:
             # skip
             dfs(st, i + 1, op, cnt + 1)
             # add
-            if s[i] == '(':
+            if s[i] == "(":
                 op += 1
-            elif s[i] == ')':
+            elif s[i] == ")":
                 op -= 1
             dfs(st + s[i], i + 1, op, cnt)
 

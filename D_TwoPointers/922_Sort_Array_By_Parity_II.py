@@ -16,6 +16,7 @@ class Solution:
                 j += 2
         return A
 
+
 # straight-forward solution
 
 

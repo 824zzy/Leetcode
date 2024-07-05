@@ -14,6 +14,7 @@ class Solution:
                 ans = max(ans, len(A) - 1 - i)
         return ans
 
+
 # brute force
 
 

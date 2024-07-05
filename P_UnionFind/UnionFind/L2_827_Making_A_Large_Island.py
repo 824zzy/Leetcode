@@ -24,8 +24,11 @@ class Solution:
             for y in range(n):
                 if G[x][y] == 1:
                     for dx, dy in (0, 1), (0, -1), (1, 0), (-1, 0):
-                        if 0 <= x + dx < n and 0 <= y + \
-                                dy < n and G[x + dx][y + dy] == 1:
+                        if (
+                            0 <= x + dx < n
+                            and 0 <= y + dy < n
+                            and G[x + dx][y + dy] == 1
+                        ):
                             union(x * n + y, (x + dx) * n + (y + dy))
 
         cnt = Counter()
@@ -41,8 +44,11 @@ class Solution:
                     ans = max(ans, cnt[find(x * n + y)])
                 elif G[x][y] == 0:
                     for dx, dy in (0, 1), (0, -1), (1, 0), (-1, 0):
-                        if 0 <= x + dx < n and 0 <= y + \
-                                dy < n and G[x + dx][y + dy] == 1:
+                        if (
+                            0 <= x + dx < n
+                            and 0 <= y + dy < n
+                            and G[x + dx][y + dy] == 1
+                        ):
                             key = find((x + dx) * n + (y + dy))
                             if key not in seen:
                                 seen.add(key)

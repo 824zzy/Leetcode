@@ -5,10 +5,8 @@ solution from ye15: https://leetcode.com/problems/step-by-step-directions-from-a
 
 class Solution:
     def getDirections(
-            self,
-            root: Optional[TreeNode],
-            startValue: int,
-            destValue: int) -> str:
+        self, root: Optional[TreeNode], startValue: int, destValue: int
+    ) -> str:
         def lca(node):
             """Return lowest common ancestor of start and dest nodes."""
             if not node or node.val in (startValue, destValue):

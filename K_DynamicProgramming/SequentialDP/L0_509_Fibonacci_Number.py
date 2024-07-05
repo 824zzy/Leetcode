@@ -16,6 +16,7 @@ class Solution:
             dp[i] = dp[i - 1] + dp[i - 2]
         return dp[-1]
 
+
 # top down solution
 
 
@@ -28,4 +29,5 @@ class Solution:
             if i == 1:
                 return 1
             return dp(i - 1) + dp(i - 2)
+
         return dp(n)

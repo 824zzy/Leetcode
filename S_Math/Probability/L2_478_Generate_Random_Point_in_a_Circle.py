@@ -15,8 +15,9 @@ class Solution:
         while True:
             xx = self.x + self.r * random.uniform(-1, 1)
             yy = self.y + self.r * random.uniform(-1, 1)
-            if (xx - self.x)**2 + (yy - self.y)**2 < self.r**2:
+            if (xx - self.x) ** 2 + (yy - self.y) ** 2 < self.r ** 2:
                 return [xx, yy]
+
 
 # polar coordinates solution
 

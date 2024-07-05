@@ -8,10 +8,8 @@ from header import *
 
 class Solution:
     def reverseBetween(
-            self,
-            head: Optional[ListNode],
-            left: int,
-            right: int) -> Optional[ListNode]:
+        self, head: Optional[ListNode], left: int, right: int
+    ) -> Optional[ListNode]:
         ans = node = ListNode(next=head)
         # locate the left position node
         prev = None
@@ -33,10 +31,8 @@ class Solution:
 
 class Solution:
     def reverseBetween(
-            self,
-            head: Optional[ListNode],
-            left: int,
-            right: int) -> Optional[ListNode]:
+        self, head: Optional[ListNode], left: int, right: int
+    ) -> Optional[ListNode]:
         ans = ListNode(next=head)
         prev = None
         for _ in range(left - 1):

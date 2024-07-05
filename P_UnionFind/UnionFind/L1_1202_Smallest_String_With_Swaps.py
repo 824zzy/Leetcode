@@ -30,4 +30,4 @@ class Solution:
             M[dsu.find(i)].append(s[i])
         for k, v in M.items():
             M[k] = sorted(v)
-        return ''.join([M[p].pop(0) for p in dsu.p])
+        return "".join([M[p].pop(0) for p in dsu.p])

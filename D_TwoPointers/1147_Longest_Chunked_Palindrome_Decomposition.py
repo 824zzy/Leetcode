@@ -9,7 +9,7 @@ class Solution:
         ll, rr = l, r
         ans = 0
         while l < r:
-            if A[ll:l + 1] == A[r:rr + 1]:
+            if A[ll : l + 1] == A[r : rr + 1]:
                 ans += 2
                 ll, rr = l + 1, r - 1
             l, r = l + 1, r - 1

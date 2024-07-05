@@ -5,7 +5,7 @@ from header import *
 
 
 class Solution:
-    def levelOrder(self, root: 'Node') -> List[List[int]]:
+    def levelOrder(self, root: "Node") -> List[List[int]]:
         mp = defaultdict(list)
 
         def dfs(node, d):

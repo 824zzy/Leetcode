@@ -4,21 +4,17 @@ brute force
 
 
 class Solution:
-    def executeInstructions(
-            self,
-            n: int,
-            startPos: List[int],
-            s: str) -> List[int]:
+    def executeInstructions(self, n: int, startPos: List[int], s: str) -> List[int]:
         ans = []
         for i in range(len(s)):
             x, y = startPos
             step = 0
             for j in range(i, len(s)):
-                if s[j] == 'L':
+                if s[j] == "L":
                     y -= 1
-                elif s[j] == 'R':
+                elif s[j] == "R":
                     y += 1
-                elif s[j] == 'U':
+                elif s[j] == "U":
                     x -= 1
                 else:
                     x += 1

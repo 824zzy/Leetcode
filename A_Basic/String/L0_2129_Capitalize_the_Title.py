@@ -10,4 +10,4 @@ class Solution:
             else:
                 return x[0].upper() + x[1:].lower()  # x.title()
 
-        return ' '.join(map(fn, A.split()))
+        return " ".join(map(fn, A.split()))

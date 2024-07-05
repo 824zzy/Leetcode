@@ -11,7 +11,7 @@ class Solution:
         i = 0
         for j in range(len(word)):
             for ii in reversed(range(max(j - 10, i), j + 1)):
-                if word[ii:j + 1] in forbidden:
+                if word[ii : j + 1] in forbidden:
                     i = ii + 1
                     break
             ans = max(ans, j - i + 1)

@@ -20,6 +20,7 @@ class Solution:
             m -= s
         return m
 
+
 # O(nlogn)
 
 

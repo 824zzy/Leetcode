@@ -10,11 +10,11 @@ class Solution:
         for c in A:
             if c == "N":
                 y += 1
-            if c == 'E':
+            if c == "E":
                 x += 1
-            if c == 'W':
+            if c == "W":
                 x -= 1
-            if c == 'S':
+            if c == "S":
                 y -= 1
             if (x, y) in seen:
                 return True

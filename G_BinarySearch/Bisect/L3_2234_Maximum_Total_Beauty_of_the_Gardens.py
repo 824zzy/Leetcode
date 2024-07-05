@@ -6,12 +6,8 @@ cost[i] stands for the total cost to make all the gardens before i having the sa
 
 class Solution:
     def maximumBeauty(
-            self,
-            A: List[int],
-            new: int,
-            t: int,
-            full: int,
-            part: int) -> int:
+        self, A: List[int], new: int, t: int, full: int, part: int
+    ) -> int:
         A = sorted([min(t, a) for a in A])
         print(A)
 
@@ -43,6 +39,6 @@ class Solution:
 
             # Now we would like to complete garden j, thus deduct the cost for garden j
             # from new and move on to the previous(next) incomplete garden!
-            new -= (t - A[j])
+            new -= t - A[j]
             j -= 1
         return ans

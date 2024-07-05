@@ -15,10 +15,10 @@ class Solution:
                 return N
             if i < 0 or j > i:
                 return 0
-            return max(0, dp(i - 1, j - 1) - 1) / 2 + \
-                max(0, dp(i - 1, j) - 1) / 2
+            return max(0, dp(i - 1, j - 1) - 1) / 2 + max(0, dp(i - 1, j) - 1) / 2
 
         return min(dp(R, C), 1)
+
 
 # bottom up
 

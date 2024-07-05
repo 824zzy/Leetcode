@@ -8,15 +8,17 @@ when changing 0 to 1, we overshoot it to 2.
 
 class Solution:
     def gameOfLife(self, A: List[List[int]]) -> None:
-        D = [(-1, -1), (-1, 0), (-1, 1), (0, 1),
-             (0, -1), (1, 1), (1, 0), (1, -1)]
+        D = [(-1, -1), (-1, 0), (-1, 1), (0, 1), (0, -1), (1, 1), (1, 0), (1, -1)]
         # -1: 1==>0(live to dead), 2: 0==>1(dead to live)
         for x in range(len(A)):
             for y in range(len(A[0])):
                 cnt = 0
                 for dx, dy in D:
-                    if 0 <= x + \
-                            dx < len(A) and 0 <= y + dy < len(A[0]) and A[x + dx][y + dy] in (1, -1):
+                    if (
+                        0 <= x + dx < len(A)
+                        and 0 <= y + dy < len(A[0])
+                        and A[x + dx][y + dy] in (1, -1)
+                    ):
                         cnt += 1
                 # live to dead
                 if A[x][y] and (cnt < 2 or cnt > 3):

@@ -16,4 +16,5 @@ class Solution:
                 mx = max(mx, A[j])
                 ans = max(ans, (j - i + 1) * mx + dp(j + 1))
             return ans
+
         return dp(0)

@@ -13,5 +13,6 @@ class Solution:
             self.ans.append(node.val)
             dfs(node.left)
             dfs(node.right)
+
         dfs(root)
         return self.ans

@@ -6,9 +6,9 @@ class Solution:
     def reverseParentheses(self, s: str) -> str:
         stk = []
         for c in s:
-            if c == ')':
+            if c == ")":
                 tmp = []
-                while stk and stk[-1] != '(':
+                while stk and stk[-1] != "(":
                     tmp.extend(stk.pop()[::-1])
                 stk.pop()
                 stk.append(tmp)
@@ -18,7 +18,7 @@ class Solution:
         ans = []
         for x in stk:
             ans.extend(x)
-        return ''.join(ans)
+        return "".join(ans)
 
 
 # elegant solution

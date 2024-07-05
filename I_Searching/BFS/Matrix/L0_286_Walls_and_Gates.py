@@ -17,8 +17,11 @@ class Solution:
             nxtQ = []
             for x, y in Q:
                 for dx, dy in D:
-                    if 0 <= x + dx < m and 0 <= y + \
-                            dy < n and A[x + dx][y + dy] == 2147483647:
+                    if (
+                        0 <= x + dx < m
+                        and 0 <= y + dy < n
+                        and A[x + dx][y + dy] == 2147483647
+                    ):
                         A[x + dx][y + dy] = step
                         nxtQ.append((x + dx, y + dy))
             step += 1

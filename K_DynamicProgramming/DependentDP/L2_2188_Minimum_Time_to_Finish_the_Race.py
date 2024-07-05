@@ -6,19 +6,18 @@ then use dp to find minimum time to finish the race
 
 
 class Solution:
-    def minimumFinishTime(self,
-                          tires: List[List[int]],
-                          changeTime: int,
-                          numLaps: int) -> int:
+    def minimumFinishTime(
+        self, tires: List[List[int]], changeTime: int, numLaps: int
+    ) -> int:
         tires = list(set([tuple(x) for x in tires]))
         A = [[0 for _ in range(len(tires))] for _ in range(17)]
 
         for i in range(17):
             for j, (f, r) in enumerate(tires):
                 if i:
-                    A[i][j] = A[i - 1][j] + f * r**i
+                    A[i][j] = A[i - 1][j] + f * r ** i
                 else:
-                    A[i][j] = f * r**i
+                    A[i][j] = f * r ** i
 
         A = [min(x) for x in A]
 

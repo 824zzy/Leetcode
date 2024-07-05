@@ -7,4 +7,4 @@ from header import *
 class Solution:
     def makeEqual(self, A: List[str]) -> bool:
         n = len(A)
-        return all(v % n == 0 for _, v in Counter(''.join(A)).items())
+        return all(v % n == 0 for _, v in Counter("".join(A)).items())

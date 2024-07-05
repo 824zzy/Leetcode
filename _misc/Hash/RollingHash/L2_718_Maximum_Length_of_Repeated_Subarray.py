@@ -17,16 +17,16 @@ class Solution:
                 hs = 100 * hs + A[i]
                 if i >= k - 1:
                     seen[hs].append(i)
-                    hs -= A[i - (k - 1)] * 100**(k - 1)  # % 1_000_000_007
+                    hs -= A[i - (k - 1)] * 100 ** (k - 1)  # % 1_000_000_007
 
             hs = 0
             for i in range(len(B)):
                 hs = 100 * hs + B[i]
                 if i >= k - 1:
                     for ii in seen[hs]:
-                        if A[ii - k + 1:ii + 1] == B[i - k + 1:i + 1]:
+                        if A[ii - k + 1 : ii + 1] == B[i - k + 1 : i + 1]:
                             return True
-                    hs -= B[i - (k - 1)] * 100**(k - 1)  # % 1_000_000_007
+                    hs -= B[i - (k - 1)] * 100 ** (k - 1)  # % 1_000_000_007
             return False
 
         # last True binary search

@@ -50,6 +50,7 @@ class Solution:
             ans3 = dp(xx) + rem + 1
             ans4 = dp(xx + 1) + 5 - rem + 1
             return min(ans1, ans2, ans3, ans4, x - y)
+
         return dp(x)
 
 

@@ -12,7 +12,7 @@ class Solution:
                 return
             stk.append(str(node.val))
             if not node.left and not node.right:
-                ans.append('->'.join(stk.copy()))
+                ans.append("->".join(stk.copy()))
             dfs(node.left)
             dfs(node.right)
             stk.pop()

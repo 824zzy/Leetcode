@@ -14,6 +14,7 @@ class Solution:
             if i == 1:
                 return k * k
             return (dp(i - 1) + dp(i - 2)) * (k - 1)
+
         return dp(n - 1)
 
 

@@ -17,8 +17,8 @@ class Solution:
             if freq % 2 and not mx:
                 mx = [str(c)]
             # avoid leading zero
-            if not ans and c == '0':
+            if not ans and c == "0":
                 continue
             # extend first half
             ans.extend([str(c)] * (freq // 2))
-        return ''.join(ans + mx + ans[::-1]) or '0'
+        return "".join(ans + mx + ans[::-1]) or "0"

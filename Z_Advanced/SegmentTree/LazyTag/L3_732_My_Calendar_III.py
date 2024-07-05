@@ -58,7 +58,7 @@ class SegmentTree:
 
 class MyCalendarThree:
     def __init__(self):
-        self.ST = SegmentTree(0, 10**9 + 1)
+        self.ST = SegmentTree(0, 10 ** 9 + 1)
 
     def book(self, lo: int, hi: int) -> int:
         self.ST.rangeAddMax(self.ST.root, 1, lo, hi - 1)

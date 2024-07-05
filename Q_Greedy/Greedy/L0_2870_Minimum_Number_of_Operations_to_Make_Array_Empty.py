@@ -36,5 +36,6 @@ class Solution:
             if i + 2 < len(A) and A[i] == A[i + 1] and A[i + 1] == A[i + 2]:
                 ans = min(ans, 1 + dp(i + 3))
             return ans
+
         ans = dp(0)
         return ans if ans != inf else -1

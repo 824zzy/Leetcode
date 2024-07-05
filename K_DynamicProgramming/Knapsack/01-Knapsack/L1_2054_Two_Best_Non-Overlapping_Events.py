@@ -16,4 +16,5 @@ class Solution:
             nxt = bisect_left(A, [A[i][1] + 1, 0, 0])
             ans = max(ans, A[i][2] + dp(nxt, n - 1))
             return ans
+
         return dp(0, 2)

@@ -22,8 +22,8 @@ class Solution:
                 return 0
             h = height(node)
             if height(node.right) == h - 1:
-                return 2**(h - 1) + dfs(node.right)
+                return 2 ** (h - 1) + dfs(node.right)
             else:
-                return 2**(h - 2) + dfs(node.left)
+                return 2 ** (h - 2) + dfs(node.left)
 
         return dfs(root)

@@ -12,6 +12,7 @@ class Solution:
             n >>= 1
         return ans
 
+
 # Pythonic solution
 
 

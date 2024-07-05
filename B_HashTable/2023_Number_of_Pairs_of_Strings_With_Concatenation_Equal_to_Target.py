@@ -9,11 +9,12 @@ class Solution:
         cnt = Counter(nums)
         for k, v in cnt.items():
             if target.startswith(k):
-                suffix = target[len(k):]
+                suffix = target[len(k) :]
                 ans += cnt[suffix] * v
                 if k == suffix:
                     ans -= v
         return ans
+
 
 # brute force
 

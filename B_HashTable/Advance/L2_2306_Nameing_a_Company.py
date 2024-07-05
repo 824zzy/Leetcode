@@ -24,6 +24,7 @@ class Solution:
                 ans += (len(x) - same) * (len(y) - same)
         return ans
 
+
 # another implementation
 
 

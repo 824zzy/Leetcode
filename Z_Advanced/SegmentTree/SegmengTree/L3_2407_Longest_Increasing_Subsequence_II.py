@@ -88,9 +88,8 @@ class SegmentTree:
             return self._maxQuery(node.right, lo, hi)
         else:
             return max(
-                self._maxQuery(
-                    node.left, lo, m), self._maxQuery(
-                    node.right, m + 1, hi))
+                self._maxQuery(node.left, lo, m), self._maxQuery(node.right, m + 1, hi)
+            )
 
 
 class Solution:

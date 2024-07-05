@@ -10,6 +10,7 @@ class Solution:
             ans += min(a, A[k] - (i > k))
         return ans
 
+
 # straight forward simulation
 
 

@@ -11,17 +11,17 @@ class Solution:
         def dfs(node, d):
             if not node:
                 return 0
-            l = dfs(node.left, 'r')
-            r = dfs(node.right, 'l')
+            l = dfs(node.left, "r")
+            r = dfs(node.right, "l")
             self.ans = max(self.ans, max(l, r))
 
-            if d == 'l':
+            if d == "l":
                 return 1 + l
             else:
                 return 1 + r
 
-        dfs(root, 'l')
-        dfs(root, 'r')
+        dfs(root, "l")
+        dfs(root, "r")
         return self.ans
 
 

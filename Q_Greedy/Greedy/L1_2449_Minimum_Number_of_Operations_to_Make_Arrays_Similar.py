@@ -14,8 +14,8 @@ class Solution:
         ans = 0
         for i, j in zip(A_odd, T_odd):
             if (i - j) > 0:
-                ans += (i - j)
+                ans += i - j
         for i, j in zip(A_even, T_even):
             if (i - j) > 0:
-                ans += (i - j)
+                ans += i - j
         return ans // 2

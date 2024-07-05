@@ -6,5 +6,5 @@ from header import *
 
 class Solution:
     def uncommonFromSentences(self, s1: str, s2: str) -> List[str]:
-        s = s1 + ' ' + s2
+        s = s1 + " " + s2
         return [k for k, v in Counter(s.split()).items() if v == 1]

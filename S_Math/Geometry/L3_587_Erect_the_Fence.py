@@ -19,8 +19,7 @@ class Solution:
             returns positive for counter clockwise
             turn and negative for clockwise turn
             """
-            return (a[0] - o[0]) * (b[1] - o[1]) - \
-                (b[0] - o[0]) * (a[1] - o[1])
+            return (a[0] - o[0]) * (b[1] - o[1]) - (b[0] - o[0]) * (a[1] - o[1])
 
         def build(points):
             hull = []

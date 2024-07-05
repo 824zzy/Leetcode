@@ -3,10 +3,9 @@ from collections import defaultdict
 
 
 class Solution:
-    def calcEquation(self,
-                     e: List[List[str]],
-                     v: List[float],
-                     queries: List[List[str]]) -> List[float]:
+    def calcEquation(
+        self, e: List[List[str]], v: List[float], queries: List[List[str]]
+    ) -> List[float]:
         g = defaultdict(list)
         for items, val in zip(e, v):
             x, y = items

@@ -7,7 +7,7 @@ from header import *
 
 
 class Solution:
-    def leftMostColumnWithOne(self, binaryMatrix: 'BinaryMatrix') -> int:
+    def leftMostColumnWithOne(self, binaryMatrix: "BinaryMatrix") -> int:
         def fn(i):
             l, r = 0, c
             while l < r:
@@ -24,11 +24,12 @@ class Solution:
             ans[i] = fn(i)
         return min(ans) if min(ans) < c else -1
 
+
 # greedy solution from top right to bottom left
 
 
 class Solution:
-    def leftMostColumnWithOne(self, M: 'BinaryMatrix') -> int:
+    def leftMostColumnWithOne(self, M: "BinaryMatrix") -> int:
         R, C = M.dimensions()
         c = C
         for i in range(R):

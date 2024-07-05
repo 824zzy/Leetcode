@@ -13,10 +13,10 @@ class Solution:
             cnt = Counter()
             ii = i
             for j in range(i, len(A), l):
-                word = A[j:j + l]
+                word = A[j : j + l]
                 cnt[word] += 1
                 while cnt[word] > words.get(word, 0):
-                    cnt[A[ii:ii + l]] -= 1
+                    cnt[A[ii : ii + l]] -= 1
                     ii += l
                 if j + l - ii == l * n:
                     ans.append(ii)

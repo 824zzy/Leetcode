@@ -6,11 +6,7 @@ from header import *
 
 
 class Solution:
-    def findIndices(
-            self,
-            A: List[int],
-            idx_diff: int,
-            val_diff: int) -> List[int]:
+    def findIndices(self, A: List[int], idx_diff: int, val_diff: int) -> List[int]:
         mx, mn = 0, 0
         for j in range(idx_diff, len(A)):
             i = j - idx_diff
@@ -24,15 +20,12 @@ class Solution:
                 return [mn, j]
         return [-1, -1]
 
+
 # binary search
 
 
 class Solution:
-    def findIndices(
-            self,
-            A: List[int],
-            idxDiff: int,
-            valDiff: int) -> List[int]:
+    def findIndices(self, A: List[int], idxDiff: int, valDiff: int) -> List[int]:
         A = sorted([(x, i) for i, x in enumerate(A)])
         for x, i in A:
             j = bisect_left(A, (x + valDiff, 0))

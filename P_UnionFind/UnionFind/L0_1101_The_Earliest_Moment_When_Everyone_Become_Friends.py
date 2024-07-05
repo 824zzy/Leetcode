@@ -11,7 +11,7 @@ from header import *
 class Solution:
     def earliestAcq(self, logs: List[List[int]], n: int) -> int:
         logs.sort()
-        A = list(range(n+1))
+        A = list(range(n + 1))
 
         def find(x):
             if A[x] != x:

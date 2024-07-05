@@ -7,9 +7,7 @@
 
 
 class Solution:
-    def smallestSufficientTeam(self,
-                               R: List[str],
-                               P: List[List[str]]) -> List[int]:
+    def smallestSufficientTeam(self, R: List[str], P: List[List[str]]) -> List[int]:
         M = {s: i for i, s in enumerate(R)}
         masks = [sum(1 << M[s] for s in p) for p in P]
 
@@ -22,7 +20,6 @@ class Solution:
                 return [0] * 100  # impossible
             if not (mask & masks[i]):
                 return fn(i + 1, mask)
-            return min(fn(i + 1, mask), [i] +
-                       fn(i + 1, mask & ~masks[i]), key=len)
+            return min(fn(i + 1, mask), [i] + fn(i + 1, mask & ~masks[i]), key=len)
 
         return fn(0, (1 << len(R)) - 1)

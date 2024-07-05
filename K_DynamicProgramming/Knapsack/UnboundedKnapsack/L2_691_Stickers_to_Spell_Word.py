@@ -12,7 +12,7 @@ class Solution:
 
         @cache
         def dfs(T):
-            if T == '':
+            if T == "":
                 return 0
             # enumerate from 0 to mx
             ans = inf
@@ -20,7 +20,7 @@ class Solution:
             for cntS in S:
                 # magic to speed up
                 if T[0] in cntS:
-                    _T = ''
+                    _T = ""
                     for k, v in (cntT - cntS).items():
                         _T += k * v
                     ans = min(ans, 1 + dfs(_T))
@@ -28,6 +28,7 @@ class Solution:
 
         ans = dfs(target)
         return ans if ans != inf else -1
+
 
 # slower solution
 

@@ -10,7 +10,7 @@ class Solution:
 
         def dfs(i):
             if i == n:
-                ans.append(int(''.join(map(str, stk.copy()))))
+                ans.append(int("".join(map(str, stk.copy()))))
                 return
             if stk[-1] + k < 10:
                 stk.append(stk[-1] + k)

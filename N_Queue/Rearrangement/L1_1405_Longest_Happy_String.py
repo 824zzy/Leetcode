@@ -7,11 +7,11 @@ The same as 984
 class Solution:
     def longestDiverseString(self, a: int, b: int, c: int) -> str:
         pq = []
-        for x, ch in [[-a, 'a'], [-b, 'b'], [-c, 'c']]:
+        for x, ch in [[-a, "a"], [-b, "b"], [-c, "c"]]:
             if x:
                 pq.append([x, ch])
         heapify(pq)
-        ans = ''
+        ans = ""
 
         while pq:
             if len(pq) == 1:

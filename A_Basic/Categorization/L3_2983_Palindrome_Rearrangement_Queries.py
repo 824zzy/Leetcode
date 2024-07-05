@@ -5,8 +5,7 @@ from header import *
 
 
 class Solution:
-    def canMakePalindromeQueries(
-            self, s: str, queries: List[List[int]]) -> List[bool]:
+    def canMakePalindromeQueries(self, s: str, queries: List[List[int]]) -> List[bool]:
         n = len(s) // 2
         t = s[n:][::-1]
         s = s[:n]
@@ -37,9 +36,11 @@ class Solution:
             if b < c:
                 # ensure no different characters in [b, c]
                 # ensure S and T's characters in [a, b] and [c, d] are the same
-                return pre3[c] - pre3[b + 1] == 0 and \
-                    pre1[b + 1] - pre1[a] == pre2[b + 1] - pre2[a] and \
-                    pre1[d + 1] - pre1[c] == pre2[d + 1] - pre2[c]
+                return (
+                    pre3[c] - pre3[b + 1] == 0
+                    and pre1[b + 1] - pre1[a] == pre2[b + 1] - pre2[a]
+                    and pre1[d + 1] - pre1[c] == pre2[d + 1] - pre2[c]
+                )
             else:
                 # [a,  b]
                 #   [c,  d]

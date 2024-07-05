@@ -8,7 +8,7 @@ class Solution:
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         dp = {x: 1 for x in range(10)}
         dp.pop(5)
         for _ in range(n - 1):
@@ -31,7 +31,7 @@ class Solution:
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @cache
         def dp(i):
@@ -50,6 +50,7 @@ class Solution:
             _dp[9] = nxt[2] + nxt[4]
             _dp = {k: v % MOD for k, v in _dp.items()}
             return _dp
+
         return sum(dp(1).values()) % MOD
 
 

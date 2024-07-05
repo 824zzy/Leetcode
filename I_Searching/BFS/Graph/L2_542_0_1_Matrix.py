@@ -18,8 +18,11 @@ class Solution:
             for x, y in Q:
                 A[x][y] = k
                 for dx, dy in D:
-                    if 0 <= x + \
-                            dx < len(A) and 0 <= y + dy < len(A[0]) and (x + dx, y + dy) not in seen:
+                    if (
+                        0 <= x + dx < len(A)
+                        and 0 <= y + dy < len(A[0])
+                        and (x + dx, y + dy) not in seen
+                    ):
                         nxt.add((x + dx, y + dy))
             Q = nxt
             seen |= nxt

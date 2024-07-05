@@ -15,6 +15,7 @@ class Solution:
 
         return fn([i for i in range(1, n + 1)])
 
+
 # bottom up
 
 

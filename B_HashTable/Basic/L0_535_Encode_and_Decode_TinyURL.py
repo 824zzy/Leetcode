@@ -17,4 +17,4 @@ class Codec:
     def decode(self, shortUrl: str) -> str:
         """Decodes a shortened URL to its original URL.
         """
-        return self.hash[shortUrl.split('/')[-1]]
+        return self.hash[shortUrl.split("/")[-1]]

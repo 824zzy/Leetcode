@@ -28,4 +28,4 @@ class Solution:
 
         A = p + [fn(A[i], A[i + 1]) for i in range(len(A) - 1)]
         z = z_function(A)
-        return sum(x >= len(p) for x in z[len(p):])
+        return sum(x >= len(p) for x in z[len(p) :])

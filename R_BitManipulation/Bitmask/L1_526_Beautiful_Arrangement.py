@@ -14,11 +14,12 @@ class Solution:
             ans = 0
             for i in range(n):
                 if not mask & 1 << i:
-                    if ((i + 1) % idx == 0 or idx % (i + 1) == 0):
+                    if (i + 1) % idx == 0 or idx % (i + 1) == 0:
                         ans += dfs(mask ^ 1 << i, idx + 1)
             return ans
 
         return dfs(0, 1)
+
 
 # or use bit_count() to count the number of 1s in mask to avoid using idx
 
@@ -32,8 +33,9 @@ class Solution:
             cnt = 0
             for i in range(n):
                 if not mask & (1 << i):
-                    if (i + 1) % (mask.bit_count() + \
-                        1) == 0 or (mask.bit_count() + 1) % (i + 1) == 0:
+                    if (i + 1) % (mask.bit_count() + 1) == 0 or (
+                        mask.bit_count() + 1
+                    ) % (i + 1) == 0:
                         cnt += dp(mask ^ (1 << i))
             return cnt
 

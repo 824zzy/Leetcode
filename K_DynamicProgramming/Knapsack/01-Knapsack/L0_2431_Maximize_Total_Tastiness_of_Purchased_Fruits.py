@@ -8,12 +8,7 @@ from header import *
 
 
 class Solution:
-    def maxTastiness(
-            self,
-            P: List[int],
-            T: List[int],
-            maxAmt: int,
-            maxCps: int) -> int:
+    def maxTastiness(self, P: List[int], T: List[int], maxAmt: int, maxCps: int) -> int:
         @cache
         def dp(i, amt, cps):
             if i == len(P):

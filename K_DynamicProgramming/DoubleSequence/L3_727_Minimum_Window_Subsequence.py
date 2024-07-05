@@ -29,8 +29,8 @@ class Solution:
 
         s, ans = dp(0, 0)
         if ans == inf:
-            return ''
-        return s1[s - ans:s]
+            return ""
+        return s1[s - ans : s]
 
 
 # bottom-up dp which is the same as top-down dp
@@ -55,8 +55,8 @@ class Solution:
                 l = s - i
 
         if l == inf:
-            return ''
-        return s1[start:start + l]
+            return ""
+        return s1[start : start + l]
 
 
 # greedy + binary search to simulate
@@ -66,7 +66,7 @@ class Solution:
             if s2[0] in s1:
                 return s2
             else:
-                return ''
+                return ""
 
         pos = defaultdict(list)
         for c2 in s2:
@@ -87,9 +87,9 @@ class Solution:
                 nxt_path.append(p)
             path = nxt_path
         if not path:
-            return ''
+            return ""
         mn = min(path, key=lambda x: x[-1] - x[0])
-        return s1[mn[0]:mn[-1] + 1]
+        return s1[mn[0] : mn[-1] + 1]
 
 
 """

@@ -21,7 +21,7 @@ class Solution:
             return True
 
         ans = 0
-        l, r = 0, 10**14 + 1
+        l, r = 0, 10 ** 14 + 1
         while l < r:
             m = (l + r) // 2
             if fn(m):

@@ -12,11 +12,11 @@ class Solution:
                 h += ceil(A[i] / x)
             return h + A[-1] / x <= hour
 
-        l, r = 1, 10**7 + 1
+        l, r = 1, 10 ** 7 + 1
         while l < r:
             m = (l + r) // 2
             if fn(m):
                 r = m
             else:
                 l = m + 1
-        return l if l != 10**7 + 1 else -1
+        return l if l != 10 ** 7 + 1 else -1

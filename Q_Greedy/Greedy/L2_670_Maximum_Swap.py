@@ -17,4 +17,4 @@ class Solution:
 
         if mima:
             A[mima], A[mi] = A[mi], A[mima]
-        return int(''.join(map(str, A)))
+        return int("".join(map(str, A)))

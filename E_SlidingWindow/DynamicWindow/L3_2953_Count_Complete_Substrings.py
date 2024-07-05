@@ -14,8 +14,12 @@ class Solution:
             i = 0
             for j, c in enumerate(A):
                 mp[A[j]] += 1
-                while i < j and (j and abs(
-                        ord(A[j]) - ord(A[j - 1])) > 2) or len(mp) > l or mp[A[j]] > k:
+                while (
+                    i < j
+                    and (j and abs(ord(A[j]) - ord(A[j - 1])) > 2)
+                    or len(mp) > l
+                    or mp[A[j]] > k
+                ):
                     mp[A[i]] -= 1
                     if mp[A[i]] == 0:
                         mp.pop(A[i])

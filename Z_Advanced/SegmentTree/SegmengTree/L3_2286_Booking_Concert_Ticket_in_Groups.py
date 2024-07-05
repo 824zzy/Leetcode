@@ -87,8 +87,9 @@ class SegmentTree:
         elif lo > m:
             return self.rangeSum(node.right, lo, hi)
         else:
-            return self.rangeSum(node.left, lo, m) + \
-                self.rangeSum(node.right, m + 1, hi)
+            return self.rangeSum(node.left, lo, m) + self.rangeSum(
+                node.right, m + 1, hi
+            )
 
     def updateSum(self, node, lo, hi, val, maxRow):
         if lo > maxRow:

@@ -5,8 +5,9 @@ from sortedcontainers import SortedList
 
 
 class Solution:
-    def insert(self, intervals: List[List[int]],
-               newInterval: List[int]) -> List[List[int]]:
+    def insert(
+        self, intervals: List[List[int]], newInterval: List[int]
+    ) -> List[List[int]]:
         SL = SortedList(intervals)
         l, r = newInterval
         k = SL.bisect_left([l, r])

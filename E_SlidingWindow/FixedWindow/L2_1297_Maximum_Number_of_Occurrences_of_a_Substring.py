@@ -15,7 +15,7 @@ class Solution:
                 if not seen[A[i - minS]]:
                     seen.pop(A[i - minS])
             if i >= minS - 1 and len(seen) <= maxL:
-                s = A[i - minS + 1:i + 1]
+                s = A[i - minS + 1 : i + 1]
                 ans[s] += 1
         return max(ans.values(), default=0)
 
@@ -26,7 +26,7 @@ class Solution:
     def maxFreq(self, A: str, maxL: int, minS: int, maxS: int) -> int:
         cnt = Counter()
         for i in range(len(A) - minS + 1):
-            cnt[A[i:i + minS]] += 1
+            cnt[A[i : i + minS]] += 1
 
         ans = 0
         for k, v in cnt.items():

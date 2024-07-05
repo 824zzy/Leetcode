@@ -12,5 +12,7 @@ class Solution:
         for i, j in A:
             cnt.setdefault(i, 0)
             cnt[j] += 1
-        return [sorted([k for k, v in cnt.items() if v == 0]),
-                sorted([k for k, v in cnt.items() if v == 1])]
+        return [
+            sorted([k for k, v in cnt.items() if v == 0]),
+            sorted([k for k, v in cnt.items() if v == 1]),
+        ]

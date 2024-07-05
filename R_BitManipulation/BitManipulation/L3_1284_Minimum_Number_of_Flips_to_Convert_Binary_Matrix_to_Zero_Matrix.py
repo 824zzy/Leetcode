@@ -12,8 +12,9 @@ class Solution:
     def minFlips(self, A: List[List[int]]) -> int:
         m, n = len(A), len(A[0])
         D = [(0, 0), (0, 1), (0, -1), (1, 0), (-1, 0)]
-        start = sum(cell << (i * n + j) for i, row in enumerate(A)
-                    for j, cell in enumerate(row))
+        start = sum(
+            cell << (i * n + j) for i, row in enumerate(A) for j, cell in enumerate(row)
+        )
         Q = [(start, 0)]
         seen = {start: 0}
 
@@ -37,8 +38,9 @@ class Solution:
     def minFlips(self, A: List[List[int]]) -> int:
         m, n = len(A), len(A[0])
         D = [(0, 0), (0, 1), (0, -1), (1, 0), (-1, 0)]
-        start = sum(cell << (i * n + j) for i, row in enumerate(A)
-                    for j, cell in enumerate(row))
+        start = sum(
+            cell << (i * n + j) for i, row in enumerate(A) for j, cell in enumerate(row)
+        )
         Q = [(start, 0)]
         seen = {start: 0}
         self.ans = inf

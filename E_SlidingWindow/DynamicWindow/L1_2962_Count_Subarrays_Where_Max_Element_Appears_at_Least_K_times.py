@@ -17,7 +17,7 @@ class Solution:
             while cnt == k:
                 cnt -= A[i] == mx
                 i += 1
-            ans += (j - i + 1)
+            ans += j - i + 1
         return n * (n + 1) // 2 - ans
 
 

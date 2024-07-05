@@ -11,6 +11,7 @@ class Solution:
             if i >= len(A):
                 return 0
             return max(dp(i + 1), A[i][0] + dp(i + A[i][1] + 1))
+
         return dp(0)
 
 

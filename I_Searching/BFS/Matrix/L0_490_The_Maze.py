@@ -15,8 +15,11 @@ class Solution:
                 return True
             for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
                 xx, yy = x, y
-                while 0 <= xx + dx < len(M) and 0 <= yy + \
-                        dy < len(M[0]) and M[xx + dx][yy + dy] == 0:
+                while (
+                    0 <= xx + dx < len(M)
+                    and 0 <= yy + dy < len(M[0])
+                    and M[xx + dx][yy + dy] == 0
+                ):
                     xx, yy = xx + dx, yy + dy
                 if (xx, yy) not in seen:
                     Q.append((xx, yy))

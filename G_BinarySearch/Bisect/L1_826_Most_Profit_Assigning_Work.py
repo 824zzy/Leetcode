@@ -4,10 +4,8 @@
 
 class Solution:
     def maxProfitAssignment(
-            self,
-            difficulty: List[int],
-            profit: List[int],
-            worker: List[int]) -> int:
+        self, difficulty: List[int], profit: List[int], worker: List[int]
+    ) -> int:
         A = sorted(zip(difficulty, profit))
         _A = []
         for i, (k, x) in enumerate(A):

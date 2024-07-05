@@ -10,7 +10,7 @@ greedy + monotonic stack
 class Solution:
     def removeKdigits(self, A: str, k: int) -> str:
         if k >= len(A):
-            return '0'
+            return "0"
 
         stk = []
         for i, x in enumerate(A):
@@ -18,4 +18,4 @@ class Solution:
                 stk.pop()
                 k -= 1
             stk.append(x)
-        return str(int(''.join(stk[:-k or None])))
+        return str(int("".join(stk[: -k or None])))

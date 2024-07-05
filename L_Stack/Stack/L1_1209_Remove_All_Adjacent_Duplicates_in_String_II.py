@@ -20,4 +20,4 @@ class Solution:
                     stk.pop()
             else:
                 stk.append([c, 1])
-        return ''.join(k * v for k, v in stk)
+        return "".join(k * v for k, v in stk)

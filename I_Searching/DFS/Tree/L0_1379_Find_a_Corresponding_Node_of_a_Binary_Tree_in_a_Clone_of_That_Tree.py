@@ -4,11 +4,7 @@ dfs along with original and cloned tree
 
 
 class Solution:
-    def getTargetCopy(
-            self,
-            ori: TreeNode,
-            cln: TreeNode,
-            t: TreeNode) -> TreeNode:
+    def getTargetCopy(self, ori: TreeNode, cln: TreeNode, t: TreeNode) -> TreeNode:
         def dfs(ori, cln):
             if not ori:
                 return None

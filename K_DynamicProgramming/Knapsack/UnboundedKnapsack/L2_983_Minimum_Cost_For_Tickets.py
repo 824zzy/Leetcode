@@ -35,4 +35,5 @@ class Solution:
             for c, p in zip(costs, (1, 7, 30)):
                 ans = min(ans, c + dp(i + 1, d + p - 1))
             return ans
+
         return dp(0, 0)

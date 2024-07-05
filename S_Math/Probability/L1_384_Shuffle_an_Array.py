@@ -17,6 +17,7 @@ class Solution:
             self.A[ii], self.A[i] = self.A[i], self.A[ii]
         return self.A
 
+
 # or cheating
 
 

@@ -6,7 +6,6 @@ from header import *
 
 
 class MaxStack:
-
     def __init__(self):
         self.heap = []
         self.cnt = 0

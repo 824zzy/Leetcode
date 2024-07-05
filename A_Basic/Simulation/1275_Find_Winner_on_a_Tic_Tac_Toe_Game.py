@@ -19,8 +19,12 @@ class Solution:
                 mainDiag += player
             if r + c == N - 1:
                 antiDiag += player
-            if abs(rows[r]) == N or abs(cols[c]) == N or abs(
-                    mainDiag) == N or abs(antiDiag) == N:
+            if (
+                abs(rows[r]) == N
+                or abs(cols[c]) == N
+                or abs(mainDiag) == N
+                or abs(antiDiag) == N
+            ):
                 return "A" if player == 1 else "B"
             player = -player
 

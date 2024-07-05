@@ -14,4 +14,4 @@ class Solution:
             newc = (c + prefix[i]) % 26
             newc = chr(newc + 97)
             ans.append(newc)
-        return ''.join(ans)
+        return "".join(ans)

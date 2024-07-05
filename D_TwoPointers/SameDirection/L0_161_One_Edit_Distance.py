@@ -12,10 +12,10 @@ class Solution:
             i += 1
             j += 1
         # insert/delete
-        if s == t[:j] + t[j + 1:] or s[:i] + s[i + 1:] == t:
+        if s == t[:j] + t[j + 1 :] or s[:i] + s[i + 1 :] == t:
             return True
         # replace
-        if s[:i] + s[i + 1:] == t[:j] + t[j + 1:]:
+        if s[:i] + s[i + 1 :] == t[:j] + t[j + 1 :]:
             return True
         return False
 

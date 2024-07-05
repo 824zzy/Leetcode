@@ -60,4 +60,5 @@ class Solution:
             if pre is None or A[i] % pre == 0:
                 ans = max(ans, [A[i]] + dp(i + 1, A[i]), key=len)
             return ans
+
         return dp(0, None)

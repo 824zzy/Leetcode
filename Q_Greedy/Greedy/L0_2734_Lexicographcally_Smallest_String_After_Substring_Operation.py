@@ -8,11 +8,11 @@ class Solution:
     def smallestString(self, s: str) -> str:
         S = list(s)
         for i, c in enumerate(S):
-            if c != 'a':
+            if c != "a":
                 for j in range(i, len(S)):
-                    if S[j] == 'a':
+                    if S[j] == "a":
                         break
                     S[j] = chr(ord(S[j]) - 1)
-                return ''.join(S)
-        S[-1] = 'z'
-        return ''.join(S)
+                return "".join(S)
+        S[-1] = "z"
+        return "".join(S)

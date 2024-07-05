@@ -10,4 +10,4 @@ class Solution:
 
 class Solution:
     def prefixCount(self, A: List[str], pref: str) -> int:
-        return sum([1 for x in A if x[:len(pref)] == pref])
+        return sum([1 for x in A if x[: len(pref)] == pref])

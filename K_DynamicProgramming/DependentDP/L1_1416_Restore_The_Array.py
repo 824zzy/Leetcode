@@ -10,18 +10,18 @@ class Solution:
         def dp(i):
             if i == len(s):
                 return 1
-            if s[i] == '0':
+            if s[i] == "0":
                 return 0
             ans = 0
             # at most 9 steps since k<=10**9
             for j in range(i, len(s)):
-                x = int(s[i:j + 1])
+                x = int(s[i : j + 1])
                 if x > k:
                     break
                 ans += dp(j + 1)
-            return ans % (10**9 + 7)
+            return ans % (10 ** 9 + 7)
 
-        return dp(0) % (10**9 + 7)
+        return dp(0) % (10 ** 9 + 7)
 
 
 """

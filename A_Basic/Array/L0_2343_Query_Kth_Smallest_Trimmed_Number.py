@@ -6,9 +6,7 @@ Time comlexity: (m*n*n) ~= 100*100*100 = 10^6
 
 
 class Solution:
-    def smallestTrimmedNumbers(self,
-                               A: List[str],
-                               Q: List[List[int]]) -> List[int]:
+    def smallestTrimmedNumbers(self, A: List[str], Q: List[List[int]]) -> List[int]:
         ans = []
         for n, i in Q:
             _A = sorted([(int(s[-i:]), idx) for idx, s in enumerate(A)])

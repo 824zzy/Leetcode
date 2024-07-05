@@ -9,8 +9,7 @@ from header import *
 
 
 class Solution:
-    def leftmostBuildingQueries(
-            self, A: List[int], Q: List[List[int]]) -> List[int]:
+    def leftmostBuildingQueries(self, A: List[int], Q: List[List[int]]) -> List[int]:
         # next greater on the right
         R = [len(A)] * len(A)
         stk = []

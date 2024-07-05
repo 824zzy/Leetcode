@@ -5,8 +5,7 @@ from header import *
 
 
 class Solution:
-    def findMaximalUncoveredRanges(
-            self, n: int, A: List[List[int]]) -> List[List[int]]:
+    def findMaximalUncoveredRanges(self, n: int, A: List[List[int]]) -> List[List[int]]:
         A.sort()
         ans = []
         start = 0

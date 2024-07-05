@@ -6,11 +6,8 @@ from header import *
 
 class Solution:
     def minNumberOfHours(
-            self,
-            en: int,
-            ex: int,
-            energy: List[int],
-            experience: List[int]) -> int:
+        self, en: int, ex: int, energy: List[int], experience: List[int]
+    ) -> int:
         ans = 0
         for x, y in zip(energy, experience):
             if en <= x:

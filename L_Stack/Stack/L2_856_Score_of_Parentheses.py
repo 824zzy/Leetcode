@@ -9,11 +9,11 @@ class Solution:
         ans = 0
         dep = -1
         for i, c in enumerate(s):
-            if c == '(':
+            if c == "(":
                 dep += 1
                 stk = [dep]
             else:
                 dep -= 1
                 if stk:
-                    ans += 2**stk.pop()
+                    ans += 2 ** stk.pop()
         return ans

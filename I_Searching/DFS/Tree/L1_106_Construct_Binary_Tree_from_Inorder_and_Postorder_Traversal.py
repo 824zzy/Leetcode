@@ -12,6 +12,7 @@ class Solution:
             node = TreeNode(v)
             idx = I.index(v)
             node.left = dfs(I[:idx], P[:idx])
-            node.right = dfs(I[idx + 1:], P[idx:])
+            node.right = dfs(I[idx + 1 :], P[idx:])
             return node
+
         return dfs(I, P)

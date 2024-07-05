@@ -5,4 +5,4 @@ split and reverse the string
 
 class Solution:
     def reverseWords(self, s: str) -> str:
-        return ' '.join(s.split()[::-1])
+        return " ".join(s.split()[::-1])

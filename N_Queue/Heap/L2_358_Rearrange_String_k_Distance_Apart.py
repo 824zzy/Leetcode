@@ -17,12 +17,12 @@ class Solution:
                 _, ff, cc = busy.pop(0)
                 heappush(free, (ff, cc))
             if len(free) == 0:
-                return ''
+                return ""
             f, c = heappop(free)
             ans.append(c)
             if f + 1 < 0:
                 busy.append((index, f + 1, c))
-        return ''.join(ans)
+        return "".join(ans)
 
 
 """

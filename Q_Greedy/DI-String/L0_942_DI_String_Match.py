@@ -9,12 +9,13 @@ class Solution:
     def diStringMatch(self, S: str) -> List[int]:
         ans, s = [], [i for i in range(len(S) + 1)]
         for c in S:
-            if c == 'I':
+            if c == "I":
                 ans.append(s.pop(0))
             else:
                 ans.append(s.pop())
         ans.append(s.pop())
         return ans
+
 
 # lee's template
 
@@ -23,9 +24,9 @@ class Solution:
     def diStringMatch(self, A: str) -> List[int]:
         ans = []
         stk = []
-        for i, c in enumerate(A + 'I'):
+        for i, c in enumerate(A + "I"):
             stk.append(str(i))
-            if c == 'I':
+            if c == "I":
                 ans += stk[::-1]
                 stk = []
         return ans

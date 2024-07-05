@@ -13,7 +13,7 @@ from header import *
 
 class Solution:
     def kInversePairs(self, n: int, k: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @cache
         def dp(n, k):

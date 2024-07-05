@@ -5,9 +5,7 @@ from header import *
 
 
 class Solution:
-    def insertionSortList(
-            self,
-            head: Optional[ListNode]) -> Optional[ListNode]:
+    def insertionSortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         ans = node = ListNode(-inf, next=head)
         while node.next:
             if node.val <= node.next.val:

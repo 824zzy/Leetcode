@@ -14,7 +14,7 @@ class Solution:
             if (x1 >= x2 and n1 & (1 << i)) or (x1 < x2 and not n1 & (1 << i)):
                 if d:
                     d -= 1
-                    n1 ^= (1 << i)
+                    n1 ^= 1 << i
                 else:
                     break
         return n1

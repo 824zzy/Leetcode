@@ -7,7 +7,7 @@ from header import *
 
 class Solution:
     def productQueries(self, n: int, queries: List[List[int]]) -> List[int]:
-        M = 10**9 + 7
+        M = 10 ** 9 + 7
         A = []
         for i in range(32):
             if n & (1 << i):

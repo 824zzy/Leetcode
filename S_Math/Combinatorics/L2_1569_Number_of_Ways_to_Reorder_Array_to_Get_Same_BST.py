@@ -17,4 +17,4 @@ class Solution:
             ans = comb(len(l) + len(r), len(r))
             return ans * ll * rr
 
-        return (dfs(A) - 1) % (10**9 + 7)
+        return (dfs(A) - 1) % (10 ** 9 + 7)

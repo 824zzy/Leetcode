@@ -10,4 +10,4 @@ class Solution:
             return currSum
 
         total = dfs(root)
-        return max([(total - x) * x for x in sums]) % (10**9 + 7)
+        return max([(total - x) * x for x in sums]) % (10 ** 9 + 7)

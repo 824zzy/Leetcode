@@ -16,5 +16,5 @@ class Solution:
                                 valid = False
                                 break
             if valid:
-                ans = max(ans, bin(mask).count('1'))
+                ans = max(ans, bin(mask).count("1"))
         return ans

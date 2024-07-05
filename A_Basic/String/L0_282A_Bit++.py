@@ -6,7 +6,7 @@ find +/- in each line
 def solution(A):
     ans = 0
     for x in A:
-        if x[0] == '+' or x[-1] == '+':
+        if x[0] == "+" or x[-1] == "+":
             ans += 1
         else:
             ans -= 1

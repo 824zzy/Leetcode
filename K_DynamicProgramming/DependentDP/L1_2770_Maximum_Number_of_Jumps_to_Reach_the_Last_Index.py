@@ -18,6 +18,7 @@ class Solution:
                 if abs(A[i] - A[j]) <= t:
                     ans = max(ans, dp(j) + 1)
             return ans
+
         ans = dp(0)
         return ans if ans != -inf else -1
 

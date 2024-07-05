@@ -5,9 +5,8 @@ from header import *
 
 class Solution:
     def sufficientSubset(
-            self,
-            root: Optional[TreeNode],
-            limit: int) -> Optional[TreeNode]:
+        self, root: Optional[TreeNode], limit: int
+    ) -> Optional[TreeNode]:
         def dfs(node, sm):
             sm += node.val
             if not node:

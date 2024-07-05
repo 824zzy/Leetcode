@@ -11,7 +11,8 @@ class Solution:
                 return 0
             if not node.left and not node.right:
                 return x * 10 + node.val
-            return dfs(node.left, x * 10 + node.val) + \
-                dfs(node.right, x * 10 + node.val)
+            return dfs(node.left, x * 10 + node.val) + dfs(
+                node.right, x * 10 + node.val
+            )
 
         return dfs(root, 0)

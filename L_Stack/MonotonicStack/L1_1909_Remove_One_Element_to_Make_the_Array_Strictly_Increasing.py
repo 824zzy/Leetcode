@@ -27,13 +27,14 @@ class Solution:
             stk.append(i)
         return min(dec1, dec2) <= 1
 
+
 # brute force solution also works due to the low data size
 
 
 class Solution:
     def canBeIncreasing(self, A: List[int]) -> bool:
         for i in range(len(A)):
-            x = A[:i] + A[i + 1:]
+            x = A[:i] + A[i + 1 :]
             if x == sorted(x) and len(x) == len(set(x)):
                 return True
         return False

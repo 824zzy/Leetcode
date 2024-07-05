@@ -6,7 +6,7 @@ from decimal import Decimal
 
 
 def get_theta(V, D):
-    return round(math.asin(D * Decimal(9.8) / V**2) / math.pi * 180 / 2, 8)
+    return round(math.asin(D * Decimal(9.8) / V ** 2) / math.pi * 180 / 2, 8)
 
 
 t = int(input())

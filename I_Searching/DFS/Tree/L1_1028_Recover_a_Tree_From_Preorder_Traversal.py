@@ -6,20 +6,20 @@ preprocess the string and use dfs to construct the tree
 class Solution:
     def recoverFromPreorder(self, s: str) -> Optional[TreeNode]:
         A = []
-        s = s.split('-')
+        s = s.split("-")
         for i in range(len(s)):
             if s[i].isnumeric():
-                A.append(')')
+                A.append(")")
                 A.append(s[i])
-                A.append('(-')
+                A.append("(-")
             else:
-                A.append('-')
-        A = ''.join(A[1:-1])
+                A.append("-")
+        A = "".join(A[1:-1])
 
         def dfs(A, d):
             if not A:
                 return None
-            A = A.split('(' + d * '-' + ')')
+            A = A.split("(" + d * "-" + ")")
             node = TreeNode(int(A[0]))
             if len(A) == 3:
                 node.left = dfs(A[1], d + 1)

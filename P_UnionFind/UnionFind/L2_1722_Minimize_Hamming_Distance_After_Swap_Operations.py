@@ -18,10 +18,9 @@ class DSU:
 
 
 class Solution:
-    def minimumHammingDistance(self,
-                               S: List[int],
-                               T: List[int],
-                               A: List[List[int]]) -> int:
+    def minimumHammingDistance(
+        self, S: List[int], T: List[int], A: List[List[int]]
+    ) -> int:
         dsu = DSU(len(S))
 
         for p in A:

@@ -24,10 +24,5 @@ class Solution:
             for _, ii in G[i]:
                 for _, jj in G[j]:
                     if ii != jj and ii != j and jj != i:
-                        ans = max(
-                            ans,
-                            scores[i] +
-                            scores[j] +
-                            scores[ii] +
-                            scores[jj])
+                        ans = max(ans, scores[i] + scores[j] + scores[ii] + scores[jj])
         return ans

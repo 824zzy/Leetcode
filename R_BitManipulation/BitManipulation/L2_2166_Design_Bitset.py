@@ -34,7 +34,7 @@ class Bitset:
 
     def toString(self) -> str:
         a = bin(self.a)[2:]
-        return a[::-1] + '0' * (self.size - len(a))
+        return a[::-1] + "0" * (self.size - len(a))
 
 
 """
@@ -75,11 +75,18 @@ class Bitset:
         self.is_flip = not self.is_flip
         self.ones = len(self.l) - self.ones
 
-    def all(self) -> bool: return self.ones == len(self.l)
+    def all(self) -> bool:
+        return self.ones == len(self.l)
 
-    def one(self) -> bool: return self.ones > 0
+    def one(self) -> bool:
+        return self.ones > 0
 
-    def count(self) -> int: return self.ones
+    def count(self) -> int:
+        return self.ones
 
-    def toString(self) -> str: return ''.join([str(0 if i else 1)
-                                               for i in self.l]) if self.is_flip else ''.join([str(i) for i in self.l])
+    def toString(self) -> str:
+        return (
+            "".join([str(0 if i else 1) for i in self.l])
+            if self.is_flip
+            else "".join([str(i) for i in self.l])
+        )

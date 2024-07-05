@@ -61,15 +61,16 @@ class SegmentTree:
             return max(node.lazy, self.rangeSetMaxQuery(node.right, lo, hi))
         else:
             return max(
-                node.lazy, self.rangeSetMaxQuery(
-                    node.left, lo, m), self.rangeSetMaxQuery(
-                    node.right, m + 1, hi))
+                node.lazy,
+                self.rangeSetMaxQuery(node.left, lo, m),
+                self.rangeSetMaxQuery(node.right, m + 1, hi),
+            )
 
 
 class Solution:
     def fallingSquares(self, A: List[List[int]]) -> List[int]:
         ans = []
-        ST = SegmentTree(0, 10**9)
+        ST = SegmentTree(0, 10 ** 9)
         for i, j in A:
             mx = ST.rangeSetMaxQuery(ST.root, i, i + j - 1)
             ST.rangeSetMax(ST.root, mx + j, i, i + j - 1)

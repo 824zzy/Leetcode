@@ -18,8 +18,12 @@ class Solution:
                         while Q:
                             x, y = Q.pop(0)
                             for dx, dy in [(0, 1), (0, -1), (-1, 0), (1, 0)]:
-                                if 0 <= x + dx < len(A) and 0 <= y + dy < len(
-                                        A[0]) and A[x][y] <= A[x + dx][y + dy] and (x + dx, y + dy) not in seen:
+                                if (
+                                    0 <= x + dx < len(A)
+                                    and 0 <= y + dy < len(A[0])
+                                    and A[x][y] <= A[x + dx][y + dy]
+                                    and (x + dx, y + dy) not in seen
+                                ):
                                     seen.add((x + dx, y + dy))
                                     Q.append((x + dx, y + dy))
             return seen

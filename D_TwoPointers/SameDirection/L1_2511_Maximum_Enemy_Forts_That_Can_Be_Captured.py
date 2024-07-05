@@ -17,6 +17,7 @@ class Solution:
                 i = j
         return ans
 
+
 # brute force solution for contest: O(2*n)
 
 

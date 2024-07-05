@@ -27,7 +27,7 @@ class Solution:
                 return -1
             if not lo < A[i] < hi:
                 return i
-            l = dc(i+1, lo, A[i])
+            l = dc(i + 1, lo, A[i])
             if l == -1:
                 return l
             else:

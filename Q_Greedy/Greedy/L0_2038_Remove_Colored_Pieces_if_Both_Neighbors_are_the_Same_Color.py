@@ -10,7 +10,7 @@ class Solution:
         a, b = 0, 0
         for k, v in A:
             if v >= 3:
-                if k == 'A':
+                if k == "A":
                     a += v - 2
                 else:
                     b += v - 2

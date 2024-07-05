@@ -1,6 +1,6 @@
 # Hash table+dfs
 class Solution:
-    def getImportance(self, employees: List['Employee'], id: int) -> int:
+    def getImportance(self, employees: List["Employee"], id: int) -> int:
         emap = {}
         imap = {}
         for e in employees:
@@ -14,5 +14,6 @@ class Solution:
             for sub in subs:
                 self.ans += imap[sub]
                 dfs(emap[sub])
+
         dfs(emap[id])
         return self.ans

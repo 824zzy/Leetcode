@@ -6,10 +6,8 @@ from header import *
 
 class Solution:
     def twoSumBSTs(
-            self,
-            root1: Optional[TreeNode],
-            root2: Optional[TreeNode],
-            target: int) -> bool:
+        self, root1: Optional[TreeNode], root2: Optional[TreeNode], target: int
+    ) -> bool:
         @cache
         def dfs(node1, node2):
             if not node1 or not node2:
@@ -20,6 +18,7 @@ class Solution:
                 return dfs(node1.right, node2) or dfs(node1, node2.right)
             else:
                 return dfs(node1.left, node2) or dfs(node1, node2.left)
+
         return dfs(root1, root2)
 
 
@@ -31,16 +30,15 @@ class Solution:
 
 class Solution:
     def twoSumBSTs(
-            self,
-            root1: Optional[TreeNode],
-            root2: Optional[TreeNode],
-            target: int) -> bool:
+        self, root1: Optional[TreeNode], root2: Optional[TreeNode], target: int
+    ) -> bool:
         def dfs(node):
             if not node:
                 return []
             l = dfs(node.left)
             r = dfs(node.right)
             return l + [node.val] + r
+
         A = dfs(root1)
         B = dfs(root2)
 

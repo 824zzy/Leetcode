@@ -8,7 +8,7 @@ class Solution:
         ans = [0] * len(s)
         v = []
         for i, c in enumerate(s):
-            if c not in 'aeiouAEIOU':
+            if c not in "aeiouAEIOU":
                 ans[i] = c
             else:
                 v.append(c)
@@ -18,4 +18,4 @@ class Solution:
             if ans[i] == 0:
                 ans[i] = v[j]
                 j += 1
-        return ''.join(ans)
+        return "".join(ans)

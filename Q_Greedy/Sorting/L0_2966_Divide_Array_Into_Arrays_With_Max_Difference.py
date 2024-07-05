@@ -10,5 +10,5 @@ class Solution:
         for i in range(0, len(A), 3):
             if A[i + 2] - A[i] > k:
                 return []
-            ans.append(A[i:i + 3])
+            ans.append(A[i : i + 3])
         return ans

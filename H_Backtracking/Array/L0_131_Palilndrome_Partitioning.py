@@ -21,6 +21,7 @@ class Solution:
                     stk.append(s[i:j])
                     dfs(j)
                     stk.pop()
+
         dfs(0)
         return ans
 
@@ -30,7 +31,7 @@ class Solution:
         def check(s):
             if not s:
                 return False
-            l, r = 0, len(s)-1
+            l, r = 0, len(s) - 1
             while l <= r:
                 if s[l] != s[r]:
                     return False
@@ -51,10 +52,10 @@ class Solution:
             # cut if s is palindrome
             if s and check(s):
                 stk.append(s)
-                dfs(i+1, A[i])
+                dfs(i + 1, A[i])
                 stk.pop()
             # don't cut
-            dfs(i+1, s+A[i])
+            dfs(i + 1, s + A[i])
 
-        dfs(0, '')
+        dfs(0, "")
         return ans

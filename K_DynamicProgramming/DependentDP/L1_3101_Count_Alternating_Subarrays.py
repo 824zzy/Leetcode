@@ -14,6 +14,7 @@ class Solution:
             if i and A[i - 1] != A[i]:
                 res += dp(i - 1)
             return res
+
         return sum(dp(i) for i in range(len(A)))
 
 

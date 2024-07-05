@@ -15,4 +15,5 @@ class Solution:
                 return C[i][j] + min(dfs(i - 1, 0), dfs(i - 1, 2))
             if j == 2:
                 return C[i][j] + min(dfs(i - 1, 0), dfs(i - 1, 1))
+
         return min(dfs(len(C) - 1, 0), dfs(len(C) - 1, 1), dfs(len(C) - 1, 2))

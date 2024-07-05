@@ -17,10 +17,9 @@ class DSU:
 
 
 class Solution:
-    def friendRequests(self,
-                       n: int,
-                       restrictions: List[List[int]],
-                       requests: List[List[int]]) -> List[bool]:
+    def friendRequests(
+        self, n: int, restrictions: List[List[int]], requests: List[List[int]]
+    ) -> List[bool]:
         def canbefriends(ii, jj):
             for x, y in restrictions:
                 xx, yy = dsu.find(x), dsu.find(y)

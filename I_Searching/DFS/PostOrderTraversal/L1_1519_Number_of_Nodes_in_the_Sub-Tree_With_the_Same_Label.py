@@ -5,10 +5,7 @@ from header import *
 
 
 class Solution:
-    def countSubTrees(self,
-                      n: int,
-                      edges: List[List[int]],
-                      labels: str) -> List[int]:
+    def countSubTrees(self, n: int, edges: List[List[int]], labels: str) -> List[int]:
         G = defaultdict(list)
         for i, j in edges:
             G[i].append(j)

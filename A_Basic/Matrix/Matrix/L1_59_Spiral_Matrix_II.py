@@ -14,8 +14,7 @@ class Solution:
 
         for i in range(1, n * n + 1):
             A[x][y] = i
-            if not (0 <= x + dx < n and 0 <= y + dy <
-                    n and A[x + dx][y + dy] == 0):
+            if not (0 <= x + dx < n and 0 <= y + dy < n and A[x + dx][y + dy] == 0):
                 d = (d + 1) % 4
                 dx, dy = D[d]
             x, y = x + dx, y + dy

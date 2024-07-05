@@ -11,6 +11,7 @@ class Solution:
                 t += 1
         return 3 * t - len(s)
 
+
 # count cycles one by one and update the answer on the fly
 
 
@@ -19,9 +20,9 @@ class Solution:
         i = 0
         ans = 0
         while i < len(word):
-            if i + 2 < len(word) and word[i:i + 3] == 'abc':
+            if i + 2 < len(word) and word[i : i + 3] == "abc":
                 i += 3
-            elif i + 1 < len(word) and word[i:i + 2] in ('ab', 'ac', 'bc'):
+            elif i + 1 < len(word) and word[i : i + 2] in ("ab", "ac", "bc"):
                 i += 2
                 ans += 1
             else:

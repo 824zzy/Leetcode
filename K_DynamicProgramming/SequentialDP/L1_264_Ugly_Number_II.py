@@ -18,6 +18,7 @@ class Solution:
             ans = fn(ans)
         return ans
 
+
 # bottom up
 
 

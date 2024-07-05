@@ -7,11 +7,8 @@ from header import *
 
 class Solution:
     def fourSumCount(
-            self,
-            A: List[int],
-            B: List[int],
-            C: List[int],
-            D: List[int]) -> int:
+        self, A: List[int], B: List[int], C: List[int], D: List[int]
+    ) -> int:
         ans = 0
         cnt = Counter()
         for a in A:

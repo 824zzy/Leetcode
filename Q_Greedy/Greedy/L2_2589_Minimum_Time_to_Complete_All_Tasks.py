@@ -12,7 +12,7 @@ class Solution:
         A.sort(key=lambda x: x[1])
         run = [0] * 2001
         for s, e, d in A:
-            d -= sum(run[s:e + 1])
+            d -= sum(run[s : e + 1])
             if d > 0:
                 for i in range(e, s - 1, -1):
                     if run[i]:

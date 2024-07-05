@@ -6,8 +6,7 @@ TODO: https://leetcode.com/problems/rectangle-area-ii/discuss/137914/JavaC%2B%2B
 
 class Solution:
     def rectangleArea(self, rectangles):
-        xs = sorted(
-            set([x for x1, y1, x2, y2 in rectangles for x in [x1, x2]]))
+        xs = sorted(set([x for x1, y1, x2, y2 in rectangles for x in [x1, x2]]))
         x_i = {v: i for i, v in enumerate(xs)}
         count = [0] * len(x_i)
         L = []
@@ -21,6 +20,5 @@ class Solution:
             cur_y = y
             for i in range(x_i[x1], x_i[x2]):
                 count[i] += sig
-            cur_x_sum = sum(x2 - x1 if c else 0 for x1, x2,
-                            c in zip(xs, xs[1:], count))
+            cur_x_sum = sum(x2 - x1 if c else 0 for x1, x2, c in zip(xs, xs[1:], count))
         return area % (10 ** 9 + 7)

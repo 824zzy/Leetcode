@@ -4,13 +4,13 @@
 
 def super2048(A, D):
     M, N = len(A), len(A[0])
-    if D == 'right':
+    if D == "right":
         A = [[e for e in row[::-1] if e != 0] for row in A]
-    if D == 'left':
+    if D == "left":
         A = [[e for e in row if e != 0] for row in A]
-    if D == 'up':
+    if D == "up":
         A = [[e for e in list(column) if e != 0] for column in zip(*A)]
-    if D == 'down':
+    if D == "down":
         A = [[e for e in list(column)[::-1] if e != 0] for column in zip(*A)]
     tmp = []
     for row in A:
@@ -25,20 +25,20 @@ def super2048(A, D):
                     new_r.append(cur)
         tmp.append(new_r)
     ans = []
-    if D == 'right':
+    if D == "right":
         for row in tmp:
             row.extend([0] * (N - len(row)))
             ans.append(row[::-1])
-    if D == 'left':
+    if D == "left":
         for row in tmp:
             row.extend([0] * (N - len(row)))
             ans.append(row)
-    if D == 'up':
+    if D == "up":
         for row in tmp:
             row.extend([0] * (M - len(row)))
             ans.append(row)
         ans = [list(row) for row in zip(*ans)]
-    if D == 'down':
+    if D == "down":
         for row in tmp:
             row.extend([0] * (M - len(row)))
             ans.append(row)

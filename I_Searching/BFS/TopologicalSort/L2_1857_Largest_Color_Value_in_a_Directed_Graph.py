@@ -16,7 +16,7 @@ class Solution:
         cnts = [[0] * 26 for _ in range(n)]
         while Q:
             i = Q.pop(0)
-            cnts[i][ord(colors[i]) - ord('a')] += 1
+            cnts[i][ord(colors[i]) - ord("a")] += 1
             for j in e[i]:
                 cnts[j] = list(map(max, cnts[i], cnts[j]))
                 inD[j] -= 1

@@ -5,10 +5,9 @@ from header import *
 
 
 class Solution:
-    def areSentencesSimilar(self,
-                            s1: List[str],
-                            s2: List[str],
-                            similarPairs: List[List[str]]) -> bool:
+    def areSentencesSimilar(
+        self, s1: List[str], s2: List[str], similarPairs: List[List[str]]
+    ) -> bool:
         if len(s1) != len(s2):
             return False
 

@@ -14,10 +14,10 @@ class Solution:
             for j in range(i + 1, n):
                 xi, yi, ri = A[i]
                 xj, yj, rj = A[j]
-                d = (xi - xj)**2 + (yi - yj)**2
-                if d <= ri**2:
+                d = (xi - xj) ** 2 + (yi - yj) ** 2
+                if d <= ri ** 2:
                     G[i].append(j)
-                if d <= rj**2:
+                if d <= rj ** 2:
                     G[j].append(i)
 
         def dfs(i):
@@ -35,6 +35,7 @@ class Solution:
             ans = max(ans, dfs(i))
         return ans
 
+
 # BFS
 
 
@@ -45,10 +46,10 @@ class Solution:
             for j in range(i + 1, len(A)):
                 xi, yi, ri = A[i]
                 xj, yj, rj = A[j]
-                dist = (xi - xj)**2 + (yi - yj)**2
-                if dist <= ri**2:
+                dist = (xi - xj) ** 2 + (yi - yj) ** 2
+                if dist <= ri ** 2:
                     G[i].append(j)
-                if dist <= rj**2:
+                if dist <= rj ** 2:
                     G[j].append(i)
 
         def bfs(node):

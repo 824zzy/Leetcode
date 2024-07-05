@@ -15,6 +15,7 @@ class Solution:
                 return False
         return True
 
+
 # template 2
 
 

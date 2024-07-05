@@ -39,6 +39,7 @@ class Solution:
             if sm + A[i] <= t:
                 ans2 = 1 + dp(i + 1, sm + A[i])
             return max(ans1, ans2)
+
         ans = dp(0, 0)
         return ans if ans != -inf else -1
 

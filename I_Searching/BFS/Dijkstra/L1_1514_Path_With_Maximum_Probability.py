@@ -5,12 +5,14 @@ from header import *
 
 
 class Solution:
-    def maxProbability(self,
-                       n: int,
-                       edges: List[List[int]],
-                       succProb: List[float],
-                       start: int,
-                       end: int) -> float:
+    def maxProbability(
+        self,
+        n: int,
+        edges: List[List[int]],
+        succProb: List[float],
+        start: int,
+        end: int,
+    ) -> float:
         G = defaultdict(list)
         for (i, j), w in zip(edges, succProb):
             G[i].append((j, w))
@@ -31,12 +33,14 @@ class Solution:
 
 # another implementation
 class Solution:
-    def maxProbability(self,
-                       n: int,
-                       edges: List[List[int]],
-                       succProb: List[float],
-                       start: int,
-                       end: int) -> float:
+    def maxProbability(
+        self,
+        n: int,
+        edges: List[List[int]],
+        succProb: List[float],
+        start: int,
+        end: int,
+    ) -> float:
         G = defaultdict(list)
         for (i, j), w in zip(edges, succProb):
             G[i].append((j, w))

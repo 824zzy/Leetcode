@@ -20,13 +20,14 @@ class CombinationIterator:
 
     def dfs(self, i):
         if len(self.stk) == self.L:
-            self.combs.append(''.join(self.stk.copy()))
+            self.combs.append("".join(self.stk.copy()))
         if i == len(self.S):
             return
         for j in range(i, len(self.S)):
             self.stk.append(self.S[j])
             self.dfs(j + 1)
             self.stk.pop()
+
 
 # dfs with states
 
@@ -36,7 +37,7 @@ class CombinationIterator:
         self.S = S
         self.L = L
         self.combs = []
-        self.dfs('', 0)
+        self.dfs("", 0)
 
     def next(self) -> str:
         return self.combs.pop(0)

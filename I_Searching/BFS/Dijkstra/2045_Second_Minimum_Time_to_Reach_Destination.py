@@ -6,11 +6,7 @@ https://leetcode.com/problems/second-minimum-time-to-reach-destination/discuss/1
 
 
 class Solution:
-    def secondMinimum(self,
-                      n: int,
-                      edges: List[List[int]],
-                      T: int,
-                      C: int) -> int:
+    def secondMinimum(self, n: int, edges: List[List[int]], T: int, C: int) -> int:
         e = defaultdict(dict)
         for i, j in edges:
             e[i - 1][j - 1] = T

@@ -6,9 +6,9 @@ from header import *
 
 
 class Solution:
-    def intervalIntersection(self,
-                             A: List[List[int]],
-                             B: List[List[int]]) -> List[List[int]]:
+    def intervalIntersection(
+        self, A: List[List[int]], B: List[List[int]]
+    ) -> List[List[int]]:
         i, j = 0, 0
         ans = []
         while i < len(A) and j < len(B):

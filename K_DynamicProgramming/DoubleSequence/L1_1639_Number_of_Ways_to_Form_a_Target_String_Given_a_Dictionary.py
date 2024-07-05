@@ -20,6 +20,6 @@ class Solution:
             ans = dp(i + 1, j)
             if target[j] in word_sets[i]:
                 ans += word_sets[i][target[j]] * dp(i + 1, j + 1)
-            return ans % (10**9 + 7)
+            return ans % (10 ** 9 + 7)
 
         return dp(0, 0)

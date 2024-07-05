@@ -8,7 +8,7 @@ from header import *
 
 class Solution:
     def numberOfGoodPartitions(self, A: List[int]) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         ht = defaultdict(lambda: [inf, -inf])
         for i, x in enumerate(A):
             ht[x][0] = min(i, ht[x][0])

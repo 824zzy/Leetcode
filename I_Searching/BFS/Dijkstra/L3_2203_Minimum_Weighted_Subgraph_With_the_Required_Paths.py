@@ -8,12 +8,9 @@ refer to dba: https://leetcode.com/problems/minimum-weighted-subgraph-with-the-r
 
 
 class Solution:
-    def minimumWeight(self,
-                      n: int,
-                      edges: List[List[int]],
-                      src1: int,
-                      src2: int,
-                      dest: int) -> int:
+    def minimumWeight(
+        self, n: int, edges: List[List[int]], src1: int, src2: int, dest: int
+    ) -> int:
         G = collections.defaultdict(dict)
         reverse_G = collections.defaultdict(dict)
         for i, j, w in edges:
@@ -45,12 +42,9 @@ class Solution:
 
 # floyd-warshall solution below will TLE, don't do that
 class Solution:
-    def minimumWeight(self,
-                      n: int,
-                      edges: List[List[int]],
-                      src1: int,
-                      src2: int,
-                      dest: int) -> int:
+    def minimumWeight(
+        self, n: int, edges: List[List[int]], src1: int, src2: int, dest: int
+    ) -> int:
         N = n
         # floyd-warshall
         dist1 = [[inf] * N for _ in range(N)]

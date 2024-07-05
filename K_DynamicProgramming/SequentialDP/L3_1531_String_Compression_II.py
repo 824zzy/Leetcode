@@ -23,13 +23,12 @@ class Solution:
                 return 0
             ans = dp(i + 1, k - 1, pre, cnt)  # delete current char
             if pre == s[i]:
-                ans = min(
-                    ans, dp(i + 1, k, s[i], cnt + 1) + rle(cnt + 1) - rle(cnt))
+                ans = min(ans, dp(i + 1, k, s[i], cnt + 1) + rle(cnt + 1) - rle(cnt))
             else:
                 ans = min(ans, dp(i + 1, k, s[i], 1) + 1)
             return ans
 
-        return dp(0, k, '', 0)
+        return dp(0, k, "", 0)
 
 
 """

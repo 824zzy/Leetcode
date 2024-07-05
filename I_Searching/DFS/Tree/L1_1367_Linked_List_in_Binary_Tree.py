@@ -4,10 +4,7 @@ traverse tree and check if any path contains the same values of linked list
 
 
 class Solution:
-    def isSubPath(
-            self,
-            head: Optional[ListNode],
-            root: Optional[TreeNode]) -> bool:
+    def isSubPath(self, head: Optional[ListNode], root: Optional[TreeNode]) -> bool:
         def check(Tnode, Lnode):
             if not Lnode:
                 return True

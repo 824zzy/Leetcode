@@ -8,12 +8,12 @@ Time complexity: O(2^n)
 
 class Solution:
     def smallestNumber(self, A: str) -> str:
-        self.ans = '999999999'
+        self.ans = "999999999"
         stk = []
 
         def dfs(i, prev):
             if i == len(A):
-                self.ans = min(self.ans, ''.join(list(map(str, stk))))
+                self.ans = min(self.ans, "".join(list(map(str, stk))))
                 return
             for x in range(1, 10):
                 if not prev:
@@ -21,8 +21,9 @@ class Solution:
                     dfs(i + 1, x)
                     stk.pop()
                 else:
-                    if ((A[i] == 'I' and x > prev) or (
-                            A[i] == 'D' and x < prev)) and x not in stk:
+                    if (
+                        (A[i] == "I" and x > prev) or (A[i] == "D" and x < prev)
+                    ) and x not in stk:
                         stk.append(x)
                         dfs(i + 1, x)
                         stk.pop()

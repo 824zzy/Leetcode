@@ -13,8 +13,8 @@ class Solution:
                 res -= 1
             head = head.next.next
         if res > 0:
-            return 'Odd'
+            return "Odd"
         elif res < 0:
-            return 'Even'
+            return "Even"
         else:
-            return 'Tie'
+            return "Tie"

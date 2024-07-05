@@ -8,6 +8,7 @@ class Solution:
     def isPowerOfFour(self, n: int) -> bool:
         return n > 0 and n.bit_count() == 1 and n.bit_length() % 2 == 1
 
+
 # num & (num-1): set lowest 1 bit to 0; 0x55555555: 0101 0101 0101 0101
 # 0101 0101 0101 0101, aim to only keep 1 bit in odd position
 

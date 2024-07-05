@@ -24,8 +24,8 @@ class Solution:
     def merge(self, A, p, q, r):
         n1, n2 = q - p + 1, r - q
         L, R = [A[p + i] for i in range(n1)], [A[q + j + 1] for j in range(n2)]
-        L += [float('inf')]
-        R += [float('inf')]
+        L += [float("inf")]
+        R += [float("inf")]
         i, j = 0, 0
         for k in range(p, r + 1):
             if L[i] < L[j]:
@@ -34,6 +34,7 @@ class Solution:
             else:
                 A[k] = R[j]
                 j += 1
+
 
 # Bubble Sort
 
@@ -47,6 +48,7 @@ class Solution:
                 i -= 1
                 j -= 1
         return nums
+
 
 # Insert Sort: O(n^2)
 

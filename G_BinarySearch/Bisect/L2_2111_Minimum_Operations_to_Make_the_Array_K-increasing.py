@@ -17,5 +17,5 @@ class Solution:
 
         ans = 0
         for i in range(k):
-            ans += LIS(A[i:len(A):k])
+            ans += LIS(A[i : len(A) : k])
         return ans

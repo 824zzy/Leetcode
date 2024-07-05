@@ -20,6 +20,6 @@ class Solution:
                 ans += (n - x) * dp(i + 1, x + 1)
             if k < x:  # old song
                 ans += (x - k) * dp(i + 1, x)
-            return ans % (10**9 + 7)
+            return ans % (10 ** 9 + 7)
 
         return dp(0, 0)

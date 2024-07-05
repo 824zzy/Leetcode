@@ -22,6 +22,7 @@ class Solution:
                 if d in digits:
                     ans += dfs(i + 1, limit_high and hi == d, True)
             return ans
+
         return dfs(0, True, False)
 
 

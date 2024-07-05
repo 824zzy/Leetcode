@@ -4,7 +4,7 @@ https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/discuss/65
 
 
 class Solution:
-    def flatten(self, head: 'Node') -> 'Node':
+    def flatten(self, head: "Node") -> "Node":
         def dfs(node, default=None):
             if not node:
                 return default

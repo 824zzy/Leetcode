@@ -18,6 +18,7 @@ class Solution:
 
         return sum([dp(i) for i in range(1, len(A) - 1)])
 
+
 # bottom up
 
 

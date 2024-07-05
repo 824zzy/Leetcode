@@ -18,4 +18,4 @@ class Solution:
                 for i in range(len(A)):
                     A[i][j] = 0 if A[i][j] == 1 else 1
         # convert row to numbers and sum them up
-        return sum(int(''.join(map(str, row)), 2) for row in A)
+        return sum(int("".join(map(str, row)), 2) for row in A)

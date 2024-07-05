@@ -6,7 +6,7 @@ from header import *
 
 class Solution:
     def kConcatenationMaxSum(self, A: List[int], k: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         # case1: k=1
         ans, cur = -inf, 0
         for x in A:

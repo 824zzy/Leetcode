@@ -9,7 +9,7 @@ class Solution:
         op = 0
         ans = 0
         for c in s:
-            if c == '(':
+            if c == "(":
                 op += 1
             else:
                 op -= 1
@@ -25,7 +25,7 @@ class Solution:
         stk = []
         ans = 0
         for c in s:
-            if c == '(':
+            if c == "(":
                 stk.append(c)
             else:
                 if not stk:

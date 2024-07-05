@@ -12,8 +12,9 @@ class LUPrefix:
         self.P = [0] * (n + 2)
 
     def upload(self, x: int) -> None:
-        self.P[x - self.P[x - 1]] = self.P[x + self.P[x + 1]
-                                           ] = self.P[x - 1] + self.P[x + 1] + 1
+        self.P[x - self.P[x - 1]] = self.P[x + self.P[x + 1]] = (
+            self.P[x - 1] + self.P[x + 1] + 1
+        )
 
     def longest(self) -> int:
         return self.P[1]

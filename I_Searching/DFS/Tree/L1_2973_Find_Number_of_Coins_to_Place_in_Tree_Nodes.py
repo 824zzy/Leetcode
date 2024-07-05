@@ -21,8 +21,11 @@ class Solution:
                     costs.extend(_cost)
             costs.sort()
             if len(costs) >= 3:
-                ans[i] = max(costs[0] * costs[1] * costs[-1],
-                             costs[-1] * costs[-2] * costs[-3], 0)
+                ans[i] = max(
+                    costs[0] * costs[1] * costs[-1],
+                    costs[-1] * costs[-2] * costs[-3],
+                    0,
+                )
             if len(costs) > 5:
                 costs = costs[:2] + costs[-3:]
             return costs

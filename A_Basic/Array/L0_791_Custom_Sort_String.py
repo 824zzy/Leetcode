@@ -9,9 +9,9 @@ from header import *
 class Solution:
     def customSortString(self, order: str, s: str) -> str:
         cnt = Counter(s)
-        ans = ''
+        ans = ""
         for c in order:
             ans += c * cnt[c]
             if c in cnt:
                 cnt.pop(c)
-        return ans + ''.join([k * v for k, v in cnt.items()])
+        return ans + "".join([k * v for k, v in cnt.items()])

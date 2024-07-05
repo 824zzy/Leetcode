@@ -7,9 +7,7 @@ from header import *
 
 
 class Solution:
-    def removeInterval(self,
-                       A: List[List[int]],
-                       t: List[int]) -> List[List[int]]:
+    def removeInterval(self, A: List[List[int]], t: List[int]) -> List[List[int]]:
         ans = []
         L, R = t
         for l, r in A:
@@ -45,9 +43,7 @@ time complexity: O(nlogn)
 
 
 class Solution:
-    def removeInterval(self,
-                       A: List[List[int]],
-                       removed: List[int]) -> List[List[int]]:
+    def removeInterval(self, A: List[List[int]], removed: List[int]) -> List[List[int]]:
         SL = []
         for i, j in A:
             SL.append([i, 1])

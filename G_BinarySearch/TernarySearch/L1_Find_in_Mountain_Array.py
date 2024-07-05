@@ -9,6 +9,7 @@ class Solution:
     def findInMountainArray(self, t, mountain_arr):
         def fn(x):
             return mountain_arr.get(x)
+
         # find peak by ternary search
         l, r = 0, mountain_arr.length()
         while l < r:

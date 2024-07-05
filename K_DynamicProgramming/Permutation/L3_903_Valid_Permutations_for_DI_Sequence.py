@@ -12,7 +12,7 @@ class Solution:
         def dp(i, x):
             if i == n:
                 return 1
-            if A[i] == 'D':
+            if A[i] == "D":
                 if x == 0:
                     return 0
                 return dp(i, x - 1) + dp(i + 1, x - 1)
@@ -21,4 +21,4 @@ class Solution:
                     return 0
                 return dp(i, x + 1) + dp(i + 1, x)
 
-        return sum(dp(0, x) for x in range(n + 1)) % (10**9 + 7)
+        return sum(dp(0, x) for x in range(n + 1)) % (10 ** 9 + 7)

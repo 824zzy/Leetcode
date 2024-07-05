@@ -10,10 +10,10 @@ class Solution:
             return 0
 
         x = A[0]
-        op = '+'
-        ans = ['0']
+        op = "+"
+        ans = ["0"]
         for i, c in enumerate(x):
-            if i == 0 and c in '+-':
+            if i == 0 and c in "+-":
                 op = c
             else:
                 if c.isdigit():
@@ -21,9 +21,9 @@ class Solution:
                 else:
                     break
 
-        if op == '+':
-            return min(int(''.join(ans)), 2**31 - 1)
+        if op == "+":
+            return min(int("".join(ans)), 2 ** 31 - 1)
         else:
-            return max(-int(''.join(ans)), -2**31)
+            return max(-int("".join(ans)), -(2 ** 31))
 
         return 0

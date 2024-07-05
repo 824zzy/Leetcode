@@ -9,14 +9,19 @@ class Solution:
         prefix = [[0] * (n + 1) for _ in range(m + 1)]
         for i in range(m):
             for j in range(n):
-                prefix[i + 1][j + 1] = A[i][j] + prefix[i][j + 1] + \
-                    prefix[i + 1][j] - prefix[i][j]
+                prefix[i + 1][j + 1] = (
+                    A[i][j] + prefix[i][j + 1] + prefix[i + 1][j] - prefix[i][j]
+                )
 
         def fn(x):
             for i in range(m - x + 1):
                 for j in range(n - x + 1):
-                    if (prefix[i + x][j + x] - prefix[i + x][j] -
-                            prefix[i][j + x] + prefix[i][j]) <= t:
+                    if (
+                        prefix[i + x][j + x]
+                        - prefix[i + x][j]
+                        - prefix[i][j + x]
+                        + prefix[i][j]
+                    ) <= t:
                         return True
             return False
 

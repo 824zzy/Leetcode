@@ -16,20 +16,20 @@ class MagicDictionary:
                 if c not in node:
                     node[c] = {}
                 node = node[c]
-            node['#'] = w
+            node["#"] = w
 
     def search(self, w: str) -> bool:
         def dfs(node, i, change):
             if not node:
                 return False
             if i == len(w):
-                return '#' in node and change
+                return "#" in node and change
             if change:
                 return dfs(node.get(w[i]), i + 1, True)
             else:
                 ans = False
                 for c in node:
-                    if c != '#':
+                    if c != "#":
                         ans |= dfs(node[c], i + 1, c != w[i])
                 return ans
 

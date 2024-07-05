@@ -21,6 +21,7 @@ for x in range(1, 1001):
                 return True
             sm[0] -= s
         return False
+
     A[x] = dfs(0)
 
 

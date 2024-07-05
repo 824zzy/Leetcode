@@ -11,6 +11,6 @@ class Solution:
         ans = 0
         for x in A:
             for i in range(22):
-                ans += seen[2**i - x]
+                ans += seen[2 ** i - x]
             seen[x] += 1
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

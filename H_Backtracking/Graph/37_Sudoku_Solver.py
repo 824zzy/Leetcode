@@ -8,6 +8,7 @@ class Solution:
         """
         Do not return anything, modify board in-place instead.
         """
+
         def is_valid(board, i, j, val):
             for x in range(9):
                 if board[x][j] == val:
@@ -27,14 +28,14 @@ class Solution:
                 return True
             if j >= 9:
                 return dfs(board, i + 1, 0)
-            if board[i][j] != '.':
+            if board[i][j] != ".":
                 return dfs(board, i, j + 1)
             for k in range(1, 10):
                 if is_valid(board, i, j, str(k)):
                     board[i][j] = str(k)
                     if dfs(board, i, j):
                         return True
-                    board[i][j] = '.'
+                    board[i][j] = "."
             return False
 
         return dfs(board, 0, 0)

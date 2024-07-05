@@ -7,11 +7,8 @@ from header import *
 
 class Solution:
     def findMaximizedCapital(
-            self,
-            k: int,
-            w: int,
-            profits: List[int],
-            capital: List[int]) -> int:
+        self, k: int, w: int, profits: List[int], capital: List[int]
+    ) -> int:
         A = sorted(list(zip(capital, profits)))
         ans = w
         i = 0

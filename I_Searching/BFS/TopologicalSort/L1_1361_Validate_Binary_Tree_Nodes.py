@@ -6,10 +6,8 @@ from header import *
 
 class Solution:
     def validateBinaryTreeNodes(
-            self,
-            n: int,
-            leftChild: List[int],
-            rightChild: List[int]) -> bool:
+        self, n: int, leftChild: List[int], rightChild: List[int]
+    ) -> bool:
         G = defaultdict(list)
         inD = [0] * n
         for i, x in enumerate(leftChild):

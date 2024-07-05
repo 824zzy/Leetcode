@@ -20,10 +20,9 @@ class DSU:
 
 
 class Solution:
-    def distanceLimitedPathsExist(self,
-                                  n: int,
-                                  edgeList: List[List[int]],
-                                  queries: List[List[int]]) -> List[bool]:
+    def distanceLimitedPathsExist(
+        self, n: int, edgeList: List[List[int]], queries: List[List[int]]
+    ) -> List[bool]:
         queries = sorted((w, p, q, i) for i, (p, q, w) in enumerate(queries))
         edgeList = sorted((w, u, v) for u, v, w in edgeList)
         dsu = DSU(n)

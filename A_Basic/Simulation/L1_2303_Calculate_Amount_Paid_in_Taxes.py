@@ -12,6 +12,7 @@ class Solution:
             pre = cur
         return ans / 100
 
+
 # modify income on the fly
 
 

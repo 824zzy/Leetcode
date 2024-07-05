@@ -18,14 +18,20 @@ class Solution:
                 if is_num:
                     self.ans.append(int(x))
                 return
-            if not is_num and low[i] == '0':
+            if not is_num and low[i] == "0":
                 dfs(i + 1, True, False, False, "")
             lo = int(low[i]) if limit_low else 0
             hi = int(high[i]) if limit_high else 9
             d0 = 0 if is_num else 1
             for d in range(max(d0, lo), hi + 1):
-                if x == '' or abs(d - int(x[-1])) == 1:
-                    dfs(i + 1, limit_low and d == lo,
-                        limit_high and d == hi, True, x + str(d))
+                if x == "" or abs(d - int(x[-1])) == 1:
+                    dfs(
+                        i + 1,
+                        limit_low and d == lo,
+                        limit_high and d == hi,
+                        True,
+                        x + str(d),
+                    )
+
         dfs(0, True, True, False, "")
         return self.ans

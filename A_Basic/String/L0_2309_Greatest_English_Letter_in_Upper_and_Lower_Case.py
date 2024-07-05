@@ -10,4 +10,4 @@ class Solution:
             c = chr(97 + i)
             if c.upper() in s and c.lower() in s:
                 return c.upper()
-        return ''
+        return ""

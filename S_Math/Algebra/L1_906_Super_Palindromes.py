@@ -10,7 +10,7 @@ class Solution:
         for i in range(U):
             s = str(i)
             odd = s + s[:-1][::-1]
-            cand = int(odd)**2
+            cand = int(odd) ** 2
             if cand > R:
                 break
             if cand >= L and str(cand) == "".join(list(str(cand))[::-1]):
@@ -18,7 +18,7 @@ class Solution:
         for i in range(U):
             s = str(i)
             even = s + s[::-1]
-            cand = int(even)**2
+            cand = int(even) ** 2
             if cand > R:
                 break
             if cand >= L and str(cand) == "".join(list(str(cand))[::-1]):

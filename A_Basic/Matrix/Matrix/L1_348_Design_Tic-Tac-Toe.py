@@ -21,11 +21,14 @@ class TicTacToe:
         if row + col == self.n - 1:
             self.rev_dig[p] += 1
         if any(
-            x == self.n for x in (
+            x == self.n
+            for x in (
                 self.rows[row][p],
                 self.cols[col][p],
                 self.dig[p],
-                self.rev_dig[p])):
+                self.rev_dig[p],
+            )
+        ):
             return player
         return 0
 

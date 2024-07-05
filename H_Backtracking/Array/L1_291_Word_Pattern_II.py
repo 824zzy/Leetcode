@@ -15,14 +15,17 @@ class Solution:
                 return False
             ans = False
             for k in range(i, len(s)):
-                if p[j] not in p2s and s[i:k+1] not in s2p:
-                    p2s[p[j]] = s[i:k+1]
-                    s2p[s[i:k+1]] = p[j]
-                    ans |= dfs(k+1, j+1)
+                if p[j] not in p2s and s[i : k + 1] not in s2p:
+                    p2s[p[j]] = s[i : k + 1]
+                    s2p[s[i : k + 1]] = p[j]
+                    ans |= dfs(k + 1, j + 1)
                     p2s.pop(p[j])
-                    s2p.pop(s[i:k+1])
-                elif p2s.get(p[j], '') == s[i:k+1] and s2p.get(s[i:k+1], '') == p[j]:
-                    ans |= dfs(k+1, j+1)
+                    s2p.pop(s[i : k + 1])
+                elif (
+                    p2s.get(p[j], "") == s[i : k + 1]
+                    and s2p.get(s[i : k + 1], "") == p[j]
+                ):
+                    ans |= dfs(k + 1, j + 1)
             return ans
 
         return dfs(0, 0)

@@ -5,9 +5,7 @@ from header import *
 
 
 class Solution:
-    def frequenciesOfElements(
-            self,
-            head: Optional[ListNode]) -> Optional[ListNode]:
+    def frequenciesOfElements(self, head: Optional[ListNode]) -> Optional[ListNode]:
         cnt = Counter()
         while head:
             cnt[head.val] += 1

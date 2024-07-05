@@ -9,10 +9,7 @@ from header import *
 
 
 class Solution:
-    def treeQueries(
-            self,
-            root: Optional[TreeNode],
-            queries: List[int]) -> List[int]:
+    def treeQueries(self, root: Optional[TreeNode], queries: List[int]) -> List[int]:
         node2d = {}
         d2node = defaultdict(set)
 

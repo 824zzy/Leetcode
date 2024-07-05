@@ -3,10 +3,9 @@
 
 
 class Solution:
-    def reachableNodes(self,
-                       n: int,
-                       edges: List[List[int]],
-                       restricted: List[int]) -> int:
+    def reachableNodes(
+        self, n: int, edges: List[List[int]], restricted: List[int]
+    ) -> int:
         restricted = set(restricted)
         G = defaultdict(list)
         for i, j in edges:

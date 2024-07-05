@@ -19,8 +19,12 @@ class Solution:
                     A[x][y] = 0
                     seen.add((x, y))
                     for dx, dy in D:
-                        if 0 <= x + dx < M and 0 <= y + \
-                                dy < N and A[x + dx][y + dy] == 1 and (x + dx, y + dy) not in seen:
+                        if (
+                            0 <= x + dx < M
+                            and 0 <= y + dy < N
+                            and A[x + dx][y + dy] == 1
+                            and (x + dx, y + dy) not in seen
+                        ):
                             seen.add((x + dx, y + dy))
                             Q.append([x + dx, y + dy])
             corr.extend([x, y])

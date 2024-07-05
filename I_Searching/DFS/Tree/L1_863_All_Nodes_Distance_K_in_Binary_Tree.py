@@ -18,6 +18,7 @@ class Solution:
                 G[node].append(p)
             dfs(node.left, node)
             dfs(node.right, node)
+
         dfs(root, None)
 
         Q = [(target, k)]

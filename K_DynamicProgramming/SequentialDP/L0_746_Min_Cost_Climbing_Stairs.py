@@ -10,6 +10,7 @@ class Solution:
             if i >= len(A):
                 return 0
             return A[i] + min(dfs(i + 1), dfs(i + 2))
+
         return min(dfs(0), dfs(1))
 
 

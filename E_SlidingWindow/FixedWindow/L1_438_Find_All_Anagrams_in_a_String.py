@@ -9,7 +9,7 @@ class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
         ans = []
         t = Counter(p)
-        cnt = Counter(s[:len(p)])
+        cnt = Counter(s[: len(p)])
         if t == cnt:
             ans.append(0)
 

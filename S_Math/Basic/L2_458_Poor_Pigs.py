@@ -11,6 +11,6 @@ Thus, we just need to make sure: [T//D+1] ** n >= buckets
 class Solution:
     def poorPigs(self, b: int, D: int, T: int) -> int:
         pigs = 0
-        while (T // D + 1)**pigs < b:
+        while (T // D + 1) ** pigs < b:
             pigs += 1
         return pigs

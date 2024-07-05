@@ -27,5 +27,5 @@ def solution(s):
     return str(int(dp(n)))
 
 
-ans = solution('5')
+ans = solution("5")
 print(ans)

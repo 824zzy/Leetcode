@@ -20,6 +20,7 @@ class Solution:
         dfs(0)
         return ans
 
+
 # dfs with state
 
 
@@ -32,7 +33,7 @@ class Solution:
             if not N:
                 return
             for i, n in enumerate(N):
-                dfs(P + [n], N[i + 1:])
+                dfs(P + [n], N[i + 1 :])
 
         dfs([], A)
         return self.ans

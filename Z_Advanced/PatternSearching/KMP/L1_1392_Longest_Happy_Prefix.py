@@ -13,4 +13,4 @@ class Solution:
             if s[i] == s[j]:
                 i += 1
                 lps[j] = i
-        return s[:lps[-1]]
+        return s[: lps[-1]]

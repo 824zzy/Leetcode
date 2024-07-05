@@ -6,9 +6,7 @@ notice that width(10^9) is way greater than height(100), so
 
 
 class Solution:
-    def countRectangles(self,
-                        A: List[List[int]],
-                        P: List[List[int]]) -> List[int]:
+    def countRectangles(self, A: List[List[int]], P: List[List[int]]) -> List[int]:
         sd = defaultdict(list)
         for i, j in sorted(A):
             sd[j].append(i)

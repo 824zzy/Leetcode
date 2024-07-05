@@ -28,6 +28,7 @@ class Graph:
                     heappush(pq, (c + self.G[i][j], j))
         return -1
 
+
 # another way to implement the same thing
 
 

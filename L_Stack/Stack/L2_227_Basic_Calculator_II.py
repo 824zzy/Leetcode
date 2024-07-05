@@ -34,24 +34,24 @@ class Solution:
 class Solution:
     def calculate(self, s: str) -> int:
         def compute(x, y, op):
-            if op == '+':
+            if op == "+":
                 return x + y
-            if op == '-':
+            if op == "-":
                 return x - y
-            if op == '*':
+            if op == "*":
                 return x * y
-            if op == '/':
+            if op == "/":
                 return x // y
 
-        s += '+'
+        s += "+"
         n_stk = []
         op_stk = []
-        n = ''
+        n = ""
         for i, c in enumerate(s):
             if c.isdigit():
                 n += c
-            if c in '+-*/':
-                if op_stk and op_stk[-1] in '*/':
+            if c in "+-*/":
+                if op_stk and op_stk[-1] in "*/":
                     y = int(n)
                     op = op_stk.pop()
                     x = n_stk.pop()
@@ -61,7 +61,7 @@ class Solution:
                     n_stk.append(int(n))
                     if i != len(s) - 1:
                         op_stk.append(c)
-                n = ''
+                n = ""
 
         ans = n_stk.pop(0)
         while n_stk and op_stk:

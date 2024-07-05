@@ -9,7 +9,7 @@ class Solution:
             return False
         has_low, has_upper, has_digit, has_special = False, False, False, False
         special = set("!@#$%^&*()-+")
-        digits = set('12343567890')
+        digits = set("12343567890")
         for i, c in enumerate(A):
             if c.islower():
                 has_low = True

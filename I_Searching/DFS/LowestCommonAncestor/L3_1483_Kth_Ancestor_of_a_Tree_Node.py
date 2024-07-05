@@ -18,5 +18,5 @@ class TreeAncestor:
         while k > 0 and node != -1:
             i = int(log2(k))
             node = self.dp[node][i]
-            k -= (1 << i)
+            k -= 1 << i
         return node

@@ -10,6 +10,7 @@ class Solution:
             return []
         return [x // n + (i < x % n) for i in range(n)]
 
+
 # brute force simulation
 
 

@@ -5,7 +5,8 @@ Tarjan's algorithm to find strong connected component
 
 class Solution:
     def criticalConnections(
-            self, n: int, connections: List[List[int]]) -> List[List[int]]:
+        self, n: int, connections: List[List[int]]
+    ) -> List[List[int]]:
         G = defaultdict(list)
         for u, v in connections:
             G[u].append(v)

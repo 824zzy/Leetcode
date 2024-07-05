@@ -37,8 +37,7 @@ class Solution:
         counter = Counter(tasks)
 
         most_occurence = max([value for value in counter.values()])
-        num_keys = len(
-            [key for key in counter if counter[key] == most_occurence])
+        num_keys = len([key for key in counter if counter[key] == most_occurence])
 
         gapCount = most_occurence - 1
         gapLength = n - (num_keys - 1)

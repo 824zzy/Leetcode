@@ -9,10 +9,10 @@ class Solution:
         def dfs(i, j):
             if i == 0 and j == 0:
                 return 0, 1
-            elif not (0 <= i < len(A) and 0 <= j < len(A[0])) or A[i][j] == 'X':
+            elif not (0 <= i < len(A) and 0 <= j < len(A[0])) or A[i][j] == "X":
                 return -inf, 0
 
-            val = int(A[i][j]) if A[i][j] != 'S' else 0
+            val = int(A[i][j]) if A[i][j] != "S" else 0
             cnt = 0
 
             s1, c1 = dfs(i - 1, j)
@@ -30,4 +30,4 @@ class Solution:
             return val + maxS, cnt
 
         s, c = dfs(len(A) - 1, len(A[0]) - 1)
-        return s % (10**9 + 7) if s != -inf else 0, c % (10**9 + 7)
+        return s % (10 ** 9 + 7) if s != -inf else 0, c % (10 ** 9 + 7)

@@ -8,7 +8,7 @@ class Solution:
         op = [0] * len(A)
         p = 0
         for i in range(len(A)):
-            if A[i] == 'N':
+            if A[i] == "N":
                 p += 1
             op[i] = p
         op = [0] + op
@@ -16,7 +16,7 @@ class Solution:
         cl = [0] * len(A)
         p = 0
         for i in reversed(range(len(A))):
-            if A[i] == 'Y':
+            if A[i] == "Y":
                 p += 1
             cl[i] = p
         cl = cl + [0]

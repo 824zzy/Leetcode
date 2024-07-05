@@ -14,14 +14,15 @@ class Solution:
 
             ans = 0
             for j in range(i, len(A)):
-                if mode == 'up' and A[i] < A[j]:
-                    ans += dp(j, k - 1, 'up')
-                elif mode == 'down' and A[i] > A[j]:
-                    ans += dp(j, k - 1, 'down')
+                if mode == "up" and A[i] < A[j]:
+                    ans += dp(j, k - 1, "up")
+                elif mode == "down" and A[i] > A[j]:
+                    ans += dp(j, k - 1, "down")
             return ans
 
-        return sum([dp(i, 2, 'up') for i in range(len(A))]) + \
-            sum([dp(i, 2, 'down') for i in range(len(A))])
+        return sum([dp(i, 2, "up") for i in range(len(A))]) + sum(
+            [dp(i, 2, "down") for i in range(len(A))]
+        )
 
 
 # O(N^2)
@@ -53,6 +54,9 @@ class Solution:
         for i in range(len(rating)):
             for j in range(i + 1, len(rating)):
                 for k in range(j + 1, len(rating)):
-                    if rating[i] < rating[j] < rating[k] or rating[i] > rating[j] > rating[k]:
+                    if (
+                        rating[i] < rating[j] < rating[k]
+                        or rating[i] > rating[j] > rating[k]
+                    ):
                         ans += 1
         return ans

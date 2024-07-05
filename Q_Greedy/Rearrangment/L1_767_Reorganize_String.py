@@ -8,15 +8,15 @@ class Solution:
     def reorganizeString(self, s: str) -> str:
         cnt = Counter(s)
         A = sorted([[v, k] for k, v in cnt.items()], reverse=True)
-        ans = [''] * len(s)
+        ans = [""] * len(s)
         i = 0
 
         if A[0][0] > (len(s) + 1) / 2:
-            return ''
+            return ""
         for v, k in A:
             for _ in range(v):
                 ans[i] = k
                 i += 2
                 if i >= len(s):
                     i = 1
-        return ''.join(ans)
+        return "".join(ans)

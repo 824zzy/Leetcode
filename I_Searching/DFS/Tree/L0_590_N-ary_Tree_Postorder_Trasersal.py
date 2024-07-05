@@ -1,5 +1,5 @@
 class Solution:
-    def postorder(self, root: 'Node') -> List[int]:
+    def postorder(self, root: "Node") -> List[int]:
         self.ans = []
 
         def dfs(node):
@@ -8,5 +8,6 @@ class Solution:
             for n in node.children:
                 dfs(n)
             self.ans.append(node.val)
+
         dfs(root)
         return self.ans

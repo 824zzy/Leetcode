@@ -27,7 +27,6 @@ class Trie:
 
 
 class WordFilter:
-
     def __init__(self, words: List[str]):
         self.trie = Trie()
         for i, word in enumerate(words):

@@ -9,10 +9,9 @@ from header import *
 
 
 class Solution:
-    def handleQuery(self,
-                    nums1: List[int],
-                    nums2: List[int],
-                    queries: List[List[int]]) -> List[int]:
+    def handleQuery(
+        self, nums1: List[int], nums2: List[int], queries: List[List[int]]
+    ) -> List[int]:
         n = len(nums1)
         cnt1 = [0] * (4 * n)
         flip = [False] * (4 * n)

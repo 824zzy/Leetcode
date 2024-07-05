@@ -17,9 +17,9 @@ class Solution:
                 if i >= k:
                     hs = (hs - (ord(s[i - k]) - 97) * p) % mod  # rolling hash
                 if i + 1 >= k:
-                    if hs in seen and s[i + 1 - k:i + 1] in seen[hs]:
-                        return s[i + 1 - k:i + 1]  # resolve hash collision
-                    seen.setdefault(hs, set()).add(s[i + 1 - k:i + 1])
+                    if hs in seen and s[i + 1 - k : i + 1] in seen[hs]:
+                        return s[i + 1 - k : i + 1]  # resolve hash collision
+                    seen.setdefault(hs, set()).add(s[i + 1 - k : i + 1])
             return ""
 
         l, r = 0, len(s) - 1

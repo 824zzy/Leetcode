@@ -1,5 +1,5 @@
 class Solution:
-    def maxDepth(self, root: 'Node') -> int:
+    def maxDepth(self, root: "Node") -> int:
         self.ans = 0
 
         def dfs(node, d):

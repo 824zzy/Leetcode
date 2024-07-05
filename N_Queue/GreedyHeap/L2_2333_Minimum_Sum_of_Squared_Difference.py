@@ -5,11 +5,8 @@ Fill gap trick, pretty much the same as the 2233.
 
 class Solution:
     def minSumSquareDiff(
-            self,
-            nums1: List[int],
-            nums2: List[int],
-            k1: int,
-            k2: int) -> int:
+        self, nums1: List[int], nums2: List[int], k1: int, k2: int
+    ) -> int:
         pq = [-abs(x - y) for x, y in list(zip(nums1, nums2))]
         if -sum(pq) <= (k1 + k2):
             return 0

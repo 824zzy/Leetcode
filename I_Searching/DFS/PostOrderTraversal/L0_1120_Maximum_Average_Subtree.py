@@ -12,8 +12,8 @@ class Solution:
                 return 0, 0
             l_cnt, l_sm = dfs(node.left)
             r_cnt, r_sm = dfs(node.right)
-            self.ans = max(self.ans,
-                           (l_sm + r_sm + node.val) / (l_cnt + r_cnt + 1))
+            self.ans = max(self.ans, (l_sm + r_sm + node.val) / (l_cnt + r_cnt + 1))
             return l_cnt + r_cnt + 1, l_sm + r_sm + node.val
+
         dfs(root)
         return self.ans

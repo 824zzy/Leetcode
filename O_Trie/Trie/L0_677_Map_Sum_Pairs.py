@@ -14,7 +14,7 @@ class MapSum:
             if c not in node:
                 node[c] = {}
             node = node[c]
-        node['#'] = v
+        node["#"] = v
 
     def sum(self, prefix: str) -> int:
         # find the node start with prefix
@@ -29,7 +29,7 @@ class MapSum:
         while Q:
             i = Q.pop()
             for k, v in i.items():
-                if k == '#':
+                if k == "#":
                     ans += v
                 else:
                     Q.append(v)

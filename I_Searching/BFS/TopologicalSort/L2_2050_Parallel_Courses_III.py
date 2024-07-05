@@ -5,10 +5,7 @@ from header import *
 
 
 class Solution:
-    def minimumTime(self,
-                    n: int,
-                    relations: List[List[int]],
-                    time: List[int]) -> int:
+    def minimumTime(self, n: int, relations: List[List[int]], time: List[int]) -> int:
         e = defaultdict(list)
         inD = [0] * n
         for i, j in relations:

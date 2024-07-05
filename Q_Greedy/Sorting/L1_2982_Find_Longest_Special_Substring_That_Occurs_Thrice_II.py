@@ -21,6 +21,7 @@ class Solution:
                 ans = max(ans, v[2])
         return ans
 
+
 # group + categorization
 
 
@@ -60,7 +61,7 @@ class Solution:
                 if t not in s:  # pruning
                     continue
                 t = list(chr(c + 97) * l)
-                sw = list(s[:l - 1])
+                sw = list(s[: l - 1])
                 for i in range(l - 1, len(s)):
                     sw.append(s[i])
                     if sw == t:

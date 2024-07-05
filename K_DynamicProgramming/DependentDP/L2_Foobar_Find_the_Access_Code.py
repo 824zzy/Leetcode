@@ -18,6 +18,7 @@ def solution(A):
             if A[j] % A[i] == 0:
                 ans += dp(j, k + 1)
         return ans
+
     return dp(0, 1)
 
 

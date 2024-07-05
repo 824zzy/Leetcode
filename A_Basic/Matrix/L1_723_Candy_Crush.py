@@ -15,8 +15,12 @@ class Solution:
                     for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
                         x, y = i, j
                         tmp = {(i, j)}
-                        while 0 <= x + dx < len(B) and 0 <= y + dy < len(
-                                B[0]) and B[x][y] == B[x + dx][y + dy] and B[x][y] != 0:
+                        while (
+                            0 <= x + dx < len(B)
+                            and 0 <= y + dy < len(B[0])
+                            and B[x][y] == B[x + dx][y + dy]
+                            and B[x][y] != 0
+                        ):
                             tmp.add((x + dx, y + dy))
                             x += dx
                             y += dy

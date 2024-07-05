@@ -28,15 +28,12 @@ class SegmentTree:
 
 
 class Solution:
-    def maximumSumQueries(self,
-                          nums1: List[int],
-                          nums2: List[int],
-                          queries: List[List[int]]) -> List[int]:
-        v2i = {x: i for i, x in enumerate(
-            sorted(set(nums2 + [y for _, y in queries])))}
+    def maximumSumQueries(
+        self, nums1: List[int], nums2: List[int], queries: List[List[int]]
+    ) -> List[int]:
+        v2i = {x: i for i, x in enumerate(sorted(set(nums2 + [y for _, y in queries])))}
         A = sorted(zip(nums1, nums2), reverse=True)
-        queries = sorted([q + [i]
-                         for i, q in enumerate(queries)], reverse=True)
+        queries = sorted([q + [i] for i, q in enumerate(queries)], reverse=True)
         ST = SegmentTree(len(v2i) + 1)
         ans = [-1] * len(queries)
         j = 0

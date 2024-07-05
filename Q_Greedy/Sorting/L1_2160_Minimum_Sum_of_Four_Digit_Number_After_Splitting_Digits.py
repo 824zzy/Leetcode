@@ -16,6 +16,7 @@ class Solution:
                 b = 10 * b + A[i]
         return a + b
 
+
 # suboptimal brute force
 
 

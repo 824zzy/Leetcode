@@ -20,19 +20,20 @@ class Solution:
             if prev is None or abs(A[i] - prev) <= k:
                 ans = max(ans, 1 + dp(i + 1, A[i]))
             return ans
+
         return dp(0, None)
 
 
 # bottom up version of the above solution which is accepted
 class Solution:
     def longestIdealString(self, s: str, k: int) -> int:
-        dp = [[0 for _ in range(26)] for _ in range(len(s)+1)]
+        dp = [[0 for _ in range(26)] for _ in range(len(s) + 1)]
         for i in reversed(range(len(s))):
-            cur = ord(s[i])-97
+            cur = ord(s[i]) - 97
             for pre in range(26):
-                dp[i][pre] = dp[i+1][pre]
-                if abs(cur-pre) <= k:
-                    dp[i][pre] = max(dp[i][pre], 1+dp[i+1][cur])
+                dp[i][pre] = dp[i + 1][pre]
+                if abs(cur - pre) <= k:
+                    dp[i][pre] = max(dp[i][pre], 1 + dp[i + 1][cur])
         return max(dp[0])
 
 

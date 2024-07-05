@@ -5,7 +5,6 @@ from header import *
 
 
 class MaxStack:
-
     def __init__(self):
         self.stack = SortedList()
         self.values = SortedList()

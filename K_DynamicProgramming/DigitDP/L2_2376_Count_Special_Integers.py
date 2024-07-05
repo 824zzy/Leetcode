@@ -18,7 +18,7 @@ class Solution:
                 return 1 if is_num else 0
             # deal with leading zero
             ans = 0
-            if not is_num and low[i] == '0':
+            if not is_num and low[i] == "0":
                 ans += dfs(i + 1, True, False, False, 0)
             # enumerate from lo to high
             lo = int(low[i]) if limit_low else 0
@@ -26,7 +26,13 @@ class Solution:
             d0 = 0 if is_num else 1
             for d in range(max(lo, d0), hi + 1):
                 if mask & (1 << d) == 0:
-                    ans += dfs(i + 1, limit_low and d == lo,
-                               limit_high and d == hi, True, mask ^ (1 << d))
+                    ans += dfs(
+                        i + 1,
+                        limit_low and d == lo,
+                        limit_high and d == hi,
+                        True,
+                        mask ^ (1 << d),
+                    )
             return ans
+
         return dfs(0, True, True, False, 0)

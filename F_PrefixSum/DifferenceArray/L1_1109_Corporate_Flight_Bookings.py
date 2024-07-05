@@ -8,9 +8,7 @@ We accumulate these changes then we have the result that we want.
 
 
 class Solution:
-    def corpFlightBookings(self,
-                           bookings: List[List[int]],
-                           n: int) -> List[int]:
+    def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:
         cnt = [0] * (n + 1)
         for i, j, k in bookings:
             cnt[i - 1] += k

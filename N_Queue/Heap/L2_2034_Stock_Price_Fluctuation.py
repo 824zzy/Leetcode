@@ -6,7 +6,7 @@ while hashmap(always updated) timestamp's value not equals to current maximum/mi
 class StockPrice:
     def __init__(self):
         self.SP = {}
-        self.cur = -float('inf')
+        self.cur = -float("inf")
         self.max = []
         self.min = []
 

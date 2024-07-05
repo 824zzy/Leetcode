@@ -14,8 +14,12 @@ class Solution:
         def dfs(x, y):
             seen.add((x, y))
             for dx, dy in D:
-                if 0 <= x + dx < m and 0 <= y + \
-                        dy < n and G[x + dx][y + dy] == 1 and (x + dx, y + dy) not in seen:
+                if (
+                    0 <= x + dx < m
+                    and 0 <= y + dy < n
+                    and G[x + dx][y + dy] == 1
+                    and (x + dx, y + dy) not in seen
+                ):
                     dfs(dx + x, dy + y)
 
         i, j = next((i, j) for i in range(m) for j in range(n) if G[i][j])
@@ -28,8 +32,11 @@ class Solution:
             nextQ = []
             for x, y in Q:
                 for dx, dy in D:
-                    if 0 <= x + dx < m and 0 <= y + \
-                            dy < n and (x + dx, y + dy) not in seen:
+                    if (
+                        0 <= x + dx < m
+                        and 0 <= y + dy < n
+                        and (x + dx, y + dy) not in seen
+                    ):
                         if G[x + dx][y + dy] == 1:
                             return ans
                         nextQ.append((x + dx, y + dy))
@@ -42,8 +49,7 @@ class Solution:
         while pq:
             cost, x, y = heappop(pq)
             for dx, dy in D:
-                if 0 <= x + dx < m and 0 <= y + \
-                        dy < n and (x + dx, y + dy) not in seen:
+                if 0 <= x + dx < m and 0 <= y + dy < n and (x + dx, y + dy) not in seen:
                     if G[x + dx][y + dy] == 1:
                         return cost
                     seen.add((x + dx, y + dy))

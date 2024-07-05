@@ -18,7 +18,7 @@ class Solution:
         for w in words:
             dp[w] = 1
             for i in range(len(w)):
-                pre = w[:i] + w[i + 1:]
+                pre = w[:i] + w[i + 1 :]
                 dp[w] = max(dp[w], dp[pre] + 1)
             ans = max(ans, dp[w])
         return ans
@@ -32,7 +32,7 @@ class Solution:
         def dp(word):
             ans = 1
             for i in range(len(word)):
-                pre = word[:i] + word[i + 1:]
+                pre = word[:i] + word[i + 1 :]
                 if pre in wordset:
                     ans = max(ans, dp(pre) + 1)
             return ans

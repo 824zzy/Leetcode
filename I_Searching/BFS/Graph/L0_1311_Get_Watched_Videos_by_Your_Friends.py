@@ -5,11 +5,9 @@ not hard and be careful
 
 
 class Solution:
-    def watchedVideosByFriends(self,
-                               V: List[List[str]],
-                               friends: List[List[int]],
-                               id: int,
-                               level: int) -> List[str]:
+    def watchedVideosByFriends(
+        self, V: List[List[str]], friends: List[List[int]], id: int, level: int
+    ) -> List[str]:
         G = defaultdict(dict)
         for i, v in enumerate(friends):
             for j in v:

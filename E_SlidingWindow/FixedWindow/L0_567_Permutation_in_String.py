@@ -11,7 +11,7 @@ from header import *
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
         t = Counter(s1)
-        cnt = Counter(s2[:len(s1)])
+        cnt = Counter(s2[: len(s1)])
         if cnt == t:
             return True
         for i in range(len(s1), len(s2)):

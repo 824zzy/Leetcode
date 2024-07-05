@@ -2,10 +2,11 @@
 find locations by traverse.
 """
 
+from header import *
+
 
 class Solution:
-    def nodesBetweenCriticalPoints(
-            self, head: Optional[ListNode]) -> List[int]:
+    def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:
         pre = head.val
         cur = head.next
         locs = []
@@ -20,5 +21,7 @@ class Solution:
         if len(locs) < 2:
             return [-1, -1]
         else:
-            return [min([locs[i + 1] - locs[i]
-                        for i in range(len(locs) - 1)]), locs[-1] - locs[0]]
+            return [
+                min([locs[i + 1] - locs[i] for i in range(len(locs) - 1)]),
+                locs[-1] - locs[0],
+            ]

@@ -18,8 +18,11 @@ class Solution:
                         x, y, fish = Q.pop(0)
                         _ans += fish
                         for dx, dy in D:
-                            if 0 <= x + dx < len(G) and 0 <= y + \
-                                    dy < len(G[0]) and G[x + dx][y + dy]:
+                            if (
+                                0 <= x + dx < len(G)
+                                and 0 <= y + dy < len(G[0])
+                                and G[x + dx][y + dy]
+                            ):
                                 tmp = G[x + dx][y + dy]
                                 G[x + dx][y + dy] = 0
                                 Q.append((x + dx, y + dy, tmp))

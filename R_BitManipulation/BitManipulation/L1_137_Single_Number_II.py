@@ -11,4 +11,4 @@ class Solution:
             for x in A:
                 cnt += (x >> i) & 1
             ans |= (cnt % 3) << i
-        return ans - 2**32 if ans >= 2**31 else ans
+        return ans - 2 ** 32 if ans >= 2 ** 31 else ans

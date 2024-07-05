@@ -6,7 +6,7 @@ from header import *
 
 class Solution:
     def numberOfPaths(self, A: List[List[int]], k: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         dp = [[[0] * k for _ in range(len(A[0]))] for _ in range(len(A))]
         dp[0][0][A[0][0] % k] += 1
         for i in range(1, len(A)):
@@ -20,15 +20,16 @@ class Solution:
         for i in range(1, len(A)):
             for j in range(1, len(A[0])):
                 for kk in range(k):
-                    dp[i][j][(kk + A[i][j]) % k] += (dp[i][j - 1]
-                                                     [kk] + dp[i - 1][j][kk]) % MOD
+                    dp[i][j][(kk + A[i][j]) % k] += (
+                        dp[i][j - 1][kk] + dp[i - 1][j][kk]
+                    ) % MOD
         return dp[-1][-1][0] % MOD
 
 
 # top down solution will TLE
 class Solution:
     def numberOfPaths(self, A: List[List[int]], k: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @cache
         def dp(i, j, sm):

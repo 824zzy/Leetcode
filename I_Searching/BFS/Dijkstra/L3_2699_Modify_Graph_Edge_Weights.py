@@ -5,12 +5,9 @@ from header import *
 
 
 class Solution:
-    def modifiedGraphEdges(self,
-                           n: int,
-                           edges: List[List[int]],
-                           src: int,
-                           dst: int,
-                           t: int) -> List[List[int]]:
+    def modifiedGraphEdges(
+        self, n: int, edges: List[List[int]], src: int, dst: int, t: int
+    ) -> List[List[int]]:
         G = [[0] * n for _ in range(n)]
         for u, v, w in edges:
             G[u][v] = G[v][u] = w

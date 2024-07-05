@@ -17,19 +17,22 @@ class Solution:
             node = trie
             for c in word:
                 node = node.setdefault(c, {})
-            node['#'] = word
+            node["#"] = word
 
         def search(p, x, y):
             node = p[A[x][y]]
-            if '#' in node:
-                ans.append(node['#'])
+            if "#" in node:
+                ans.append(node["#"])
                 # remove the matched word to avoid duplicates
-                node.pop('#')
+                node.pop("#")
             tmp = A[x][y]
-            A[x][y] = '!'
+            A[x][y] = "!"
             for dx, dy in D:
-                if 0 <= x + dx < len(A) and 0 <= y + \
-                        dy < len(A[0]) and A[x + dx][y + dy] in node:
+                if (
+                    0 <= x + dx < len(A)
+                    and 0 <= y + dy < len(A[0])
+                    and A[x + dx][y + dy] in node
+                ):
                     search(node, x + dx, y + dy)
             A[x][y] = tmp
             # Pruning: incrementally remove the matched leaf node in Trie.

@@ -5,10 +5,7 @@ from header import *
 
 
 class Solution:
-    def maximumPoints(self,
-                      edges: List[List[int]],
-                      A: List[int],
-                      k: int) -> int:
+    def maximumPoints(self, edges: List[List[int]], A: List[int], k: int) -> int:
         G = defaultdict(list)
         for i, j in edges:
             G[i].append(j)
@@ -24,6 +21,7 @@ class Solution:
                     if half_cnt + 1 < 14:
                         ans2 += dp(j, i, half_cnt + 1)
             return max(ans1, ans2)
+
         return dp(0, None, 0)
 
 

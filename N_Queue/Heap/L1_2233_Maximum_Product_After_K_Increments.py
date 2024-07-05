@@ -15,5 +15,5 @@ class Solution:
         ans = 1
         for x in A:
             ans *= x
-            ans %= 10**9 + 7
+            ans %= 10 ** 9 + 7
         return ans

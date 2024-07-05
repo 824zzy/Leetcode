@@ -19,4 +19,4 @@ class Solution:
                 ans.append(odd.pop(0))
             else:
                 ans.append(even.pop(0))
-        return int(str(''.join(ans)))
+        return int(str("".join(ans)))

@@ -13,5 +13,5 @@ class Solution:
         ans = []
         for k, v in cnt.items():
             for i in range(0, len(v), k):
-                ans.append(v[i:i + k])
+                ans.append(v[i : i + k])
         return ans

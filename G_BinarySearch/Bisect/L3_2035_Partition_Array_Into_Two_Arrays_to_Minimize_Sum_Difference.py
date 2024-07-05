@@ -17,15 +17,10 @@ class Solution:
         L, R = A[:n], A[n:]
         Lsum, Rsum = sum(L), sum(R)
 
-        ans = float('inf')
+        ans = float("inf")
         for i in range(1, n + 1):
             # find all target candidate by combination
-            Lcands = sorted(
-                2 *
-                sum(combo) -
-                Lsum for combo in combinations(
-                    L,
-                    i))
+            Lcands = sorted(2 * sum(combo) - Lsum for combo in combinations(L, i))
             for Rcand in combinations(R, n - i):
                 r = 2 * sum(Rcand) - Rsum
                 idx = bisect_left(Lcands, -r)
@@ -48,7 +43,6 @@ class Solution:
                 return abs(sm - prefix[len(A) - 1 - m - n])
             if n == t:
                 return abs(sm + prefix[len(A) - 1 - m - n])
-            return min(dp(sm + A[m + n], m + 1, n),
-                       dp(sm - A[m + n], m, n + 1))
+            return min(dp(sm + A[m + n], m + 1, n), dp(sm - A[m + n], m, n + 1))
 
         return dp(0, 0, 0)

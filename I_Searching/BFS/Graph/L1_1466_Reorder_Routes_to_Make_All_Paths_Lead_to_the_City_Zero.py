@@ -24,6 +24,7 @@ class Solution:
                         ans += 1
         return ans
 
+
 # dfs solution
 
 
@@ -41,4 +42,5 @@ class Solution:
                     ans += x
                     ans += dfs(j, i)
             return ans
+
         return dfs(0, -1)

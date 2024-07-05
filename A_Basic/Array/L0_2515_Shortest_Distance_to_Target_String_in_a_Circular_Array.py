@@ -19,6 +19,7 @@ class Solution:
                 ans = min(ans, i - s, len(A) - (i - s))
         return ans if ans != inf else -1
 
+
 # solution 2
 
 

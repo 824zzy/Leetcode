@@ -7,8 +7,7 @@ from header import *
 class Solution:
     def singleNonDuplicate(self, A: List[int]) -> int:
         def enough(m):
-            if (m % 2 == 0 and A[m] == A[m + 1]) or \
-               (m % 2 == 1 and A[m] == A[m - 1]):
+            if (m % 2 == 0 and A[m] == A[m + 1]) or (m % 2 == 1 and A[m] == A[m - 1]):
                 return True
             else:
                 return False
@@ -21,6 +20,7 @@ class Solution:
             else:
                 r = m
         return A[l]
+
 
 # smart solution using XOR
 

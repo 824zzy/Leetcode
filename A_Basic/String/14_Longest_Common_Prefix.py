@@ -5,7 +5,7 @@
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        ans = ''
+        ans = ""
         for c in zip(*strs):
             if len(set(c)) != 1:
                 return ans

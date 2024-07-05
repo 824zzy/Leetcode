@@ -12,6 +12,7 @@ class Solution:
             prev, head.next, head = head, prev, head.next
         return prev
 
+
 # rlm=lmr
 
 
@@ -24,6 +25,7 @@ class Solution:
             prev = head
             head = nxt
         return prev
+
 
 # or using stack
 

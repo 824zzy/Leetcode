@@ -5,9 +5,8 @@ from header import *
 
 
 class Solution:
-    def vowelStrings(self, words: List[str],
-                     queries: List[List[int]]) -> List[int]:
-        A = [1 if w[0] in 'aeiou' and w[-1] in 'aeiou' else 0 for w in words]
+    def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
+        A = [1 if w[0] in "aeiou" and w[-1] in "aeiou" else 0 for w in words]
         A = list(accumulate(A, initial=0))
         ans = []
         for i, j in queries:

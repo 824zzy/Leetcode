@@ -15,6 +15,7 @@ class Solution:
                 return dp(i + 1, j - 1)
             # not equal
             return min(1 + dp(i + 1, j), 1 + dp(i, j - 1))
+
         return dp(0, len(s) - 1) <= k
 
 

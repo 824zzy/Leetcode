@@ -7,8 +7,8 @@ from header import *
 class Solution:
     def longestWord(self, W: List[str]) -> str:
         W.sort()
-        seen = {''}
-        ans = ''
+        seen = {""}
+        ans = ""
         for w in W:
             if w[:-1] in seen:
                 seen.add(w)

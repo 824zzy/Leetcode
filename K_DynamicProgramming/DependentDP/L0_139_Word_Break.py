@@ -15,7 +15,7 @@ class Solution:
                 return True
             ans = False
             for w in wordDict:
-                if s[i:i + len(w)] == w:
+                if s[i : i + len(w)] == w:
                     ans |= dfs(i + len(w))
             return ans
 
@@ -31,6 +31,6 @@ class Solution:
         for i in range(len(s)):
             if dp[i]:
                 for w in wordDict:
-                    if s[i:i + len(w)] == w:
+                    if s[i : i + len(w)] == w:
                         dp[i + len(w)] = True
         return dp[-1]

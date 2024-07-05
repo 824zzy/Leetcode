@@ -13,8 +13,16 @@ class Solution:
             for x, y, step in Q:
                 if x == tx and y == ty:
                     return step
-                for dx, dy in ((1, 2), (2, 1), (2, -1), (1, -2),
-                               (-1, 2), (-2, 1), (-1, -2), (-2, -1)):
+                for dx, dy in (
+                    (1, 2),
+                    (2, 1),
+                    (2, -1),
+                    (1, -2),
+                    (-1, 2),
+                    (-2, 1),
+                    (-1, -2),
+                    (-2, -1),
+                ):
                     if (x + dx, y + dy) not in seen:
                         seen.add((x + dx, y + dy))
                         nxtQ.append((x + dx, y + dy, step + 1))

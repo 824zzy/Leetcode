@@ -18,6 +18,7 @@ class Solution:
 
         return max(dp(0, 1), dp(0, -1))
 
+
 # solution 2: variance of kadane's algorithm
 
 

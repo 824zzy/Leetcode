@@ -33,4 +33,4 @@ class Solution:
             ll = i - l
             rr = r - i
             ans += A[i] * ll * rr
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

@@ -15,6 +15,7 @@ class Solution:
             dfs(node.left)
             vals.append(node.val)
             dfs(node.right)
+
         dfs(root)
 
         def fn(i, j):

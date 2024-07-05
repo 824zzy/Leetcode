@@ -14,11 +14,11 @@ class Solution:
                 for j in range(i * i, n, i):
                     sieve[j] = 0
 
-        ans = ''
+        ans = ""
         for i in range(n):
             if sieve[i]:
                 ans += str(i)
-        return ans[idx:idx + 5]
+        return ans[idx : idx + 5]
 
 
 s = Solution()

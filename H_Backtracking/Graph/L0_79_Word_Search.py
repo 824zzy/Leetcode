@@ -14,10 +14,13 @@ class Solution:
                 return True
 
             for dx, dy in D:
-                if 0 <= x + dx < M and 0 <= y + \
-                        dy < N and A[x + dx][y + dy] == word[idx]:
+                if (
+                    0 <= x + dx < M
+                    and 0 <= y + dy < N
+                    and A[x + dx][y + dy] == word[idx]
+                ):
                     tmp = A[x][y]
-                    A[x][y] = ''
+                    A[x][y] = ""
                     if dfs(x + dx, y + dy, idx + 1):
                         return True
                     A[x][y] = tmp

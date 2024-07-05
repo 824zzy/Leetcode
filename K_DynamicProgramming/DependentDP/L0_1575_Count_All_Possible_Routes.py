@@ -5,14 +5,9 @@ from header import *
 
 
 class Solution:
-    def countRoutes(
-            self,
-            A: List[int],
-            start: int,
-            finish: int,
-            fuel: int) -> int:
+    def countRoutes(self, A: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(A)
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @cache
         def dp(i, f):

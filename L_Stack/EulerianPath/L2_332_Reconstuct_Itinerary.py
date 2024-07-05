@@ -28,7 +28,7 @@ class Solution:
         G = defaultdict(list)
         cnt = Counter()
         for i, j in tickets:
-            cnt[i + ' ' + j] += 1
+            cnt[i + " " + j] += 1
             G[i].append(j)
 
         for k in G:
@@ -40,14 +40,15 @@ class Solution:
             if len(stk) == len(tickets) + 1:
                 return stk
             for y in G[x]:
-                if cnt[x + ' ' + y] > 0:
-                    cnt[x + ' ' + y] -= 1
+                if cnt[x + " " + y] > 0:
+                    cnt[x + " " + y] -= 1
                     stk.append(y)
                     if dfs(y):
                         return stk
                     stk.pop()
-                    cnt[x + ' ' + y] += 1
-        return dfs('JFK')
+                    cnt[x + " " + y] += 1
+
+        return dfs("JFK")
 
 
 """

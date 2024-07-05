@@ -6,7 +6,6 @@ from header import *
 
 
 class Solution:
-
     def __init__(self, head: ListNode):
         self.head = head
 
@@ -20,6 +19,7 @@ class Solution:
                 ans = node.val
             node = node.next
         return ans
+
 
 # straightforward solution
 

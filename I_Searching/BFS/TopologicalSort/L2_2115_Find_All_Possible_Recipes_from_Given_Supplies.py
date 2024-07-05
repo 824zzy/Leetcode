@@ -4,10 +4,9 @@ convert problem to topological sort
 
 
 class Solution:
-    def findAllRecipes(self,
-                       R: List[str],
-                       I: List[List[str]],
-                       S: List[str]) -> List[str]:
+    def findAllRecipes(
+        self, R: List[str], I: List[List[str]], S: List[str]
+    ) -> List[str]:
         G = defaultdict(list)
         inD = defaultdict(int)
         for r, i in zip(R, I):

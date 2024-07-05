@@ -8,7 +8,7 @@ from header import *
 
 class Solution:
     def jump(self, A: List[int]) -> int:
-        dp = [float('inf')] * len(A)
+        dp = [float("inf")] * len(A)
         dp[0] = 0
         for i in range(len(A)):
             for j in range(1, A[i] + 1):
@@ -27,4 +27,5 @@ class Solution:
             for j in range(i + 1, i + A[i] + 1):
                 ans = min(ans, 1 + dp(j))
             return ans
+
         return dp(0)

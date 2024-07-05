@@ -7,8 +7,7 @@ from header import *
 
 
 class Solution:
-    def differenceOfDistinctValues(self,
-                                   G: List[List[int]]) -> List[List[int]]:
+    def differenceOfDistinctValues(self, G: List[List[int]]) -> List[List[int]]:
         M, N = len(G), len(G[0])
         tl = defaultdict(set)
         br = defaultdict(set)
@@ -27,16 +26,15 @@ class Solution:
         ans = [[0 for j in range(N)] for i in range(M)]
         for i in range(M):
             for j in range(N):
-                ans[i][j] = abs(len(tl[(i - 1, j - 1)]) -
-                                len(br[(i + 1, j + 1)]))
+                ans[i][j] = abs(len(tl[(i - 1, j - 1)]) - len(br[(i + 1, j + 1)]))
         return ans
+
 
 # brute force: O(M*N*min(M, N))
 
 
 class Solution:
-    def differenceOfDistinctValues(self,
-                                   G: List[List[int]]) -> List[List[int]]:
+    def differenceOfDistinctValues(self, G: List[List[int]]) -> List[List[int]]:
         M, N = len(G), len(G[0])
         ans = [[0 for j in range(N)] for i in range(M)]
         for i in range(M):

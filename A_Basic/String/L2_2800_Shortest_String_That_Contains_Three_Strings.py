@@ -17,7 +17,7 @@ class Solution:
                     return s + t[i:]
             return s + t
 
-        ans = 'z' * 300
+        ans = "z" * 300
         for a, b, c in permutations((A, B, C)):
             abc = merge(merge(a, b), c)
             ans = min(ans, abc, key=lambda x: (len(x), x))
@@ -26,9 +26,15 @@ class Solution:
 
 class Solution:
     def minimumString(self, A: str, B: str, C: str) -> str:
-        ans = 'z' * (len(A) + len(B) + len(C))
-        for a, b, c in ((A, B, C), (A, C, B), (B, A, C),
-                        (B, C, A), (C, A, B), (C, B, A)):
+        ans = "z" * (len(A) + len(B) + len(C))
+        for a, b, c in (
+            (A, B, C),
+            (A, C, B),
+            (B, A, C),
+            (B, C, A),
+            (C, A, B),
+            (C, B, A),
+        ):
             if b in a:
                 ab = a
             else:

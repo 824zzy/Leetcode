@@ -31,4 +31,5 @@ class Solution:
                 if seen[nei] < seen[node]:
                     ans += dp(nei)
             return ans
-        return dp(1) % (10**9 + 7)
+
+        return dp(1) % (10 ** 9 + 7)

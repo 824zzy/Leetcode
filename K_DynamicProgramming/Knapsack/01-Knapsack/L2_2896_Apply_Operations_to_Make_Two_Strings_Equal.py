@@ -17,13 +17,13 @@ class Solution:
                 else:
                     return inf
             # op1
-            ans1 = A[i + 1] - A[i] + \
-                dp(i + 2, can_flip) if i < len(A) - 1 else inf
+            ans1 = A[i + 1] - A[i] + dp(i + 2, can_flip) if i < len(A) - 1 else inf
             # op2
             ans2 = x + dp(i + 1, can_flip + 1)
             # canFlip
             ans3 = dp(i + 1, can_flip - 1) if can_flip else inf
             return min(ans1, ans2, ans3)
+
         ans = dp(0, 0)
         return ans if ans != inf else -1
 

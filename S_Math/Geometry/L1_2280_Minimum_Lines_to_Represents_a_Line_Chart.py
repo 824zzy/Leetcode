@@ -17,6 +17,7 @@ class Solution:
                 res -= 1
         return res
 
+
 # avoid float calculation by add all slopes to a set
 
 
@@ -39,8 +40,10 @@ class Solution:
 class Solution:
     def minimumLines(self, A: List[List[int]]) -> int:
         ans = 0
-        A = [Fraction(A[i + 1][1] - A[i][1]) / Fraction(A[i + 1]
-                                                        [0] - A[i][0]) for i in range(len(A) - 1)]
+        A = [
+            Fraction(A[i + 1][1] - A[i][1]) / Fraction(A[i + 1][0] - A[i][0])
+            for i in range(len(A) - 1)
+        ]
         for i in range(len(A) - 1):
             if A[i] != A[i + 1]:
                 ans += 1

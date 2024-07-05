@@ -11,8 +11,9 @@ class Solution:
         prefix = [[0] * (n + 1) for _ in range(m + 1)]
         for i in range(m):
             for j in range(n):
-                prefix[i + 1][j + 1] = A[i][j] + prefix[i + 1][j] + \
-                    prefix[i][j + 1] - prefix[i][j]
+                prefix[i + 1][j + 1] = (
+                    A[i][j] + prefix[i + 1][j] + prefix[i][j + 1] - prefix[i][j]
+                )
         # subarray sum equals to t
         for i in range(m):
             for ii in range(i + 1):

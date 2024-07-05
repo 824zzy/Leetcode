@@ -11,6 +11,7 @@ class Solution:
 
         return self.isUnivalTree(root.left) and self.isUnivalTree(root.right)
 
+
 # traverse solution
 
 
@@ -42,5 +43,6 @@ class Solution:
                 self.ans = False
             dfs(node.left)
             dfs(node.right)
+
         dfs(root)
         return self.ans

@@ -20,8 +20,7 @@ class Solution:
                         for j in range(i + 1, len(s)):
                             if s[j] != s2[j] and s[j] == s2[i]:
                                 # swap
-                                ss = s[:i] + s[j] + \
-                                    s[i + 1:j] + s[i] + s[j + 1:]
+                                ss = s[:i] + s[j] + s[i + 1 : j] + s[i] + s[j + 1 :]
                                 if ss not in seen:
                                     seen.add(ss)
                                     nxtQ.append(ss)

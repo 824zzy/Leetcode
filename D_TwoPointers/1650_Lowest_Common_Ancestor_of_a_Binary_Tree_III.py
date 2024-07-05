@@ -4,7 +4,7 @@ cyclic two pointer
 
 
 class Solution:
-    def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
+    def lowestCommonAncestor(self, p: "Node", q: "Node") -> "Node":
         pp, qq = p, q
         while pp != qq:
             if not pp:

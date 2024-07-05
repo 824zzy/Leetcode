@@ -8,9 +8,9 @@ class Solution:
         op = 0
         ans = []
         for c in s:
-            if c == '(':
+            if c == "(":
                 op += 1
             ans.append(op & 1)
-            if c == ')':
+            if c == ")":
                 op -= 1
         return ans

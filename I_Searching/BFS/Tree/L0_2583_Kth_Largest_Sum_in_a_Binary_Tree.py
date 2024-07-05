@@ -38,6 +38,7 @@ class Solution:
             T[d].append(node.val)
             dfs(node.left, d + 1)
             dfs(node.right, d + 1)
+
         dfs(root, 0)
 
         A = sorted([sum(x) for x in T.values()], reverse=True)

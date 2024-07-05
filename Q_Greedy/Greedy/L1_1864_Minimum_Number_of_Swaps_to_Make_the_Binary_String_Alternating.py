@@ -5,8 +5,8 @@ greedily count the minimum wrong positions
 
 class Solution:
     def minSwaps(self, s: str) -> int:
-        ones = s.count('1')
-        zeros = s.count('0')
+        ones = s.count("1")
+        zeros = s.count("0")
         if abs(ones - zeros) > 1:
             return -1
 
@@ -20,8 +20,8 @@ class Solution:
             return cnt // 2
 
         if ones > zeros:  # 1 in even position
-            return countWrong('1')
+            return countWrong("1")
         elif zeros > ones:  # 0 in even position
-            return countWrong('0')
+            return countWrong("0")
         else:
-            return min(countWrong('1'), countWrong('0'))
+            return min(countWrong("1"), countWrong("0"))

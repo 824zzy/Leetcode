@@ -27,6 +27,7 @@ class Solution:
 
         return dfs((1 << N) - 1) == 0
 
+
 # bottom up solution
 
 

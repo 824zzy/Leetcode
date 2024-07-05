@@ -5,12 +5,7 @@ from header import *
 
 
 class Solution:
-    def numberOfPowerfulInt(
-            self,
-            start: int,
-            finish: int,
-            limit: int,
-            s: str) -> int:
+    def numberOfPowerfulInt(self, start: int, finish: int, limit: int, s: str) -> int:
         high = str(finish)
         n = len(high)
         low = str(start).zfill(n)
@@ -25,15 +20,11 @@ class Solution:
             ans = 0
             if i < diff:
                 for d in range(lo, min(hi, limit) + 1):
-                    ans += dfs(i + 1, limit_low and d ==
-                               lo, limit_high and d == hi)
+                    ans += dfs(i + 1, limit_low and d == lo, limit_high and d == hi)
             else:
                 x = int(s[i - diff])
                 if lo <= x <= min(hi, limit):
-                    ans = dfs(
-                        i + 1,
-                        limit_low and x == lo,
-                        limit_high and x == hi)
+                    ans = dfs(i + 1, limit_low and x == lo, limit_high and x == hi)
             return ans
 
         return dfs(0, True, True)

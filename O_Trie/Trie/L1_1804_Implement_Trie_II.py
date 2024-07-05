@@ -11,10 +11,10 @@ class Trie:
         t = self.trie
         for c in word:
             if c not in t:
-                t[c] = {'cnt': 0}
-            t[c]['cnt'] += 1
+                t[c] = {"cnt": 0}
+            t[c]["cnt"] += 1
             t = t[c]
-        t['#'] = t.get('#', 0) + 1
+        t["#"] = t.get("#", 0) + 1
 
     def countWordsEqualTo(self, word: str) -> int:
         t = self.trie
@@ -22,7 +22,7 @@ class Trie:
             if c not in t:
                 return 0
             t = t[c]
-        return t.get('#', 0)
+        return t.get("#", 0)
 
     def countWordsStartingWith(self, prefix: str) -> int:
         t = self.trie
@@ -30,13 +30,13 @@ class Trie:
             if p not in t:
                 return 0
             t = t[p]
-        return t['cnt']
+        return t["cnt"]
 
     def erase(self, word: str) -> None:
         t = self.trie
         for w in word:
             if w not in t:
                 return
-            t[w]['cnt'] = max(0, t[w]['cnt'] - 1)
+            t[w]["cnt"] = max(0, t[w]["cnt"] - 1)
             t = t[w]
-        t['#'] = max(0, t['#'] - 1)
+        t["#"] = max(0, t["#"] - 1)

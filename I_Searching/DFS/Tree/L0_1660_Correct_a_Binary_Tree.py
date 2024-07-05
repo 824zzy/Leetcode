@@ -17,4 +17,5 @@ class Solution:
             node.right = dfs(node.right, d + 1)
             node.left = dfs(node.left, d + 1)
             return node
+
         return dfs(root, 0)

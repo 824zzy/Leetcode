@@ -14,5 +14,6 @@ class Solution:
             self.ans = min(self.ans, node.val, key=lambda x: (abs(x - t), x))
             dfs(node.left)
             dfs(node.right)
+
         dfs(root)
         return self.ans

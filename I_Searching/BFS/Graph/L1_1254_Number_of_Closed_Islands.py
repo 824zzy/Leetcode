@@ -22,11 +22,10 @@ class Solution:
         ans = 0
         for i in range(len(A)):
             for j in range(len(A[0])):
-                if not(
-                        not i or not j or i == len(A) -
-                        1 or j == len(
-                            A[0]) -
-                        1) and A[i][j] == 0:
+                if (
+                    not (not i or not j or i == len(A) - 1 or j == len(A[0]) - 1)
+                    and A[i][j] == 0
+                ):
                     if dfs(i, j):
                         ans += 1
         return ans

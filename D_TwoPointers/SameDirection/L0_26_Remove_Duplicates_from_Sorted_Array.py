@@ -13,6 +13,7 @@ class Solution:
                 i += 1
         return i
 
+
 # suboptimal solution
 
 

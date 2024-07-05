@@ -9,10 +9,9 @@ from header import *
 
 
 class Solution:
-    def mostProfitablePath(self,
-                           edges: List[List[int]],
-                           bob: int,
-                           amount: List[int]) -> int:
+    def mostProfitablePath(
+        self, edges: List[List[int]], bob: int, amount: List[int]
+    ) -> int:
         G = defaultdict(list)
         for i, j in edges:
             G[i].append(j)
@@ -36,6 +35,7 @@ class Solution:
                     ans = min(ans, tmp + 1)
             timestamp[i] = ans
             return ans
+
         dfs(0)
 
         seen = [False] * len(amount)
@@ -55,16 +55,16 @@ class Solution:
                 if not seen[j]:
                     seen[j] = True
                     dfs(j, ts + 1, p)
+
         dfs(0, 0, 0)
         return self.ans
 
 
 # post order traversal from ye
 class Solution:
-    def mostProfitablePath(self,
-                           edges: List[List[int]],
-                           bob: int,
-                           amount: List[int]) -> int:
+    def mostProfitablePath(
+        self, edges: List[List[int]], bob: int, amount: List[int]
+    ) -> int:
         n = 1 + len(edges)
         tree = [[] for _ in range(n)]
         for u, v in edges:

@@ -18,6 +18,7 @@ class Solution:
             dp[i] = dp[i - 1] * (11 - i)
         return sum(dp)
 
+
 # top down solution
 
 
@@ -30,6 +31,7 @@ class Solution:
             if i == 1:
                 return 9
             return dp(i - 1) * (11 - i)
+
         return sum(dp(i) for i in range(n + 1))
 
 
@@ -42,7 +44,7 @@ the same as 2376, 1012
 
 class Solution:
     def countNumbersWithUniqueDigits(self, n: int) -> int:
-        high = str(10**n - 1)
+        high = str(10 ** n - 1)
         n = len(high)
         low = str(0).zfill(n)
 
@@ -52,7 +54,7 @@ class Solution:
                 return 1 if is_num else 0
             # deal with leading zero
             ans = 0
-            if not is_num and low[i] == '0':
+            if not is_num and low[i] == "0":
                 ans += dfs(i + 1, True, False, False, 0)
             # enumerate from lo to high
             lo = int(low[i]) if limit_low else 0
@@ -60,9 +62,15 @@ class Solution:
             d0 = 0 if is_num else 1
             for d in range(max(lo, d0), hi + 1):
                 if mask & (1 << d) == 0:
-                    ans += dfs(i + 1, limit_low and d == lo,
-                               limit_high and d == hi, True, mask ^ (1 << d))
+                    ans += dfs(
+                        i + 1,
+                        limit_low and d == lo,
+                        limit_high and d == hi,
+                        True,
+                        mask ^ (1 << d),
+                    )
             return ans
+
         return dfs(0, True, True, False, 0) + 1
 
 

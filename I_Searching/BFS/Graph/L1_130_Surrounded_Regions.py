@@ -13,9 +13,9 @@ class Solution:
         D = [[0, 1], [0, -1], [1, 0], [-1, 0]]
 
         def dfs(x, y):
-            if A[x][y] != 'O':
+            if A[x][y] != "O":
                 return
-            A[x][y] = '#'
+            A[x][y] = "#"
             for dx, dy in D:
                 if 0 <= x + dx < M and 0 <= y + dy < N:
                     dfs(x + dx, y + dy)
@@ -30,7 +30,7 @@ class Solution:
 
         for i in range(M):
             for j in range(N):
-                if A[i][j] == '#':
-                    A[i][j] = 'O'
-                elif A[i][j] == 'O':
-                    A[i][j] = 'X'
+                if A[i][j] == "#":
+                    A[i][j] = "O"
+                elif A[i][j] == "O":
+                    A[i][j] = "X"

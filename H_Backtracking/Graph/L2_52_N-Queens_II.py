@@ -12,15 +12,18 @@ class Solution:
                 self.ans += 1
                 return
             for j in range(n):
-                if j not in seen['col'] and i + \
-                        j not in seen['ldiag'] and i - j not in seen['rdiag']:
-                    seen['col'].append(j)
-                    seen['ldiag'].append(i + j)
-                    seen['rdiag'].append(i - j)
+                if (
+                    j not in seen["col"]
+                    and i + j not in seen["ldiag"]
+                    and i - j not in seen["rdiag"]
+                ):
+                    seen["col"].append(j)
+                    seen["ldiag"].append(i + j)
+                    seen["rdiag"].append(i - j)
                     dfs(i + 1)
-                    seen['col'].pop()
-                    seen['ldiag'].pop()
-                    seen['rdiag'].pop()
+                    seen["col"].pop()
+                    seen["ldiag"].pop()
+                    seen["rdiag"].pop()
 
         seen = defaultdict(list)
         dfs(0)

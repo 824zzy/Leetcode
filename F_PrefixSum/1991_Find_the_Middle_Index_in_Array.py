@@ -11,6 +11,7 @@ class Solution:
                 return i - 1
         return -1
 
+
 # find x where 2*prefix=sum-x
 
 

@@ -17,10 +17,10 @@ class Solution:
 class Solution:
     def minimumMoves(self, s: str) -> int:
         ans = 0
-        s = list(s) + ['O', 'O']
+        s = list(s) + ["O", "O"]
         for i in range(len(s)):
-            if s[i] == 'X':
+            if s[i] == "X":
                 ans += 1
-                s[i + 1] = 'O'
-                s[i + 2] = 'O'
+                s[i + 1] = "O"
+                s[i + 2] = "O"
         return ans

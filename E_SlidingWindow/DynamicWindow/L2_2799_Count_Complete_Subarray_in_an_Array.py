@@ -21,6 +21,7 @@ class Solution:
             ans += left
         return ans
 
+
 # brute force also works due to small input size
 
 

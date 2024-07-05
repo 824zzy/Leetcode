@@ -8,7 +8,7 @@ from header import *
 class Solution:
     def evalRPN(self, A: List[str]) -> int:
         # operators.add etc.
-        ops = {"+": add, '-': sub, "*": mul, '/': truediv}
+        ops = {"+": add, "-": sub, "*": mul, "/": truediv}
         stk = []
         for t in A:
             if t in ops:

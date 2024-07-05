@@ -16,6 +16,5 @@ class Solution:
             for hh in h:
                 for mm in m:
                     if sum(hh) < 12 and sum(mm) < 60:
-                        ans.append(
-                            ':'.join([str(sum(hh)), str(sum(mm)).zfill(2)]))
+                        ans.append(":".join([str(sum(hh)), str(sum(mm)).zfill(2)]))
         return ans

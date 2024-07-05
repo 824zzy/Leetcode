@@ -41,7 +41,7 @@ class Solution:
                 return ans.add(tuple(stk.copy()))
             for i, x in enumerate(rem):
                 stk.append(x)
-                dfs(rem[:i] + rem[i + 1:])
+                dfs(rem[:i] + rem[i + 1 :])
                 stk.pop()
 
         dfs(A)

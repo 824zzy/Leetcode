@@ -11,7 +11,7 @@ class Solution:
         prefix = 0
 
         for c in A:
-            if c == '0':
+            if c == "0":
                 prefix += b
             else:
                 prefix -= a

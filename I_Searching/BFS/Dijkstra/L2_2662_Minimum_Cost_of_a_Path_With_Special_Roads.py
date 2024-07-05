@@ -6,28 +6,30 @@ from header import *
 
 
 class Solution:
-    def minimumCost(self,
-                    s: List[int],
-                    t: List[int],
-                    A: List[List[int]]) -> int:
+    def minimumCost(self, s: List[int], t: List[int], A: List[List[int]]) -> int:
         G = defaultdict(lambda: defaultdict(lambda: inf))
         for i, j, x, y, c in A:
             G[(i, j)][(x, y)] = min(G[(i, j)][(x, y)], c)
-            G[(s[0], s[1])][(i, j)] = min(G[(s[0], s[1])]
-                                          [(i, j)], abs(s[0] - i) + abs(s[1] - j))
-            G[(s[0], s[1])][(x, y)] = min(G[(s[0], s[1])]
-                                          [(x, y)], abs(s[0] - x) + abs(s[1] - y))
+            G[(s[0], s[1])][(i, j)] = min(
+                G[(s[0], s[1])][(i, j)], abs(s[0] - i) + abs(s[1] - j)
+            )
+            G[(s[0], s[1])][(x, y)] = min(
+                G[(s[0], s[1])][(x, y)], abs(s[0] - x) + abs(s[1] - y)
+            )
             G[(i, j)][(t[0], t[1])] = min(
-                G[(i, j)][(t[0], t[1])], abs(t[0] - i) + abs(t[1] - j))
+                G[(i, j)][(t[0], t[1])], abs(t[0] - i) + abs(t[1] - j)
+            )
             G[(x, y)][(t[0], t[1])] = min(
-                G[(x, y)][(t[0], t[1])], abs(t[0] - x) + abs(t[1] - y))
+                G[(x, y)][(t[0], t[1])], abs(t[0] - x) + abs(t[1] - y)
+            )
 
         for idx_i in range(len(A)):
             for idx_j in range(len(A)):
                 i, j, x, y, _ = A[idx_i]
                 ii, jj, xx, yy, _ = A[idx_j]
                 G[(x, y)][(ii, jj)] = min(
-                    G[(x, y)][(ii, jj)], abs(x - ii) + abs(y - jj))
+                    G[(x, y)][(ii, jj)], abs(x - ii) + abs(y - jj)
+                )
 
         pq = [(0, s[0], s[1])]
         seen = {}

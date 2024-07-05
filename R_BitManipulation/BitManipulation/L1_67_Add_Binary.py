@@ -16,7 +16,8 @@ class Solution:
             ans.append(d)
         if carry:
             ans.append(carry)
-        return ''.join(map(str, reversed(ans)))
+        return "".join(map(str, reversed(ans)))
+
 
 # cheating solution
 

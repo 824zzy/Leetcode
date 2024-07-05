@@ -5,17 +5,19 @@ class Codec:
     def serialize(self, node: TreeNode) -> str:
         """Encodes a tree to a single string.
         """
+
         def encode(node):
             if not node:
-                return ''
+                return ""
             else:
-                return str(node.val) + '-' + \
-                    encode(node.left) + encode(node.right)
+                return str(node.val) + "-" + encode(node.left) + encode(node.right)
+
         return encode(node)
 
     def deserialize(self, data: str) -> TreeNode:
         """Decodes your encoded data to tree.
         """
+
         def insert(node, val):
             if not node:
                 return TreeNode(val)
@@ -24,7 +26,8 @@ class Codec:
             else:
                 node.right = insert(node.right, val)
             return node
-        data = data.split('-')
+
+        data = data.split("-")
         data.pop()
         node = None
         for d in data:

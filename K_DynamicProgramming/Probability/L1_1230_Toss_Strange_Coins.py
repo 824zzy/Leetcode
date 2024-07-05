@@ -15,6 +15,7 @@ class Solution:
             ans = A[i] * dp(i + 1, sm + 1)
             ans += (1 - A[i]) * dp(i + 1, sm)
             return ans
+
         return dp(0, 0)
 
 

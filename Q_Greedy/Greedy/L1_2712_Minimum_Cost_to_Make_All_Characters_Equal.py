@@ -10,7 +10,7 @@ class Solution:
         n = len(s)
         ans = {0: 0, 1: 0}
         for i in range(n):
-            if s[i] == '0':
+            if s[i] == "0":
                 ans[1] = ans[0] + min(i + 1, n - i - 1)
             else:
                 ans[0] = ans[1] + min(i + 1, n - i - 1)

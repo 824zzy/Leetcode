@@ -16,9 +16,12 @@ class Solution:
                 if x == y:
                     if len(c1) == len(c2):
                         return True
-                elif len(c1) - (c == 1) + (y not in c1) == len(c2) - (d == 1) + (x not in c2):
+                elif len(c1) - (c == 1) + (y not in c1) == len(c2) - (d == 1) + (
+                    x not in c2
+                ):
                     return True
         return False
+
 
 # suboptimal solution but easy to understand
 

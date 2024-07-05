@@ -32,5 +32,6 @@ class Solution:
             dfs(node.left, d + 1)
             self.ans.setdefault(d, node.val)
             dfs(node.right, d + 1)
+
         dfs(root, 0)
         return self.ans[max(self.ans)]

@@ -9,6 +9,7 @@ class Solution:
         diff = Counter(t) - Counter(s)
         return [k for k, _ in diff.items()][0]
 
+
 # or simply sum up the values and compute difference, then convert it to a
 # character
 

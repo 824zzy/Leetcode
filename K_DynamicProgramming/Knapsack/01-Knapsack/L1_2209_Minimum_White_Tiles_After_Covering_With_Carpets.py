@@ -12,9 +12,9 @@ class Solution:
             if i >= len(A):
                 return 0
             elif c == 0:
-                return A[i:].count('1')
+                return A[i:].count("1")
             # cover/skip if white
-            if A[i] == '1':
+            if A[i] == "1":
                 return min(dp(i + l, c - 1), 1 + dp(i + 1, c))
             # skip it if black
             else:

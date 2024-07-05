@@ -16,4 +16,4 @@ class Solution:
                 r = m
             else:
                 l = m + 1
-        return l % (10**9 + 7)
+        return l % (10 ** 9 + 7)

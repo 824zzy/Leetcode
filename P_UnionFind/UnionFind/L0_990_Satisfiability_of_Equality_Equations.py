@@ -18,12 +18,12 @@ class Solution:
         for equation in equations:
             x = ord(equation[0]) - 97
             y = ord(equation[-1]) - 97
-            if equation[1:3] == '==':
+            if equation[1:3] == "==":
                 union(x, y)
 
         for equation in equations:
             x = ord(equation[0]) - 97
             y = ord(equation[-1]) - 97
-            if equation[1:3] == '!=' and find(x) == find(y):
+            if equation[1:3] == "!=" and find(x) == find(y):
                 return False
         return True

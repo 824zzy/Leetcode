@@ -11,4 +11,4 @@ class Solution:
                 stk.pop()
             else:
                 stk.append(c)
-        return ''.join(stk)
+        return "".join(stk)

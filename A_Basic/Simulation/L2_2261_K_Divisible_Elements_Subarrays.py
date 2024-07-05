@@ -16,5 +16,5 @@ class Solution:
                     kk -= 1
                 if kk < 0:
                     break
-                ans.add(" ".join(A[i:j + 1]))
+                ans.add(" ".join(A[i : j + 1]))
         return len(ans)

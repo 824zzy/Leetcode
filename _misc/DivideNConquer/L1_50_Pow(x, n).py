@@ -18,6 +18,7 @@ class Solution:
                 return dq(n // 2) * dq(n // 2 + 1)
             else:
                 return dq(n // 2) * dq(n // 2)
+
         return dq(n)
 
 

@@ -4,13 +4,11 @@ from header import *
 
 
 class Solution:
-    def findAllPeople(self,
-                      n: int,
-                      meetings: List[List[int]],
-                      firstPerson: int) -> List[int]:
+    def findAllPeople(
+        self, n: int, meetings: List[List[int]], firstPerson: int
+    ) -> List[int]:
         can = {0, firstPerson}
-        for _, grp in groupby(
-                sorted(meetings, key=lambda x: x[2]), key=lambda x: x[2]):
+        for _, grp in groupby(sorted(meetings, key=lambda x: x[2]), key=lambda x: x[2]):
             Q = set()
             G = defaultdict(list)
             for x, y, _ in grp:
