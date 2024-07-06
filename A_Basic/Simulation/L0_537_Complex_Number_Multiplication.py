@@ -1,5 +1,5 @@
-""" L0
-follow complex number multiplication rule to format string.
+""" https://leetcode.com/problems/complex-number-multiplication/
+simulation: follow complex number multiplication rule to format string.
 """
 
 

@@ -1,6 +1,8 @@
-""" L0: https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/
+""" https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/
 Sort two array
 """
+
+from header import *
 
 
 class Solution:

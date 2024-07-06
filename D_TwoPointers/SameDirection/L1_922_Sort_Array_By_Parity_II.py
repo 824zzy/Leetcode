@@ -1,9 +1,11 @@
-""" L1
+""" https://leetcode.com/problems/sort-array-by-parity-ii/
 simple usage of two pointer
 """
+
+from header import *
+
+
 # in-place solution
-
-
 class Solution:
     def sortArrayByParityII(self, A: List[int]) -> List[int]:
         i, j = 0, 1
@@ -18,8 +20,6 @@ class Solution:
 
 
 # straight-forward solution
-
-
 class Solution:
     def sortArrayByParityII(self, A: List[int]) -> List[int]:
         odd, even = [], []

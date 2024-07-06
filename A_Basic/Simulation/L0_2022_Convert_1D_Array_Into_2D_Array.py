@@ -1,6 +1,8 @@
-""" L0
-use n as stride
+""" https://leetcode.com/problems/convert-1d-array-into-2d-array/
+simulation: use n as stride
 """
+
+from header import *
 
 
 class Solution:

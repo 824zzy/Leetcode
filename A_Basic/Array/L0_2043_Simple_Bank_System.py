@@ -1,6 +1,8 @@
-""" L0: https://leetcode.com/problems/simple-bank-system/
+""" https://leetcode.com/problems/simple-bank-system/
 bank as a list
 """
+
+from header import *
 
 
 class Bank:

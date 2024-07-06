@@ -1,6 +1,8 @@
-""" L0: https://leetcode.com/problems/smallest-index-with-equal-value/
-find i%10==v
+""" https://leetcode.com/problems/smallest-index-with-equal-value/
+array simulation
 """
+
+from header import *
 
 
 class Solution:
