@@ -12,8 +12,9 @@
    - `x+(2**n)`: flip n-th bit on in `x`
    - `x-(2**n)`: flip n-th bit off in `x`
    - `x^(2**n)`: flip n-th bit on/off in `x`
-   - `x^(1<<n)`: flip n-th bit on/off in `x`
+   - `x^(1<<n)`: flip n-th bit on/off in `x` (P-476, P-1009)
 - Gray code of a integer `i`: `(i>>1)^i`
+- Get bit length of x: `x.bit_length()`
 - 32 bit mask in hexadecimal: `0xffffffff`
 - Only keep the odd position's bit: `num & 0x55555555`
 - XOR from 1 to n: 
