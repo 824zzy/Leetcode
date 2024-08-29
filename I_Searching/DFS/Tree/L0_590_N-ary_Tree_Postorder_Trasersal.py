@@ -1,3 +1,9 @@
+""" https://leetcode.com/problems/n-ary-tree-postorder-traversal/
+"""
+
+from header import *
+
+
 class Solution:
     def postorder(self, root: "Node") -> List[int]:
         self.ans = []

@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/path-with-maximum-probability/
 dijkstra template
 """
+
 from header import *
 
 
@@ -19,13 +20,13 @@ class Solution:
             G[j].append((i, w))
 
         pq = [(-1, start)]
-        seen = {}
+        seen = set()
         while pq:
             p, i = heappop(pq)
             if i == end:
                 return -p
             if i not in seen:
-                seen[i] = p
+                seen.add(i)
                 for j, w in G[i]:
                     heappush(pq, (p * w, j))
         return 0
