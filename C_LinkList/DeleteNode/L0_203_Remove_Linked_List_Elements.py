@@ -1,4 +1,4 @@
-""" L1: https://leetcode.com/problems/remove-linked-list-elements/
+""" https://leetcode.com/problems/remove-linked-list-elements/
 If node.next.val == val, remove node.next; otherwise, move node to the next node.
 """
 
