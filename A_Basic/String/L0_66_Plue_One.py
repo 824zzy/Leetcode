@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/plus-one/submissions/
+""" https://leetcode.com/problems/plus-one/submissions/
 """
 
 

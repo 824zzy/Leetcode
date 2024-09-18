@@ -1,6 +1,8 @@
-""" Amazon
-*zip trick: unzip
+""" https://leetcode.com/problems/longest-common-prefix/
+simulation
 """
+
+from header import *
 
 
 class Solution:

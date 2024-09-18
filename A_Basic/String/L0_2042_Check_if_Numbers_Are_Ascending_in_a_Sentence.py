@@ -1,4 +1,4 @@
-""" L0: https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/
+""" https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/
 split string and count numeric substring.
 """
 
