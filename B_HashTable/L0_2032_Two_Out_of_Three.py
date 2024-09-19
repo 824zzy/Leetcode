@@ -1,5 +1,7 @@
-""" L0: https://leetcode.com/problems/two-out-of-three/
+""" https://leetcode.com/problems/two-out-of-three/
 """
+
+from header import *
 
 
 class Solution:

@@ -1,6 +1,8 @@
-""" L1: use frequent table to find needed cancatenation
+""" https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target/
 similar to two sum but when prefix equals to suffix, we need to minus duplicated count.
 """
+
+from header import *
 
 
 class Solution:
@@ -17,8 +19,6 @@ class Solution:
 
 
 # brute force
-
-
 class Solution:
     def numOfPairs(self, nums: List[str], target: str) -> int:
         ans = 0
