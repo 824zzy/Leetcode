@@ -1,10 +1,33 @@
 # Prime Number
 
-## Prime Factorization
-
-**A number can be expressed as a product of prime numbers.** E.g.: `2521 = 7 * 11 * 13`
+## Check if a number is prime
 
 ``` py
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+```
+
+## Least Prime Factor (LPF) Template
+
+``` py
+n = 10**6
+LPF = [0] * n
+for i in range(2, n):
+    if LPF[i] == 0:
+        for j in range(i, n, i):
+            if LPF[j] == 0:
+                LPF[j] = i
+```
+
+## Prime Factorization
+
+``` py
+# find all prime factors
 ans = set()
 d = 2
 while d*d<=x:
