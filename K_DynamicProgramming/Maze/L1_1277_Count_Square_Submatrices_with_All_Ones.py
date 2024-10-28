@@ -2,9 +2,11 @@
 The same as 221.
 If cell (i, j) is 1, the square submatrice count is the minimal count of cell (i-1, j), cell (i, j-1), cell (i-1, j-1).
 """
+
+from header import *
+
+
 # bottom up solution
-
-
 class Solution:
     def countSquares(self, A: List[List[int]]) -> int:
         ans = 0
@@ -16,9 +18,7 @@ class Solution:
         return ans
 
 
-# top down solution
-
-
+# top down solution: Time complexity O(m*n)
 class Solution:
     def countSquares(self, A: List[List[int]]) -> int:
         @cache
