@@ -1,23 +1,23 @@
-""" L2: https://leetcode.com/problems/unique-binary-search-trees
+""" https://leetcode.com/problems/unique-binary-search-trees
 catalan number formula: fn(n) = fn(0)*fn(n-1) + fn(1)*fn(n-2) + ... + fn(n-1)*fn(0)
 """
+
+from header import *
+
+
 # top down
-
-
 class Solution:
     def numTrees(self, n: int) -> int:
         @cache
-        def dfs(n):
+        def dp(n):
             if n <= 1:
                 return 1
-            return sum([dfs(i) * dfs(n - 1 - i) for i in range(n)])
+            return sum([dp(i) * dp(n - 1 - i) for i in range(n)])
 
-        return dfs(n)
+        return dp(n)
 
 
 # bottom up
-
-
 class Solution:
     def numTrees(self, n: int) -> int:
         if n == 1:

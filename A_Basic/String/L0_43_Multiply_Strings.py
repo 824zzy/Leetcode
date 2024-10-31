@@ -7,7 +7,7 @@ class Solution:
         A, B = A[::-1], B[::-1]
         a, b = 0, 0
         for i in range(len(A)):
-            a += (ord(A[i]) - 48) * (10**i)
+            a += (ord(A[i]) - 48) * (10 ** i)
         for i in range(len(B)):
-            b += (ord(B[i]) - 48) * (10**i)
+            b += (ord(B[i]) - 48) * (10 ** i)
         return str(a * b)

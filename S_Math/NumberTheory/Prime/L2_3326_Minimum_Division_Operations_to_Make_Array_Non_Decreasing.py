@@ -7,7 +7,7 @@ LPF + greedy
 
 from header import *
 
-n = 10**6
+n = 10 ** 6
 LPF = [0] * n
 for i in range(2, n):
     if LPF[i] == 0:

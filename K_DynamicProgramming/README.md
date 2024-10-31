@@ -18,6 +18,26 @@
 5. Time sequential: current state is only related to limited previous states
 6. Time dependent: current state is related to all the previous states
 
+## Matrix Exponentiation DP
+
+``` py
+MOD = 10**9 + 7
+
+def mul(a: List[List[int]], b: List[List[int]]) -> List[List[int]]:
+   return [
+         [sum(x * y for x, y in zip(row, col)) % MOD for col in zip(*b)]
+         for row in a
+   ]
+
+def pow_mul(a: List[List[int]], n: int, f0: List[List[int]]) -> List[List[int]]:
+   res = f0
+   while n:
+         if n & 1:
+            res = mul(a, res)
+         a = mul(a, a)
+         n >>= 1
+   return res
+```
 
 ## Reference
 

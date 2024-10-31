@@ -1,8 +1,10 @@
 """ https://leetcode.com/problems/unique-paths/
 """
+
+from header import *
+
+
 # bottom up dp
-
-
 class Solution:
     def uniquePath(self, m: int, n: int) -> int:
         dp = [[1 for _ in range(n)] for _ in range(m)]
@@ -15,8 +17,6 @@ class Solution:
 
 
 # top down dp
-
-
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         @cache
