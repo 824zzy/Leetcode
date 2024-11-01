@@ -1,30 +1,52 @@
 """ https://leetcode.com/problems/count-fertile-pyramids-in-a-land/
-refer to: https://leetcode.com/problems/count-fertile-pyramids-in-a-land/discuss/1602439/Python-DP-oror-O(m*n)-oror-Explained-oror-Faster-than-100
+The idea is the same as 221 and 1277.
+
+
+1. For each cell, we check if the 3 bottom cell are all 1, if yes, then it is a fertile cell.
+2. Then we use minimum of the 3 bottom cells to calculate the number of fertile cells.
+Time complexity: O(m*n)
 """
+
 from header import *
 
 
 class Solution:
-    def countPyramids(self, grid):
-        # dp[i][j] represents the number of layers of the largest pyramid with (i, j) as the vertex.
-        # Note that the 1-level pyramid is invalid in the problem, so it should be removed when summing.
-        # Note that if grid[i][j] is 0, dp[i][j] will always be 0.
-        # The dp recurrence formula is dp[i][j] = min(dp[i + 1][j - 1], dp[i +
-        # 1][j + 1]) + 1
-        m, n, dp, cnt = len(grid), len(grid[0]), copy.deepcopy(grid), 0
-        # triangle
-        for i in range(m - 2, -1, -1):
-            for j in range(1, n - 1):
-                if dp[i][j] > 0 and dp[i + 1][j] > 0:
-                    dp[i][j] = min(dp[i + 1][j - 1], dp[i + 1][j + 1]) + 1
-                    cnt += dp[i][j] - 1
-        print(cnt)
-        print(dp)
-        # inverted triangle
-        dp = grid
-        for i in range(1, m):
-            for j in range(1, n - 1):
-                if dp[i][j] > 0 and dp[i - 1][j] > 0:
-                    dp[i][j] = min(dp[i - 1][j - 1], dp[i - 1][j + 1]) + 1
-                    cnt += dp[i][j] - 1
-        return cnt
+    def countPyramids(self, G: List[List[int]]) -> int:
+        m, n = len(G), len(G[0])
+
+        @cache
+        def dp(i, j):
+            if not 0 <= j < n or not 0 <= i < m:
+                return 0
+            # invalid paramidal vertex
+            if G[i][j] == 0:
+                return 0
+            if (
+                i + 1 < m
+                and 0 < j < n - 1
+                and G[i + 1][j]
+                and G[i + 1][j + 1]
+                and G[i + 1][j - 1]
+            ):
+                return min(dp(i + 1, j), dp(i + 1, j + 1), dp(i + 1, j - 1)) + 1
+            else:
+                return 0
+
+        ans = 0
+        for i in range(m):
+            for j in range(n):
+                ans += dp(i, j)
+        dp.cache_clear()
+
+        G = G[::-1]
+        for i in range(m):
+            for j in range(n):
+                ans += dp(i, j)
+        return ans
+
+
+"""
+[[0,1,1,0],[1,1,1,1]]
+[[1,1,1],[1,1,1]]
+[[1,1,1,1,0],[1,1,1,1,1],[1,1,1,1,1],[0,1,0,0,1]]
+"""
