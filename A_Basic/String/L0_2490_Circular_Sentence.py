@@ -2,12 +2,14 @@
 add the first word to the end of the sentence to make it circular
 """
 
+from header import *
+
 
 class Solution:
     def isCircularSentence(self, sentence: str) -> bool:
-        A = sentence.split()
-        A = A + [A[0]]
-        for i in range(len(A) - 1):
-            if A[i][-1] != A[i + 1][0]:
+        sentence = sentence.split()
+        sentence += [sentence[0]]
+        for x, y in pairwise(sentence):
+            if x[-1] != y[0]:
                 return False
         return True

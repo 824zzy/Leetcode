@@ -1,8 +1,11 @@
 """ https://leetcode.com/problems/maximum-height-by-stacking-cuboids/
+TODO: add LIS template
 """
+
+from header import *
+
+
 # sort and knapsack
-
-
 class Solution:
     def maxHeight(self, A: List[List[int]]) -> int:
         A = [sorted(x, reverse=True) for x in A]

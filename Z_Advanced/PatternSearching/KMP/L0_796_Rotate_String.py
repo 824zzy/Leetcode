@@ -30,3 +30,10 @@ class Solution:
             if i == len(p):
                 return True
         return False
+
+
+# Brute Force
+class Solution:
+    def rotateString(self, s: str, g: str) -> bool:
+        S = s * 2
+        return g in S and len(s) == len(g)

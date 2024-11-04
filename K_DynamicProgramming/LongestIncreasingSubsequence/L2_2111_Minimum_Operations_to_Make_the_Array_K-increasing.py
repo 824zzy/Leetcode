@@ -2,6 +2,8 @@
 for each substring A[i:len(A):k], find its Longest Increasing Subsequence(LIS)
 """
 
+from header import *
+
 
 class Solution:
     def kIncreasing(self, A: List[int], k: int) -> int:
