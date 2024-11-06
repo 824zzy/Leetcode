@@ -1,11 +1,11 @@
 """ https://leetcode.com/problems/longest-common-subsequence/
 classical 2d dp problem
 """
+
 from header import *
 
+
 # top down
-
-
 class Solution:
     def longestCommonSubsequence(self, A: str, B: str) -> int:
         @cache
@@ -21,8 +21,6 @@ class Solution:
 
 
 # bottom up
-
-
 class Solution:
     def longestCommonSubsequence(self, A: str, B: str) -> int:
         dp = [[0 for _ in range(len(B) + 1)] for _ in range(len(A) + 1)]
@@ -34,3 +32,20 @@ class Solution:
                 else:
                     dp[i][j] = max(dp[i + 1][j], dp[i][j + 1])
         return dp[0][0]
+
+
+# space optimized using 1d dp
+class Solution:
+    def longestCommonSubsequence(self, A: str, B: str) -> int:
+        dp = [0 for _ in range(len(B) + 1)]
+
+        for i in reversed(range(len(A))):
+            pre = dp[-1]
+            for j in reversed(range(len(B))):
+                tmp = dp[j]
+                if A[i] == B[j]:
+                    dp[j] = 1 + pre
+                else:
+                    dp[j] = max(dp[j], dp[j + 1])
+                pre = tmp
+        return dp[0]

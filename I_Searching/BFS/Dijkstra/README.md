@@ -12,36 +12,20 @@ Difference between Dijkstra and Floyd-Warshall algorithm
 
 ``` py
 # time complexity O(E*logV)
-G = defaultdict(list)
-for u, v, w in edges: 
-    G[u].append((v, w))
+G = [[] for _ in range(n+1)]
+for i, j, w in A:
+    G[i].append((j, w))
 
-pq = [(0, src)]
-seen = {} # need to design carefully
+pq = [(0, k)]
+dis = [inf]*(n+1)
+# init dis
 while pq:
-    cost, i = heappop(pq)
-    if i not in seen: # need to design carefully
-        seen[i] = cost
-        for j in G[i]:
-            heappush(pq, (cost+G[i][j], j))
-# shortest path from src to all the nodes
-shortest_paths = [seen.get(i, inf) for i in range(n)]
-```
-
-``` py
-# time complexity O(E*logV)
-G = defaultdict(list)
-for u, v, w in edges: 
-    G[u].append((v, w))
-
-pq = [(0, src)]
-seen = {src: 0}
-while pq:
-    cost, i = heappop(pq)
-    for j in G[i]:
-        if j not in seen or cost+G[i][j] < seen[j]:
-            seen[j] = cost+G[i][j]
-            heappush(pq, (cost+G[i][j], j))
-# shortest path from src to all the nodes
-shortest_paths = [seen.get(i, inf) for i in range(n)]
+    d, i = heappop(pq)
+    if d>dis[i]:
+        continue
+    for j, w in G[i]:
+        new_d = d+w
+        if new_d<dis[j]:
+            dis[j] = new_d
+            heappush(pq, (new_d, j))
 ```

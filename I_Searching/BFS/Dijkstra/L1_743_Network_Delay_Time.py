@@ -2,24 +2,26 @@
 use dijkstra to find minimum delay for all the nodes to receive the signal
 """
 
+from header import *
+
 
 class Solution:
     def networkDelayTime(self, A: List[List[int]], n: int, k: int) -> int:
-        G = defaultdict(dict)
+        G = [[] for _ in range(n + 1)]
         for i, j, w in A:
-            G[i][j] = w
+            G[i].append((j, w))
 
         pq = [(0, k)]
-        seen = {}
-
+        dis = [inf] * (n + 1)
+        dis[0] = dis[k] = 0
         while pq:
-            cost, i = heappop(pq)
-            if i not in seen:
-                seen[i] = cost
-                for j in G[i]:
-                    heappush(pq, (cost + G[i][j], j))
-
-        if len(seen) != n:
-            return -1
-        else:
-            return max(seen.values())
+            d, i = heappop(pq)
+            if d > dis[i]:
+                continue
+            for j, w in G[i]:
+                new_d = d + w
+                if new_d < dis[j]:
+                    dis[j] = new_d
+                    heappush(pq, (new_d, j))
+        mx = max(dis)
+        return mx if mx < inf else -1

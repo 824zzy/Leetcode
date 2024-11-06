@@ -17,6 +17,20 @@ class Solution:
         return max(dp)
 
 
+# top down solution
+class Solution:
+    def lengthOfLIS(self, A: List[int]) -> int:
+        @cache
+        def dp(i):
+            ans = 1
+            for j in range(i):
+                if A[j] < A[i]:
+                    ans = max(ans, 1 + dp(j))
+            return ans
+
+        return max(dp(i) for i in range(len(A)))
+
+
 # O(NlogN) binary search + greedy
 class Solution:
     def lengthOfLIS(self, A: List[int]) -> int:
