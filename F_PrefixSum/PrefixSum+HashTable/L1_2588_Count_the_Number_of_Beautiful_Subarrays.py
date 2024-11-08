@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/count-the-number-of-beautiful-subarrays/
 convert the problem into: find all the subarrays that elements  XOR=0
 """
+
 from header import *
 
 
@@ -19,21 +20,13 @@ class Solution:
         return ans
 
 
-# solution that not using XOR
 class Solution:
     def beautifulSubarrays(self, A: List[int]) -> int:
-        seen = [0] * 20
-        cnt = Counter()
-        cnt[tuple(seen)] = 1
+        cnt = Counter([0])
+        mask = 0
         ans = 0
         for x in A:
-            i = 0
-            while x:
-                if x & 1:
-                    seen[i] += 1
-                    seen[i] %= 2
-                x >>= 1
-                i += 1
-            ans += cnt[tuple(seen)]
-            cnt[tuple(seen)] += 1
+            mask ^= x
+            ans += cnt[mask]
+            cnt[mask] += 1
         return ans
