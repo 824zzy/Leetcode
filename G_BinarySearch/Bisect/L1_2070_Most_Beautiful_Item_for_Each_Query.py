@@ -2,6 +2,8 @@
 sort the items and precalculate maximum at each elements, then use binary search to find the correct index for a beautiful item
 """
 
+from header import *
+
 
 class Solution:
     def maximumBeauty(self, A: List[List[int]], Q: List[int]) -> List[int]:
