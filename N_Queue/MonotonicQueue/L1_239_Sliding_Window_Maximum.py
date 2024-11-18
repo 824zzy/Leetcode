@@ -3,11 +3,11 @@ define a monotonic queue state as (idx, val) and we want to ensure
 1. current index is within the window size
 2. val is in descending order
 """
+
 from header import *
 
+
 # heap implementation
-
-
 class Solution:
     def maxSlidingWindow(self, A: List[int], k: int) -> List[int]:
         pq = []

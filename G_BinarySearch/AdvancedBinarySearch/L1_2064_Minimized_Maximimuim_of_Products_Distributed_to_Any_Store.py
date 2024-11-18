@@ -2,6 +2,8 @@
 the same as
 """
 
+from header import *
+
 
 class Solution:
     def minimizedMaximum(self, n: int, A: List[int]) -> int:

@@ -5,13 +5,14 @@ idea is the same as 2972.
 2. enumerate i, use i as left end point, greedily find right most j that ensure A[:i]+A[j:] is sorted
 3. j-i-1 is the elements in the middle that can be deleted
 """
+
 from header import *
 
 
 class Solution:
     def findLengthOfShortestSubarray(self, A: List[int]) -> int:
         n = len(A)
-        j = len(A) - 1
+        j = n - 1
         while j > 0 and A[j - 1] <= A[j]:
             j -= 1
         if j == 0:
@@ -19,8 +20,8 @@ class Solution:
 
         i = 0
         ans = j
-        while i == 0 or (i < len(A) - 1 and A[i - 1] <= A[i]):
-            while j < len(A) and A[i] > A[j]:
+        while i == 0 or (i < n - 1 and A[i - 1] <= A[i]):
+            while j < n and A[i] > A[j]:
                 j += 1
             ans = min(ans, j - i - 1)
             i += 1

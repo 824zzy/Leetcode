@@ -1,4 +1,5 @@
 """ https://leetcode.com/problems/defuse-the-bomb/
+circle array sliding window simulation
 """
 
 from header import *
