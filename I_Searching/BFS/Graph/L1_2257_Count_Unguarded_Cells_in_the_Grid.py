@@ -4,6 +4,8 @@ Brute force simulation
 Time: O(n^2) ~= O(5*10^4 * 4 * 10^5) == O(2*10^10)
 """
 
+from header import *
+
 
 class Solution:
     def countUnguarded(
@@ -20,7 +22,6 @@ class Solution:
             A[x][y] = 2
             dfs(x + dx, y + dy, dx, dy)
 
-        ans = 0
         for i, j in guards:
             for dx, dy in D:
                 dfs(i + dx, j + dy, dx, dy)

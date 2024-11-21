@@ -2,6 +2,7 @@
 1. keep a seen set which window of size k and prefix sum
 2. once find duplicate, then reset prefix sum and  and seen set
 """
+
 from header import *
 
 
@@ -21,6 +22,26 @@ class Solution:
             else:
                 sm = A[i]
                 seen = {A[i]}
+        return ans
+
+
+class Solution:
+    def maximumSubarraySum(self, A: List[int], k: int) -> int:
+        cnt = Counter(A[:k])
+        sm = sum(A[:k])
+        if len(cnt) == k:
+            ans = sm
+        else:
+            ans = 0
+        for i in range(k, len(A)):
+            cnt[A[i - k]] -= 1
+            sm -= A[i - k]
+            if cnt[A[i - k]] == 0:
+                cnt.pop(A[i - k])
+            cnt[A[i]] += 1
+            sm += A[i]
+            if len(cnt) == k:
+                ans = max(ans, sm)
         return ans
 
 
