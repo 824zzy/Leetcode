@@ -1,64 +1,65 @@
 """ https://leetcode.com/problems/move-pieces-to-obtain-a-string/
 777, 2337 are the same.
 
-Use two pointers to check if every pair of "L" and "R" is valid,
-or form pairs first and then check if every pair is valid.
+use two pointers to check if every pair of "L" and "R" is valid.
+
+1. the order of letter in both s and t should be the same
+2. from left to right, count the prefix sum of letter R
+3. from right to left, count the prefix sum of letter L
 """
 
 
 class Solution:
-    def canChange(self, S: str, T: str) -> bool:
+    def canChange(self, S: str, E: str) -> bool:
+        n = len(S)
         i, j = 0, 0
-        while i < len(S) and j < len(T):
-            while i < len(S) and S[i] == "_":
+        while i < n and j < n:
+            while i < n and S[i] == "X":
                 i += 1
-            while j < len(T) and T[j] == "_":
+            while j < n and E[j] == "X":
                 j += 1
-            if i == len(S) or j == len(T):
+            if i == n or j == n:
                 break
-            if S[i] == T[j] == "L":
-                if i < j:
-                    return False
-            elif S[i] == T[j] == "R":
-                if i > j:
-                    return False
-            else:
+            elif S[i] != E[j]:
+                return False
+            elif (S[i] == "L" and i < j) or (S[i] == "R" and i > j):
                 return False
             i, j = i + 1, j + 1
         return (
             "L" not in S[i:]
             and "R" not in S[i:]
-            and "L" not in T[j:]
-            and "R" not in T[j:]
+            and "L" not in E[j:]
+            and "R" not in E[j:]
         )
 
 
-# or form pairs first and then check if every pair is valid
+# prefix sum greedy solution
 class Solution:
-    def canChange(self, start: str, target: str) -> bool:
-        S = []
-        for i in range(len(start)):
-            if start[i] == "L":
-                S.append((i, "L"))
-            elif start[i] == "R":
-                S.append((i, "R"))
-
-        T = []
-        for i in range(len(target)):
-            if target[i] == "L":
-                T.append((i, "L"))
-            elif target[i] == "R":
-                T.append((i, "R"))
-
-        if len(S) != len(T):
+    def canChange(self, s: str, t: str) -> bool:
+        ss, tt = "", ""
+        for c1, c2 in zip(s, t):
+            if c1 in ("L", "R"):
+                ss += c1
+            if c2 in ("L", "R"):
+                tt += c2
+        if ss != tt:
             return False
-        for (s, si), (t, ti) in zip(S, T):
-            if si == ti == "L":
-                if s < t:
-                    return False
-            elif si == ti == "R":
-                if s > t:
-                    return False
-            else:
+
+        cnt_s, cnt_t = 0, 0
+        for c1, c2 in zip(s, t):
+            if c1 == "R":
+                cnt_s += 1
+            if c2 == "R":
+                cnt_t += 1
+            if cnt_s < cnt_t:
+                return False
+
+        cnt_s, cnt_t = 0, 0
+        for c1, c2 in zip(s, t):
+            if c1 == "L":
+                cnt_s += 1
+            if c2 == "L":
+                cnt_t += 1
+            if cnt_s < cnt_t:
                 return False
         return True
