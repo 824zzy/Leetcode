@@ -1,6 +1,7 @@
 """ https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements/
-Implement the problem description using a seen array
+Simulate the problem description using a seen array
 """
+
 from header import *
 
 
