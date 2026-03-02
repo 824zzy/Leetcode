@@ -2,7 +2,6 @@
 add the first word to the end of the sentence to make it circular
 """
 
-from header import *
 
 
 class Solution:

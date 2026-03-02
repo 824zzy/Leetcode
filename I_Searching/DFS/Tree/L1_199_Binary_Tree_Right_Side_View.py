@@ -3,7 +3,6 @@ level order traversal using dfs
 
 Time complexity: O(n)
 """
-from header import *
 
 # Only save right most node into ans. Space complexity: O(1)
 

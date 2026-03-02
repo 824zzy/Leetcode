@@ -7,7 +7,6 @@ https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order
 2. find the right-most l where A[k]<A[l]
 3. swap A[k] and A[l], and reverse A[k+1:]
 """
-from header import *
 
 
 class Solution:

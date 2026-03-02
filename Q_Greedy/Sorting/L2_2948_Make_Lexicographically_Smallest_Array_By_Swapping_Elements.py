@@ -2,7 +2,6 @@
 1. greedy sort
 2. group and reassign index
 """
-from header import *
 
 
 class Solution:

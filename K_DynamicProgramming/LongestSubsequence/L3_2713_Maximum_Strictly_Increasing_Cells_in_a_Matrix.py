@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-strictly-increasing-cells-in-a-matrix/
 Data structure optimized DP, learn from: https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/solution/dong-tai-gui-hua-you-hua-pythonjavacgo-b-axv0/
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 bank as a list
 """
 
-from header import *
 
 
 class Bank:

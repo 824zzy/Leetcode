@@ -2,7 +2,6 @@
 TODO:
 """
 
-from header import *
 
 
 class MaxStack:

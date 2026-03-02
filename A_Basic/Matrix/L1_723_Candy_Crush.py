@@ -3,7 +3,6 @@ simulation on matrix:
 1. check if there is any 3+ consecutive same number
 2. eliminate them
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 Observation: f(x) = left_subtree_size * right_subtree_size * (n-left_subtree_size-right_subtree_size-1)
 use dfs to calculate score based on the above formula
 """
-from header import *
 
 
 class Solution:

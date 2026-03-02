@@ -6,7 +6,6 @@ Instead of finding all the subarrays, the goal is to check the minimums belongs 
 
 Reference from guan: https://www.youtube.com/watch?v=TZyBPy7iOAw
 """
-from header import *
 
 
 class Solution:

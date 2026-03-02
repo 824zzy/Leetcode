@@ -4,7 +4,6 @@
     1. within len(A) days
     2. the apples remained in queue
 """
-from header import *
 
 
 class Solution:

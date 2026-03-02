@@ -3,7 +3,6 @@ Probability == prefix sum + binary search
 
 zillow interview problem
 """
-from header import *
 
 
 class Solution:

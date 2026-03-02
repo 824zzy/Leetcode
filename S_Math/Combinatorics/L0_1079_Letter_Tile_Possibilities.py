@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/letter-tile-possibilities/description/
 since n is small, we can find all the permutations and count unique ones.
 """
-from header import *
 
 
 class Solution:

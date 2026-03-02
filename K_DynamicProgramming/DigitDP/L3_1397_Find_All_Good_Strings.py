@@ -2,7 +2,6 @@
 from: https://leetcode.cn/problems/find-all-good-strings/solution/by-jmy45-r5j1/
 digit DP + KMP
 """
-from header import *
 
 
 class Solution:

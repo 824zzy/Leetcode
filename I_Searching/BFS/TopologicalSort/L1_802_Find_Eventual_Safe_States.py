@@ -5,7 +5,6 @@ translate problem:
 
 twist topological sort to find nodes which out degree is 0
 """
-from header import *
 
 
 class Solution:

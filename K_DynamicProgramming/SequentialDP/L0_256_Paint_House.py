@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/paint-house/
 classic coloring problem
 """
-from header import *
 
 
 class Solution:

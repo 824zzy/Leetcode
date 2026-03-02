@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/predict-the-winner/
 The same as 877 Stone Game
 """
-from header import *
 
 
 class Solution:

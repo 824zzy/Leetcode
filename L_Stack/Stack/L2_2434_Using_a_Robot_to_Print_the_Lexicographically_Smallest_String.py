@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/
 TODO: learn from: https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/discuss/2678792/Python3-Stack-%2B-Counter-O(N)-Clean-and-Concise
 """
-from header import *
 
 
 class Solution:

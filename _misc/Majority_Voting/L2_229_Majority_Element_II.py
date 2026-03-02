@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/majority-element-ii/
 """
-from header import *
 
 # Boyer-Moore Vote Algorithm
 

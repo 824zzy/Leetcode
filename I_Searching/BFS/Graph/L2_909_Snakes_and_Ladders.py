@@ -2,7 +2,6 @@
 1. preprocess the board to a graph
 2. BFS to find the shortest path
 """
-from header import *
 
 
 class Solution:

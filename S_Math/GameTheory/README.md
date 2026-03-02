@@ -4,7 +4,7 @@ Minimax: A decision rule used in decision theory, game theory, statistics, and p
 
 ## Template
 
-``` py
+```py
 @cache
 def dp(i):
     if i == len(A):

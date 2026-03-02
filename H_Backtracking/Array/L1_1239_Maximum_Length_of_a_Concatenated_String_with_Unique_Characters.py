@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/
 use backtracking to find out all possible combinations of strings
 """
-from header import *
 
 
 class Solution:

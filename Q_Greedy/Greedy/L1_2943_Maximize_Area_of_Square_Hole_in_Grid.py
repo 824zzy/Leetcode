@@ -2,7 +2,6 @@
 problem conversion
 find square as a hole ==> find consecutive bars ==> greedy
 """
-from header import *
 
 
 class Solution:

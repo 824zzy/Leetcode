@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-numbers-with-unique-digits/
 dp[i] means the count of numbers with unique digits of length i and dp[i] = dp[i-1]*(11-i)
 """
-from header import *
 
 # bottom up solution
 

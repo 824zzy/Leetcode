@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/
 For each subtree, find the minimum value and maximum value of its descendants.
 """
-from header import *
 
 
 class Solution:

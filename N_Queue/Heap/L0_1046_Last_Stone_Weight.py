@@ -2,7 +2,6 @@
 simulate using heap
 """
 
-from header import *
 
 
 class Solution:

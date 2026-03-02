@@ -2,7 +2,6 @@
 1. floyd-warshall to find distances among all nodes
 2. bit-mask top-down dp to find shortest path
 """
-from header import *
 
 
 class Solution:

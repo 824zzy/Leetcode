@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/smallest-sufficient-team/
 bitmask + knapsack
 """
-from header import *
 
 
 class Solution:

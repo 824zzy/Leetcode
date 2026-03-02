@@ -3,7 +3,6 @@ minimax ==> binary search
 
 use binary search to find the min capability that can rob more than k houses
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-subarrays-with-fixed-bounds/
 TODO: learn from lee: https://leetcode.com/problems/count-subarrays-with-fixed-bounds/discuss/2708099/JavaC%2B%2BPython-Sliding-Window-with-Explanation
 """
-from header import *
 
 
 class Solution:

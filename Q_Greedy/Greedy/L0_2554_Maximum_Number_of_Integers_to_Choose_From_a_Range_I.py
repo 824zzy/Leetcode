@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/
 greedily assign number from small to large
 """
-from header import *
 
 
 class Solution:

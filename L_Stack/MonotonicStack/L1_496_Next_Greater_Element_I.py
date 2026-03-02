@@ -5,7 +5,6 @@ build a next greater hash table by monotonic decreasing stask.
 503: https://leetcode.com/problems/next-greater-element-ii/
 556: https://leetcode.com/problems/next-greater-element-iii/
 """
-from header import *
 
 
 class Solution:

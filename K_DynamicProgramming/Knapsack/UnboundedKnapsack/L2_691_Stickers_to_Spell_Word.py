@@ -3,7 +3,6 @@ unbounded knapsack dp + optimization
 
 the hardest part is to find the optimization: "if T[0] in cntS:"
 """
-from header import *
 
 
 class Solution:

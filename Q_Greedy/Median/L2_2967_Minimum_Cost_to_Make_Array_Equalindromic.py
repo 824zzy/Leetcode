@@ -3,7 +3,6 @@
 2. binary search on candidate median
 """
 
-from header import *
 
 cand = list(range(1, 10))
 for i in range(1, 10000):

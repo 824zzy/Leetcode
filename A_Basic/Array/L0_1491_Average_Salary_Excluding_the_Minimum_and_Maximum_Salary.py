@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
 simulation
 """
-from header import *
 
 
 class Solution:

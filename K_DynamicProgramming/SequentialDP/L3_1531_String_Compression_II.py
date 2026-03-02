@@ -4,7 +4,6 @@ prev: The last symbol we have in our compression
 cnt: The number of lastChar we have considered
 k: The number of symbols we are still allowed to delete
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/unique-paths-iii/
 implementation: use backtracking to find all valid paths
 """
-from header import *
 
 
 class Solution:

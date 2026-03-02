@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/knight-dialer/
 sequential dp with hash table
 """
-from header import *
 
 
 class Solution:

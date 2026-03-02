@@ -8,7 +8,7 @@ The significant feature of knapsack problem is that the capacity of the knapsack
 
 In the case of 0/1 knapsack problem, we can either take an item or not. Thus in the code below, it is essentially a variant of time sequential template.
 
-``` py
+```py
 @cache
 def dp(i):
     if CONDITION: return ?

@@ -2,7 +2,6 @@
 use customized compare key to sort the nums
 """
 
-from header import *
 
 
 class Solution:

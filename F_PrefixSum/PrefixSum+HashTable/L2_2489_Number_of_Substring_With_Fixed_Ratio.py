@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-substrings-with-fixed-ratio/description/
 learned from ye: https://leetcode.com/problems/number-of-substrings-with-fixed-ratio/solutions/2861416/c-java-python3-prefix-sum-freq-table/
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/construct-string-from-binary-tree/
 dfs but need to consider the case when right child is None
 """
-from header import *
 
 
 class Solution:

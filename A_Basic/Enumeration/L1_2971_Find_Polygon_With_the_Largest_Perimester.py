@@ -3,7 +3,6 @@ reading comprehension:
 1. sort the array
 2. enumerate the array and check if the prefix sum is less than A[i]
 """
-from header import *
 
 
 class Solution:

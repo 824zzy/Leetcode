@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-if-path-exists-in-graph/description/
 use union find to check if source and destination are in the same group
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/toeplitz-matrix/
 
 """
-from header import *
 
 # save all the diagonals in a dictionary
 

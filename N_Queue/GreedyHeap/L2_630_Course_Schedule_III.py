@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/course-schedule-iii/
 greedy sort + priority queue
 """
-from header import *
 
 
 class Solution:

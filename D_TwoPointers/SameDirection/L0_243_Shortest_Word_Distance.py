@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shortest-word-distance/
 greedily find the minimum distance between two pointers
 """
-from header import *
 
 
 class Solution:

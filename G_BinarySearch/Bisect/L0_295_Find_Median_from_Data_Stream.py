@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-median-from-data-stream/
 maintain a sorted list of data stream
 """
-from header import *
 
 
 class MedianFinder:

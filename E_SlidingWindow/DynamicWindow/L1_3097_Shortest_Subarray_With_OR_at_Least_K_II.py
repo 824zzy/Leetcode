@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/
 """
 
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 solution1: two pass
 solution2: conclude that the dominant of two subarray is the same as the original array
 """
-from header import *
 
 
 class Solution:

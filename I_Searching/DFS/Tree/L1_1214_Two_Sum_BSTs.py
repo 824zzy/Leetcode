@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/two-sum-bsts/
 1. DFS search on two trees with cache
 """
-from header import *
 
 
 class Solution:

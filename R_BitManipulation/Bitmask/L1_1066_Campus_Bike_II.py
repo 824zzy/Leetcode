@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/campus-bikes-ii/description/
 2D bitmask dp
 """
-from header import *
 
 
 class Solution:

@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/maximum-average-subtree/
 """
-from header import *
 
 
 class Solution:

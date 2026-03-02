@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/flipping-an-image/
 bit simulation
 """
-from header import *
 
 
 class Solution:

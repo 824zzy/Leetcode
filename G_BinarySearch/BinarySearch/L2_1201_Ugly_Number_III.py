@@ -7,7 +7,6 @@ a: 2 4 6 8 10
 b: 4 8
 c: 6
 """
-from header import *
 
 
 class Solution:

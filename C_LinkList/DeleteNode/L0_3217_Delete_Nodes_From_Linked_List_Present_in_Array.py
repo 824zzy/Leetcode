@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/
 """
 
-from header import *
 
 
 class Solution:

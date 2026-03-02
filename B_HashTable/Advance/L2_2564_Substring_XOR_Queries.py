@@ -4,7 +4,6 @@
 
 Time complexity: O(n^2)
 """
-from header import *
 
 
 class Solution:

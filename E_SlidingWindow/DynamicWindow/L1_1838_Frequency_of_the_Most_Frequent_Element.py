@@ -3,7 +3,6 @@ prefix sum + sliding window
 
 consider A[j] as the right endpoint, if the cost of subarray A[i:j] > k, then move left point
 """
-from header import *
 
 # offline solution
 

@@ -2,7 +2,6 @@
 straight-forward solution using heap
 time complexity: O(nlogn)
 """
-from header import *
 
 
 class Solution:

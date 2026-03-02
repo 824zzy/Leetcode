@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/three-consecutive-odds/
 array simulation
 """
-from header import *
 
 
 class Solution:

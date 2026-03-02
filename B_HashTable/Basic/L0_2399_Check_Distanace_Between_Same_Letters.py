@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/check-distances-between-same-letters/
 use hash table to store the index of each letter, then check if all the distances are valid
 """
-from header import *
 
 
 class Solution:

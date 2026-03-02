@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/flip-game/
 linear scan
 """
-from header import *
 
 
 class Solution:

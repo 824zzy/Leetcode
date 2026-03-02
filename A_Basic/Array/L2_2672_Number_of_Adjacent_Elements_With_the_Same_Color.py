@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color/
 Each time you make a change, it only affects the relationship between the current element and its adjacent ones, so you can just simulate it.
 """
-from header import *
 
 
 class Solution:

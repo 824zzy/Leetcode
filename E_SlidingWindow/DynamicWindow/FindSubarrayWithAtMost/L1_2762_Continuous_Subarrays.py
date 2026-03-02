@@ -4,7 +4,6 @@ sliding window + Counter
 find the number of subarray with **at most 2** distinct elements
 """
 
-from header import *
 
 
 class Solution:

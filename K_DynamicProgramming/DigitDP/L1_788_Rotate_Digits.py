@@ -3,7 +3,6 @@ digit dp with leading zero
 
 use has_diff to indicate whether the number has different digit from the original number
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. use sweep line to find accumulate full blooms
 2. use binary search to find the last time point that <= t
 """
-from header import *
 
 
 class Solution:

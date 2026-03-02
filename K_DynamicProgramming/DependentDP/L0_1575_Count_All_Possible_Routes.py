@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-all-possible-routes/
 simple top down dp
 """
-from header import *
 
 
 class Solution:

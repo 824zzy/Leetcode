@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/squares-of-a-sorted-array/
 find larger absolute value of two pointers
 """
-from header import *
 
 
 class Solution:

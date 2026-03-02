@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/decode-ways/
 For bottom up, we need to use extra number at the end of array to record the sum of single and double digit dp result.
 """
-from header import *
 
 # top down
 

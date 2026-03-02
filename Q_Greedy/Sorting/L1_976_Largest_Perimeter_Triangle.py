@@ -2,7 +2,6 @@
 1. Sort the array.
 2. For any cc in the array, we choose the largest possible a≤b≤c
 """
-from header import *
 
 
 class Solution:

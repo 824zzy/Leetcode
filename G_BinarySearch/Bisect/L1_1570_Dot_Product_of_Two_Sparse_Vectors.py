@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/dot-product-of-two-sparse-vectors/
 optimize step by step
 """
-from header import *
 
 # array brute force
 

@@ -2,7 +2,6 @@
 1. it is not dp
 2. multiply all the possible splits
 """
-from header import *
 from functools import reduce
 
 # elegant two pointer solution from 0x3ff

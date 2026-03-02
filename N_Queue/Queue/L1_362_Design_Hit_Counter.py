@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/design-hit-counter/
 maintain a deque for simulation
 """
-from header import *
 
 
 class HitCounter:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/merge-nodes-in-between-zeros/
 Simulation: simulate the process of merging nodes between zeros.
 """
-from header import *
 
 
 class Solution:

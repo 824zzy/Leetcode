@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/compare-version-numbers/
 split the string by dot and use zip longest to greedily find the larger one chunk by one chunk
 """
-from header import *
 
 
 class Solution:

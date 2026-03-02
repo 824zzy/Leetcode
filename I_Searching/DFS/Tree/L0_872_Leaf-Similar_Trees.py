@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/leaf-similar-trees/description/
 in-order dfs traversal
 """
-from header import *
 
 
 class Solution:

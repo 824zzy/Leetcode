@@ -2,7 +2,6 @@
 1. run DFS independently for node 1 and 2, memorizing the distance to each node we reach.
 2. we check each node and return the one with minimum max distance.
 """
-from header import *
 
 
 class Solution:

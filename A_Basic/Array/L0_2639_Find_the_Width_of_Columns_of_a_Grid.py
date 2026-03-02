@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-width-of-columns-of-a-grid/
 simulation
 """
-from header import *
 
 
 class Solution:

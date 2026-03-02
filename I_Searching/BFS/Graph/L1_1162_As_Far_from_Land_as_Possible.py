@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/as-far-from-land-as-possible/
 multi-source bfs
 """
-from header import *
 
 
 class Solution:

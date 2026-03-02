@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/search-a-2d-matrix-ii/
 binary search to find the row and column
 """
-from header import *
 
 # O(mlogn)
 

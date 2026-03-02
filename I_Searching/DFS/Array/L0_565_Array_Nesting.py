@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/array-nesting/
 dfs on array
 """
-from header import *
 
 
 class Solution:

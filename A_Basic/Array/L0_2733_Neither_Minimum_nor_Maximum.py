@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/neither-minimum-nor-maximum/
 simulate
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/power-of-four/
 
 """
-from header import *
 
 
 class Solution:

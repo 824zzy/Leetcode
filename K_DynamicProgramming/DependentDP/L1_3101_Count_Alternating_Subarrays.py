@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-all-alternating-subarrays/
 dependent dp, dp[i] refers to the number of alternating subarrays ending at i
 """
-from header import *
 
 # top down solution
 

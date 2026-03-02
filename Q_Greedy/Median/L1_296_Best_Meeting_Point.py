@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/best-meeting-point/
 greedily find the median of rows and columns
 """
-from header import *
 
 
 class Solution:

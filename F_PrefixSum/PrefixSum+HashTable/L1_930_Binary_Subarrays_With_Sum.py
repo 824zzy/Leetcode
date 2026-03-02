@@ -2,7 +2,6 @@
 presum[j]-presum[i] = t
 ===> presum[j]-t = presum[i]
 """
-from header import *
 
 
 class Solution:

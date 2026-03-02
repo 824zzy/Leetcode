@@ -2,7 +2,6 @@
 simple usage of two pointer
 """
 
-from header import *
 
 
 # in-place solution

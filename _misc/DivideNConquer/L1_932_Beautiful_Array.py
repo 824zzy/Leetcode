@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/beautiful-array/
 obtain beautiful array by rearranging elements in nums
 """
-from header import *
 
 # top down divide and conquer
 

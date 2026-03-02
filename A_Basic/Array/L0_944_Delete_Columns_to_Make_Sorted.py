@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/delete-columns-to-make-sorted/
 use zip to find all the columns and check if each column is lexicographically
 """
-from header import *
 
 
 class Solution:

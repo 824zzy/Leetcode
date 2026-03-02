@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/design-add-and-search-words-data-structure/
 trie + dfs/bfs
 """
-from header import *
 
 # trie + dfs
 

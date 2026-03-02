@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/super-pow/
 divide b into two parts and conquer them
 """
-from header import *
 
 
 class Solution:

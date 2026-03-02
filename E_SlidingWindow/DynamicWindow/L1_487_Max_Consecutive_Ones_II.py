@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/max-consecutive-ones-ii/
 typical sliding window
 """
-from header import *
 
 
 class Solution:

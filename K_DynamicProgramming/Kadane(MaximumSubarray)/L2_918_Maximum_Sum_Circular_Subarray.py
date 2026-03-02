@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-sum-circular-subarray/
 compute both maximum contiguous subarray and minimum contiguous subarray
 """
-from header import *
 
 
 class Solution:

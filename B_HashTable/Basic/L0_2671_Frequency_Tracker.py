@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/frequency-tracker/
 use two counters to simulate
 """
-from header import *
 
 
 class FrequencyTracker:

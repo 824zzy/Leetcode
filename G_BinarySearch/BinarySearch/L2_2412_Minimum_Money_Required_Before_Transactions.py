@@ -4,7 +4,6 @@
     - For transactions that have cashback less than cost, sort them by cashback in descending order.
 2. use binary search to find the minimum money required before transactions. Note that the upper bound of the money required is 10**14+1.
 """
-from header import *
 
 
 class Solution:

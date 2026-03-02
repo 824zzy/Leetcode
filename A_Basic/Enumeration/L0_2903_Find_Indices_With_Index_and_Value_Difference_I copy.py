@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-indices-with-index-and-value-difference-i/
 brute force for the small data size: O(n^2)
 """
-from header import *
 
 
 class Solution:

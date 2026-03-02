@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/matrix-diagonal-sum/
 sum the diagonal
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 A comprehensive problem for binary search and dfs/bfs
 Similar problem: 778. Swim in Rising Water
 """
-from header import *
 
 
 class Solution:

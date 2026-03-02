@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
 simulate the process reversely
 """
-from header import *
 
 
 class Solution:

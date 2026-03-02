@@ -2,7 +2,6 @@
 1. enumerate possible length of hFences and vFences
 2. find the maximum of intersection
 """
-from header import *
 
 
 class Solution:

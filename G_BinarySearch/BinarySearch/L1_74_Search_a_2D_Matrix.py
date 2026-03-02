@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/search-a-2d-matrix/
 apply binary search on 2D matrix by finding row and col indexes by divmod
 """
-from header import *
 
 
 class Solution:

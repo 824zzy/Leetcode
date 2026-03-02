@@ -3,7 +3,6 @@ prefix set trie or trie
 
 TODO: solve it again
 """
-from header import *
 
 
 class Solution:

@@ -4,7 +4,6 @@
 2. ans is updated by subarray count(j-i+1)
 """
 
-from header import *
 
 
 class Solution:

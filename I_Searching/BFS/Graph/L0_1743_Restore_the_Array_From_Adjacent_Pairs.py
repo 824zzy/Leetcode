@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/
 build graph and do BFS
 """
-from header import *
 
 
 class Solution:

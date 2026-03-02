@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-and-say/
 simple usage of groupby
 """
-from header import *
 
 
 class Solution:

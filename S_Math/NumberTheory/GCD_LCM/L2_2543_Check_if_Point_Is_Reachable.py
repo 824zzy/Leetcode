@@ -2,7 +2,6 @@
 1.  (x, y-x), (x - y, y) ==> find GCD of x, y
 2.  (2*x, y), (x, 2*y) ==> check if the GCD is power of 2
 """
-from header import *
 
 
 class Solution:

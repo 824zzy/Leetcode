@@ -3,7 +3,6 @@ Solution 1: try to union stones in the same row/column while check if they are i
 Solution 2: dfs to count groups
 """
 
-from header import *
 
 
 # Solution 1

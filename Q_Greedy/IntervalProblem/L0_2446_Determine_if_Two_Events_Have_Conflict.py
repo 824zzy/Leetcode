@@ -6,7 +6,6 @@ or
 BBBB
   AAAA
 """
-from header import *
 
 
 class Solution:

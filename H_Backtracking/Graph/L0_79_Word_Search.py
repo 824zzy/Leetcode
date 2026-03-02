@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/word-search/
 a regular backtracking problem
 """
-from header import *
 
 
 class Solution:

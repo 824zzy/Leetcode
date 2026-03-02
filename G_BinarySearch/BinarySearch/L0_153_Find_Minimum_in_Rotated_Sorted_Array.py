@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/submissions/
 non-target binary search.
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. dfs template
 2. sort the costs, and only keep the smallest 2 and largest 3
 """
-from header import *
 
 
 class Solution:

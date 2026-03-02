@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/
 ensure the frequency of each character is distributable for all the words.
 """
-from header import *
 
 
 class Solution:

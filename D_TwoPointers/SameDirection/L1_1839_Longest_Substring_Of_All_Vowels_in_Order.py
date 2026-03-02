@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-substring-of-all-vowels-in-order/
 sliding window like two pointers
 """
-from header import *
 
 # use `unique` to mark the legit substring
 

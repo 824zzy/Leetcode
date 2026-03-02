@@ -2,7 +2,6 @@
 Delete op like P203
 """
 
-from header import *
 
 
 class Solution(object):

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/subarray-sum-equals-k/
 subarray sum template
 """
-from header import *
 
 
 class Solution:

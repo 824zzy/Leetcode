@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sum-root-to-leaf-numbers/
 find leaves and calculate sum
 """
-from header import *
 
 
 class Solution:

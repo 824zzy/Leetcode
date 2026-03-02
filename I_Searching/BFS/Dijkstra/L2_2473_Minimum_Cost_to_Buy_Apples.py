@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-cost-to-buy-apples/
 simulation using dijkstra template
 """
-from header import *
 
 
 class Solution:

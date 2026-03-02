@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/domino-and-tromino-tiling/
 Find the transitional equation: dp(n) = 2*dp(n-1)+dp(n-3)
 """
-from header import *
 
 
 class Solution:

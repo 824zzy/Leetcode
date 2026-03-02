@@ -4,7 +4,6 @@ LIS template with a counter to count the number of LIS.
 Note that binary search + greedy is not applicable here because we need to count the number of LIS.
 """
 
-from header import *
 
 
 class Solution:

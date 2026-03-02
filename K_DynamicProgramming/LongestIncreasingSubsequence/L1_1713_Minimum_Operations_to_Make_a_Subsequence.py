@@ -2,7 +2,6 @@
 LIS template + hash table
 """
 
-from header import *
 
 
 class Solution:

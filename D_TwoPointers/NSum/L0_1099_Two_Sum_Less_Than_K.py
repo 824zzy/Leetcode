@@ -2,7 +2,6 @@
 1. can sort? ==> yes
 2. two pointers
 """
-from header import *
 
 
 class Solution:

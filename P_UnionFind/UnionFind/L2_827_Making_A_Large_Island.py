@@ -4,7 +4,6 @@ union find + bfs
 1. union find to find all connected components
 2. for each 0, bfs to find all connected components and add them up
 """
-from header import *
 
 
 class Solution:

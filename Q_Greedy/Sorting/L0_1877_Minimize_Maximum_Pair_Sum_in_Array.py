@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/
 the minimize pair sum is A[i] + A[n-1-i]
 """
-from header import *
 
 
 class Solution:

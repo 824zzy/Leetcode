@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/ransom-note/
 use counter comparing operation
 """
-from header import *
 
 
 class Solution:

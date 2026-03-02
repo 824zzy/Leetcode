@@ -3,7 +3,6 @@ think reversely
 
 Increasing n - 1 smaller elements by 1 = decreasing only the max element by 1
 """
-from header import *
 
 
 class Solution:

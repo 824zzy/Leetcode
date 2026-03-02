@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/peak-index-in-a-mountain-array/
 Ternary search template
 """
-from header import *
 
 
 class Solution:

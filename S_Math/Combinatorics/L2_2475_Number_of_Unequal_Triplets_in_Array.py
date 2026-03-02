@@ -9,7 +9,6 @@ E.g. [1,1,2,2,2,3,3,3,3,4,4,4,4,4] => mp=[2,3,4,5], then the unique triplets are
 
 time complexity: O(n)
 """
-from header import *
 
 
 class Solution:

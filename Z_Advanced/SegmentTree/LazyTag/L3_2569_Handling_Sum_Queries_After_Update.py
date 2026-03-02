@@ -5,7 +5,6 @@ type1: range set from l to r
 type2: increase the sum of nums2 by num1's 1 bit count * p
 type3: append current sum of nums2 to answer
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 binary search + tuple sliding window
 """
-from header import *
 
 
 class Solution:

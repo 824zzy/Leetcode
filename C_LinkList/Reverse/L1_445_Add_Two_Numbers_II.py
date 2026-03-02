@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/add-two-numbers-ii/
 two pass simulation
 """
-from header import *
 
 
 class Solution:

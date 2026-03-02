@@ -2,7 +2,6 @@
 prefix suffix decomposition + LIS template (either DP or binary search)
 """
 
-from header import *
 
 
 class Solution:

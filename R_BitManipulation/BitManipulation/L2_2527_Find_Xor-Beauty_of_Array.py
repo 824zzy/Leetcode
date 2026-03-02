@@ -7,7 +7,6 @@ formulate answer bit by bit:
     ones = (n^2-(n-y)^2)*y = 2ny^2 - y^3
     ==> only y's parity matters
 """
-from header import *
 from functools import reduce
 
 

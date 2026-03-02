@@ -3,7 +3,6 @@ linked list + hash table
 1. use a hashmap to map the original node to its copy.
 2. two passes traverses to build deep copy
 """
-from header import *
 
 
 class Solution:

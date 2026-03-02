@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/arithmetic-subarrays/
 zipping+sorting
 """
-from header import *
 
 
 class Solution:

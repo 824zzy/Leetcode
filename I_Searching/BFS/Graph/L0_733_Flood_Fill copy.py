@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/flood-fill/
 simple bfs
 """
-from header import *
 
 
 class Solution:

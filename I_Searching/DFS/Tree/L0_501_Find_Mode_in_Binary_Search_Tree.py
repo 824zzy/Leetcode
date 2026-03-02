@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-mode-in-binary-search-tree/submissions/
 find the most frequent node by counter
 """
-from header import *
 
 
 class Solution:

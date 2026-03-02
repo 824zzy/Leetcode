@@ -2,7 +2,6 @@
 Post order traversal along with the fuel and rep count.
 Note that we need to record the answer in the root node.
 """
-from header import *
 
 # post order traversal
 

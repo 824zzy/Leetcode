@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/search-a-2d-matrix/
 find appropriate row and col indexes by bisect
 """
-from header import *
 
 
 class Solution:

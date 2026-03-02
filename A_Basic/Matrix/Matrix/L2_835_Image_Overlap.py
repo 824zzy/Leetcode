@@ -2,7 +2,6 @@
 1. generate point positions of A and B
 2. use d to record patterns of sliding
 """
-from header import *
 
 
 class Solution:

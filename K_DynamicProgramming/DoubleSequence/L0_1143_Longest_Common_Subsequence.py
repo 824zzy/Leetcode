@@ -2,7 +2,6 @@
 classical 2d dp problem
 """
 
-from header import *
 
 
 # top down

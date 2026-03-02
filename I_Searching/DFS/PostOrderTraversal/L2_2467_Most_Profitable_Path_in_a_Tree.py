@@ -3,7 +3,6 @@ two dfs:
 1. dfs1: calculate the distance from bob to 0
 2. dfs2: calculate the maximum profit Alice can get from 0 to leaf
 """
-from header import *
 
 # general form
 

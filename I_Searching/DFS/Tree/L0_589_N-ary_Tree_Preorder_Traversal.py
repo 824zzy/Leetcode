@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 """
-from header import *
 
 
 class Solution:

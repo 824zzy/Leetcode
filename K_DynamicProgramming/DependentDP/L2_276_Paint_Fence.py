@@ -2,7 +2,6 @@
 derive the dp transition formula:
     f(n) = (f(n-1) + f(n-2))*(k-1), where f(1) = k and f(2) = k**2.
 """
-from header import *
 
 
 class Solution:

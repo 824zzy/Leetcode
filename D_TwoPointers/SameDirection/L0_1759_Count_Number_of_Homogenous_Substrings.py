@@ -2,7 +2,6 @@
 solution 1: two pointers
 solution 2: groupby
 """
-from header import *
 
 
 class Solution:

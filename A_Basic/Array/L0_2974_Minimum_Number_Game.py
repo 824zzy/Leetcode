@@ -3,7 +3,6 @@ reading comprehension
 1. sort the array
 2. swap elements
 """
-from header import *
 
 
 class Solution:

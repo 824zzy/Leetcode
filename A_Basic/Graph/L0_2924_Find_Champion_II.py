@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-champion-ii/
 find the only node that in-degree is 0
 """
-from header import *
 
 
 class Solution:

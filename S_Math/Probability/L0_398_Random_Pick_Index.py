@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/random-pick-index/
 """
-from header import *
 
 
 class Solution:

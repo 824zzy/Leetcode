@@ -2,7 +2,6 @@
 1. think reversely
 2. simulation while store the seen rows and columns
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shuffle-the-array/
 rearrange array based on parity
 """
-from header import *
 
 
 class Solution:

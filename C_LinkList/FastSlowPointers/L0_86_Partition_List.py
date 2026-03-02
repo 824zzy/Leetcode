@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/partition-list/
 simulation using two dummy nodes
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. If there is a odd-length cycle, it is impossible to divide the nodes, which is checked by the DFS part;
 2. If it is possible, then we can enumerate all nodes via BFS to check for the largest number of division along each connected component, which is computed by the BFS part.
 """
-from header import *
 
 
 class Solution:

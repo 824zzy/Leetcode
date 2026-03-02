@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/two-sum/
 subtrahend as key and minuend's index as value
 """
-from header import *
 
 
 class Solution:

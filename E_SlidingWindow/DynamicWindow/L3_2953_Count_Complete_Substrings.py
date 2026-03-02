@@ -3,7 +3,6 @@ enumeration + sliding window
 
 This solution will TLE, please refer to this better one: https://leetcode.cn/problems/count-complete-substrings/solutions/2551743/bao-li-hua-chuang-mei-ju-chuang-kou-nei-31j5m/
 """
-from header import *
 
 
 class Solution:

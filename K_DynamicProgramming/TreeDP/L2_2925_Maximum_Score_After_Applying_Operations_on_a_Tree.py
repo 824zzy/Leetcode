@@ -2,7 +2,6 @@
 solution 1: knapsack on tree
 solution 2 from 0x3ff: think reversely, only focus on which node to delete
 """
-from header import *
 
 
 class Solution:

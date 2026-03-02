@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-town-judge/
 find the node that has in-degree=n-1 and out-degree=0
 """
-from header import *
 
 
 class Solution:

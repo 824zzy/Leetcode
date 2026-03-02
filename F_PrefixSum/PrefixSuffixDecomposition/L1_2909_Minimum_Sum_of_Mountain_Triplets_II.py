@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-sum-of-mountain-triplets-ii/
 prefix suffix decomposition + greedy
 """
-from header import *
 
 
 class Solution:

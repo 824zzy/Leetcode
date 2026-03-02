@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-balanced-subsequence-sum/
 A[i]-A[j] >= i-j ==> A[i]-i >= A[j]-j
 """
-from header import *
 
 
 class SegmentTree:

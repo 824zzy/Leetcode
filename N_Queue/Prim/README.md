@@ -6,7 +6,7 @@ Time complexity: O(ElogV) ~= O(N^2logN)
 
 ## Template
 
-``` py
+```py
 G = defaultdict(dict)
 for i in range(len(A)):
     for j in range(i+1, len(A)):

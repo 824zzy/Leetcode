@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/tree-diameter/
 dfs + greedy
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 dfs with parent
 """
 
-from header import *
 
 
 class Solution:

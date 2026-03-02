@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/
 """
-from header import *
 
 
 class Solution:

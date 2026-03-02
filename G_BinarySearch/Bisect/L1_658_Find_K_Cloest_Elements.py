@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-k-closest-elements/
 find idx by bisect_left and use two pointers to find the k closest elements
 """
-from header import *
 
 
 class Solution:

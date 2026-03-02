@@ -3,7 +3,6 @@
 3: [3,2], [2,4]
 5: [4,1], [2,4]
 """
-from header import *
 
 
 class Solution:

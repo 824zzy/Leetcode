@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-enemy-forts-that-can-be-captured/
 translate the problems into: finding the number of 0's between a 1 and a -1 using two pointers
 """
-from header import *
 
 # O(n)
 

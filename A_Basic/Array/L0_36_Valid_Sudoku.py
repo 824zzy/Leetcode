@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/valid-sudoku/description/
 Simulate the rules
 """
-from header import *
 
 
 class Solution:

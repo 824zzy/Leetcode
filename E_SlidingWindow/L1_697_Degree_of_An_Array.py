@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/degree-of-an-array/
 hash table + sliding window
 """
-from header import *
 
 
 class Solution:

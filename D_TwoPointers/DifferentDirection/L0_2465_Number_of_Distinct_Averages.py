@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-distinct-averages/description/
 sort + two pointers
 """
-from header import *
 
 
 class Solution:

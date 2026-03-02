@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/bulls-and-cows/
 count the number of bulls and cows
 """
-from header import *
 
 
 class Solution:

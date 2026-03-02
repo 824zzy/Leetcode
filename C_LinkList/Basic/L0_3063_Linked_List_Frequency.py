@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/linked-list-frequency/
 linked list simulation
 """
-from header import *
 
 
 class Solution:

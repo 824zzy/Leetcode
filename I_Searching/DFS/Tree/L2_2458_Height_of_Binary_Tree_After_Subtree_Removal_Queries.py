@@ -5,7 +5,6 @@
     1. if the node has no cousin, then the answer is the depth of the node minus 1
     2. if the node has a cousin, then the answer is the depth of the node or the most deepest node of the cousin's depth
 """
-from header import *
 
 
 class Solution:

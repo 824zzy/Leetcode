@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/valid-palindrome/
 simulation
 """
-from header import *
 
 
 class Solution:

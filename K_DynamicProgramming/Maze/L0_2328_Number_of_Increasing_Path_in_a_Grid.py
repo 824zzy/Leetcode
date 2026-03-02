@@ -4,7 +4,6 @@ The solution format is the same as top down dp.
 
 Time complexity: O(m*n)
 """
-from header import *
 
 
 class Solution:

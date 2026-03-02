@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/
 post order traversal on all the nodes along with the distance and the flag of whether the node's subtree has apple
 """
-from header import *
 
 
 class Solution:

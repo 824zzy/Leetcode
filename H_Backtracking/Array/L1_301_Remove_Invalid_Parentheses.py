@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/remove-invalid-parentheses/
 backtracking
 """
-from header import *
 
 
 class Solution:

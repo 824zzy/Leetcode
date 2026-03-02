@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/decode-xored-array/
 bit simulation
 """
-from header import *
 
 
 class Solution:

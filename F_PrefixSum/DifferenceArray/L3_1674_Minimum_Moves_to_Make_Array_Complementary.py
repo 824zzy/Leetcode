@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-moves-to-make-array-complementary/
 TODO:
 """
-from header import *
 
 
 class Solution:

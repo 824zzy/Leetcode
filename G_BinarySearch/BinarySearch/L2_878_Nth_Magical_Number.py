@@ -3,7 +3,6 @@ binary search + math(inclusive-exclusive principle)
 
 use a*b//gcd(a, b) to find the joint set.
 """
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@
 2. prime optimization: since 1 <= nums[i] <= 10^5 ==> largest prime factor is 313
 3. union find using hash table to avoid TLE
 """
-from header import *
 
 PRIMES = [
     2,

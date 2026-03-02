@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/keys-and-rooms/description/
 dfs solution
 """
-from header import *
 
 
 class Solution:

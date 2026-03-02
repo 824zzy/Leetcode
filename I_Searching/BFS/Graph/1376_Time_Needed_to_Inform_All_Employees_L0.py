@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/time-needed-to-inform-all-employees/
 search along with the maximum time
 """
-from header import *
 
 # bfs
 

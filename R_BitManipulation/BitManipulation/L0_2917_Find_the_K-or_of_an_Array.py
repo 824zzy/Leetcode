@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-k-or-of-an-array/
 loop through each bit and simulate
 """
-from header import *
 
 
 class Solution:

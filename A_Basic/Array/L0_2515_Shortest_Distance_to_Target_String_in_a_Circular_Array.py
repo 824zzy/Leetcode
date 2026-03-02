@@ -2,7 +2,6 @@
 solution1: from startIndex to targets
 solution2: from targets to startIndex
 """
-from header import *
 
 # solution 1
 

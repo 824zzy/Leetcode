@@ -2,7 +2,6 @@
 prefix suffix decomposition + greedy
 """
 
-from header import *
 
 
 class Solution:

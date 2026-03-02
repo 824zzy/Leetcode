@@ -2,7 +2,7 @@
 
 **LCA template**:
 
-``` py
+```py
 def dfs(node):
     """Return lowest common ancestor of start and dest nodes."""
     if not node:
@@ -50,7 +50,7 @@ class TreeAncestor:
         return node 
 ```
 
-Reference:
+## Reference
 
 - [Binary Lifting with k-th ancestor and lowest common ancestor](https://iq.opengenus.org/binary-lifting-k-th-ancestor-lowest-common-ancestor)
 - [Errichto tutorial](https://www.youtube.com/watch?v=oib-XsjFa-M)

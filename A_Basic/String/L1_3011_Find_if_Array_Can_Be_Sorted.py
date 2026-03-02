@@ -4,7 +4,6 @@ string simulation to ensure:
 2. Each "segment" should have the same bit count. The segment has the range of [min(i, B[i][2]), max(i, B[i][2])+1].
 """
 
-from header import *
 
 
 class Solution:

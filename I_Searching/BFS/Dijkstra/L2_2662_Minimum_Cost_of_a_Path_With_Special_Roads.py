@@ -2,7 +2,6 @@
 1. build graph
 2. dijkstra
 """
-from header import *
 
 
 class Solution:

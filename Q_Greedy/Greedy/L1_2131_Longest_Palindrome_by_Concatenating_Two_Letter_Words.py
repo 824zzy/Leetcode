@@ -2,7 +2,6 @@
 1. create a freq table for all the words
 2. greedily add words to the palindrome
 """
-from header import *
 
 
 class Solution:

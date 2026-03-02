@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/
 Find lower bound and upper bound by bisect
 """
-from header import *
 
 # bisect
 

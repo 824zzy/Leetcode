@@ -6,7 +6,6 @@ Monotone chain convex hull algorithm, time complexity: O(nlogn)
 
 https://commons.wikimedia.org/wiki/File:Animation_depicting_the_Monotone_algorithm.gif
 """
-from header import *
 
 
 class Solution:

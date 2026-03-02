@@ -3,7 +3,6 @@ use dijkstra's algorithm to find the shortest path in a weighted graph whose wei
 
 Time: O(ElogV), where E=4*M*N and V=M*N
 """
-from header import *
 
 
 class Solution:

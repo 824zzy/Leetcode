@@ -7,7 +7,6 @@
 
 Time: O(N^2)
 """
-from header import *
 
 
 class Solution:

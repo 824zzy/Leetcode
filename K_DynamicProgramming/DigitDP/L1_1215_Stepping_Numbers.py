@@ -3,7 +3,6 @@ digit dp with lower and upper bound and leading zero
 
 the same as 2801. Since the data range is small, we can use dfs instead of digit dp.
 """
-from header import *
 
 
 class Solution:

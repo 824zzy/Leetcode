@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/design-sql/
 two hash tables to store the tables and row indexes
 """
-from header import *
 
 
 class SQL:

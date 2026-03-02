@@ -2,7 +2,6 @@
 if one can buy, one can choose to buy or skip
 if one cannot buy, one can choose to sell or skip
 """
-from header import *
 
 
 class Solution:

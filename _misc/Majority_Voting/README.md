@@ -8,7 +8,7 @@ This algorithm works on the fact that if an element occurs more than N/X times, 
 
 Note that it can be extend to find all the elements that occur more than N/X times.
 
-``` py
+```py
 cnt, cand = 0, None
 for x in A:
     if x==cand: cnt += 1

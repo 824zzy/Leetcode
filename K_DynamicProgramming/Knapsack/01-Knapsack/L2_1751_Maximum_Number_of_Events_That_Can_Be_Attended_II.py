@@ -4,7 +4,6 @@
 
 1 <= k * events.length <= 106 ==> TC: O(k*n*logn)
 """
-from header import *
 
 
 class Solution:

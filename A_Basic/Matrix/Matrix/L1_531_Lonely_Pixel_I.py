@@ -2,7 +2,6 @@
 1. count rows and cols with 'B' to look for lonely pixels
 2. check if lonely pixels are existed in rows and cols
 """
-from header import *
 
 
 class Solution:

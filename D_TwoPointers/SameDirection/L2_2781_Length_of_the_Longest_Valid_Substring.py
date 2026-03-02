@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/length-of-the-longest-valid-substring/
 1 <= forbidden[i].length <= 10 ==> brute force to check all substrings of length 10
 """
-from header import *
 
 
 class Solution:

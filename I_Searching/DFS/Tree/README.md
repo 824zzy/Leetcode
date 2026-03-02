@@ -4,7 +4,7 @@
 
 Recursive version, the arguments can be: parent, value, etc.
 
-``` py
+```py
 def dfs(node, args):
     if not node: return 0/None
     l = dfs(node.left)
@@ -15,7 +15,7 @@ def dfs(node, args):
 
 Iterative version
 
-``` py
+```py
 stack = [root]
 while stack:
     curr = stack.pop()
@@ -28,7 +28,7 @@ while stack:
 
 **Recursive version**:
 
-``` py
+```py
 def preOrder(self, root):
     if root == None:
         return

@@ -3,7 +3,6 @@ hash table + counting
 
 use hash table to add new players and count players' losses
 """
-from header import *
 
 
 class Solution:

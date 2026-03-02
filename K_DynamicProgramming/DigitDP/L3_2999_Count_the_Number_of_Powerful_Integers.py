@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-the-number-of-powerful-integers/
 digit dp with lower and upper bound
 """
-from header import *
 
 
 class Solution:

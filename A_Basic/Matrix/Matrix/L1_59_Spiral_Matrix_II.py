@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/spiral-matrix-ii/
 be careful when change direction
 """
-from header import *
 
 
 class Solution:

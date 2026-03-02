@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/buy-two-chocolates/
 reading comprehension, greedily buy the cheapest two chocolates
 """
-from header import *
 
 # O(n)
 

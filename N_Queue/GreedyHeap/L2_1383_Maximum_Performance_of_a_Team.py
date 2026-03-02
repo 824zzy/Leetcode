@@ -2,7 +2,6 @@
 1. sort the engineers by their efficiency
 2. greedily add k engineer with highest efficiency to the team by heap
 """
-from header import *
 
 
 class Solution:

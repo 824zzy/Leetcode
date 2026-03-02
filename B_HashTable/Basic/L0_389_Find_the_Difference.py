@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-difference/
 use two counters to find the only different element.
 """
-from header import *
 
 
 class Solution:

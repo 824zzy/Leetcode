@@ -3,7 +3,6 @@ pick elements from the front or the end of the array
 
 Time complexity: O(n^2)
 """
-from header import *
 
 
 class Solution:

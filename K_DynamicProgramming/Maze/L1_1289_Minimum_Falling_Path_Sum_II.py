@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/minimum-falling-path-sum-ii/
 """
-from header import *
 
 
 class Solution:

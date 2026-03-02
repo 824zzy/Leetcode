@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/rearrange-array-to-maximize-prefix-score/
 greedily sort the array in decreasing order for maximize prefix score
 """
-from header import *
 
 
 class Solution:

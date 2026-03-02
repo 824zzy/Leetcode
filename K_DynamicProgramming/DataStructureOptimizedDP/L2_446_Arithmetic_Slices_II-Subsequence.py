@@ -2,7 +2,6 @@
 refer to: https://leetcode.com/problems/arithmetic-slices-ii-subsequence/discuss/1455137/Python-short-dp-explained
 We have to use bottom up dp since we use hash table as states
 """
-from header import *
 
 
 class Solution:

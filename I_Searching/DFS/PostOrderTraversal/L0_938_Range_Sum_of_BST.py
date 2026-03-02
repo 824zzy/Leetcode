@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/range-sum-of-bst/
 dfs tree while check if value in range
 """
-from header import *
 
 
 class Solution:

@@ -5,7 +5,6 @@ learn from 0x3ff: https://leetcode.cn/problems/find-maximum-non-decreasing-array
 2. Let s[i]-s[j] be the prefix sum from i to j, and let last[i] be the last number after apply the operation
     s[i]-s[j]>=last[j] ===> s[i]>=s[j]+last[j]
 """
-from header import *
 
 
 class Solution:

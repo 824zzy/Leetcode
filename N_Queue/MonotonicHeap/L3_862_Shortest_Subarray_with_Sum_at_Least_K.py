@@ -2,7 +2,6 @@
 Maintain a monotonic priority queue to find the minimum range,
 in other words, pop pq while the prefix range sum larger or equal than k.
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 simulation: assign each slot with n_sm // x, then adjust n_sm
 """
 
-from header import *
 
 
 class Solution:

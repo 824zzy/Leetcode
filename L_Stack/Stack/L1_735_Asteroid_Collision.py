@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/asteroid-collision/
 A variance of monotonic stack, in this problem the "monotonic" is no collision
 """
-from header import *
 
 
 class Solution:

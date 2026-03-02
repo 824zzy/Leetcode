@@ -2,7 +2,6 @@
 similar to burst balloons, nice implementation from ye: https://leetcode.com/problems/minimum-cost-to-merge-stones/discuss/1465680/Python3-dp
 """
 
-from header import *
 
 
 class Solution:

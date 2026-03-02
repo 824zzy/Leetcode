@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/eliminate-maximum-number-of-monsters/
 greedy sort + two pointers
 """
-from header import *
 
 
 class Solution:

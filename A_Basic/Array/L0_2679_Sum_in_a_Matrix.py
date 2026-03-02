@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sum-in-a-matrix/
 simulation
 """
-from header import *
 
 
 class Solution:

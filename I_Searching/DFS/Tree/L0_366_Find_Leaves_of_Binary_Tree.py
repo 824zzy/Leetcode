@@ -5,7 +5,6 @@ whose key is the depth of the node and value is the list of leaves at that depth
 Time complexity: O(n)
 Space complexity: O(n)
 """
-from header import *
 
 
 class Solution:

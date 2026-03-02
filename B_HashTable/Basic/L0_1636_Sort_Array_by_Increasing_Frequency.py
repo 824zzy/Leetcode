@@ -2,7 +2,6 @@
 1. count frequency of array
 2. sort the array by frequency and key
 """
-from header import *
 
 
 class Solution:

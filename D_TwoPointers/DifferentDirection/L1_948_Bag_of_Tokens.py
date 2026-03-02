@@ -2,7 +2,6 @@
 1. sort the tokens first
 2. greedily play the left token face up and right token face down
 """
-from header import *
 
 
 class Solution:

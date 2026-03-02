@@ -3,7 +3,6 @@ Transform the problem to find the shortest sliding window with sum >= k,
 we can use a monotonic increasing queue to maintain the prefix sum,
 and try to make queue head as small(but larger than k) as possible and queue tail as large as possible.
 """
-from header import *
 
 
 class Solution:

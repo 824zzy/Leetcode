@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i/
 brute force to check each subarray
 """
-from header import *
 
 
 class Solution:

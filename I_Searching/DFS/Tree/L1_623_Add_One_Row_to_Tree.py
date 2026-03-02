@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/add-one-row-to-tree/
 Tree simulation
 """
-from header import *
 
 
 class Solution:

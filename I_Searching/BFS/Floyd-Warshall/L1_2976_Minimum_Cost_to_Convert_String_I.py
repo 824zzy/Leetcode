@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-cost-to-convert-string-i/
 floyd warshall template
 """
-from header import *
 
 
 class Solution:

@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/minimum-distance-between-bst-nodes/
 """
-from header import *
 
 
 class Solution:

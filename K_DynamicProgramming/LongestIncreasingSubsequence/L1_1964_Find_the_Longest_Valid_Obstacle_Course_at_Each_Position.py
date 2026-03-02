@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/
 The same as 300.
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/unique-substrings-with-equal-digit-frequency/
 TODO: add rolling hash solution
 """
-from header import *
 
 # suboptimal brute force solution, time complexity O(n^3)
 

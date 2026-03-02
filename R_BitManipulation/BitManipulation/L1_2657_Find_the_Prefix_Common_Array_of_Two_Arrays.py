@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/
 represent set as bit mask
 """
-from header import *
 
 
 class Solution:

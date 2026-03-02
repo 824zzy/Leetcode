@@ -3,7 +3,6 @@ greedily use two pointers to:
 1. calculate the maximum and sum of the distinct subarray
 2. once the two pointers have different colors, update answer by sm-mx, and reset sm, mx and i.
 """
-from header import *
 
 
 class Solution:

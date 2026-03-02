@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shortest-string-that-contains-three-strings/
 enumerate all possible combinations + string matching
 """
-from header import *
 
 
 class Solution:

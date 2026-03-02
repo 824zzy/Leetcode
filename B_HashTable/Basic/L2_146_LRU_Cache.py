@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/lru-cache/
 use built-in dict which key is stored in the order of insertion
 """
-from header import *
 
 
 class LRUCache:

@@ -2,7 +2,7 @@
 
 ## Fixed Window
 
-``` py
+```py
 def fixed_window(A, k):
     sm = # init first k elements in the fixed window
     ans = # init answer
@@ -12,8 +12,6 @@ def fixed_window(A, k):
     return ans
 ```
 
-
-
 ## Dynamic Window
 Sliding window is usually used in array, there are two pointer `i` and `j`, `i` is alway initialize by 0 and `j` is initialize in for loop.
 
@@ -21,7 +19,7 @@ We need to always find the value k or initiate w, which are the threshold and co
 
 Note that sliding window technique only for **Non-Negative element array**.
 
-``` py
+```py
 i = 0
 # cnt/container
 for j in range(len(A)):
@@ -31,12 +29,11 @@ for j in range(len(A)):
     # update answer
 ```
 
-
 ## Find Difference
 
 If the problem asks the number of subarrays with at most K distinct elements, please come up with this type of template immediately!
 
-``` py
+```py
 def atMost(A, k):
     cnt = Counter()
     i, ans = 0, 0

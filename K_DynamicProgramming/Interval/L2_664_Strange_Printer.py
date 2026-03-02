@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/strange-printer/
 """
 
-from header import *
 
 
 class Solution:

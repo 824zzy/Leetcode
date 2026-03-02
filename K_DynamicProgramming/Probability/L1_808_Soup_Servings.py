@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/soup-servings/
 the tricky part is to determine 5000 as the threshold.
 """
-from header import *
 
 
 class Solution:

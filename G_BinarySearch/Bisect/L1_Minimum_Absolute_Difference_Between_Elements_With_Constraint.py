@@ -2,7 +2,6 @@
 1. enumerate on index i
 2. maintain a sorted list of A[i-x:i] and use bisect to find the closest element to A[i]
 """
-from header import *
 
 
 class Solution:

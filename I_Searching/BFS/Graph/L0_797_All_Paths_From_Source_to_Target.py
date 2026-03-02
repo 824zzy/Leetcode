@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/all-paths-from-source-to-target/
 go over the DAG using BFS
 """
-from header import *
 
 
 class Solution:

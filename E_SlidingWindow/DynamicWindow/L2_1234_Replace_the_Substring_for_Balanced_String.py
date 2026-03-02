@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/replace-the-substring-for-balanced-string/
 Given s, we can find the number of Q, W, E, R that exceed their quota len(s)//4. Sweep through s and find the shortest subarray which is enough to provide the exceeding part.
 """
-from header import *
 
 
 class Solution:

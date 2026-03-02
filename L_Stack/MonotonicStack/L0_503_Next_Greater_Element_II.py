@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/next-greater-element-ii/
 next greater template using monotonic increasing stack
 """
-from header import *
 
 
 class Solution:

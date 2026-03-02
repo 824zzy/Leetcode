@@ -2,7 +2,6 @@
 1. sort
 2. we
 """
-from header import *
 
 
 class Solution:

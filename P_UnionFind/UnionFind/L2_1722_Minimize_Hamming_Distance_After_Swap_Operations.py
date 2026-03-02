@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimize-hamming-distance-after-swap-operations/
 dsu + hash table
 """
-from header import *
 
 
 class DSU:

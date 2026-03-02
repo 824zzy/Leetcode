@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/4-keys-keyboard/
 TODO:
 """
-from header import *
 
 
 class Solution:

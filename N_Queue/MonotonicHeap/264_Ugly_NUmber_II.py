@@ -2,7 +2,6 @@
 maintain priority queue to iteratively find next ugly number
 """
 
-from header import *
 
 
 class Solution:

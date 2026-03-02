@@ -3,7 +3,6 @@ dp with leading zero and mask
 
 the same as 357, 1012
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/
 idea from guan: https://github.com/wisdompeak/LeetCode/blob/master/Others/995.Minimum-Number-of-K-Consecutive-Bit-Flips/995.Minimum-Number-of-K-Consecutive-Bit-Flips.cpp
 """
-from header import *
 
 
 class Solution:

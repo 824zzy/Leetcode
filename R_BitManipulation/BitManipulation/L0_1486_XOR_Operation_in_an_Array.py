@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/xor-operation-in-an-array/
 bit simulation
 """
-from header import *
 
 
 class Solution:

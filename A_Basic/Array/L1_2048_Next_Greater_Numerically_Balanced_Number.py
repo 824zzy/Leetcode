@@ -2,7 +2,6 @@
 brute force search, have to use divmod otherwise time limit exceeded.
 """
 
-from header import *
 
 
 # divmod based solution

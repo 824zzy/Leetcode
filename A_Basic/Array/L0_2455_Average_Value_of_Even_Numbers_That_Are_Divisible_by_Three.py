@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/
 find numbers that are divisible by 3 and even
 """
-from header import *
 
 
 class Solution:

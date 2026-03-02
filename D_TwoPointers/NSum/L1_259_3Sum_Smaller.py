@@ -3,7 +3,6 @@
 2. sort the array
 3. two pointers to count the valid answer
 """
-from header import *
 
 # TC: O(n^2)
 

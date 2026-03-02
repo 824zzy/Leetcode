@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-closed-islands/
 opposite 1020
 """
-from header import *
 
 
 class Solution:

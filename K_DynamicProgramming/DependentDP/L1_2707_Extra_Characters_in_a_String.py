@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/extra-characters-in-a-string/
 define dp(i) = min extra characters to make s[:i] valid
 """
-from header import *
 
 
 class Solution:

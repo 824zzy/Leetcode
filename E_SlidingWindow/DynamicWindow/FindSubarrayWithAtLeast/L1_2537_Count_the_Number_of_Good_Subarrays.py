@@ -2,7 +2,6 @@
 find 
 """
 
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@ Reverse the array and compute the smaller element count of current element by in
 
 Segment tree type: discretization + single point add + range sum query
 """
-from header import *
 
 # Tree-based segment tree
 

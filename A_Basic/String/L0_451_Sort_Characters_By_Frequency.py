@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sort-characters-by-frequency/
 count frequency and sort the counter.
 """
-from header import *
 
 
 class Solution:

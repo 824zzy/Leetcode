@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-score-of-a-good-subarray/
 Similar to 84, the only twist is use k to limit the left side and right side of rectangle
 """
-from header import *
 
 
 class Solution:

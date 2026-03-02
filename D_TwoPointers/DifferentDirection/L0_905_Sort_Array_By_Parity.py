@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sort-array-by-parity/
 Time: O(n), Space: O(1)
 """
-from header import *
 
 
 class Solution:

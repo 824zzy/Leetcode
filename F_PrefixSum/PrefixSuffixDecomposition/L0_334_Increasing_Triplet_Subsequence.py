@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/increasing-triplet-subsequence/
 greedy + prefix suffix decomposition
 """
-from header import *
 
 
 class Solution:

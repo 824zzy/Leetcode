@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/find-the-highest-altitude/
 """
-from header import *
 
 
 class Solution:

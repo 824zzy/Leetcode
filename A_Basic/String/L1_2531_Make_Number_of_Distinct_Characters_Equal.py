@@ -4,7 +4,6 @@ there are only two cases the answer is true:
 1. if x==y and len(c1)==len(c2)
 2. if x!=y, if c==1 then length -= 1, if y not in c1 then length += 1
 """
-from header import *
 
 
 class Solution:

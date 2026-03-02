@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/range-sum-query-mutable/
 segment tree template for single point set and sum query
 """
-from header import *
 
 # ZWK segment tree
 

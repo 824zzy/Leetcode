@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-smallest-letter-greater-than-target/
 find smallest letter greater than target using binary search
 """
-from header import *
 
 
 class Solution:

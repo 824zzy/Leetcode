@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/find-all-people-with-secret/
 """
-from header import *
 
 
 class Solution:

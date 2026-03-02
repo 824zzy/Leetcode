@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-sum-queries/
 ZKW segment tree
 """
-from header import *
 
 
 class SegmentTree:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/diagonal-traverse-ii/
 use hashmap to store the diagonal elements, where key is the sum of indices
 """
-from header import *
 
 
 class Solution:

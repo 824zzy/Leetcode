@@ -2,7 +2,6 @@
 1. greedily append x to x-1's sequence
 2. otherwise, look for x+1 and x+2 and create a new sequence
 """
-from header import *
 
 
 class Solution:

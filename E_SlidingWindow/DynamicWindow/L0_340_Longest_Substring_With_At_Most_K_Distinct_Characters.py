@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
 sliding window with hash table, the same as 159_Longest_Substring_with_At_Most_Two_Distinct_Characters_L0.py
 """
-from header import *
 
 
 class Solution:

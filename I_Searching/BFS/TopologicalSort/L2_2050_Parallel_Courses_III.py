@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/parallel-courses-iii/
 topological sort to find earliest to finish course u and earliest to start course v
 """
-from header import *
 
 
 class Solution:

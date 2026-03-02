@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-provinces/
 use DSU to find clusters
 """
-from header import *
 
 
 class Solution:

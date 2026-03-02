@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/
 greedy minus least frequent elements from k
 """
-from header import *
 
 
 class Solution:

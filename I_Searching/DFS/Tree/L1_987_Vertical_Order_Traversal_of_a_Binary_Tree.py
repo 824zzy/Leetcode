@@ -3,7 +3,6 @@ dfs + sorting
 
 use dict of a dict to store the tree in vertical and depth order
 """
-from header import *
 
 
 class Solution:

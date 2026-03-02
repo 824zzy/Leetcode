@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/
 post order traversal
 """
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@ for each "it":
 1. find the right most "non-it"
 2. go its left until dist or previous right most
 """
-from header import *
 
 
 class Solution:

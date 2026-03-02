@@ -2,7 +2,6 @@
 use bfs to find if there is a path from source to destination
 union find and dfs can also be used
 """
-from header import *
 
 
 class Solution:

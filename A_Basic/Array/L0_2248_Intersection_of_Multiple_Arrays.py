@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/intersection-of-multiple-arrays/
 find intersection using set
 """
-from header import *
 
 
 class Solution:

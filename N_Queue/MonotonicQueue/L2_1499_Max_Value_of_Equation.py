@@ -2,7 +2,6 @@
 Since the target to be optimized is yi + yj + |xi - xj| (aka xj + yj + yi - xi given j > i), the value of interest is yi - xi.
 So we can maintain a monotonic queue of (xi, yi - xi) and for each j, we can find the maximum value of yi - xi + xj + yj.
 """
-from header import *
 
 # heap implementation
 

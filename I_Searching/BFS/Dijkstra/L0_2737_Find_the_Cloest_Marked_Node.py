@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-closest-marked-node/
 directly apply Dijkstra's algorithm
 """
-from header import *
 
 
 class Solution:

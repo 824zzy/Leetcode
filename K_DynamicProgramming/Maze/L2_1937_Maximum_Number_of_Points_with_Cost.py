@@ -5,7 +5,6 @@ We can go left, right, or stay in the same column.
 Share the same idea with the problem 1014. Best Sightseeing Pair.
 """
 
-from header import *
 
 
 class Solution:

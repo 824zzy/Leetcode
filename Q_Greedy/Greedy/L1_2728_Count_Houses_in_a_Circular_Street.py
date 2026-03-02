@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-houses-in-a-circular-street/
 close all doors then open every door until find a opened door
 """
-from header import *
 
 
 class Solution:

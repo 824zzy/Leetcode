@@ -2,7 +2,6 @@
 time complexity: O(n * m^2)
 """
 
-from header import *
 
 
 class Solution:

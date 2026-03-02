@@ -4,7 +4,6 @@ prefix sum + dp
 1. prefix sum for reducing time complexity
 2. use dp to find the max value of k coins from piles
 """
-from header import *
 
 
 class Solution:

@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/is-subsequence/
 """
-from header import *
 
 
 class Solution:

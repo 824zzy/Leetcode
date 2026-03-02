@@ -2,7 +2,6 @@
 Iterate the array, if the max(A[0] ~ A[i]) = i,
 then we can split the array into two chunks at this index.
 """
-from header import *
 
 
 class Solution:

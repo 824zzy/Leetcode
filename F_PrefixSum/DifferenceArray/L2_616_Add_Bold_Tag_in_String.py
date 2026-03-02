@@ -3,7 +3,6 @@
 2. sweep line to find intervals
 3. build answer from intervals
 """
-from header import *
 
 
 class Solution:

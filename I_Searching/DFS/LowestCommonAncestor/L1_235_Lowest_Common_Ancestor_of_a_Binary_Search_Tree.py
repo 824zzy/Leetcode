@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 dfs + categorization
 """
-from header import *
 
 
 class Solution:

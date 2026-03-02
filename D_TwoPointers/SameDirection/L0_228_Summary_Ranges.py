@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/summary-ranges/
 construct the answer using same direction two pointers
 """
-from header import *
 
 
 class Solution:

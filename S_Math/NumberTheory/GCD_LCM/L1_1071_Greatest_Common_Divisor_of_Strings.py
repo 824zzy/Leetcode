@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/greatest-common-divisor-of-strings/
 find gcd of two string's length
 """
-from header import *
 
 
 class Solution:

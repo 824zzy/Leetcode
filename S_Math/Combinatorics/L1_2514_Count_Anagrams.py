@@ -2,7 +2,6 @@
 It is obvious that the answer is the product of the number of unique permutations for each word in a sentence.
 The last one is just the number of permutations of all letters (treating same letters as distinct, i.e. n!) corrected (divided) by the number of permutations within each group of same letters.
 """
-from header import *
 
 
 class Solution:

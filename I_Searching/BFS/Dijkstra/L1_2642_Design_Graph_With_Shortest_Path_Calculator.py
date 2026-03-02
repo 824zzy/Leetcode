@@ -2,7 +2,6 @@
 1. add the edges on the fly
 2. calculate the shortest path between two nodes using Dijkstra's algorithm
 """
-from header import *
 
 
 class Graph:

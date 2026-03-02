@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-duplicate-file-in-system/
 hash table + string
 """
-from header import *
 
 
 class Solution:

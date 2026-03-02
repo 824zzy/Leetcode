@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/
 simulation
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. sort the array
 2. greedily permute the elements from small to large
 """
-from header import *
 
 
 class Solution:

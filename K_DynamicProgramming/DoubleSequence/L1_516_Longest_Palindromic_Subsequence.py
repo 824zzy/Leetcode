@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-palindromic-subsequence/
 the same as 1143, a variance of LCS
 """
-from header import *
 
 # top down dp solution
 

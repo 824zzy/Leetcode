@@ -3,7 +3,6 @@
 2. find the largest prime among them
 """
 
-from header import *
 
 
 class Solution:

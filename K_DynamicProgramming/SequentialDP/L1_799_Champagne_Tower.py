@@ -2,7 +2,6 @@
 2D time sequential dp, the transform equation is:
 dp(i, j) = max(0, dp(i-1, j-1)-1)/2 + max(0, dp(i-1, j)-1)/2.
 """
-from header import *
 
 # top down
 

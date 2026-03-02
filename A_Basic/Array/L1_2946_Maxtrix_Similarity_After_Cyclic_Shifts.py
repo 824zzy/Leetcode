@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/matrix-similarity-after-cyclic-shifts/
 don't think too much, just simulate
 """
-from header import *
 
 
 class Solution:

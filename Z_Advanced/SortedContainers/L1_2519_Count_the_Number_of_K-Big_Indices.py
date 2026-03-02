@@ -3,7 +3,6 @@ sorted list + binary search
 
 note that A.bisect_left(x) is way much faster than bisect_left(A, x)
 """
-from header import *
 
 
 class Solution:

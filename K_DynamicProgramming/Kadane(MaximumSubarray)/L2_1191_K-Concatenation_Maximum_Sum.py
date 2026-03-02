@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/k-concatenation-maximum-sum/
 Kadane's algorithm + categorization
 """
-from header import *
 
 
 class Solution:

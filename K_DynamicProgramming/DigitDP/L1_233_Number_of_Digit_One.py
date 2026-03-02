@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-digit-one/
 digits dp + counting
 """
-from header import *
 
 # new template
 

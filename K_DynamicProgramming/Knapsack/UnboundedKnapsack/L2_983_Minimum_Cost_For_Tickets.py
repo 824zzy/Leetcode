@@ -3,7 +3,6 @@ dp + binary search
 1. use unbounded knapsack to find the minimum cost
 2. use binary search or two conditions when d>=A[i] and d<A[i] to find next day for traveling
 """
-from header import *
 
 
 class Solution:

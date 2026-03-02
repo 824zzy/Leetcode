@@ -3,7 +3,6 @@
 
 prefix sum + farmost greater monotonic stack
 """
-from header import *
 
 
 class Solution:

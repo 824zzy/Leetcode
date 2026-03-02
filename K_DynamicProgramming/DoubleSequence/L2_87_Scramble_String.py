@@ -3,7 +3,6 @@ A special double sequence dp problem using string rather than index.
 
 For every index that we can split the string into two parts, we can either swap the two parts, or keep the two parts the same.
 """
-from header import *
 
 
 class Solution:

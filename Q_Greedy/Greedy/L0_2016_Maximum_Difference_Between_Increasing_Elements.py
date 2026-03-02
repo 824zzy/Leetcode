@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-difference-between-increasing-elements/
 greedily find the minimum left element and current maximum difference between right element and left element.
 """
-from header import *
 
 
 class Solution:

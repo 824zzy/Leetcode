@@ -4,7 +4,6 @@ learn from guan: https://github.com/wisdompeak/LeetCode/tree/master/Stack/2355.M
 1. modified monotonic stack: when A[j]>A[i]-(i-j), pop j as the next smaller element on the left
 2. use dp to calculate the max sum of subarray ending at i
 """
-from header import *
 
 
 class Solution:

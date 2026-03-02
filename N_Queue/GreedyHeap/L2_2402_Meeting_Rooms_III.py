@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/meeting-rooms-iii/
 """
-from header import *
 
 
 class Solution:

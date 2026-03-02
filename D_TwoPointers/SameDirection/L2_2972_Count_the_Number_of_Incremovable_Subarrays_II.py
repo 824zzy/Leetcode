@@ -3,7 +3,6 @@
 2. enumerate i, use i as left end point, greedily find right most j that ensure A[:i]+A[j:] is sorted
 3. n-j+1 is the number of prefix can be deleted
 """
-from header import *
 
 
 class Solution:

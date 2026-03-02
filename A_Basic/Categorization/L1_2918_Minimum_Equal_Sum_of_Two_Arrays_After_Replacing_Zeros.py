@@ -7,7 +7,6 @@ Case2: B cannot become A
 Case3: both array has zero:
     max(a+a0, b+b0)
 """
-from header import *
 
 
 class Solution:

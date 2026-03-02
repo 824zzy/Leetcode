@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-unequal-triplets-in-array/
 brute force, time complexity: O(n^3)
 """
-from header import *
 
 
 class Solution:

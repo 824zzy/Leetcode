@@ -2,7 +2,6 @@
 greedily use the largest number to build the first half of palindrome.
 And for the middle element, we need to choose the largest element whose frequency is odd.
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sum-of-even-numbers-after-queries/
 simulation
 """
-from header import *
 
 
 class Solution:

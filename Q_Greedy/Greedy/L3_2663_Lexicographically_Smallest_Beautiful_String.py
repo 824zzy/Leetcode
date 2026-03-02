@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/lexicographically-smallest-beautiful-string/
 learn from lingshen: https://www.bilibili.com/video/BV1QX4y1m71X/?spm_id_from=333.337.search-card.all.click&vd_source=349088063a324f397a5e80a33effd4f0
 """
-from header import *
 
 
 class Solution:

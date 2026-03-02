@@ -3,7 +3,6 @@ Since the data size is 5 * 10^4, the algorithm has to be O(nlogn) or O(n)
 1. clearly, the algorithm has to be knapsack algorithm
 2. the hard part is to come up with the idea of use binary search to find the next job index
 """
-from header import *
 
 
 class Solution:

@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/paint-house-ii/
 """
-from header import *
 
 
 class Solution:

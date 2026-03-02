@@ -2,7 +2,7 @@
 
 ## Check if a number is prime
 
-``` py
+```py
 def is_prime(n):
     if n <= 1:
         return False
@@ -14,7 +14,7 @@ def is_prime(n):
 
 ## Least Prime Factor (LPF) Template
 
-``` py
+```py
 n = 10**6
 LPF = [0] * n
 for i in range(2, n):
@@ -26,7 +26,7 @@ for i in range(2, n):
 
 ## Prime Factorization
 
-``` py
+```py
 # find all prime factors
 ans = set()
 d = 2
@@ -45,7 +45,7 @@ if x>1:
 
 **A number can have at most one prime factor that is greater than its square root.** E.g.: 2521
 
-``` py
+```py
 # find all prime factors less than sqrt(max(nums))
 ans = set()
 for p in primes:

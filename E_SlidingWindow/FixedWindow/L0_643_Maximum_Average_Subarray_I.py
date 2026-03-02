@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-average-subarray-i/
 fixed sliding window + simulation
 """
-from header import *
 
 
 class Solution:

@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/sliding-subarray-beauty/
 """
-from header import *
 
 # sliding window + hash table
 

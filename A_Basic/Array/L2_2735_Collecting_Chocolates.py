@@ -2,7 +2,6 @@
 1. since N=1000, O(N^2) to enumerate all the solution is acceptable.
 2. convert the problem to: find the minimum operations whose total chocolate cost is the lowest.
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. use a dynamic sliding windows and a Counter to count t's frequency
 2. if all Counter's frequencies are more than t, then increase i
 """
-from header import *
 
 
 class Solution:

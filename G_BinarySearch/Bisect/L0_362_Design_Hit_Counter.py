@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/design-hit-counter/
 use binary search to find the index of t-300
 """
-from header import *
 
 
 class HitCounter:

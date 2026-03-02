@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/line-reflection/
 Find the center and check if the reflected points (2*avg-x) exist.
 """
-from header import *
 
 
 class Solution:

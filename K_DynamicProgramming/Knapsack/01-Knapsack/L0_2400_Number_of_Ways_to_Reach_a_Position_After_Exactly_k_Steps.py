@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/
 at index i, we can reach i-1 and i+1.
 """
-from header import *
 
 
 class Solution:

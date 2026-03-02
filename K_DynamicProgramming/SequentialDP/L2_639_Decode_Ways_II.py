@@ -13,7 +13,6 @@ If c != '*', then the number of ways to finish in total is: we could put c as a 
 ((c>'0')*e0), or we could pair c with our open 1, or we could pair c with our open 2 if it is 6 or less
 ((c<='6')*e2). The number of ways to finish with an open 1 (or 2) is e0 iff c == '1' (or c == '2').
 """
-from header import *
 
 
 class Solution:

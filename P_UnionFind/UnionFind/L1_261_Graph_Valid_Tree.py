@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/graph-valid-tree/
 check circle by union find
 """
-from header import *
 
 
 class Solution:

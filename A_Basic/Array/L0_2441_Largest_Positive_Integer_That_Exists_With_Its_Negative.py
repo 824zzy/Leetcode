@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/
 linear scan to find the largest positive integer that exists with its negative by a set
 """
-from header import *
 
 
 class Solution:

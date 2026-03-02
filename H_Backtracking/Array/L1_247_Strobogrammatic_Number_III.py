@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/strobogrammatic-number-ii/
 Similar to 247.
 """
-from header import *
 
 
 class Solution:

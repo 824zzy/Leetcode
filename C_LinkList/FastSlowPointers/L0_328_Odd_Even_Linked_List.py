@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/odd-even-linked-list/
 straight-forward solution using two pointer
 """
-from header import *
 
 
 class Solution:

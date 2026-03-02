@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-population-year/
 sweep line to find maximum population and its year.
 """
-from header import *
 
 
 class Solution:

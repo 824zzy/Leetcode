@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-pivot-integer/description/
 Observation: 2*( x*(x+1)/2 ) - x = n*(n+1)/2 ===> x = sqrt(n*(n+1)/2)
 """
-from header import *
 
 # O(1) math solution
 

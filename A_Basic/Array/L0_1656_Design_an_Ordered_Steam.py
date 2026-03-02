@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/design-an-ordered-stream/
 use a pointer to control which part of A to print out
 """
-from header import *
 
 
 class OrderedStream:

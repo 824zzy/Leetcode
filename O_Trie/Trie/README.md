@@ -2,7 +2,7 @@
 
 ## Ultimate template for Prefix/Suffix Trie
 
-``` py
+```py
 class Trie:
     def __init__(self):
         self.trie = {}
@@ -46,7 +46,7 @@ class Trie:
 
 ## Simple version for contest
 
-``` py
+```py
 trie = {}
 for word in words:
     node = trie

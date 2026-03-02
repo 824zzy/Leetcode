@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/index-pairs-of-a-string/
 brute force
 """
-from header import *
 
 
 class Solution:

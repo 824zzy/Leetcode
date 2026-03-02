@@ -3,7 +3,6 @@ the answer needs modulo 10^9 + 7 is a hint to use dp, so just apply maze dp to f
 
 Time complexity: O(m*n*maxMove*4) ~= 5 * 10^6
 """
-from header import *
 
 
 class Solution:

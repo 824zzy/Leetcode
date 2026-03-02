@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/minimum-subarrays-in-a-valid-split/description/
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sequential-digits/
 enumerate all possible answers from small to large
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-provinces/
 dfs template
 """
-from header import *
 
 
 class Solution:

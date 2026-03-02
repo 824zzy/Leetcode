@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/reordered-power-of-2/
 Think reversely, given all the power of 2, find the find the one which has the same digits as the input.
 """
-from header import *
 
 
 class Solution:

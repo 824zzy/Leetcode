@@ -5,7 +5,6 @@ The set bit of the final result has two possible sources
 
 For the 2nd source where the set bit is carried over from lower bits, you can always get the it from a prefix sum.
 """
-from header import *
 
 
 class Solution:

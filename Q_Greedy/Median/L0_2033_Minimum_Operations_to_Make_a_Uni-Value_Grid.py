@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid
 Find the median
 """
-from header import *
 
 
 class Solution:

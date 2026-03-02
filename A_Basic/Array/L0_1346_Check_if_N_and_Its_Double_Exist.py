@@ -2,7 +2,6 @@
 set look up
 """
 
-from header import *
 
 
 class Solution:

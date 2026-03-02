@@ -3,7 +3,6 @@
 2. sort L by content and identifier
 3. combine them together
 """
-from header import *
 
 
 class Solution:

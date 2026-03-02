@@ -3,7 +3,6 @@ use sortedlist to keep track of the maximal pair of "32" pattern
 
 Time: O(n*nlogn)
 """
-from header import *
 
 # suboptimal solution, better to refer to monotonic decreasing stack solution
 from sortedcontainers import SortedList

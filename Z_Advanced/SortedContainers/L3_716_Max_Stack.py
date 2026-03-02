@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/max-stack/
 TODO:
 """
-from header import *
 
 
 class MaxStack:

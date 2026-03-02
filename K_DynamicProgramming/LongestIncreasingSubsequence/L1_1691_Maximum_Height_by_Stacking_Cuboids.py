@@ -2,7 +2,6 @@
 TODO: add LIS template
 """
 
-from header import *
 
 
 # sort and knapsack

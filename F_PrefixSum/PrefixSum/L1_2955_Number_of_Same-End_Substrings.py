@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-same-end-substrings/
 prefix sum + simulation
 """
-from header import *
 
 
 class Solution:

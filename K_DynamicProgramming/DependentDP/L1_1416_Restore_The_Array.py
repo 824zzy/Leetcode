@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/restore-the-array/
 dp[i] = sum(dp[j]) for all j in [i+1, i+2, ..., i+9] if s[j:i+1] is valid
 """
-from header import *
 
 
 class Solution:

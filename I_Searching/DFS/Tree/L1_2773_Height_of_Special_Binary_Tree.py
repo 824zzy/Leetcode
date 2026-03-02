@@ -2,7 +2,6 @@
 1. identify leaves which can be visited twice
 2. dfs to find max depth
 """
-from header import *
 
 
 class Solution:

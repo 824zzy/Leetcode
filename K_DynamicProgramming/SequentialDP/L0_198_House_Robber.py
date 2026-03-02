@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/house-robber/
 max(dp[i-1], A[i-1]+dp[i-2])
 """
-from header import *
 
 # top down
 

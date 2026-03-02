@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/
 Counter comparison
 """
-from header import *
 
 
 class Solution:

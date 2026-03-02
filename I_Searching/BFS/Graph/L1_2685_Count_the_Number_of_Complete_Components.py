@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-the-number-of-complete-components/
 complete component's property: v*(v-1)/2==e
 """
-from header import *
 
 
 class Solution:

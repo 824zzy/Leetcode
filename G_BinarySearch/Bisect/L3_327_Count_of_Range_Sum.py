@@ -3,7 +3,6 @@ lower<=presum[j]-presum[i]<=upper
 ==>
 presum[j]-upper<=presum[i]<=presum[j]-lower
 """
-from header import *
 
 
 class Solution:

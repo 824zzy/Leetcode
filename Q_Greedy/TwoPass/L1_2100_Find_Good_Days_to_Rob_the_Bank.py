@@ -4,7 +4,6 @@ The same as 2420_Find_All_Good_Indices_L1.py
 1. pre-calculate prefix and suffix array of increasing and decreasing elements counts
 2. find days whose counts larger than time
 """
-from header import *
 
 
 class Solution:

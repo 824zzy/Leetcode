@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/snapshot-array/
 hashmap + binary search
 """
-from header import *
 
 
 class SnapshotArray:

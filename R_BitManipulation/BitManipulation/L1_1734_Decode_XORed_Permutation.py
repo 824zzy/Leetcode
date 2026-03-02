@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/decode-xored-permutation/
 """
-from header import *
 
 
 class Solution:

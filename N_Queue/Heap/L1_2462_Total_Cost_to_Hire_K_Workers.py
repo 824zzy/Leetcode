@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/total-cost-to-hire-k-workers/description/
 greedily find the minimum cost of hiring k workers using heap
 """
-from header import *
 
 
 class Solution:

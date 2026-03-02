@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/sort-an-array/
 """
-from header import *
 
 # Merge Sort: O(nlogn) under time limit
 

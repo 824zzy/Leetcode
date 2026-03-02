@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximal-network-rank/
 brute force: build the graph then find maximum degrees among node pairs.
 """
-from header import *
 
 
 class Solution:

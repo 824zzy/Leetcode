@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/
 greedily find the smallest number of deletions to make all frequencies unique
 """
-from header import *
 
 
 class Solution:

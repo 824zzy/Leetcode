@@ -5,7 +5,6 @@ Observation:
 1. when x==y or A[x]<A[y], the answer must be y
 2. use monotonic stack to find the leftmost valid answer on the right of y.
 """
-from header import *
 
 
 class Solution:

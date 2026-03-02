@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/
 Sweep through A and check the longest arithmetic subsequence ending at current value.
 """
-from header import *
 
 
 class Solution:

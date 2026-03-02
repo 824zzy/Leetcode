@@ -3,7 +3,6 @@ i: index
 j: length of string
 """
 
-from header import *
 
 
 class Solution:

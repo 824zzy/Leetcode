@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/nested-list-weight-sum/description/
 dfs with depth
 """
-from header import *
 
 
 class Solution:

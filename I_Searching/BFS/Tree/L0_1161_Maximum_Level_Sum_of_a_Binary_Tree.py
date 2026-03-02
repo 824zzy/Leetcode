@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
 traverse level by level, keep track of the max sum and the level
 """
-from header import *
 
 
 class Solution:

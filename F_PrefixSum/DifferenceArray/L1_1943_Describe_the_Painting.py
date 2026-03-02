@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/describe-the-painting/
 """
-from header import *
 
 
 class Solution:

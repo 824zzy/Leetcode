@@ -5,7 +5,6 @@
 
 The hardest part is to remove duplicates.
 """
-from header import *
 
 
 class Solution:

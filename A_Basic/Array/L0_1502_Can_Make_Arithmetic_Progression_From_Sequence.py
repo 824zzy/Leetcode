@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
 sort the array
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-special-quadruplets/
 brute force search quadruplets
 """
-from header import *
 
 
 class Solution:

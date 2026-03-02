@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/linked-list-cycle-ii/
 if find cycle then detect from start
 """
-from header import *
 
 
 class Solution:

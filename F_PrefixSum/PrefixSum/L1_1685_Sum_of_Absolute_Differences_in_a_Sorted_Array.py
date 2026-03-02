@@ -2,7 +2,6 @@
 left: A[i] * i - (prefix[i] - prefix[0])
 right: prefix[-1] - prefix[i] - (len(A) - i)*A[i]
 """
-from header import *
 
 
 class Solution:

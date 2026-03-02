@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/furthest-building-you-can-reach/
 When we are run out of bricks, we need to use a ladder to replace the bricks for the minimal height difference.
 """
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@ two pointers + reverse thinking
 
 assign values from end to start using two pointers
 """
-from header import *
 
 
 class Solution:

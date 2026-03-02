@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/partition-array-according-to-given-pivot/
 simply use pivot to divide array into three parts: less(a), large(b), equal()
 """
-from header import *
 
 
 class Solution:

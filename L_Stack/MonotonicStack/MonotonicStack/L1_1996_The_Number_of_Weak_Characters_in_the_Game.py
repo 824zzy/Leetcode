@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/
 sort the properties and maintain monotonic decreasing stack
 """
-from header import *
 
 # readable version
 

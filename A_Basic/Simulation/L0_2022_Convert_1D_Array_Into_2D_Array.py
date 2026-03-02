@@ -2,7 +2,6 @@
 simulation: use n as stride
 """
 
-from header import *
 
 
 class Solution:

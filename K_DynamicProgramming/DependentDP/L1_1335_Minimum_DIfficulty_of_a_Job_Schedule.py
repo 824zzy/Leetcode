@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/
 dp(i, d) = min(max(A[i:j]) + dp(j, d-1)), j = i+1, ...
 """
-from header import *
 
 
 class Solution:

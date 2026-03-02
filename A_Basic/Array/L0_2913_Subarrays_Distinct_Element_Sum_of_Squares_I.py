@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/
 simulation
 """
-from header import *
 
 
 class Solution:

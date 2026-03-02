@@ -3,7 +3,6 @@ at each index we just need to decide add integer or not
 
 Time: O(N*n), where N=sum(A) and n=len
 """
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@ hash table + counting
 
 Use counter and set to formulate string by in order and not in order
 """
-from header import *
 
 
 class Solution:

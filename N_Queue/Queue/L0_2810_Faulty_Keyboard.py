@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/faulty-keyboard/
 brute force or use deque
 """
-from header import *
 
 
 class Solution:

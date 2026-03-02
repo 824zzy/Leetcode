@@ -2,7 +2,6 @@
 rule of product of rows and columns with more than 1 '1'
 """
 
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/k-highest-ranked-items-within-a-price-range/
 perform dijkstra accurately and carefully
 """
-from header import *
 
 
 class Solution:

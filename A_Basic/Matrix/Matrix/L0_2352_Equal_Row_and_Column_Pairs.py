@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/equal-row-and-column-pairs/
 brute force, O(m*n)
 """
-from header import *
 
 
 class Solution:

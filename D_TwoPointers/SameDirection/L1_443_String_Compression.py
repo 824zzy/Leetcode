@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/string-compression/
 two pointers + simulation
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/best-sightseeing-pair/
 """
 
-from header import *
 
 
 class Solution:

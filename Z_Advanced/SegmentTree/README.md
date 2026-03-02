@@ -25,8 +25,7 @@ Suppose we have a segment tree with `N` leaves:
 
 ### Tree based segment tree
 
-
-``` py
+```py
 # Discretization from value to index if necessary
 v2i = {x: i for i, x in enumerate(sorted(set(A)))}
 
@@ -283,7 +282,7 @@ class SegmentTree:
 
 ### Array based segment tree
 
-``` py
+```py
 n = len(nums)
 T = [0] * (4 * n)
 todo = [0] * (4 * n)
@@ -344,7 +343,7 @@ query_and_update(1, 1, n, l + 1, r + 1, val)
 
 ## ZKW Segment Tree
 
-``` py
+```py
 class SegmentTree:
     def __init__(self, n):
         self.n = n

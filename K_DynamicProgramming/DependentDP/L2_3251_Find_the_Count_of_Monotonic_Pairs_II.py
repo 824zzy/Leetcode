@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-count-of-monotonic-pairs-ii/
 """
 
-from header import *
 
 
 class Solution:

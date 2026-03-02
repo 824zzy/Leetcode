@@ -2,7 +2,6 @@
 Inspired by 2407,
 Time complexity: O(N)
 """
-from header import *
 
 
 class SegmentTree:

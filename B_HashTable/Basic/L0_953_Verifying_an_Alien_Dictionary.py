@@ -2,7 +2,6 @@
 1. use a map to convert alien to english
 2. check if the converted words are sorted
 """
-from header import *
 
 
 class Solution:

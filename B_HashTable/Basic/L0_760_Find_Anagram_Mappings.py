@@ -1,7 +1,6 @@
 """https://leetcode.com/problems/find-anagram-mappings/
 Use a dictionary to store the index of each element in nums2.
 """
-from header import *
 
 
 class Solution:

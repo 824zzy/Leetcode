@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/convert-the-temperature/
 simulate the formula
 """
-from header import *
 
 
 class Solution:

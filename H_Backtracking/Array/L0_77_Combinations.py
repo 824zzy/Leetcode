@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/combinations/
 """
-from header import *
 
 
 class Solution:

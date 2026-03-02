@@ -2,7 +2,6 @@
 1. convert BST to array
 2. use binary search to find the closest node
 """
-from header import *
 
 
 class Solution:

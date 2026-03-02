@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/correct-a-binary-tree/
 find the abnormal node and return the correct tree
 """
-from header import *
 
 
 class Solution:

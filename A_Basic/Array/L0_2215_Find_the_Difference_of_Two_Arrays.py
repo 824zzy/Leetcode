@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-difference-of-two-arrays/
 find difference set of A and B
 """
-from header import *
 
 
 class Solution:

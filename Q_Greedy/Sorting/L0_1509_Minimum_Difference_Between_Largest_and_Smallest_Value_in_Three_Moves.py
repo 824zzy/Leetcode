@@ -9,7 +9,6 @@ greedily enumerate all possible cases:
 
 Time complexity: O(nlogn)
 """
-from header import *
 
 
 class Solution:

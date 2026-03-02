@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-greatest-common-divisor-of-array/
 use built-in function gcd
 """
-from header import *
 
 
 class Solution:

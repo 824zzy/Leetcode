@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/max-points-on-a-line/
 Brute force to compute every slopes, and find the one has maximum frequency
 """
-from header import *
 
 
 class Solution:

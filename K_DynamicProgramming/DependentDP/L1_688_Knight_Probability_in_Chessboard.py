@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/knight-probability-in-chessboard/
 """
-from header import *
 
 
 class Solution:

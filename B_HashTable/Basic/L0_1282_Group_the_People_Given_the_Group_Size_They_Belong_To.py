@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/
 greedily simulation using hash table
 """
-from header import *
 
 
 class Solution:

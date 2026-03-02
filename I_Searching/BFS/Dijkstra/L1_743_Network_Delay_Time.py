@@ -2,7 +2,6 @@
 use dijkstra to find minimum delay for all the nodes to receive the signal
 """
 
-from header import *
 
 
 class Solution:

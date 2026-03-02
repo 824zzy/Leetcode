@@ -4,7 +4,6 @@ binary search + rolling hash.
 1. hash function: hs = hs * size + val
 2. update hash: hs -= val * size ** seq_size
 """
-from header import *
 
 
 class Solution:

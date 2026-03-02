@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/binary-tree-vertical-order-traversal/
 lots of edge cases, carefully sort the tree by vertical order and depth!
 """
-from header import *
 
 
 class Solution:

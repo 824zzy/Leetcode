@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-size-of-a-set-after-removals/
 greedy + categorization?
 """
-from header import *
 
 
 class Solution:

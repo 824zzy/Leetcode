@@ -3,7 +3,6 @@ basic usage of prefix sum, note that the answer is index rather than value!
 
 add -0.00001 to denominator to avoid overflow
 """
-from header import *
 
 
 class Solution:

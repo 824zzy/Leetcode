@@ -4,7 +4,6 @@
 
 Time complexity: O(m*logn*k), where fn(x) accounts for m*logn, and the outer binary search accounts for k and k=log(10^6)
 """
-from header import *
 
 
 class Solution:

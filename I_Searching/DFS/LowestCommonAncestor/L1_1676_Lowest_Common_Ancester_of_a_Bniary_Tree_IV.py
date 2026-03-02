@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/
 the LCA template can be generalized to n nodes
 """
-from header import *
 
 
 class Solution:

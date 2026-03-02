@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/find-all-the-lonely-nodes/
 """
-from header import *
 
 
 class Solution:

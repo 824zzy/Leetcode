@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/construct-quad-tree/
 divide the trees by checking if all the values are the same
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/special-positions-in-a-binary-matrix/
 simulation
 """
-from header import *
 
 
 class Solution:

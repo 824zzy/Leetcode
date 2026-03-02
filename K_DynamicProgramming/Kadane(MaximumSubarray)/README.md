@@ -6,7 +6,7 @@ For a variance of Kadane's algorithm, it is always necessary to consider to two 
 
 ## Template
 
-``` py
+```py
 # bottom up template
 ans, cur = -inf, 0
 for x in A:

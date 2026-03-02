@@ -2,7 +2,6 @@
 data structure (binary search) optimized DP
 """
 
-from header import *
 
 
 class Solution:

@@ -4,7 +4,6 @@ learn from: https://leetcode.cn/problems/count-beautiful-substrings-ii/solutions
 L denotes the length of substring ===> (L/2)^2 % k ==0 ===> L^2 % 4k == 0
     to remove the square of L, we need to find d which d*d % (4*k)==0
 """
-from header import *
 
 
 class Solution:

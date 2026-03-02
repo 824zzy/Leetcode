@@ -2,7 +2,6 @@
 Check if three points are colinear using cross product
 (x0 - x1) * (y1 - y2) - (y0 - y1) * (x1 - x2) == 0.
 """
-from header import *
 
 
 class Solution:

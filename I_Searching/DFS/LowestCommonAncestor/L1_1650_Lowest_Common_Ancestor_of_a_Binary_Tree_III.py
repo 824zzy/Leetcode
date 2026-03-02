@@ -10,7 +10,6 @@ class Node:
         self.right = None
         self.parent = None
 """
-from header import *
 
 
 class Solution:

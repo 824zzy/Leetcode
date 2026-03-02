@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/palindrome-rearrangement-queries/
 the peak of categorization
 """
-from header import *
 
 
 class Solution:

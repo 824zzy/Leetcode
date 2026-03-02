@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/coin-change/
 time-dependent/unbounded knap sack problem.
 """
-from header import *
 
 # top down
 

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/
 mono stack or divide and conquer
 """
-from header import *
 
 
 class Solution:

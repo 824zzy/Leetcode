@@ -2,7 +2,6 @@
 the same as 205
 use two hash table to check pattern and s with each other
 """
-from header import *
 
 # on-the-fly solution
 

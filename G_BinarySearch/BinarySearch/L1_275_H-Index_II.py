@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/h-index-ii/
 """
-from header import *
 
 
 class Solution:

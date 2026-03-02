@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-k-sum-of-an-array/
 learn from god ye: https://leetcode.com/problems/find-the-k-sum-of-an-array/discuss/2456675/Python3-priority-queue
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/check-if-array-is-good/
 construct array and compare
 """
-from header import *
 
 
 class Solution:

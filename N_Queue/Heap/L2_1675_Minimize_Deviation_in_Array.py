@@ -2,7 +2,6 @@
 1. Convert all numbers to even. Then, we don't have to worry about 2nd operation entirely.
 2. Maintain a max heap and progressively divide the largest number by 2 until one cannot. The minimum deviation generation in this process is the required answer.
 """
-from header import *
 
 
 class Solution:

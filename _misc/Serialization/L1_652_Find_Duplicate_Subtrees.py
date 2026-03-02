@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-duplicate-subtrees/
 serialization(pre-order dfs)
 """
-from header import *
 
 
 class Solution:

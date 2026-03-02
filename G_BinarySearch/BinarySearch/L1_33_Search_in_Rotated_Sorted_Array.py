@@ -5,7 +5,6 @@ There are two cases can lead to r=m:
 1. When the left part is sorted and t is in the range of [A[l], A[m]].
 2. When there is a twist in the left part and t is in the left part, i.e., A[l]<=t or t<=A[m].
 """
-from header import *
 
 
 class Solution:

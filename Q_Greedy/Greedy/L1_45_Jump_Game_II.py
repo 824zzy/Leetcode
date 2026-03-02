@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/jump-game-ii/
 find maximum reach index by curr and when i larger than previous maximum index, ans += 1
 """
-from header import *
 
 
 class Solution:

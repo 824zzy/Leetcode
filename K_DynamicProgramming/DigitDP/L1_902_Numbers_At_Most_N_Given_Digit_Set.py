@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/numbers-at-most-n-given-digit-set/
 digit dp with leading zero
 """
-from header import *
 
 
 class Solution:

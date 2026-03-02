@@ -2,7 +2,6 @@
 1. Sort the workers by their efficiency from low to high.
 2. Greedily update the answer and sum of costs using heapreplace.
 """
-from header import *
 
 
 class Solution:

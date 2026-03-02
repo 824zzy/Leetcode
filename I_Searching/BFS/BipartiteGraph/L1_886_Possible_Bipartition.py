@@ -4,7 +4,6 @@ classical bipartite problem:
 1. traverse the graph by bfs
 2. check if any node has painted the same color
 """
-from header import *
 
 # dfs solution
 

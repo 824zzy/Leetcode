@@ -4,7 +4,6 @@ greedy: use a max-heap to greedily find the maximal value
 1. use a max-heap to greedily find the maximal value
 2. update the heap by maximal value and return the sum of heap
 """
-from header import *
 
 
 class Solution:

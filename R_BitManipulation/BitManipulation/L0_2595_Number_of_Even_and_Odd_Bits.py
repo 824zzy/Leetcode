@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-even-and-odd-bits/
 simulation by bit manipulation
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 Simply use bfs to find shortest path.
 Dijkstra algorithm is not necessary since all the edge weights are exactly 1.
 """
-from header import *
 
 
 class Solution:

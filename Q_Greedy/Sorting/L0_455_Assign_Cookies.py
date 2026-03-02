@@ -2,7 +2,6 @@
 1. sort two lists
 2. greedily assign legit cookies to children by two pointers
 """
-from header import *
 
 
 class Solution:

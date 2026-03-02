@@ -4,7 +4,6 @@ then use dfs to check if the word can be concatenated by prefix set
 
 Time complexity: O(n)
 """
-from header import *
 
 
 class Solution:

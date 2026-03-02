@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/reward-top-k-students/
 implementation problem
 """
-from header import *
 
 
 class Solution:

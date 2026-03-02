@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/construct-product-matrix/
 2D version of 238
 """
-from header import *
 
 
 class Solution:

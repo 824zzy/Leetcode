@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/removing-stars-from-a-string/
 simple simulation by stack
 """
-from header import *
 
 
 class Solution:

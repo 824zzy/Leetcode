@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximize-score-after-n-operations/
 since nums length is 14, we can use bitmask to represent the state of nums
 """
-from header import *
 
 
 class Solution:

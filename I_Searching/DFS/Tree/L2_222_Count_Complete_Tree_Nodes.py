@@ -5,7 +5,6 @@ Idea from ye: https://leetcode.com/problems/count-complete-tree-nodes/discuss/70
     2.1) if it is h-1, then we know the left sub-tree is perfectly balanced whose nodes can be computed using its height;
     2.2) it it is h-2 then we know the right sub-tree is perfectly balanced;
 """
-from header import *
 
 
 class Solution:

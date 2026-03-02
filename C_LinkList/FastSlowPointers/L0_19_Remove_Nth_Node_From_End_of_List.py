@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 LIS template
 """
 
-from header import *
 
 
 class Solution:

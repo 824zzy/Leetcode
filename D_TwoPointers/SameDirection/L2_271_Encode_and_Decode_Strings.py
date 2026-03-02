@@ -2,7 +2,6 @@
 1. Chunked transfer encoding, form the string by length of each string and the string itself.
 2. use two pointers to decode the string
 """
-from header import *
 
 
 class Codec:

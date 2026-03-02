@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sort-the-people/
 zip two arrays and sort by people's height
 """
-from header import *
 
 
 class Solution:

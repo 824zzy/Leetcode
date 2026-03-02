@@ -2,7 +2,6 @@
 maintain rolling suffix sum.
 or find largest prefix[i]+suffix[k-i]
 """
-from header import *
 
 
 class Solution:

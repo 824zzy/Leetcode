@@ -3,7 +3,6 @@ complicated to implement...
 1. linear scan all the transactions to find the first type invalid transactions and build a hash table
 2. go over hash table to find second type invalid transactions
 """
-from header import *
 
 
 class Solution:

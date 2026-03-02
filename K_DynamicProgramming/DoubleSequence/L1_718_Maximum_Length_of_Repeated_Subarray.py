@@ -2,7 +2,6 @@
 A variation of LCS.
 Bottom up dp is already very slow, so top down dp is not available.
 """
-from header import *
 
 
 class Solution:

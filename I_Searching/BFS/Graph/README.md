@@ -4,7 +4,7 @@ Bipartite problem(Painting problem): 785
 
 ## Type 1: Matrix
 
-``` py
+```py
 M, N = len(A), len(A[0])
 D = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 
@@ -23,7 +23,7 @@ return ans
 
 ## Type2: Graph
 
-``` py
+```py
 G = defaultdict(dict)
 for i in range(len(A)):
     for j in range(i+1, len(A)):

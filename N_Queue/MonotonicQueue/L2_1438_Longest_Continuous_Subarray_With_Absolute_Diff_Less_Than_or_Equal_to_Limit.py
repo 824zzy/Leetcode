@@ -2,7 +2,6 @@
 1. maintain max and min queues and left most legit index
 2. pop elements when absolute difference larger than limit, while update left most index
 """
-from header import *
 
 
 class Solution:

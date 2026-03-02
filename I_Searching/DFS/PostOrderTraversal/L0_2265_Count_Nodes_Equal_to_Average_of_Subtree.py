@@ -3,7 +3,6 @@ dfs along with sum of value and node count
 
 Time: O(n)
 """
-from header import *
 
 
 class Solution:

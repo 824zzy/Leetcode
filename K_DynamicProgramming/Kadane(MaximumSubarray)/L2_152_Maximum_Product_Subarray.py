@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-product-subarray/
 We need to keep track of maximum and minimum product(product subarray) at the same time to make sure we can find global maximum.
 """
-from header import *
 
 
 class Solution:

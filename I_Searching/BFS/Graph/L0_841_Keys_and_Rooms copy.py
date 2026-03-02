@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/keys-and-rooms/
 BFS template
 """
-from header import *
 
 
 class Solution:

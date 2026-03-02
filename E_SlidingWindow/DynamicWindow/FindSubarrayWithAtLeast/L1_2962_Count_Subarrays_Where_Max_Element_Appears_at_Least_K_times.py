@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/
 convert the problem into: find the subarrays where the maximum element of nums appears less than k times
 """
-from header import *
 
 
 class Solution:

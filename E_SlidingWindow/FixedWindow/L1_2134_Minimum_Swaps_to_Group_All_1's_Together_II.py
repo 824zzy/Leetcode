@@ -2,7 +2,6 @@
 1. create a fixed window which size is ones' count.
 2. minimum swaps is the zeros' count in the fixed window
 """
-from header import *
 
 
 class Solution:

@@ -19,7 +19,7 @@
 - Only keep the odd position's bit: `num & 0x55555555`
 - XOR from 1 to n: 
 
-    ``` py
+    ```py
     def XOR_1_to_n(n):
         m = n%4
         if m==0: return n
@@ -30,7 +30,7 @@
 
 1.  String to bit mask:
 
-    ``` py
+    ```py
     mask = 0
     for c in w:
         mask |= 1<<(ord(c)-ord('a'))
@@ -52,7 +52,7 @@
 4. `mask ^ 1<<i`: flip i-th bit in bit mask
 5. `mask & ~masks[i]`: subtract i-th mask from current mask
 
-``` py
+```py
 for mask in range(1 << n): 
     for i in range(n):
         if mask & 1<<i :

@@ -4,7 +4,6 @@ multiple solutions:
 2. set intersection: O(n)
 3. two pointers: O(n)
 """
-from header import *
 
 
 class Solution:

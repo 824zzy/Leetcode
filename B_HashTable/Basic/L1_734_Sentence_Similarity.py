@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sentence-similarity/
 save the similar pairs in a hash table, then compare the two sentences.
 """
-from header import *
 
 
 class Solution:

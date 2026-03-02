@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/course-schedule/
 topological sort template
 """
-from header import *
 
 
 class Solution:

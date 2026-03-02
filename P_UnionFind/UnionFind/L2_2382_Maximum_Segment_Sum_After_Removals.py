@@ -3,7 +3,6 @@ The Disjoint Set(or Union-Find) class template is universal. For this specific p
 
 Since the template only gives us information about whether two elements belong to the same group, the only tricky part is how to keep track of the size information. So we need a Counter `segments` for creating a new group and merging existing groups.
 """
-from header import *
 
 
 class DSU:

@@ -5,7 +5,6 @@ categorization + bit mask + prefix sum + hash table
 
 palindrome ==> at most one odd number, the other should be the same
 """
-from header import *
 
 
 class Solution:

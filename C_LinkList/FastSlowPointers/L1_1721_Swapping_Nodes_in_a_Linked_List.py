@@ -3,7 +3,6 @@ fast slow pointers:
 1. fast pointer first go k step to find the left node
 2. move fast and slow pointer together to find right node.
 """
-from header import *
 
 
 class Solution:

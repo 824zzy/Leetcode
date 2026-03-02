@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximize-the-minimum-powered-city/
 comprehensive problem: prefix sum + binary search + sweep line
 """
-from header import *
 
 
 class Solution:

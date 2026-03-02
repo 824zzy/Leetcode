@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/delete-columns-to-make-sorted-iii/
 """
 
-from header import *
 
 
 # LIS template

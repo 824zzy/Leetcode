@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/partition-array-for-maximum-sum/
 sequential dp with K-length window
 """
-from header import *
 
 
 class Solution:

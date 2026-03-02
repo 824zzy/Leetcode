@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/extract-kth-character-from-the-rope-tree/
 inorder traversal
 """
-from header import *
 
 
 class Solution:

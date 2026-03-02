@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
 two-sum like problem, use set to find if k-node.val is existed.
 """
-from header import *
 
 
 class Solution:

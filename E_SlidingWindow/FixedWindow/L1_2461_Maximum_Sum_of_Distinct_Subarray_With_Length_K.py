@@ -3,7 +3,6 @@
 2. once find duplicate, then reset prefix sum and  and seen set
 """
 
-from header import *
 
 
 class Solution:

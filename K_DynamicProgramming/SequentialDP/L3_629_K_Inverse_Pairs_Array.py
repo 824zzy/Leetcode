@@ -8,7 +8,6 @@ We can obtain
 dp(n, k) - dp(n, k-1) = dp(n-1, k) - dp(n-1, k-n)
 dp(n, k) = dp(n, k-1) + dp(n-1, k) - dp(n-1, k-n)
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/cherry-pickup-ii/
 maze dp simulation
 """
-from header import *
 
 
 class Solution:

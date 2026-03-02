@@ -8,7 +8,6 @@ If two ideas ideas[i] and ideas[j] share a common postfix string,
 then ideas[i] can not pair with any idea starts with ideas[j][0]
 and ideas[j] can not pair with any idea starts with ideas[i][0].
 """
-from header import *
 
 
 class Solution:

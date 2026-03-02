@@ -2,7 +2,6 @@
 two pointers
 """
 
-from header import *
 
 
 class Solution:

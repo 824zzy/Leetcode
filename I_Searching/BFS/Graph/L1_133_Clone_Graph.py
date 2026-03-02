@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/clone-graph/submissions/
 """
-from header import *
 
 
 class Solution:

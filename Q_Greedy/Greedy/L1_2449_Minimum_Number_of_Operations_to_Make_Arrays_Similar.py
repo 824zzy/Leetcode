@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-number-of-operations-to-make-arrays-similar/
 sort two arrays by parity, then greedily sum up the positive difference
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 greedily assign rows and columns for each rook
 """
 
-from header import *
 
 
 class Solution:

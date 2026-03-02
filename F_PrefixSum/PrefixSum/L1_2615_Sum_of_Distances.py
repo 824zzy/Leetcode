@@ -4,7 +4,6 @@ grouping + prefix sum
 1. group index by element
 2. prefix sum to find cost
 """
-from header import *
 
 
 class Solution:

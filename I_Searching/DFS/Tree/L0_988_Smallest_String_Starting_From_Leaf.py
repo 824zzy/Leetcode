@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/smallest-string-starting-from-leaf/
 dfs simulation
 """
-from header import *
 
 
 class Solution:

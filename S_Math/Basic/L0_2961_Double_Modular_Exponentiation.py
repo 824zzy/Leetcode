@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/double-modular-exponentiation/
 use pow which implements fast power algorithm
 """
-from header import *
 
 
 class Solution:

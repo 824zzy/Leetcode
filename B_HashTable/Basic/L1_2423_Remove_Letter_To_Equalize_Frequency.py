@@ -4,7 +4,6 @@ There are only two conditions, remove the letter has the most frequency or remov
 2. simulate the process of removing the letter has the most frequency
 3. check if the frequency of each letter is the same
 """
-from header import *
 
 
 class Solution:

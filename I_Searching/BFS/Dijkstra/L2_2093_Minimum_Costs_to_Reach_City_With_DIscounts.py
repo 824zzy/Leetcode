@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-cost-to-reach-city-with-discounts/
 carefully design the seen and pq to handle the discount
 """
-from header import *
 
 
 class Solution:

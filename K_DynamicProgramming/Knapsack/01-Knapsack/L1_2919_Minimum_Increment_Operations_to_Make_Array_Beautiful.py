@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-increment-operations-to-make-array-beautiful/
 top down dp using index and remaining size
 """
-from header import *
 
 
 class Solution:

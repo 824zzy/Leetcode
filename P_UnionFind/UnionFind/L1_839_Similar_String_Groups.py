@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/similar-string-groups/
 group similar strings using union find
 """
-from header import *
 
 
 class Solution:

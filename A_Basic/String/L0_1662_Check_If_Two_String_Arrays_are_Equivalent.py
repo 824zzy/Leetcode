@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/
 string simulation
 """
-from header import *
 
 
 class Solution:

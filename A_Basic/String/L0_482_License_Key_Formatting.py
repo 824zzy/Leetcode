@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/license-key-formatting/
 simulation
 """
-from header import *
 
 
 class Solution:

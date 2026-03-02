@@ -3,7 +3,6 @@
 2. dfs to traverse the trie
 """
 
-from header import *
 
 
 class Solution:

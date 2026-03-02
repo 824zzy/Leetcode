@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/destroy-sequential-targets/
 Count the frequency of each element modulo space
 """
-from header import *
 
 
 class Solution:

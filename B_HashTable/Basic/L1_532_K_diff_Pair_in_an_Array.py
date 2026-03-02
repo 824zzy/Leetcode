@@ -3,7 +3,6 @@ Let us just use counter and count frequency of each number in our array. We can 
 1. k > 0, it means, that for each unique number i we are asking if number i+k also in table.
 2. k = 0, it means, that we are looking for pairs of equal numbers, so just check each frequency.
 """
-from header import *
 
 
 class Solution:

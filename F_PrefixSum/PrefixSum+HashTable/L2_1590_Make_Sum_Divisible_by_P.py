@@ -5,7 +5,6 @@
     ==> prefixsum[r]%p - sum % p = prefixsum[l]%p
 2. convert the problem into: find prefix sum that
 """
-from header import *
 
 
 class Solution:

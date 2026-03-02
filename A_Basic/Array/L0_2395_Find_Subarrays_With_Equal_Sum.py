@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-subarrays-with-equal-sum/
 use hash set check if the two continuous subarrays have the same sum
 """
-from header import *
 
 
 class Solution:

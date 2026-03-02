@@ -2,7 +2,6 @@
 1. dfs to paint two islands.
 2. bfs to search the shortest path from one island to another.
 """
-from header import *
 
 
 class Solution:

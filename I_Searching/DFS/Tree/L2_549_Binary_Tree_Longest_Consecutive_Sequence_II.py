@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/
 For each node, we keep track of the longest consecutive increasing and decreasing sequence that starts at that node.
 """
-from header import *
 
 
 class Solution:

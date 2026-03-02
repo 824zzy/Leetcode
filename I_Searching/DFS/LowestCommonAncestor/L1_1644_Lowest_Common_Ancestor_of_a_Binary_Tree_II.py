@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/
 Slightly modify the LCA template
 """
-from header import *
 
 
 class Solution:

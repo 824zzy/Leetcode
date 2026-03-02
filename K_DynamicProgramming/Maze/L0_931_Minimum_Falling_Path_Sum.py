@@ -2,7 +2,6 @@
 variation of Pascal's triangle
 dp[i][j] = A[i][j] + min(dp[i-1][j-1], dp[i-1][j], dp[i-1][j+1])
 """
-from header import *
 
 
 class Solution:

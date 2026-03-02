@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/successful-pairs-of-spells-and-potions/
 """
-from header import *
 
 
 class Solution:

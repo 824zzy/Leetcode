@@ -2,7 +2,6 @@
 The best strategy for the frog is to jump skipping one stone.
 Therefore, our answer is the longest jump between st[i] and st[i-2].
 """
-from header import *
 
 
 class Solution:

@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/most-popular-video-creator/
 """
-from header import *
 
 
 class Solution:

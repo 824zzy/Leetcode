@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-losers-of-the-circular-game/
 simulate based on the rule
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. Use union find to find how many edges need to be added to make A and B fully connected
 2. Use countA and countB to check if A and B are fully connected
 """
-from header import *
 
 
 class Solution:

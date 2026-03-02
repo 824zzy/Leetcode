@@ -5,20 +5,18 @@
 
 
 class Solution:
-    def longestSubarray(self, A: List[int], L: int) -> int:
-        min_pq = []
-        max_pq = []
+    def longestSubarray(self, A: List[int], limit: int) -> int:
+        mx, mn = [], []
+        i = 0
         ans = 0
-        left = 0
-        for i, x in enumerate(A):
-            heappush(min_pq, (x, i))
-            heappush(max_pq, (-x, i))
-            while min_pq and max_pq and abs(min_pq[0][0] + max_pq[0][0]) > L:
-                if min_pq[0][1] < max_pq[0][1]:
-                    _, ii = heappop(min_pq)
-                    left = max(left, ii + 1)
-                else:
-                    _, ii = heappop(max_pq)
-                    left = max(left, ii + 1)
-            ans = max(ans, i - left + 1)
+        for j in range(len(A)):
+            heappush(mx, (-A[j], j))
+            heappush(mn, (A[j], j))
+            while mx and mn and -mx[0][0]-mn[0][0]>limit:
+                while mx and mx[0][1]<=i:
+                    heappop(mx)
+                while mn and mn[0][1]<=i:
+                    heappop(mn)
+                i += 1
+            ans = max(ans, j-i+1)
         return ans

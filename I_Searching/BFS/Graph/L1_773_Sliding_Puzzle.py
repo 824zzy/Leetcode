@@ -2,7 +2,6 @@
 simulate the game by bfs
 """
 
-from header import *
 
 
 class Solution:

@@ -4,7 +4,6 @@ Brute force simulation
 Time: O(n^2) ~= O(5*10^4 * 4 * 10^5) == O(2*10^10)
 """
 
-from header import *
 
 
 class Solution:

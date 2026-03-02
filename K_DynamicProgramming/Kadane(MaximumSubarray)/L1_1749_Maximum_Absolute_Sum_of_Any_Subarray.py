@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/
 Extend Kadane's algo by keeping track of max and min of subarray sum respectively.
 """
-from header import *
 
 # button up
 

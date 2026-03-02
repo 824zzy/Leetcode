@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-window-subsequence/
 top-down dp will TLE
 """
-from header import *
 
 # top-down dp will cause TLE
 

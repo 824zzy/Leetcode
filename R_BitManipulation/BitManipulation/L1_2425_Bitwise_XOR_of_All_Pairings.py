@@ -4,7 +4,6 @@ There are three conditions:
 2. If the length of num1 and num2 are both odd, then the XOR of all pairings is the XOR of all elements.
 3. If one of the length is even and the other is odd, then the XOR of all pairings is the XOR of the even one.
 """
-from header import *
 from functools import reduce
 
 

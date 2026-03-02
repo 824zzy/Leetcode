@@ -2,7 +2,6 @@
 Greedily find the maximum reachable index.
 Return false immediately if cannot reach current num.
 """
-from header import *
 
 
 class Solution:

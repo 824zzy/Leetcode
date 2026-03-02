@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/powx-n/
 Binary Exponentiation technique
 """
-from header import *
 
 
 class Solution:

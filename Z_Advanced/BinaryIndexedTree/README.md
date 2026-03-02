@@ -17,7 +17,7 @@ In practice, there are a few caveats:
 
 ## Template
 
-``` py
+```py
 class BIT:
     def __init__(self, n):
         self.A = [0] * (n+1)

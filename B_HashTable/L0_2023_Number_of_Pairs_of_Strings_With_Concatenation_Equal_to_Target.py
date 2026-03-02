@@ -2,7 +2,6 @@
 similar to two sum but when prefix equals to suffix, we need to minus duplicated count.
 """
 
-from header import *
 
 
 class Solution:

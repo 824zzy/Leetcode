@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/paths-in-matrix-whose-sum-is-divisible-by-k/
 3D time sequential DP
 """
-from header import *
 
 
 class Solution:

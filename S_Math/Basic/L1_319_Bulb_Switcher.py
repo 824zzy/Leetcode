@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/bulb-switcher/
 find pattern from test cases
 """
-from header import *
 
 
 class Solution:

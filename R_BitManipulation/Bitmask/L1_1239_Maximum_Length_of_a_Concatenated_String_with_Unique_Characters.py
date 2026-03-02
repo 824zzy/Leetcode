@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/
 use bitmask to represent the string and "or" operation to a `seen` set for finding out how many different characters in a mask
 """
-from header import *
 
 
 class Solution:

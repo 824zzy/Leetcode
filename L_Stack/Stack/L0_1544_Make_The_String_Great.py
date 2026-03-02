@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/make-the-string-great/
 stack simulation
 """
-from header import *
 
 
 class Solution:

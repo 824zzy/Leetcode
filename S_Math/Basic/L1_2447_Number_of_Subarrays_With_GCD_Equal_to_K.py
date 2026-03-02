@@ -2,7 +2,6 @@
 since 1 <= nums.length <= 1000, just brute force to find all valid subarrays
 note that don't use array slicing, it's too slow
 """
-from header import *
 
 
 class Solution:

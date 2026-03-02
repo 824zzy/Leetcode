@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/watering-plants-ii/
 reading comprehension
 """
-from header import *
 
 
 class Solution:

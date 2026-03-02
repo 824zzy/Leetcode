@@ -7,7 +7,6 @@ the upper bound is n*(n-1)/2 <= x
 =缩放=>  (n-1)*(n-1) <= 2*x
 ==> n <= sqrt(2*x)+1
 """
-from header import *
 
 
 class Solution:

@@ -9,7 +9,6 @@ presum[j] ^ presum[j]:
     1. 0 means there is no letter occurs odd times
     2. 1 means there is one letter occurs odd times
 """
-from header import *
 
 
 class Solution:

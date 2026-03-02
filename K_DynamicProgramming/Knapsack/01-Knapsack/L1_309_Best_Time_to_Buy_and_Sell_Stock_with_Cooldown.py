@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
 """
-from header import *
 
 
 class Solution:

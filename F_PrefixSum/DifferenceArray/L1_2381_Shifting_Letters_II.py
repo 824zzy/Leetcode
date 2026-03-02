@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shifting-letters-ii/
 use sweep line to count accumulated sum of each letter, then update the letters
 """
-from header import *
 
 
 class Solution:

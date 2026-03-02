@@ -2,7 +2,6 @@
 1. collect value by inorder traversal
 2. build balanced BST by divide and conquer
 """
-from header import *
 
 
 class Solution:

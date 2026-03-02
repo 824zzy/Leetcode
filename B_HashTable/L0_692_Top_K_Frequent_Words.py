@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/top-k-frequent-words/
 """
-from header import *
 
 
 class Solution:

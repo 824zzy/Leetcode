@@ -2,7 +2,6 @@
 union find+hash table
 use DSU to find character's group and construct result by hash table
 """
-from header import *
 
 
 class DSU:

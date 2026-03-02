@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/remove-colored-pieces-if-both-neighbors-are-the-same-color/
 groupby the colors and count triple "A" or "B"
 """
-from header import *
 
 
 class Solution:

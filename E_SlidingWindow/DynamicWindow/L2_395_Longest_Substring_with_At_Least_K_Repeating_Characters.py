@@ -4,7 +4,6 @@ enumeration + sliding window
 1. enumerate on how many distinct characters can be stored in the sliding window.
 2. sliding window template
 """
-from header import *
 
 
 class Solution:

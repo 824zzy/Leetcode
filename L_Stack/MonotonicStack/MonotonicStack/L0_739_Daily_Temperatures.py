@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/daily-temperatures/submissions/
 use monotonic decreasing stack to keep track of first temperature larger than stack top element.
 """
-from header import *
 
 
 class Solution:

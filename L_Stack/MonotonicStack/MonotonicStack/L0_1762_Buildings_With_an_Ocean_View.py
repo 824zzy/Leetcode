@@ -3,7 +3,6 @@ monotonic stack to find next greater on the right
 
 greedily scan from right to left also works
 """
-from header import *
 
 
 class Solution:

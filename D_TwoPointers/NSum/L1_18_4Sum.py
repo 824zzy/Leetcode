@@ -2,7 +2,6 @@
 1. sort the A to make sure we can use different direction two pointers
 2. for every i and j, find the proper l and r by two sum
 """
-from header import *
 
 
 class Solution:

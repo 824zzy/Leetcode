@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-points-after-collecting-coins-from-all-nodes/
 since 0 <= coins[i] <= 10**4 and 2**14=16384, 14 is the upper bound of half_cnt
 """
-from header import *
 
 
 class Solution:

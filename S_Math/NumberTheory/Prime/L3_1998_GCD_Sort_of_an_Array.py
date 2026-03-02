@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/gcd-sort-of-an-array/
 union find + sieve of eratosthenes
 """
-from header import *
 
 
 class DSU:

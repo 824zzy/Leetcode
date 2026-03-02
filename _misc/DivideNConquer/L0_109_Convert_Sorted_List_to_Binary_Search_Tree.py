@@ -2,7 +2,6 @@
 1. get all the values in the list
 2. Divide and Conquer to build the tree
 """
-from header import *
 
 
 class Solution:

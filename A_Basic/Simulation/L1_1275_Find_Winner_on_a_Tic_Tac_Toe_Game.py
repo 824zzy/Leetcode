@@ -2,7 +2,6 @@
 Simulate game board
 """
 
-from header import *
 
 
 class Solution:

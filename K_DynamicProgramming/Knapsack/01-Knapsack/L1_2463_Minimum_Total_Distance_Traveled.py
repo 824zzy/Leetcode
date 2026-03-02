@@ -2,7 +2,6 @@
 3D knap sack dp: for i-th robot, we can skip j-th factory or go to j-th factory if k is less than the limitation
 """
 
-from header import *
 
 
 class Solution:

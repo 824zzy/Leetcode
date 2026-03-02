@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-cost-to-connect-sticks/
 greedily connect the shortest two sticks using heap
 """
-from header import *
 
 
 class Solution:

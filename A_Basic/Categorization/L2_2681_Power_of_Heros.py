@@ -2,7 +2,6 @@
 1. sort the array
 2. find patterns of how each element contribute to the final answer
 """
-from header import *
 
 
 class Solution:

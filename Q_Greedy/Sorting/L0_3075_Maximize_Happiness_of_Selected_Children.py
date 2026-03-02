@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximize-happiness-of-selected-children/
 reading comprehension + greedy sort
 """
-from header import *
 
 
 class Solution:

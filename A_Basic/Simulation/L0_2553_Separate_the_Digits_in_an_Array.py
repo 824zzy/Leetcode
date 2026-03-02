@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/separate-the-digits-in-an-array/
 """
-from header import *
 
 
 class Solution:

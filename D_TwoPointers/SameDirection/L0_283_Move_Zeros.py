@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/move-zeroes/
 exchanges A[i], A[j] if A[j]!=0 and update i
 """
-from header import *
 
 
 class Solution:

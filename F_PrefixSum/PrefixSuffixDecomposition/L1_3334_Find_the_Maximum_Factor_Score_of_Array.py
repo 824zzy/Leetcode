@@ -5,7 +5,6 @@ gcd(0, x) = x
 lcm(1, x) = x
 """
 
-from header import *
 
 
 # prefix suffix decomposition + number theory

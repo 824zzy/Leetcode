@@ -4,7 +4,6 @@ three options knapsack problem:
 2. buy the current fruit but not use coupon
 3. buy the current fruit and use coupon
 """
-from header import *
 
 
 class Solution:

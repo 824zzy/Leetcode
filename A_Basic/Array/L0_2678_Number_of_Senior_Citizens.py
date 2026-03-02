@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-senior-citizens/
 simulation
 """
-from header import *
 
 
 class Solution:

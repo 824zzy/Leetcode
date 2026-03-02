@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/maximum-strength-of-a-group/
 """
-from header import *
 
 # Kadane's algorithm
 

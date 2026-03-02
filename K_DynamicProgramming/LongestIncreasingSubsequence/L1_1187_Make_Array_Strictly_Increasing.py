@@ -4,7 +4,6 @@ change or not to change the i-th element
 TODO: add LIS template
 """
 
-from header import *
 
 
 class Solution:

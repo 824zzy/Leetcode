@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/unique-paths/
 """
 
-from header import *
 
 
 # bottom up dp

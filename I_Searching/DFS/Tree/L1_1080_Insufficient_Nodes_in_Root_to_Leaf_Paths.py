@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/
 """
-from header import *
 
 
 class Solution:

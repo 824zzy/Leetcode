@@ -3,7 +3,6 @@ The same as 221.
 If cell (i, j) is 1, the square submatrice count is the minimal count of cell (i-1, j), cell (i, j-1), cell (i-1, j-1).
 """
 
-from header import *
 
 
 # bottom up solution

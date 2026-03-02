@@ -3,7 +3,6 @@ post-order dfs
 
 keep track of head and tail of the linked list
 """
-from header import *
 
 
 class Solution:

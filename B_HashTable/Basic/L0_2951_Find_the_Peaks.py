@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-peaks/
 linear scan simulation
 """
-from header import *
 
 
 class Solution:

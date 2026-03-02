@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-score-of-all-prefixes-of-an-array/
 update max and prefix sum at the same time
 """
-from header import *
 
 
 class Solution:

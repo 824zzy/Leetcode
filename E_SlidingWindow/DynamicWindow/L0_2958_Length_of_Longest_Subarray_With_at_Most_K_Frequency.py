@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/
 sliding window template
 """
-from header import *
 
 
 class Solution:

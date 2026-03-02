@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/count-complete-subarrays-in-an-array/
 """
-from header import *
 
 
 class Solution:

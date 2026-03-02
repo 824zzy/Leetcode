@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/relative-ranks/
 simulation using hash table
 """
-from header import *
 
 
 class Solution:

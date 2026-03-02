@@ -5,7 +5,6 @@ Theory:
     1. Lagrange's four-square theorem:  every natural number n can be represented as at most the sum of four integer squares.
     2. If n!=4**k(8m+7), the natural number n can be represented as at most the sum of three integer squares.
 """
-from header import *
 
 
 class Solution:

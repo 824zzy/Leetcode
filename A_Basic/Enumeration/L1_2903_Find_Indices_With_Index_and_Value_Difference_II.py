@@ -2,7 +2,6 @@
 1. enumerate on index difference
 2. for each index difference, maintain the max and min value in the range of (0, j-idx_diff)
 """
-from header import *
 
 
 class Solution:

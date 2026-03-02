@@ -4,7 +4,6 @@ two pass dfs:
 2. second pass to find the subtree size of each node
 """
 
-from header import *
 
 
 class Solution:

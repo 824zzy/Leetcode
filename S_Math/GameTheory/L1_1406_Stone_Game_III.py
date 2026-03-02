@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/stone-game-iii/
 minimax problem, dp(i) is the max gain of the first player when starting at i
 """
-from header import *
 
 
 class Solution:

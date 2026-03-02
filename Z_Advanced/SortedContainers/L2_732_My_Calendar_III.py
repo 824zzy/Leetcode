@@ -4,7 +4,6 @@ learn from: https://leetcode.com/problems/my-calendar-iii/discuss/1646167/Python
 a sweep line algorithm implemented by sorted containers
 """
 from sortedcontainers import SortedList
-from header import *
 
 
 class MyCalendarThree:

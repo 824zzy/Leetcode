@@ -2,7 +2,6 @@
 monotonic coprime stack
 while non-coprime pairs in stack then update it until all the pairs in stack are coprime
 """
-from header import *
 
 
 class Solution:

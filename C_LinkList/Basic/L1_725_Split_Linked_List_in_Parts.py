@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/split-linked-list-in-parts/
 Linked list simulation
 """
-from header import *
 
 
 class Solution:

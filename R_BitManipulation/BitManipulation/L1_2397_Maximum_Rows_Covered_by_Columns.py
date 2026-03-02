@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-rows-covered-by-columns/
 enumerate all possible combinations of columns, and check if the rows are covered
 """
-from header import *
 
 # bit manipulation
 

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/solving-questions-with-brainpower/
 knapsack problem: at each index we just need to decide add integer or not
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 classical problem
 """
-from header import *
 
 
 class Solution:

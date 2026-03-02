@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-missing-and-repeated-values/
 simulation or use math
 """
-from header import *
 
 
 class Solution:

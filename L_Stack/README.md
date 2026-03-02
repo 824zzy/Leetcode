@@ -10,7 +10,7 @@ And in the template, `A[stk[-1]]>A[i]` indicates a monotonic increasing stack.
 
 Basic template:
 
-``` py
+```py
 stk = []
 for i in range(len(A)):
     while stk and A[stk[-1]]?A[i]:
@@ -23,7 +23,7 @@ return ans
 
 Two pass to find next smaller elements:
 
-``` py
+```py
 # next smaller on the right
 R = [len(A)]*len(A)
 stk = []
@@ -43,7 +43,7 @@ for i in reversed(range(len(A))):
 
 Two pass to find next greater elements:
 
-``` py
+```py
 # next greater on the right
 R = [len(A)]*len(A)
 stk = []
@@ -63,7 +63,7 @@ for i in reversed(range(len(A))):
 
 ## Farmost Smaller Greater Monotonic Stack Template
 
-``` py
+```py
 stk = []
 for i in range(len(A)):
     if not stk or A[stk[-1]]>A[i]:
@@ -76,12 +76,11 @@ for i in reversed(range(len(A))):
 return ans
 ```
 
-
 ## Eulerian Path: Hierholzer's Algorithm
 
 For directed connected graph:
 
-``` py
+```py
 def hierholzer(pairs):
     G = defaultdict(list)
         degree = defaultdict(int) # out-degree
@@ -106,11 +105,9 @@ def hierholzer(pairs):
         return [[ans[i], ans[i+1]] for i in range(len(ans)-1)]
 ```
 
+## Iterative Tree Traversal by Stack
 
-
-##  Iterative Tree Traversal by Stack
-
-``` py
+```py
 Pre order, In order, Post order: stack
 
 def preOrder(self, root):

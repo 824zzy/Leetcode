@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shortest-distance-from-all-buildings/
 bfs + simulation
 """
-from header import *
 
 
 class Solution:

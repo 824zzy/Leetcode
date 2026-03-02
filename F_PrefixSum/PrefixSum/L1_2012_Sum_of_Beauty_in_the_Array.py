@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sum-of-beauty-in-the-array/
 use prefix max and suffix min to calculate the beauty of elements
 """
-from header import *
 
 
 class Solution:

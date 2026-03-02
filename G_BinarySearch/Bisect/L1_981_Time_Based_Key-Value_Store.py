@@ -2,7 +2,6 @@
 1. store key and value and timestamp in a hash table
 2. use customized compare function to find the index of the timestamp
 """
-from header import *
 
 
 class TimeMap:

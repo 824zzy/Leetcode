@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/island-perimeter/
 counting the perimeter for each land cell
 """
-from header import *
 
 
 class Solution:

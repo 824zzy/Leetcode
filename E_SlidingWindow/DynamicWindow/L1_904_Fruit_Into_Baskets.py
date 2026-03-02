@@ -3,7 +3,6 @@
 2. use a dynamic sliding window to control the fruit types
 3. while fruit types >= 2, then move i to remove fruits
 """
-from header import *
 
 
 class Solution:

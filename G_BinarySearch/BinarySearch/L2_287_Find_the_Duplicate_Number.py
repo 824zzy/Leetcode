@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-duplicate-number/
 TC: O(nlogn), find the first element where more than x elements smaller than x
 """
-from header import *
 
 
 class Solution:

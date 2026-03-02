@@ -5,7 +5,6 @@ There are two ways of backtracking:
 1. use for loop to iterate all possible cut points
 2. knapsack style, use a helper function to check if the current string is palindrome
 """
-from header import *
 
 
 class Solution:

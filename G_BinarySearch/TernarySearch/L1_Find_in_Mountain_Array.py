@@ -2,7 +2,6 @@
 1. find peak by ternary search
 2. two binary search to find the target
 """
-from header import *
 
 
 class Solution:

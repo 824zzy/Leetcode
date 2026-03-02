@@ -5,7 +5,6 @@ Apply union find template
 2. union find to merge two people
 3. return time when n==1
 """
-from header import *
 
 
 class Solution:

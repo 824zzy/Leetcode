@@ -4,7 +4,6 @@
 
 TODO: add bfs solution
 """
-from header import *
 
 
 class Solution:

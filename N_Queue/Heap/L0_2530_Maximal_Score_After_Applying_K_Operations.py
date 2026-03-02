@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximal-score-after-applying-k-operations/
 simulate by heap
 """
-from header import *
 
 
 class Solution:

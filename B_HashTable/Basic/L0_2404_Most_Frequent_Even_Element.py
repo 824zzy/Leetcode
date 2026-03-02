@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/most-frequent-even-element/
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 isdigit(): check if all the characters in the string are digits
 isnumeric(): check if one character is digit
 """
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@ brute force + binary search
 
 Given 1000 calls limitation brute force will result in 100*log(100) = 1000 which is allowed
 """
-from header import *
 
 
 class Solution:

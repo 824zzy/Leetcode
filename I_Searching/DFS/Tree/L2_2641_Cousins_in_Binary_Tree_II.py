@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/cousins-in-binary-tree-ii/
 the sum of all cousins' values = sum of all same level nodes' values - parent's children's value
 """
-from header import *
 
 
 class Solution:

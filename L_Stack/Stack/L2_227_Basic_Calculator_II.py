@@ -4,7 +4,6 @@
 
 it is not easy due to the implementation of the stack
 """
-from header import *
 
 # another solution from others using only one stack
 

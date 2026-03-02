@@ -3,7 +3,6 @@ template problem
 
 Time complexity: O(n*t*cnt) ~= 50*1000*50
 """
-from header import *
 
 
 class Solution:

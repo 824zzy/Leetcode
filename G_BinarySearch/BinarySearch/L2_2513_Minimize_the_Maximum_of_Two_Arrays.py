@@ -10,7 +10,6 @@ arr2 = 1 2 3 4 5   7 8 9 10 11   13 ...
 
 worse case for upper bound: d1 = d2 = 2, only odd numbers are allowed, so the upper bound is 2*(u1+u2)
 """
-from header import *
 
 
 class Solution:

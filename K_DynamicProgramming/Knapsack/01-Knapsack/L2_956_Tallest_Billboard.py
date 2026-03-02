@@ -4,7 +4,6 @@ This is a special 01 knapsack that we have three choice for each item:
 2. add the rod to left steel
 3. add the rod to right steel
 """
-from header import *
 
 
 class Solution:

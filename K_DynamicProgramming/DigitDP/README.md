@@ -1,7 +1,7 @@
 # Digits DP template
 
 ## Digits DP basic template
-``` py
+```py
 high = str(n)
 n = len(high)
 @cache
@@ -17,7 +17,7 @@ def dfs(i, limit):
 ```
 
 ## Digits DP template supports lower and upper bound
-``` py
+```py
 high = str(n)
 n = len(high)
 low = str(0).zfill(n)
@@ -38,7 +38,7 @@ return dfs(0, True, True)
 ```
 
 ## Digits DP template supports leading zero (Most Popular)
-``` py
+```py
 high = str(n)
 n = len(high)
 low = str(0).zfill(n)
@@ -63,7 +63,7 @@ def dfs(i, limit_low, limit_high, is_num):
 
 ## Deprecated old template
 
-``` py
+```py
 """
 i: the current index of the digit array
 isPrefix: if the new number is the prefix of N
@@ -89,7 +89,7 @@ def dp(i, isPrefix, isBigger, *args):
 return dp(0, True, False)
 ```
 
-## References
+## Reference
 
 - [migfulcrum](https://leetcode.com/problems/rotated-digits/discuss/560601/python-digit-dp)
 - [0x3ff template](https://leetcode.cn/problems/count-the-number-of-powerful-integers/solutions/2595149/shu-wei-dp-shang-xia-jie-mo-ban-fu-ti-da-h6ci/)

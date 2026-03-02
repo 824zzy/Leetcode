@@ -2,7 +2,6 @@
 1. Use groupby rather than two pointers to count continuous 0's
 2. Then pray for Gaussian for final answer :)
 """
-from header import *
 
 
 class Solution:

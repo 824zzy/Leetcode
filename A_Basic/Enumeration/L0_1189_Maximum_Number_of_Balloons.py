@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-number-of-balloons/
 enumerate "balloon" and find the minimum count of each letter in s
 """
-from header import *
 
 
 class Solution:

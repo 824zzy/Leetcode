@@ -2,7 +2,6 @@
 One pass to count suffix sum of shifts.
 One pass to shift letters in string S
 """
-from header import *
 
 
 class Solution:

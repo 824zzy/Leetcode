@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/non-decreasing-subsequences/
 backtracking using set to avoid duplicates
 """
-from header import *
 
 
 class Solution:

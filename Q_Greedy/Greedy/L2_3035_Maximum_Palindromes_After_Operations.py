@@ -4,7 +4,6 @@ Observation:
     2. prioritize the shorter strings to fill the palindrome
 
 """
-from header import *
 
 
 class Solution:

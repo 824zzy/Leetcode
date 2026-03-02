@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-number-of-points-from-grid-queries/description/
 dijkstra along with the sorted queries
 """
-from header import *
 
 
 class Solution:

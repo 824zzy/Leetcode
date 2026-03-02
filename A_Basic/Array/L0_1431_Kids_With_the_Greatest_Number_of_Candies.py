@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 check if x+ext>=mx
 """
-from header import *
 
 
 class Solution:

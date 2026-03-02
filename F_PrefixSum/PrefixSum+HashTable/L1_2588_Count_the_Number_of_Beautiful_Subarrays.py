@@ -2,7 +2,6 @@
 convert the problem into: find all the subarrays that elements  XOR=0
 """
 
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@ bit manipulation + dp
 if lowest bit is 1, then dp[i] = dp[i-1]+1
 if lowest bit is 0, then dp[i] = dp[i>>1]
 """
-from header import *
 
 # top down
 

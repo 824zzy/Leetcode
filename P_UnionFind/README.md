@@ -8,7 +8,7 @@ Disjoint Set Union a disjoint-set data structure, also called a union–find dat
 ## Template 
 
 Array-Based Implementation
-``` py
+```py
 A = list(range(n+1))
 def find(x):
     if A[x]!=x: A[x] = find(A[x])
@@ -25,7 +25,7 @@ def union(x, y):
 ```
 
 Dictionary-Based Implementation
-``` py
+```py
 dsu = {}
 def find(x):
     if x not in dsu: dsu[x] = x
@@ -50,7 +50,7 @@ Time complexity: O(ElogV) ~= O(N^2logN)
 
 Kruskal's Algorithm Template:
 
-``` py
+```py
 class DSU:
     def __init__(self, n):
         self.p = list(range(n))

@@ -5,7 +5,6 @@ LPF + greedy
 2. iterate from the end of the array, if the current number is greater than the next number, set the current number to its least prime factor
 """
 
-from header import *
 
 n = 10 ** 6
 LPF = [0] * n

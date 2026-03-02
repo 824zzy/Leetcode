@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/delete-nodes-and-return-forest/
 traverse the tree, add node to ans iff parent value is None
 """
-from header import *
 
 
 class Solution:

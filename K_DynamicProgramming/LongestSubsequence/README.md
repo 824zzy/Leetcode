@@ -4,7 +4,7 @@
 
 Bottom up template:
 
-``` py
+```py
 dp = [1] * len(A)
 for i in range(1, len(A)):
     for j in range(i):
@@ -15,7 +15,7 @@ return max(dp)
 
 Top down template:
 
-``` py
+```py
 @cache
 def dp(i):
     ans = 1

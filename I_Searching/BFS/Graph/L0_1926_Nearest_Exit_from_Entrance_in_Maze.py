@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
 BFS template
 """
-from header import *
 
 
 class Solution:

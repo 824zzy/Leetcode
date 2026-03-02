@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range/
 """
-from header import *
 
 
 class Solution:

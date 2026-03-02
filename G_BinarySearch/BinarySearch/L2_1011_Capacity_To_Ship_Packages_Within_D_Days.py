@@ -3,7 +3,6 @@ the same as 410
 Use binary search to check if the array can be splitted as multiple subarray whose sum is m.
 Note that the lower bound is max(A)
 """
-from header import *
 
 
 class Solution:

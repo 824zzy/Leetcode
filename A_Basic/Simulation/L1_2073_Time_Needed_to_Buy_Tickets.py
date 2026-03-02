@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/time-needed-to-buy-tickets/
 count minimum a and A[k] before k, and minus extra 1 after k
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shortest-path-with-alternating-colors/
 bfs with colors as extra state
 """
-from header import *
 
 
 class Solution:

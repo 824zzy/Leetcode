@@ -2,7 +2,6 @@
 for each bit position, find the maximum frequency of '1'
 """
 
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. use hash table to find all the modulus
 2. greedily check every number until we can a unachievable one
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-pairs-of-similar-strings/description/
 count similar pairs by Counter and the pairs are v*(v-1)//2
 """
-from header import *
 
 
 class Solution:

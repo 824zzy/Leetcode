@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/jewels-and-stones/
 """
-from header import *
 
 
 class Solution:

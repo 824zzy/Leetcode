@@ -3,7 +3,6 @@ if we label the node of each level nodes by column from 0 to n, then we have:
 node.left.column = node.column*2
 node.right.column = node.column*2+1
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 backtracking template with can_gen flag
 """
 
-from header import *
 
 
 class Solution:

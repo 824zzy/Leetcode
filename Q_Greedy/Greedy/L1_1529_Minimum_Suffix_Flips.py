@@ -2,7 +2,6 @@
 The flips are only related to the number of groups of 1s and 0s.
 If the first group number is 0, then we don't need to flip.
 """
-from header import *
 
 
 class Solution:

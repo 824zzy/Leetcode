@@ -12,7 +12,7 @@ Pruning and optimization are useful techniques to reduce the time complexity:
 
 ## Type 1: Array
 
-``` py
+```py
 ans = []
 stk = []
 def dfs(i):
@@ -28,7 +28,7 @@ return ans
 
 ## Type 2: Graph
 
-``` py
+```py
 D = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         
 def dfs(x, y):

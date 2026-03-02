@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition/
 greedily go through each opponent, once energy or experience is exhausted, we update answer and reset energy and experience.
 """
-from header import *
 
 
 class Solution:

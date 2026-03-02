@@ -2,7 +2,6 @@
 brute force follow the formula of area of triangle:
     area = 0.5 * abs(x1*y2 + x2*y3 + x3*y1 - x1*y3 - x2*y1 - x3*y2)
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. basic usage of zip(*param)
 2. flip by diagonal and row
 """
-from header import *
 
 
 class Solution:

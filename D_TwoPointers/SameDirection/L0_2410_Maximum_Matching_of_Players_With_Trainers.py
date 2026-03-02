@@ -2,7 +2,6 @@
 1. sort two arrays
 2. greedily assign the smallest player to the smallest trainer by two pointers
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 simulation: 1. convert time to minutes 2. sort 3. find the minimum difference
 """
 
-from header import *
 
 
 class Solution:

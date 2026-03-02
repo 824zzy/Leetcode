@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-spaces-cleaning-robot-cleaned/
 matrix simulation
 """
-from header import *
 
 
 class Solution:

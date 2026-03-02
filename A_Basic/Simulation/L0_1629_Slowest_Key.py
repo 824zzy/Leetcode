@@ -2,7 +2,6 @@
 Simulation & Reading comprehension
 """
 
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/campus-bikes/description/
 greedily assign bikes to workers
 """
-from header import *
 
 
 class Solution:

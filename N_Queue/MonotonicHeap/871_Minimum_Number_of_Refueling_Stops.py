@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/minimum-number-of-refueling-stops/
 """
-from header import *
 
 
 class Solution:

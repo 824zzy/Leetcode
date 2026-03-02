@@ -6,7 +6,6 @@ there are three conditions:
 2. we cannot go from s to e in k steps because we need one more step
 3. we can go from s to e in k steps, then we need to pick right steps from k steps to go right
 """
-from header import *
 
 
 class Solution:

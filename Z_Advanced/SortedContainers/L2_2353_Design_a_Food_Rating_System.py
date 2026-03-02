@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/design-a-food-rating-system/
 complex but not hard to implement.
 """
-from header import *
 
 
 class FoodRatings:

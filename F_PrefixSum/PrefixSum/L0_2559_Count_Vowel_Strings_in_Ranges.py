@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-vowel-strings-in-ranges/
 prefix sum to count the number of words that start and end with vowels
 """
-from header import *
 
 
 class Solution:

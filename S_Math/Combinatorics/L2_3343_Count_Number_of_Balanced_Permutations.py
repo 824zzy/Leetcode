@@ -6,7 +6,6 @@ Permutation problem = Combination problem + calculate permutation
 3. Answer is: valid combinations * (n1!) * (n2!) / (k1 * k2 * ... * ki)
 """
 
-from header import *
 
 
 class Solution:

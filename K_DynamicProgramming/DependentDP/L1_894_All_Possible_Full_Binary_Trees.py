@@ -3,7 +3,6 @@ Create full binary trees recursively.
 
 Time complexity: O(2^N)
 """
-from header import *
 
 
 class Solution:

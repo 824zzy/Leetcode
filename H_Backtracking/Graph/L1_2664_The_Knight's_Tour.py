@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/the-knights-tour/
 DO NOT USE self.ans, it will cause TLE
 """
-from header import *
 
 
 class Solution:

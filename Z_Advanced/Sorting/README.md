@@ -2,7 +2,7 @@
 
 ## Cycle Sort
 
-``` py
+```py
 def cyclesort(A):
     mp = {x: i for i, x in enumerate(sorted(A))}
     seen = {x: False for x in A}

@@ -3,7 +3,6 @@ Consider this problem to use nums[i] in the dp since 1 <= nums[i], k <= 10**5,
 so dp[x] = max(dp[y]+1), where y ~ [x-k, x].
 The best data structure for this problem is Segment Tree.
 """
-from header import *
 
 # ZWK segment tree template
 

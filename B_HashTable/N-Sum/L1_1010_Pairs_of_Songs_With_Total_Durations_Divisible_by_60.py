@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/
 variance of two sum: (x+y)%60=0 => y%60=-x%60 => y=(-x%60)%60
 """
-from header import *
 
 
 class Solution:

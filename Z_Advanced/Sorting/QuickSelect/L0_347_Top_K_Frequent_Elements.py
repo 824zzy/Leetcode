@@ -2,7 +2,6 @@
 1. apply quick select on element frequencies to find lower bound of top k frequent elements.
 2. use Counter to find valid keys.
 """
-from header import *
 
 
 class Solution:

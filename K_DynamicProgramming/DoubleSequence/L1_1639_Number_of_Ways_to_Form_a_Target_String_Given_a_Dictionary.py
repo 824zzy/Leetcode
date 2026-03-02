@@ -3,7 +3,6 @@ hash table + dp
 
 
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/
 sort
 """
-from header import *
 
 
 class Solution:

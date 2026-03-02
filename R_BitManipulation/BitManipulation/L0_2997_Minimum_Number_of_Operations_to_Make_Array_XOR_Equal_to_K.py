@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/submissions/
 bit manipulation + simulation
 """
-from header import *
 from functools import reduce
 
 

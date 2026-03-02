@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/remove-nodes-from-linked-list/description/
 linked list + monotonic stack
 """
-from header import *
 
 
 class Solution:

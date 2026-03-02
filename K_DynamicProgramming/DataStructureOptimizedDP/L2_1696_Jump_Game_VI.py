@@ -7,7 +7,6 @@ The transition function is calculating the maximum value of the subarray startin
 ==> Use a monotonic queue to optimize the DP.
 """
 
-from header import *
 
 
 # Top-down DP O(n*k)

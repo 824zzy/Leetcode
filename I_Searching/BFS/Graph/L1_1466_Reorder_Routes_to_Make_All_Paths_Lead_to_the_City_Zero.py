@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/
 search for in-degrees
 """
-from header import *
 
 
 class Solution:

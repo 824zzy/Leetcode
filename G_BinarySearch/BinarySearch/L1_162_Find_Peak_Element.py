@@ -2,7 +2,6 @@
 when A[m]>A[m+1], the peak must be in [l, m], because A[m+1] is decreasing
 when A[m]<A[m+1], the peak must be in [m+1, r], because A[m] is increasing
 """
-from header import *
 
 
 class Solution:

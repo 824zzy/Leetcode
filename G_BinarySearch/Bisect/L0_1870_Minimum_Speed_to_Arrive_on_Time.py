@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-speed-to-arrive-on-time/
 binary search on the speed, and check if the time sum is valid.
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/two-out-of-three/
 """
 
-from header import *
 
 
 class Solution:

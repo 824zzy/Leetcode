@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-score-by-changing-two-elements/
 greedy categorization
 """
-from header import *
 
 
 class Solution:

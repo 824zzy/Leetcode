@@ -2,7 +2,6 @@
 large prime optimization:
     - only focus on primes up to sqrt(max(nums))
 """
-from header import *
 
 # large prime optimization
 

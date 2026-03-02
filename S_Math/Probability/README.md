@@ -5,7 +5,7 @@
 
 ## Reservoir Sampling
 
-``` py
+```py
 cnt, ans = 0, 0
 for i in range(len(A)):
     cnt += 1
@@ -17,7 +17,7 @@ return ans
 
 ## Rejection Sampling
 
-``` py
+```py
 while 1:
     SAMPLING
     if ACCPET: return sample
@@ -25,7 +25,7 @@ while 1:
 
 ## Knuth/Fisher-Yates shuffle
 
-``` py
+```py
 for i in range(1, len(self.A)): 
     ii = randint(0, i)
     self.A[ii], self.A[i] = self.A[i], self.A[ii]

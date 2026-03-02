@@ -2,7 +2,6 @@
 Define two pointers to scan through A and B respectively. If the intervals overlap, put the overlapped part in ans.
 Otherwise, increment the pointer for the interval that ends ahead.
 """
-from header import *
 
 
 class Solution:

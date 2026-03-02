@@ -3,7 +3,6 @@ digit dp with leading zero and low/high limit
 
 (pre*10+d)%k to avoid MLE
 """
-from header import *
 
 
 class Solution:

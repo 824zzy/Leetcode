@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
 sliding window with hash table
 """
-from header import *
 
 
 class Solution:

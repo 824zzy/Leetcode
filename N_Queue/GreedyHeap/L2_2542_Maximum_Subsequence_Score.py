@@ -4,7 +4,6 @@ the same as 857. Minimum Cost to Hire K Workers
 1. Greedily sort A by their nums2 from largest to smallest
 2. Greedily update the answer using heap
 """
-from header import *
 
 
 class Solution:

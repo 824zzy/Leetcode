@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-number-of-coins-you-can-get/
 greedy sorting
 """
-from header import *
 
 
 class Solution:

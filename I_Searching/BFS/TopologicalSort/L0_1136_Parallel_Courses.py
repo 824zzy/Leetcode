@@ -1,7 +1,6 @@
 """ http://lkw222.pythonanywhere.com/question_detail/parallel-courses/
 topological sort, using in-degree to check whether all the nodes are visited
 """
-from header import *
 
 
 class Solution:

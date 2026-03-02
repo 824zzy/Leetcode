@@ -4,7 +4,6 @@ The idea is not complex, but the implementation is tricky.
 Maintain a fixed sliding window of size k, and update the score of the window by hash table.
 To avoid TLE, we need to use pow(x, y, mod).
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/max-consecutive-ones/
 find consecutive ones using groupby
 """
-from header import *
 
 
 class Solution:

@@ -5,7 +5,6 @@ Maintain a fixed sliding window with size k while checking the subarray is conse
 Optimal solution see 3255 using two pointers.
 """
 
-from header import *
 
 
 # O

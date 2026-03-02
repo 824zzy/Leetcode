@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
 find the largest two numbers and return (a-1)*(b-1)
 """
-from header import *
 
 
 class Solution:

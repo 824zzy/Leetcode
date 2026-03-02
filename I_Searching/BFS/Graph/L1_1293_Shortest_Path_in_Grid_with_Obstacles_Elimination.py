@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/
 bfs with state (k, x, y)
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/group-shifted-strings/
 hash table + counting
 """
-from header import *
 
 
 class Solution:

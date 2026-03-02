@@ -2,7 +2,6 @@
 2262 + math + lazy segment tree
 learn from 0x3f: https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii/solutions/2502897/yi-bu-bu-ti-shi-ni-si-kao-ben-ti-pythonj-zhhs/
 """
-from header import *
 
 
 class Solution:

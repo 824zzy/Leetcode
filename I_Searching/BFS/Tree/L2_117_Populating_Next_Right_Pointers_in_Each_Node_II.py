@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
 level order traversal with previous node
 """
-from header import *
 
 
 class Solution:

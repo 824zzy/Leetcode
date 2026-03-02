@@ -2,7 +2,6 @@
 greedily find the longest subarray with the same parity
 """
 
-from header import *
 
 
 class Solution:

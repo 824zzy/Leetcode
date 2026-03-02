@@ -3,7 +3,6 @@ update maximum reach dp by: dp[i+j] = min(dp[i+j], dp[i]+1)
 
 Time complexity: O(n*k), where n<=10^4, k<=10^3
 """
-from header import *
 
 
 class Solution:

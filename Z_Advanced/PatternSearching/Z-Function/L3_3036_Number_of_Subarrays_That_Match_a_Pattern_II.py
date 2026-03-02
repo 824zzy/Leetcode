@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-ii/
 """
-from header import *
 
 
 class Solution:

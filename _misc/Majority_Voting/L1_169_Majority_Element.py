@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/majority-element/
 Boyer-Moore majority voting algorithm
 """
-from header import *
 
 
 class Solution:

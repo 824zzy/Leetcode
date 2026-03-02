@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/check-knight-tour-configuration/
 simulation using bfs
 """
-from header import *
 
 
 class Solution:

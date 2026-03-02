@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/rearrange-string-k-distance-apart/
 greedy heap simulation, using busy to store the busy time of each char.
 """
-from header import *
 
 
 class Solution:

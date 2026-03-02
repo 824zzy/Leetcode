@@ -3,7 +3,6 @@ categorization: greedily find valid intervals under three cases
 
 time complexity: O(n)
 """
-from header import *
 
 
 class Solution:

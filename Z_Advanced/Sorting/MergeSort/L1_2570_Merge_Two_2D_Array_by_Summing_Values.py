@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/
 merge sort
 """
-from header import *
 
 
 class Solution:

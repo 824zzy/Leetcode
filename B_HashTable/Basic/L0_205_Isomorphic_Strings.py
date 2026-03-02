@@ -2,7 +2,6 @@
 the same as 290
 use two hash table to check s and t with each other
 """
-from header import *
 
 # on-the-fly solution
 

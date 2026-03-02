@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/k-radius-subarray-averages/
 use prefix sum array to find range average
 """
-from header import *
 
 
 class Solution:

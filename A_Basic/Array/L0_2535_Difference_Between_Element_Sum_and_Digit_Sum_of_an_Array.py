@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/
 """
-from header import *
 
 
 class Solution:

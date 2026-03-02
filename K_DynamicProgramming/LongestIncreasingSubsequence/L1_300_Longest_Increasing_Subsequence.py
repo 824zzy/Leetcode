@@ -3,7 +3,6 @@ use bisect to maintain a increasing list.
 O(NlogN)
 """
 
-from header import *
 
 
 # O(N^2) DP

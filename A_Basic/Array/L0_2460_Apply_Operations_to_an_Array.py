@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/apply-operations-to-an-array/description/
 brute force simulation
 """
-from header import *
 
 
 class Solution:

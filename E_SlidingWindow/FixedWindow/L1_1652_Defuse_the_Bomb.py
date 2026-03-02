@@ -2,7 +2,6 @@
 circle array sliding window simulation
 """
 
-from header import *
 
 
 class Solution:

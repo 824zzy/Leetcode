@@ -2,7 +2,6 @@
 use topological sort to find the order of rows and columns,
 then build a matrix with those orders
 """
-from header import *
 
 
 class Solution:

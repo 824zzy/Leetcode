@@ -2,7 +2,6 @@
 at each node find the maximum path sum
 note that we need to return 0 if path sum of left subtree and right subtree are negative
 """
-from header import *
 
 
 class Solution:

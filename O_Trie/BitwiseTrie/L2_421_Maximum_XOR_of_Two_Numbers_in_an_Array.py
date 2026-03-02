@@ -3,7 +3,6 @@ trie + bit manipulation
 1. build a bitwise trie based on 32 bits format numbers
 2. greedily find numbers as opposite as possible from trie bit by bit
 """
-from header import *
 
 
 class Trie:

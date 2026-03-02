@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/minimum-depth-of-binary-tree/
 """
-from header import *
 
 
 class Solution:

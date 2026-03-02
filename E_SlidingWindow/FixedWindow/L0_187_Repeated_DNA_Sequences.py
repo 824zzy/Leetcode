@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/repeated-dna-sequences/submissions/
 use hash table to find all substrings which frequency>1
 """
-from header import *
 
 
 class Solution:

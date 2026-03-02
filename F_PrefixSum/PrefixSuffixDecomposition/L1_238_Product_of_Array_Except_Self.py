@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/product-of-array-except-self/
 """
-from header import *
 
 
 class Solution:

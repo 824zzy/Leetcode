@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/detonate-the-maximum-bombs/
 the most difficult part is to convert the geometry problem to graph problem
 """
-from header import *
 
 # DFS
 

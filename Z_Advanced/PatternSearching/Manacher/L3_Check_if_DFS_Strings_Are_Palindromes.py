@@ -2,7 +2,6 @@
 timestamp dfs + Manacher
 """
 
-from header import *
 
 
 class Solution:

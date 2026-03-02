@@ -2,7 +2,6 @@
 1. transform the problem into a graph problem
 2. use BFS to find the shortest path, note that we need to pop A[i] from G in each iteration
 """
-from header import *
 
 
 class Solution:

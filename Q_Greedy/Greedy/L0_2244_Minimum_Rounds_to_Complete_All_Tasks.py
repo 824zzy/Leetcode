@@ -2,7 +2,6 @@
 1. it is not possible to complete all the tasks if there is any task appears only once.
 2. greedily assign 3 level tasks as much as possible
 """
-from header import *
 
 
 class Solution:

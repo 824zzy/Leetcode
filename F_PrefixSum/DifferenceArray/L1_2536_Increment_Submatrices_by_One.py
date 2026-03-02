@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/increment-submatrices-by-one/
 2D sweep line
 """
-from header import *
 
 
 class Solution:

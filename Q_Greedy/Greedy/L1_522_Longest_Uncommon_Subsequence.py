@@ -6,7 +6,6 @@ Since the data scale is small, just apply brute force simulation on all possible
 Time complexity: O(n^3)
 """
 
-from header import *
 
 
 class Solution:

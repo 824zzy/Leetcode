@@ -2,7 +2,7 @@
 
 ## Template
 
-``` py
+```py
 """ find the index of pattern in string, if pattern not in string then return -1
 p: pattern
 s: string

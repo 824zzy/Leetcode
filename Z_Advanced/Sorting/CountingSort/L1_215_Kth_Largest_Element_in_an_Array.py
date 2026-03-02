@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/kth-largest-element-in-an-array/
 counting sort
 """
-from header import *
 
 
 class Solution:

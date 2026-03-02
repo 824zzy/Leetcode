@@ -2,7 +2,6 @@
 Sort two array
 """
 
-from header import *
 
 
 class Solution:

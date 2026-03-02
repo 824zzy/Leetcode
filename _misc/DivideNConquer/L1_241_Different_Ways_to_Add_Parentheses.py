@@ -3,7 +3,6 @@
 2. divide and conquer
 """
 
-from header import *
 
 
 class Solution:

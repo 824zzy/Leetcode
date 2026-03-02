@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/reconstruct-itinerary/
 Hierholzer's Algorithm to find Eulerian Path
 """
-from header import *
 
 
 class Solution:

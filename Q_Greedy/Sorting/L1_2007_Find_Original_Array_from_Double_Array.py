@@ -2,7 +2,6 @@
 1. greedily scan the sorted counter from small to large
 2. update the larger element's frequency, be careful to corner case 0
 """
-from header import *
 
 
 class Solution:

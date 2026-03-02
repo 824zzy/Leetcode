@@ -2,7 +2,6 @@
 1. sort the players by age
 2. find the longest increasing subsequence
 """
-from header import *
 
 
 class Solution:

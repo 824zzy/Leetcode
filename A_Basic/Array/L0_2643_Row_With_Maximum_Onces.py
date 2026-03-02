@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/row-with-maximum-ones/
 linear scan
 """
-from header import *
 
 
 class Solution:

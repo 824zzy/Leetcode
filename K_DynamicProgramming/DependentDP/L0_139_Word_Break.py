@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/word-break/
 """
-from header import *
 
 
 class Solution:

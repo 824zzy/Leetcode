@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/uncrossed-lines/
 Same as longest common subsequence problem.
 """
-from header import *
 
 
 class Solution:

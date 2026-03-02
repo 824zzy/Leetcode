@@ -4,7 +4,6 @@ define a monotonic queue state as (idx, val) and we want to ensure
 2. val is in descending order
 """
 
-from header import *
 
 
 # heap implementation

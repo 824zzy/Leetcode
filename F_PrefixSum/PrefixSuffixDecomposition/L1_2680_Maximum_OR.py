@@ -2,7 +2,6 @@
 1. Greedily apply the operation to one of the numbers in the array.
 2. Decompose the array to prefix and suffix to find the maximum OR.
 """
-from header import *
 
 
 class Solution:

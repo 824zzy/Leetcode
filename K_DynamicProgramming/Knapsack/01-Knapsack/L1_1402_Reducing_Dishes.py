@@ -4,7 +4,6 @@
     choose dish: (i+1-dis)*A[i]+dp(i+1, dis)
     discard dish: dp(i+1, dis+1)
 """
-from header import *
 
 
 class Solution:

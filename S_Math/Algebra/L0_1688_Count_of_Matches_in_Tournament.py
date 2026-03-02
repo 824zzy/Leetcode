@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/count-of-matches-in-tournament/
 """
-from header import *
 
 
 class Solution:

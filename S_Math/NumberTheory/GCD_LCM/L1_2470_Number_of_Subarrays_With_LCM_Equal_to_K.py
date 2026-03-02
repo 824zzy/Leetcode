@@ -2,7 +2,6 @@
 brute-forcely check all lcm subarrays.
 Pruning: if A[j] is not a factor of k, then the lcm of the subarray is not k
 """
-from header import *
 
 
 class Solution:

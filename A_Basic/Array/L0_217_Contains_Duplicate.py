@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/contains-duplicate/
 check duplicate by set
 """
-from header import *
 
 
 class Solution:

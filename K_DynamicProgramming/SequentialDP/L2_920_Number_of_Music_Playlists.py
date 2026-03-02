@@ -6,7 +6,6 @@ There are two cases:
 1. If x<n, we can add a new song to the list. There are n-x songs that can be added.
 2. If x>=k, we can add an old song to the list. There are x-k songs that can be added.
 """
-from header import *
 
 
 class Solution:

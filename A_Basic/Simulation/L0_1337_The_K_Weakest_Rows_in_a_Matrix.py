@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
 simulation
 """
-from header import *
 
 
 class Solution:

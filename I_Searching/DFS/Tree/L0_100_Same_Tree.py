@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/same-tree/
 traverse two trees at the same time
 """
-from header import *
 
 
 class Solution:

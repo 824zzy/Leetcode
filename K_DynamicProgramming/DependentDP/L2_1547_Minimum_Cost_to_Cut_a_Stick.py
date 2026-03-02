@@ -3,7 +3,6 @@ similar to 1000. Minimum Cost to Merge Stones
 
 time complexity: O(L^3)
 """
-from header import *
 
 
 class Solution:

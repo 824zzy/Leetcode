@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-number-of-consecutive-values-you-can-make/submissions/
 If you can make the first x values and you have a value v, then you can make all the values ≤ v + x
 """
-from header import *
 
 
 class Solution:

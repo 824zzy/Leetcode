@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/make-k-subarray-sums-equal/
 grouping + greedy median + bezout's
 """
-from header import *
 
 
 class Solution:

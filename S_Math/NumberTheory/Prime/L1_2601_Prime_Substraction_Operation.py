@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/prime-subtraction-operation/
 """
 
-from header import *
 
 
 P = [

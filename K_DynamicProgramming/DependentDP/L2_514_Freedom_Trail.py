@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/freedom-trail/
 deal with the ring as a circle, and the key as a sequence
 """
-from header import *
 
 
 class Solution:

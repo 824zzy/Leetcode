@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/cheapest-flights-within-k-stops/
 use dijkstra, consider cost and k together as heuristics in heap and seen.
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. group continuous substrings
 2. The maximum value of the third largest in each group is the answer.
 """
-from header import *
 
 
 class Solution:

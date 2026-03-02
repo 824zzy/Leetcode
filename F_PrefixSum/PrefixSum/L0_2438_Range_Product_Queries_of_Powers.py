@@ -2,7 +2,6 @@
 1. compute `powers` list by checking bit 1 in n
 2. prefix product to compute the answer
 """
-from header import *
 
 
 class Solution:

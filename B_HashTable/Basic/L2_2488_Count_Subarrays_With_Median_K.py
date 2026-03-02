@@ -4,7 +4,6 @@ A subarray has a median k if:
 2. Count n[i] < k is equal to count n[i] > k (odd-size subarrays).
 3. Count n[i] < k is one less than count n[i] > k (even-size subarrays).
 """
-from header import *
 
 
 class Solution:

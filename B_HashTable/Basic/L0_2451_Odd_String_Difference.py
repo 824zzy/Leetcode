@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/odd-string-difference/
 transform word to difference string
 """
-from header import *
 
 
 class Solution:

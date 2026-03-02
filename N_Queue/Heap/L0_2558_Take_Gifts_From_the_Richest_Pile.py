@@ -2,7 +2,6 @@
 greedily get maximum gift from each pile, and put back the square root of the gift
 """
 
-from header import *
 
 
 # heapreplace is preferred for performance

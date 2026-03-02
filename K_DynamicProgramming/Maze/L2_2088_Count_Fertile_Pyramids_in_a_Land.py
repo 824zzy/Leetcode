@@ -7,7 +7,6 @@ The idea is the same as 221 and 1277.
 Time complexity: O(m*n)
 """
 
-from header import *
 
 
 class Solution:

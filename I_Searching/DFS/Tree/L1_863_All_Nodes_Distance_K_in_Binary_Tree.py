@@ -3,7 +3,6 @@ Two pass iteration:
 1. One pass to build the graph
 2. One pass to BFS the graph to find the nodes with distance k from target node
 """
-from header import *
 
 
 class Solution:

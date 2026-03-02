@@ -2,7 +2,6 @@
 1. greedily find the length of longest increasing subarrays at each indexes
 2. sum the length up
 """
-from header import *
 
 
 class Solution:

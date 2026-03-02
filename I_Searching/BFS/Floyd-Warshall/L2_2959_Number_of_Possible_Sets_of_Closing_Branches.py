@@ -2,7 +2,6 @@
 1. brute force using bitmask
 2. floyd-warshall
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-univalue-subtrees/
 use set to store the value of subtree
 """
-from header import *
 
 
 class Solution:

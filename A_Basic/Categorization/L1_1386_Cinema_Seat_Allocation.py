@@ -11,7 +11,6 @@ Categorize into two cases:
     2. 4-7
     3. 6-9
 """
-from header import *
 
 
 class Solution:

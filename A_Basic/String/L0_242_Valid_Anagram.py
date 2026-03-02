@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/valid-anagram/
 count or sorted characters
 """
-from header import *
 
 
 class Solution:

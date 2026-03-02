@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/koko-eating-bananas/
 check if Koko can eat m bananas in H hours as sentinel
 """
-from header import *
 
 
 class Solution:

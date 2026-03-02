@@ -2,7 +2,6 @@
 1. greedily find the maximum sum of the ascending subarray.
 2. if the current element is smaller than the previous one, reset the sum to the current element.
 """
-from header import *
 
 
 class Solution:

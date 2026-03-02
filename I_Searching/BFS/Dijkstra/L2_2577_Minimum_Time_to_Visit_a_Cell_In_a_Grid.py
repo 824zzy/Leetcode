@@ -5,7 +5,6 @@ https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid/
     d + (2*n + 1) >= G[x+dx][y+dy] ==> n >= (G[x+dx][y+dy] - d - 1) / 2
 """
 
-from header import *
 
 
 class Solution:

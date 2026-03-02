@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/largest-component-size-by-common-factor/
 math + union find: Sieve of Eratosthenes
 """
-from header import *
 
 
 class DSU:

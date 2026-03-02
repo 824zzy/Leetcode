@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/fizz-buzz/
 simulation
 """
-from header import *
 
 
 class Solution:

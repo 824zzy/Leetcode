@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/destination-city/
 find the city that out-degree is 0
 """
-from header import *
 
 
 class Solution:

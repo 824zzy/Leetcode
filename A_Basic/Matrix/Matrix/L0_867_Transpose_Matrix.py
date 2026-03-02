@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/transpose-matrix/
 basic usage of zip(*A)
 """
-from header import *
 
 
 class Solution:

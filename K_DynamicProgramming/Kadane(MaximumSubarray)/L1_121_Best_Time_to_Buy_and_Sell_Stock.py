@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 minimize buy and maximize profit
 """
-from header import *
 
 
 class Solution:

@@ -4,7 +4,6 @@ and update by min(dp[i+j*j], dp[i] + 1);
 
 Note that j**2 is slower than j*j.
 """
-from header import *
 
 
 class Solution:

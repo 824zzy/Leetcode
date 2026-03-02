@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/squirrel-simulation/
 two pass + enumeration
 """
-from header import *
 
 
 class Solution:

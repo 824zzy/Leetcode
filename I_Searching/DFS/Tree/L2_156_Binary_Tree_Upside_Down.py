@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/binary-tree-upside-down/
 """
-from header import *
 
 
 class Solution:

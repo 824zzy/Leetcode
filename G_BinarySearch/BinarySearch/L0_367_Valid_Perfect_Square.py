@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/valid-perfect-square/
 straightforward binary search
 """
-from header import *
 
 
 class Solution:

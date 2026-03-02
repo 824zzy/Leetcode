@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/merge-intervals/
 use sweep line to find out where the count is 0 to build intervals
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/the-maze/
 bfs on matrix, only add the cell to seen when it is the end of the path
 """
-from header import *
 
 
 class Solution:

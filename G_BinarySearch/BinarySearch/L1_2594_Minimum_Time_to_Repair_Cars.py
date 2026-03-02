@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-time-to-repair-cars/
 r*n*n is monotonic increasing function ==> binary search
 """
-from header import *
 
 
 class Solution:

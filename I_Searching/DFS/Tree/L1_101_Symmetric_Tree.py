@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/symmetric-tree/
 """
-from header import *
 
 
 class Solution:

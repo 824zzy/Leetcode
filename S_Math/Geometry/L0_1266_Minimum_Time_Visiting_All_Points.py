@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-time-visiting-all-points/
 the minimum time between two points: max(dx, dy)
 """
-from header import *
 
 
 class Solution:

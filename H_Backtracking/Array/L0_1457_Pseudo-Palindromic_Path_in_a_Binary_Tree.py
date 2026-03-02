@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/
 tree-based backtracking along with the frequency of each number
 """
-from header import *
 
 
 class Solution:

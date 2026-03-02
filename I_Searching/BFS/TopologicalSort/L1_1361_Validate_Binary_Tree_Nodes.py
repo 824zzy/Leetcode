@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/validate-binary-tree-nodes/
 valid tree check + topological sort
 """
-from header import *
 
 
 class Solution:

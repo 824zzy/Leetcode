@@ -4,7 +4,6 @@ bit mask + prefix sum + hash table
 1. Represent the counts (odd or even) of vowels with a bitmask.
 2. presum[j] should be the same as presum[i]
 """
-from header import *
 
 
 class Solution:

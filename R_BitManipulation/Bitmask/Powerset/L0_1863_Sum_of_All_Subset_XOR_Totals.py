@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sum-of-all-subset-xor-totals/
 find all subset by backtracking or power set
 """
-from header import *
 
 
 class Solution:

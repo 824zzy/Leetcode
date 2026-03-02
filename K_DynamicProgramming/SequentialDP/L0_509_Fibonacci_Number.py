@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/fibonacci-number/
 classical textbook problem
 """
-from header import *
 
 # bottom up solution
 

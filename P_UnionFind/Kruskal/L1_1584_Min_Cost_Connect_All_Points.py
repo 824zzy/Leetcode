@@ -3,7 +3,6 @@ Kruskal's algorithm template
 
 Time: O(ElogV)=O(N^2*logN) due to the graph creation
 """
-from header import *
 
 
 class DSU:

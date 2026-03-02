@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/description/
 hack the problem by the special case "aaa...aaa"
 """
-from header import *
 
 
 class Solution:

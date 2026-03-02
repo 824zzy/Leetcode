@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-winner-of-an-array-game/
 simulate the game using two pointers
 """
-from header import *
 
 
 class Solution:

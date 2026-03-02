@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/moving-average-from-data-stream/
 sliding window simulation using queue
 """
-from header import *
 
 
 class MovingAverage:

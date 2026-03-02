@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/invert-binary-tree/
 very famous question
 """
-from header import *
 
 
 class Solution:

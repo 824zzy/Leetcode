@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/build-an-array-with-stack-operations/description/
 linear scan and simulate the stack operations using two pointers
 """
-from header import *
 
 # simulation solution 1
 

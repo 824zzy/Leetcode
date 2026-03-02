@@ -2,7 +2,7 @@
 
 ## Template
 
-``` py
+```py
 def linklist_template(self, head: ListNode) -> ListNode:
     pre = ans = ListNode('inf')
     pre.next = head
@@ -14,7 +14,7 @@ def linklist_template(self, head: ListNode) -> ListNode:
 
 ## Reverse Linked List
 
-``` py
+```py
 # l, r, m = m, l, r 
 pre = None
 while head: 
@@ -24,7 +24,7 @@ return pre
 
 ### Iteratively
 
-``` py
+```py
 class Solution(object):
     def reverseList(self, head):
         pre, cur = None, head
@@ -43,7 +43,7 @@ class Solution(object):
 
 ### Recursively
 
-``` py
+```py
 class Solution(object):
     def reverseList(self, head):
         if not head or not head.next:

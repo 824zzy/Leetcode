@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/loud-and-rich/
 """
-from header import *
 
 
 class Solution:

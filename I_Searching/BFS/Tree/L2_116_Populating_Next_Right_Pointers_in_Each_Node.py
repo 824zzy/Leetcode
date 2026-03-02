@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
 find right node by next: `if node.next: node.right.next = node.next.left`
 """
-from header import *
 
 
 class Solution:

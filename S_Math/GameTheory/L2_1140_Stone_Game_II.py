@@ -5,7 +5,6 @@ X - Y = dp(0, 1) and X + Y = sum(piles).
 As a result, X = (dp(0, 1) + sum(piles))//2.
 """
 
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 1. greedy sort
 2. figure out two cases
 """
-from header import *
 
 
 class Solution:

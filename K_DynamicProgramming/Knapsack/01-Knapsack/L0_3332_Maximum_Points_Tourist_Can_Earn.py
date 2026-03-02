@@ -2,7 +2,6 @@
 reading comprehension + knap sack dp
 """
 
-from header import *
 
 
 class Solution:

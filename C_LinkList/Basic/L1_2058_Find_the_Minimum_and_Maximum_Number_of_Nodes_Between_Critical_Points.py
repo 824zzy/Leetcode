@@ -4,7 +4,6 @@ link list simulation
 Time complexity: O(n)
 """
 
-from header import *
 
 
 # Space complexity: O(1)

@@ -6,7 +6,6 @@ idea is the same as 2972.
 3. j-i-1 is the elements in the middle that can be deleted
 """
 
-from header import *
 
 
 class Solution:

@@ -10,7 +10,7 @@ Difference between Dijkstra and Floyd-Warshall algorithm
 - Dijkstra's Algorithm is one example of a single-source shortest or SSSP algorithm, i.e., given a source vertex it finds shortest path from source to all other vertices.
 - Floyd Warshall Algorithm is an example of all-pairs shortest path algorithm, meaning it computes the shortest path between all pair of nodes.
 
-``` py
+```py
 # time complexity O(E*logV)
 G = [[] for _ in range(n+1)]
 for i, j, w in A:

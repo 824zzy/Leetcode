@@ -2,7 +2,6 @@
 use prefix XOR to solve the problem
 """
 
-from header import *
 
 
 class Solution:

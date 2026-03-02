@@ -2,7 +2,6 @@
 execute expressions by eval or operators
 Time: O(n)
 """
-from header import *
 
 
 class Solution:

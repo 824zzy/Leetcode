@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
 i-th state is only related (i-1)-th state from x==1 to x==k+1
 """
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@ binary search + monotonic queue
 
 note that all the running cost is positive, so it is not necessary to use monotonic queue on runningCosts!
 """
-from header import *
 
 
 class Solution:

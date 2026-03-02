@@ -6,7 +6,6 @@ Every element in the given list has two roles:
 
 Time: O(n^3)
 """
-from header import *
 
 
 class Solution:

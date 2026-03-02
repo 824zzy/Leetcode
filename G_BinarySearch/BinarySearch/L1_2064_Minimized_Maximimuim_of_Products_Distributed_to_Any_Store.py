@@ -2,7 +2,6 @@
 the same as
 """
 
-from header import *
 
 
 class Solution:

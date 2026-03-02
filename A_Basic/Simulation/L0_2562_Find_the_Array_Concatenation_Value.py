@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-array-concatenation-value/
 simulation
 """
-from header import *
 
 
 class Solution:

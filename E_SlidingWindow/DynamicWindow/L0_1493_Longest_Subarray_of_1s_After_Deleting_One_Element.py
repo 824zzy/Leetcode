@@ -4,7 +4,6 @@ The same as 1004_Max_Consecutive_Ones_III.py
 Change up to k = 1 values from 0 to 1.
 Return the length - 1 of the longest (contiguous) subarray that contains only 1s.
 """
-from header import *
 
 
 class Solution:

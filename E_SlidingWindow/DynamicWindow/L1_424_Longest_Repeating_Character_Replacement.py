@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-repeating-character-replacement/
 the same as 2024.
 """
-from header import *
 
 # Since in a substring(A[i:j]) we can at most replace k characters, so use a Counter to record the most frequent element.
 # Then the window boundary can be updated by: j-i+1>max(cnt.values())+k

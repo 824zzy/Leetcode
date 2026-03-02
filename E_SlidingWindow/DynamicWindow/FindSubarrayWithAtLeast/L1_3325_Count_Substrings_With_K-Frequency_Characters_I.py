@@ -2,7 +2,6 @@
 sliding window template
 """
 
-from header import *
 
 
 class Solution:

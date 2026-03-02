@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/binary-tree-preorder-traversal/
 """
-from header import *
 
 
 class Solution:

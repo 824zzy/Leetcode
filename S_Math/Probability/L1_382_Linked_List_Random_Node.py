@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/linked-list-random-node/
 """
-from header import *
 
 # Reservoir Sampling
 

@@ -2,7 +2,6 @@
 1. sort the matrix
 2. sum up max of each column
 """
-from header import *
 
 
 class Solution:

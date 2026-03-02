@@ -4,7 +4,6 @@ greedy median + prefix sum + sliding window
 1. prerequisite: median is the best option for the elements in an array become equal
 2. convert the problem into find a subarray that sum less than the median of subarray ==> sliding window
 """
-from header import *
 
 
 class Solution:

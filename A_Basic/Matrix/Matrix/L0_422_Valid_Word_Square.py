@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/valid-word-square/
 zip_longest
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-substring-without-repeating-characters/
 Use a dictionary seen as a sliding window
 """
-from header import *
 
 
 class Solution:

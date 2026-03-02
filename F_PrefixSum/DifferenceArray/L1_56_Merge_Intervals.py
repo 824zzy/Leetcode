@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/merge-intervals/
 use sweep line/difference array to find left and right end points of the interval
 """
-from header import *
 
 
 class Solution:

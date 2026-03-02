@@ -2,7 +2,6 @@
 typical binary search problem
 """
 
-from header import *
 
 
 class Solution:

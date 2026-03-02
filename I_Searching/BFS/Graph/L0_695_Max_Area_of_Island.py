@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/max-area-of-island/
 For each cell, apply dfs and mark all cells in island as visit
 """
-from header import *
 
 
 class Solution:

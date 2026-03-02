@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minesweeper/
 a complex simulation
 """
-from header import *
 
 
 class Solution:

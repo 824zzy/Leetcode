@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/
 brute force
 """
-from header import *
 
 
 class Solution:

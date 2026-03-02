@@ -3,7 +3,6 @@ since we only need to count substrings that grouped consecutively,
 1. use groupby to find length of consecutive 1's and 0's
 2. find valid substrings by min(A[i], A[i+1])
 """
-from header import *
 
 
 class Solution:

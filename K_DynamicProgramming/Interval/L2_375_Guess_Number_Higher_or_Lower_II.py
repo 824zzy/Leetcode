@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/guess-number-higher-or-lower-ii/
 """
-from header import *
 
 
 class Solution:

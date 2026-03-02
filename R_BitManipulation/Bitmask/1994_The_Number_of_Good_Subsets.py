@@ -4,7 +4,6 @@ Sorry I am stupid.
 
 dp+math+bitmask
 """
-from header import *
 
 
 class Solution:

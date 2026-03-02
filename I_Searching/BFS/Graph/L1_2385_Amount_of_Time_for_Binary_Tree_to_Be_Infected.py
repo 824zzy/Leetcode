@@ -5,7 +5,6 @@ It is easier to treat the problem as a graph problem:
 1. build graph by dfs
 2. find maximum second by bfs
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/check-completeness-of-a-binary-tree/
 use flag to check if there is a missing node
 """
-from header import *
 
 
 class Solution:

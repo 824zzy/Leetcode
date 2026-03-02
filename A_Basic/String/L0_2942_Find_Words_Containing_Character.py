@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-words-containing-character/
 string simulation
 """
-from header import *
 
 
 class Solution:

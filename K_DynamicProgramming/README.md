@@ -20,7 +20,7 @@
 
 ## Matrix Exponentiation DP
 
-``` py
+```py
 MOD = 10**9 + 7
 
 def mul(a: List[List[int]], b: List[List[int]]) -> List[List[int]]:

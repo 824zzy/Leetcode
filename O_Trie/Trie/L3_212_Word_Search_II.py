@@ -7,7 +7,6 @@ Pruning:
 
 disgust time limit
 """
-from header import *
 
 
 class Solution:

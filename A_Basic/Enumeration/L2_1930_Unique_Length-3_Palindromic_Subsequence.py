@@ -6,7 +6,6 @@ smart solution:
 naive solution:
     for each element in the string, we check if any character is located on the two side.
 """
-from header import *
 
 # smart solution from lee:
 

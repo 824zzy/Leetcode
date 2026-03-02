@@ -2,7 +2,6 @@
 The order of digits is the key to solve problem.
 Go through the digits in order, and remove the letters from the string.
 """
-from header import *
 
 
 class Solution:

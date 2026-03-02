@@ -2,7 +2,6 @@
 1. only focus on the different part
 2. three options for each different digit
 """
-from header import *
 
 
 class Solution:

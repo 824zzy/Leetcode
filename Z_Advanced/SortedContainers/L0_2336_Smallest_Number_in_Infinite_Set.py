@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/smallest-number-in-infinite-set/
 it is actually an easy problem due to 1<=num<=1000
 """
-from header import *
 
 
 class SmallestInfiniteSet:

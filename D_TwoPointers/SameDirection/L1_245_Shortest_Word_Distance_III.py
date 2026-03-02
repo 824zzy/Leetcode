@@ -3,7 +3,6 @@ two cases:
 1. word1==word2, use a flag to indicate whether the last word is word1 or not
 2. word1!=word2, use two pointers to record the last index of word1 and word2
 """
-from header import *
 
 
 class Solution:

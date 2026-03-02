@@ -4,7 +4,6 @@ prefix sum + hash table
 (presum[j]-presum[i]) % k = 0
 ==> presum[j] % k = presum[i] % k, when presum[j]-presum[i] is positive
 """
-from header import *
 
 
 class Solution:

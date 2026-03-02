@@ -1,6 +1,6 @@
-### Floyd-Warshall Algorithm for All Pairs Shortest Paths
+# Floyd-Warshall Algorithm for All Pairs Shortest Paths
 
-``` py
+```py
 N = len(G)
 # floyd-warshall
 dist = [[inf]*N for _ in range(N)]

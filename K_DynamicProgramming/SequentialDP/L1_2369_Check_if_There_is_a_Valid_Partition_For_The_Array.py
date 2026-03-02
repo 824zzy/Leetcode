@@ -3,7 +3,6 @@ dp[i] denotes if A[i] can be the last element of a valid partition.
 
 Time complexity: O(N) ~= 10^5
 """
-from header import *
 
 # bottom up
 

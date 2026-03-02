@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-xor-for-each-query/
 """
 
-from header import *
 
 
 class Solution:

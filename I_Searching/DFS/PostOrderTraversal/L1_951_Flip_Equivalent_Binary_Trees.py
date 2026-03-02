@@ -4,7 +4,6 @@ post-order traversal, there are two conditions for any node:
 2 - flip
 """
 
-from header import *
 
 
 class Solution:

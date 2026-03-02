@@ -4,7 +4,6 @@ Observation: bitwise AND between the maximum and any other number will make the 
 So find longest consecutive subarray of all maximum by groupby.
 """
 
-from header import *
 
 
 class Solution:

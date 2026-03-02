@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/closest-binary-search-tree-value/
 dfs
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/car-pooling/
 sweep line to greedily find max
 """
-from header import *
 
 # template 1
 

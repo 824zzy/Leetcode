@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/missing-number/
 Gaussian summation
 """
-from header import *
 
 
 class Solution:

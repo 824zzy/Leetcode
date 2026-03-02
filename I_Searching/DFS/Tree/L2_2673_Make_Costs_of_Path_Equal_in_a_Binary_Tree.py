@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/make-costs-of-paths-equal-in-a-binary-tree/submissions/
 """
-from header import *
 
 
 class Solution:

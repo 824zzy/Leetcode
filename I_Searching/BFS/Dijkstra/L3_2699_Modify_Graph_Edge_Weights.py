@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/modify-G-edge-weights/
 TODO: copy from ye https://leetcode.com/problems/modify-graph-edge-weights/discuss/3547216/Python3-Dijkstra's-algo-twice
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/binary-tree-inorder-traversal/
 tree dfs template
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 translate the problem into: find the maximum subarray that at most contains Counter(s)-k*('a'+'b'+'b')
 """
 
-from header import *
 
 
 class Solution:

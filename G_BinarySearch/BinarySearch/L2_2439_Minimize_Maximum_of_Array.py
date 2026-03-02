@@ -3,7 +3,6 @@ Mini-max ==> Binary Search
 
 In binary search function, we need to check if the current value can be a valid maximum or not.
 """
-from header import *
 
 
 class Solution:

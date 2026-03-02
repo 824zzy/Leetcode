@@ -2,7 +2,6 @@
 easy understanding but not optimal solution, see solution by dp
 """
 
-from header import *
 
 
 class Solution:

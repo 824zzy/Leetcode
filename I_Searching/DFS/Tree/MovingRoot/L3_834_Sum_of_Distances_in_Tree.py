@@ -12,7 +12,6 @@ The thought of moving root:
 
 Similar question: 1685, 2121
 """
-from header import *
 
 
 class Solution(object):

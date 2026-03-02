@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/path-sum/
 """
-from header import *
 
 
 class Solution:

@@ -4,7 +4,6 @@ dp[i] means contains the largest subset containing A[i].
 
 # Time complexity: O(N^2)
 """
-from header import *
 
 # bottom up
 

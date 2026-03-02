@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/jump-game-vii/
 
 """
-from header import *
 
 
 class Solution:

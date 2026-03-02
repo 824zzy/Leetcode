@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/satisfiability-of-equality-equations/
 """
-from header import *
 
 
 class Solution:

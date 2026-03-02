@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-distinct-difference-array/
 simulation by prefix sum
 """
-from header import *
 
 
 class Solution:

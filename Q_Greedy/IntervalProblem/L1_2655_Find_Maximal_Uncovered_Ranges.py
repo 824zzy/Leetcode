@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-maximal-uncovered-ranges/
 Sort the ranges and iterate over intervals, if start of new interval bigger than the rightmost of previous intervals, there is a hole, so put that interval into output.
 """
-from header import *
 
 
 class Solution:

@@ -11,7 +11,6 @@ x = num1[i] = nums2[i]
     2.1: ask help from non-x element from low to high index
          find nums1[j] != nums2[j]!= major element, until major element less or equal than half
 """
-from header import *
 
 
 class Solution:

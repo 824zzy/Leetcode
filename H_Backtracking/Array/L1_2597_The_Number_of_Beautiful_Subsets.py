@@ -4,7 +4,6 @@ subset ==> backtracking
 1. sort the array
 2. backtracking using hash table or bitmask power set
 """
-from header import *
 
 
 class Solution:

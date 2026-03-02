@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/text-justification/
 complex simulation
 """
-from header import *
 
 
 class Solution:

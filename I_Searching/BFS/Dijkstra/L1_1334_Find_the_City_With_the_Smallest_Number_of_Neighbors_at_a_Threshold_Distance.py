@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 Use dijkstra algorithm to find the shortest path from each point to the others.
 """
-from header import *
 
 
 class Solution:

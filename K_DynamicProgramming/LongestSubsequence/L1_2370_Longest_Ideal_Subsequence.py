@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-ideal-subsequence/
 Longest increasing subsequence - like problem
 """
-from header import *
 
 # the top down solution below will Memory Limit Exceeded :(
 # Time complexity: O(N*k), (10^5)*25

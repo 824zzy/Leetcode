@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/toss-strange-coins/
 """
-from header import *
 
 
 class Solution:

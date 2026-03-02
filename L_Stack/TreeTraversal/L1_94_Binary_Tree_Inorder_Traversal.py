@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/binary-tree-inorder-traversal/
 algorithm template
 """
-from header import *
 
 
 class Solution:

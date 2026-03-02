@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/find-bottom-left-tree-value/
 """
-from header import *
 
 # bfs solution
 

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/max-consecutive-ones-iii/
 sliding window template: move i when k<0
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-sum-score-of-array/
 compute max of the prefix and suffix sum
 """
-from header import *
 
 
 class Solution:

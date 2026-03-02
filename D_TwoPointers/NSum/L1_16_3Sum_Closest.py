@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/3sum-closest/
 sort A and greedily find minimum three sum by two pointers.
 """
-from header import *
 
 # not optimal, and get TLE in latest test cases
 

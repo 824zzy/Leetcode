@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/divide-array-into-arrays-with-max-difference/
 """
-from header import *
 
 
 class Solution:

@@ -4,7 +4,6 @@
 3. when A[i]+A[j]>A[k]: (A[i], A[j]), (A[i+1], A[j]), ... (A[j-1], A[j]) are valid
 4. update two pointers
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/valid-palindrome-iii/
 dp(i, j, k) will TLE, so we count the cost of deletion and check if it is less than k
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-islands-ii/
 union find on 2D graph
 """
-from header import *
 
 
 class Solution:

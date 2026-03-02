@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/points-that-intersect-with-cars/
 use sweep line to find the number of overlapping intervals at each point.
 """
-from header import *
 
 
 class Solution:

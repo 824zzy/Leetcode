@@ -4,7 +4,6 @@ Right pointer move left when sum is larger then target
 
 Time complexity: O(n)
 """
-from header import *
 
 
 class Solution:

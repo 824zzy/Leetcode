@@ -2,7 +2,6 @@
 for each substring A[i:len(A):k], find its Longest Increasing Subsequence(LIS)
 """
 
-from header import *
 
 
 class Solution:

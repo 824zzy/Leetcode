@@ -3,7 +3,6 @@ the same as 127, it is medium for the sake of loose time limit.
 1. create a graph by checking all possible candidates O(n*8*4) rather than double for loop O(n^2)
 2. classic bfs to find minimum step
 """
-from header import *
 
 
 class Solution:

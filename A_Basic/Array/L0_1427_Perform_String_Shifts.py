@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/perform-string-shifts/
 """
-from header import *
 
 
 class Solution:

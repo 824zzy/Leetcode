@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-smallest-common-element-in-all-rows/\
 find set intersection of all rows
 """
-from header import *
 
 
 class Solution:

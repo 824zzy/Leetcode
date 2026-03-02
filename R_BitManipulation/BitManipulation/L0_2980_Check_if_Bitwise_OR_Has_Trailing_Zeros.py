@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/check-if-bitwise-or-has-trailing-zeros/
 has at least one trailing zero ==> at least two even numbers
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-great-partitions/
 solve it reversely: find partition that sum of the elements of any group is less than k
 """
-from header import *
 
 
 class Solution:

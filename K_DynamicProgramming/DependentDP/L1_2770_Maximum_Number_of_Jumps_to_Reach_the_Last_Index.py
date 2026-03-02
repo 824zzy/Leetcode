@@ -2,7 +2,6 @@
 1. 2 <= nums.length == n <= 1000 ==> O(n^2)
 2. dp
 """
-from header import *
 
 
 class Solution:

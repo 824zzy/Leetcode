@@ -2,7 +2,7 @@
 
 Template:
 
-``` py
+```py
 hist = [0] * len(A[0])
         
 for i in range(len(A)):

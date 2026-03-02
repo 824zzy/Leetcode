@@ -5,7 +5,6 @@ locate the mid-point;
 reverse the 2nd half;
 merge 1st and 2nd half.
 """
-from header import *
 
 
 class Solution:

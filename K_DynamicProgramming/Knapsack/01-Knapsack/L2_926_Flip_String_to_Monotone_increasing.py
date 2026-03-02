@@ -10,7 +10,6 @@ So there are four conditions:
     if s[i]==0, we can flip it and set flipped0to1, or do nothing
     if s[i]==1, we have to flip 1 to 0
 """
-from header import *
 
 
 class Solution:

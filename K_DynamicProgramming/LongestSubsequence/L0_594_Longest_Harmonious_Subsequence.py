@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-harmonious-subsequence/
 greedy
 """
-from header import *
 
 
 class Solution:

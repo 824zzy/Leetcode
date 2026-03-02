@@ -8,7 +8,6 @@ to:
 Find sliding window that both the number of 0's and 1's in the string are more than k.
 """
 
-from header import *
 
 
 class Solution:

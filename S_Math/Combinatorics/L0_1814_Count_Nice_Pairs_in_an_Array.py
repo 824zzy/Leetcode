@@ -3,7 +3,6 @@ Observation: x+rev(y) = y+rev(x) => x-rev(x) = y-rev(y)
 
 So just count the combinations of x-rev(x) in pairs.
 """
-from header import *
 
 
 class Solution:

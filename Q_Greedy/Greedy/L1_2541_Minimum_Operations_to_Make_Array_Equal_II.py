@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/minimum-operations-to-make-array-equal-ii/
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/swap-nodes-in-pairs/
 from dba: https://leetcode.com/problems/swap-nodes-in-pairs/discuss/984392/Python-O(n)-solution-explained
 """
-from header import *
 
 
 class Solution:

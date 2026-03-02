@@ -4,7 +4,6 @@ brute force using binary search/sliding window
 1. sort
 2. binary search/sliding window
 """
-from header import *
 
 
 class Solution:

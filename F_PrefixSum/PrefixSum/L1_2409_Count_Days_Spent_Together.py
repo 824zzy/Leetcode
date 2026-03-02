@@ -2,7 +2,6 @@
 1. find the maximum and minimum date
 2. calculate the number of days between the maximum and minimum date by prefix sum
 """
-from header import *
 
 
 class Solution:

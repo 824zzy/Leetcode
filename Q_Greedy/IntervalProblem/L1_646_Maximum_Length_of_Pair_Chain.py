@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-length-of-pair-chain/
 non-overlap interval problem
 """
-from header import *
 
 
 class Solution:

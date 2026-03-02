@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/seat-reservation-manager/
 initialize a heap with n and simulate the process of seat reservation
 """
-from header import *
 
 
 class SeatManager:

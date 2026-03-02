@@ -2,7 +2,6 @@
 bfs template
 """
 
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/image-smoother/
 simulation
 """
-from header import *
 
 # 2D prefix sum
 

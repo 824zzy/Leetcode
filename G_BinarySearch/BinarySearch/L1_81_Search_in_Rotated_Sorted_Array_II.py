@@ -7,7 +7,6 @@ There are two cases can lead to r=m:
 
 A special case is when A[l]==A[r], we can't tell which part is sorted, so we just move l to the right.
 """
-from header import *
 
 
 class Solution:

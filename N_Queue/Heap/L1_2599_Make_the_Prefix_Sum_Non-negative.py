@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/make-the-prefix-sum-non-negative/
 once the prefix sum is negative, we need to make it non-negative by pop the smallest element from the heap
 """
-from header import *
 
 
 class Solution:

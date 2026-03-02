@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/partition-to-k-equal-sum-subsets/submissions/
 """
-from header import *
 
 
 class Solution:

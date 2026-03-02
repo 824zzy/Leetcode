@@ -11,7 +11,6 @@ dp(n) = 1/W*(dp(n+1) + dp(n+2) + ... + dp(n+W))
 dp(n+1) = 1/W*(dp(n+2) + dp(n+3) + ... + dp(n+W+1))
 one can derive dp(n) = (1+W)/W*dp(n) - 1/W*dp(n+W+1). When n+1 == K, this trick cannot be applied as the relationship of dp(n+1) = 1/W*(dp(n+2) + ...) doesn't hold in general.
 """
-from header import *
 
 
 class Solution:

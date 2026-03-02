@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-processing-time/submissions/
 reading comprehensive + greedy
 """
-from header import *
 
 
 class Solution:

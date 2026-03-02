@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-sum-of-an-hourglass/
 since m and n in range [3, 150], we can use brute force to solve this problem.
 """
-from header import *
 
 
 class Solution:

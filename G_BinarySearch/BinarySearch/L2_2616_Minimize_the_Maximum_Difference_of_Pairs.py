@@ -5,7 +5,6 @@
       If not, we move to next available pair (A[i + 1], A[i]).
     - or use bisect_right to find all the available pairs.
 """
-from header import *
 
 
 class Solution:

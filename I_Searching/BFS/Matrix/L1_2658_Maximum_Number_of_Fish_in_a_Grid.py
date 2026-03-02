@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/
 searching answer by bfs
 """
-from header import *
 
 
 class Solution:

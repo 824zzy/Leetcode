@@ -2,7 +2,6 @@
 simulation
 """
 
-from header import *
 
 
 class Solution:

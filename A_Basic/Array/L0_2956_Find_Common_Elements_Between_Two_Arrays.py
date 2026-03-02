@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-common-elements-between-two-arrays/
 compute intersection and count frequency
 """
-from header import *
 
 
 class Solution:

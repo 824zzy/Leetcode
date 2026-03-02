@@ -2,7 +2,6 @@
 1. find the connected components while store the min edge weight
 2. find the min edge weight of the component that contains city1
 """
-from header import *
 
 
 class Solution:

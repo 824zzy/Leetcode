@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/first-completely-painted-row-or-column/
 simulation using hash table
 """
-from header import *
 
 
 class Solution:

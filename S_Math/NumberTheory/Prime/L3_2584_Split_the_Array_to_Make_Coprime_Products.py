@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/split-the-array-to-make-coprime-products/
 Think reversely: find the intervals that cannot be split, which is the leftmost and rightmost index of each prime factor
 """
-from header import *
 
 
 class Solution:

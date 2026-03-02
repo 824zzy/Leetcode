@@ -4,7 +4,6 @@ heuristic:
 2. If we get negative prefix sum, it means we can not succeed using current starting index,
 and we need to take next as starting index.
 """
-from header import *
 
 
 class Solution:

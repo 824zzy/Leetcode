@@ -3,7 +3,6 @@ minimax: maximize the profit by minimize opponent profit
 
 take gain with minus sign, so we have options P[i] - dp(i+1, j) and P[j] - dp(i, j-1)
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-earnings-from-taxi/
 the same as 1235
 """
-from header import *
 
 
 class Solution:

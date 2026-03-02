@@ -3,7 +3,6 @@ For each node, sort its neighbors in descending order and take k max valued neig
 
 Note that the time complexity is O(nlogn) instead of O(n^2*logn)
 """
-from header import *
 
 
 class Solution:

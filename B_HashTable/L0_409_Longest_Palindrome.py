@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-palindrome/
 use frequency table to count odd and even numbers, note that one needs to add extra 1 if there is odd number
 """
-from header import *
 
 
 class Solution:

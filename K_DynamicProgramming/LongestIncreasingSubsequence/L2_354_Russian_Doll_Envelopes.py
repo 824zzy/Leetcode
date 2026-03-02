@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/russian-doll-envelopes/
 """
 
-from header import *
 
 
 class Solution:

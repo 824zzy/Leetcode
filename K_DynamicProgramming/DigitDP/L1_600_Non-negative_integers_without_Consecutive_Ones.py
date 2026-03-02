@@ -3,7 +3,6 @@ digit dp which consider leading zero
 
 ensure the number has at least one 1 and previous digit is not the same
 """
-from header import *
 
 # new template
 

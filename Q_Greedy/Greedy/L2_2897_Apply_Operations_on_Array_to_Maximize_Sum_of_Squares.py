@@ -5,7 +5,6 @@ greedily maximize each bit of first k numbers
 
 Note: trick to count bits and add 2**i to ans
 """
-from header import *
 
 
 class Solution:

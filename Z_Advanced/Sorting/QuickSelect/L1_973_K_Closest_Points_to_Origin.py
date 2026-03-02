@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/k-closest-points-to-origin/
 quick select
 """
-from header import *
 
 # quick select
 

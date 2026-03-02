@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/n-ary-tree-postorder-traversal/
 """
 
-from header import *
 
 
 class Solution:

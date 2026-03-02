@@ -2,7 +2,6 @@
 1. sort the characters in the string by their frequency.
 2. count keypress time
 """
-from header import *
 
 
 class Solution:

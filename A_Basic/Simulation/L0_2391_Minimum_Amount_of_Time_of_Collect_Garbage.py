@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/
 count different types of garbage and their maximum distance separately
 """
-from header import *
 
 
 class Solution:

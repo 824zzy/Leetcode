@@ -4,7 +4,6 @@ lower <= x+y <= upper ==> lower-x <= y <= upper-x
 In bisect_left(a, x, lo=0, hi=len(a)), lo and hi are the indices which specify the slice of a to consider.
 """
 
-from header import *
 
 
 class Solution:

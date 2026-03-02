@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/
 brute force to find the minimal subarray that gcd is 1.
 """
-from header import *
 
 
 class Solution:

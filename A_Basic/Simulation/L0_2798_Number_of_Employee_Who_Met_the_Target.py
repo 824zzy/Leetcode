@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-employees-who-met-the-target/
 reading comprehension
 """
-from header import *
 
 
 class Solution:

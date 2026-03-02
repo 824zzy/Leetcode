@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-islands/submissions/
 count island by bfs
 """
-from header import *
 
 
 class Solution:

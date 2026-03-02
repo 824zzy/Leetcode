@@ -2,7 +2,6 @@
 brain teaser + prefix sum
 a_(i)-a_(i-1) + a_(i)-a_(i-2) + ... + a_(i)-a_(0) === i*a_(i)-(a_0+...+a_(i-1))
 """
-from header import *
 
 
 class Solution:

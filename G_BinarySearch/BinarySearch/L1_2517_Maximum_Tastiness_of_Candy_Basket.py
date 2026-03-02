@@ -3,7 +3,6 @@ Looking for max-mini ==> binary search
 
 In the search function, greedily select candies
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 copy A[j] to A[i] if A[j] is not seen yet
 """
-from header import *
 
 
 class Solution:

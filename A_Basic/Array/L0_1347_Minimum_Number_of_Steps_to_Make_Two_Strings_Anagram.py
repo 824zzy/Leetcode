@@ -5,7 +5,6 @@ count differences:
 1. in S but not in T, in T but not in S
 2. overlap's difference
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sum-of-squares-of-special-elements/
 simulation
 """
-from header import *
 
 
 class Solution:

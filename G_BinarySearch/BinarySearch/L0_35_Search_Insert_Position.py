@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/search-insert-position/
 binary search template
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/
 sort the capacity and rocks by difference, then greedily assign additional rocks
 """
-from header import *
 
 
 class Solution:

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/longest-subsequence-with-limited-sum/
 greedily sort + prefix sum + binary search
 """
-from header import *
 
 
 class Solution:

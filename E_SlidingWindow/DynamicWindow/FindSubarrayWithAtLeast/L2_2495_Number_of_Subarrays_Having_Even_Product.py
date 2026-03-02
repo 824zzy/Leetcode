@@ -3,7 +3,6 @@
 2. Iterate from left to right and save the last index of an even number. Let that saved index be “j”.
 3. It can be seen that every subarray starting from earlier than index “j” and ending at the current index has an even product.
 """
-from header import *
 
 
 class Solution:

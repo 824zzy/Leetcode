@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/earliest-possible-day-of-full-bloom/
 sort P and G by grow time, find maximum prefix+grow time.
 """
-from header import *
 
 
 class Solution:

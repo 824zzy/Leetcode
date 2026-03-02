@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/
 Note that it is not dp problem, instead use two pointer to find the count of subsequence
 """
-from header import *
 
 
 class Solution:

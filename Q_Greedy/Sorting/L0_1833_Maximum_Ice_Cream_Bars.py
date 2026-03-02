@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximum-ice-cream-bars/
 sort and greedy
 """
-from header import *
 
 
 class Solution:

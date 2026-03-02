@@ -4,7 +4,6 @@ observation:
                = (onesRowi - zerosRowi) + (onesColj - zerosColj)
 matrix simulation
 """
-from header import *
 
 
 class Solution:

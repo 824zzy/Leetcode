@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/unique-number-of-occurrences/
 """
-from header import *
 
 
 class Solution:

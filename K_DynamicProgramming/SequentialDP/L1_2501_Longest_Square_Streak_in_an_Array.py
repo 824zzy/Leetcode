@@ -2,7 +2,6 @@
 dp[x] = dp[isqrt(x)] + 1
 """
 
-from header import *
 
 
 class Solution:

@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/walls-and-gates/
 """
-from header import *
 
 
 class Solution:

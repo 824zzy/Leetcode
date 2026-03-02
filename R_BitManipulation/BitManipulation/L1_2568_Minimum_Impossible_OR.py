@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-impossible-or/
 based on observation, the answer can only be 2**x
 """
-from header import *
 
 
 class Solution:

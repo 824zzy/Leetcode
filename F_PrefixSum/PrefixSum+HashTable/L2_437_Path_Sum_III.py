@@ -2,7 +2,6 @@
 prefix sum + dfs
 use prefix sum to find target subarray through back tracking
 """
-from header import *
 
 # online solution
 

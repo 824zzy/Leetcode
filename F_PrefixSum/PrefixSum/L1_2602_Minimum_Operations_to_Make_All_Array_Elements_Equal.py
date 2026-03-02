@@ -3,7 +3,6 @@ prefix sum + binary search
 
 use binary search to find the index of the first element >= q and calculate the cost of the left part and right part through prefix sum array
 """
-from header import *
 
 
 class Solution:

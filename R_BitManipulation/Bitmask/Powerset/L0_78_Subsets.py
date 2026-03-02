@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/subsets/
 Power set: use bit to indicate which element should be included.
 """
-from header import *
 
 
 class Solution:

@@ -5,7 +5,6 @@ Use fixed sliding window and hash table to find the permutation of s1 in s2.
 Interestingly, the Counter({'b': 1, 'a': 1, 'e': 0}) == Counter({'a': 1, 'b': 1})
 """
 
-from header import *
 
 
 class Solution:

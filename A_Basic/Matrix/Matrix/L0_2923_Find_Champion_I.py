@@ -2,7 +2,6 @@
 problem description is unclear;
 brute force to find the strongest team;
 """
-from header import *
 
 
 class Solution:

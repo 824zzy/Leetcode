@@ -4,7 +4,6 @@ think as difference array
 translate the problem into:
     the current device can be tested if batteryPercentages[i] is greater than the number of tested devices.
 """
-from header import *
 
 
 class Solution:

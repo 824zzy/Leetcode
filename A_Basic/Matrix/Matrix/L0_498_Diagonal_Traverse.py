@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/diagonal-traverse/
 matrix + simulation
 """
-from header import *
 
 
 class Solution:

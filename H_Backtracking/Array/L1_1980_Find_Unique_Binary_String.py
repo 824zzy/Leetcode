@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-unique-binary-string/
 Find unique binary string by backtracking
 """
-from header import *
 
 # bit mask solution
 

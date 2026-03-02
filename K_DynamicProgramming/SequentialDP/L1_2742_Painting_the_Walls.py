@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/painting-the-walls/
 dp with pruning
 """
-from header import *
 
 
 class Solution:

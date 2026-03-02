@@ -2,7 +2,6 @@
 1. consider cost[i] as the frequency of nums[i]
 2. when sum(cost) larger than total//2, then we find the median
 """
-from header import *
 
 
 class Solution:

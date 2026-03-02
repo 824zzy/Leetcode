@@ -4,7 +4,6 @@ If the size of nums becomes 10**4, only monotonic stack solution is acceptable.
 
 For monotonic stack solution, it is essentially the same as 907.
 """
-from header import *
 
 # O(N)
 

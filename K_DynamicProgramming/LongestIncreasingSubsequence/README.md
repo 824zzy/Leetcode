@@ -6,8 +6,7 @@ In order to improve the time complexity to O(nlogn), we need to think reversely:
 
 TODO: add 3288
 
-
-``` python
+```py
 # O(N^2) dp
 def LIS(A):
     dp = [1] * len(A)

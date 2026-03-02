@@ -1,6 +1,5 @@
 """ https://leetcode.com/problems/longest-nice-subarray/
 """
-from header import *
 
 # optimal solution using bit manipulation
 

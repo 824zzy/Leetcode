@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/wiggle-sort/
 greedily swap adjacent elements if they are not in the correct order
 """
-from header import *
 
 
 class Solution:

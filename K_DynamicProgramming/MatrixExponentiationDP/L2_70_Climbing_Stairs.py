@@ -9,7 +9,6 @@
     dp[i] = dp[i-1] + dp[i-2]
 """
 
-from header import *
 
 
 # matrix exponentiation DP: Time complexity O(logn)

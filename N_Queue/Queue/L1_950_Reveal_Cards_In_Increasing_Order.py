@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/reveal-cards-in-increasing-order/
 simulation while keeping track of indices
 """
-from header import *
 
 
 class Solution:

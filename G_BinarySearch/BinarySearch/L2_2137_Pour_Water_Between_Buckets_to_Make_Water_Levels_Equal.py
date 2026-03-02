@@ -2,7 +2,6 @@
 1. use precision(1e-5) to decide if the answer is correct
 2. use prefix sum(optimal) or liner scan to calculate the difference between x<m and x>m
 """
-from header import *
 
 
 class Solution:

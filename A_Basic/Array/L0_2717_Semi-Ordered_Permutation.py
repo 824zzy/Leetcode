@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/semi-ordered-permutation/
 reading comprehension to find two cases
 """
-from header import *
 
 
 class Solution:

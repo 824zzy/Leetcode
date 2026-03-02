@@ -3,7 +3,6 @@
 2. pop the smallest pair from the heap, say [A[i]+B[j], i, j]
 3. if i+1<m, push [A[i+1]+B[j], i+1, j] to the heap
 """
-from header import *
 
 
 class Solution:

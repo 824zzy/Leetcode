@@ -2,7 +2,6 @@
 At any A[i], go through the values seen already (xx) and check the length
 of arithmetic sequence ending at x with step A[j]-A[i]. Return the maximum length.
 """
-from header import *
 
 # bottom up
 

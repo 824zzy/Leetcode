@@ -3,7 +3,6 @@ Observation: f(x) = (all_sum-subtree_sum)*subtree_sum
 1. one dfs for calculating the sum of all nodes
 2. another dfs for calculating the subtree sum and the product of (all_sum-subtree_sum)*subtree_sum
 """
-from header import *
 
 
 class Solution:

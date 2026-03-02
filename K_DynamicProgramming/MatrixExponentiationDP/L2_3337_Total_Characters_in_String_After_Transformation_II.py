@@ -6,7 +6,6 @@ F(t) = M * F(t-1)
 dp + matrix binary exponentiation template
 """
 
-from header import *
 
 
 class Solution:

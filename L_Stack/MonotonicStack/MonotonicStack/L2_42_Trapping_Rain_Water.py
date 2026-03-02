@@ -4,7 +4,6 @@ This problem is similar to 84.
 Three pass template solution: find next greater element on the left and right by monotonic template, then let `min(left, right)-A[i]` as height and `r-l-1` as width, note that use seen to remove duplicates
 One pass solution: dynamically assume stack pop as bottom, then the width is `i-stk[-1]-1` and height is `min(A[i], A[stk[-1]])-btm`
 """
-from header import *
 
 # three pass template solution
 

@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/set-mismatch/
 counting
 """
-from header import *
 
 
 class Solution:

@@ -2,7 +2,6 @@
 simulate laser beam row by row
 """
 
-from header import *
 
 
 class Solution:

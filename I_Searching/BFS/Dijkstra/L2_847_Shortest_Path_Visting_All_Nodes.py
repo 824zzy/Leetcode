@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 bitmask + BFS/Dijkstra
 """
-from header import *
 
 # bitmask + Dijkstra
 

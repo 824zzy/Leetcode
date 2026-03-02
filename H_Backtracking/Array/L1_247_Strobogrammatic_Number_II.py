@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/strobogrammatic-number-ii/
 be careful about the odd and even cases
 """
-from header import *
 
 
 class Solution:

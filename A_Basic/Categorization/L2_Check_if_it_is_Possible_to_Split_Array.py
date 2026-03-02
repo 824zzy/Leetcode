@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/check-if-it-is-possible-to-split-array/
 Think reversely: check if exist a subarray with a length of 2 that has a sum greater than or equal to 'm'.
 """
-from header import *
 
 
 class Solution:

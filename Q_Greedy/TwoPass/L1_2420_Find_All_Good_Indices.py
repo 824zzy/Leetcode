@@ -4,7 +4,6 @@ The same as 2100_Find_Good_Days_to_Rob_the_Bank_L1.py
 1. two passes for calculate consecutive increasing and decreasing subarray
 2. linear scan to find good indices
 """
-from header import *
 
 
 class Solution:

@@ -9,7 +9,7 @@ We need to use a `while` loop to move the two pointers and add logic based on pr
 
 Same direction template:
 
-``` py
+```py
 # basic version
 i = 0
 ans = ?
@@ -28,7 +28,7 @@ while i<len(A) and j<len(A):
 
 Different direction template:
 
-``` py
+```py
 l, r = 0, len(A)-1
 ans = 0
 while l<=r:

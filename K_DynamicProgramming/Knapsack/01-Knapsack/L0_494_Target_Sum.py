@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/target-sum/
 typical 01 Knapsack problem
 """
-from header import *
 
 
 class Solution:

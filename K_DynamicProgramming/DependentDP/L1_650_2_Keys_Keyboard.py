@@ -5,7 +5,6 @@ For each n, we try all its prime factors x, and the steps are n//x.
 time complexity: O(n^2)
 """
 
-from header import *
 
 
 class Solution:

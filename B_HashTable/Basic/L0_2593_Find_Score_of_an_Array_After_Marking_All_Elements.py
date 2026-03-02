@@ -2,7 +2,6 @@
 Simulate the problem description using a seen array
 """
 
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@
 2. Find the leftmost and rightmost prime in the list
 """
 
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@
 2. sweep line to calculate number of intervals.
 3. calculate the partitions
 """
-from header import *
 
 
 class Solution:

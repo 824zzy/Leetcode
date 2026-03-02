@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/the-skyline-problem/
 TODO: https://leetcode.com/problems/the-skyline-problem/discuss/812312/Python-Sweep-Line-%2B-SortedList-or-O(nlogn)
 """
-from header import *
 
 
 class Solution:

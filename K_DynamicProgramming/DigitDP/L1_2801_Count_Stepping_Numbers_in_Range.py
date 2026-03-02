@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-stepping-numbers-in-range/
 digits dp with lower and upper bound and leading zero
 """
-from header import *
 
 
 class Solution:

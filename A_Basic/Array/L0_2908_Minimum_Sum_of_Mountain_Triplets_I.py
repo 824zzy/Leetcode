@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/
 brute force
 """
-from header import *
 
 
 class Solution:

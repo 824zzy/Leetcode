@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/determine-the-winner-of-a-bowling-game/
 simulation
 """
-from header import *
 
 
 class Solution:

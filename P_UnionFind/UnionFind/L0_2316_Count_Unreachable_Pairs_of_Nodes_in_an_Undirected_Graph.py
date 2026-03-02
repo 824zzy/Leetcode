@@ -3,7 +3,6 @@
 2. count size of every group
 3. count unreachable pairs
 """
-from header import *
 
 
 class Solution:

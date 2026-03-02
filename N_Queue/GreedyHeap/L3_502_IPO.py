@@ -2,7 +2,6 @@
 1. sort the profits and capital
 2. use priority queue to greedily finding top k maximum profit
 """
-from header import *
 
 
 class Solution:

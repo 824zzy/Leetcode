@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/merge-strings-alternately
 basic usage of zip_longest
 """
-from header import *
 
 
 class Solution:

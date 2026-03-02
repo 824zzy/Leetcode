@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/sparse-matrix-multiplication/
 simulation
 """
-from header import *
 
 
 class Solution:

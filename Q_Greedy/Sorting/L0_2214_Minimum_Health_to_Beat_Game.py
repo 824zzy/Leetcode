@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-health-to-beat-game/
 greedily use armor for the highest damage
 """
-from header import *
 
 
 class Solution:

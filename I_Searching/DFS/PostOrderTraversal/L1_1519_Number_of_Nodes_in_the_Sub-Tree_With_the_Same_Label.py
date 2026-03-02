@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/
 post order dfs. At each node, update seen table by subtree's seen table.
 """
-from header import *
 
 
 class Solution:

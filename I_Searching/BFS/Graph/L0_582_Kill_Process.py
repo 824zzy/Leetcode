@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/kill-process/
 build a graph-like tree, then start from kill node to find all the children
 """
-from header import *
 
 
 class Solution:

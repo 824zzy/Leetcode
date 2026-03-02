@@ -2,7 +2,6 @@
 consider 0 as -1:
     presum[j]-presum[i] = 0 ===> presum[j] = presum[i]
 """
-from header import *
 
 
 class Solution:

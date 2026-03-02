@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/count-of-integers/
 digit dp with leading zero and low/high limit
 """
-from header import *
 
 
 class Solution:

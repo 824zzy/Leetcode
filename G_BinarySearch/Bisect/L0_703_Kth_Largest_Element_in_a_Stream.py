@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/kth-largest-element-in-a-stream/
 """
 from sortedcontainers import SortedList
-from header import *
 
 
 class KthLargest:

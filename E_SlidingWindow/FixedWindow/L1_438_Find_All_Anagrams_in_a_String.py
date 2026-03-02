@@ -2,7 +2,6 @@
 use a fixed sliding window and a Counter to record p's frequency
 when Counter values equal to p's frequency, append the start index of the window
 """
-from header import *
 
 
 class Solution:

@@ -3,7 +3,6 @@
 2. sort the diagonal array
 3. reconstruct matrix
 """
-from header import *
 
 
 class Solution:

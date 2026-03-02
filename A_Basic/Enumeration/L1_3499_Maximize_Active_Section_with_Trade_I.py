@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/maximize-active-section-with-trade-i/
 group by trick + enumeration
 """
-from header import *
 
 class Solution:
     def maxActiveSectionsAfterTrade(self, s: str) -> int:

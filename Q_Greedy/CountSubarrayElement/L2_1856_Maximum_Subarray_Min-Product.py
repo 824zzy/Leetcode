@@ -4,7 +4,6 @@
 
 similar to 907, 2281
 """
-from header import *
 
 
 class Solution:

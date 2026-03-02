@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/analyze-user-website-visit-pattern/
 disgust test cases and problem description
 """
-from header import *
 
 
 class Solution:

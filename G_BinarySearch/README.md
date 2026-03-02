@@ -9,7 +9,7 @@ A few signal that indicates a problem is a binary search problem:
 
 ## Basic Template
 
-``` py
+```py
 def binary_search(self, A: List[int], t: int) -> int:
       l, r = 0, len(A)
       while l<r:

@@ -2,7 +2,6 @@
 1. use Sieve of Eratosthenes to find all the prime less than right+1
 2. two pointers to find the closest prime numbers
 """
-from header import *
 
 
 class Solution:

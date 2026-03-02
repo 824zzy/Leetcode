@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/cycle-length-queries-in-a-tree/description/
 query_length = lca(i, j) + 1
 """
-from header import *
 
 
 class Solution:

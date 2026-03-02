@@ -2,7 +2,6 @@
 find minimal among lists by heap
 note that have to have i in heap otherwise it will cause type error
 """
-from header import *
 
 
 class Solution:

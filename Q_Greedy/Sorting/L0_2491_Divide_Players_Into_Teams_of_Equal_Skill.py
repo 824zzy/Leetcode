@@ -2,7 +2,6 @@
 1. calculate the target skill
 2. greedily assign lowest and highest player to the same team
 """
-from header import *
 
 
 class Solution:

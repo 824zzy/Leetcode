@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/meeting-rooms/
 sweep line template
 """
-from header import *
 
 
 class Solution:

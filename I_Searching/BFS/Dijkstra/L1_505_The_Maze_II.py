@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/the-maze-ii/
 variant dijkstra algorithm to find the shortest path from start to end
 """
-from header import *
 
 
 class Solution:

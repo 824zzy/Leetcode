@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/missing-ranges
 pairwise linear scan
 """
-from header import *
 
 
 class Solution:

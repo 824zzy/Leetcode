@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/binary-prefix-divisible-by-5/
 update i on the fly and check if i is divisible by 5
 """
-from header import *
 
 
 class Solution:

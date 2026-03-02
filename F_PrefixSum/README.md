@@ -4,7 +4,7 @@
 
 1. Compute the 1D prefix sum/product of A
 
-``` py
+```py
 # prefix sum of A
 itertools.accumulate(A)
 # prefix product of A
@@ -13,7 +13,7 @@ itertools.accumulate(A, mul)
 
 2. Compute the 2D prefix sum of A
 
-``` py
+```py
 # 2D prefix sum of A from top left to bottom right
 m, n = len(A), len(A[0])
 prefix = [[0 for _ in range(n+1)] for _ in range(m+1)]
@@ -36,7 +36,7 @@ Essentially it uses a prefix sum counter to calculate overlaps at each index.
 
 ### Sweep Line Template 1
 
-``` py
+```py
 n = len(A)
 diff = [0]*(n+1) # 1 indexed array needs one more space.
 for i, j in A:
@@ -51,7 +51,7 @@ for i in range(1, n+1): # or for i in range(1, n):
 
 ### Sweep Line Template 2
 
-``` py
+```py
 diff = []
 for i, j in A:
     diff.append((i, 1)) # or diff.append((i-1, 1))
@@ -63,7 +63,6 @@ for _, i in diff:
     cnt += i
     `logic`
 ```
-
 
 ## Prefix Suffix Decomposition
 

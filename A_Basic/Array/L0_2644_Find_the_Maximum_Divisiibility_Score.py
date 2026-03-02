@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/find-the-maximum-divisibility-score/
 brute force
 """
-from header import *
 
 
 class Solution:

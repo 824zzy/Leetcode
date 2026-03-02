@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points/
 greedy sort the closest pair of x-axis points
 """
-from header import *
 
 
 class Solution:

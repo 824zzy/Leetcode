@@ -1,7 +1,6 @@
 """ https://leetcode.com/problems/minimum-absolute-difference/
 keep track of minimal difference of each pair
 """
-from header import *
 
 
 class Solution:

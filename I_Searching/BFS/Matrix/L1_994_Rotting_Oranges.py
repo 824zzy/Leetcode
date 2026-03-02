@@ -2,7 +2,6 @@
 count fresh oranges to impossible case.
 count steps by bfs, no need to use seen
 """
-from header import *
 
 
 class Solution:
