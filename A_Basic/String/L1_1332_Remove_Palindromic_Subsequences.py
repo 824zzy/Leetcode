@@ -1,4 +1,6 @@
-# Brain teaser
+""" https://leetcode.com/problems/remove-palindromic-subsequences/
+Brain teaser
+"""
 class Solution:
     def removePalindromeSub(self, s: str) -> int:
         if not s:

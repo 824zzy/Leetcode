@@ -1,4 +1,5 @@
-""" https://leetcode.com/contest/weekly-contest-264/problems/next-greater-numerically-balanced-number/
+""" https://leetcode.com/problems/next-greater-numerically-balanced-number/
+https://leetcode.com/contest/weekly-contest-264/problems/next-greater-numerically-balanced-number/
 brute force search, have to use divmod otherwise time limit exceeded.
 """
 

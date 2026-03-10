@@ -1,4 +1,5 @@
-""" Brute Force
+""" https://leetcode.com/problems/powerful-integers/
+Brute Force
 """
 
 

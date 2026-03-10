@@ -1,4 +1,6 @@
-# set initial distance by k
+""" https://leetcode.com/problems/check-if-all-1-are-at-least-length-k-places-away/
+set initial distance by k
+"""
 class Solution:
     def kLengthApart(self, A: List[int], k: int) -> bool:
         d = k

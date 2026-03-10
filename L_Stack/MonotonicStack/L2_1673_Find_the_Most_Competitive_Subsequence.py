@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/find-the-most-competitive-subsequence/
+"""
+
 class Solution:
     def mostCompetitive(self, nums: List[int], k: int) -> List[int]:
         s = []

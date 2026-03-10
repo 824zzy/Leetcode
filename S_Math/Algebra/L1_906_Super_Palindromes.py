@@ -1,4 +1,4 @@
-"""
+""" https://leetcode.com/problems/super-palindromes/
 Find the upper bound and brute force all the candidates by odd and even cases.
 """
 

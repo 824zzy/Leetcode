@@ -1,4 +1,4 @@
-"""
+""" https://leetcode.com/problems/find-center-of-star-graph/
 only need to compare edges[0] and edges[1]
 """
 

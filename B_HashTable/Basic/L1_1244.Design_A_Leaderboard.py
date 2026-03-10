@@ -1,4 +1,5 @@
-# Contest 12
+""" https://leetcode.com/problems/design-a-leaderboard/
+"""
 from collections import defaultdict
 
 

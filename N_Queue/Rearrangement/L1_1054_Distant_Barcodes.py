@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/distant-barcodes/
+"""
+
 class Solution:
     def rearrangeBarcodes(self, A: List[int]) -> List[int]:
         cnt = Counter(A)

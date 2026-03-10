@@ -1,4 +1,6 @@
-# two pass to calculate shortest distance.
+""" https://leetcode.com/problems/shortest-distance-to-a-character/
+two pass to calculate shortest distance.
+"""
 class Solution:
     def shortestToChar(self, S: str, C: str) -> List[int]:
         ans = [float("inf")] * len(S)

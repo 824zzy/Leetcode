@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/thousand-separator/
+"""
+
 class Solution:
     def thousandSeparator(self, n: int) -> str:
         rev_s = list(str(n))[::-1]

@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/smallest-range-ii/
+"""
+
 class Solution:
     def smallestRangeII(self, A: List[int], K: int) -> int:
         A.sort()

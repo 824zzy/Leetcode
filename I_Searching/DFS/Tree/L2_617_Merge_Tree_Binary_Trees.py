@@ -1,4 +1,6 @@
-# space saving, better to use if not change t1
+""" https://leetcode.com/problems/merge-tree-binary-trees/
+space saving, better to use if not change t1
+"""
 class Solution:
     def mergeTrees(self, t1: TreeNode, t2: TreeNode) -> TreeNode:
         def dfs(t1, t2):

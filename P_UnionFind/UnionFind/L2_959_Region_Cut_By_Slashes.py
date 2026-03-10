@@ -1,4 +1,6 @@
-# Disjoint Set Union Template
+""" https://leetcode.com/problems/region-cut-by-slashes/
+Disjoint Set Union Template
+"""
 class DSU:
     def __init__(self, n):
         self.p = [i for i in range(n)]

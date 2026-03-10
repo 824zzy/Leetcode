@@ -1,4 +1,6 @@
-# iterate all values
+""" https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/
+iterate all values
+"""
 class Solution:
     def findSecondMinimumValue(self, root: TreeNode) -> int:
         self.l = set()

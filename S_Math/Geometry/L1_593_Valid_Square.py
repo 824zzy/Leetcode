@@ -1,4 +1,4 @@
-"""
+""" https://leetcode.com/problems/valid-square/
 Compute the distances between every two points.
 If two points overlap or the frequency of length more than three,
 then the four points can not form a square.

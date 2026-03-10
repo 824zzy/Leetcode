@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
+"""
+
 class Solution:
     def maxDepth(self, root: "Node") -> int:
         self.ans = 0

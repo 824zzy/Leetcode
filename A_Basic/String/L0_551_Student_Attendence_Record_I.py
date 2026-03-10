@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/student-attendence-record-i/
+"""
+
 class Solution:
     def checkRecord(self, s: str) -> bool:
         if s.count("A") > 1:

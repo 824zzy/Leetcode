@@ -1,4 +1,5 @@
-""" L1: https://leetcode.com/contest/weekly-contest-264/problems/number-of-valid-words-in-a-sentence/
+""" https://leetcode.com/problems/number-of-valid-words-in-a-sentence/
+L1: https://leetcode.com/contest/weekly-contest-264/problems/number-of-valid-words-in-a-sentence/
 disgust and gross
 """
 

@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/contains-duplicate-iii/
+"""
+
 class Solution:
     def containsNearbyAlmostDuplicate(self, nums: List[int], k: int, t: int) -> bool:
         if len(nums) > 1000:

@@ -1,4 +1,6 @@
-# bool solution
+""" https://leetcode.com/problems/univalued-binary-tree/
+bool solution
+"""
 class Solution:
     def isUnivalTree(self, root: TreeNode) -> bool:
         if not root:

@@ -1,4 +1,6 @@
-# Iterative: O(h), O(1)
+""" https://leetcode.com/problems/binary-search-tree-iterator/
+Iterative: O(h), O(1)
+"""
 class BSTIterator:
     def __init__(self, root: TreeNode):
         self.stk = []

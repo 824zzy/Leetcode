@@ -1,4 +1,5 @@
-""" God solution
+""" https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/
+God solution
 """
 
 

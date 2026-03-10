@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/hand-of-straights/
+"""
+
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         hand = sorted(hand)

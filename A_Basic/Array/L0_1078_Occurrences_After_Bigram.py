@@ -1,3 +1,6 @@
+""" https://leetcode.com/problems/occurrences-after-bigram/
+"""
+
 class Solution(object):
     def findOcurrences(self, text, first, second):
         text = text.split(" ")
