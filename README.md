@@ -130,15 +130,14 @@ Row: input size(IS), column: time complexity(TC)
 
 1. What is the data size? (check the [time complexity table](#time-complexity-analysis))
 2. Can I sort or group the elements?
-3. Can I use DP, greedy, or binary search?
+3. DP, greedy, or binary search? (optimal substructure → DP, greedy-choice property → greedy)
 4. Can I enumerate on a specific variable? (fix one dimension, solve the other)
-5. Can I use two passes? (left-to-right, then right-to-left)
+5. Can I use two passes / prefix-suffix decomposition?
 6. Can I solve it in reverse order?
 7. Can I convert it to a known problem?
 8. Is there monotonicity I can exploit? (binary search on answer)
-9. Can I decompose into prefix and suffix? (prefix-suffix decomposition)
-10. Does the answer have optimal substructure (DP) or the greedy-choice property (greedy)?
-11. See the [Pattern Recognition Guide](#pattern-recognition-guide) for keyword-based technique selection.
+9. Can I directly simulate the process described in the problem?
+10. See the [Pattern Recognition Guide](#pattern-recognition-guide) for keyword-based technique selection.
 
 ## Pattern Recognition Guide
 
