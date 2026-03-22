@@ -49,7 +49,7 @@ Study-order progression through all topic areas. Each entry links to the topic R
 | 20 | Knapsack | [README](K_DynamicProgramming/Knapsack/README.md) | 0/1 and unbounded knapsack |
 | 21 | LIS | [README](K_DynamicProgramming/LongestIncreasingSubsequence/README.md) | O(n^2) and O(n log n) |
 | 22 | Longest Subsequence | [README](K_DynamicProgramming/LongestSubsequence/README.md) | LIS/LCS templates |
-| 23 | Kadane | [README](K_DynamicProgramming/Kadane(MaximumSubarray)/README.md) | Maximum subarray |
+| 23 | Kadane | [README](K_DynamicProgramming/Kadane%28MaximumSubarray%29/README.md) | Maximum subarray |
 | 24 | Digit DP | [README](K_DynamicProgramming/DigitDP/README.md) | Digit DP templates with bounds |
 
 ### Greedy and Math
@@ -83,8 +83,8 @@ Study-order progression through all topic areas. Each entry links to the topic R
 | 39 | KMP | [README](Z_Advanced/PatternSearching/KMP/README.md) | KMP pattern matching |
 | 40 | Z-Function | [README](Z_Advanced/PatternSearching/Z-Function/README.md) | Z-function pattern matching |
 | 41 | Prim | [README](N_Queue/Prim/README.md) | Minimum spanning tree |
-| 42 | Majority Voting | [README](_misc/Majority_Voting/README.md) | Boyer-Moore voting |
-| 43 | Rolling Hash | [README](_misc/Hash/RollingHash/README.md) | Rabin-Karp |
+| 42 | Majority Voting | [README](Q_Greedy/MajorityVoting/README.md) | Boyer-Moore voting |
+| 43 | Rolling Hash | [README](Z_Advanced/PatternSearching/RollingHash/README.md) | Rabin-Karp |
 | 44 | Greedy Heap | [README](N_Queue/GreedyHeap/README.md) | Heap-based greedy patterns |
 | 45 | SQL | [README](_misc/SQL/README.md) | Query categories |
 | 46 | System Design | [README](_misc/System_Design/README.md) | General steps |
