@@ -3,18 +3,11 @@
 
 
 class Solution:
-    def getDecimalValue(self, head: ListNode) -> int:
+    def getDecimalValue(self, head: Optional[ListNode]) -> int:
         ans = 0
         while head:
-            ans = 2 * ans + head.val
+            ans <<= 1
+            if head.val == 1:
+                ans |= 1
             head = head.next
         return ans
-
-
-class Solution:
-    def getDecimalValue(self, head: ListNode) -> int:
-        s = ""
-        while head:
-            s += str(head.val)
-            head = head.next
-        return int(s, 2)
