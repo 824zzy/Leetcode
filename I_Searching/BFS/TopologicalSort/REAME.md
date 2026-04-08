@@ -1,3 +1,9 @@
+---
+tags:
+  - leetcode
+  - searching
+---
+
 # Topological sort
 
 ## Template
