@@ -5,15 +5,14 @@ monotonic decreasing stack + linked list
 
 class Solution:
     def nextLargerNodes(self, head: Optional[ListNode]) -> List[int]:
+        nextGreater = []
         stk = []
-        ans = []
-        i = 0
+        idx = 0
         while head:
-            ans.append(0)
+            nextGreater.append(0)
             while stk and stk[-1][1] < head.val:
-                ii, _ = stk.pop()
-                ans[ii] = head.val
-            stk.append([i, head.val])
+                nextGreater[stk.pop()[0]] = head.val
+            stk.append((idx, head.val))
             head = head.next
-            i += 1
-        return ans
+            idx += 1
+        return nextGreater
